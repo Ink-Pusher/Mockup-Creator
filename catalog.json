@@ -2227,6 +2227,130 @@
           "back": "catalog_images/valucap-vc300a/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "valucap-sp500",
+      "name": "Pigment Dyed Dad Cap",
+      "brand": "Valucap",
+      "style": "SP500",
+      "kind": "hat",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#eae8e7",
+          "front": "catalog_images/valucap-sp500/white_front.jpg",
+          "back": "catalog_images/valucap-sp500/white_back.jpg"
+        },
+        {
+          "name": "Aqua",
+          "hex": "#7cc1c6",
+          "front": "catalog_images/valucap-sp500/aqua_front.jpg",
+          "back": "catalog_images/valucap-sp500/aqua_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#5a5b5f",
+          "front": "catalog_images/valucap-sp500/black_front.jpg",
+          "back": "catalog_images/valucap-sp500/black_back.jpg"
+        },
+        {
+          "name": "Brown",
+          "hex": "#715d53",
+          "front": "catalog_images/valucap-sp500/brown_front.jpg",
+          "back": "catalog_images/valucap-sp500/brown_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#ac576b",
+          "front": "catalog_images/valucap-sp500/cardinal_front.jpg",
+          "back": "catalog_images/valucap-sp500/cardinal_back.jpg"
+        },
+        {
+          "name": "Forest",
+          "hex": "#454e49",
+          "front": "catalog_images/valucap-sp500/forest_front.jpg",
+          "back": "catalog_images/valucap-sp500/forest_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#9a6d74",
+          "front": "catalog_images/valucap-sp500/maroon_front.jpg",
+          "back": "catalog_images/valucap-sp500/maroon_back.jpg"
+        },
+        {
+          "name": "Mustard",
+          "hex": "#debe87",
+          "front": "catalog_images/valucap-sp500/mustard_front.jpg",
+          "back": "catalog_images/valucap-sp500/mustard_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#4c5c71",
+          "front": "catalog_images/valucap-sp500/navy_front.jpg",
+          "back": "catalog_images/valucap-sp500/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#747265",
+          "front": "catalog_images/valucap-sp500/olive_front.jpg",
+          "back": "catalog_images/valucap-sp500/olive_back.jpg"
+        },
+        {
+          "name": "Periwinkle",
+          "hex": "#7b99d9",
+          "front": "catalog_images/valucap-sp500/periwinkle_front.jpg",
+          "back": "catalog_images/valucap-sp500/periwinkle_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#efd4dd",
+          "front": "catalog_images/valucap-sp500/pink_front.jpg",
+          "back": "catalog_images/valucap-sp500/pink_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#eb6e7a",
+          "front": "catalog_images/valucap-sp500/red_front.jpg",
+          "back": "catalog_images/valucap-sp500/red_back.jpg"
+        },
+        {
+          "name": "Royal Blue",
+          "hex": "#567497",
+          "front": "catalog_images/valucap-sp500/royal-blue_front.jpg",
+          "back": "catalog_images/valucap-sp500/royal-blue_back.jpg"
+        },
+        {
+          "name": "Seafoam",
+          "hex": "#47c6af",
+          "front": "catalog_images/valucap-sp500/seafoam_front.jpg",
+          "back": "catalog_images/valucap-sp500/seafoam_back.jpg"
+        },
+        {
+          "name": "Stone",
+          "hex": "#c8c5ba",
+          "front": "catalog_images/valucap-sp500/stone_front.jpg",
+          "back": "catalog_images/valucap-sp500/stone_back.jpg"
+        },
+        {
+          "name": "Teal",
+          "hex": "#4f6f78",
+          "front": "catalog_images/valucap-sp500/teal_front.jpg",
+          "back": "catalog_images/valucap-sp500/teal_back.jpg"
+        },
+        {
+          "name": "Texas Orange",
+          "hex": "#cd7e58",
+          "front": "catalog_images/valucap-sp500/texas-orange_front.jpg",
+          "back": "catalog_images/valucap-sp500/texas-orange_back.jpg"
+        },
+        {
+          "name": "Wine",
+          "hex": "#896279",
+          "front": "catalog_images/valucap-sp500/wine_front.jpg",
+          "back": "catalog_images/valucap-sp500/wine_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -1965,6 +1965,268 @@
           "back": "catalog_images/richardson-112/white-navy_back.jpg"
         }
       ]
+    },
+    {
+      "id": "valucap-vc300a",
+      "name": "Bio Washed Dad Cap",
+      "brand": "Valucap",
+      "style": "VC300A",
+      "kind": "hat",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#dcdbe0",
+          "front": "catalog_images/valucap-vc300a/white_front.jpg",
+          "back": "catalog_images/valucap-vc300a/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1e1c1d",
+          "front": "catalog_images/valucap-vc300a/black_front.jpg",
+          "back": "catalog_images/valucap-vc300a/black_back.jpg"
+        },
+        {
+          "name": "Black/ Stone Stitch",
+          "hex": "#191617",
+          "front": "catalog_images/valucap-vc300a/black-stone-stitch_front.jpg",
+          "back": "catalog_images/valucap-vc300a/black-stone-stitch_back.jpg"
+        },
+        {
+          "name": "Baby Blue",
+          "hex": "#aabecc",
+          "front": "catalog_images/valucap-vc300a/baby-blue_front.jpg",
+          "back": "catalog_images/valucap-vc300a/baby-blue_back.jpg"
+        },
+        {
+          "name": "Black Duck Camo",
+          "hex": "#282829",
+          "front": "catalog_images/valucap-vc300a/black-duck-camo_front.jpg",
+          "back": "catalog_images/valucap-vc300a/black-duck-camo_back.jpg"
+        },
+        {
+          "name": "Brown",
+          "hex": "#563527",
+          "front": "catalog_images/valucap-vc300a/brown_front.jpg",
+          "back": "catalog_images/valucap-vc300a/brown_back.jpg"
+        },
+        {
+          "name": "Brown Duck Camo",
+          "hex": "#846644",
+          "front": "catalog_images/valucap-vc300a/brown-duck-camo_front.jpg",
+          "back": "catalog_images/valucap-vc300a/brown-duck-camo_back.jpg"
+        },
+        {
+          "name": "Butter",
+          "hex": "#eed497",
+          "front": "catalog_images/valucap-vc300a/butter_front.jpg",
+          "back": "catalog_images/valucap-vc300a/butter_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#750f22",
+          "front": "catalog_images/valucap-vc300a/cardinal_front.jpg",
+          "back": "catalog_images/valucap-vc300a/cardinal_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#4c4a4b",
+          "front": "catalog_images/valucap-vc300a/charcoal_front.jpg",
+          "back": "catalog_images/valucap-vc300a/charcoal_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#6a656a",
+          "front": "catalog_images/valucap-vc300a/charcoal-black_front.jpg",
+          "back": "catalog_images/valucap-vc300a/charcoal-black_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#233227",
+          "front": "catalog_images/valucap-vc300a/forest-green_front.jpg",
+          "back": "catalog_images/valucap-vc300a/forest-green_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#d3971f",
+          "front": "catalog_images/valucap-vc300a/gold_front.jpg",
+          "back": "catalog_images/valucap-vc300a/gold_back.jpg"
+        },
+        {
+          "name": "Green Camo",
+          "hex": "#3e3b32",
+          "front": "catalog_images/valucap-vc300a/green-camo_front.jpg",
+          "back": "catalog_images/valucap-vc300a/green-camo_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#978d90",
+          "front": "catalog_images/valucap-vc300a/grey_front.jpg",
+          "back": "catalog_images/valucap-vc300a/grey_back.jpg"
+        },
+        {
+          "name": "Grey Camo",
+          "hex": "#838287",
+          "front": "catalog_images/valucap-vc300a/grey-camo_front.jpg",
+          "back": "catalog_images/valucap-vc300a/grey-camo_back.jpg"
+        },
+        {
+          "name": "Grey/ Navy",
+          "hex": "#959299",
+          "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
+          "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#0d5c31",
+          "front": "catalog_images/valucap-vc300a/kelly_front.jpg",
+          "back": "catalog_images/valucap-vc300a/kelly_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#aa927b",
+          "front": "catalog_images/valucap-vc300a/khaki_front.jpg",
+          "back": "catalog_images/valucap-vc300a/khaki_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#927ca9",
+          "front": "catalog_images/valucap-vc300a/lavender_front.jpg",
+          "back": "catalog_images/valucap-vc300a/lavender_back.jpg"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#e2bcc7",
+          "front": "catalog_images/valucap-vc300a/light-pink_front.jpg",
+          "back": "catalog_images/valucap-vc300a/light-pink_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#5b1f2f",
+          "front": "catalog_images/valucap-vc300a/maroon_front.jpg",
+          "back": "catalog_images/valucap-vc300a/maroon_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#18222b",
+          "front": "catalog_images/valucap-vc300a/navy_front.jpg",
+          "back": "catalog_images/valucap-vc300a/navy_back.jpg"
+        },
+        {
+          "name": "Navy/ Stone Stitch",
+          "hex": "#1d222b",
+          "front": "catalog_images/valucap-vc300a/navy-stone-stitch_front.jpg",
+          "back": "catalog_images/valucap-vc300a/navy-stone-stitch_back.jpg"
+        },
+        {
+          "name": "Neon Blue",
+          "hex": "#0491b5",
+          "front": "catalog_images/valucap-vc300a/neon-blue_front.jpg",
+          "back": "catalog_images/valucap-vc300a/neon-blue_back.jpg"
+        },
+        {
+          "name": "Neon Green",
+          "hex": "#7ec551",
+          "front": "catalog_images/valucap-vc300a/neon-green_front.jpg",
+          "back": "catalog_images/valucap-vc300a/neon-green_back.jpg"
+        },
+        {
+          "name": "Neon Orange",
+          "hex": "#ed7903",
+          "front": "catalog_images/valucap-vc300a/neon-orange_front.jpg",
+          "back": "catalog_images/valucap-vc300a/neon-orange_back.jpg"
+        },
+        {
+          "name": "Neon Pink",
+          "hex": "#d71a53",
+          "front": "catalog_images/valucap-vc300a/neon-pink_front.jpg",
+          "back": "catalog_images/valucap-vc300a/neon-pink_back.jpg"
+        },
+        {
+          "name": "Neon Yellow",
+          "hex": "#ede129",
+          "front": "catalog_images/valucap-vc300a/neon-yellow_front.jpg",
+          "back": "catalog_images/valucap-vc300a/neon-yellow_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#4a4237",
+          "front": "catalog_images/valucap-vc300a/olive_front.jpg",
+          "back": "catalog_images/valucap-vc300a/olive_back.jpg"
+        },
+        {
+          "name": "Olive/ Stone Stitch",
+          "hex": "#5a5140",
+          "front": "catalog_images/valucap-vc300a/olive-stone-stitch_front.jpg",
+          "back": "catalog_images/valucap-vc300a/olive-stone-stitch_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#d34124",
+          "front": "catalog_images/valucap-vc300a/orange_front.jpg",
+          "back": "catalog_images/valucap-vc300a/orange_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#dc999f",
+          "front": "catalog_images/valucap-vc300a/pink_front.jpg",
+          "back": "catalog_images/valucap-vc300a/pink_back.jpg"
+        },
+        {
+          "name": "Pink Camo",
+          "hex": "#bfb4bf",
+          "front": "catalog_images/valucap-vc300a/pink-camo_front.jpg",
+          "back": "catalog_images/valucap-vc300a/pink-camo_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#342951",
+          "front": "catalog_images/valucap-vc300a/purple_front.jpg",
+          "back": "catalog_images/valucap-vc300a/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#c00a22",
+          "front": "catalog_images/valucap-vc300a/red_front.jpg",
+          "back": "catalog_images/valucap-vc300a/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#1b2f5b",
+          "front": "catalog_images/valucap-vc300a/royal_front.jpg",
+          "back": "catalog_images/valucap-vc300a/royal_back.jpg"
+        },
+        {
+          "name": "Sky Blue",
+          "hex": "#8cb0ce",
+          "front": "catalog_images/valucap-vc300a/sky-blue_front.jpg",
+          "back": "catalog_images/valucap-vc300a/sky-blue_back.jpg"
+        },
+        {
+          "name": "Stone",
+          "hex": "#c2b2a1",
+          "front": "catalog_images/valucap-vc300a/stone_front.jpg",
+          "back": "catalog_images/valucap-vc300a/stone_back.jpg"
+        },
+        {
+          "name": "Tan Camo",
+          "hex": "#8b7c63",
+          "front": "catalog_images/valucap-vc300a/tan-camo_front.jpg",
+          "back": "catalog_images/valucap-vc300a/tan-camo_back.jpg"
+        },
+        {
+          "name": "Texas Orange",
+          "hex": "#9b452b",
+          "front": "catalog_images/valucap-vc300a/texas-orange_front.jpg",
+          "back": "catalog_images/valucap-vc300a/texas-orange_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#e1bc2e",
+          "front": "catalog_images/valucap-vc300a/yellow_front.jpg",
+          "back": "catalog_images/valucap-vc300a/yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

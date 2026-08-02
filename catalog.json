@@ -673,6 +673,28 @@
           "back": "catalog_images/bella-canvas-3001cvc/solid-true-royal-blend_back.jpg"
         }
       ]
+    },
+    {
+      "id": "oad-108",
+      "name": "Jumbo Tote Bag",
+      "brand": "OAD",
+      "style": "108",
+      "kind": "tote",
+      "popular": true,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#444145",
+          "front": "catalog_images/oad-108/black_front.jpg",
+          "back": "catalog_images/oad-108/black_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#ebdfd6",
+          "front": "catalog_images/oad-108/natural_front.jpg",
+          "back": "catalog_images/oad-108/natural_back.jpg"
+        }
+      ]
     }
   ]
 }

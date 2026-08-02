@@ -1265,6 +1265,706 @@
           "back": "catalog_images/richardson-168/royal-black_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-112",
+      "name": "SnapbackTrucker Hat",
+      "brand": "Richardson",
+      "style": "112",
+      "kind": "hat",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white_front.jpg",
+          "back": "catalog_images/richardson-112/white_back.jpg"
+        },
+        {
+          "name": "White/ Charcoal CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-charcoal-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-charcoal-cmb_back.jpg"
+        },
+        {
+          "name": "White/ Columbia Blue CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-columbia-blue-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-columbia-blue-cmb_back.jpg"
+        },
+        {
+          "name": "White/ Kelly Green CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-kelly-green-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-kelly-green-cmb_back.jpg"
+        },
+        {
+          "name": "White/ Navy CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-navy-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-navy-cmb_back.jpg"
+        },
+        {
+          "name": "White/ Red CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-red-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-red-cmb_back.jpg"
+        },
+        {
+          "name": "White/ Royal CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-royal-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-royal-cmb_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#121212",
+          "front": "catalog_images/richardson-112/black_front.jpg",
+          "back": "catalog_images/richardson-112/black_back.jpg"
+        },
+        {
+          "name": "Amber Gold",
+          "hex": "#9c7942",
+          "front": "catalog_images/richardson-112/amber-gold_front.jpg",
+          "back": "catalog_images/richardson-112/amber-gold_back.jpg"
+        },
+        {
+          "name": "Biscuit/ True Blue",
+          "hex": "#866b35",
+          "front": "catalog_images/richardson-112/biscuit-true-blue_front.jpg",
+          "back": "catalog_images/richardson-112/biscuit-true-blue_back.jpg"
+        },
+        {
+          "name": "Black/ Charcoal",
+          "hex": "#121212",
+          "front": "catalog_images/richardson-112/black-charcoal_front.jpg",
+          "back": "catalog_images/richardson-112/black-charcoal_back.jpg"
+        },
+        {
+          "name": "Black/ Gold",
+          "hex": "#131312",
+          "front": "catalog_images/richardson-112/black-gold_front.jpg",
+          "back": "catalog_images/richardson-112/black-gold_back.jpg"
+        },
+        {
+          "name": "Black/ Light Grey CMB",
+          "hex": "#121212",
+          "front": "catalog_images/richardson-112/black-light-grey-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/black-light-grey-cmb_back.jpg"
+        },
+        {
+          "name": "Black/ Vegas Gold",
+          "hex": "#131312",
+          "front": "catalog_images/richardson-112/black-vegas-gold_front.jpg",
+          "back": "catalog_images/richardson-112/black-vegas-gold_back.jpg"
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#131313",
+          "front": "catalog_images/richardson-112/black-white_front.jpg",
+          "back": "catalog_images/richardson-112/black-white_back.jpg"
+        },
+        {
+          "name": "Black/ White/ Heather Grey",
+          "hex": "#131313",
+          "front": "catalog_images/richardson-112/black-white-heather-grey_front.jpg",
+          "back": "catalog_images/richardson-112/black-white-heather-grey_back.jpg"
+        },
+        {
+          "name": "Black/ White/ Red",
+          "hex": "#131313",
+          "front": "catalog_images/richardson-112/black-white-red_front.jpg",
+          "back": "catalog_images/richardson-112/black-white-red_back.jpg"
+        },
+        {
+          "name": "Blue Teal/ Birch/ Navy",
+          "hex": "#0b6369",
+          "front": "catalog_images/richardson-112/blue-teal-birch-navy_front.jpg",
+          "back": "catalog_images/richardson-112/blue-teal-birch-navy_back.jpg"
+        },
+        {
+          "name": "Brown/ Khaki",
+          "hex": "#362b1e",
+          "front": "catalog_images/richardson-112/brown-khaki_front.jpg",
+          "back": "catalog_images/richardson-112/brown-khaki_back.jpg"
+        },
+        {
+          "name": "Brown/ Khaki CMB",
+          "hex": "#352a1e",
+          "front": "catalog_images/richardson-112/brown-khaki-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/brown-khaki-cmb_back.jpg"
+        },
+        {
+          "name": "Cardinal/ Black",
+          "hex": "#731f21",
+          "front": "catalog_images/richardson-112/cardinal-black_front.jpg",
+          "back": "catalog_images/richardson-112/cardinal-black_back.jpg"
+        },
+        {
+          "name": "Cardinal/ White",
+          "hex": "#742022",
+          "front": "catalog_images/richardson-112/cardinal-white_front.jpg",
+          "back": "catalog_images/richardson-112/cardinal-white_back.jpg"
+        },
+        {
+          "name": "Carmel/ Black",
+          "hex": "#734113",
+          "front": "catalog_images/richardson-112/carmel-black_front.jpg",
+          "back": "catalog_images/richardson-112/carmel-black_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-black_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Columbia Blue",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-columbia-blue_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-columbia-blue_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Kelly",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-kelly_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-kelly_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Navy",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-navy_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-navy_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Blue",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-neon-blue_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-neon-blue_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Green",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-neon-green_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-neon-green_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Orange",
+          "hex": "#514c4b",
+          "front": "catalog_images/richardson-112/charcoal-neon-orange_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-neon-orange_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Pink",
+          "hex": "#514c4c",
+          "front": "catalog_images/richardson-112/charcoal-neon-pink_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-neon-pink_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Yellow",
+          "hex": "#504d4b",
+          "front": "catalog_images/richardson-112/charcoal-neon-yellow_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-neon-yellow_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Orange",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-orange_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-orange_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Red",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-red_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-red_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Royal",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112/charcoal-royal_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-royal_back.jpg"
+        },
+        {
+          "name": "Charcoal/ White",
+          "hex": "#514d4c",
+          "front": "catalog_images/richardson-112/charcoal-white_front.jpg",
+          "back": "catalog_images/richardson-112/charcoal-white_back.jpg"
+        },
+        {
+          "name": "Chocolate Chip/ Birch",
+          "hex": "#332b20",
+          "front": "catalog_images/richardson-112/chocolate-chip-birch_front.jpg",
+          "back": "catalog_images/richardson-112/chocolate-chip-birch_back.jpg"
+        },
+        {
+          "name": "Coffee",
+          "hex": "#241814",
+          "front": "catalog_images/richardson-112/coffee_front.jpg",
+          "back": "catalog_images/richardson-112/coffee_back.jpg"
+        },
+        {
+          "name": "Columbia Blue",
+          "hex": "#6c91a9",
+          "front": "catalog_images/richardson-112/columbia-blue_front.jpg",
+          "back": "catalog_images/richardson-112/columbia-blue_back.jpg"
+        },
+        {
+          "name": "Columbia Blue/ White",
+          "hex": "#6d92a9",
+          "front": "catalog_images/richardson-112/columbia-blue-white_front.jpg",
+          "back": "catalog_images/richardson-112/columbia-blue-white_back.jpg"
+        },
+        {
+          "name": "Columbia Blue/ White/ Navy",
+          "hex": "#6d92a9",
+          "front": "catalog_images/richardson-112/columbia-blue-white-navy_front.jpg",
+          "back": "catalog_images/richardson-112/columbia-blue-white-navy_back.jpg"
+        },
+        {
+          "name": "Cream",
+          "hex": "#cec8c0",
+          "front": "catalog_images/richardson-112/cream_front.jpg",
+          "back": "catalog_images/richardson-112/cream_back.jpg"
+        },
+        {
+          "name": "Cream/ Black/ Loden Green",
+          "hex": "#cec8c0",
+          "front": "catalog_images/richardson-112/cream-black-loden-green_front.jpg",
+          "back": "catalog_images/richardson-112/cream-black-loden-green_back.jpg"
+        },
+        {
+          "name": "Cream/ Grey Brown/ Brown",
+          "hex": "#cec8c0",
+          "front": "catalog_images/richardson-112/cream-grey-brown-brown_front.jpg",
+          "back": "catalog_images/richardson-112/cream-grey-brown-brown_back.jpg"
+        },
+        {
+          "name": "Cream/ Navy/ Amber Gold",
+          "hex": "#cec8c1",
+          "front": "catalog_images/richardson-112/cream-navy-amber-gold_front.jpg",
+          "back": "catalog_images/richardson-112/cream-navy-amber-gold_back.jpg"
+        },
+        {
+          "name": "Cyan/ White",
+          "hex": "#0674b3",
+          "front": "catalog_images/richardson-112/cyan-white_front.jpg",
+          "back": "catalog_images/richardson-112/cyan-white_back.jpg"
+        },
+        {
+          "name": "Dark Green",
+          "hex": "#183932",
+          "front": "catalog_images/richardson-112/dark-green_front.jpg",
+          "back": "catalog_images/richardson-112/dark-green_back.jpg"
+        },
+        {
+          "name": "Dark Green/ White",
+          "hex": "#193933",
+          "front": "catalog_images/richardson-112/dark-green-white_front.jpg",
+          "back": "catalog_images/richardson-112/dark-green-white_back.jpg"
+        },
+        {
+          "name": "Grey/ Charcoal/ Black",
+          "hex": "#8a8889",
+          "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg"
+        },
+        {
+          "name": "Grey/ Charcoal/ Navy",
+          "hex": "#8a8889",
+          "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
+          "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg"
+        },
+        {
+          "name": "Gunmetal/ Chocolate Chip CMB",
+          "hex": "#3c4044",
+          "front": "catalog_images/richardson-112/gunmetal-chocolate-chip-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/gunmetal-chocolate-chip-cmb_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Birch/ Amber Gold",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-birch-amber-gold_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-birch-amber-gold_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Birch/ Army Olive",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-birch-army-olive_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-birch-army-olive_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-black_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-black_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Dark Orange",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-charcoal-dark-orange_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-charcoal-dark-orange_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Maroon",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-charcoal-maroon_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-charcoal-maroon_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Dark Green",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-dark-green_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-dark-green_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Light Grey",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-light-grey_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Navy",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-navy_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-navy_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Royal",
+          "hex": "#67696b",
+          "front": "catalog_images/richardson-112/heather-grey-royal_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ White",
+          "hex": "#67696c",
+          "front": "catalog_images/richardson-112/heather-grey-white_front.jpg",
+          "back": "catalog_images/richardson-112/heather-grey-white_back.jpg"
+        },
+        {
+          "name": "Hot Pink/ Black",
+          "hex": "#d0557b",
+          "front": "catalog_images/richardson-112/hot-pink-black_front.jpg",
+          "back": "catalog_images/richardson-112/hot-pink-black_back.jpg"
+        },
+        {
+          "name": "Hot Pink/ White",
+          "hex": "#d0567c",
+          "front": "catalog_images/richardson-112/hot-pink-white_front.jpg",
+          "back": "catalog_images/richardson-112/hot-pink-white_back.jpg"
+        },
+        {
+          "name": "Kelly Green",
+          "hex": "#205721",
+          "front": "catalog_images/richardson-112/kelly-green_front.jpg",
+          "back": "catalog_images/richardson-112/kelly-green_back.jpg"
+        },
+        {
+          "name": "Kelly/ White",
+          "hex": "#205722",
+          "front": "catalog_images/richardson-112/kelly-white_front.jpg",
+          "back": "catalog_images/richardson-112/kelly-white_back.jpg"
+        },
+        {
+          "name": "Khaki/ Black CMB",
+          "hex": "#97886b",
+          "front": "catalog_images/richardson-112/khaki-black-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-black-cmb_back.jpg"
+        },
+        {
+          "name": "Khaki/ Chocolate Chip CMB",
+          "hex": "#97886b",
+          "front": "catalog_images/richardson-112/khaki-chocolate-chip-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-chocolate-chip-cmb_back.jpg"
+        },
+        {
+          "name": "Khaki/ Coffee",
+          "hex": "#96876b",
+          "front": "catalog_images/richardson-112/khaki-coffee_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-coffee_back.jpg"
+        },
+        {
+          "name": "Khaki/ Legion Blue CMB",
+          "hex": "#97886b",
+          "front": "catalog_images/richardson-112/khaki-legion-blue-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-legion-blue-cmb_back.jpg"
+        },
+        {
+          "name": "Khaki/ Loden Green CMB",
+          "hex": "#97886b",
+          "front": "catalog_images/richardson-112/khaki-loden-green-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-loden-green-cmb_back.jpg"
+        },
+        {
+          "name": "Khaki/ Navy CMB",
+          "hex": "#97886b",
+          "front": "catalog_images/richardson-112/khaki-navy-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-navy-cmb_back.jpg"
+        },
+        {
+          "name": "Khaki/ White",
+          "hex": "#97886b",
+          "front": "catalog_images/richardson-112/khaki-white_front.jpg",
+          "back": "catalog_images/richardson-112/khaki-white_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#18324c",
+          "front": "catalog_images/richardson-112/light-blue_front.jpg",
+          "back": "catalog_images/richardson-112/light-blue_back.jpg"
+        },
+        {
+          "name": "Light Blue/ Light Grey CMB",
+          "hex": "#18324c",
+          "front": "catalog_images/richardson-112/light-blue-light-grey-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/light-blue-light-grey-cmb_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#a0a0a0",
+          "front": "catalog_images/richardson-112/light-grey_front.jpg",
+          "back": "catalog_images/richardson-112/light-grey_back.jpg"
+        },
+        {
+          "name": "Light Grey/ Gunmetal CMB",
+          "hex": "#a0a0a0",
+          "front": "catalog_images/richardson-112/light-grey-gunmetal-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/light-grey-gunmetal-cmb_back.jpg"
+        },
+        {
+          "name": "Loden",
+          "hex": "#626555",
+          "front": "catalog_images/richardson-112/loden_front.jpg",
+          "back": "catalog_images/richardson-112/loden_back.jpg"
+        },
+        {
+          "name": "Loden/ Black",
+          "hex": "#626454",
+          "front": "catalog_images/richardson-112/loden-black_front.jpg",
+          "back": "catalog_images/richardson-112/loden-black_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#3f1d23",
+          "front": "catalog_images/richardson-112/maroon_front.jpg",
+          "back": "catalog_images/richardson-112/maroon_back.jpg"
+        },
+        {
+          "name": "Maroon/ White",
+          "hex": "#3f1e23",
+          "front": "catalog_images/richardson-112/maroon-white_front.jpg",
+          "back": "catalog_images/richardson-112/maroon-white_back.jpg"
+        },
+        {
+          "name": "Mink Beige/ Charcoal/ Amber Gold",
+          "hex": "#cdb7a4",
+          "front": "catalog_images/richardson-112/mink-beige-charcoal-amber-gold_front.jpg",
+          "back": "catalog_images/richardson-112/mink-beige-charcoal-amber-gold_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#0c1322",
+          "front": "catalog_images/richardson-112/navy_front.jpg",
+          "back": "catalog_images/richardson-112/navy_back.jpg"
+        },
+        {
+          "name": "Navy/ Carmel",
+          "hex": "#0d1323",
+          "front": "catalog_images/richardson-112/navy-carmel_front.jpg",
+          "back": "catalog_images/richardson-112/navy-carmel_back.jpg"
+        },
+        {
+          "name": "Navy/ Charcoal",
+          "hex": "#0d1322",
+          "front": "catalog_images/richardson-112/navy-charcoal_front.jpg",
+          "back": "catalog_images/richardson-112/navy-charcoal_back.jpg"
+        },
+        {
+          "name": "Navy/ Khaki",
+          "hex": "#0d1323",
+          "front": "catalog_images/richardson-112/navy-khaki_front.jpg",
+          "back": "catalog_images/richardson-112/navy-khaki_back.jpg"
+        },
+        {
+          "name": "Navy/ Khaki CMB",
+          "hex": "#0c1322",
+          "front": "catalog_images/richardson-112/navy-khaki-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/navy-khaki-cmb_back.jpg"
+        },
+        {
+          "name": "Navy/ Orange",
+          "hex": "#0d1322",
+          "front": "catalog_images/richardson-112/navy-orange_front.jpg",
+          "back": "catalog_images/richardson-112/navy-orange_back.jpg"
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#0d1423",
+          "front": "catalog_images/richardson-112/navy-white_front.jpg",
+          "back": "catalog_images/richardson-112/navy-white_back.jpg"
+        },
+        {
+          "name": "Navy/ White/ Heather Grey",
+          "hex": "#0d1422",
+          "front": "catalog_images/richardson-112/navy-white-heather-grey_front.jpg",
+          "back": "catalog_images/richardson-112/navy-white-heather-grey_back.jpg"
+        },
+        {
+          "name": "Navy/ White/ Red",
+          "hex": "#0d1423",
+          "front": "catalog_images/richardson-112/navy-white-red_front.jpg",
+          "back": "catalog_images/richardson-112/navy-white-red_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#c82c07",
+          "front": "catalog_images/richardson-112/orange_front.jpg",
+          "back": "catalog_images/richardson-112/orange_back.jpg"
+        },
+        {
+          "name": "Orange/ Black",
+          "hex": "#c72c07",
+          "front": "catalog_images/richardson-112/orange-black_front.jpg",
+          "back": "catalog_images/richardson-112/orange-black_back.jpg"
+        },
+        {
+          "name": "Orange/ White",
+          "hex": "#c82d08",
+          "front": "catalog_images/richardson-112/orange-white_front.jpg",
+          "back": "catalog_images/richardson-112/orange-white_back.jpg"
+        },
+        {
+          "name": "Orange/ White/ Black",
+          "hex": "#c82d08",
+          "front": "catalog_images/richardson-112/orange-white-black_front.jpg",
+          "back": "catalog_images/richardson-112/orange-white-black_back.jpg"
+        },
+        {
+          "name": "Purple/ White",
+          "hex": "#472867",
+          "front": "catalog_images/richardson-112/purple-white_front.jpg",
+          "back": "catalog_images/richardson-112/purple-white_back.jpg"
+        },
+        {
+          "name": "Quarry/ Quarry",
+          "hex": "#939588",
+          "front": "catalog_images/richardson-112/quarry-quarry_front.jpg",
+          "back": "catalog_images/richardson-112/quarry-quarry_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#9b1716",
+          "front": "catalog_images/richardson-112/red_front.jpg",
+          "back": "catalog_images/richardson-112/red_back.jpg"
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#9a1716",
+          "front": "catalog_images/richardson-112/red-black_front.jpg",
+          "back": "catalog_images/richardson-112/red-black_back.jpg"
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#9b1817",
+          "front": "catalog_images/richardson-112/red-white_front.jpg",
+          "back": "catalog_images/richardson-112/red-white_back.jpg"
+        },
+        {
+          "name": "Red/ White/ Black",
+          "hex": "#9b1817",
+          "front": "catalog_images/richardson-112/red-white-black_front.jpg",
+          "back": "catalog_images/richardson-112/red-white-black_back.jpg"
+        },
+        {
+          "name": "Red/ White/ Heather Grey",
+          "hex": "#9b1817",
+          "front": "catalog_images/richardson-112/red-white-heather-grey_front.jpg",
+          "back": "catalog_images/richardson-112/red-white-heather-grey_back.jpg"
+        },
+        {
+          "name": "Red/ White/ Navy",
+          "hex": "#9b1817",
+          "front": "catalog_images/richardson-112/red-white-navy_front.jpg",
+          "back": "catalog_images/richardson-112/red-white-navy_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#0e376f",
+          "front": "catalog_images/richardson-112/royal_front.jpg",
+          "back": "catalog_images/richardson-112/royal_back.jpg"
+        },
+        {
+          "name": "Royal/ Black",
+          "hex": "#0e366f",
+          "front": "catalog_images/richardson-112/royal-black_front.jpg",
+          "back": "catalog_images/richardson-112/royal-black_back.jpg"
+        },
+        {
+          "name": "Royal/ White",
+          "hex": "#0f3770",
+          "front": "catalog_images/richardson-112/royal-white_front.jpg",
+          "back": "catalog_images/richardson-112/royal-white_back.jpg"
+        },
+        {
+          "name": "Royal/ White/ Heather Grey",
+          "hex": "#0f3770",
+          "front": "catalog_images/richardson-112/royal-white-heather-grey_front.jpg",
+          "back": "catalog_images/richardson-112/royal-white-heather-grey_back.jpg"
+        },
+        {
+          "name": "Royal/ White/ Red",
+          "hex": "#0f3770",
+          "front": "catalog_images/richardson-112/royal-white-red_front.jpg",
+          "back": "catalog_images/richardson-112/royal-white-red_back.jpg"
+        },
+        {
+          "name": "Smoke Blue",
+          "hex": "#5c7272",
+          "front": "catalog_images/richardson-112/smoke-blue_front.jpg",
+          "back": "catalog_images/richardson-112/smoke-blue_back.jpg"
+        },
+        {
+          "name": "White/ Aluminum/ Black",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/richardson-112/white-aluminum-black_front.jpg",
+          "back": "catalog_images/richardson-112/white-aluminum-black_back.jpg"
+        },
+        {
+          "name": "White/ Aluminum/ Navy",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/richardson-112/white-aluminum-navy_front.jpg",
+          "back": "catalog_images/richardson-112/white-aluminum-navy_back.jpg"
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/richardson-112/white-black_front.jpg",
+          "back": "catalog_images/richardson-112/white-black_back.jpg"
+        },
+        {
+          "name": "White/ Black CMB",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/richardson-112/white-black-cmb_front.jpg",
+          "back": "catalog_images/richardson-112/white-black-cmb_back.jpg"
+        },
+        {
+          "name": "White/ Columbia Blue/ Yellow",
+          "hex": "#e3e4e4",
+          "front": "catalog_images/richardson-112/white-columbia-blue-yellow_front.jpg",
+          "back": "catalog_images/richardson-112/white-columbia-blue-yellow_back.jpg"
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/richardson-112/white-navy_front.jpg",
+          "back": "catalog_images/richardson-112/white-navy_back.jpg"
+        }
+      ]
     }
   ]
 }

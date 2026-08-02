@@ -2421,6 +2421,256 @@
           "back": "catalog_images/q-tees-25l-q600/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "adam-s-lp101",
+      "name": "Optimum Pigment Dad Hat",
+      "brand": "Adam's",
+      "style": "LP101",
+      "kind": "hat",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ebe7e6",
+          "front": "catalog_images/adam-s-lp101/white_front.jpg",
+          "back": "catalog_images/adam-s-lp101/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2e2d2b",
+          "front": "catalog_images/adam-s-lp101/black_front.jpg",
+          "back": "catalog_images/adam-s-lp101/black_back.jpg"
+        },
+        {
+          "name": "Aqua",
+          "hex": "#587879",
+          "front": "catalog_images/adam-s-lp101/aqua_front.jpg",
+          "back": "catalog_images/adam-s-lp101/aqua_back.jpg"
+        },
+        {
+          "name": "Baby Blue",
+          "hex": "#bad6e9",
+          "front": "catalog_images/adam-s-lp101/baby-blue_front.jpg",
+          "back": "catalog_images/adam-s-lp101/baby-blue_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#794555",
+          "front": "catalog_images/adam-s-lp101/burgundy_front.jpg",
+          "back": "catalog_images/adam-s-lp101/burgundy_back.jpg"
+        },
+        {
+          "name": "Cactus",
+          "hex": "#736e5a",
+          "front": "catalog_images/adam-s-lp101/cactus_front.jpg",
+          "back": "catalog_images/adam-s-lp101/cactus_back.jpg"
+        },
+        {
+          "name": "Caribbean Blue",
+          "hex": "#6bafcc",
+          "front": "catalog_images/adam-s-lp101/caribbean-blue_front.jpg",
+          "back": "catalog_images/adam-s-lp101/caribbean-blue_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#434343",
+          "front": "catalog_images/adam-s-lp101/charcoal_front.jpg",
+          "back": "catalog_images/adam-s-lp101/charcoal_back.jpg"
+        },
+        {
+          "name": "Coral",
+          "hex": "#ea8086",
+          "front": "catalog_images/adam-s-lp101/coral_front.jpg",
+          "back": "catalog_images/adam-s-lp101/coral_back.jpg"
+        },
+        {
+          "name": "Dusk",
+          "hex": "#5a5f64",
+          "front": "catalog_images/adam-s-lp101/dusk_front.jpg",
+          "back": "catalog_images/adam-s-lp101/dusk_back.jpg"
+        },
+        {
+          "name": "Espresso",
+          "hex": "#5e4f4c",
+          "front": "catalog_images/adam-s-lp101/espresso_front.jpg",
+          "back": "catalog_images/adam-s-lp101/espresso_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#63746b",
+          "front": "catalog_images/adam-s-lp101/forest-green_front.jpg",
+          "back": "catalog_images/adam-s-lp101/forest-green_back.jpg"
+        },
+        {
+          "name": "Grape",
+          "hex": "#645b92",
+          "front": "catalog_images/adam-s-lp101/grape_front.jpg",
+          "back": "catalog_images/adam-s-lp101/grape_back.jpg"
+        },
+        {
+          "name": "Hot Pink",
+          "hex": "#d9709f",
+          "front": "catalog_images/adam-s-lp101/hot-pink_front.jpg",
+          "back": "catalog_images/adam-s-lp101/hot-pink_back.jpg"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#e2ded8",
+          "front": "catalog_images/adam-s-lp101/ivory_front.jpg",
+          "back": "catalog_images/adam-s-lp101/ivory_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#aea17a",
+          "front": "catalog_images/adam-s-lp101/khaki_front.jpg",
+          "back": "catalog_images/adam-s-lp101/khaki_back.jpg"
+        },
+        {
+          "name": "Khaki/ Forest",
+          "hex": "#b1ab89",
+          "front": "catalog_images/adam-s-lp101/khaki-forest_front.jpg",
+          "back": "catalog_images/adam-s-lp101/khaki-forest_back.jpg"
+        },
+        {
+          "name": "Khaki/ Navy",
+          "hex": "#aca386",
+          "front": "catalog_images/adam-s-lp101/khaki-navy_front.jpg",
+          "back": "catalog_images/adam-s-lp101/khaki-navy_back.jpg"
+        },
+        {
+          "name": "Khaki/ Spruce Green",
+          "hex": "#b1a786",
+          "front": "catalog_images/adam-s-lp101/khaki-spruce-green_front.jpg",
+          "back": "catalog_images/adam-s-lp101/khaki-spruce-green_back.jpg"
+        },
+        {
+          "name": "Lemon",
+          "hex": "#fde677",
+          "front": "catalog_images/adam-s-lp101/lemon_front.jpg",
+          "back": "catalog_images/adam-s-lp101/lemon_back.jpg"
+        },
+        {
+          "name": "Midnight Blue",
+          "hex": "#515866",
+          "front": "catalog_images/adam-s-lp101/midnight-blue_front.jpg",
+          "back": "catalog_images/adam-s-lp101/midnight-blue_back.jpg"
+        },
+        {
+          "name": "Mustard",
+          "hex": "#e0b766",
+          "front": "catalog_images/adam-s-lp101/mustard_front.jpg",
+          "back": "catalog_images/adam-s-lp101/mustard_back.jpg"
+        },
+        {
+          "name": "Nautical Red",
+          "hex": "#a9556a",
+          "front": "catalog_images/adam-s-lp101/nautical-red_front.jpg",
+          "back": "catalog_images/adam-s-lp101/nautical-red_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#434a53",
+          "front": "catalog_images/adam-s-lp101/navy_front.jpg",
+          "back": "catalog_images/adam-s-lp101/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#6c6556",
+          "front": "catalog_images/adam-s-lp101/olive_front.jpg",
+          "back": "catalog_images/adam-s-lp101/olive_back.jpg"
+        },
+        {
+          "name": "Pale Pink",
+          "hex": "#eddce6",
+          "front": "catalog_images/adam-s-lp101/pale-pink_front.jpg",
+          "back": "catalog_images/adam-s-lp101/pale-pink_back.jpg"
+        },
+        {
+          "name": "Periwinkle",
+          "hex": "#7c91ba",
+          "front": "catalog_images/adam-s-lp101/periwinkle_front.jpg",
+          "back": "catalog_images/adam-s-lp101/periwinkle_back.jpg"
+        },
+        {
+          "name": "Poppy",
+          "hex": "#c74859",
+          "front": "catalog_images/adam-s-lp101/poppy_front.jpg",
+          "back": "catalog_images/adam-s-lp101/poppy_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#60648e",
+          "front": "catalog_images/adam-s-lp101/purple_front.jpg",
+          "back": "catalog_images/adam-s-lp101/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#bf4a4f",
+          "front": "catalog_images/adam-s-lp101/red_front.jpg",
+          "back": "catalog_images/adam-s-lp101/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#4a5883",
+          "front": "catalog_images/adam-s-lp101/royal_front.jpg",
+          "back": "catalog_images/adam-s-lp101/royal_back.jpg"
+        },
+        {
+          "name": "Seafoam",
+          "hex": "#b3e4de",
+          "front": "catalog_images/adam-s-lp101/seafoam_front.jpg",
+          "back": "catalog_images/adam-s-lp101/seafoam_back.jpg"
+        },
+        {
+          "name": "Spruce Green",
+          "hex": "#6d6f63",
+          "front": "catalog_images/adam-s-lp101/spruce-green_front.jpg",
+          "back": "catalog_images/adam-s-lp101/spruce-green_back.jpg"
+        },
+        {
+          "name": "Stone",
+          "hex": "#bcb4a9",
+          "front": "catalog_images/adam-s-lp101/stone_front.jpg",
+          "back": "catalog_images/adam-s-lp101/stone_back.jpg"
+        },
+        {
+          "name": "Stone/ Black",
+          "hex": "#b5aea3",
+          "front": "catalog_images/adam-s-lp101/stone-black_front.jpg",
+          "back": "catalog_images/adam-s-lp101/stone-black_back.jpg"
+        },
+        {
+          "name": "Stone/ Forest",
+          "hex": "#c1bdb3",
+          "front": "catalog_images/adam-s-lp101/stone-forest_front.jpg",
+          "back": "catalog_images/adam-s-lp101/stone-forest_back.jpg"
+        },
+        {
+          "name": "Tangerine",
+          "hex": "#ed8f36",
+          "front": "catalog_images/adam-s-lp101/tangerine_front.jpg",
+          "back": "catalog_images/adam-s-lp101/tangerine_back.jpg"
+        },
+        {
+          "name": "Teal",
+          "hex": "#5e8aa2",
+          "front": "catalog_images/adam-s-lp101/teal_front.jpg",
+          "back": "catalog_images/adam-s-lp101/teal_back.jpg"
+        },
+        {
+          "name": "Terracotta",
+          "hex": "#bc8262",
+          "front": "catalog_images/adam-s-lp101/terracotta_front.jpg",
+          "back": "catalog_images/adam-s-lp101/terracotta_back.jpg"
+        },
+        {
+          "name": "Wild Plum",
+          "hex": "#7c6477",
+          "front": "catalog_images/adam-s-lp101/wild-plum_front.jpg",
+          "back": "catalog_images/adam-s-lp101/wild-plum_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -1,2 +1,4 @@
 __pycache__/
 downloaded_images/
+*_files/
+downloaded_images/

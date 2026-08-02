@@ -2351,6 +2351,76 @@
           "back": "catalog_images/valucap-sp500/wine_back.jpg"
         }
       ]
+    },
+    {
+      "id": "q-tees-25l-q600",
+      "name": "Jumbo Tote",
+      "brand": "Q-Tees",
+      "style": "25L Q600",
+      "kind": "tote",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ebebeb",
+          "front": "catalog_images/q-tees-25l-q600/white_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#474747",
+          "front": "catalog_images/q-tees-25l-q600/black_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/black_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#605755",
+          "front": "catalog_images/q-tees-25l-q600/charcoal_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/charcoal_back.jpg"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#f0ced3",
+          "front": "catalog_images/q-tees-25l-q600/light-pink_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/light-pink_back.jpg"
+        },
+        {
+          "name": "Lime",
+          "hex": "#a5c97e",
+          "front": "catalog_images/q-tees-25l-q600/lime_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/lime_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e7dbcc",
+          "front": "catalog_images/q-tees-25l-q600/natural_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#5b6478",
+          "front": "catalog_images/q-tees-25l-q600/navy_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#c73a5b",
+          "front": "catalog_images/q-tees-25l-q600/red_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#4f79aa",
+          "front": "catalog_images/q-tees-25l-q600/royal_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/royal_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#e9cf55",
+          "front": "catalog_images/q-tees-25l-q600/yellow_front.jpg",
+          "back": "catalog_images/q-tees-25l-q600/yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

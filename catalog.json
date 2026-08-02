@@ -1141,6 +1141,130 @@
           "back": "catalog_images/next-level-apparel-6010/vintage-turquoise_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-168",
+      "name": "Seven Panel Trucker Hat",
+      "brand": "Richardson",
+      "style": "168",
+      "kind": "hat",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e8e8e8",
+          "front": "catalog_images/richardson-168/white_front.jpg",
+          "back": "catalog_images/richardson-168/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1d1a1b",
+          "front": "catalog_images/richardson-168/black_front.jpg",
+          "back": "catalog_images/richardson-168/black_back.jpg"
+        },
+        {
+          "name": "Black/ Camo/ Loden",
+          "hex": "#23201e",
+          "front": "catalog_images/richardson-168/black-camo-loden_front.jpg",
+          "back": "catalog_images/richardson-168/black-camo-loden_back.jpg"
+        },
+        {
+          "name": "Brown/ Khaki",
+          "hex": "#47342c",
+          "front": "catalog_images/richardson-168/brown-khaki_front.jpg",
+          "back": "catalog_images/richardson-168/brown-khaki_back.jpg"
+        },
+        {
+          "name": "Caramel",
+          "hex": "#804f24",
+          "front": "catalog_images/richardson-168/caramel_front.jpg",
+          "back": "catalog_images/richardson-168/caramel_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#454140",
+          "front": "catalog_images/richardson-168/charcoal_front.jpg",
+          "back": "catalog_images/richardson-168/charcoal_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#535252",
+          "front": "catalog_images/richardson-168/charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-168/charcoal-black_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black/ White",
+          "hex": "#555255",
+          "front": "catalog_images/richardson-168/charcoal-black-white_front.jpg",
+          "back": "catalog_images/richardson-168/charcoal-black-white_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Burnt Orange/ Black",
+          "hex": "#464145",
+          "front": "catalog_images/richardson-168/charcoal-burnt-orange-black_front.jpg",
+          "back": "catalog_images/richardson-168/charcoal-burnt-orange-black_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Old Gold",
+          "hex": "#4b4c52",
+          "front": "catalog_images/richardson-168/charcoal-old-gold_front.jpg",
+          "back": "catalog_images/richardson-168/charcoal-old-gold_back.jpg"
+        },
+        {
+          "name": "Dark Green/ Black",
+          "hex": "#3b4f46",
+          "front": "catalog_images/richardson-168/dark-green-black_front.jpg",
+          "back": "catalog_images/richardson-168/dark-green-black_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#989ea4",
+          "front": "catalog_images/richardson-168/heather-grey-black_front.jpg",
+          "back": "catalog_images/richardson-168/heather-grey-black_back.jpg"
+        },
+        {
+          "name": "Loden Green",
+          "hex": "#65674d",
+          "front": "catalog_images/richardson-168/loden-green_front.jpg",
+          "back": "catalog_images/richardson-168/loden-green_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1d2332",
+          "front": "catalog_images/richardson-168/navy_front.jpg",
+          "back": "catalog_images/richardson-168/navy_back.jpg"
+        },
+        {
+          "name": "Pale Khaki/ Brown",
+          "hex": "#8c7d5d",
+          "front": "catalog_images/richardson-168/pale-khaki-brown_front.jpg",
+          "back": "catalog_images/richardson-168/pale-khaki-brown_back.jpg"
+        },
+        {
+          "name": "Pale Khaki/ Loden Green",
+          "hex": "#8c7d5d",
+          "front": "catalog_images/richardson-168/pale-khaki-loden-green_front.jpg",
+          "back": "catalog_images/richardson-168/pale-khaki-loden-green_back.jpg"
+        },
+        {
+          "name": "Quarry Grey",
+          "hex": "#9ea093",
+          "front": "catalog_images/richardson-168/quarry-grey_front.jpg",
+          "back": "catalog_images/richardson-168/quarry-grey_back.jpg"
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#de1131",
+          "front": "catalog_images/richardson-168/red-black_front.jpg",
+          "back": "catalog_images/richardson-168/red-black_back.jpg"
+        },
+        {
+          "name": "Royal/ Black",
+          "hex": "#20498b",
+          "front": "catalog_images/richardson-168/royal-black_front.jpg",
+          "back": "catalog_images/richardson-168/royal-black_back.jpg"
+        }
+      ]
     }
   ]
 }

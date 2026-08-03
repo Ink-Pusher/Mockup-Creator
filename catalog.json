@@ -417,7 +417,6 @@
         {
           "name": "Heather Mustard",
           "hex": "#e9aa47",
-          "front": "catalog_images/bella-canvas-3001cvc/heather-mustard_front.jpg",
           "front": "catalog_images/bella-canvas-3001cvc/featured_front.jpg",
           "back": "catalog_images/bella-canvas-3001cvc/heather-mustard_back.jpg"
         },
@@ -3300,6 +3299,52 @@
           "hex": "#aec1bf",
           "front": "catalog_images/next-level-5033/stonewash-green_front.jpg",
           "back": "catalog_images/next-level-5033/stonewash-green_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "richardson-112re",
+      "name": "Sustainable Trucker Cap",
+      "brand": "Richardson",
+      "style": "112RE",
+      "kind": "hat",
+      "popular": true,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#121212",
+          "front": "catalog_images/richardson-112re/black_front.jpg",
+          "back": "catalog_images/richardson-112re/black_back.jpg"
+        },
+        {
+          "name": "Black/ Charcoal",
+          "hex": "#131313",
+          "front": "catalog_images/richardson-112re/black-charcoal_front.jpg",
+          "back": "catalog_images/richardson-112re/black-charcoal_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#504c4b",
+          "front": "catalog_images/richardson-112re/charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-112re/charcoal-black_back.jpg"
+        },
+        {
+          "name": "Loden/ Black",
+          "hex": "#544c37",
+          "front": "catalog_images/richardson-112re/loden-black_front.jpg",
+          "back": "catalog_images/richardson-112re/loden-black_back.jpg"
+        },
+        {
+          "name": "Loden/ Khaki",
+          "hex": "#544c37",
+          "front": "catalog_images/richardson-112re/loden-khaki_front.jpg",
+          "back": "catalog_images/richardson-112re/loden-khaki_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#090c14",
+          "front": "catalog_images/richardson-112re/navy_front.jpg",
+          "back": "catalog_images/richardson-112re/navy_back.jpg"
         }
       ]
     }

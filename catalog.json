@@ -2927,6 +2927,286 @@
           "back": "catalog_images/hanes-gdh100/summer-squash-yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-3600",
+      "name": "Unisex Tee",
+      "brand": "Next Level",
+      "style": "3600",
+      "kind": "tee",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f5f3f7",
+          "front": "catalog_images/next-level-3600/white_front.jpg",
+          "back": "catalog_images/next-level-3600/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#252326",
+          "front": "catalog_images/next-level-3600/black_front.jpg",
+          "back": "catalog_images/next-level-3600/black_back.jpg"
+        },
+        {
+          "name": "Antique Gold",
+          "hex": "#d99021",
+          "front": "catalog_images/next-level-3600/antique-gold_front.jpg",
+          "back": "catalog_images/next-level-3600/antique-gold_back.jpg"
+        },
+        {
+          "name": "Banana Cream",
+          "hex": "#f8d48d",
+          "front": "catalog_images/next-level-3600/banana-cream_front.jpg",
+          "back": "catalog_images/next-level-3600/banana-cream_back.jpg"
+        },
+        {
+          "name": "Blue Jean",
+          "hex": "#627385",
+          "front": "catalog_images/next-level-3600/blue-jean_front.jpg",
+          "back": "catalog_images/next-level-3600/blue-jean_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#f2efea",
+          "front": "catalog_images/next-level-3600/bone_front.jpg",
+          "back": "catalog_images/next-level-3600/bone_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#6e1224",
+          "front": "catalog_images/next-level-3600/cardinal_front.jpg",
+          "back": "catalog_images/next-level-3600/cardinal_back.jpg"
+        },
+        {
+          "name": "Classic Orange",
+          "hex": "#fc5926",
+          "front": "catalog_images/next-level-3600/classic-orange_front.jpg",
+          "back": "catalog_images/next-level-3600/classic-orange_back.jpg"
+        },
+        {
+          "name": "Clay",
+          "hex": "#b4622e",
+          "front": "catalog_images/next-level-3600/clay_front.jpg",
+          "back": "catalog_images/next-level-3600/clay_back.jpg"
+        },
+        {
+          "name": "Cool Blue",
+          "hex": "#064069",
+          "front": "catalog_images/next-level-3600/cool-blue_front.jpg",
+          "back": "catalog_images/next-level-3600/cool-blue_back.jpg"
+        },
+        {
+          "name": "Cream",
+          "hex": "#d7c4b2",
+          "front": "catalog_images/next-level-3600/cream_front.jpg",
+          "back": "catalog_images/next-level-3600/cream_back.jpg"
+        },
+        {
+          "name": "Dark Chocolate",
+          "hex": "#392a27",
+          "front": "catalog_images/next-level-3600/dark-chocolate_front.jpg",
+          "back": "catalog_images/next-level-3600/dark-chocolate_back.jpg"
+        },
+        {
+          "name": "Desert Pink",
+          "hex": "#d29b91",
+          "front": "catalog_images/next-level-3600/desert-pink_front.jpg",
+          "back": "catalog_images/next-level-3600/desert-pink_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#2b473b",
+          "front": "catalog_images/next-level-3600/forest-green_front.jpg",
+          "back": "catalog_images/next-level-3600/forest-green_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#fda60e",
+          "front": "catalog_images/next-level-3600/gold_front.jpg",
+          "back": "catalog_images/next-level-3600/gold_back.jpg"
+        },
+        {
+          "name": "Graphite Black",
+          "hex": "#322e34",
+          "front": "catalog_images/next-level-3600/graphite-black_front.jpg",
+          "back": "catalog_images/next-level-3600/graphite-black_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#bdbcc2",
+          "front": "catalog_images/next-level-3600/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-3600/heather-grey_back.jpg"
+        },
+        {
+          "name": "Heavy Metal",
+          "hex": "#484747",
+          "front": "catalog_images/next-level-3600/heavy-metal_front.jpg",
+          "back": "catalog_images/next-level-3600/heavy-metal_back.jpg"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#48555c",
+          "front": "catalog_images/next-level-3600/indigo_front.jpg",
+          "back": "catalog_images/next-level-3600/indigo_back.jpg"
+        },
+        {
+          "name": "Kelly Green",
+          "hex": "#0d8d52",
+          "front": "catalog_images/next-level-3600/kelly-green_front.jpg",
+          "back": "catalog_images/next-level-3600/kelly-green_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#ced9e0",
+          "front": "catalog_images/next-level-3600/light-blue_front.jpg",
+          "back": "catalog_images/next-level-3600/light-blue_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#b2aea7",
+          "front": "catalog_images/next-level-3600/light-grey_front.jpg",
+          "back": "catalog_images/next-level-3600/light-grey_back.jpg"
+        },
+        {
+          "name": "Light Olive",
+          "hex": "#958d70",
+          "front": "catalog_images/next-level-3600/light-olive_front.jpg",
+          "back": "catalog_images/next-level-3600/light-olive_back.jpg"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#ecb8bf",
+          "front": "catalog_images/next-level-3600/light-pink_front.jpg",
+          "back": "catalog_images/next-level-3600/light-pink_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#5d2831",
+          "front": "catalog_images/next-level-3600/maroon_front.jpg",
+          "back": "catalog_images/next-level-3600/maroon_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#b86b72",
+          "front": "catalog_images/next-level-3600/mauve_front.jpg",
+          "back": "catalog_images/next-level-3600/mauve_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#212732",
+          "front": "catalog_images/next-level-3600/midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-3600/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#69634a",
+          "front": "catalog_images/next-level-3600/military-green_front.jpg",
+          "back": "catalog_images/next-level-3600/military-green_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e9dfd0",
+          "front": "catalog_images/next-level-3600/natural_front.jpg",
+          "back": "catalog_images/next-level-3600/natural_back.jpg"
+        },
+        {
+          "name": "Oatmeal",
+          "hex": "#e1ded7",
+          "front": "catalog_images/next-level-3600/oatmeal_front.jpg",
+          "back": "catalog_images/next-level-3600/oatmeal_back.jpg"
+        },
+        {
+          "name": "Oxblood",
+          "hex": "#42292f",
+          "front": "catalog_images/next-level-3600/oxblood_front.jpg",
+          "back": "catalog_images/next-level-3600/oxblood_back.jpg"
+        },
+        {
+          "name": "Peri Blue",
+          "hex": "#94a5c8",
+          "front": "catalog_images/next-level-3600/peri-blue_front.jpg",
+          "back": "catalog_images/next-level-3600/peri-blue_back.jpg"
+        },
+        {
+          "name": "Purple Rush",
+          "hex": "#583e7b",
+          "front": "catalog_images/next-level-3600/purple-rush_front.jpg",
+          "back": "catalog_images/next-level-3600/purple-rush_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#c20430",
+          "front": "catalog_images/next-level-3600/red_front.jpg",
+          "back": "catalog_images/next-level-3600/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#083b7d",
+          "front": "catalog_images/next-level-3600/royal_front.jpg",
+          "back": "catalog_images/next-level-3600/royal_back.jpg"
+        },
+        {
+          "name": "Royal Pine",
+          "hex": "#52665a",
+          "front": "catalog_images/next-level-3600/royal-pine_front.jpg",
+          "back": "catalog_images/next-level-3600/royal-pine_back.jpg"
+        },
+        {
+          "name": "Sand",
+          "hex": "#d3c9bf",
+          "front": "catalog_images/next-level-3600/sand_front.jpg",
+          "back": "catalog_images/next-level-3600/sand_back.jpg"
+        },
+        {
+          "name": "Shiitake",
+          "hex": "#89746f",
+          "front": "catalog_images/next-level-3600/shiitake_front.jpg",
+          "back": "catalog_images/next-level-3600/shiitake_back.jpg"
+        },
+        {
+          "name": "Stonewash Denim",
+          "hex": "#a2b7c7",
+          "front": "catalog_images/next-level-3600/stonewash-denim_front.jpg",
+          "back": "catalog_images/next-level-3600/stonewash-denim_back.jpg"
+        },
+        {
+          "name": "Tahiti Blue",
+          "hex": "#01afbf",
+          "front": "catalog_images/next-level-3600/tahiti-blue_front.jpg",
+          "back": "catalog_images/next-level-3600/tahiti-blue_back.jpg"
+        },
+        {
+          "name": "Tan",
+          "hex": "#b7a18a",
+          "front": "catalog_images/next-level-3600/tan_front.jpg",
+          "back": "catalog_images/next-level-3600/tan_back.jpg"
+        },
+        {
+          "name": "Teal",
+          "hex": "#0291a0",
+          "front": "catalog_images/next-level-3600/teal_front.jpg",
+          "back": "catalog_images/next-level-3600/teal_back.jpg"
+        },
+        {
+          "name": "Turquoise",
+          "hex": "#0285bb",
+          "front": "catalog_images/next-level-3600/turquoise_front.jpg",
+          "back": "catalog_images/next-level-3600/turquoise_back.jpg"
+        },
+        {
+          "name": "Warm Grey",
+          "hex": "#8c8276",
+          "front": "catalog_images/next-level-3600/warm-grey_front.jpg",
+          "back": "catalog_images/next-level-3600/warm-grey_back.jpg"
+        },
+        {
+          "name": "Watermelon",
+          "hex": "#fd5e53",
+          "front": "catalog_images/next-level-3600/watermelon_front.jpg",
+          "back": "catalog_images/next-level-3600/watermelon_back.jpg"
+        }
+      ]
     }
   ]
 }

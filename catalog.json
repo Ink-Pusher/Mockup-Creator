@@ -2671,6 +2671,262 @@
           "back": "catalog_images/adam-s-lp101/wild-plum_back.jpg"
         }
       ]
+    },
+    {
+      "id": "hanes-gdh100",
+      "name": "Comfortwash Unisex Tee",
+      "brand": "Hanes",
+      "style": "GDH100",
+      "kind": "tee",
+      "popular": true,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f3f1f4",
+          "front": "catalog_images/hanes-gdh100/white_front.jpg",
+          "back": "catalog_images/hanes-gdh100/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#232122",
+          "front": "catalog_images/hanes-gdh100/black_front.jpg",
+          "back": "catalog_images/hanes-gdh100/black_back.jpg"
+        },
+        {
+          "name": "Anchor Slate",
+          "hex": "#454457",
+          "front": "catalog_images/hanes-gdh100/anchor-slate_front.jpg",
+          "back": "catalog_images/hanes-gdh100/anchor-slate_back.jpg"
+        },
+        {
+          "name": "Artisan Gold",
+          "hex": "#e6b873",
+          "front": "catalog_images/hanes-gdh100/artisan-gold_front.jpg",
+          "back": "catalog_images/hanes-gdh100/artisan-gold_back.jpg"
+        },
+        {
+          "name": "Athletic Red",
+          "hex": "#ad0219",
+          "front": "catalog_images/hanes-gdh100/athletic-red_front.jpg",
+          "back": "catalog_images/hanes-gdh100/athletic-red_back.jpg"
+        },
+        {
+          "name": "Cactus",
+          "hex": "#4e8078",
+          "front": "catalog_images/hanes-gdh100/cactus_front.jpg",
+          "back": "catalog_images/hanes-gdh100/cactus_back.jpg"
+        },
+        {
+          "name": "Cayenne",
+          "hex": "#943b44",
+          "front": "catalog_images/hanes-gdh100/cayenne_front.jpg",
+          "back": "catalog_images/hanes-gdh100/cayenne_back.jpg"
+        },
+        {
+          "name": "Chic Lime",
+          "hex": "#e6f2a8",
+          "front": "catalog_images/hanes-gdh100/chic-lime_front.jpg",
+          "back": "catalog_images/hanes-gdh100/chic-lime_back.jpg"
+        },
+        {
+          "name": "Clay",
+          "hex": "#dd7d6c",
+          "front": "catalog_images/hanes-gdh100/clay_front.jpg",
+          "back": "catalog_images/hanes-gdh100/clay_back.jpg"
+        },
+        {
+          "name": "Concrete Grey",
+          "hex": "#898380",
+          "front": "catalog_images/hanes-gdh100/concrete-grey_front.jpg",
+          "back": "catalog_images/hanes-gdh100/concrete-grey_back.jpg"
+        },
+        {
+          "name": "Coral Craze",
+          "hex": "#f27484",
+          "front": "catalog_images/hanes-gdh100/coral-craze_front.jpg",
+          "back": "catalog_images/hanes-gdh100/coral-craze_back.jpg"
+        },
+        {
+          "name": "Cotton Candy",
+          "hex": "#f8c0d5",
+          "front": "catalog_images/hanes-gdh100/cotton-candy_front.jpg",
+          "back": "catalog_images/hanes-gdh100/cotton-candy_back.jpg"
+        },
+        {
+          "name": "Crimson Fall",
+          "hex": "#c73955",
+          "front": "catalog_images/hanes-gdh100/crimson-fall_front.jpg",
+          "back": "catalog_images/hanes-gdh100/crimson-fall_back.jpg"
+        },
+        {
+          "name": "Cypress Green",
+          "hex": "#6a857e",
+          "front": "catalog_images/hanes-gdh100/cypress-green_front.jpg",
+          "back": "catalog_images/hanes-gdh100/cypress-green_back.jpg"
+        },
+        {
+          "name": "Deep Forte Blue",
+          "hex": "#606ebe",
+          "front": "catalog_images/hanes-gdh100/deep-forte-blue_front.jpg",
+          "back": "catalog_images/hanes-gdh100/deep-forte-blue_back.jpg"
+        },
+        {
+          "name": "Faded Fatigue",
+          "hex": "#b8b299",
+          "front": "catalog_images/hanes-gdh100/faded-fatigue_front.jpg",
+          "back": "catalog_images/hanes-gdh100/faded-fatigue_back.jpg"
+        },
+        {
+          "name": "Field Green",
+          "hex": "#3d5b46",
+          "front": "catalog_images/hanes-gdh100/field-green_front.jpg",
+          "back": "catalog_images/hanes-gdh100/field-green_back.jpg"
+        },
+        {
+          "name": "Freshwater",
+          "hex": "#6bd4e5",
+          "front": "catalog_images/hanes-gdh100/freshwater_front.jpg",
+          "back": "catalog_images/hanes-gdh100/freshwater_back.jpg"
+        },
+        {
+          "name": "Frontier Blue",
+          "hex": "#6e7aa6",
+          "front": "catalog_images/hanes-gdh100/frontier-blue_front.jpg",
+          "back": "catalog_images/hanes-gdh100/frontier-blue_back.jpg"
+        },
+        {
+          "name": "Future Lavender",
+          "hex": "#c8b7d9",
+          "front": "catalog_images/hanes-gdh100/future-lavender_front.jpg",
+          "back": "catalog_images/hanes-gdh100/future-lavender_back.jpg"
+        },
+        {
+          "name": "Grape Soda",
+          "hex": "#54415b",
+          "front": "catalog_images/hanes-gdh100/grape-soda_front.jpg",
+          "back": "catalog_images/hanes-gdh100/grape-soda_back.jpg"
+        },
+        {
+          "name": "Horizon Orange",
+          "hex": "#fd8352",
+          "front": "catalog_images/hanes-gdh100/horizon-orange_front.jpg",
+          "back": "catalog_images/hanes-gdh100/horizon-orange_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#8b74bb",
+          "front": "catalog_images/hanes-gdh100/lavender_front.jpg",
+          "back": "catalog_images/hanes-gdh100/lavender_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#491a1c",
+          "front": "catalog_images/hanes-gdh100/maroon_front.jpg",
+          "back": "catalog_images/hanes-gdh100/maroon_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#7ed7d2",
+          "front": "catalog_images/hanes-gdh100/mint_front.jpg",
+          "back": "catalog_images/hanes-gdh100/mint_back.jpg"
+        },
+        {
+          "name": "Moss",
+          "hex": "#576951",
+          "front": "catalog_images/hanes-gdh100/moss_front.jpg",
+          "back": "catalog_images/hanes-gdh100/moss_back.jpg"
+        },
+        {
+          "name": "Nantucket Red",
+          "hex": "#af605b",
+          "front": "catalog_images/hanes-gdh100/nantucket-red_front.jpg",
+          "back": "catalog_images/hanes-gdh100/nantucket-red_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2a304a",
+          "front": "catalog_images/hanes-gdh100/navy_front.jpg",
+          "back": "catalog_images/hanes-gdh100/navy_back.jpg"
+        },
+        {
+          "name": "New Railroad Grey",
+          "hex": "#4a4545",
+          "front": "catalog_images/hanes-gdh100/new-railroad-grey_front.jpg",
+          "back": "catalog_images/hanes-gdh100/new-railroad-grey_back.jpg"
+        },
+        {
+          "name": "Ocean Depths",
+          "hex": "#0c7e9a",
+          "front": "catalog_images/hanes-gdh100/ocean-depths_front.jpg",
+          "back": "catalog_images/hanes-gdh100/ocean-depths_back.jpg"
+        },
+        {
+          "name": "Parchment",
+          "hex": "#ece7db",
+          "front": "catalog_images/hanes-gdh100/parchment_front.jpg",
+          "back": "catalog_images/hanes-gdh100/parchment_back.jpg"
+        },
+        {
+          "name": "Pebblestone",
+          "hex": "#cfcbbc",
+          "front": "catalog_images/hanes-gdh100/pebblestone_front.jpg",
+          "back": "catalog_images/hanes-gdh100/pebblestone_back.jpg"
+        },
+        {
+          "name": "Peony Pink",
+          "hex": "#e82079",
+          "front": "catalog_images/hanes-gdh100/peony-pink_front.jpg",
+          "back": "catalog_images/hanes-gdh100/peony-pink_back.jpg"
+        },
+        {
+          "name": "Purple Plum Raisin",
+          "hex": "#8d5b79",
+          "front": "catalog_images/hanes-gdh100/purple-plum-raisin_front.jpg",
+          "back": "catalog_images/hanes-gdh100/purple-plum-raisin_back.jpg"
+        },
+        {
+          "name": "Rich Green Grass",
+          "hex": "#029a72",
+          "front": "catalog_images/hanes-gdh100/rich-green-grass_front.jpg",
+          "back": "catalog_images/hanes-gdh100/rich-green-grass_back.jpg"
+        },
+        {
+          "name": "Saltwater",
+          "hex": "#6b7797",
+          "front": "catalog_images/hanes-gdh100/saltwater_front.jpg",
+          "back": "catalog_images/hanes-gdh100/saltwater_back.jpg"
+        },
+        {
+          "name": "Silverstone",
+          "hex": "#c9cacf",
+          "front": "catalog_images/hanes-gdh100/silverstone_front.jpg",
+          "back": "catalog_images/hanes-gdh100/silverstone_back.jpg"
+        },
+        {
+          "name": "Soothing Blue",
+          "hex": "#d2dee4",
+          "front": "catalog_images/hanes-gdh100/soothing-blue_front.jpg",
+          "back": "catalog_images/hanes-gdh100/soothing-blue_back.jpg"
+        },
+        {
+          "name": "Spanish Moss",
+          "hex": "#5aaaa7",
+          "front": "catalog_images/hanes-gdh100/spanish-moss_front.jpg",
+          "back": "catalog_images/hanes-gdh100/spanish-moss_back.jpg"
+        },
+        {
+          "name": "Summer Sky Blue",
+          "hex": "#3c8bc0",
+          "front": "catalog_images/hanes-gdh100/summer-sky-blue_front.jpg",
+          "back": "catalog_images/hanes-gdh100/summer-sky-blue_back.jpg"
+        },
+        {
+          "name": "Summer Squash Yellow",
+          "hex": "#f6d69c",
+          "front": "catalog_images/hanes-gdh100/summer-squash-yellow_front.jpg",
+          "back": "catalog_images/hanes-gdh100/summer-squash-yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

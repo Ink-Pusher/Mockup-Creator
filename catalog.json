@@ -3715,6 +3715,184 @@
           "back": "catalog_images/royal-apparel-5051/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-4810gd",
+      "name": "Heavyweight Garment Dyed Tee",
+      "brand": "Bella/Canvas",
+      "style": "4810GD",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Vintage White",
+          "hex": "#edece7",
+          "front": "catalog_images/bella-canvas-4810gd/vintage-white_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/vintage-white_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f3f3f3",
+          "front": "catalog_images/bella-canvas-4810gd/white_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#201f24",
+          "front": "catalog_images/bella-canvas-4810gd/black_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/black_back.jpg"
+        },
+        {
+          "name": "Washed Black",
+          "hex": "#313236",
+          "front": "catalog_images/bella-canvas-4810gd/washed-black_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-black_back.jpg"
+        },
+        {
+          "name": "Bubble Gum",
+          "hex": "#f999c1",
+          "front": "catalog_images/bella-canvas-4810gd/bubble-gum_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/bubble-gum_back.jpg"
+        },
+        {
+          "name": "Buttermilk",
+          "hex": "#f0eac8",
+          "front": "catalog_images/bella-canvas-4810gd/buttermilk_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/buttermilk_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#ccb69f",
+          "front": "catalog_images/bella-canvas-4810gd/khaki_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/khaki_back.jpg"
+        },
+        {
+          "name": "Light Washed Denim",
+          "hex": "#b9c9da",
+          "front": "catalog_images/bella-canvas-4810gd/light-washed-denim_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/light-washed-denim_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#202538",
+          "front": "catalog_images/bella-canvas-4810gd/navy_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/navy_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#f4d6dd",
+          "front": "catalog_images/bella-canvas-4810gd/pink_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/pink_back.jpg"
+        },
+        {
+          "name": "Pop Red",
+          "hex": "#ae1d2c",
+          "front": "catalog_images/bella-canvas-4810gd/pop-red_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/pop-red_back.jpg"
+        },
+        {
+          "name": "Royal Blue",
+          "hex": "#0a3173",
+          "front": "catalog_images/bella-canvas-4810gd/royal-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/royal-blue_back.jpg"
+        },
+        {
+          "name": "Washed Charcoal",
+          "hex": "#5b5b59",
+          "front": "catalog_images/bella-canvas-4810gd/washed-charcoal_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-charcoal_back.jpg"
+        },
+        {
+          "name": "Washed Chestnut",
+          "hex": "#965f56",
+          "front": "catalog_images/bella-canvas-4810gd/washed-chestnut_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-chestnut_back.jpg"
+        },
+        {
+          "name": "Washed Cocoa",
+          "hex": "#765c4f",
+          "front": "catalog_images/bella-canvas-4810gd/washed-cocoa_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-cocoa_back.jpg"
+        },
+        {
+          "name": "Washed Denim",
+          "hex": "#4c5f6f",
+          "front": "catalog_images/bella-canvas-4810gd/washed-denim_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-denim_back.jpg"
+        },
+        {
+          "name": "Washed Grey",
+          "hex": "#80807e",
+          "front": "catalog_images/bella-canvas-4810gd/washed-grey_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-grey_back.jpg"
+        },
+        {
+          "name": "Washed Kelly",
+          "hex": "#018454",
+          "front": "catalog_images/bella-canvas-4810gd/washed-kelly_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-kelly_back.jpg"
+        },
+        {
+          "name": "Washed Lavender",
+          "hex": "#dbc4c5",
+          "front": "catalog_images/bella-canvas-4810gd/washed-lavender_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-lavender_back.jpg"
+        },
+        {
+          "name": "Washed Maroon",
+          "hex": "#804549",
+          "front": "catalog_images/bella-canvas-4810gd/washed-maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-maroon_back.jpg"
+        },
+        {
+          "name": "Washed Mustard",
+          "hex": "#e4ad5c",
+          "front": "catalog_images/bella-canvas-4810gd/washed-mustard_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-mustard_back.jpg"
+        },
+        {
+          "name": "Washed Navy",
+          "hex": "#474f60",
+          "front": "catalog_images/bella-canvas-4810gd/washed-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-navy_back.jpg"
+        },
+        {
+          "name": "Washed Olive",
+          "hex": "#8e866f",
+          "front": "catalog_images/bella-canvas-4810gd/washed-olive_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-olive_back.jpg"
+        },
+        {
+          "name": "Washed Pine",
+          "hex": "#587569",
+          "front": "catalog_images/bella-canvas-4810gd/washed-pine_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-pine_back.jpg"
+        },
+        {
+          "name": "Washed Purple",
+          "hex": "#79619d",
+          "front": "catalog_images/bella-canvas-4810gd/washed-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-purple_back.jpg"
+        },
+        {
+          "name": "Washed Red",
+          "hex": "#bd5963",
+          "front": "catalog_images/bella-canvas-4810gd/washed-red_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-red_back.jpg"
+        },
+        {
+          "name": "Washed Royal Blue",
+          "hex": "#35589d",
+          "front": "catalog_images/bella-canvas-4810gd/washed-royal-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-royal-blue_back.jpg"
+        },
+        {
+          "name": "Washed Thyme",
+          "hex": "#c0bcaa",
+          "front": "catalog_images/bella-canvas-4810gd/washed-thyme_front.jpg",
+          "back": "catalog_images/bella-canvas-4810gd/washed-thyme_back.jpg"
+        }
+      ]
     }
   ]
 }

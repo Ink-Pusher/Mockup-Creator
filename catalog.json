@@ -3893,6 +3893,352 @@
           "back": "catalog_images/bella-canvas-4810gd/washed-thyme_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5026",
+      "name": "Classic Tee",
+      "brand": "As Colour",
+      "style": "5026",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Army",
+          "hex": "#4f4e36",
+          "front": "catalog_images/as-colour-5026/army_front.jpg",
+          "back": "catalog_images/as-colour-5026/army_back.jpg"
+        },
+        {
+          "name": "Atlantic",
+          "hex": "#084e55",
+          "front": "catalog_images/as-colour-5026/atlantic_front.jpg",
+          "back": "catalog_images/as-colour-5026/atlantic_back.jpg"
+        },
+        {
+          "name": "Autumn",
+          "hex": "#c1361b",
+          "front": "catalog_images/as-colour-5026/autumn_front.jpg",
+          "back": "catalog_images/as-colour-5026/autumn_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1f1f21",
+          "front": "catalog_images/as-colour-5026/black_front.jpg",
+          "back": "catalog_images/as-colour-5026/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#e2d9d0",
+          "front": "catalog_images/as-colour-5026/bone_front.jpg",
+          "back": "catalog_images/as-colour-5026/bone_back.jpg"
+        },
+        {
+          "name": "Bright Royal",
+          "hex": "#1a4883",
+          "front": "catalog_images/as-colour-5026/bright-royal_front.jpg",
+          "back": "catalog_images/as-colour-5026/bright-royal_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#61232b",
+          "front": "catalog_images/as-colour-5026/burgundy_front.jpg",
+          "back": "catalog_images/as-colour-5026/burgundy_back.jpg"
+        },
+        {
+          "name": "Butter",
+          "hex": "#f0ebd1",
+          "front": "catalog_images/as-colour-5026/butter_front.jpg",
+          "back": "catalog_images/as-colour-5026/butter_back.jpg"
+        },
+        {
+          "name": "Camel",
+          "hex": "#b17b3b",
+          "front": "catalog_images/as-colour-5026/camel_front.jpg",
+          "back": "catalog_images/as-colour-5026/camel_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#841319",
+          "front": "catalog_images/as-colour-5026/cardinal_front.jpg",
+          "back": "catalog_images/as-colour-5026/cardinal_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#444445",
+          "front": "catalog_images/as-colour-5026/charcoal_front.jpg",
+          "back": "catalog_images/as-colour-5026/charcoal_back.jpg"
+        },
+        {
+          "name": "Charlotte",
+          "hex": "#008896",
+          "front": "catalog_images/as-colour-5026/charlotte_front.jpg",
+          "back": "catalog_images/as-colour-5026/charlotte_back.jpg"
+        },
+        {
+          "name": "Chestnut",
+          "hex": "#4c2c24",
+          "front": "catalog_images/as-colour-5026/chestnut_front.jpg",
+          "back": "catalog_images/as-colour-5026/chestnut_back.jpg"
+        },
+        {
+          "name": "Coal",
+          "hex": "#31312f",
+          "front": "catalog_images/as-colour-5026/coal_front.jpg",
+          "back": "catalog_images/as-colour-5026/coal_back.jpg"
+        },
+        {
+          "name": "Cobalt",
+          "hex": "#243357",
+          "front": "catalog_images/as-colour-5026/cobalt_front.jpg",
+          "back": "catalog_images/as-colour-5026/cobalt_back.jpg"
+        },
+        {
+          "name": "Cocoa",
+          "hex": "#955c3d",
+          "front": "catalog_images/as-colour-5026/cocoa_front.jpg",
+          "back": "catalog_images/as-colour-5026/cocoa_back.jpg"
+        },
+        {
+          "name": "Cypress",
+          "hex": "#606658",
+          "front": "catalog_images/as-colour-5026/cypress_front.jpg",
+          "back": "catalog_images/as-colour-5026/cypress_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#f3e9db",
+          "front": "catalog_images/as-colour-5026/ecru_front.jpg",
+          "back": "catalog_images/as-colour-5026/ecru_back.jpg"
+        },
+        {
+          "name": "Emerald",
+          "hex": "#103f29",
+          "front": "catalog_images/as-colour-5026/emerald_front.jpg",
+          "back": "catalog_images/as-colour-5026/emerald_back.jpg"
+        },
+        {
+          "name": "Eucalyptus",
+          "hex": "#908a6e",
+          "front": "catalog_images/as-colour-5026/eucalyptus_front.jpg",
+          "back": "catalog_images/as-colour-5026/eucalyptus_back.jpg"
+        },
+        {
+          "name": "Gravel",
+          "hex": "#7d7e83",
+          "front": "catalog_images/as-colour-5026/gravel_front.jpg",
+          "back": "catalog_images/as-colour-5026/gravel_back.jpg"
+        },
+        {
+          "name": "Grey Marle",
+          "hex": "#959498",
+          "front": "catalog_images/as-colour-5026/grey-marle_front.jpg",
+          "back": "catalog_images/as-colour-5026/grey-marle_back.jpg"
+        },
+        {
+          "name": "Hazy Pink",
+          "hex": "#b48a80",
+          "front": "catalog_images/as-colour-5026/hazy-pink_front.jpg",
+          "back": "catalog_images/as-colour-5026/hazy-pink_back.jpg"
+        },
+        {
+          "name": "Ink Blue",
+          "hex": "#1e1f24",
+          "front": "catalog_images/as-colour-5026/ink-blue_front.jpg",
+          "back": "catalog_images/as-colour-5026/ink-blue_back.jpg"
+        },
+        {
+          "name": "Jade",
+          "hex": "#074b3a",
+          "front": "catalog_images/as-colour-5026/jade_front.jpg",
+          "back": "catalog_images/as-colour-5026/jade_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#bdaa82",
+          "front": "catalog_images/as-colour-5026/khaki_front.jpg",
+          "back": "catalog_images/as-colour-5026/khaki_back.jpg"
+        },
+        {
+          "name": "Lagoon",
+          "hex": "#badbd8",
+          "front": "catalog_images/as-colour-5026/lagoon_front.jpg",
+          "back": "catalog_images/as-colour-5026/lagoon_back.jpg"
+        },
+        {
+          "name": "Lapis",
+          "hex": "#646ea9",
+          "front": "catalog_images/as-colour-5026/lapis_front.jpg",
+          "back": "catalog_images/as-colour-5026/lapis_back.jpg"
+        },
+        {
+          "name": "Liberty",
+          "hex": "#1e3e6f",
+          "front": "catalog_images/as-colour-5026/liberty_front.jpg",
+          "back": "catalog_images/as-colour-5026/liberty_back.jpg"
+        },
+        {
+          "name": "Lime",
+          "hex": "#d9d8a6",
+          "front": "catalog_images/as-colour-5026/lime_front.jpg",
+          "back": "catalog_images/as-colour-5026/lime_back.jpg"
+        },
+        {
+          "name": "Midnight Blue",
+          "hex": "#232938",
+          "front": "catalog_images/as-colour-5026/midnight-blue_front.jpg",
+          "back": "catalog_images/as-colour-5026/midnight-blue_back.jpg"
+        },
+        {
+          "name": "Mineral",
+          "hex": "#819796",
+          "front": "catalog_images/as-colour-5026/mineral_front.jpg",
+          "back": "catalog_images/as-colour-5026/mineral_back.jpg"
+        },
+        {
+          "name": "Moss",
+          "hex": "#867b26",
+          "front": "catalog_images/as-colour-5026/moss_front.jpg",
+          "back": "catalog_images/as-colour-5026/moss_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1d232e",
+          "front": "catalog_images/as-colour-5026/navy_front.jpg",
+          "back": "catalog_images/as-colour-5026/navy_back.jpg"
+        },
+        {
+          "name": "Ocean",
+          "hex": "#389bd1",
+          "front": "catalog_images/as-colour-5026/ocean_front.jpg",
+          "back": "catalog_images/as-colour-5026/ocean_back.jpg"
+        },
+        {
+          "name": "Orchid",
+          "hex": "#e3d4d9",
+          "front": "catalog_images/as-colour-5026/orchid_front.jpg",
+          "back": "catalog_images/as-colour-5026/orchid_back.jpg"
+        },
+        {
+          "name": "Pale Blue",
+          "hex": "#b0cbcf",
+          "front": "catalog_images/as-colour-5026/pale-blue_front.jpg",
+          "back": "catalog_images/as-colour-5026/pale-blue_back.jpg"
+        },
+        {
+          "name": "Pale Pink",
+          "hex": "#f3c8b7",
+          "front": "catalog_images/as-colour-5026/pale-pink_front.jpg",
+          "back": "catalog_images/as-colour-5026/pale-pink_back.jpg"
+        },
+        {
+          "name": "Petrol Blue",
+          "hex": "#39424b",
+          "front": "catalog_images/as-colour-5026/petrol-blue_front.jpg",
+          "back": "catalog_images/as-colour-5026/petrol-blue_back.jpg"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#142823",
+          "front": "catalog_images/as-colour-5026/pine-green_front.jpg",
+          "back": "catalog_images/as-colour-5026/pine-green_back.jpg"
+        },
+        {
+          "name": "Pistachio",
+          "hex": "#b6b996",
+          "front": "catalog_images/as-colour-5026/pistachio_front.jpg",
+          "back": "catalog_images/as-colour-5026/pistachio_back.jpg"
+        },
+        {
+          "name": "Plum",
+          "hex": "#2f1e27",
+          "front": "catalog_images/as-colour-5026/plum_front.jpg",
+          "back": "catalog_images/as-colour-5026/plum_back.jpg"
+        },
+        {
+          "name": "Powder",
+          "hex": "#c9cdd6",
+          "front": "catalog_images/as-colour-5026/powder_front.jpg",
+          "back": "catalog_images/as-colour-5026/powder_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#b40515",
+          "front": "catalog_images/as-colour-5026/red_front.jpg",
+          "back": "catalog_images/as-colour-5026/red_back.jpg"
+        },
+        {
+          "name": "Safari",
+          "hex": "#a69977",
+          "front": "catalog_images/as-colour-5026/safari_front.jpg",
+          "back": "catalog_images/as-colour-5026/safari_back.jpg"
+        },
+        {
+          "name": "Sand",
+          "hex": "#9d8966",
+          "front": "catalog_images/as-colour-5026/sand_front.jpg",
+          "back": "catalog_images/as-colour-5026/sand_back.jpg"
+        },
+        {
+          "name": "Shadow",
+          "hex": "#6e7070",
+          "front": "catalog_images/as-colour-5026/shadow_front.jpg",
+          "back": "catalog_images/as-colour-5026/shadow_back.jpg"
+        },
+        {
+          "name": "Smoke",
+          "hex": "#b4bdbc",
+          "front": "catalog_images/as-colour-5026/smoke_front.jpg",
+          "back": "catalog_images/as-colour-5026/smoke_back.jpg"
+        },
+        {
+          "name": "Storm",
+          "hex": "#a8a9a4",
+          "front": "catalog_images/as-colour-5026/storm_front.jpg",
+          "back": "catalog_images/as-colour-5026/storm_back.jpg"
+        },
+        {
+          "name": "Sunset",
+          "hex": "#f1bf68",
+          "front": "catalog_images/as-colour-5026/sunset_front.jpg",
+          "back": "catalog_images/as-colour-5026/sunset_back.jpg"
+        },
+        {
+          "name": "Violet",
+          "hex": "#5e4290",
+          "front": "catalog_images/as-colour-5026/violet_front.jpg",
+          "back": "catalog_images/as-colour-5026/violet_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#695847",
+          "front": "catalog_images/as-colour-5026/walnut_front.jpg",
+          "back": "catalog_images/as-colour-5026/walnut_back.jpg"
+        },
+        {
+          "name": "Watermelon",
+          "hex": "#db4654",
+          "front": "catalog_images/as-colour-5026/watermelon_front.jpg",
+          "back": "catalog_images/as-colour-5026/watermelon_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eae9ee",
+          "front": "catalog_images/as-colour-5026/white_front.jpg",
+          "back": "catalog_images/as-colour-5026/white_back.jpg"
+        },
+        {
+          "name": "White Marle",
+          "hex": "#e9e9eb",
+          "front": "catalog_images/as-colour-5026/white-marle_front.jpg",
+          "back": "catalog_images/as-colour-5026/white-marle_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#f2b335",
+          "front": "catalog_images/as-colour-5026/yellow_front.jpg",
+          "back": "catalog_images/as-colour-5026/yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

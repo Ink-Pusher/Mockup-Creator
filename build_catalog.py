@@ -6,17 +6,18 @@ front/back images per color -- named after YOUR product info (brand/style/
 color), not any vendor's internal IDs -- and writes a catalog.json entry in
 the exact shape the Ink Pusher Mockup Studio tool expects.
 
-Supports four vendor sites, each with its own small "extractor" function
-(everything downstream -- downloading, renaming, writing catalog.json -- is
-identical regardless of site):
+Supports five vendor sites/sources, each with its own small "extractor"
+function (everything downstream -- renaming, writing catalog.json -- is
+identical regardless of source):
 
     ssactivewear   S&S Activewear   (original, unchanged)
-    sanmar         SanMar
+    sanmar         SanMar (saved HTML, one color per page)
+    sanmar-pdf     SanMar Media Library PDF export (ALL colors in one run)
     royalapparel   Royal Apparel
     ascolour       AS Colour
 
 SETUP (one time):
-    pip install requests pillow numpy scipy pytoshop psd-tools six cloudscraper
+    pip install requests pillow numpy scipy pytoshop psd-tools six cloudscraper pymupdf
 
 USAGE:
     python build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
@@ -26,18 +27,28 @@ USAGE:
 EXAMPLES:
     python build_catalog.py --site ssactivewear bella_3001.html "Bella/Canvas" 3001 "Unisex Heavyweight Tee" tee catalog.json
     python build_catalog.py --site sanmar sanmar_black.html "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
+    python build_catalog.py --site sanmar-pdf PC099.pdf "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
     python build_catalog.py --site royalapparel royal_5051.html "Royal Apparel" 5051 "Unisex Short Sleeve Tee" tee catalog.json
     python build_catalog.py --site ascolour ascolour_5026.html "AS Colour" 5026 "Classic Tee" tee catalog.json
 
-IMPORTANT -- SanMar is different from the other three sites:
+IMPORTANT -- SanMar is different from the other three HTML-based sites:
 S&S Activewear, Royal Apparel, and AS Colour all list every color on ONE
 product page, so one saved page gives you the whole catalog entry in one
-run. SanMar's site is structured with a SEPARATE page per color (the URL
-itself contains the color, e.g. .../p/4664_Black vs .../p/4664_White).
-That means for SanMar you save and run this script ONCE PER COLOR -- each
-run adds or refreshes just that one color in catalog.json, so running it
-five times for five saved SanMar color pages builds up a five-color entry
-the same way the other sites do it in a single run.
+run. SanMar's *website* is structured with a SEPARATE page per color (the
+URL itself contains the color, e.g. .../p/4664_Black vs .../p/4664_White).
+That means for the plain `sanmar` site you save and run this script ONCE
+PER COLOR -- each run adds or refreshes just that one color in
+catalog.json, so running it five times for five saved SanMar color pages
+builds up a five-color entry the same way the other sites do it in a
+single run.
+
+`sanmar-pdf` AVOIDS THIS: if you export a PDF from SanMar's Media Library
+search results for a style (search the style number, select all results,
+export/print to PDF), that single PDF contains every color's front AND
+back images already embedded (with transparency baked in) plus their
+filenames -- so one `sanmar-pdf` run does the whole product, no per-color
+looping needed. Prefer this over the plain `sanmar` site whenever you have
+or can get that PDF.
 
 HOW TO SAVE A PAGE (all sites): open the product page in your browser, let
 it fully load, then File > Save Page As > "Webpage, HTML Only" (or
@@ -49,8 +60,9 @@ page load, which a saved-after-load page captures but a plain script
 fetching the raw URL cannot.
 
 OUTPUT:
-    catalog_images/<brand-style-slug>/<color-slug>_front.jpg
-    catalog_images/<brand-style-slug>/<color-slug>_back.jpg
+    catalog_images/<brand-style-slug>/<color-slug>_front.jpg   (.png for sanmar-pdf,
+    catalog_images/<brand-style-slug>/<color-slug>_back.jpg     which preserves the
+                                                                  PDF's transparency)
     catalog.json  (created if missing; re-running for the same brand+style
                     merges new/updated colors into the existing list rather
                     than wiping previously-added ones -- this is what makes
@@ -237,6 +249,150 @@ def extract_sanmar(html: str):
     return [{"name": color, "front": front, "back": back}]
 
 
+def extract_sanmar_pdf(pdf_path: str):
+    """SanMar Media Library PDF export: a 'Results for <style>' PDF where
+    each color/view shot is a real embedded image (with proper alpha
+    transparency baked in as a PDF soft-mask -- already a clean cutout)
+    sitting directly above its own hyperlinked filename label, e.g.
+    'PC099_Nordic Green_Flat_Front.tif'. This sidesteps SanMar's one-
+    color-per-page HTML workflow entirely: one PDF export covers every
+    color for the style in a single run.
+
+    Matching images to filenames is done purely by position (each image's
+    bounding box vs. the nearest filename label below it in the same
+    column) since the PDF's embedded text/link objects don't reference
+    the image xrefs directly. Handles filename labels that wrap onto two
+    lines (seen when a color name pushes the label past the column width).
+
+    Returns a list of {"name", "front_img", "back_img"} dicts where the
+    images are already-loaded PIL RGBA Images (no download step needed).
+    """
+    try:
+        import fitz  # PyMuPDF
+    except ImportError:
+        raise RuntimeError(
+            "This needs PyMuPDF: pip install pymupdf --break-system-packages"
+        )
+
+    doc = fitz.open(pdf_path)
+
+    def get_filename_labels(page):
+        """Span-level text extraction, merging the rare two-line-wrapped
+        filename label back into one (matched by close x0 + being the
+        very next line down in the same block)."""
+        raw_spans = []
+        for block in page.get_text("dict")["blocks"]:
+            if "lines" not in block:
+                continue
+            for line in block["lines"]:
+                for span in line["spans"]:
+                    if span["text"].strip():
+                        raw_spans.append((span["bbox"], span["text"]))
+        labels, used = [], set()
+        for i, (bbox, text) in enumerate(raw_spans):
+            if i in used:
+                continue
+            t = text.strip()
+            if t.lower().endswith(".tif") and re.match(r"^[A-Za-z]", t):
+                labels.append((bbox, t))
+                continue
+            if re.match(r"^[A-Za-z]", t) and not t.lower().endswith(".tif"):
+                for j in range(i + 1, min(i + 3, len(raw_spans))):
+                    nb, nt = raw_spans[j]
+                    if abs(nb[0] - bbox[0]) < 5 and nb[1] > bbox[1]:
+                        combined = (t + nt).strip()
+                        if combined.lower().endswith(".tif"):
+                            used.add(j)
+                            labels.append(
+                                ((bbox[0], bbox[1], max(bbox[2], nb[2]), nb[3]), combined)
+                            )
+                        break
+        return labels
+
+    fname_re = re.compile(r"^[A-Za-z0-9]+_(.+?)_Flat_(Front|Back)\.tif$", re.I)
+
+    def norm_key(s):
+        return re.sub(r"[^a-z0-9]", "", s.lower())
+
+    colors = {}  # norm_key -> {"names": set, "front": PIL, "back": PIL}
+    unmatched_images = 0
+    unparsed_labels = []
+
+    for page in doc:
+        smask_map = {im[0]: (im[1] or None) for im in page.get_images(full=True)}
+        img_infos = page.get_image_info(xrefs=True)
+        labels = get_filename_labels(page)
+
+        for info in img_infos:
+            bbox, xref = info["bbox"], info["xref"]
+            best, best_dist = None, None
+            for tb, t in labels:
+                if abs(tb[0] - bbox[0]) > 5 or tb[1] < bbox[1]:
+                    continue
+                dist = tb[1] - bbox[3]
+                if dist < -5:
+                    continue
+                if best_dist is None or abs(dist) < best_dist:
+                    best_dist, best = abs(dist), t
+            if not best:
+                unmatched_images += 1
+                continue
+            m = fname_re.match(best)
+            if not m:
+                unparsed_labels.append(best)
+                continue
+            color_raw, view = m.group(1), m.group(2).lower()
+
+            base = doc.extract_image(xref)
+            img = Image.open(io.BytesIO(base["image"])).convert("RGB")
+            smask_xref = base.get("smask") or smask_map.get(xref)
+            if smask_xref:
+                mask_img = Image.open(
+                    io.BytesIO(doc.extract_image(smask_xref)["image"])
+                ).convert("L")
+                img = img.convert("RGBA")
+                img.putalpha(mask_img)
+            else:
+                img = img.convert("RGBA")
+
+            key = norm_key(color_raw)
+            entry = colors.setdefault(key, {"names": set(), "front": None, "back": None})
+            entry["names"].add(color_raw)
+            entry[view] = img
+
+    if unmatched_images:
+        print(f"  ! {unmatched_images} image(s) in the PDF couldn't be matched to a filename label -- skipped.")
+    if unparsed_labels:
+        print(f"  ! {len(unparsed_labels)} filename label(s) didn't match the expected pattern -- skipped: {unparsed_labels[:5]}")
+
+    # Flag likely same-color spelling inconsistencies (SanMar's own export
+    # has these, e.g. "Cantaloupe" vs "canteloupe") without auto-merging --
+    # safer to let a human confirm than to silently guess.
+    import difflib
+    keys = list(colors.keys())
+    for i, k1 in enumerate(keys):
+        for k2 in keys[i + 1:]:
+            if k1 != k2 and difflib.SequenceMatcher(None, k1, k2).ratio() > 0.8:
+                print(f"  ! Possible duplicate color (different spelling in SanMar's export): "
+                      f"{sorted(colors[k1]['names'])} vs {sorted(colors[k2]['names'])} -- "
+                      f"both were kept as separate colors; merge/rename by hand if they're the same.")
+
+    results = []
+    for key, entry in colors.items():
+        if not entry["front"] or not entry["back"]:
+            missing = "back" if entry["front"] else "front"
+            print(f"  ! {sorted(entry['names'])}: missing {missing} image -- skipped.")
+            continue
+        # Prefer a spaced/Title-Case name (e.g. "Nordic Green") over a
+        # squished lowercase one (e.g. "nordicgreen") for display, since
+        # SanMar's export sometimes has both for the same color.
+        name = sorted(entry["names"], key=lambda n: (" " not in n, n))[0]
+        results.append({"name": name.strip().title() if name.isupper() or name.islower() else name,
+                         "front_img": entry["front"], "back_img": entry["back"]})
+
+    return sorted(results, key=lambda r: r["name"])
+
+
 def extract_royalapparel(html: str):
     """Royal Apparel: a full `var prodJSON = {...}` object is embedded with
     every color and every view (Front/Side/Back/Front2/Side2/Back2) all on
@@ -326,9 +482,13 @@ def extract_ascolour(html: str):
 EXTRACTORS = {
     "ssactivewear": extract_ssactivewear,
     "sanmar": extract_sanmar,
+    "sanmar-pdf": extract_sanmar_pdf,
     "royalapparel": extract_royalapparel,
     "ascolour": extract_ascolour,
 }
+# Sites whose extractor returns ready-to-save PIL images directly
+# (front_img/back_img) instead of URLs to download.
+PREEXTRACTED_IMAGE_SITES = {"sanmar-pdf"}
 
 
 # ---------------------------------------------------------------------------
@@ -364,14 +524,21 @@ def main():
     if site == "sanmar":
         print("Note: SanMar pages are per-color. This run will add/refresh ONE")
         print("color; run again with a different saved page for each additional color.")
+    if site == "sanmar-pdf":
+        print("Note: reading a SanMar Media Library PDF export -- this covers")
+        print("every color found in the PDF in one run (no per-color HTML needed).")
 
     product_id = slugify(f"{brand}-{style}")
     image_dir = Path("catalog_images") / product_id
     image_dir.mkdir(parents=True, exist_ok=True)
 
+    preextracted = site in PREEXTRACTED_IMAGE_SITES
     print(f"Reading {source} (site: {site}) ...")
-    html = read_html(source)
-    colors_raw = EXTRACTORS[site](html)
+    if preextracted:
+        colors_raw = EXTRACTORS[site](source)
+    else:
+        html = read_html(source)
+        colors_raw = EXTRACTORS[site](html)
     print(f"Found {len(colors_raw)} color option(s).")
 
     new_colors = []
@@ -379,28 +546,39 @@ def main():
 
     for entry in colors_raw:
         name = entry["name"]
-        front_url, back_url = entry.get("front"), entry.get("back")
-        if not front_url or not back_url:
-            skipped.append((name, "missing front or back image URL on this page"))
-            continue
 
-        print(f"  {name}: downloading front/back...")
-        if site == "ssactivewear":
-            front_img = bct.download_image(entry["_ss_relpath_front"], DOWNLOAD_CACHE_DIR)
-            back_img = bct.download_image(entry["_ss_relpath_back"], DOWNLOAD_CACHE_DIR)
+        if preextracted:
+            front_img, back_img = entry.get("front_img"), entry.get("back_img")
+            if front_img is None or back_img is None:
+                skipped.append((name, "missing front or back image"))
+                continue
+            out_ext = "png"  # preserve alpha transparency from the PDF cutouts
         else:
-            front_img = download_image_url(front_url, DOWNLOAD_CACHE_DIR)
-            back_img = download_image_url(back_url, DOWNLOAD_CACHE_DIR)
-
-        if front_img is None or back_img is None:
-            skipped.append((name, "one or both images failed to download"))
-            continue
+            front_url, back_url = entry.get("front"), entry.get("back")
+            if not front_url or not back_url:
+                skipped.append((name, "missing front or back image URL on this page"))
+                continue
+            print(f"  {name}: downloading front/back...")
+            if site == "ssactivewear":
+                front_img = bct.download_image(entry["_ss_relpath_front"], DOWNLOAD_CACHE_DIR)
+                back_img = bct.download_image(entry["_ss_relpath_back"], DOWNLOAD_CACHE_DIR)
+            else:
+                front_img = download_image_url(front_url, DOWNLOAD_CACHE_DIR)
+                back_img = download_image_url(back_url, DOWNLOAD_CACHE_DIR)
+            if front_img is None or back_img is None:
+                skipped.append((name, "one or both images failed to download"))
+                continue
+            out_ext = "jpg"
 
         color_slug = slugify(name)
-        front_out = image_dir / f"{color_slug}_front.jpg"
-        back_out = image_dir / f"{color_slug}_back.jpg"
-        front_img.convert("RGB").save(front_out, quality=90)
-        back_img.convert("RGB").save(back_out, quality=90)
+        front_out = image_dir / f"{color_slug}_front.{out_ext}"
+        back_out = image_dir / f"{color_slug}_back.{out_ext}"
+        if out_ext == "png":
+            front_img.save(front_out)
+            back_img.save(back_out)
+        else:
+            front_img.convert("RGB").save(front_out, quality=90)
+            back_img.convert("RGB").save(back_out, quality=90)
 
         hex_color = sample_swatch_hex(front_img)
 

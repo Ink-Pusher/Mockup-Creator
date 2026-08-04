@@ -3537,6 +3537,184 @@
           "back": "catalog_images/bella-canvas-3001ycvc/heather-yellow-gold_back.jpg"
         }
       ]
+    },
+    {
+      "id": "royal-apparel-5051",
+      "name": "Unisex Cotton Tee",
+      "brand": "Royal Apparel",
+      "style": "5051",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Asphalt",
+          "hex": "#626369",
+          "front": "catalog_images/royal-apparel-5051/asphalt_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/asphalt_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2a2222",
+          "front": "catalog_images/royal-apparel-5051/black_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/black_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#4e2431",
+          "front": "catalog_images/royal-apparel-5051/burgundy_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/burgundy_back.jpg"
+        },
+        {
+          "name": "Champagne",
+          "hex": "#e6d2b2",
+          "front": "catalog_images/royal-apparel-5051/champagne_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/champagne_back.jpg"
+        },
+        {
+          "name": "Chocolate",
+          "hex": "#5a3a2b",
+          "front": "catalog_images/royal-apparel-5051/chocolate_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/chocolate_back.jpg"
+        },
+        {
+          "name": "Coyote Brown",
+          "hex": "#c5b4a8",
+          "front": "catalog_images/royal-apparel-5051/coyote-brown_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/coyote-brown_back.jpg"
+        },
+        {
+          "name": "Desert Rose",
+          "hex": "#fab0b9",
+          "front": "catalog_images/royal-apparel-5051/desert-rose_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/desert-rose_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#3e6e6c",
+          "front": "catalog_images/royal-apparel-5051/forest-green_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/forest-green_back.jpg"
+        },
+        {
+          "name": "Fuchsia",
+          "hex": "#fe64a5",
+          "front": "catalog_images/royal-apparel-5051/fuchsia_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/fuchsia_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#f1c957",
+          "front": "catalog_images/royal-apparel-5051/gold_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/gold_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#d6d2d7",
+          "front": "catalog_images/royal-apparel-5051/heather-grey_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/heather-grey_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#018653",
+          "front": "catalog_images/royal-apparel-5051/kelly_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/kelly_back.jpg"
+        },
+        {
+          "name": "Lime",
+          "hex": "#a7c86a",
+          "front": "catalog_images/royal-apparel-5051/lime_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/lime_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#7f735d",
+          "front": "catalog_images/royal-apparel-5051/military-green_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/military-green_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#f9eee1",
+          "front": "catalog_images/royal-apparel-5051/natural_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2d2f41",
+          "front": "catalog_images/royal-apparel-5051/navy_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#665b33",
+          "front": "catalog_images/royal-apparel-5051/olive_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/olive_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#ea8b64",
+          "front": "catalog_images/royal-apparel-5051/orange_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/orange_back.jpg"
+        },
+        {
+          "name": "Pale Yellow",
+          "hex": "#efe5bb",
+          "front": "catalog_images/royal-apparel-5051/pale-yellow_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/pale-yellow_back.jpg"
+        },
+        {
+          "name": "Pfgd White",
+          "hex": "#f0eefb",
+          "front": "catalog_images/royal-apparel-5051/pfgd-white_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/pfgd-white_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#f1dae6",
+          "front": "catalog_images/royal-apparel-5051/pink_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/pink_back.jpg"
+        },
+        {
+          "name": "Platinum",
+          "hex": "#e2e5ef",
+          "front": "catalog_images/royal-apparel-5051/platinum_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/platinum_back.jpg"
+        },
+        {
+          "name": "Pool",
+          "hex": "#00a7e6",
+          "front": "catalog_images/royal-apparel-5051/pool_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/pool_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#643a75",
+          "front": "catalog_images/royal-apparel-5051/purple_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ef183a",
+          "front": "catalog_images/royal-apparel-5051/red_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#3e5bb0",
+          "front": "catalog_images/royal-apparel-5051/royal_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/royal_back.jpg"
+        },
+        {
+          "name": "Sky",
+          "hex": "#d7e2f2",
+          "front": "catalog_images/royal-apparel-5051/sky_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/sky_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f6f0f3",
+          "front": "catalog_images/royal-apparel-5051/white_front.jpg",
+          "back": "catalog_images/royal-apparel-5051/white_back.jpg"
+        }
+      ]
     }
   ]
 }

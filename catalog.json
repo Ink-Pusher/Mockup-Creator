@@ -3347,6 +3347,196 @@
           "back": "catalog_images/richardson-112re/navy_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-3001ycvc",
+      "name": "Youth Tee",
+      "brand": "Bella/Canvas",
+      "style": "3001Ycvc",
+      "kind": "tee",
+      "popular": true,
+      "colors": [
+        {
+          "name": "Solid White Blend",
+          "hex": "#f3f3f5",
+          "front": "catalog_images/bella-canvas-3001ycvc/solid-white-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/solid-white-blend_back.jpg"
+        },
+        {
+          "name": "Solid Black Blend",
+          "hex": "#332f35",
+          "front": "catalog_images/bella-canvas-3001ycvc/solid-black-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/solid-black-blend_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#c3bfc1",
+          "front": "catalog_images/bella-canvas-3001ycvc/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#2e292e",
+          "front": "catalog_images/bella-canvas-3001ycvc/black-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/black-heather_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#423d44",
+          "front": "catalog_images/bella-canvas-3001ycvc/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Deep Heather",
+          "hex": "#6e6b6c",
+          "front": "catalog_images/bella-canvas-3001ycvc/deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/deep-heather_back.jpg"
+        },
+        {
+          "name": "Heather Blue Lagoon",
+          "hex": "#98c3c8",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-blue-lagoon_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-blue-lagoon_back.jpg"
+        },
+        {
+          "name": "Heather Columbia Blue",
+          "hex": "#6b8ccd",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-columbia-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-columbia-blue_back.jpg"
+        },
+        {
+          "name": "Heather Deep Teal",
+          "hex": "#558199",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-deep-teal_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-deep-teal_back.jpg"
+        },
+        {
+          "name": "Heather Dust",
+          "hex": "#e2dccc",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-dust_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-dust_back.jpg"
+        },
+        {
+          "name": "Heather Dusty Blue",
+          "hex": "#708f87",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-dusty-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-dusty-blue_back.jpg"
+        },
+        {
+          "name": "Heather Forest",
+          "hex": "#4b574e",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-forest_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-forest_back.jpg"
+        },
+        {
+          "name": "Heather Grass Green",
+          "hex": "#5d946d",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-grass-green_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-grass-green_back.jpg"
+        },
+        {
+          "name": "Heather Maroon",
+          "hex": "#754e5b",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-maroon_back.jpg"
+        },
+        {
+          "name": "Heather Mauve",
+          "hex": "#d59496",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-mauve_back.jpg"
+        },
+        {
+          "name": "Heather Midnight Navy",
+          "hex": "#454555",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-midnight-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-midnight-navy_back.jpg"
+        },
+        {
+          "name": "Heather Military Green",
+          "hex": "#5f6153",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-military-green_back.jpg"
+        },
+        {
+          "name": "Heather Mustard",
+          "hex": "#dcac3a",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-mustard_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-mustard_back.jpg"
+        },
+        {
+          "name": "Heather Natural",
+          "hex": "#f1eae3",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-natural_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-natural_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#484c58",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Olive",
+          "hex": "#a69978",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-olive_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-olive_back.jpg"
+        },
+        {
+          "name": "Heather Orchid",
+          "hex": "#bd959d",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-orchid_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-orchid_back.jpg"
+        },
+        {
+          "name": "Heather Peach",
+          "hex": "#ebc4a8",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-peach_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-peach_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#e94658",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-red_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather Slate",
+          "hex": "#728f9f",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-slate_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-slate_back.jpg"
+        },
+        {
+          "name": "Heather Stone",
+          "hex": "#b7aaa0",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-stone_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-stone_back.jpg"
+        },
+        {
+          "name": "Heather Storm",
+          "hex": "#9f9fa9",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-storm_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-storm_back.jpg"
+        },
+        {
+          "name": "Heather Team Purple",
+          "hex": "#624967",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-team-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-team-purple_back.jpg"
+        },
+        {
+          "name": "Heather True Royal",
+          "hex": "#4b6fb2",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-true-royal_back.jpg"
+        },
+        {
+          "name": "Heather Yellow Gold",
+          "hex": "#fedc85",
+          "front": "catalog_images/bella-canvas-3001ycvc/heather-yellow-gold_front.jpg",
+          "back": "catalog_images/bella-canvas-3001ycvc/heather-yellow-gold_back.jpg"
+        }
+      ]
     }
   ]
 }

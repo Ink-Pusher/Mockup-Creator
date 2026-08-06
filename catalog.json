@@ -5817,6 +5817,124 @@
           "back": "catalog_images/bella-canvas-3739/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "independent-trading-co-prm4500",
+      "name": "Pigment Dyed Pullover Hoodie",
+      "brand": "Independent Trading Co",
+      "style": "PRM4500",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Prepared For Dye",
+          "hex": "#eeede9",
+          "front": "catalog_images/independent-trading-co-prm4500/prepared-for-dye_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/prepared-for-dye_back.jpg"
+        },
+        {
+          "name": "Pigment Black",
+          "hex": "#48484a",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-black_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-black_back.jpg"
+        },
+        {
+          "name": "Pigment Alpine Green",
+          "hex": "#587267",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-alpine-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-alpine-green_back.jpg"
+        },
+        {
+          "name": "Pigment Amber",
+          "hex": "#c95041",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-amber_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-amber_back.jpg"
+        },
+        {
+          "name": "Pigment Army",
+          "hex": "#5d5f51",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-army_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-army_back.jpg"
+        },
+        {
+          "name": "Pigment Cement",
+          "hex": "#9a928b",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-cement_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-cement_back.jpg"
+        },
+        {
+          "name": "Pigment Clay",
+          "hex": "#8c7366",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-clay_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-clay_back.jpg"
+        },
+        {
+          "name": "Pigment Dusty Pink",
+          "hex": "#d6ae99",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-dusty-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-dusty-pink_back.jpg"
+        },
+        {
+          "name": "Pigment Ivory",
+          "hex": "#d8d5cd",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-ivory_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-ivory_back.jpg"
+        },
+        {
+          "name": "Pigment Light Blue",
+          "hex": "#80a1c3",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-light-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-light-blue_back.jpg"
+        },
+        {
+          "name": "Pigment Maroon",
+          "hex": "#9e5c6a",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-maroon_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-maroon_back.jpg"
+        },
+        {
+          "name": "Pigment Mint",
+          "hex": "#71ada6",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-mint_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-mint_back.jpg"
+        },
+        {
+          "name": "Pigment Pink",
+          "hex": "#f88e97",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-pink_back.jpg"
+        },
+        {
+          "name": "Pigment Plum",
+          "hex": "#807385",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-plum_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-plum_back.jpg"
+        },
+        {
+          "name": "Pigment Sage",
+          "hex": "#b6c1c3",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-sage_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-sage_back.jpg"
+        },
+        {
+          "name": "Pigment Sandstone",
+          "hex": "#c1a37e",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-sandstone_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-sandstone_back.jpg"
+        },
+        {
+          "name": "Pigment Slate Blue",
+          "hex": "#8595a7",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-slate-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-slate-blue_back.jpg"
+        },
+        {
+          "name": "Pigment Yellow",
+          "hex": "#edd57c",
+          "front": "catalog_images/independent-trading-co-prm4500/pigment-yellow_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm4500/pigment-yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

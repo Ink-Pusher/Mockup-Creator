@@ -4913,6 +4913,124 @@
           "back": "catalog_images/port-co-pc099/wineberry_back.png"
         }
       ]
+    },
+    {
+      "id": "lat-3507",
+      "name": "Womens Fine Jersey V-Neck",
+      "brand": "LAT",
+      "style": "3507",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f0f1f3",
+          "front": "catalog_images/lat-3507/white_front.jpg",
+          "back": "catalog_images/lat-3507/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1f1f21",
+          "front": "catalog_images/lat-3507/black_front.jpg",
+          "back": "catalog_images/lat-3507/black_back.jpg"
+        },
+        {
+          "name": "Aqua",
+          "hex": "#68bef1",
+          "front": "catalog_images/lat-3507/aqua_front.jpg",
+          "back": "catalog_images/lat-3507/aqua_back.jpg"
+        },
+        {
+          "name": "Caribbean",
+          "hex": "#4dc5d3",
+          "front": "catalog_images/lat-3507/caribbean_front.jpg",
+          "back": "catalog_images/lat-3507/caribbean_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#564d4e",
+          "front": "catalog_images/lat-3507/charcoal_front.jpg",
+          "back": "catalog_images/lat-3507/charcoal_back.jpg"
+        },
+        {
+          "name": "Chill",
+          "hex": "#98dbd5",
+          "front": "catalog_images/lat-3507/chill_front.jpg",
+          "back": "catalog_images/lat-3507/chill_back.jpg"
+        },
+        {
+          "name": "Granite Heather",
+          "hex": "#77767b",
+          "front": "catalog_images/lat-3507/granite-heather_front.jpg",
+          "back": "catalog_images/lat-3507/granite-heather_back.jpg"
+        },
+        {
+          "name": "Heather",
+          "hex": "#adacb1",
+          "front": "catalog_images/lat-3507/heather_front.jpg",
+          "back": "catalog_images/lat-3507/heather_back.jpg"
+        },
+        {
+          "name": "Hot Pink",
+          "hex": "#f95782",
+          "front": "catalog_images/lat-3507/hot-pink_front.jpg",
+          "back": "catalog_images/lat-3507/hot-pink_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#9c82bc",
+          "front": "catalog_images/lat-3507/lavender_front.jpg",
+          "back": "catalog_images/lat-3507/lavender_back.jpg"
+        },
+        {
+          "name": "Mauvelous",
+          "hex": "#ca7a7e",
+          "front": "catalog_images/lat-3507/mauvelous_front.jpg",
+          "back": "catalog_images/lat-3507/mauvelous_back.jpg"
+        },
+        {
+          "name": "Natural Heather",
+          "hex": "#dcd9cf",
+          "front": "catalog_images/lat-3507/natural-heather_front.jpg",
+          "back": "catalog_images/lat-3507/natural-heather_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#22263f",
+          "front": "catalog_images/lat-3507/navy_front.jpg",
+          "back": "catalog_images/lat-3507/navy_back.jpg"
+        },
+        {
+          "name": "Papaya",
+          "hex": "#fd8163",
+          "front": "catalog_images/lat-3507/papaya_front.jpg",
+          "back": "catalog_images/lat-3507/papaya_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#f5b5c6",
+          "front": "catalog_images/lat-3507/pink_front.jpg",
+          "back": "catalog_images/lat-3507/pink_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#cb031e",
+          "front": "catalog_images/lat-3507/red_front.jpg",
+          "back": "catalog_images/lat-3507/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#182d92",
+          "front": "catalog_images/lat-3507/royal_front.jpg",
+          "back": "catalog_images/lat-3507/royal_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#fed51f",
+          "front": "catalog_images/lat-3507/yellow_front.jpg",
+          "back": "catalog_images/lat-3507/yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -6017,6 +6017,88 @@
           "back": "catalog_images/independent-trading-co-ss1000z/sand_back.jpg"
         }
       ]
+    },
+    {
+      "id": "independent-trading-co-ss1000",
+      "name": "Lightweight Terry Loopback Pullover Hoodie",
+      "brand": "Independent Trading Co",
+      "style": "SS1000",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ebecf1",
+          "front": "catalog_images/independent-trading-co-ss1000/white_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#343235",
+          "front": "catalog_images/independent-trading-co-ss1000/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/black_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#c5c7d0",
+          "front": "catalog_images/independent-trading-co-ss1000/athletic-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#efeeea",
+          "front": "catalog_images/independent-trading-co-ss1000/bone_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/bone_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#464448",
+          "front": "catalog_images/independent-trading-co-ss1000/charcoal-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Harvest Gold",
+          "hex": "#e8c275",
+          "front": "catalog_images/independent-trading-co-ss1000/harvest-gold_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/harvest-gold_back.jpg"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#464f6d",
+          "front": "catalog_images/independent-trading-co-ss1000/indigo_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/indigo_back.jpg"
+        },
+        {
+          "name": "Misty Blue",
+          "hex": "#a3b5ca",
+          "front": "catalog_images/independent-trading-co-ss1000/misty-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/misty-blue_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#898375",
+          "front": "catalog_images/independent-trading-co-ss1000/olive_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/olive_back.jpg"
+        },
+        {
+          "name": "Port",
+          "hex": "#8f5c64",
+          "front": "catalog_images/independent-trading-co-ss1000/port_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/port_back.jpg"
+        },
+        {
+          "name": "Rose",
+          "hex": "#e8cbc0",
+          "front": "catalog_images/independent-trading-co-ss1000/rose_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/rose_back.jpg"
+        },
+        {
+          "name": "Sand",
+          "hex": "#d8cdc0",
+          "front": "catalog_images/independent-trading-co-ss1000/sand_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss1000/sand_back.jpg"
+        }
+      ]
     }
   ]
 }

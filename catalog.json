@@ -6535,6 +6535,118 @@
           "back": "catalog_images/liberty-bags-8503/royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "q-tees-qtb6000",
+      "name": "Contrast Handle Tote",
+      "brand": "Q-Tees",
+      "style": "QTB6000",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Black",
+          "hex": "#e8dbcb",
+          "front": "catalog_images/q-tees-qtb6000/natural-black_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-black_back.jpg"
+        },
+        {
+          "name": "Natural/ Carolina Blue",
+          "hex": "#ece4d5",
+          "front": "catalog_images/q-tees-qtb6000/natural-carolina-blue_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-carolina-blue_back.jpg"
+        },
+        {
+          "name": "Natural/ Forest",
+          "hex": "#ebdfcc",
+          "front": "catalog_images/q-tees-qtb6000/natural-forest_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-forest_back.jpg"
+        },
+        {
+          "name": "Natural/ Gold",
+          "hex": "#f9e4c3",
+          "front": "catalog_images/q-tees-qtb6000/natural-gold_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-gold_back.jpg"
+        },
+        {
+          "name": "Natural/ Hot Pink",
+          "hex": "#f6e0d2",
+          "front": "catalog_images/q-tees-qtb6000/natural-hot-pink_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-hot-pink_back.jpg"
+        },
+        {
+          "name": "Natural/ Kelly",
+          "hex": "#e2e3d0",
+          "front": "catalog_images/q-tees-qtb6000/natural-kelly_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-kelly_back.jpg"
+        },
+        {
+          "name": "Natural/ Lavender",
+          "hex": "#f3e5d6",
+          "front": "catalog_images/q-tees-qtb6000/natural-lavender_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-lavender_back.jpg"
+        },
+        {
+          "name": "Natural/ Lime",
+          "hex": "#f0e8d1",
+          "front": "catalog_images/q-tees-qtb6000/natural-lime_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-lime_back.jpg"
+        },
+        {
+          "name": "Natural/ Maroon",
+          "hex": "#ebd9c9",
+          "front": "catalog_images/q-tees-qtb6000/natural-maroon_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-maroon_back.jpg"
+        },
+        {
+          "name": "Natural/ Navy",
+          "hex": "#e6dbcb",
+          "front": "catalog_images/q-tees-qtb6000/natural-navy_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-navy_back.jpg"
+        },
+        {
+          "name": "Natural/ Orange",
+          "hex": "#f7dcc8",
+          "front": "catalog_images/q-tees-qtb6000/natural-orange_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-orange_back.jpg"
+        },
+        {
+          "name": "Natural/ Purple",
+          "hex": "#efe1d2",
+          "front": "catalog_images/q-tees-qtb6000/natural-purple_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-purple_back.jpg"
+        },
+        {
+          "name": "Natural/ Red",
+          "hex": "#f3dcce",
+          "front": "catalog_images/q-tees-qtb6000/natural-red_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-red_back.jpg"
+        },
+        {
+          "name": "Natural/ Royal",
+          "hex": "#e2dcd1",
+          "front": "catalog_images/q-tees-qtb6000/natural-royal_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-royal_back.jpg"
+        },
+        {
+          "name": "Natural/ Sapphire",
+          "hex": "#e6e2d5",
+          "front": "catalog_images/q-tees-qtb6000/natural-sapphire_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-sapphire_back.jpg"
+        },
+        {
+          "name": "Natural/ Turquoise",
+          "hex": "#ebe9da",
+          "front": "catalog_images/q-tees-qtb6000/natural-turquoise_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-turquoise_back.jpg"
+        },
+        {
+          "name": "Natural/ Yellow",
+          "hex": "#f9ebd3",
+          "front": "catalog_images/q-tees-qtb6000/natural-yellow_front.jpg",
+          "back": "catalog_images/q-tees-qtb6000/natural-yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

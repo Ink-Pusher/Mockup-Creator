@@ -6145,6 +6145,52 @@
           "back": "catalog_images/as-colour-5050/walnut_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1123",
+      "name": "Surf Rope Cap",
+      "brand": "AS Colour",
+      "style": "1123",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Army White",
+          "hex": "#41402c",
+          "front": "catalog_images/as-colour-1123/army-white_front.jpg",
+          "back": "catalog_images/as-colour-1123/army-white_back.jpg"
+        },
+        {
+          "name": "Black White",
+          "hex": "#262626",
+          "front": "catalog_images/as-colour-1123/black-white_front.jpg",
+          "back": "catalog_images/as-colour-1123/black-white_back.jpg"
+        },
+        {
+          "name": "Ecru White",
+          "hex": "#d5d0c4",
+          "front": "catalog_images/as-colour-1123/ecru-white_front.jpg",
+          "back": "catalog_images/as-colour-1123/ecru-white_back.jpg"
+        },
+        {
+          "name": "Fire White",
+          "hex": "#c33934",
+          "front": "catalog_images/as-colour-1123/fire-white_front.jpg",
+          "back": "catalog_images/as-colour-1123/fire-white_back.jpg"
+        },
+        {
+          "name": "Navy White",
+          "hex": "#2a2e38",
+          "front": "catalog_images/as-colour-1123/navy-white_front.jpg",
+          "back": "catalog_images/as-colour-1123/navy-white_back.jpg"
+        },
+        {
+          "name": "Powder White",
+          "hex": "#c3c8d4",
+          "front": "catalog_images/as-colour-1123/powder-white_front.jpg",
+          "back": "catalog_images/as-colour-1123/powder-white_back.jpg"
+        }
+      ]
     }
   ]
 }

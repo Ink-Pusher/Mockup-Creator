@@ -6501,6 +6501,40 @@
           "back": "catalog_images/as-colour-1114/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-8503",
+      "name": "Isabella Tote",
+      "brand": "Liberty Bags",
+      "style": "8503",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#585759",
+          "front": "catalog_images/liberty-bags-8503/black_front.jpg",
+          "back": "catalog_images/liberty-bags-8503/black_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#5a657e",
+          "front": "catalog_images/liberty-bags-8503/navy_front.jpg",
+          "back": "catalog_images/liberty-bags-8503/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#da5370",
+          "front": "catalog_images/liberty-bags-8503/red_front.jpg",
+          "back": "catalog_images/liberty-bags-8503/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#44548c",
+          "front": "catalog_images/liberty-bags-8503/royal_front.jpg",
+          "back": "catalog_images/liberty-bags-8503/royal_back.jpg"
+        }
+      ]
     }
   ]
 }

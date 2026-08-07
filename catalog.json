@@ -6647,6 +6647,160 @@
           "back": "catalog_images/q-tees-qtb6000/natural-yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "q-tees-qtb",
+      "name": "Economical Tote",
+      "brand": "Q-Tees",
+      "style": "QTB",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e0dfe4",
+          "front": "catalog_images/q-tees-qtb/white_front.jpg",
+          "back": "catalog_images/q-tees-qtb/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#303030",
+          "front": "catalog_images/q-tees-qtb/black_front.jpg",
+          "back": "catalog_images/q-tees-qtb/black_back.jpg"
+        },
+        {
+          "name": "Azalea",
+          "hex": "#f17ca3",
+          "front": "catalog_images/q-tees-qtb/azalea_front.jpg",
+          "back": "catalog_images/q-tees-qtb/azalea_back.jpg"
+        },
+        {
+          "name": "Carolina Blue",
+          "hex": "#83a8d0",
+          "front": "catalog_images/q-tees-qtb/carolina-blue_front.jpg",
+          "back": "catalog_images/q-tees-qtb/carolina-blue_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#5f5b60",
+          "front": "catalog_images/q-tees-qtb/charcoal_front.jpg",
+          "back": "catalog_images/q-tees-qtb/charcoal_back.jpg"
+        },
+        {
+          "name": "Forest",
+          "hex": "#515b3d",
+          "front": "catalog_images/q-tees-qtb/forest_front.jpg",
+          "back": "catalog_images/q-tees-qtb/forest_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#fc9b24",
+          "front": "catalog_images/q-tees-qtb/gold_front.jpg",
+          "back": "catalog_images/q-tees-qtb/gold_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#c3c4bf",
+          "front": "catalog_images/q-tees-qtb/grey_front.jpg",
+          "back": "catalog_images/q-tees-qtb/grey_back.jpg"
+        },
+        {
+          "name": "Hot Pink",
+          "hex": "#f75e8e",
+          "front": "catalog_images/q-tees-qtb/hot-pink_front.jpg",
+          "back": "catalog_images/q-tees-qtb/hot-pink_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#299163",
+          "front": "catalog_images/q-tees-qtb/kelly_front.jpg",
+          "back": "catalog_images/q-tees-qtb/kelly_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#c8c2e8",
+          "front": "catalog_images/q-tees-qtb/lavender_front.jpg",
+          "back": "catalog_images/q-tees-qtb/lavender_back.jpg"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#f2bdc7",
+          "front": "catalog_images/q-tees-qtb/light-pink_front.jpg",
+          "back": "catalog_images/q-tees-qtb/light-pink_back.jpg"
+        },
+        {
+          "name": "Lime",
+          "hex": "#96d768",
+          "front": "catalog_images/q-tees-qtb/lime_front.jpg",
+          "back": "catalog_images/q-tees-qtb/lime_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#613b46",
+          "front": "catalog_images/q-tees-qtb/maroon_front.jpg",
+          "back": "catalog_images/q-tees-qtb/maroon_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#eae1d9",
+          "front": "catalog_images/q-tees-qtb/natural_front.jpg",
+          "back": "catalog_images/q-tees-qtb/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#44394c",
+          "front": "catalog_images/q-tees-qtb/navy_front.jpg",
+          "back": "catalog_images/q-tees-qtb/navy_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#ef603c",
+          "front": "catalog_images/q-tees-qtb/orange_front.jpg",
+          "back": "catalog_images/q-tees-qtb/orange_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#69528f",
+          "front": "catalog_images/q-tees-qtb/purple_front.jpg",
+          "back": "catalog_images/q-tees-qtb/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#c42f47",
+          "front": "catalog_images/q-tees-qtb/red_front.jpg",
+          "back": "catalog_images/q-tees-qtb/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#435a7d",
+          "front": "catalog_images/q-tees-qtb/royal_front.jpg",
+          "back": "catalog_images/q-tees-qtb/royal_back.jpg"
+        },
+        {
+          "name": "Sapphire",
+          "hex": "#2c8bc8",
+          "front": "catalog_images/q-tees-qtb/sapphire_front.jpg",
+          "back": "catalog_images/q-tees-qtb/sapphire_back.jpg"
+        },
+        {
+          "name": "Texas Orange",
+          "hex": "#af602b",
+          "front": "catalog_images/q-tees-qtb/texas-orange_front.jpg",
+          "back": "catalog_images/q-tees-qtb/texas-orange_back.jpg"
+        },
+        {
+          "name": "Turquoise",
+          "hex": "#16c4ce",
+          "front": "catalog_images/q-tees-qtb/turquoise_front.jpg",
+          "back": "catalog_images/q-tees-qtb/turquoise_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#f8d53c",
+          "front": "catalog_images/q-tees-qtb/yellow_front.jpg",
+          "back": "catalog_images/q-tees-qtb/yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -6801,6 +6801,88 @@
           "back": "catalog_images/q-tees-qtb/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-5080",
+      "name": "Women's Festival Crop Top",
+      "brand": "Next Level",
+      "style": "5080",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f1f0f1",
+          "front": "catalog_images/next-level-5080/white_front.jpg",
+          "back": "catalog_images/next-level-5080/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2d282e",
+          "front": "catalog_images/next-level-5080/black_front.jpg",
+          "back": "catalog_images/next-level-5080/black_back.jpg"
+        },
+        {
+          "name": "Antique Denim",
+          "hex": "#64717a",
+          "front": "catalog_images/next-level-5080/antique-denim_front.jpg",
+          "back": "catalog_images/next-level-5080/antique-denim_back.jpg"
+        },
+        {
+          "name": "Antique Gold",
+          "hex": "#ca9143",
+          "front": "catalog_images/next-level-5080/antique-gold_front.jpg",
+          "back": "catalog_images/next-level-5080/antique-gold_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#686464",
+          "front": "catalog_images/next-level-5080/charcoal_front.jpg",
+          "back": "catalog_images/next-level-5080/charcoal_back.jpg"
+        },
+        {
+          "name": "Desert Pink",
+          "hex": "#eebeb0",
+          "front": "catalog_images/next-level-5080/desert-pink_front.jpg",
+          "back": "catalog_images/next-level-5080/desert-pink_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#aaadb0",
+          "front": "catalog_images/next-level-5080/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-5080/heather-grey_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#c2b6cf",
+          "front": "catalog_images/next-level-5080/lavender_front.jpg",
+          "back": "catalog_images/next-level-5080/lavender_back.jpg"
+        },
+        {
+          "name": "Royal Pine",
+          "hex": "#557a73",
+          "front": "catalog_images/next-level-5080/royal-pine_front.jpg",
+          "back": "catalog_images/next-level-5080/royal-pine_back.jpg"
+        },
+        {
+          "name": "Shiraz",
+          "hex": "#b57f9c",
+          "front": "catalog_images/next-level-5080/shiraz_front.jpg",
+          "back": "catalog_images/next-level-5080/shiraz_back.jpg"
+        },
+        {
+          "name": "Stonewash Denim",
+          "hex": "#9ab1c0",
+          "front": "catalog_images/next-level-5080/stonewash-denim_front.jpg",
+          "back": "catalog_images/next-level-5080/stonewash-denim_back.jpg"
+        },
+        {
+          "name": "Stonewash Green",
+          "hex": "#a7b6ae",
+          "front": "catalog_images/next-level-5080/stonewash-green_front.jpg",
+          "back": "catalog_images/next-level-5080/stonewash-green_back.jpg"
+        }
+      ]
     }
   ]
 }

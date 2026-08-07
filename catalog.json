@@ -6191,6 +6191,316 @@
           "back": "catalog_images/as-colour-1123/powder-white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1114",
+      "name": "Surf Cap",
+      "brand": "AS Colour",
+      "style": "1114",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Army",
+          "hex": "#464430",
+          "front": "catalog_images/as-colour-1114/army_front.jpg",
+          "back": "catalog_images/as-colour-1114/army_back.jpg"
+        },
+        {
+          "name": "Atlantic",
+          "hex": "#00595e",
+          "front": "catalog_images/as-colour-1114/atlantic_front.jpg",
+          "back": "catalog_images/as-colour-1114/atlantic_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#202021",
+          "front": "catalog_images/as-colour-1114/black_front.jpg",
+          "back": "catalog_images/as-colour-1114/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#ddd6cc",
+          "front": "catalog_images/as-colour-1114/bone_front.jpg",
+          "back": "catalog_images/as-colour-1114/bone_back.jpg"
+        },
+        {
+          "name": "Bright Royal",
+          "hex": "#3e5e96",
+          "front": "catalog_images/as-colour-1114/bright-royal_front.jpg",
+          "back": "catalog_images/as-colour-1114/bright-royal_back.jpg"
+        },
+        {
+          "name": "Bubblegum",
+          "hex": "#e798a8",
+          "front": "catalog_images/as-colour-1114/bubblegum_front.jpg",
+          "back": "catalog_images/as-colour-1114/bubblegum_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#4e212b",
+          "front": "catalog_images/as-colour-1114/burgundy_front.jpg",
+          "back": "catalog_images/as-colour-1114/burgundy_back.jpg"
+        },
+        {
+          "name": "Butter",
+          "hex": "#d5d3be",
+          "front": "catalog_images/as-colour-1114/butter_front.jpg",
+          "back": "catalog_images/as-colour-1114/butter_back.jpg"
+        },
+        {
+          "name": "Camel",
+          "hex": "#a56f3d",
+          "front": "catalog_images/as-colour-1114/camel_front.jpg",
+          "back": "catalog_images/as-colour-1114/camel_back.jpg"
+        },
+        {
+          "name": "Carolina Blue",
+          "hex": "#8db2ce",
+          "front": "catalog_images/as-colour-1114/carolina-blue_front.jpg",
+          "back": "catalog_images/as-colour-1114/carolina-blue_back.jpg"
+        },
+        {
+          "name": "Charity Pink",
+          "hex": "#f0779b",
+          "front": "catalog_images/as-colour-1114/charity-pink_front.jpg",
+          "back": "catalog_images/as-colour-1114/charity-pink_back.jpg"
+        },
+        {
+          "name": "Charlotte",
+          "hex": "#017c88",
+          "front": "catalog_images/as-colour-1114/charlotte_front.jpg",
+          "back": "catalog_images/as-colour-1114/charlotte_back.jpg"
+        },
+        {
+          "name": "Chestnut",
+          "hex": "#472d2a",
+          "front": "catalog_images/as-colour-1114/chestnut_front.jpg",
+          "back": "catalog_images/as-colour-1114/chestnut_back.jpg"
+        },
+        {
+          "name": "Citrus",
+          "hex": "#b0d86f",
+          "front": "catalog_images/as-colour-1114/citrus_front.jpg",
+          "back": "catalog_images/as-colour-1114/citrus_back.jpg"
+        },
+        {
+          "name": "Clay",
+          "hex": "#834532",
+          "front": "catalog_images/as-colour-1114/clay_front.jpg",
+          "back": "catalog_images/as-colour-1114/clay_back.jpg"
+        },
+        {
+          "name": "Cobalt",
+          "hex": "#2c4261",
+          "front": "catalog_images/as-colour-1114/cobalt_front.jpg",
+          "back": "catalog_images/as-colour-1114/cobalt_back.jpg"
+        },
+        {
+          "name": "Cypress",
+          "hex": "#505e4c",
+          "front": "catalog_images/as-colour-1114/cypress_front.jpg",
+          "back": "catalog_images/as-colour-1114/cypress_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#d6d0c3",
+          "front": "catalog_images/as-colour-1114/ecru_front.jpg",
+          "back": "catalog_images/as-colour-1114/ecru_back.jpg"
+        },
+        {
+          "name": "Eucalyptus",
+          "hex": "#aaa997",
+          "front": "catalog_images/as-colour-1114/eucalyptus_front.jpg",
+          "back": "catalog_images/as-colour-1114/eucalyptus_back.jpg"
+        },
+        {
+          "name": "Fire",
+          "hex": "#cd2c2c",
+          "front": "catalog_images/as-colour-1114/fire_front.jpg",
+          "back": "catalog_images/as-colour-1114/fire_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#305536",
+          "front": "catalog_images/as-colour-1114/forest-green_front.jpg",
+          "back": "catalog_images/as-colour-1114/forest-green_back.jpg"
+        },
+        {
+          "name": "Grape",
+          "hex": "#88355a",
+          "front": "catalog_images/as-colour-1114/grape_front.jpg",
+          "back": "catalog_images/as-colour-1114/grape_back.jpg"
+        },
+        {
+          "name": "Hazy Pink",
+          "hex": "#9d7a71",
+          "front": "catalog_images/as-colour-1114/hazy-pink_front.jpg",
+          "back": "catalog_images/as-colour-1114/hazy-pink_back.jpg"
+        },
+        {
+          "name": "Hydro",
+          "hex": "#4482bc",
+          "front": "catalog_images/as-colour-1114/hydro_front.jpg",
+          "back": "catalog_images/as-colour-1114/hydro_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#b7a47c",
+          "front": "catalog_images/as-colour-1114/khaki_front.jpg",
+          "back": "catalog_images/as-colour-1114/khaki_back.jpg"
+        },
+        {
+          "name": "Lapis",
+          "hex": "#899cd6",
+          "front": "catalog_images/as-colour-1114/lapis_front.jpg",
+          "back": "catalog_images/as-colour-1114/lapis_back.jpg"
+        },
+        {
+          "name": "Lemonade",
+          "hex": "#d1c67a",
+          "front": "catalog_images/as-colour-1114/lemonade_front.jpg",
+          "back": "catalog_images/as-colour-1114/lemonade_back.jpg"
+        },
+        {
+          "name": "Lime",
+          "hex": "#dde5bf",
+          "front": "catalog_images/as-colour-1114/lime_front.jpg",
+          "back": "catalog_images/as-colour-1114/lime_back.jpg"
+        },
+        {
+          "name": "Midnight Blue",
+          "hex": "#25283c",
+          "front": "catalog_images/as-colour-1114/midnight-blue_front.jpg",
+          "back": "catalog_images/as-colour-1114/midnight-blue_back.jpg"
+        },
+        {
+          "name": "Mineral",
+          "hex": "#889b9b",
+          "front": "catalog_images/as-colour-1114/mineral_front.jpg",
+          "back": "catalog_images/as-colour-1114/mineral_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#cfd8c1",
+          "front": "catalog_images/as-colour-1114/mint_front.jpg",
+          "back": "catalog_images/as-colour-1114/mint_back.jpg"
+        },
+        {
+          "name": "Mushroom",
+          "hex": "#ada89d",
+          "front": "catalog_images/as-colour-1114/mushroom_front.jpg",
+          "back": "catalog_images/as-colour-1114/mushroom_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#252932",
+          "front": "catalog_images/as-colour-1114/navy_front.jpg",
+          "back": "catalog_images/as-colour-1114/navy_back.jpg"
+        },
+        {
+          "name": "Orchid",
+          "hex": "#d4c5cd",
+          "front": "catalog_images/as-colour-1114/orchid_front.jpg",
+          "back": "catalog_images/as-colour-1114/orchid_back.jpg"
+        },
+        {
+          "name": "Pale Pink",
+          "hex": "#e4bfb3",
+          "front": "catalog_images/as-colour-1114/pale-pink_front.jpg",
+          "back": "catalog_images/as-colour-1114/pale-pink_back.jpg"
+        },
+        {
+          "name": "Petrol Blue",
+          "hex": "#374755",
+          "front": "catalog_images/as-colour-1114/petrol-blue_front.jpg",
+          "back": "catalog_images/as-colour-1114/petrol-blue_back.jpg"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#1c2c2b",
+          "front": "catalog_images/as-colour-1114/pine-green_front.jpg",
+          "back": "catalog_images/as-colour-1114/pine-green_back.jpg"
+        },
+        {
+          "name": "Pistachio",
+          "hex": "#9b9c84",
+          "front": "catalog_images/as-colour-1114/pistachio_front.jpg",
+          "back": "catalog_images/as-colour-1114/pistachio_back.jpg"
+        },
+        {
+          "name": "Powder",
+          "hex": "#b8c6dc",
+          "front": "catalog_images/as-colour-1114/powder_front.jpg",
+          "back": "catalog_images/as-colour-1114/powder_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#a71420",
+          "front": "catalog_images/as-colour-1114/red_front.jpg",
+          "back": "catalog_images/as-colour-1114/red_back.jpg"
+        },
+        {
+          "name": "Sage",
+          "hex": "#587c67",
+          "front": "catalog_images/as-colour-1114/sage_front.jpg",
+          "back": "catalog_images/as-colour-1114/sage_back.jpg"
+        },
+        {
+          "name": "Seafoam",
+          "hex": "#b4d1cc",
+          "front": "catalog_images/as-colour-1114/seafoam_front.jpg",
+          "back": "catalog_images/as-colour-1114/seafoam_back.jpg"
+        },
+        {
+          "name": "Smoke",
+          "hex": "#a9aeb1",
+          "front": "catalog_images/as-colour-1114/smoke_front.jpg",
+          "back": "catalog_images/as-colour-1114/smoke_back.jpg"
+        },
+        {
+          "name": "Storm",
+          "hex": "#a0a09f",
+          "front": "catalog_images/as-colour-1114/storm_front.jpg",
+          "back": "catalog_images/as-colour-1114/storm_back.jpg"
+        },
+        {
+          "name": "Sunset",
+          "hex": "#e8bc65",
+          "front": "catalog_images/as-colour-1114/sunset_front.jpg",
+          "back": "catalog_images/as-colour-1114/sunset_back.jpg"
+        },
+        {
+          "name": "Taupe",
+          "hex": "#aea192",
+          "front": "catalog_images/as-colour-1114/taupe_front.jpg",
+          "back": "catalog_images/as-colour-1114/taupe_back.jpg"
+        },
+        {
+          "name": "Topaz",
+          "hex": "#009593",
+          "front": "catalog_images/as-colour-1114/topaz_front.jpg",
+          "back": "catalog_images/as-colour-1114/topaz_back.jpg"
+        },
+        {
+          "name": "Violet",
+          "hex": "#543a8c",
+          "front": "catalog_images/as-colour-1114/violet_front.jpg",
+          "back": "catalog_images/as-colour-1114/violet_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#6b5946",
+          "front": "catalog_images/as-colour-1114/walnut_front.jpg",
+          "back": "catalog_images/as-colour-1114/walnut_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e3e3e5",
+          "front": "catalog_images/as-colour-1114/white_front.jpg",
+          "back": "catalog_images/as-colour-1114/white_back.jpg"
+        }
+      ]
     }
   ]
 }

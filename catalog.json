@@ -6099,6 +6099,52 @@
           "back": "catalog_images/independent-trading-co-ss1000/sand_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5050",
+      "name": "Block Tubular Tee",
+      "brand": "AS Colour",
+      "style": "5050",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Army",
+          "hex": "#4e4e36",
+          "front": "catalog_images/as-colour-5050/army_front.jpg",
+          "back": "catalog_images/as-colour-5050/army_back.jpg"
+        },
+        {
+          "name": "Bright Royal",
+          "hex": "#2b539a",
+          "front": "catalog_images/as-colour-5050/bright-royal_front.jpg",
+          "back": "catalog_images/as-colour-5050/bright-royal_back.jpg"
+        },
+        {
+          "name": "Coal",
+          "hex": "#343432",
+          "front": "catalog_images/as-colour-5050/coal_front.jpg",
+          "back": "catalog_images/as-colour-5050/coal_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#1e391d",
+          "front": "catalog_images/as-colour-5050/forest-green_front.jpg",
+          "back": "catalog_images/as-colour-5050/forest-green_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ce2524",
+          "front": "catalog_images/as-colour-5050/red_front.jpg",
+          "back": "catalog_images/as-colour-5050/red_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#61503f",
+          "front": "catalog_images/as-colour-5050/walnut_front.jpg",
+          "back": "catalog_images/as-colour-5050/walnut_back.jpg"
+        }
+      ]
     }
   ]
 }

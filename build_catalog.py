@@ -21,14 +21,31 @@ SETUP (one time):
 
 USAGE:
     python build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
+        [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]
 
     kind must be one of: tee, hoodie, cap, tote
+
+    The --crop-* flags are optional and default to 0 (no cropping). Each
+    takes a fraction between 0 and 0.49 and trims that much off the given
+    edge of EVERY photo before saving -- e.g. --crop-top 0.18 removes the
+    top 18% of each photo's height. Useful for vendors like Royal Apparel
+    that only offer on-model photos (no flat product-only shots): crop the
+    model's head off the top and legs off the bottom so only the
+    torso/garment area remains, matching how flat shots from other sites
+    fill the mockup tool's canvas.
+    HOW TO DIAL THESE IN: run once with a guess (e.g. --crop-top 0.15
+    --crop-bottom 0.12), check catalog_images/<product>/*_front.jpg for one
+    color, and re-run with adjusted numbers -- downloaded photos are cached
+    in downloaded_images/, so re-running with new crop values is instant
+    and won't re-download anything. The same crop applies to every color in
+    that run, which works well since a vendor shoots one style's photos
+    with consistent framing across colors.
 
 EXAMPLES:
     python build_catalog.py --site ssactivewear bella_3001.html "Bella/Canvas" 3001 "Unisex Heavyweight Tee" tee catalog.json
     python build_catalog.py --site sanmar sanmar_black.html "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
     python build_catalog.py --site sanmar-pdf PC099.pdf "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
-    python build_catalog.py --site royalapparel royal_5051.html "Royal Apparel" 5051 "Unisex Short Sleeve Tee" tee catalog.json
+    python build_catalog.py --site royalapparel royal_5051.html "Royal Apparel" 5051 "Unisex Short Sleeve Tee" tee catalog.json --crop-top 0.18 --crop-bottom 0.15
     python build_catalog.py --site ascolour ascolour_5026.html "AS Colour" 5026 "Classic Tee" tee catalog.json
 
 IMPORTANT -- SanMar is different from the other three HTML-based sites:
@@ -109,6 +126,25 @@ def sample_swatch_hex(img: Image.Image) -> str:
     arr = np.array(crop).reshape(-1, 3)
     avg = arr.mean(axis=0).astype(int)
     return "#{:02x}{:02x}{:02x}".format(*avg)
+
+
+def crop_fraction(img: Image.Image, top=0.0, bottom=0.0, left=0.0, right=0.0):
+    """Crop off a fraction of each edge (0.0-0.49), e.g. top=0.18 removes the
+    top 18% of the photo's height. Used to trim heads/legs out of on-model
+    photos (Royal Apparel doesn't offer flat product-only shots) down to
+    just the torso/garment area, since there's no reliable pixel-based way
+    to detect 'this is a shirt vs. a face' -- a fixed crop dialed in by eye
+    against one sample color is the practical fix, and it'll apply
+    consistently since a vendor's product photos for one style are always
+    shot with the same framing/model position across colors."""
+    w, h = img.size
+    box = (
+        int(w * left),
+        int(h * top),
+        int(w * (1 - right)),
+        int(h * (1 - bottom)),
+    )
+    return img.crop(box)
 
 
 def load_catalog(path: Path) -> dict:
@@ -437,8 +473,16 @@ def extract_ascolour(html: str):
     {style}_{PRODUCT_NAME}_{COLOR}__hash.jpg = front,
     {style}_{PRODUCT_NAME}_{COLOR}_BACK__hash.jpg = back. Generic
     non-color shots (MAIN/TURN/SIDE/LOOSE/etc) and _THUMB duplicates are
-    skipped."""
-    m = re.search(r'"product-schema"[^>]*>(\{.*?\})</script>', html, re.S)
+    skipped.
+
+    PRODUCT_NAME (the marker word(s) between the style code and the color,
+    e.g. "TEE" for a Classic Tee) is auto-detected per product rather than
+    hardcoded -- it's whichever leading underscore-segment(s) are IDENTICAL
+    across every color photo for that product, since only the color
+    actually varies between them. This is what lets the same extractor
+    handle any AS Colour product type (caps, totes, whatever comes next)
+    without needing a code change for each new one."""
+    m = re.search(r'"product-schema"[^>]*>\s*(\{.*?\})\s*</script>', html, re.S)
     if not m:
         raise RuntimeError(
             "Couldn't find AS Colour's product-schema JSON-LD block on this "
@@ -448,7 +492,7 @@ def extract_ascolour(html: str):
     images = data.get("image", [])
     GENERIC = {"MAIN", "FRONT", "TURN", "SIDE", "BACK", "LOOSE"}
 
-    front_by_color, back_by_color = {}, {}
+    entries = []  # (rest_clean, is_back) per genuine color photo
     for url in images:
         fname = url.rsplit("/", 1)[-1]
         m2 = re.match(r'\d+_(.+?)__\d+.*\.jpg', fname, re.I)
@@ -459,15 +503,41 @@ def extract_ascolour(html: str):
             continue
         is_back = rest.upper().endswith("_BACK")
         rest_clean = rest[:-5] if is_back else rest
-        low = rest_clean.upper()
-        if "TEE_" not in low:
-            # Works for "Classic Tee"; other AS Colour products may use a
-            # different product-name word than "Tee" -- if extraction comes
-            # back empty for a non-tee product, this is the line to adjust.
+        entries.append((rest_clean, is_back, url))
+
+    if not entries:
+        return []
+
+    # Auto-detect how many leading underscore-segments are the shared
+    # product-name marker (vs. the first segment that's actually the
+    # color, which differs photo to photo). Always leaves at least one
+    # trailing segment as the color, even in the pathological case where
+    # nothing varies.
+    split_upper = [rc.upper().split("_") for rc, _, _ in entries]
+    min_len = min(len(parts) for parts in split_upper)
+    marker_word_count = 0
+    for i in range(min_len - 1):
+        if len({parts[i] for parts in split_upper}) == 1:
+            marker_word_count = i + 1
+        else:
+            break
+
+    if marker_word_count == 0:
+        raise RuntimeError(
+            "Couldn't figure out AS Colour's product-name marker word from "
+            "the image filenames (expected something like "
+            "STYLE_PRODUCTNAME_COLOR__hash.jpg, shared across every color "
+            "photo). The page may not have all its color swatches loaded -- "
+            "try re-saving after clicking through a couple of colors first."
+        )
+
+    front_by_color, back_by_color = {}, {}
+    for rest_clean, is_back, url in entries:
+        cname_parts = rest_clean.split("_")[marker_word_count:]
+        if not cname_parts:
             continue
-        idx = low.index("TEE_") + 4
-        cname = rest_clean[idx:]
-        if not cname or cname.upper() in GENERIC:
+        cname = "_".join(cname_parts)
+        if cname.upper() in GENERIC:
             continue
         target = back_by_color if is_back else front_by_color
         target.setdefault(cname, url)
@@ -508,8 +578,42 @@ def main():
     if site not in EXTRACTORS:
         print(f"Unknown site '{site}'. Choose one of: {', '.join(EXTRACTORS)}")
         sys.exit(1)
+
+    # Optional crop flags -- can appear anywhere after the positional args.
+    # Trims a fraction off each edge before saving, e.g. to cut heads/legs
+    # out of on-model photos (Royal Apparel has no flat product shots).
+    # Not tied to any one site -- harmless (0.0) unless you pass them.
+    crop = {"top": 0.0, "bottom": 0.0, "left": 0.0, "right": 0.0}
+    CROP_FLAGS = {
+        "--crop-top": "top", "--crop-bottom": "bottom",
+        "--crop-left": "left", "--crop-right": "right",
+    }
+    cleaned = []
+    i = 0
+    while i < len(rest):
+        arg = rest[i]
+        if arg in CROP_FLAGS:
+            if i + 1 >= len(rest):
+                print(f"{arg} needs a value (fraction between 0 and 0.49, e.g. {arg} 0.18)")
+                sys.exit(1)
+            try:
+                val = float(rest[i + 1])
+            except ValueError:
+                print(f"{arg} needs a number (fraction between 0 and 0.49, e.g. {arg} 0.18)")
+                sys.exit(1)
+            if not (0 <= val < 0.5):
+                print(f"{arg} {val} is out of range -- use a fraction between 0 and 0.49.")
+                sys.exit(1)
+            crop[CROP_FLAGS[arg]] = val
+            i += 2
+        else:
+            cleaned.append(arg)
+            i += 1
+    rest = cleaned
+    cropping = any(v > 0 for v in crop.values())
+
     if len(rest) < 5:
-        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]")
+        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]")
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
@@ -527,6 +631,9 @@ def main():
     if site == "sanmar-pdf":
         print("Note: reading a SanMar Media Library PDF export -- this covers")
         print("every color found in the PDF in one run (no per-color HTML needed).")
+    if cropping:
+        print(f"Note: cropping each photo by top={crop['top']} bottom={crop['bottom']} "
+              f"left={crop['left']} right={crop['right']} before saving.")
 
     product_id = slugify(f"{brand}-{style}")
     image_dir = Path("catalog_images") / product_id
@@ -569,6 +676,10 @@ def main():
                 skipped.append((name, "one or both images failed to download"))
                 continue
             out_ext = "jpg"
+
+        if cropping:
+            front_img = crop_fraction(front_img, **crop)
+            back_img = crop_fraction(back_img, **crop)
 
         color_slug = slugify(name)
         front_out = image_dir / f"{color_slug}_front.{out_ext}"

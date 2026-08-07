@@ -6883,6 +6883,184 @@
           "back": "catalog_images/next-level-5080/stonewash-green_back.jpg"
         }
       ]
+    },
+    {
+      "id": "independent-trading-co-prm180pt",
+      "name": "Unisex Premium T-Shirt",
+      "brand": "Independent Trading Co",
+      "style": "PRM180PT",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f3f2f7",
+          "front": "catalog_images/independent-trading-co-prm180pt/white_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1c1c1e",
+          "front": "catalog_images/independent-trading-co-prm180pt/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/black_back.jpg"
+        },
+        {
+          "name": "Pigment Black",
+          "hex": "#525252",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-black_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-black_back.jpg"
+        },
+        {
+          "name": "Army",
+          "hex": "#4d4b3e",
+          "front": "catalog_images/independent-trading-co-prm180pt/army_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/army_back.jpg"
+        },
+        {
+          "name": "Black Camo",
+          "hex": "#22232a",
+          "front": "catalog_images/independent-trading-co-prm180pt/black-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/black-camo_back.jpg"
+        },
+        {
+          "name": "Classic Navy",
+          "hex": "#313342",
+          "front": "catalog_images/independent-trading-co-prm180pt/classic-navy_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/classic-navy_back.jpg"
+        },
+        {
+          "name": "Darkwood Tree Camo",
+          "hex": "#464546",
+          "front": "catalog_images/independent-trading-co-prm180pt/darkwood-tree-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/darkwood-tree-camo_back.jpg"
+        },
+        {
+          "name": "Deadwood Tree Camo",
+          "hex": "#8e8476",
+          "front": "catalog_images/independent-trading-co-prm180pt/deadwood-tree-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/deadwood-tree-camo_back.jpg"
+        },
+        {
+          "name": "Duck Camo",
+          "hex": "#514337",
+          "front": "catalog_images/independent-trading-co-prm180pt/duck-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/duck-camo_back.jpg"
+        },
+        {
+          "name": "Forest Camo",
+          "hex": "#434336",
+          "front": "catalog_images/independent-trading-co-prm180pt/forest-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/forest-camo_back.jpg"
+        },
+        {
+          "name": "Grey Heather",
+          "hex": "#d8dbe3",
+          "front": "catalog_images/independent-trading-co-prm180pt/grey-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/grey-heather_back.jpg"
+        },
+        {
+          "name": "Pigment Alpine Green",
+          "hex": "#56736d",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-alpine-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-alpine-green_back.jpg"
+        },
+        {
+          "name": "Pigment Amber",
+          "hex": "#ad4f41",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-amber_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-amber_back.jpg"
+        },
+        {
+          "name": "Pigment Army",
+          "hex": "#504e41",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-army_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-army_back.jpg"
+        },
+        {
+          "name": "Pigment Butter",
+          "hex": "#e8d09a",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-butter_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-butter_back.jpg"
+        },
+        {
+          "name": "Pigment Cement",
+          "hex": "#afa69e",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-cement_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-cement_back.jpg"
+        },
+        {
+          "name": "Pigment Clay",
+          "hex": "#826a60",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-clay_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-clay_back.jpg"
+        },
+        {
+          "name": "Pigment Dusty Pink",
+          "hex": "#ddbeb6",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-dusty-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-dusty-pink_back.jpg"
+        },
+        {
+          "name": "Pigment Ivory",
+          "hex": "#e0d7d0",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-ivory_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-ivory_back.jpg"
+        },
+        {
+          "name": "Pigment Light Blue",
+          "hex": "#89a6d5",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-light-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-light-blue_back.jpg"
+        },
+        {
+          "name": "Pigment Maroon",
+          "hex": "#835760",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-maroon_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-maroon_back.jpg"
+        },
+        {
+          "name": "Pigment Mint",
+          "hex": "#8db4b6",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-mint_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-mint_back.jpg"
+        },
+        {
+          "name": "Pigment Pink",
+          "hex": "#d88097",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-pink_back.jpg"
+        },
+        {
+          "name": "Pigment Plum",
+          "hex": "#7f7798",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-plum_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-plum_back.jpg"
+        },
+        {
+          "name": "Pigment Red",
+          "hex": "#a33b43",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-red_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-red_back.jpg"
+        },
+        {
+          "name": "Pigment Sage",
+          "hex": "#b3c3c0",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-sage_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-sage_back.jpg"
+        },
+        {
+          "name": "Pigment Slate Blue",
+          "hex": "#6e8499",
+          "front": "catalog_images/independent-trading-co-prm180pt/pigment-slate-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/pigment-slate-blue_back.jpg"
+        },
+        {
+          "name": "Realtree APX Camo",
+          "hex": "#786b5e",
+          "front": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_back.jpg"
+        }
+      ]
     }
   ]
 }

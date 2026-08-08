@@ -8063,6 +8063,88 @@
           "back": "catalog_images/next-level-1580/tan_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-1019",
+      "name": "WomensMicro Rib Racer Tank",
+      "brand": "Bella Canvas",
+      "style": "1019",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Solid White Blend",
+          "hex": "#e6e7ee",
+          "front": "catalog_images/bella-canvas-1019/solid-white-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-white-blend_back.jpg"
+        },
+        {
+          "name": "Solid Black Blend",
+          "hex": "#2a2b30",
+          "front": "catalog_images/bella-canvas-1019/solid-black-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-black-blend_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#adaeb3",
+          "front": "catalog_images/bella-canvas-1019/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Solid Baby Blue Blend",
+          "hex": "#b9cbd9",
+          "front": "catalog_images/bella-canvas-1019/solid-baby-blue-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-baby-blue-blend_back.jpg"
+        },
+        {
+          "name": "Solid Cocoa Blend",
+          "hex": "#755750",
+          "front": "catalog_images/bella-canvas-1019/solid-cocoa-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-cocoa-blend_back.jpg"
+        },
+        {
+          "name": "Solid Forest Blend",
+          "hex": "#21392e",
+          "front": "catalog_images/bella-canvas-1019/solid-forest-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-forest-blend_back.jpg"
+        },
+        {
+          "name": "Solid Maroon Blend",
+          "hex": "#5d2532",
+          "front": "catalog_images/bella-canvas-1019/solid-maroon-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-maroon-blend_back.jpg"
+        },
+        {
+          "name": "Solid Natural Blend",
+          "hex": "#f3ece4",
+          "front": "catalog_images/bella-canvas-1019/solid-natural-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-natural-blend_back.jpg"
+        },
+        {
+          "name": "Solid Navy Blend",
+          "hex": "#1a1c31",
+          "front": "catalog_images/bella-canvas-1019/solid-navy-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-navy-blend_back.jpg"
+        },
+        {
+          "name": "Solid Pink Blend",
+          "hex": "#f8cfd3",
+          "front": "catalog_images/bella-canvas-1019/solid-pink-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-pink-blend_back.jpg"
+        },
+        {
+          "name": "Solid Red Blend",
+          "hex": "#c10222",
+          "front": "catalog_images/bella-canvas-1019/solid-red-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-red-blend_back.jpg"
+        },
+        {
+          "name": "Solid Vintage Navy Blend",
+          "hex": "#404c58",
+          "front": "catalog_images/bella-canvas-1019/solid-vintage-navy-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-1019/solid-vintage-navy-blend_back.jpg"
+        }
+      ]
     }
   ]
 }

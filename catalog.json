@@ -8401,6 +8401,112 @@
           "back": "catalog_images/atlantis-headwear-andy/olive_back.jpg"
         }
       ]
+    },
+    {
+      "id": "atlantis-headwear-wind",
+      "name": "Sustainable 12 Inch Knit Beanie",
+      "brand": "Atlantis_Headwear",
+      "style": "WIND",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#cfcbc7",
+          "front": "catalog_images/atlantis-headwear-wind/white_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#111111",
+          "front": "catalog_images/atlantis-headwear-wind/black_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/black_back.jpg"
+        },
+        {
+          "name": "Beige",
+          "hex": "#a08b6d",
+          "front": "catalog_images/atlantis-headwear-wind/beige_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/beige_back.jpg"
+        },
+        {
+          "name": "Bottle Green",
+          "hex": "#112317",
+          "front": "catalog_images/atlantis-headwear-wind/bottle-green_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/bottle-green_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#351318",
+          "front": "catalog_images/atlantis-headwear-wind/burgundy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/burgundy_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#454545",
+          "front": "catalog_images/atlantis-headwear-wind/dark-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/dark-grey_back.jpg"
+        },
+        {
+          "name": "Fuchsia Pink",
+          "hex": "#ba036b",
+          "front": "catalog_images/atlantis-headwear-wind/fuchsia-pink_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/fuchsia-pink_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#688595",
+          "front": "catalog_images/atlantis-headwear-wind/light-blue_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/light-blue_back.jpg"
+        },
+        {
+          "name": "Mustard Yellow",
+          "hex": "#a76306",
+          "front": "catalog_images/atlantis-headwear-wind/mustard-yellow_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/mustard-yellow_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#16171b",
+          "front": "catalog_images/atlantis-headwear-wind/navy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#28261a",
+          "front": "catalog_images/atlantis-headwear-wind/olive_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/olive_back.jpg"
+        },
+        {
+          "name": "Orange Fluorescent",
+          "hex": "#db5204",
+          "front": "catalog_images/atlantis-headwear-wind/orange-fluorescent_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/orange-fluorescent_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#aa6e76",
+          "front": "catalog_images/atlantis-headwear-wind/pink_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/pink_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#970f19",
+          "front": "catalog_images/atlantis-headwear-wind/red_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#0f2a60",
+          "front": "catalog_images/atlantis-headwear-wind/royal_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/royal_back.jpg"
+        },
+        {
+          "name": "Yellow Fluorescent",
+          "hex": "#a3b912",
+          "front": "catalog_images/atlantis-headwear-wind/yellow-fluorescent_front.jpg",
+          "back": "catalog_images/atlantis-headwear-wind/yellow-fluorescent_back.jpg"
+        }
+      ]
     }
   ]
 }

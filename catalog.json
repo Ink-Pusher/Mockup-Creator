@@ -7061,6 +7061,346 @@
           "back": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_back.jpg"
         }
       ]
+    },
+    {
+      "id": "yupoong-6606",
+      "name": "Retro Trucker Cap",
+      "brand": "Yupoong",
+      "style": "6606",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#dcdfe6",
+          "front": "catalog_images/yupoong-6606/white_front.jpg",
+          "back": "catalog_images/yupoong-6606/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1e1d22",
+          "front": "catalog_images/yupoong-6606/black_front.jpg",
+          "back": "catalog_images/yupoong-6606/black_back.jpg"
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#171518",
+          "front": "catalog_images/yupoong-6606/black-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/black-white_back.jpg"
+        },
+        {
+          "name": "Black/ White/ Black",
+          "hex": "#e9e7eb",
+          "front": "catalog_images/yupoong-6606/black-white-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/black-white-black_back.jpg"
+        },
+        {
+          "name": "Brown/ Khaki",
+          "hex": "#5c3d34",
+          "front": "catalog_images/yupoong-6606/brown-khaki_front.jpg",
+          "back": "catalog_images/yupoong-6606/brown-khaki_back.jpg"
+        },
+        {
+          "name": "Caramel",
+          "hex": "#a6704a",
+          "front": "catalog_images/yupoong-6606/caramel_front.jpg",
+          "back": "catalog_images/yupoong-6606/caramel_back.jpg"
+        },
+        {
+          "name": "Caramel/ Black",
+          "hex": "#ac7146",
+          "front": "catalog_images/yupoong-6606/caramel-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/caramel-black_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#56514e",
+          "front": "catalog_images/yupoong-6606/charcoal_front.jpg",
+          "back": "catalog_images/yupoong-6606/charcoal_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#52504f",
+          "front": "catalog_images/yupoong-6606/charcoal-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/charcoal-black_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Navy",
+          "hex": "#4f4b4a",
+          "front": "catalog_images/yupoong-6606/charcoal-navy_front.jpg",
+          "back": "catalog_images/yupoong-6606/charcoal-navy_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Green",
+          "hex": "#4e4645",
+          "front": "catalog_images/yupoong-6606/charcoal-neon-green_front.jpg",
+          "back": "catalog_images/yupoong-6606/charcoal-neon-green_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Neon Orange",
+          "hex": "#544f53",
+          "front": "catalog_images/yupoong-6606/charcoal-neon-orange_front.jpg",
+          "back": "catalog_images/yupoong-6606/charcoal-neon-orange_back.jpg"
+        },
+        {
+          "name": "Charcoal/ White",
+          "hex": "#4e4a48",
+          "front": "catalog_images/yupoong-6606/charcoal-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/charcoal-white_back.jpg"
+        },
+        {
+          "name": "Coyote Brown/ Black",
+          "hex": "#71593f",
+          "front": "catalog_images/yupoong-6606/coyote-brown-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/coyote-brown-black_back.jpg"
+        },
+        {
+          "name": "Cranberry",
+          "hex": "#741d2e",
+          "front": "catalog_images/yupoong-6606/cranberry_front.jpg",
+          "back": "catalog_images/yupoong-6606/cranberry_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#544f56",
+          "front": "catalog_images/yupoong-6606/dark-heather-grey_front.jpg",
+          "back": "catalog_images/yupoong-6606/dark-heather-grey_back.jpg"
+        },
+        {
+          "name": "Evergreen",
+          "hex": "#456e55",
+          "front": "catalog_images/yupoong-6606/evergreen_front.jpg",
+          "back": "catalog_images/yupoong-6606/evergreen_back.jpg"
+        },
+        {
+          "name": "Evergreen/ White",
+          "hex": "#325b40",
+          "front": "catalog_images/yupoong-6606/evergreen-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/evergreen-white_back.jpg"
+        },
+        {
+          "name": "Green Camo/ Black",
+          "hex": "#48442e",
+          "front": "catalog_images/yupoong-6606/green-camo-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/green-camo-black_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#a2a9b1",
+          "front": "catalog_images/yupoong-6606/heather-grey-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/heather-grey-black_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ White",
+          "hex": "#95989d",
+          "front": "catalog_images/yupoong-6606/heather-grey-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/heather-grey-white_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#a49075",
+          "front": "catalog_images/yupoong-6606/khaki_front.jpg",
+          "back": "catalog_images/yupoong-6606/khaki_back.jpg"
+        },
+        {
+          "name": "Kryptek Highlander",
+          "hex": "#7c6650",
+          "front": "catalog_images/yupoong-6606/kryptek-highlander_front.jpg",
+          "back": "catalog_images/yupoong-6606/kryptek-highlander_back.jpg"
+        },
+        {
+          "name": "Kryptek Pontus",
+          "hex": "#2b5b84",
+          "front": "catalog_images/yupoong-6606/kryptek-pontus_front.jpg",
+          "back": "catalog_images/yupoong-6606/kryptek-pontus_back.jpg"
+        },
+        {
+          "name": "Kryptek Raid",
+          "hex": "#5f5e63",
+          "front": "catalog_images/yupoong-6606/kryptek-raid_front.jpg",
+          "back": "catalog_images/yupoong-6606/kryptek-raid_back.jpg"
+        },
+        {
+          "name": "Kryptek Typhon",
+          "hex": "#313237",
+          "front": "catalog_images/yupoong-6606/kryptek-typhon_front.jpg",
+          "back": "catalog_images/yupoong-6606/kryptek-typhon_back.jpg"
+        },
+        {
+          "name": "Kryptek Wraith",
+          "hex": "#dbdbda",
+          "front": "catalog_images/yupoong-6606/kryptek-wraith_front.jpg",
+          "back": "catalog_images/yupoong-6606/kryptek-wraith_back.jpg"
+        },
+        {
+          "name": "Maroon/ Grey",
+          "hex": "#5a252f",
+          "front": "catalog_images/yupoong-6606/maroon-grey_front.jpg",
+          "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg"
+        },
+        {
+          "name": "Moss/ Khaki",
+          "hex": "#483f22",
+          "front": "catalog_images/yupoong-6606/moss-khaki_front.jpg",
+          "back": "catalog_images/yupoong-6606/moss-khaki_back.jpg"
+        },
+        {
+          "name": "Multicam Alpine/ White",
+          "hex": "#eeeded",
+          "front": "catalog_images/yupoong-6606/multicam-alpine-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-alpine-white_back.jpg"
+        },
+        {
+          "name": "Multicam Arid/ Brown",
+          "hex": "#a88e75",
+          "front": "catalog_images/yupoong-6606/multicam-arid-brown_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-arid-brown_back.jpg"
+        },
+        {
+          "name": "Multicam Arid/ Tan",
+          "hex": "#aa9277",
+          "front": "catalog_images/yupoong-6606/multicam-arid-tan_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-arid-tan_back.jpg"
+        },
+        {
+          "name": "Multicam Black/ Black",
+          "hex": "#393433",
+          "front": "catalog_images/yupoong-6606/multicam-black-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-black-black_back.jpg"
+        },
+        {
+          "name": "Multicam Green/ Black",
+          "hex": "#8a7d63",
+          "front": "catalog_images/yupoong-6606/multicam-green-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-green-black_back.jpg"
+        },
+        {
+          "name": "Multicam Green/ Khaki",
+          "hex": "#938266",
+          "front": "catalog_images/yupoong-6606/multicam-green-khaki_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-green-khaki_back.jpg"
+        },
+        {
+          "name": "Multicam Tropic/ Green",
+          "hex": "#49452e",
+          "front": "catalog_images/yupoong-6606/multicam-tropic-green_front.jpg",
+          "back": "catalog_images/yupoong-6606/multicam-tropic-green_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1e2636",
+          "front": "catalog_images/yupoong-6606/navy_front.jpg",
+          "back": "catalog_images/yupoong-6606/navy_back.jpg"
+        },
+        {
+          "name": "Navy/ Silver",
+          "hex": "#263142",
+          "front": "catalog_images/yupoong-6606/navy-silver_front.jpg",
+          "back": "catalog_images/yupoong-6606/navy-silver_back.jpg"
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#1d2737",
+          "front": "catalog_images/yupoong-6606/navy-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/navy-white_back.jpg"
+        },
+        {
+          "name": "Navy/ White/ Navy",
+          "hex": "#eceaee",
+          "front": "catalog_images/yupoong-6606/navy-white-navy_front.jpg",
+          "back": "catalog_images/yupoong-6606/navy-white-navy_back.jpg"
+        },
+        {
+          "name": "Obskura Nox",
+          "hex": "#343031",
+          "front": "catalog_images/yupoong-6606/obskura-nox_front.jpg",
+          "back": "catalog_images/yupoong-6606/obskura-nox_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#f1aac1",
+          "front": "catalog_images/yupoong-6606/pink_front.jpg",
+          "back": "catalog_images/yupoong-6606/pink_back.jpg"
+        },
+        {
+          "name": "Poseidon Black",
+          "hex": "#524e50",
+          "front": "catalog_images/yupoong-6606/poseidon-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/poseidon-black_back.jpg"
+        },
+        {
+          "name": "Realtree Edge/ Brown",
+          "hex": "#88745f",
+          "front": "catalog_images/yupoong-6606/realtree-edge-brown_front.jpg",
+          "back": "catalog_images/yupoong-6606/realtree-edge-brown_back.jpg"
+        },
+        {
+          "name": "Realtree Max7/ Brown",
+          "hex": "#544b41",
+          "front": "catalog_images/yupoong-6606/realtree-max7-brown_front.jpg",
+          "back": "catalog_images/yupoong-6606/realtree-max7-brown_back.jpg"
+        },
+        {
+          "name": "Realtree Original/ Black",
+          "hex": "#5b4d49",
+          "front": "catalog_images/yupoong-6606/realtree-original-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/realtree-original-black_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ad1828",
+          "front": "catalog_images/yupoong-6606/red_front.jpg",
+          "back": "catalog_images/yupoong-6606/red_back.jpg"
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#d62a37",
+          "front": "catalog_images/yupoong-6606/red-black_front.jpg",
+          "back": "catalog_images/yupoong-6606/red-black_back.jpg"
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#c41a2c",
+          "front": "catalog_images/yupoong-6606/red-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/red-white_back.jpg"
+        },
+        {
+          "name": "Royal/ White",
+          "hex": "#2a4067",
+          "front": "catalog_images/yupoong-6606/royal-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/royal-white_back.jpg"
+        },
+        {
+          "name": "Rustic Orange/ Khaki",
+          "hex": "#c94a31",
+          "front": "catalog_images/yupoong-6606/rustic-orange-khaki_front.jpg",
+          "back": "catalog_images/yupoong-6606/rustic-orange-khaki_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#c2c0c3",
+          "front": "catalog_images/yupoong-6606/silver_front.jpg",
+          "back": "catalog_images/yupoong-6606/silver_back.jpg"
+        },
+        {
+          "name": "Steel Blue/ Silver",
+          "hex": "#3b6f8c",
+          "front": "catalog_images/yupoong-6606/steel-blue-silver_front.jpg",
+          "back": "catalog_images/yupoong-6606/steel-blue-silver_back.jpg"
+        },
+        {
+          "name": "Turquoise/ White",
+          "hex": "#04aed2",
+          "front": "catalog_images/yupoong-6606/turquoise-white_front.jpg",
+          "back": "catalog_images/yupoong-6606/turquoise-white_back.jpg"
+        },
+        {
+          "name": "Veil Wideland",
+          "hex": "#6e6058",
+          "front": "catalog_images/yupoong-6606/veil-wideland_front.jpg",
+          "back": "catalog_images/yupoong-6606/veil-wideland_back.jpg"
+        }
+      ]
     }
   ]
 }

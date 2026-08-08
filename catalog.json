@@ -8507,6 +8507,226 @@
           "back": "catalog_images/atlantis-headwear-wind/yellow-fluorescent_back.jpg"
         }
       ]
+    },
+    {
+      "id": "sportsman-sp12-sp12",
+      "name": "12 Inch Solid Cuffed Beanie",
+      "brand": "Sportsman_SP12",
+      "style": "SP12",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#dadcd7",
+          "front": "catalog_images/sportsman-sp12-sp12/white_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1b1b1b",
+          "front": "catalog_images/sportsman-sp12-sp12/black_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/black_back.jpg"
+        },
+        {
+          "name": "Blaze Orange",
+          "hex": "#e44424",
+          "front": "catalog_images/sportsman-sp12-sp12/blaze-orange_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/blaze-orange_back.jpg"
+        },
+        {
+          "name": "Brown",
+          "hex": "#40312c",
+          "front": "catalog_images/sportsman-sp12-sp12/brown_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/brown_back.jpg"
+        },
+        {
+          "name": "Camel",
+          "hex": "#cbab7a",
+          "front": "catalog_images/sportsman-sp12-sp12/camel_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/camel_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#88243c",
+          "front": "catalog_images/sportsman-sp12-sp12/cardinal_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/cardinal_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#7d7e80",
+          "front": "catalog_images/sportsman-sp12-sp12/dark-heather-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/dark-heather-grey_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#243934",
+          "front": "catalog_images/sportsman-sp12-sp12/forest-green_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/forest-green_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#fcb506",
+          "front": "catalog_images/sportsman-sp12-sp12/gold_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/gold_back.jpg"
+        },
+        {
+          "name": "Green Camo",
+          "hex": "#403e2b",
+          "front": "catalog_images/sportsman-sp12-sp12/green-camo_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/green-camo_back.jpg"
+        },
+        {
+          "name": "Grey Camo",
+          "hex": "#3c3e3b",
+          "front": "catalog_images/sportsman-sp12-sp12/grey-camo_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/grey-camo_back.jpg"
+        },
+        {
+          "name": "Heather Brown",
+          "hex": "#645553",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-brown_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-brown_back.jpg"
+        },
+        {
+          "name": "Heather Cardinal",
+          "hex": "#7a4652",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-cardinal_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-cardinal_back.jpg"
+        },
+        {
+          "name": "Heather Charcoal",
+          "hex": "#222224",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-charcoal_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-charcoal_back.jpg"
+        },
+        {
+          "name": "Heather Dark Royal",
+          "hex": "#334278",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-dark-royal_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-dark-royal_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#9a9c9e",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-grey_back.jpg"
+        },
+        {
+          "name": "Heather Kelly",
+          "hex": "#3a986f",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-kelly_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-kelly_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#5a6480",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-navy_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Orange",
+          "hex": "#f28252",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-orange_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-orange_back.jpg"
+        },
+        {
+          "name": "Heather Purple",
+          "hex": "#7c60a1",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-purple_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-purple_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#d95977",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-red_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#6589db",
+          "front": "catalog_images/sportsman-sp12-sp12/heather-royal_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/heather-royal_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#0a6738",
+          "front": "catalog_images/sportsman-sp12-sp12/kelly_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/kelly_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#491d2a",
+          "front": "catalog_images/sportsman-sp12-sp12/maroon_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/maroon_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#242831",
+          "front": "catalog_images/sportsman-sp12-sp12/navy_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/navy_back.jpg"
+        },
+        {
+          "name": "Neon Fuchsia",
+          "hex": "#d80167",
+          "front": "catalog_images/sportsman-sp12-sp12/neon-fuchsia_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/neon-fuchsia_back.jpg"
+        },
+        {
+          "name": "Neon Green",
+          "hex": "#7ad355",
+          "front": "catalog_images/sportsman-sp12-sp12/neon-green_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/neon-green_back.jpg"
+        },
+        {
+          "name": "Neon Pink",
+          "hex": "#f94b92",
+          "front": "catalog_images/sportsman-sp12-sp12/neon-pink_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/neon-pink_back.jpg"
+        },
+        {
+          "name": "Neon Yellow",
+          "hex": "#b7d544",
+          "front": "catalog_images/sportsman-sp12-sp12/neon-yellow_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/neon-yellow_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#b64229",
+          "front": "catalog_images/sportsman-sp12-sp12/orange_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/orange_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#e3adb9",
+          "front": "catalog_images/sportsman-sp12-sp12/pink_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/pink_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#413156",
+          "front": "catalog_images/sportsman-sp12-sp12/purple_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#a50226",
+          "front": "catalog_images/sportsman-sp12-sp12/red_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#033a7f",
+          "front": "catalog_images/sportsman-sp12-sp12/royal_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/royal_back.jpg"
+        },
+        {
+          "name": "Safety Yellow",
+          "hex": "#b5f550",
+          "front": "catalog_images/sportsman-sp12-sp12/safety-yellow_front.jpg",
+          "back": "catalog_images/sportsman-sp12-sp12/safety-yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

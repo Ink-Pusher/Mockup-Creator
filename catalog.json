@@ -8203,6 +8203,82 @@
           "back": "catalog_images/richardson-146r/rust_back.jpg"
         }
       ]
+    },
+    {
+      "id": "atlantis-headwear-rio",
+      "name": "Sustainable Rib Cuffed Beanie",
+      "brand": "Atlantis_Headwear",
+      "style": "RIO",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#333134",
+          "front": "catalog_images/atlantis-headwear-rio/black_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/black_back.jpg"
+        },
+        {
+          "name": "Acid Green",
+          "hex": "#c4e296",
+          "front": "catalog_images/atlantis-headwear-rio/acid-green_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/acid-green_back.jpg"
+        },
+        {
+          "name": "Bottle Green",
+          "hex": "#334c44",
+          "front": "catalog_images/atlantis-headwear-rio/bottle-green_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/bottle-green_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#741838",
+          "front": "catalog_images/atlantis-headwear-rio/burgundy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/burgundy_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#2b2d29",
+          "front": "catalog_images/atlantis-headwear-rio/dark-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/dark-grey_back.jpg"
+        },
+        {
+          "name": "Light Beige",
+          "hex": "#cfbca3",
+          "front": "catalog_images/atlantis-headwear-rio/light-beige_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/light-beige_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#c6d8e5",
+          "front": "catalog_images/atlantis-headwear-rio/light-blue_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/light-blue_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#8e9083",
+          "front": "catalog_images/atlantis-headwear-rio/light-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/light-grey_back.jpg"
+        },
+        {
+          "name": "Mustard Yellow",
+          "hex": "#efa61b",
+          "front": "catalog_images/atlantis-headwear-rio/mustard-yellow_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/mustard-yellow_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2a3747",
+          "front": "catalog_images/atlantis-headwear-rio/navy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#797054",
+          "front": "catalog_images/atlantis-headwear-rio/olive_front.jpg",
+          "back": "catalog_images/atlantis-headwear-rio/olive_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -7597,6 +7597,118 @@
           "back": "catalog_images/yupoong-6006/silver-black_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-112fp",
+      "name": "Five Panel Trucker Cap",
+      "brand": "Richardson",
+      "style": "112FP",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/richardson-112fp/white_front.jpg",
+          "back": "catalog_images/richardson-112fp/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#151515",
+          "front": "catalog_images/richardson-112fp/black_front.jpg",
+          "back": "catalog_images/richardson-112fp/black_back.jpg"
+        },
+        {
+          "name": "Army Olive Green/ Tan",
+          "hex": "#6f7151",
+          "front": "catalog_images/richardson-112fp/army-olive-green-tan_front.jpg",
+          "back": "catalog_images/richardson-112fp/army-olive-green-tan_back.jpg"
+        },
+        {
+          "name": "Beetle/ Quarry",
+          "hex": "#626456",
+          "front": "catalog_images/richardson-112fp/beetle-quarry_front.jpg",
+          "back": "catalog_images/richardson-112fp/beetle-quarry_back.jpg"
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#2a2625",
+          "front": "catalog_images/richardson-112fp/black-white_front.jpg",
+          "back": "catalog_images/richardson-112fp/black-white_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#4e4e4e",
+          "front": "catalog_images/richardson-112fp/charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-112fp/charcoal-black_back.jpg"
+        },
+        {
+          "name": "Charcoal/ White",
+          "hex": "#595858",
+          "front": "catalog_images/richardson-112fp/charcoal-white_front.jpg",
+          "back": "catalog_images/richardson-112fp/charcoal-white_back.jpg"
+        },
+        {
+          "name": "Chocolate Chip/ Birch",
+          "hex": "#352d23",
+          "front": "catalog_images/richardson-112fp/chocolate-chip-birch_front.jpg",
+          "back": "catalog_images/richardson-112fp/chocolate-chip-birch_back.jpg"
+        },
+        {
+          "name": "Cobalt Blue/ Grey",
+          "hex": "#0f8bc7",
+          "front": "catalog_images/richardson-112fp/cobalt-blue-grey_front.jpg",
+          "back": "catalog_images/richardson-112fp/cobalt-blue-grey_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Birch/ Army Olive",
+          "hex": "#686a6d",
+          "front": "catalog_images/richardson-112fp/heather-grey-birch-army-olive_front.jpg",
+          "back": "catalog_images/richardson-112fp/heather-grey-birch-army-olive_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#b0b1b5",
+          "front": "catalog_images/richardson-112fp/heather-grey-black_front.jpg",
+          "back": "catalog_images/richardson-112fp/heather-grey-black_back.jpg"
+        },
+        {
+          "name": "Khaki/ Coffee",
+          "hex": "#c9b9a9",
+          "front": "catalog_images/richardson-112fp/khaki-coffee_front.jpg",
+          "back": "catalog_images/richardson-112fp/khaki-coffee_back.jpg"
+        },
+        {
+          "name": "Loden Green/ Black",
+          "hex": "#636657",
+          "front": "catalog_images/richardson-112fp/loden-green-black_front.jpg",
+          "back": "catalog_images/richardson-112fp/loden-green-black_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#101625",
+          "front": "catalog_images/richardson-112fp/navy_front.jpg",
+          "back": "catalog_images/richardson-112fp/navy_back.jpg"
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#25272d",
+          "front": "catalog_images/richardson-112fp/navy-white_front.jpg",
+          "back": "catalog_images/richardson-112fp/navy-white_back.jpg"
+        },
+        {
+          "name": "Ombre Blue/ Navy",
+          "hex": "#51515d",
+          "front": "catalog_images/richardson-112fp/ombre-blue-navy_front.jpg",
+          "back": "catalog_images/richardson-112fp/ombre-blue-navy_back.jpg"
+        },
+        {
+          "name": "Pale Khaki/ Loden Green",
+          "hex": "#b8aa8f",
+          "front": "catalog_images/richardson-112fp/pale-khaki-loden-green_front.jpg",
+          "back": "catalog_images/richardson-112fp/pale-khaki-loden-green_back.jpg"
+        }
+      ]
     }
   ]
 }

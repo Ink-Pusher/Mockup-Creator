@@ -7709,6 +7709,160 @@
           "back": "catalog_images/richardson-112fp/pale-khaki-loden-green_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-1533",
+      "name": "Womens Ideal Racerback Tank",
+      "brand": "Next Level",
+      "style": "1533",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#d8d3d7",
+          "front": "catalog_images/next-level-1533/white_front.jpg",
+          "back": "catalog_images/next-level-1533/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#26232e",
+          "front": "catalog_images/next-level-1533/black_front.jpg",
+          "back": "catalog_images/next-level-1533/black_back.jpg"
+        },
+        {
+          "name": "Antique Gold",
+          "hex": "#bd7613",
+          "front": "catalog_images/next-level-1533/antique-gold_front.jpg",
+          "back": "catalog_images/next-level-1533/antique-gold_back.jpg"
+        },
+        {
+          "name": "Banana Cream",
+          "hex": "#fbce76",
+          "front": "catalog_images/next-level-1533/banana-cream_front.jpg",
+          "back": "catalog_images/next-level-1533/banana-cream_back.jpg"
+        },
+        {
+          "name": "Cancun",
+          "hex": "#a8e5e7",
+          "front": "catalog_images/next-level-1533/cancun_front.jpg",
+          "back": "catalog_images/next-level-1533/cancun_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#741c2c",
+          "front": "catalog_images/next-level-1533/cardinal_front.jpg",
+          "back": "catalog_images/next-level-1533/cardinal_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#615d5e",
+          "front": "catalog_images/next-level-1533/dark-grey_front.jpg",
+          "back": "catalog_images/next-level-1533/dark-grey_back.jpg"
+        },
+        {
+          "name": "Desert Pink",
+          "hex": "#e1aca1",
+          "front": "catalog_images/next-level-1533/desert-pink_front.jpg",
+          "back": "catalog_images/next-level-1533/desert-pink_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#a7a2ae",
+          "front": "catalog_images/next-level-1533/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-1533/heather-grey_back.jpg"
+        },
+        {
+          "name": "Hot Pink",
+          "hex": "#f86b8d",
+          "front": "catalog_images/next-level-1533/hot-pink_front.jpg",
+          "back": "catalog_images/next-level-1533/hot-pink_back.jpg"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#353d4a",
+          "front": "catalog_images/next-level-1533/indigo_front.jpg",
+          "back": "catalog_images/next-level-1533/indigo_back.jpg"
+        },
+        {
+          "name": "Kelly Green",
+          "hex": "#00b262",
+          "front": "catalog_images/next-level-1533/kelly-green_front.jpg",
+          "back": "catalog_images/next-level-1533/kelly-green_back.jpg"
+        },
+        {
+          "name": "Light Orange",
+          "hex": "#fd996c",
+          "front": "catalog_images/next-level-1533/light-orange_front.jpg",
+          "back": "catalog_images/next-level-1533/light-orange_back.jpg"
+        },
+        {
+          "name": "Lilac",
+          "hex": "#e0acc8",
+          "front": "catalog_images/next-level-1533/lilac_front.jpg",
+          "back": "catalog_images/next-level-1533/lilac_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#282c46",
+          "front": "catalog_images/next-level-1533/midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-1533/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#68624a",
+          "front": "catalog_images/next-level-1533/military-green_front.jpg",
+          "back": "catalog_images/next-level-1533/military-green_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#a8cdb3",
+          "front": "catalog_images/next-level-1533/mint_front.jpg",
+          "back": "catalog_images/next-level-1533/mint_back.jpg"
+        },
+        {
+          "name": "Purple Rush",
+          "hex": "#56457a",
+          "front": "catalog_images/next-level-1533/purple-rush_front.jpg",
+          "back": "catalog_images/next-level-1533/purple-rush_back.jpg"
+        },
+        {
+          "name": "Raspberry",
+          "hex": "#e7497c",
+          "front": "catalog_images/next-level-1533/raspberry_front.jpg",
+          "back": "catalog_images/next-level-1533/raspberry_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#bf0e36",
+          "front": "catalog_images/next-level-1533/red_front.jpg",
+          "back": "catalog_images/next-level-1533/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#0f4485",
+          "front": "catalog_images/next-level-1533/royal_front.jpg",
+          "back": "catalog_images/next-level-1533/royal_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#cdc5c3",
+          "front": "catalog_images/next-level-1533/silver_front.jpg",
+          "back": "catalog_images/next-level-1533/silver_back.jpg"
+        },
+        {
+          "name": "Tahiti Blue",
+          "hex": "#00cdc7",
+          "front": "catalog_images/next-level-1533/tahiti-blue_front.jpg",
+          "back": "catalog_images/next-level-1533/tahiti-blue_back.jpg"
+        },
+        {
+          "name": "Turquoise",
+          "hex": "#0070ad",
+          "front": "catalog_images/next-level-1533/turquoise_front.jpg",
+          "back": "catalog_images/next-level-1533/turquoise_back.jpg"
+        }
+      ]
     }
   ]
 }

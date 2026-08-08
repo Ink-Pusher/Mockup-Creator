@@ -7981,6 +7981,88 @@
           "back": "catalog_images/next-level-6733/vintage-turquoise_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-1580",
+      "name": "Womens Ideal Crop Top",
+      "brand": "Next Level",
+      "style": "1580",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#efefef",
+          "front": "catalog_images/next-level-1580/white_front.jpg",
+          "back": "catalog_images/next-level-1580/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1e2124",
+          "front": "catalog_images/next-level-1580/black_front.jpg",
+          "back": "catalog_images/next-level-1580/black_back.jpg"
+        },
+        {
+          "name": "Antique Gold",
+          "hex": "#c6872a",
+          "front": "catalog_images/next-level-1580/antique-gold_front.jpg",
+          "back": "catalog_images/next-level-1580/antique-gold_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#64615e",
+          "front": "catalog_images/next-level-1580/dark-grey_front.jpg",
+          "back": "catalog_images/next-level-1580/dark-grey_back.jpg"
+        },
+        {
+          "name": "Desert Pink",
+          "hex": "#daa89f",
+          "front": "catalog_images/next-level-1580/desert-pink_front.jpg",
+          "back": "catalog_images/next-level-1580/desert-pink_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#b5b4bc",
+          "front": "catalog_images/next-level-1580/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-1580/heather-grey_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#25283a",
+          "front": "catalog_images/next-level-1580/midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-1580/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#686248",
+          "front": "catalog_images/next-level-1580/military-green_front.jpg",
+          "back": "catalog_images/next-level-1580/military-green_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ce032a",
+          "front": "catalog_images/next-level-1580/red_front.jpg",
+          "back": "catalog_images/next-level-1580/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#0260ac",
+          "front": "catalog_images/next-level-1580/royal_front.jpg",
+          "back": "catalog_images/next-level-1580/royal_back.jpg"
+        },
+        {
+          "name": "Stonewash Denim",
+          "hex": "#aebfcf",
+          "front": "catalog_images/next-level-1580/stonewash-denim_front.jpg",
+          "back": "catalog_images/next-level-1580/stonewash-denim_back.jpg"
+        },
+        {
+          "name": "Tan",
+          "hex": "#c1aa98",
+          "front": "catalog_images/next-level-1580/tan_front.jpg",
+          "back": "catalog_images/next-level-1580/tan_back.jpg"
+        }
+      ]
     }
   ]
 }

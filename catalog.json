@@ -8349,6 +8349,58 @@
           "back": "catalog_images/atlantis-headwear-shore/rusty_back.jpg"
         }
       ]
+    },
+    {
+      "id": "atlantis-headwear-andy",
+      "name": "Sustainable Fine Ribbed Cuffed Beanie",
+      "brand": "Atlantis_Headwear",
+      "style": "ANDY",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#27252a",
+          "front": "catalog_images/atlantis-headwear-andy/black_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/black_back.jpg"
+        },
+        {
+          "name": "Acid Green",
+          "hex": "#c8e499",
+          "front": "catalog_images/atlantis-headwear-andy/acid-green_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/acid-green_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#333531",
+          "front": "catalog_images/atlantis-headwear-andy/dark-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/dark-grey_back.jpg"
+        },
+        {
+          "name": "Light Beige",
+          "hex": "#c9b8a1",
+          "front": "catalog_images/atlantis-headwear-andy/light-beige_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/light-beige_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#929388",
+          "front": "catalog_images/atlantis-headwear-andy/light-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/light-grey_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#222c3f",
+          "front": "catalog_images/atlantis-headwear-andy/navy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#595138",
+          "front": "catalog_images/atlantis-headwear-andy/olive_front.jpg",
+          "back": "catalog_images/atlantis-headwear-andy/olive_back.jpg"
+        }
+      ]
     }
   ]
 }

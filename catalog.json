@@ -8145,6 +8145,64 @@
           "back": "catalog_images/bella-canvas-1019/solid-vintage-navy-blend_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-146r",
+      "name": "Waffle Cuffed Beanie",
+      "brand": "Richardson",
+      "style": "146R",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#212121",
+          "front": "catalog_images/richardson-146r/black_front.jpg",
+          "back": "catalog_images/richardson-146r/black_back.jpg"
+        },
+        {
+          "name": "Birch",
+          "hex": "#cbba9c",
+          "front": "catalog_images/richardson-146r/birch_front.jpg",
+          "back": "catalog_images/richardson-146r/birch_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#39222e",
+          "front": "catalog_images/richardson-146r/burgundy_front.jpg",
+          "back": "catalog_images/richardson-146r/burgundy_back.jpg"
+        },
+        {
+          "name": "Camel",
+          "hex": "#a5753a",
+          "front": "catalog_images/richardson-146r/camel_front.jpg",
+          "back": "catalog_images/richardson-146r/camel_back.jpg"
+        },
+        {
+          "name": "Heather Charcoal",
+          "hex": "#424043",
+          "front": "catalog_images/richardson-146r/heather-charcoal_front.jpg",
+          "back": "catalog_images/richardson-146r/heather-charcoal_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#9f9f9e",
+          "front": "catalog_images/richardson-146r/heather-grey_front.jpg",
+          "back": "catalog_images/richardson-146r/heather-grey_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#201e2b",
+          "front": "catalog_images/richardson-146r/navy_front.jpg",
+          "back": "catalog_images/richardson-146r/navy_back.jpg"
+        },
+        {
+          "name": "Rust",
+          "hex": "#a6342b",
+          "front": "catalog_images/richardson-146r/rust_front.jpg",
+          "back": "catalog_images/richardson-146r/rust_back.jpg"
+        }
+      ]
     }
   ]
 }

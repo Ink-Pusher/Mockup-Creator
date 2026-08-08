@@ -8279,6 +8279,76 @@
           "back": "catalog_images/atlantis-headwear-rio/olive_back.jpg"
         }
       ]
+    },
+    {
+      "id": "atlantis-headwear-shore",
+      "name": "Sustainable Cable Knit Cuffed Beanie",
+      "brand": "Atlantis_Headwear",
+      "style": "SHORE",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#312d2e",
+          "front": "catalog_images/atlantis-headwear-shore/black_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/black_back.jpg"
+        },
+        {
+          "name": "Bottle Green",
+          "hex": "#2f433c",
+          "front": "catalog_images/atlantis-headwear-shore/bottle-green_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/bottle-green_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#441d1f",
+          "front": "catalog_images/atlantis-headwear-shore/burgundy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/burgundy_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#2f302b",
+          "front": "catalog_images/atlantis-headwear-shore/dark-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/dark-grey_back.jpg"
+        },
+        {
+          "name": "Light Beige",
+          "hex": "#d1bca0",
+          "front": "catalog_images/atlantis-headwear-shore/light-beige_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/light-beige_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#86887d",
+          "front": "catalog_images/atlantis-headwear-shore/light-grey_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/light-grey_back.jpg"
+        },
+        {
+          "name": "Mustard Yellow",
+          "hex": "#eea114",
+          "front": "catalog_images/atlantis-headwear-shore/mustard-yellow_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/mustard-yellow_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2f3849",
+          "front": "catalog_images/atlantis-headwear-shore/navy_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#6d6247",
+          "front": "catalog_images/atlantis-headwear-shore/olive_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/olive_back.jpg"
+        },
+        {
+          "name": "Rusty",
+          "hex": "#b12e21",
+          "front": "catalog_images/atlantis-headwear-shore/rusty_front.jpg",
+          "back": "catalog_images/atlantis-headwear-shore/rusty_back.jpg"
+        }
+      ]
     }
   ]
 }

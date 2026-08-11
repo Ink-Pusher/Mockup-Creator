@@ -8727,6 +8727,52 @@
           "back": "catalog_images/sportsman-sp12-sp12/safety-yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt1103",
+      "name": "Perfect Weight Fleece Zip Hoodie",
+      "brand": "District",
+      "style": "DT1103",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "HeatheredCharcoal",
+          "hex": "#464b4b",
+          "front": "catalog_images/district-dt1103/heatheredcharcoal_front.png",
+          "back": "catalog_images/district-dt1103/heatheredcharcoal_back.png"
+        },
+        {
+          "name": "HeatheredSteel",
+          "hex": "#8f918f",
+          "front": "catalog_images/district-dt1103/heatheredsteel_front.png",
+          "back": "catalog_images/district-dt1103/heatheredsteel_back.png"
+        },
+        {
+          "name": "Jetblack",
+          "hex": "#232323",
+          "front": "catalog_images/district-dt1103/jetblack_front.png",
+          "back": "catalog_images/district-dt1103/jetblack_back.png"
+        },
+        {
+          "name": "MaritimeBlue",
+          "hex": "#3d6486",
+          "front": "catalog_images/district-dt1103/maritimeblue_front.png",
+          "back": "catalog_images/district-dt1103/maritimeblue_back.png"
+        },
+        {
+          "name": "MilitaryGreen",
+          "hex": "#5f624a",
+          "front": "catalog_images/district-dt1103/militarygreen_front.png",
+          "back": "catalog_images/district-dt1103/militarygreen_back.png"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#25373f",
+          "front": "catalog_images/district-dt1103/new-navy_front.png",
+          "back": "catalog_images/district-dt1103/new-navy_back.png"
+        }
+      ]
     }
   ]
 }

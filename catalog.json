@@ -9091,6 +9091,100 @@
           "back": "catalog_images/atlantis-pure/olive_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-6008",
+      "name": "Women's Jersey Racerback Tank",
+      "brand": "Bella/Canvas",
+      "style": "6008",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f2f1f6",
+          "front": "catalog_images/bella-canvas-6008/white_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#29242a",
+          "front": "catalog_images/bella-canvas-6008/black_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/black_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#c0c0ca",
+          "front": "catalog_images/bella-canvas-6008/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Charity Pink",
+          "hex": "#f26695",
+          "front": "catalog_images/bella-canvas-6008/charity-pink_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/charity-pink_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#454045",
+          "front": "catalog_images/bella-canvas-6008/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#feb726",
+          "front": "catalog_images/bella-canvas-6008/gold_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/gold_back.jpg"
+        },
+        {
+          "name": "Heather Mauve",
+          "hex": "#c18085",
+          "front": "catalog_images/bella-canvas-6008/heather-mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/heather-mauve_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#f2eee3",
+          "front": "catalog_images/bella-canvas-6008/natural_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#353a57",
+          "front": "catalog_images/bella-canvas-6008/navy_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ea1042",
+          "front": "catalog_images/bella-canvas-6008/red_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/red_back.jpg"
+        },
+        {
+          "name": "Sunset",
+          "hex": "#fba18f",
+          "front": "catalog_images/bella-canvas-6008/sunset_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/sunset_back.jpg"
+        },
+        {
+          "name": "Teal",
+          "hex": "#4dd5ca",
+          "front": "catalog_images/bella-canvas-6008/teal_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/teal_back.jpg"
+        },
+        {
+          "name": "Team Purple",
+          "hex": "#422a62",
+          "front": "catalog_images/bella-canvas-6008/team-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/team-purple_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#0952a7",
+          "front": "catalog_images/bella-canvas-6008/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-6008/true-royal_back.jpg"
+        }
+      ]
     }
   ]
 }

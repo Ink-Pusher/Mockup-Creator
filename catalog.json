@@ -9027,6 +9027,70 @@
           "back": "catalog_images/richardson-256/white-black_back.jpg"
         }
       ]
+    },
+    {
+      "id": "atlantis-pure",
+      "name": "Sustainable Beanie",
+      "brand": "Atlantis",
+      "style": "PURE",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#353130",
+          "front": "catalog_images/atlantis-pure/black_front.jpg",
+          "back": "catalog_images/atlantis-pure/black_back.jpg"
+        },
+        {
+          "name": "Acid Green",
+          "hex": "#c2dd95",
+          "front": "catalog_images/atlantis-pure/acid-green_front.jpg",
+          "back": "catalog_images/atlantis-pure/acid-green_back.jpg"
+        },
+        {
+          "name": "Bottle Green",
+          "hex": "#26362b",
+          "front": "catalog_images/atlantis-pure/bottle-green_front.jpg",
+          "back": "catalog_images/atlantis-pure/bottle-green_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#3c3c34",
+          "front": "catalog_images/atlantis-pure/dark-grey_front.jpg",
+          "back": "catalog_images/atlantis-pure/dark-grey_back.jpg"
+        },
+        {
+          "name": "Light Beige",
+          "hex": "#d3bfa4",
+          "front": "catalog_images/atlantis-pure/light-beige_front.jpg",
+          "back": "catalog_images/atlantis-pure/light-beige_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#777d73",
+          "front": "catalog_images/atlantis-pure/light-grey_front.jpg",
+          "back": "catalog_images/atlantis-pure/light-grey_back.jpg"
+        },
+        {
+          "name": "Mustard Yellow",
+          "hex": "#f4b231",
+          "front": "catalog_images/atlantis-pure/mustard-yellow_front.jpg",
+          "back": "catalog_images/atlantis-pure/mustard-yellow_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2a3c4c",
+          "front": "catalog_images/atlantis-pure/navy_front.jpg",
+          "back": "catalog_images/atlantis-pure/navy_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#7c7456",
+          "front": "catalog_images/atlantis-pure/olive_front.jpg",
+          "back": "catalog_images/atlantis-pure/olive_back.jpg"
+        }
+      ]
     }
   ]
 }

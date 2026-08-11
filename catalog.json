@@ -8903,6 +8903,130 @@
           "back": "catalog_images/district-dt1101/rainforest_back.png"
         }
       ]
+    },
+    {
+      "id": "richardson-256",
+      "name": "Umpqua Gramps Hat",
+      "brand": "Richardson",
+      "style": "256",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ White",
+          "hex": "#101010",
+          "front": "catalog_images/richardson-256/black-white_front.jpg",
+          "back": "catalog_images/richardson-256/black-white_back.jpg"
+        },
+        {
+          "name": "Birch/ Black",
+          "hex": "#aca9a0",
+          "front": "catalog_images/richardson-256/birch-black_front.jpg",
+          "back": "catalog_images/richardson-256/birch-black_back.jpg"
+        },
+        {
+          "name": "Biscuit/ Black",
+          "hex": "#9d772f",
+          "front": "catalog_images/richardson-256/biscuit-black_front.jpg",
+          "back": "catalog_images/richardson-256/biscuit-black_back.jpg"
+        },
+        {
+          "name": "Black/ Black",
+          "hex": "#101010",
+          "front": "catalog_images/richardson-256/black-black_front.jpg",
+          "back": "catalog_images/richardson-256/black-black_back.jpg"
+        },
+        {
+          "name": "Cardinal/ White",
+          "hex": "#6c1c1e",
+          "front": "catalog_images/richardson-256/cardinal-white_front.jpg",
+          "back": "catalog_images/richardson-256/cardinal-white_back.jpg"
+        },
+        {
+          "name": "Charcoal/ White",
+          "hex": "#4a4645",
+          "front": "catalog_images/richardson-256/charcoal-white_front.jpg",
+          "back": "catalog_images/richardson-256/charcoal-white_back.jpg"
+        },
+        {
+          "name": "Dark Mocha/ Khaki",
+          "hex": "#463933",
+          "front": "catalog_images/richardson-256/dark-mocha-khaki_front.jpg",
+          "back": "catalog_images/richardson-256/dark-mocha-khaki_back.jpg"
+        },
+        {
+          "name": "Dark Orange/ Black",
+          "hex": "#7f2d0d",
+          "front": "catalog_images/richardson-256/dark-orange-black_front.jpg",
+          "back": "catalog_images/richardson-256/dark-orange-black_back.jpg"
+        },
+        {
+          "name": "Dusty Blue/ White",
+          "hex": "#92a5a3",
+          "front": "catalog_images/richardson-256/dusty-blue-white_front.jpg",
+          "back": "catalog_images/richardson-256/dusty-blue-white_back.jpg"
+        },
+        {
+          "name": "Dusty Red/ White",
+          "hex": "#a86b66",
+          "front": "catalog_images/richardson-256/dusty-red-white_front.jpg",
+          "back": "catalog_images/richardson-256/dusty-red-white_back.jpg"
+        },
+        {
+          "name": "Loden/ Amber Gold",
+          "hex": "#3a382a",
+          "front": "catalog_images/richardson-256/loden-amber-gold_front.jpg",
+          "back": "catalog_images/richardson-256/loden-amber-gold_back.jpg"
+        },
+        {
+          "name": "Midnight Navy/ White",
+          "hex": "#1e2128",
+          "front": "catalog_images/richardson-256/midnight-navy-white_front.jpg",
+          "back": "catalog_images/richardson-256/midnight-navy-white_back.jpg"
+        },
+        {
+          "name": "Navy/ Red",
+          "hex": "#2c384c",
+          "front": "catalog_images/richardson-256/navy-red_front.jpg",
+          "back": "catalog_images/richardson-256/navy-red_back.jpg"
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#2c384c",
+          "front": "catalog_images/richardson-256/navy-white_front.jpg",
+          "back": "catalog_images/richardson-256/navy-white_back.jpg"
+        },
+        {
+          "name": "Pale Peach/ Maroon",
+          "hex": "#af978d",
+          "front": "catalog_images/richardson-256/pale-peach-maroon_front.jpg",
+          "back": "catalog_images/richardson-256/pale-peach-maroon_back.jpg"
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#941211",
+          "front": "catalog_images/richardson-256/red-white_front.jpg",
+          "back": "catalog_images/richardson-256/red-white_back.jpg"
+        },
+        {
+          "name": "Sage/ White",
+          "hex": "#727e65",
+          "front": "catalog_images/richardson-256/sage-white_front.jpg",
+          "back": "catalog_images/richardson-256/sage-white_back.jpg"
+        },
+        {
+          "name": "Sand Dune/ Loden Green",
+          "hex": "#a8a294",
+          "front": "catalog_images/richardson-256/sand-dune-loden-green_front.jpg",
+          "back": "catalog_images/richardson-256/sand-dune-loden-green_back.jpg"
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#b8b8b8",
+          "front": "catalog_images/richardson-256/white-black_front.jpg",
+          "back": "catalog_images/richardson-256/white-black_back.jpg"
+        }
+      ]
     }
   ]
 }

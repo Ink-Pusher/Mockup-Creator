@@ -8773,6 +8773,136 @@
           "back": "catalog_images/district-dt1103/new-navy_back.png"
         }
       ]
+    },
+    {
+      "id": "district-dt1101",
+      "name": "Perfect Weight Fleece Pullover Hoodie",
+      "brand": "District",
+      "style": "DT1101",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Apricot",
+          "hex": "#f8bf8f",
+          "front": "catalog_images/district-dt1101/apricot_front.png",
+          "back": "catalog_images/district-dt1101/apricot_back.png"
+        },
+        {
+          "name": "Ash",
+          "hex": "#cbcecb",
+          "front": "catalog_images/district-dt1101/ash_front.png",
+          "back": "catalog_images/district-dt1101/ash_back.png"
+        },
+        {
+          "name": "Blue Fog",
+          "hex": "#98b5be",
+          "front": "catalog_images/district-dt1101/blue-fog_front.png",
+          "back": "catalog_images/district-dt1101/blue-fog_back.png"
+        },
+        {
+          "name": "Bright White",
+          "hex": "#edf0f2",
+          "front": "catalog_images/district-dt1101/bright-white_front.png",
+          "back": "catalog_images/district-dt1101/bright-white_back.png"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#393938",
+          "front": "catalog_images/district-dt1101/charcoal_front.png",
+          "back": "catalog_images/district-dt1101/charcoal_back.png"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#1a407a",
+          "front": "catalog_images/district-dt1101/deep-royal_front.png",
+          "back": "catalog_images/district-dt1101/deep-royal_back.png"
+        },
+        {
+          "name": "Deep SteelBlue",
+          "hex": "#364a50",
+          "front": "catalog_images/district-dt1101/deep-steelblue_front.png",
+          "back": "catalog_images/district-dt1101/deep-steelblue_back.png"
+        },
+        {
+          "name": "Heathered ForestGreen",
+          "hex": "#334640",
+          "front": "catalog_images/district-dt1101/heathered-forestgreen_front.png",
+          "back": "catalog_images/district-dt1101/heathered-forestgreen_back.png"
+        },
+        {
+          "name": "Heathered PoseidonBlue",
+          "hex": "#234758",
+          "front": "catalog_images/district-dt1101/heathered-poseidonblue_front.png",
+          "back": "catalog_images/district-dt1101/heathered-poseidonblue_back.png"
+        },
+        {
+          "name": "HeatheredCharcoal",
+          "hex": "#424747",
+          "front": "catalog_images/district-dt1101/heatheredcharcoal_front.png",
+          "back": "catalog_images/district-dt1101/heatheredcharcoal_back.png"
+        },
+        {
+          "name": "HeatheredLatte",
+          "hex": "#b1a994",
+          "front": "catalog_images/district-dt1101/heatheredlatte_front.png",
+          "back": "catalog_images/district-dt1101/heatheredlatte_back.png"
+        },
+        {
+          "name": "HeatheredLoganberry",
+          "hex": "#6d2c45",
+          "front": "catalog_images/district-dt1101/heatheredloganberry_front.png",
+          "back": "catalog_images/district-dt1101/heatheredloganberry_back.png"
+        },
+        {
+          "name": "HeatheredNavy",
+          "hex": "#394856",
+          "front": "catalog_images/district-dt1101/heatherednavy_front.png",
+          "back": "catalog_images/district-dt1101/heatherednavy_back.png"
+        },
+        {
+          "name": "HeatheredSteel",
+          "hex": "#8a8c8b",
+          "front": "catalog_images/district-dt1101/heatheredsteel_front.png",
+          "back": "catalog_images/district-dt1101/heatheredsteel_back.png"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#212121",
+          "front": "catalog_images/district-dt1101/jet-black_front.png",
+          "back": "catalog_images/district-dt1101/jet-black_back.png"
+        },
+        {
+          "name": "Laurel Green",
+          "hex": "#7e8e80",
+          "front": "catalog_images/district-dt1101/laurel-green_front.png",
+          "back": "catalog_images/district-dt1101/laurel-green_back.png"
+        },
+        {
+          "name": "MaritimeBlue",
+          "hex": "#445e7a",
+          "front": "catalog_images/district-dt1101/maritimeblue_front.png",
+          "back": "catalog_images/district-dt1101/maritimeblue_back.png"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#2d343e",
+          "front": "catalog_images/district-dt1101/new-navy_front.png",
+          "back": "catalog_images/district-dt1101/new-navy_back.png"
+        },
+        {
+          "name": "Orchid Haze",
+          "hex": "#8e6479",
+          "front": "catalog_images/district-dt1101/orchid-haze_front.png",
+          "back": "catalog_images/district-dt1101/orchid-haze_back.png"
+        },
+        {
+          "name": "Rainforest",
+          "hex": "#243939",
+          "front": "catalog_images/district-dt1101/rainforest_front.png",
+          "back": "catalog_images/district-dt1101/rainforest_back.png"
+        }
+      ]
     }
   ]
 }

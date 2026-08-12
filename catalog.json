@@ -10051,6 +10051,28 @@
           "back": "catalog_images/independent-trading-co-ss4500/storm-blue_back.jpg"
         }
       ]
+    },
+    {
+      "id": "oad-106",
+      "name": "Gusseted Tote Bag",
+      "brand": "OAD",
+      "style": "106",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#464344",
+          "front": "catalog_images/oad-106/black_front.jpg",
+          "back": "catalog_images/oad-106/black_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e1d5cc",
+          "front": "catalog_images/oad-106/natural_front.jpg",
+          "back": "catalog_images/oad-106/natural_back.jpg"
+        }
+      ]
     }
   ]
 }

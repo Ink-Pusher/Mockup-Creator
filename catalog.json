@@ -10971,6 +10971,112 @@
           "back": "catalog_images/bella-canvas-6400-cvc-6400-cvc/heather-true-royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-6405",
+      "name": "Women\u2019s Relaxed Jersey V-Neck Tee",
+      "brand": "Bella/Canvas",
+      "style": "6405",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#d7d7d5",
+          "front": "catalog_images/bella-canvas-6405/white_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2e2d32",
+          "front": "catalog_images/bella-canvas-6405/black_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/black_back.jpg"
+        },
+        {
+          "name": "Asphalt",
+          "hex": "#716c6c",
+          "front": "catalog_images/bella-canvas-6405/asphalt_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/asphalt_back.jpg"
+        },
+        {
+          "name": "Berry",
+          "hex": "#bf3978",
+          "front": "catalog_images/bella-canvas-6405/berry_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/berry_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#661434",
+          "front": "catalog_images/bella-canvas-6405/maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/maroon_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#b6797a",
+          "front": "catalog_images/bella-canvas-6405/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/mauve_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#67664d",
+          "front": "catalog_images/bella-canvas-6405/military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/military-green_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#ebe0d0",
+          "front": "catalog_images/bella-canvas-6405/natural_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2f3243",
+          "front": "catalog_images/bella-canvas-6405/navy_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/navy_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#fddae4",
+          "front": "catalog_images/bella-canvas-6405/pink_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/pink_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#b51d32",
+          "front": "catalog_images/bella-canvas-6405/red_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/red_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#dedfde",
+          "front": "catalog_images/bella-canvas-6405/silver_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/silver_back.jpg"
+        },
+        {
+          "name": "Team Purple",
+          "hex": "#452e6c",
+          "front": "catalog_images/bella-canvas-6405/team-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/team-purple_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#1352a2",
+          "front": "catalog_images/bella-canvas-6405/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/true-royal_back.jpg"
+        },
+        {
+          "name": "Turquoise",
+          "hex": "#0198b8",
+          "front": "catalog_images/bella-canvas-6405/turquoise_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/turquoise_back.jpg"
+        },
+        {
+          "name": "Vintage White",
+          "hex": "#efede7",
+          "front": "catalog_images/bella-canvas-6405/vintage-white_front.jpg",
+          "back": "catalog_images/bella-canvas-6405/vintage-white_back.jpg"
+        }
+      ]
     }
   ]
 }

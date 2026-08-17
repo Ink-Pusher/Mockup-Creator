@@ -10243,7 +10243,7 @@
     {
       "id": "bellacanvas-3001y",
       "name": "Youth Jersey Tee",
-      "brand": "BellaCanvas",
+      "brand": "Bella/Canvas",
       "style": "3001Y",
       "kind": "tee",
       "popular": false,
@@ -10487,7 +10487,7 @@
     {
       "id": "bella-canvas-6400",
       "name": "Women\u2019s Relaxed Jersey Tee",
-      "brand": "bella-canvas",
+      "brand": "Bella/Canvas",
       "style": "6400",
       "kind": "tee",
       "popular": false,
@@ -10767,8 +10767,8 @@
     {
       "id": "bella-canvas-6400-cvc-6400-cvc",
       "name": "Women\u2019s Relaxed Fit Heather CVC Tee",
-      "brand": "Bella/Canvas 6400 CVC",
-      "style": "6400 CVC",
+      "brand": "Bella/Canvas",
+      "style": "6400CVC",
       "kind": "tee",
       "popular": false,
       "colors": [

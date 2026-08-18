@@ -10485,286 +10485,6 @@
       ]
     },
     {
-      "id": "bella-canvas-6400",
-      "name": "Women\u2019s Relaxed Jersey Tee",
-      "brand": "Bella/Canvas",
-      "style": "6400",
-      "kind": "tee",
-      "popular": false,
-      "colors": [
-        {
-          "name": "White",
-          "hex": "#efefef",
-          "front": "catalog_images/bella-canvas-6400/white_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/white_back.jpg"
-        },
-        {
-          "name": "Black",
-          "hex": "#1f1f1f",
-          "front": "catalog_images/bella-canvas-6400/black_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/black_back.jpg"
-        },
-        {
-          "name": "Asphalt",
-          "hex": "#585556",
-          "front": "catalog_images/bella-canvas-6400/asphalt_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/asphalt_back.jpg"
-        },
-        {
-          "name": "Berry",
-          "hex": "#d33e86",
-          "front": "catalog_images/bella-canvas-6400/berry_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/berry_back.jpg"
-        },
-        {
-          "name": "Blue Storm",
-          "hex": "#949fa1",
-          "front": "catalog_images/bella-canvas-6400/blue-storm_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/blue-storm_back.jpg"
-        },
-        {
-          "name": "Carolina Blue",
-          "hex": "#7c95be",
-          "front": "catalog_images/bella-canvas-6400/carolina-blue_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/carolina-blue_back.jpg"
-        },
-        {
-          "name": "Charity Pink",
-          "hex": "#f587aa",
-          "front": "catalog_images/bella-canvas-6400/charity-pink_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/charity-pink_back.jpg"
-        },
-        {
-          "name": "Chestnut",
-          "hex": "#a87862",
-          "front": "catalog_images/bella-canvas-6400/chestnut_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/chestnut_back.jpg"
-        },
-        {
-          "name": "Citron",
-          "hex": "#e0e2d5",
-          "front": "catalog_images/bella-canvas-6400/citron_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/citron_back.jpg"
-        },
-        {
-          "name": "Dark Grey",
-          "hex": "#49444a",
-          "front": "catalog_images/bella-canvas-6400/dark-grey_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/dark-grey_back.jpg"
-        },
-        {
-          "name": "Dark Lavender",
-          "hex": "#9d98b6",
-          "front": "catalog_images/bella-canvas-6400/dark-lavender_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/dark-lavender_back.jpg"
-        },
-        {
-          "name": "Dusty Blue",
-          "hex": "#a0bab6",
-          "front": "catalog_images/bella-canvas-6400/dusty-blue_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/dusty-blue_back.jpg"
-        },
-        {
-          "name": "Forest",
-          "hex": "#26413a",
-          "front": "catalog_images/bella-canvas-6400/forest_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/forest_back.jpg"
-        },
-        {
-          "name": "Gold",
-          "hex": "#fec505",
-          "front": "catalog_images/bella-canvas-6400/gold_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/gold_back.jpg"
-        },
-        {
-          "name": "Lavender Blue",
-          "hex": "#889bbb",
-          "front": "catalog_images/bella-canvas-6400/lavender-blue_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/lavender-blue_back.jpg"
-        },
-        {
-          "name": "Lavender Dust",
-          "hex": "#d2c9d4",
-          "front": "catalog_images/bella-canvas-6400/lavender-dust_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/lavender-dust_back.jpg"
-        },
-        {
-          "name": "Leaf",
-          "hex": "#71a26e",
-          "front": "catalog_images/bella-canvas-6400/leaf_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/leaf_back.jpg"
-        },
-        {
-          "name": "Light Violet",
-          "hex": "#beaabd",
-          "front": "catalog_images/bella-canvas-6400/light-violet_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/light-violet_back.jpg"
-        },
-        {
-          "name": "Maroon",
-          "hex": "#54192b",
-          "front": "catalog_images/bella-canvas-6400/maroon_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/maroon_back.jpg"
-        },
-        {
-          "name": "Mauve",
-          "hex": "#c48485",
-          "front": "catalog_images/bella-canvas-6400/mauve_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/mauve_back.jpg"
-        },
-        {
-          "name": "Military Green",
-          "hex": "#4f5048",
-          "front": "catalog_images/bella-canvas-6400/military-green_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/military-green_back.jpg"
-        },
-        {
-          "name": "Mustard",
-          "hex": "#d49419",
-          "front": "catalog_images/bella-canvas-6400/mustard_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/mustard_back.jpg"
-        },
-        {
-          "name": "Natural",
-          "hex": "#e1e2dd",
-          "front": "catalog_images/bella-canvas-6400/natural_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/natural_back.jpg"
-        },
-        {
-          "name": "Navy",
-          "hex": "#3e3e58",
-          "front": "catalog_images/bella-canvas-6400/navy_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/navy_back.jpg"
-        },
-        {
-          "name": "Orchid",
-          "hex": "#b488a1",
-          "front": "catalog_images/bella-canvas-6400/orchid_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/orchid_back.jpg"
-        },
-        {
-          "name": "Pink",
-          "hex": "#eec4c6",
-          "front": "catalog_images/bella-canvas-6400/pink_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/pink_back.jpg"
-        },
-        {
-          "name": "Pink Gravel",
-          "hex": "#c7afaf",
-          "front": "catalog_images/bella-canvas-6400/pink-gravel_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/pink-gravel_back.jpg"
-        },
-        {
-          "name": "Poppy",
-          "hex": "#f2262a",
-          "front": "catalog_images/bella-canvas-6400/poppy_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/poppy_back.jpg"
-        },
-        {
-          "name": "Purple Storm",
-          "hex": "#776068",
-          "front": "catalog_images/bella-canvas-6400/purple-storm_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/purple-storm_back.jpg"
-        },
-        {
-          "name": "Red",
-          "hex": "#d90536",
-          "front": "catalog_images/bella-canvas-6400/red_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/red_back.jpg"
-        },
-        {
-          "name": "Royal Purple",
-          "hex": "#654278",
-          "front": "catalog_images/bella-canvas-6400/royal-purple_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/royal-purple_back.jpg"
-        },
-        {
-          "name": "Sage",
-          "hex": "#96a798",
-          "front": "catalog_images/bella-canvas-6400/sage_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/sage_back.jpg"
-        },
-        {
-          "name": "Sand Dune",
-          "hex": "#edc4ac",
-          "front": "catalog_images/bella-canvas-6400/sand-dune_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/sand-dune_back.jpg"
-        },
-        {
-          "name": "Silver",
-          "hex": "#e0e0de",
-          "front": "catalog_images/bella-canvas-6400/silver_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/silver_back.jpg"
-        },
-        {
-          "name": "Solid Athletic Grey",
-          "hex": "#cdccca",
-          "front": "catalog_images/bella-canvas-6400/solid-athletic-grey_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/solid-athletic-grey_back.jpg"
-        },
-        {
-          "name": "Teal",
-          "hex": "#219882",
-          "front": "catalog_images/bella-canvas-6400/teal_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/teal_back.jpg"
-        },
-        {
-          "name": "Team Purple",
-          "hex": "#503272",
-          "front": "catalog_images/bella-canvas-6400/team-purple_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/team-purple_back.jpg"
-        },
-        {
-          "name": "Terracotta",
-          "hex": "#e2a58e",
-          "front": "catalog_images/bella-canvas-6400/terracotta_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/terracotta_back.jpg"
-        },
-        {
-          "name": "Thyme",
-          "hex": "#c2c2b7",
-          "front": "catalog_images/bella-canvas-6400/thyme_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/thyme_back.jpg"
-        },
-        {
-          "name": "True Royal",
-          "hex": "#105099",
-          "front": "catalog_images/bella-canvas-6400/true-royal_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/true-royal_back.jpg"
-        },
-        {
-          "name": "Vintage Black",
-          "hex": "#2c2a32",
-          "front": "catalog_images/bella-canvas-6400/vintage-black_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/vintage-black_back.jpg"
-        },
-        {
-          "name": "Vintage Brown",
-          "hex": "#937261",
-          "front": "catalog_images/bella-canvas-6400/vintage-brown_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/vintage-brown_back.jpg"
-        },
-        {
-          "name": "Vintage Denim",
-          "hex": "#9fa5b3",
-          "front": "catalog_images/bella-canvas-6400/vintage-denim_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/vintage-denim_back.jpg"
-        },
-        {
-          "name": "Vintage Navy",
-          "hex": "#46525e",
-          "front": "catalog_images/bella-canvas-6400/vintage-navy_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/vintage-navy_back.jpg"
-        },
-        {
-          "name": "Vintage White",
-          "hex": "#e3e0d9",
-          "front": "catalog_images/bella-canvas-6400/vintage-white_front.jpg",
-          "back": "catalog_images/bella-canvas-6400/vintage-white_back.jpg"
-        }
-      ]
-    },
-    {
       "id": "bella-canvas-6400-cvc-6400-cvc",
       "name": "Women\u2019s Relaxed Fit Heather CVC Tee",
       "brand": "Bella/Canvas",
@@ -11893,6 +11613,1128 @@
           "hex": "#344960",
           "front": "catalog_images/bella-canvas-3501/vintage-navy_front.jpg",
           "back": "catalog_images/bella-canvas-3501/vintage-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-3501cvc",
+      "name": "Heather CVC Long Sleeve Tee",
+      "brand": "Bella/Canvas",
+      "style": "3501CVC",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Solid White Blend",
+          "hex": "#e4e5ea",
+          "front": "catalog_images/bella-canvas-3501cvc/solid-white-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/solid-white-blend_back.jpg"
+        },
+        {
+          "name": "Solid Black Blend",
+          "hex": "#303136",
+          "front": "catalog_images/bella-canvas-3501cvc/solid-black-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/solid-black-blend_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#bdbeb9",
+          "front": "catalog_images/bella-canvas-3501cvc/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#353036",
+          "front": "catalog_images/bella-canvas-3501cvc/black-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/black-heather_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#2f2f2f",
+          "front": "catalog_images/bella-canvas-3501cvc/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Deep Heather",
+          "hex": "#818181",
+          "front": "catalog_images/bella-canvas-3501cvc/deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/deep-heather_back.jpg"
+        },
+        {
+          "name": "Heather Brown",
+          "hex": "#67564a",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-brown_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-brown_back.jpg"
+        },
+        {
+          "name": "Heather Cardinal",
+          "hex": "#662835",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-cardinal_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-cardinal_back.jpg"
+        },
+        {
+          "name": "Heather Carolina Blue",
+          "hex": "#82adde",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-carolina-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-carolina-blue_back.jpg"
+        },
+        {
+          "name": "Heather Clay",
+          "hex": "#b16157",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-clay_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-clay_back.jpg"
+        },
+        {
+          "name": "Heather Columbia Blue",
+          "hex": "#6d91cb",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-columbia-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-columbia-blue_back.jpg"
+        },
+        {
+          "name": "Heather Dark Lavender",
+          "hex": "#b5a6ca",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-dark-lavender_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-dark-lavender_back.jpg"
+        },
+        {
+          "name": "Heather Deep Teal",
+          "hex": "#456e85",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-deep-teal_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-deep-teal_back.jpg"
+        },
+        {
+          "name": "Heather Dusty Blue",
+          "hex": "#a6b9b3",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-dusty-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-dusty-blue_back.jpg"
+        },
+        {
+          "name": "Heather Forest",
+          "hex": "#546555",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-forest_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-forest_back.jpg"
+        },
+        {
+          "name": "Heather French Vanilla",
+          "hex": "#f0e7cb",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-french-vanilla_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-french-vanilla_back.jpg"
+        },
+        {
+          "name": "Heather Maroon",
+          "hex": "#825665",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-maroon_back.jpg"
+        },
+        {
+          "name": "Heather Mauve",
+          "hex": "#c68788",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-mauve_back.jpg"
+        },
+        {
+          "name": "Heather Midnight Navy",
+          "hex": "#3d4357",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-midnight-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-midnight-navy_back.jpg"
+        },
+        {
+          "name": "Heather Military Green",
+          "hex": "#68685f",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-military-green_back.jpg"
+        },
+        {
+          "name": "Heather Mustard",
+          "hex": "#c8983f",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-mustard_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-mustard_back.jpg"
+        },
+        {
+          "name": "Heather Natural",
+          "hex": "#e5e0da",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-natural_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-natural_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#353e51",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Olive",
+          "hex": "#99886a",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-olive_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-olive_back.jpg"
+        },
+        {
+          "name": "Heather Peach",
+          "hex": "#e9c4b1",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-peach_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-peach_back.jpg"
+        },
+        {
+          "name": "Heather Pink Gravel",
+          "hex": "#dabfb3",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-pink-gravel_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-pink-gravel_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#ed5153",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-red_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather Slate",
+          "hex": "#8096a1",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-slate_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-slate_back.jpg"
+        },
+        {
+          "name": "Heather Stone",
+          "hex": "#c2b5ae",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-stone_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-stone_back.jpg"
+        },
+        {
+          "name": "Heather True Royal",
+          "hex": "#4778c0",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-true-royal_back.jpg"
+        },
+        {
+          "name": "Heather Yellow Gold",
+          "hex": "#fdc35c",
+          "front": "catalog_images/bella-canvas-3501cvc/heather-yellow-gold_front.jpg",
+          "back": "catalog_images/bella-canvas-3501cvc/heather-yellow-gold_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-6682",
+      "name": "Women's Racerback Crop Tank",
+      "brand": "Bella/Canvas",
+      "style": "6682",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Solid White Blend",
+          "hex": "#e9e6ec",
+          "front": "catalog_images/bella-canvas-6682/solid-white-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/solid-white-blend_back.jpg"
+        },
+        {
+          "name": "Solid Black Blend",
+          "hex": "#29242a",
+          "front": "catalog_images/bella-canvas-6682/solid-black-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/solid-black-blend_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#c9c7cd",
+          "front": "catalog_images/bella-canvas-6682/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#4d494c",
+          "front": "catalog_images/bella-canvas-6682/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Deep Heather",
+          "hex": "#707271",
+          "front": "catalog_images/bella-canvas-6682/deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/deep-heather_back.jpg"
+        },
+        {
+          "name": "Heather Deep Teal",
+          "hex": "#427b97",
+          "front": "catalog_images/bella-canvas-6682/heather-deep-teal_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-deep-teal_back.jpg"
+        },
+        {
+          "name": "Heather Dusty Blue",
+          "hex": "#bfd1cb",
+          "front": "catalog_images/bella-canvas-6682/heather-dusty-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-dusty-blue_back.jpg"
+        },
+        {
+          "name": "Heather Forest",
+          "hex": "#546a67",
+          "front": "catalog_images/bella-canvas-6682/heather-forest_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-forest_back.jpg"
+        },
+        {
+          "name": "Heather French Vanilla",
+          "hex": "#eee4c1",
+          "front": "catalog_images/bella-canvas-6682/heather-french-vanilla_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-french-vanilla_back.jpg"
+        },
+        {
+          "name": "Heather Mauve",
+          "hex": "#cd787e",
+          "front": "catalog_images/bella-canvas-6682/heather-mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-mauve_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#2f323b",
+          "front": "catalog_images/bella-canvas-6682/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Olive",
+          "hex": "#7a725e",
+          "front": "catalog_images/bella-canvas-6682/heather-olive_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-olive_back.jpg"
+        },
+        {
+          "name": "Heather Orchid",
+          "hex": "#b19198",
+          "front": "catalog_images/bella-canvas-6682/heather-orchid_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-orchid_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#d84851",
+          "front": "catalog_images/bella-canvas-6682/heather-red_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather Sunset",
+          "hex": "#eea397",
+          "front": "catalog_images/bella-canvas-6682/heather-sunset_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-sunset_back.jpg"
+        },
+        {
+          "name": "Heather True Royal",
+          "hex": "#406dba",
+          "front": "catalog_images/bella-canvas-6682/heather-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-6682/heather-true-royal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-6482",
+      "name": "Women's Jersey Crop Tee",
+      "brand": "Bella/Canvas",
+      "style": "6482",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e7e8ed",
+          "front": "catalog_images/bella-canvas-6482/white_front.jpg",
+          "back": "catalog_images/bella-canvas-6482/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2a2c32",
+          "front": "catalog_images/bella-canvas-6482/black_front.jpg",
+          "back": "catalog_images/bella-canvas-6482/black_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#b5b6bd",
+          "front": "catalog_images/bella-canvas-6482/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6482/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#6d715e",
+          "front": "catalog_images/bella-canvas-6482/military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-6482/military-green_back.jpg"
+        },
+        {
+          "name": "Mustard",
+          "hex": "#e2a931",
+          "front": "catalog_images/bella-canvas-6482/mustard_front.jpg",
+          "back": "catalog_images/bella-canvas-6482/mustard_back.jpg"
+        },
+        {
+          "name": "Vintage White",
+          "hex": "#e4e2d6",
+          "front": "catalog_images/bella-canvas-6482/vintage-white_front.jpg",
+          "back": "catalog_images/bella-canvas-6482/vintage-white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-6400",
+      "name": "Women\u2019s Relaxed Jersey Tee",
+      "brand": "Bella/Canvas",
+      "style": "6400",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#efefef",
+          "front": "catalog_images/bella-canvas-6400/white_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1f1f1f",
+          "front": "catalog_images/bella-canvas-6400/black_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/black_back.jpg"
+        },
+        {
+          "name": "Asphalt",
+          "hex": "#585556",
+          "front": "catalog_images/bella-canvas-6400/asphalt_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/asphalt_back.jpg"
+        },
+        {
+          "name": "Berry",
+          "hex": "#d33e86",
+          "front": "catalog_images/bella-canvas-6400/berry_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/berry_back.jpg"
+        },
+        {
+          "name": "Blue Storm",
+          "hex": "#949fa1",
+          "front": "catalog_images/bella-canvas-6400/blue-storm_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/blue-storm_back.jpg"
+        },
+        {
+          "name": "Carolina Blue",
+          "hex": "#7c95be",
+          "front": "catalog_images/bella-canvas-6400/carolina-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/carolina-blue_back.jpg"
+        },
+        {
+          "name": "Charity Pink",
+          "hex": "#f587aa",
+          "front": "catalog_images/bella-canvas-6400/charity-pink_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/charity-pink_back.jpg"
+        },
+        {
+          "name": "Chestnut",
+          "hex": "#a87862",
+          "front": "catalog_images/bella-canvas-6400/chestnut_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/chestnut_back.jpg"
+        },
+        {
+          "name": "Citron",
+          "hex": "#e0e2d5",
+          "front": "catalog_images/bella-canvas-6400/citron_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/citron_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#49444a",
+          "front": "catalog_images/bella-canvas-6400/dark-grey_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/dark-grey_back.jpg"
+        },
+        {
+          "name": "Dark Lavender",
+          "hex": "#9d98b6",
+          "front": "catalog_images/bella-canvas-6400/dark-lavender_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/dark-lavender_back.jpg"
+        },
+        {
+          "name": "Dusty Blue",
+          "hex": "#a0bab6",
+          "front": "catalog_images/bella-canvas-6400/dusty-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/dusty-blue_back.jpg"
+        },
+        {
+          "name": "Forest",
+          "hex": "#26413a",
+          "front": "catalog_images/bella-canvas-6400/forest_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/forest_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#fec505",
+          "front": "catalog_images/bella-canvas-6400/gold_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/gold_back.jpg"
+        },
+        {
+          "name": "Lavender Blue",
+          "hex": "#889bbb",
+          "front": "catalog_images/bella-canvas-6400/lavender-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/lavender-blue_back.jpg"
+        },
+        {
+          "name": "Lavender Dust",
+          "hex": "#d2c9d4",
+          "front": "catalog_images/bella-canvas-6400/lavender-dust_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/lavender-dust_back.jpg"
+        },
+        {
+          "name": "Leaf",
+          "hex": "#71a26e",
+          "front": "catalog_images/bella-canvas-6400/leaf_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/leaf_back.jpg"
+        },
+        {
+          "name": "Light Violet",
+          "hex": "#beaabd",
+          "front": "catalog_images/bella-canvas-6400/light-violet_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/light-violet_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#54192b",
+          "front": "catalog_images/bella-canvas-6400/maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/maroon_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#c48485",
+          "front": "catalog_images/bella-canvas-6400/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/mauve_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#4f5048",
+          "front": "catalog_images/bella-canvas-6400/military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/military-green_back.jpg"
+        },
+        {
+          "name": "Mustard",
+          "hex": "#d49419",
+          "front": "catalog_images/bella-canvas-6400/mustard_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/mustard_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e1e2dd",
+          "front": "catalog_images/bella-canvas-6400/natural_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#3e3e58",
+          "front": "catalog_images/bella-canvas-6400/navy_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/navy_back.jpg"
+        },
+        {
+          "name": "Orchid",
+          "hex": "#b488a1",
+          "front": "catalog_images/bella-canvas-6400/orchid_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/orchid_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#eec4c6",
+          "front": "catalog_images/bella-canvas-6400/pink_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/pink_back.jpg"
+        },
+        {
+          "name": "Pink Gravel",
+          "hex": "#c7afaf",
+          "front": "catalog_images/bella-canvas-6400/pink-gravel_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/pink-gravel_back.jpg"
+        },
+        {
+          "name": "Poppy",
+          "hex": "#f2262a",
+          "front": "catalog_images/bella-canvas-6400/poppy_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/poppy_back.jpg"
+        },
+        {
+          "name": "Purple Storm",
+          "hex": "#776068",
+          "front": "catalog_images/bella-canvas-6400/purple-storm_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/purple-storm_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#d90536",
+          "front": "catalog_images/bella-canvas-6400/red_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/red_back.jpg"
+        },
+        {
+          "name": "Royal Purple",
+          "hex": "#654278",
+          "front": "catalog_images/bella-canvas-6400/royal-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/royal-purple_back.jpg"
+        },
+        {
+          "name": "Sage",
+          "hex": "#96a798",
+          "front": "catalog_images/bella-canvas-6400/sage_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/sage_back.jpg"
+        },
+        {
+          "name": "Sand Dune",
+          "hex": "#edc4ac",
+          "front": "catalog_images/bella-canvas-6400/sand-dune_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/sand-dune_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#e0e0de",
+          "front": "catalog_images/bella-canvas-6400/silver_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/silver_back.jpg"
+        },
+        {
+          "name": "Solid Athletic Grey",
+          "hex": "#cdccca",
+          "front": "catalog_images/bella-canvas-6400/solid-athletic-grey_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/solid-athletic-grey_back.jpg"
+        },
+        {
+          "name": "Teal",
+          "hex": "#219882",
+          "front": "catalog_images/bella-canvas-6400/teal_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/teal_back.jpg"
+        },
+        {
+          "name": "Team Purple",
+          "hex": "#503272",
+          "front": "catalog_images/bella-canvas-6400/team-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/team-purple_back.jpg"
+        },
+        {
+          "name": "Terracotta",
+          "hex": "#e2a58e",
+          "front": "catalog_images/bella-canvas-6400/terracotta_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/terracotta_back.jpg"
+        },
+        {
+          "name": "Thyme",
+          "hex": "#c2c2b7",
+          "front": "catalog_images/bella-canvas-6400/thyme_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/thyme_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#105099",
+          "front": "catalog_images/bella-canvas-6400/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/true-royal_back.jpg"
+        },
+        {
+          "name": "Vintage Black",
+          "hex": "#2c2a32",
+          "front": "catalog_images/bella-canvas-6400/vintage-black_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/vintage-black_back.jpg"
+        },
+        {
+          "name": "Vintage Brown",
+          "hex": "#937261",
+          "front": "catalog_images/bella-canvas-6400/vintage-brown_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/vintage-brown_back.jpg"
+        },
+        {
+          "name": "Vintage Denim",
+          "hex": "#9fa5b3",
+          "front": "catalog_images/bella-canvas-6400/vintage-denim_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/vintage-denim_back.jpg"
+        },
+        {
+          "name": "Vintage Navy",
+          "hex": "#46525e",
+          "front": "catalog_images/bella-canvas-6400/vintage-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/vintage-navy_back.jpg"
+        },
+        {
+          "name": "Vintage White",
+          "hex": "#e3e0d9",
+          "front": "catalog_images/bella-canvas-6400/vintage-white_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/vintage-white_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#b5b6bd",
+          "front": "catalog_images/bella-canvas-6400/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6400/athletic-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-8803",
+      "name": "Women's Flowy Scoop Muscle Tank",
+      "brand": "Bella/Canvas",
+      "style": "8803",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e3dee1",
+          "front": "catalog_images/bella-canvas-8803/white_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#231c23",
+          "front": "catalog_images/bella-canvas-8803/black_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/black_back.jpg"
+        },
+        {
+          "name": "Asphalt Slub",
+          "hex": "#6d6970",
+          "front": "catalog_images/bella-canvas-8803/asphalt-slub_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/asphalt-slub_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#bdbab3",
+          "front": "catalog_images/bella-canvas-8803/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#302e2f",
+          "front": "catalog_images/bella-canvas-8803/black-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/black-heather_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#555151",
+          "front": "catalog_images/bella-canvas-8803/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#c27c80",
+          "front": "catalog_images/bella-canvas-8803/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/mauve_back.jpg"
+        },
+        {
+          "name": "Midnight",
+          "hex": "#393848",
+          "front": "catalog_images/bella-canvas-8803/midnight_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/midnight_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#b7e7c6",
+          "front": "catalog_images/bella-canvas-8803/mint_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/mint_back.jpg"
+        },
+        {
+          "name": "Peach Slub",
+          "hex": "#f0c7b9",
+          "front": "catalog_images/bella-canvas-8803/peach-slub_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/peach-slub_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#1059a3",
+          "front": "catalog_images/bella-canvas-8803/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/true-royal_back.jpg"
+        },
+        {
+          "name": "White Marble",
+          "hex": "#d5cec8",
+          "front": "catalog_images/bella-canvas-8803/white-marble_front.jpg",
+          "back": "catalog_images/bella-canvas-8803/white-marble_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-3413",
+      "name": "Triblend Tee",
+      "brand": "Bella/Canvas",
+      "style": "3413",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Solid White Triblend",
+          "hex": "#f3f3f7",
+          "front": "catalog_images/bella-canvas-3413/solid-white-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-white-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Black Triblend",
+          "hex": "#1c1819",
+          "front": "catalog_images/bella-canvas-3413/solid-black-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-black-triblend_back.jpg"
+        },
+        {
+          "name": "Aqua Triblend",
+          "hex": "#52b0c3",
+          "front": "catalog_images/bella-canvas-3413/aqua-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/aqua-triblend_back.jpg"
+        },
+        {
+          "name": "Athletic Grey Triblend",
+          "hex": "#b6b6b6",
+          "front": "catalog_images/bella-canvas-3413/athletic-grey-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/athletic-grey-triblend_back.jpg"
+        },
+        {
+          "name": "Berry Triblend",
+          "hex": "#cf3f67",
+          "front": "catalog_images/bella-canvas-3413/berry-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/berry-triblend_back.jpg"
+        },
+        {
+          "name": "Black Heather Triblend",
+          "hex": "#121212",
+          "front": "catalog_images/bella-canvas-3413/black-heather-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/black-heather-triblend_back.jpg"
+        },
+        {
+          "name": "Blue Storm Triblend",
+          "hex": "#80898b",
+          "front": "catalog_images/bella-canvas-3413/blue-storm-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/blue-storm-triblend_back.jpg"
+        },
+        {
+          "name": "Blue Triblend",
+          "hex": "#8193c1",
+          "front": "catalog_images/bella-canvas-3413/blue-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/blue-triblend_back.jpg"
+        },
+        {
+          "name": "Brick Triblend",
+          "hex": "#a93411",
+          "front": "catalog_images/bella-canvas-3413/brick-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/brick-triblend_back.jpg"
+        },
+        {
+          "name": "Brown Triblend",
+          "hex": "#5b4945",
+          "front": "catalog_images/bella-canvas-3413/brown-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/brown-triblend_back.jpg"
+        },
+        {
+          "name": "Cardinal Triblend",
+          "hex": "#5b1c22",
+          "front": "catalog_images/bella-canvas-3413/cardinal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/cardinal-triblend_back.jpg"
+        },
+        {
+          "name": "Cement Triblend",
+          "hex": "#ddd9d6",
+          "front": "catalog_images/bella-canvas-3413/cement-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/cement-triblend_back.jpg"
+        },
+        {
+          "name": "Charcoal Black Triblend",
+          "hex": "#2e2929",
+          "front": "catalog_images/bella-canvas-3413/charcoal-black-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/charcoal-black-triblend_back.jpg"
+        },
+        {
+          "name": "Charity Pink Triblend",
+          "hex": "#ee789b",
+          "front": "catalog_images/bella-canvas-3413/charity-pink-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/charity-pink-triblend_back.jpg"
+        },
+        {
+          "name": "Clay Triblend",
+          "hex": "#ae4a42",
+          "front": "catalog_images/bella-canvas-3413/clay-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/clay-triblend_back.jpg"
+        },
+        {
+          "name": "Dark Lavender Triblend",
+          "hex": "#c1b0ca",
+          "front": "catalog_images/bella-canvas-3413/dark-lavender-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/dark-lavender-triblend_back.jpg"
+        },
+        {
+          "name": "Denim Triblend",
+          "hex": "#708691",
+          "front": "catalog_images/bella-canvas-3413/denim-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/denim-triblend_back.jpg"
+        },
+        {
+          "name": "Dusty Blue Triblend",
+          "hex": "#acc1ba",
+          "front": "catalog_images/bella-canvas-3413/dusty-blue-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/dusty-blue-triblend_back.jpg"
+        },
+        {
+          "name": "Emerald Triblend",
+          "hex": "#101b1b",
+          "front": "catalog_images/bella-canvas-3413/emerald-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/emerald-triblend_back.jpg"
+        },
+        {
+          "name": "Espresso Triblend",
+          "hex": "#2e2623",
+          "front": "catalog_images/bella-canvas-3413/espresso-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/espresso-triblend_back.jpg"
+        },
+        {
+          "name": "Grass Green Triblend",
+          "hex": "#335639",
+          "front": "catalog_images/bella-canvas-3413/grass-green-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/grass-green-triblend_back.jpg"
+        },
+        {
+          "name": "Green Triblend",
+          "hex": "#77b36e",
+          "front": "catalog_images/bella-canvas-3413/green-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/green-triblend_back.jpg"
+        },
+        {
+          "name": "Grey Triblend",
+          "hex": "#858182",
+          "front": "catalog_images/bella-canvas-3413/grey-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/grey-triblend_back.jpg"
+        },
+        {
+          "name": "Ice Blue Triblend",
+          "hex": "#e9f3f4",
+          "front": "catalog_images/bella-canvas-3413/ice-blue-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/ice-blue-triblend_back.jpg"
+        },
+        {
+          "name": "Kelly Triblend",
+          "hex": "#028c6a",
+          "front": "catalog_images/bella-canvas-3413/kelly-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/kelly-triblend_back.jpg"
+        },
+        {
+          "name": "Lilac Triblend",
+          "hex": "#e6b5d0",
+          "front": "catalog_images/bella-canvas-3413/lilac-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/lilac-triblend_back.jpg"
+        },
+        {
+          "name": "Maroon Triblend",
+          "hex": "#4f1f29",
+          "front": "catalog_images/bella-canvas-3413/maroon-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/maroon-triblend_back.jpg"
+        },
+        {
+          "name": "Mauve Triblend",
+          "hex": "#cc7c7d",
+          "front": "catalog_images/bella-canvas-3413/mauve-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/mauve-triblend_back.jpg"
+        },
+        {
+          "name": "Military Green Triblend",
+          "hex": "#707264",
+          "front": "catalog_images/bella-canvas-3413/military-green-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/military-green-triblend_back.jpg"
+        },
+        {
+          "name": "Mustard Triblend",
+          "hex": "#de972d",
+          "front": "catalog_images/bella-canvas-3413/mustard-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/mustard-triblend_back.jpg"
+        },
+        {
+          "name": "Navy Triblend",
+          "hex": "#252549",
+          "front": "catalog_images/bella-canvas-3413/navy-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/navy-triblend_back.jpg"
+        },
+        {
+          "name": "Oatmeal Triblend",
+          "hex": "#e0dcd7",
+          "front": "catalog_images/bella-canvas-3413/oatmeal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/oatmeal-triblend_back.jpg"
+        },
+        {
+          "name": "Olive Triblend",
+          "hex": "#74644a",
+          "front": "catalog_images/bella-canvas-3413/olive-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/olive-triblend_back.jpg"
+        },
+        {
+          "name": "Orchid Triblend",
+          "hex": "#e09299",
+          "front": "catalog_images/bella-canvas-3413/orchid-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/orchid-triblend_back.jpg"
+        },
+        {
+          "name": "Pale Yellow Triblend",
+          "hex": "#f9f3c6",
+          "front": "catalog_images/bella-canvas-3413/pale-yellow-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/pale-yellow-triblend_back.jpg"
+        },
+        {
+          "name": "Peach Triblend",
+          "hex": "#f0cdbd",
+          "front": "catalog_images/bella-canvas-3413/peach-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/peach-triblend_back.jpg"
+        },
+        {
+          "name": "Pink Triblend",
+          "hex": "#fed6d5",
+          "front": "catalog_images/bella-canvas-3413/pink-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/pink-triblend_back.jpg"
+        },
+        {
+          "name": "Purple Triblend",
+          "hex": "#745994",
+          "front": "catalog_images/bella-canvas-3413/purple-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/purple-triblend_back.jpg"
+        },
+        {
+          "name": "Red Triblend",
+          "hex": "#da5461",
+          "front": "catalog_images/bella-canvas-3413/red-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/red-triblend_back.jpg"
+        },
+        {
+          "name": "Sand Dune Triblend",
+          "hex": "#e8bf9f",
+          "front": "catalog_images/bella-canvas-3413/sand-dune-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/sand-dune-triblend_back.jpg"
+        },
+        {
+          "name": "Sea Green Triblend",
+          "hex": "#69dfdc",
+          "front": "catalog_images/bella-canvas-3413/sea-green-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/sea-green-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Asphalt Triblend",
+          "hex": "#707172",
+          "front": "catalog_images/bella-canvas-3413/solid-asphalt-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-asphalt-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Blue Triblend",
+          "hex": "#95bfe5",
+          "front": "catalog_images/bella-canvas-3413/solid-blue-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-blue-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Carolina Blue Triblend",
+          "hex": "#a3cbee",
+          "front": "catalog_images/bella-canvas-3413/solid-carolina-blue-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-carolina-blue-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Dark Grey Triblend",
+          "hex": "#2c2c2c",
+          "front": "catalog_images/bella-canvas-3413/solid-dark-grey-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-dark-grey-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Forest Triblend",
+          "hex": "#263931",
+          "front": "catalog_images/bella-canvas-3413/solid-forest-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-forest-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Gold Triblend",
+          "hex": "#f6bd29",
+          "front": "catalog_images/bella-canvas-3413/solid-gold-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-gold-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Kelly Triblend",
+          "hex": "#028954",
+          "front": "catalog_images/bella-canvas-3413/solid-kelly-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-kelly-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Maroon Triblend",
+          "hex": "#461526",
+          "front": "catalog_images/bella-canvas-3413/solid-maroon-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-maroon-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Natural Triblend",
+          "hex": "#f9f1e6",
+          "front": "catalog_images/bella-canvas-3413/solid-natural-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-natural-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Navy Triblend",
+          "hex": "#1b2238",
+          "front": "catalog_images/bella-canvas-3413/solid-navy-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-navy-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Orange Triblend",
+          "hex": "#fc6e10",
+          "front": "catalog_images/bella-canvas-3413/solid-orange-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-orange-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Red Triblend",
+          "hex": "#af0d24",
+          "front": "catalog_images/bella-canvas-3413/solid-red-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-red-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Silver Triblend",
+          "hex": "#ddddda",
+          "front": "catalog_images/bella-canvas-3413/solid-silver-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-silver-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Slate Triblend",
+          "hex": "#7197a7",
+          "front": "catalog_images/bella-canvas-3413/solid-slate-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-slate-triblend_back.jpg"
+        },
+        {
+          "name": "Solid Team Purple Triblend",
+          "hex": "#523576",
+          "front": "catalog_images/bella-canvas-3413/solid-team-purple-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-team-purple-triblend_back.jpg"
+        },
+        {
+          "name": "Solid True Royal Triblend",
+          "hex": "#295aa8",
+          "front": "catalog_images/bella-canvas-3413/solid-true-royal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/solid-true-royal-triblend_back.jpg"
+        },
+        {
+          "name": "Spring Green Triblend",
+          "hex": "#e2e9c1",
+          "front": "catalog_images/bella-canvas-3413/spring-green-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/spring-green-triblend_back.jpg"
+        },
+        {
+          "name": "Steel Blue Triblend",
+          "hex": "#3c6173",
+          "front": "catalog_images/bella-canvas-3413/steel-blue-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/steel-blue-triblend_back.jpg"
+        },
+        {
+          "name": "Storm Triblend",
+          "hex": "#9f9aa1",
+          "front": "catalog_images/bella-canvas-3413/storm-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/storm-triblend_back.jpg"
+        },
+        {
+          "name": "Sunset Triblend",
+          "hex": "#f6a68d",
+          "front": "catalog_images/bella-canvas-3413/sunset-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/sunset-triblend_back.jpg"
+        },
+        {
+          "name": "Tan Triblend",
+          "hex": "#bea891",
+          "front": "catalog_images/bella-canvas-3413/tan-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/tan-triblend_back.jpg"
+        },
+        {
+          "name": "Teal Triblend",
+          "hex": "#02717d",
+          "front": "catalog_images/bella-canvas-3413/teal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/teal-triblend_back.jpg"
+        },
+        {
+          "name": "True Royal Triblend",
+          "hex": "#1f61b3",
+          "front": "catalog_images/bella-canvas-3413/true-royal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/true-royal-triblend_back.jpg"
+        },
+        {
+          "name": "White Fleck Triblend",
+          "hex": "#dddce4",
+          "front": "catalog_images/bella-canvas-3413/white-fleck-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/white-fleck-triblend_back.jpg"
+        },
+        {
+          "name": "Yellow Gold Triblend",
+          "hex": "#fdd256",
+          "front": "catalog_images/bella-canvas-3413/yellow-gold-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3413/yellow-gold-triblend_back.jpg"
         }
       ]
     }

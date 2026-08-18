@@ -11207,6 +11207,88 @@
           "back": "catalog_images/bella-canvas-3480/true-royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-6760",
+      "name": "Womens Triblend Dolman T-Shrt",
+      "brand": "Next Level",
+      "style": "6760",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Vintage Black",
+          "hex": "#2d292d",
+          "front": "catalog_images/next-level-6760/vintage-black_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-black_back.jpg"
+        },
+        {
+          "name": "Heather White",
+          "hex": "#e1dfe0",
+          "front": "catalog_images/next-level-6760/heather-white_front.jpg",
+          "back": "catalog_images/next-level-6760/heather-white_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#696450",
+          "front": "catalog_images/next-level-6760/military-green_front.jpg",
+          "back": "catalog_images/next-level-6760/military-green_back.jpg"
+        },
+        {
+          "name": "Premium Heather",
+          "hex": "#8e9192",
+          "front": "catalog_images/next-level-6760/premium-heather_front.jpg",
+          "back": "catalog_images/next-level-6760/premium-heather_back.jpg"
+        },
+        {
+          "name": "Purple Rush",
+          "hex": "#5f4c7e",
+          "front": "catalog_images/next-level-6760/purple-rush_front.jpg",
+          "back": "catalog_images/next-level-6760/purple-rush_back.jpg"
+        },
+        {
+          "name": "Venetian Grey",
+          "hex": "#858477",
+          "front": "catalog_images/next-level-6760/venetian-grey_front.jpg",
+          "back": "catalog_images/next-level-6760/venetian-grey_back.jpg"
+        },
+        {
+          "name": "Vintage Light Orange",
+          "hex": "#fba181",
+          "front": "catalog_images/next-level-6760/vintage-light-orange_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-light-orange_back.jpg"
+        },
+        {
+          "name": "Vintage Lilac",
+          "hex": "#e0aecb",
+          "front": "catalog_images/next-level-6760/vintage-lilac_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-lilac_back.jpg"
+        },
+        {
+          "name": "Vintage Navy",
+          "hex": "#434a55",
+          "front": "catalog_images/next-level-6760/vintage-navy_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-navy_back.jpg"
+        },
+        {
+          "name": "Vintage Red",
+          "hex": "#de465b",
+          "front": "catalog_images/next-level-6760/vintage-red_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-red_back.jpg"
+        },
+        {
+          "name": "Vintage Royal",
+          "hex": "#577ab6",
+          "front": "catalog_images/next-level-6760/vintage-royal_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-royal_back.jpg"
+        },
+        {
+          "name": "Vintage Shocking Pink",
+          "hex": "#ec4b6a",
+          "front": "catalog_images/next-level-6760/vintage-shocking-pink_front.jpg",
+          "back": "catalog_images/next-level-6760/vintage-shocking-pink_back.jpg"
+        }
+      ]
     }
   ]
 }

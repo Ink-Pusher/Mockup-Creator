@@ -9679,286 +9679,6 @@
       ]
     },
     {
-      "id": "independent-trading-co-ss4500",
-      "name": "Midweight Pullover Hoodie",
-      "brand": "Independent Trading Co.",
-      "style": "SS4500",
-      "kind": "hoodie",
-      "popular": false,
-      "colors": [
-        {
-          "name": "White",
-          "hex": "#ededf5",
-          "front": "catalog_images/independent-trading-co-ss4500/white_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/white_back.jpg"
-        },
-        {
-          "name": "Black",
-          "hex": "#3a3338",
-          "front": "catalog_images/independent-trading-co-ss4500/black_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/black_back.jpg"
-        },
-        {
-          "name": "Alpine Green",
-          "hex": "#414b45",
-          "front": "catalog_images/independent-trading-co-ss4500/alpine-green_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/alpine-green_back.jpg"
-        },
-        {
-          "name": "Army",
-          "hex": "#635e46",
-          "front": "catalog_images/independent-trading-co-ss4500/army_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/army_back.jpg"
-        },
-        {
-          "name": "Army Heather",
-          "hex": "#454432",
-          "front": "catalog_images/independent-trading-co-ss4500/army-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/army-heather_back.jpg"
-        },
-        {
-          "name": "Ash Heather",
-          "hex": "#d8d7dc",
-          "front": "catalog_images/independent-trading-co-ss4500/ash-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/ash-heather_back.jpg"
-        },
-        {
-          "name": "Black Camo",
-          "hex": "#3e3c3e",
-          "front": "catalog_images/independent-trading-co-ss4500/black-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/black-camo_back.jpg"
-        },
-        {
-          "name": "Blue Aqua",
-          "hex": "#a5d4e3",
-          "front": "catalog_images/independent-trading-co-ss4500/blue-aqua_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/blue-aqua_back.jpg"
-        },
-        {
-          "name": "Bone",
-          "hex": "#e8e1d4",
-          "front": "catalog_images/independent-trading-co-ss4500/bone_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/bone_back.jpg"
-        },
-        {
-          "name": "Brown",
-          "hex": "#4e3a32",
-          "front": "catalog_images/independent-trading-co-ss4500/brown_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/brown_back.jpg"
-        },
-        {
-          "name": "Cement",
-          "hex": "#bbb2ab",
-          "front": "catalog_images/independent-trading-co-ss4500/cement_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/cement_back.jpg"
-        },
-        {
-          "name": "Charcoal",
-          "hex": "#605f64",
-          "front": "catalog_images/independent-trading-co-ss4500/charcoal_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/charcoal_back.jpg"
-        },
-        {
-          "name": "Charcoal Heather",
-          "hex": "#423d43",
-          "front": "catalog_images/independent-trading-co-ss4500/charcoal-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/charcoal-heather_back.jpg"
-        },
-        {
-          "name": "Classic Navy",
-          "hex": "#242434",
-          "front": "catalog_images/independent-trading-co-ss4500/classic-navy_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/classic-navy_back.jpg"
-        },
-        {
-          "name": "Classic Navy Heather",
-          "hex": "#31323c",
-          "front": "catalog_images/independent-trading-co-ss4500/classic-navy-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/classic-navy-heather_back.jpg"
-        },
-        {
-          "name": "Duck Camo",
-          "hex": "#544638",
-          "front": "catalog_images/independent-trading-co-ss4500/duck-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/duck-camo_back.jpg"
-        },
-        {
-          "name": "Dusty Pink",
-          "hex": "#d1b1a2",
-          "front": "catalog_images/independent-trading-co-ss4500/dusty-pink_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/dusty-pink_back.jpg"
-        },
-        {
-          "name": "Dusty Sage",
-          "hex": "#c5cbc1",
-          "front": "catalog_images/independent-trading-co-ss4500/dusty-sage_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/dusty-sage_back.jpg"
-        },
-        {
-          "name": "Forest Camo",
-          "hex": "#777561",
-          "front": "catalog_images/independent-trading-co-ss4500/forest-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/forest-camo_back.jpg"
-        },
-        {
-          "name": "Forest Green",
-          "hex": "#1f473e",
-          "front": "catalog_images/independent-trading-co-ss4500/forest-green_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/forest-green_back.jpg"
-        },
-        {
-          "name": "Gold",
-          "hex": "#feb82d",
-          "front": "catalog_images/independent-trading-co-ss4500/gold_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/gold_back.jpg"
-        },
-        {
-          "name": "Grey Heather",
-          "hex": "#cccbd0",
-          "front": "catalog_images/independent-trading-co-ss4500/grey-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/grey-heather_back.jpg"
-        },
-        {
-          "name": "Gunmetal Heather",
-          "hex": "#918f99",
-          "front": "catalog_images/independent-trading-co-ss4500/gunmetal-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/gunmetal-heather_back.jpg"
-        },
-        {
-          "name": "Ivory",
-          "hex": "#dedad0",
-          "front": "catalog_images/independent-trading-co-ss4500/ivory_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/ivory_back.jpg"
-        },
-        {
-          "name": "Kelly Green",
-          "hex": "#038a60",
-          "front": "catalog_images/independent-trading-co-ss4500/kelly-green_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/kelly-green_back.jpg"
-        },
-        {
-          "name": "Kelly Green Heather",
-          "hex": "#038868",
-          "front": "catalog_images/independent-trading-co-ss4500/kelly-green-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/kelly-green-heather_back.jpg"
-        },
-        {
-          "name": "Lavender",
-          "hex": "#e6d5e8",
-          "front": "catalog_images/independent-trading-co-ss4500/lavender_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/lavender_back.jpg"
-        },
-        {
-          "name": "Light Pink",
-          "hex": "#f0c9d4",
-          "front": "catalog_images/independent-trading-co-ss4500/light-pink_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/light-pink_back.jpg"
-        },
-        {
-          "name": "Light Yellow",
-          "hex": "#f9e2ad",
-          "front": "catalog_images/independent-trading-co-ss4500/light-yellow_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/light-yellow_back.jpg"
-        },
-        {
-          "name": "Maroon",
-          "hex": "#693142",
-          "front": "catalog_images/independent-trading-co-ss4500/maroon_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/maroon_back.jpg"
-        },
-        {
-          "name": "Mint",
-          "hex": "#ade4d7",
-          "front": "catalog_images/independent-trading-co-ss4500/mint_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/mint_back.jpg"
-        },
-        {
-          "name": "Neon Pink",
-          "hex": "#fd7592",
-          "front": "catalog_images/independent-trading-co-ss4500/neon-pink_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/neon-pink_back.jpg"
-        },
-        {
-          "name": "Orange",
-          "hex": "#f25516",
-          "front": "catalog_images/independent-trading-co-ss4500/orange_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/orange_back.jpg"
-        },
-        {
-          "name": "Peach",
-          "hex": "#f9c780",
-          "front": "catalog_images/independent-trading-co-ss4500/peach_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/peach_back.jpg"
-        },
-        {
-          "name": "Plum",
-          "hex": "#9889a5",
-          "front": "catalog_images/independent-trading-co-ss4500/plum_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/plum_back.jpg"
-        },
-        {
-          "name": "Purple",
-          "hex": "#4b316e",
-          "front": "catalog_images/independent-trading-co-ss4500/purple_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/purple_back.jpg"
-        },
-        {
-          "name": "Red",
-          "hex": "#b82138",
-          "front": "catalog_images/independent-trading-co-ss4500/red_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/red_back.jpg"
-        },
-        {
-          "name": "Royal",
-          "hex": "#0f5692",
-          "front": "catalog_images/independent-trading-co-ss4500/royal_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/royal_back.jpg"
-        },
-        {
-          "name": "Royal Heather",
-          "hex": "#165b90",
-          "front": "catalog_images/independent-trading-co-ss4500/royal-heather_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/royal-heather_back.jpg"
-        },
-        {
-          "name": "Saddle",
-          "hex": "#8a684d",
-          "front": "catalog_images/independent-trading-co-ss4500/saddle_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/saddle_back.jpg"
-        },
-        {
-          "name": "Safety Orange",
-          "hex": "#fe7701",
-          "front": "catalog_images/independent-trading-co-ss4500/safety-orange_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/safety-orange_back.jpg"
-        },
-        {
-          "name": "Safety Yellow",
-          "hex": "#cfe468",
-          "front": "catalog_images/independent-trading-co-ss4500/safety-yellow_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/safety-yellow_back.jpg"
-        },
-        {
-          "name": "Sandstone",
-          "hex": "#b89576",
-          "front": "catalog_images/independent-trading-co-ss4500/sandstone_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/sandstone_back.jpg"
-        },
-        {
-          "name": "Smoke",
-          "hex": "#dadada",
-          "front": "catalog_images/independent-trading-co-ss4500/smoke_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/smoke_back.jpg"
-        },
-        {
-          "name": "Storm Blue",
-          "hex": "#5e6d84",
-          "front": "catalog_images/independent-trading-co-ss4500/storm-blue_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/storm-blue_back.jpg"
-        }
-      ]
-    },
-    {
       "id": "oad-106",
       "name": "Gusseted Tote Bag",
       "brand": "OAD",
@@ -13341,6 +13061,660 @@
           "hex": "#5e593e",
           "front": "catalog_images/next-level-6600/military-green_front.jpg",
           "back": "catalog_images/next-level-6600/military-green_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "independent-trading-co-prm3500",
+      "name": "Unisex Midweight Pigment-Dyed Crewneck Sweatshirt",
+      "brand": "Independent Trading Co",
+      "style": "PRM3500",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Prepared For Dye",
+          "hex": "#ecebe7",
+          "front": "catalog_images/independent-trading-co-prm3500/prepared-for-dye_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/prepared-for-dye_back.jpg"
+        },
+        {
+          "name": "Pigment Black",
+          "hex": "#4a4a4c",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-black_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-black_back.jpg"
+        },
+        {
+          "name": "Pigment Alpine Green",
+          "hex": "#516d63",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-alpine-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-alpine-green_back.jpg"
+        },
+        {
+          "name": "Pigment Amber",
+          "hex": "#ca5942",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-amber_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-amber_back.jpg"
+        },
+        {
+          "name": "Pigment Army",
+          "hex": "#5a5c4e",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-army_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-army_back.jpg"
+        },
+        {
+          "name": "Pigment Cement",
+          "hex": "#c1bcb0",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-cement_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-cement_back.jpg"
+        },
+        {
+          "name": "Pigment Clay",
+          "hex": "#977b6a",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-clay_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-clay_back.jpg"
+        },
+        {
+          "name": "Pigment Dusty Pink",
+          "hex": "#e7c4ae",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-dusty-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-dusty-pink_back.jpg"
+        },
+        {
+          "name": "Pigment Ivory",
+          "hex": "#d9d2c0",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-ivory_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-ivory_back.jpg"
+        },
+        {
+          "name": "Pigment Light Blue",
+          "hex": "#7c9abd",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-light-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-light-blue_back.jpg"
+        },
+        {
+          "name": "Pigment Maroon",
+          "hex": "#ac6e73",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-maroon_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-maroon_back.jpg"
+        },
+        {
+          "name": "Pigment Mint",
+          "hex": "#72aba5",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-mint_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-mint_back.jpg"
+        },
+        {
+          "name": "Pigment Pink",
+          "hex": "#e07e82",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-pink_back.jpg"
+        },
+        {
+          "name": "Pigment Plum",
+          "hex": "#867988",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-plum_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-plum_back.jpg"
+        },
+        {
+          "name": "Pigment Sage",
+          "hex": "#bfc9be",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-sage_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-sage_back.jpg"
+        },
+        {
+          "name": "Pigment Sandstone",
+          "hex": "#bba68c",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-sandstone_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-sandstone_back.jpg"
+        },
+        {
+          "name": "Pigment Slate Blue",
+          "hex": "#798c98",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-slate-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-slate-blue_back.jpg"
+        },
+        {
+          "name": "Pigment Yellow",
+          "hex": "#f2dd92",
+          "front": "catalog_images/independent-trading-co-prm3500/pigment-yellow_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm3500/pigment-yellow_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "independent-trading-co-ss4500",
+      "name": "Unisex Midweight Hooded Sweatshirt",
+      "brand": "Independent Trading Co",
+      "style": "SS4500",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ededf5",
+          "front": "catalog_images/independent-trading-co-ss4500/white_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#3a3338",
+          "front": "catalog_images/independent-trading-co-ss4500/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/black_back.jpg"
+        },
+        {
+          "name": "Alpine Green",
+          "hex": "#414b45",
+          "front": "catalog_images/independent-trading-co-ss4500/alpine-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/alpine-green_back.jpg"
+        },
+        {
+          "name": "Army",
+          "hex": "#635e46",
+          "front": "catalog_images/independent-trading-co-ss4500/army_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/army_back.jpg"
+        },
+        {
+          "name": "Army Heather",
+          "hex": "#454432",
+          "front": "catalog_images/independent-trading-co-ss4500/army-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/army-heather_back.jpg"
+        },
+        {
+          "name": "Ash Heather",
+          "hex": "#d8d7dc",
+          "front": "catalog_images/independent-trading-co-ss4500/ash-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/ash-heather_back.jpg"
+        },
+        {
+          "name": "Black Camo",
+          "hex": "#3e3c3e",
+          "front": "catalog_images/independent-trading-co-ss4500/black-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/black-camo_back.jpg"
+        },
+        {
+          "name": "Blue Aqua",
+          "hex": "#a5d4e3",
+          "front": "catalog_images/independent-trading-co-ss4500/blue-aqua_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/blue-aqua_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#e8e1d4",
+          "front": "catalog_images/independent-trading-co-ss4500/bone_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/bone_back.jpg"
+        },
+        {
+          "name": "Brown",
+          "hex": "#4e3a32",
+          "front": "catalog_images/independent-trading-co-ss4500/brown_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/brown_back.jpg"
+        },
+        {
+          "name": "Cement",
+          "hex": "#bbb2ab",
+          "front": "catalog_images/independent-trading-co-ss4500/cement_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/cement_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#605f64",
+          "front": "catalog_images/independent-trading-co-ss4500/charcoal_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/charcoal_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#423d43",
+          "front": "catalog_images/independent-trading-co-ss4500/charcoal-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Classic Navy",
+          "hex": "#242434",
+          "front": "catalog_images/independent-trading-co-ss4500/classic-navy_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/classic-navy_back.jpg"
+        },
+        {
+          "name": "Classic Navy Heather",
+          "hex": "#31323c",
+          "front": "catalog_images/independent-trading-co-ss4500/classic-navy-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/classic-navy-heather_back.jpg"
+        },
+        {
+          "name": "Duck Camo",
+          "hex": "#544638",
+          "front": "catalog_images/independent-trading-co-ss4500/duck-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/duck-camo_back.jpg"
+        },
+        {
+          "name": "Dusty Pink",
+          "hex": "#d1b1a2",
+          "front": "catalog_images/independent-trading-co-ss4500/dusty-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/dusty-pink_back.jpg"
+        },
+        {
+          "name": "Dusty Sage",
+          "hex": "#c5cbc1",
+          "front": "catalog_images/independent-trading-co-ss4500/dusty-sage_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/dusty-sage_back.jpg"
+        },
+        {
+          "name": "Forest Camo",
+          "hex": "#777561",
+          "front": "catalog_images/independent-trading-co-ss4500/forest-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/forest-camo_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#1f473e",
+          "front": "catalog_images/independent-trading-co-ss4500/forest-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/forest-green_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#feb82d",
+          "front": "catalog_images/independent-trading-co-ss4500/gold_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/gold_back.jpg"
+        },
+        {
+          "name": "Grey Heather",
+          "hex": "#cccbd0",
+          "front": "catalog_images/independent-trading-co-ss4500/grey-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/grey-heather_back.jpg"
+        },
+        {
+          "name": "Gunmetal Heather",
+          "hex": "#918f99",
+          "front": "catalog_images/independent-trading-co-ss4500/gunmetal-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/gunmetal-heather_back.jpg"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#dedad0",
+          "front": "catalog_images/independent-trading-co-ss4500/ivory_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/ivory_back.jpg"
+        },
+        {
+          "name": "Kelly Green",
+          "hex": "#038a60",
+          "front": "catalog_images/independent-trading-co-ss4500/kelly-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/kelly-green_back.jpg"
+        },
+        {
+          "name": "Kelly Green Heather",
+          "hex": "#038868",
+          "front": "catalog_images/independent-trading-co-ss4500/kelly-green-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/kelly-green-heather_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#e6d5e8",
+          "front": "catalog_images/independent-trading-co-ss4500/lavender_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/lavender_back.jpg"
+        },
+        {
+          "name": "Light Pink",
+          "hex": "#f0c9d4",
+          "front": "catalog_images/independent-trading-co-ss4500/light-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/light-pink_back.jpg"
+        },
+        {
+          "name": "Light Yellow",
+          "hex": "#f9e2ad",
+          "front": "catalog_images/independent-trading-co-ss4500/light-yellow_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/light-yellow_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#693142",
+          "front": "catalog_images/independent-trading-co-ss4500/maroon_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/maroon_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#ade4d7",
+          "front": "catalog_images/independent-trading-co-ss4500/mint_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/mint_back.jpg"
+        },
+        {
+          "name": "Neon Pink",
+          "hex": "#fd7592",
+          "front": "catalog_images/independent-trading-co-ss4500/neon-pink_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/neon-pink_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#f25516",
+          "front": "catalog_images/independent-trading-co-ss4500/orange_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/orange_back.jpg"
+        },
+        {
+          "name": "Peach",
+          "hex": "#f9c780",
+          "front": "catalog_images/independent-trading-co-ss4500/peach_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/peach_back.jpg"
+        },
+        {
+          "name": "Plum",
+          "hex": "#9889a5",
+          "front": "catalog_images/independent-trading-co-ss4500/plum_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/plum_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#4b316e",
+          "front": "catalog_images/independent-trading-co-ss4500/purple_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#b82138",
+          "front": "catalog_images/independent-trading-co-ss4500/red_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#0f5692",
+          "front": "catalog_images/independent-trading-co-ss4500/royal_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/royal_back.jpg"
+        },
+        {
+          "name": "Royal Heather",
+          "hex": "#165b90",
+          "front": "catalog_images/independent-trading-co-ss4500/royal-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/royal-heather_back.jpg"
+        },
+        {
+          "name": "Saddle",
+          "hex": "#8a684d",
+          "front": "catalog_images/independent-trading-co-ss4500/saddle_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/saddle_back.jpg"
+        },
+        {
+          "name": "Safety Orange",
+          "hex": "#fe7701",
+          "front": "catalog_images/independent-trading-co-ss4500/safety-orange_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/safety-orange_back.jpg"
+        },
+        {
+          "name": "Safety Yellow",
+          "hex": "#cfe468",
+          "front": "catalog_images/independent-trading-co-ss4500/safety-yellow_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/safety-yellow_back.jpg"
+        },
+        {
+          "name": "Sandstone",
+          "hex": "#b89576",
+          "front": "catalog_images/independent-trading-co-ss4500/sandstone_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/sandstone_back.jpg"
+        },
+        {
+          "name": "Smoke",
+          "hex": "#dadada",
+          "front": "catalog_images/independent-trading-co-ss4500/smoke_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/smoke_back.jpg"
+        },
+        {
+          "name": "Storm Blue",
+          "hex": "#5e6d84",
+          "front": "catalog_images/independent-trading-co-ss4500/storm-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-ss4500/storm-blue_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-3901",
+      "name": "Unisex Sponge Fleece Raglan Crewneck Sweatshirt",
+      "brand": "Bella/Canvas",
+      "style": "3901",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#edeef3",
+          "front": "catalog_images/bella-canvas-3901/white_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#292023",
+          "front": "catalog_images/bella-canvas-3901/black_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/black_back.jpg"
+        },
+        {
+          "name": "Ash",
+          "hex": "#dddddd",
+          "front": "catalog_images/bella-canvas-3901/ash_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/ash_back.jpg"
+        },
+        {
+          "name": "Asphalt",
+          "hex": "#616164",
+          "front": "catalog_images/bella-canvas-3901/asphalt_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/asphalt_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#c1bfc4",
+          "front": "catalog_images/bella-canvas-3901/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Autumn",
+          "hex": "#934923",
+          "front": "catalog_images/bella-canvas-3901/autumn_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/autumn_back.jpg"
+        },
+        {
+          "name": "Blue Storm",
+          "hex": "#7a8385",
+          "front": "catalog_images/bella-canvas-3901/blue-storm_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/blue-storm_back.jpg"
+        },
+        {
+          "name": "Brick",
+          "hex": "#a22923",
+          "front": "catalog_images/bella-canvas-3901/brick_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/brick_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#ad283b",
+          "front": "catalog_images/bella-canvas-3901/cardinal_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/cardinal_back.jpg"
+        },
+        {
+          "name": "Carolina Blue",
+          "hex": "#99bfe9",
+          "front": "catalog_images/bella-canvas-3901/carolina-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/carolina-blue_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#3a363b",
+          "front": "catalog_images/bella-canvas-3901/dark-grey_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/dark-grey_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#484749",
+          "front": "catalog_images/bella-canvas-3901/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Dark Grey Marble",
+          "hex": "#595758",
+          "front": "catalog_images/bella-canvas-3901/dark-grey-marble_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/dark-grey-marble_back.jpg"
+        },
+        {
+          "name": "Deep Heather",
+          "hex": "#807f7d",
+          "front": "catalog_images/bella-canvas-3901/deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/deep-heather_back.jpg"
+        },
+        {
+          "name": "Forest",
+          "hex": "#293a2e",
+          "front": "catalog_images/bella-canvas-3901/forest_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/forest_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#f9af42",
+          "front": "catalog_images/bella-canvas-3901/gold_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/gold_back.jpg"
+        },
+        {
+          "name": "Grey Acid Wash",
+          "hex": "#3d393c",
+          "front": "catalog_images/bella-canvas-3901/grey-acid-wash_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/grey-acid-wash_back.jpg"
+        },
+        {
+          "name": "Grey Triblend",
+          "hex": "#757070",
+          "front": "catalog_images/bella-canvas-3901/grey-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/grey-triblend_back.jpg"
+        },
+        {
+          "name": "Heather Blue Lagoon",
+          "hex": "#89bfc8",
+          "front": "catalog_images/bella-canvas-3901/heather-blue-lagoon_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-blue-lagoon_back.jpg"
+        },
+        {
+          "name": "Heather Deep Teal",
+          "hex": "#4b8495",
+          "front": "catalog_images/bella-canvas-3901/heather-deep-teal_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-deep-teal_back.jpg"
+        },
+        {
+          "name": "Heather Dust",
+          "hex": "#eae1dc",
+          "front": "catalog_images/bella-canvas-3901/heather-dust_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-dust_back.jpg"
+        },
+        {
+          "name": "Heather Forest",
+          "hex": "#44534e",
+          "front": "catalog_images/bella-canvas-3901/heather-forest_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-forest_back.jpg"
+        },
+        {
+          "name": "Heather Mustard",
+          "hex": "#e2ab4d",
+          "front": "catalog_images/bella-canvas-3901/heather-mustard_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-mustard_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#56546a",
+          "front": "catalog_images/bella-canvas-3901/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Olive",
+          "hex": "#575441",
+          "front": "catalog_images/bella-canvas-3901/heather-olive_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-olive_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#b94351",
+          "front": "catalog_images/bella-canvas-3901/heather-red_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather True Royal",
+          "hex": "#466fb9",
+          "front": "catalog_images/bella-canvas-3901/heather-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/heather-true-royal_back.jpg"
+        },
+        {
+          "name": "Lavender Blue",
+          "hex": "#8ca1c2",
+          "front": "catalog_images/bella-canvas-3901/lavender-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/lavender-blue_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#7a2943",
+          "front": "catalog_images/bella-canvas-3901/maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/maroon_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#d88d8f",
+          "front": "catalog_images/bella-canvas-3901/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/mauve_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#5f614d",
+          "front": "catalog_images/bella-canvas-3901/military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/military-green_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e3dbcd",
+          "front": "catalog_images/bella-canvas-3901/natural_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#30364c",
+          "front": "catalog_images/bella-canvas-3901/navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/navy_back.jpg"
+        },
+        {
+          "name": "Navy Triblend",
+          "hex": "#1d213e",
+          "front": "catalog_images/bella-canvas-3901/navy-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/navy-triblend_back.jpg"
+        },
+        {
+          "name": "Peach",
+          "hex": "#efc6b3",
+          "front": "catalog_images/bella-canvas-3901/peach_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/peach_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#f2c7d0",
+          "front": "catalog_images/bella-canvas-3901/pink_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/pink_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ce2d3c",
+          "front": "catalog_images/bella-canvas-3901/red_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/red_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#dedede",
+          "front": "catalog_images/bella-canvas-3901/silver_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/silver_back.jpg"
+        },
+        {
+          "name": "Team Purple",
+          "hex": "#3b2162",
+          "front": "catalog_images/bella-canvas-3901/team-purple_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/team-purple_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#275ca9",
+          "front": "catalog_images/bella-canvas-3901/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/true-royal_back.jpg"
+        },
+        {
+          "name": "Vintage Black",
+          "hex": "#323232",
+          "front": "catalog_images/bella-canvas-3901/vintage-black_front.jpg",
+          "back": "catalog_images/bella-canvas-3901/vintage-black_back.jpg"
         }
       ]
     }

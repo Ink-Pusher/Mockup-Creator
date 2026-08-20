@@ -23,9 +23,9 @@ SETUP (one time):
     pip install requests pillow numpy scipy pytoshop psd-tools six cloudscraper
 
 USAGE:
-    python build_color_template.py "https://www.ssactivewear.com/p/bella/3001?color=white-solid" bella_3001_colors.psd
-    python build_color_template.py page_3001.html bella_3001_colors.psd
-    python build_color_template.py page_richardson256.html richardson_256.psd hat
+    python3 build_color_template.py "https://www.ssactivewear.com/p/bella/3001?color=white-solid" bella_3001_colors.psd
+    python3 build_color_template.py page_3001.html bella_3001_colors.psd
+    python3 build_color_template.py page_richardson256.html richardson_256.psd hat
 
 NOTES / THINGS TO SANITY-CHECK ON YOUR FIRST RUN:
 - The image URL pattern below (CDN_IMAGE_URL_TEMPLATE) was reverse-engineered
@@ -386,7 +386,7 @@ def build_psd(color_layers: list[tuple[str, Image.Image]], out_path: Path):
 
 def main():
     if len(sys.argv) < 3:
-        print(f"Usage: python {sys.argv[0]} <product_url_or_saved_html_file> <output.psd> [layout]")
+        print(f"Usage: python3 {sys.argv[0]} <product_url_or_saved_html_file> <output.psd> [layout]")
         print("  layout: 'split' (default, equal-size side by side) or 'hat' (large front + small cutout back)")
         sys.exit(1)
 

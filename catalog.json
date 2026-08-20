@@ -13723,6 +13723,112 @@
           "back": "catalog_images/hanes-p170/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "independent-trading-co-ind330blv",
+      "name": "Unisex Boulevard Heavyweight Hooded Sweatshirt",
+      "brand": "Independent Trading Co.",
+      "style": "IND330BLV",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1e1e20",
+          "front": "catalog_images/independent-trading-co-ind330blv/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/black_back.jpg"
+        },
+        {
+          "name": "Pigment Black",
+          "hex": "#525252",
+          "front": "catalog_images/independent-trading-co-ind330blv/pigment-black_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/pigment-black_back.jpg"
+        },
+        {
+          "name": "Alpine Green",
+          "hex": "#475d5a",
+          "front": "catalog_images/independent-trading-co-ind330blv/alpine-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/alpine-green_back.jpg"
+        },
+        {
+          "name": "Army",
+          "hex": "#5d5a47",
+          "front": "catalog_images/independent-trading-co-ind330blv/army_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/army_back.jpg"
+        },
+        {
+          "name": "Ash Heather",
+          "hex": "#d5d4d9",
+          "front": "catalog_images/independent-trading-co-ind330blv/ash-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/ash-heather_back.jpg"
+        },
+        {
+          "name": "Asphalt",
+          "hex": "#373131",
+          "front": "catalog_images/independent-trading-co-ind330blv/asphalt_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/asphalt_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#e4ddd1",
+          "front": "catalog_images/independent-trading-co-ind330blv/bone_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/bone_back.jpg"
+        },
+        {
+          "name": "Brown",
+          "hex": "#563d36",
+          "front": "catalog_images/independent-trading-co-ind330blv/brown_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/brown_back.jpg"
+        },
+        {
+          "name": "Cement",
+          "hex": "#ada49b",
+          "front": "catalog_images/independent-trading-co-ind330blv/cement_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/cement_back.jpg"
+        },
+        {
+          "name": "Darkwood Tree Camo",
+          "hex": "#514b45",
+          "front": "catalog_images/independent-trading-co-ind330blv/darkwood-tree-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/darkwood-tree-camo_back.jpg"
+        },
+        {
+          "name": "Deadwood Tree Camo",
+          "hex": "#7e766d",
+          "front": "catalog_images/independent-trading-co-ind330blv/deadwood-tree-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/deadwood-tree-camo_back.jpg"
+        },
+        {
+          "name": "Grey Heather",
+          "hex": "#c8c8ca",
+          "front": "catalog_images/independent-trading-co-ind330blv/grey-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/grey-heather_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2c313e",
+          "front": "catalog_images/independent-trading-co-ind330blv/navy_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#ce1d2f",
+          "front": "catalog_images/independent-trading-co-ind330blv/red_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/red_back.jpg"
+        },
+        {
+          "name": "Sandstone",
+          "hex": "#b99e81",
+          "front": "catalog_images/independent-trading-co-ind330blv/sandstone_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/sandstone_back.jpg"
+        },
+        {
+          "name": "Storm Blue",
+          "hex": "#576c7f",
+          "front": "catalog_images/independent-trading-co-ind330blv/storm-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-ind330blv/storm-blue_back.jpg"
+        }
+      ]
     }
   ]
 }

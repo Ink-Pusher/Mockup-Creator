@@ -20,7 +20,7 @@ SETUP (one time):
     pip install requests pillow numpy scipy pytoshop psd-tools six cloudscraper pymupdf
 
 USAGE:
-    python build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
+    python3 build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
         [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]
         [--descriptions [product_descriptions.csv]] [--no-descriptions]
 
@@ -54,11 +54,11 @@ USAGE:
     with consistent framing across colors.
 
 EXAMPLES:
-    python build_catalog.py --site ssactivewear bella_3001.html "Bella/Canvas" 3001 "Unisex Heavyweight Tee" tee catalog.json
-    python build_catalog.py --site sanmar sanmar_black.html "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
-    python build_catalog.py --site sanmar-pdf PC099.pdf "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
-    python build_catalog.py --site royalapparel royal_5051.html "Royal Apparel" 5051 "Unisex Short Sleeve Tee" tee catalog.json --crop-top 0.18 --crop-bottom 0.15
-    python build_catalog.py --site ascolour ascolour_5026.html "AS Colour" 5026 "Classic Tee" tee catalog.json
+    python3 build_catalog.py --site ssactivewear bella_3001.html "Bella/Canvas" 3001 "Unisex Heavyweight Tee" tee catalog.json
+    python3 build_catalog.py --site sanmar sanmar_black.html "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
+    python3 build_catalog.py --site sanmar-pdf PC099.pdf "Port & Co" PC099 "Beach Wash Garment-Dyed Tee" tee catalog.json
+    python3 build_catalog.py --site royalapparel royal_5051.html "Royal Apparel" 5051 "Unisex Short Sleeve Tee" tee catalog.json --crop-top 0.18 --crop-bottom 0.15
+    python3 build_catalog.py --site ascolour ascolour_5026.html "AS Colour" 5026 "Classic Tee" tee catalog.json
 
 IMPORTANT -- SanMar is different from the other three HTML-based sites:
 S&S Activewear, Royal Apparel, and AS Colour all list every color on ONE
@@ -621,7 +621,7 @@ def run_description_scrape(site, source, brand, style, csv_path):
     if site == "sanmar-pdf":
         print("  A Media Library PDF has no description text in it -- skipping.")
         print("  Save the SanMar product PAGE and run:")
-        print(f"    python build_descriptions.py scrape --site sanmar <page.html> \"{brand}\" {style}")
+        print(f"    python3 build_descriptions.py scrape --site sanmar <page.html> \"{brand}\" {style}")
         return
     try:
         import build_descriptions as bd
@@ -639,7 +639,7 @@ def run_description_scrape(site, source, brand, style, csv_path):
     product = f"{brand} {style}".strip()
     if not found["description"] and not found["features"]:
         print(f"  Nothing usable found for '{product}'. To see what the page did offer:")
-        print(f"    python build_descriptions.py scrape --site {site} {source} \"{brand}\" {style} --dump")
+        print(f"    python3 build_descriptions.py scrape --site {site} {source} \"{brand}\" {style} --dump")
         return
 
     print(f"  Description : {found['description_source'] or 'not found'}")
@@ -652,13 +652,13 @@ def run_description_scrape(site, source, brand, style, csv_path):
     bd.write_csv(csv_path, rows)
     print(f"  {what.capitalize()} '{product}' in {Path(csv_path).resolve()}")
     print("  Import it from Product Admin -> Bulk tools, or polish it first:")
-    print(f"    python build_descriptions.py polish --only \"{product}\"")
+    print(f"    python3 build_descriptions.py polish --only \"{product}\"")
 
 
 def main():
     args = sys.argv[1:]
     if len(args) < 2 or args[0] != "--site":
-        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]")
+        print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]")
         print(f"  site: {' | '.join(EXTRACTORS)}")
         print("  kind: tee | hoodie | cap | tote")
         sys.exit(1)
@@ -729,7 +729,7 @@ def main():
     cropping = any(v > 0 for v in crop.values())
 
     if len(rest) < 5:
-        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions]")
+        print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions]")
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]

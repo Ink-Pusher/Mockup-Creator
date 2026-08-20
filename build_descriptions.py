@@ -16,9 +16,9 @@ reads:
 
 So the end-to-end flow for a new product becomes:
 
-    1. python build_catalog.py --site ... (photos + catalog.json, as before)
-    2. python build_descriptions.py scrape --site ...   <- this script
-    3. python build_descriptions.py polish              <- optional, see below
+    1. python3 build_catalog.py --site ... (photos + catalog.json, as before)
+    2. python3 build_descriptions.py scrape --site ...   <- this script
+    3. python3 build_descriptions.py polish              <- optional, see below
     4. Drag the CSV into Product Admin -> Bulk tools -> Import descriptions
 
 Step 4 is deliberately still a human action: the importer shows you every
@@ -134,19 +134,19 @@ SETUP
 
 EXAMPLES
 --------
-    python build_descriptions.py scrape --site ssactivewear \
+    python3 build_descriptions.py scrape --site ssactivewear \
         bella_3001.html "Bella/Canvas" 3001
 
-    python build_descriptions.py scrape --site ascolour \
+    python3 build_descriptions.py scrape --site ascolour \
         ascolour_5026.html "AS Colour" 5026 --csv product_descriptions.csv
 
-    python build_descriptions.py scrape --site sanmar sanmar_black.html \
+    python3 build_descriptions.py scrape --site sanmar sanmar_black.html \
         "Port & Co" PC099 --dump
 
-    python build_descriptions.py polish --voice-from "product descriptions.csv"
-    python build_descriptions.py polish --only "AS Colour 5026" --force
+    python3 build_descriptions.py polish --voice-from "product descriptions.csv"
+    python3 build_descriptions.py polish --only "AS Colour 5026" --force
 
-    python build_descriptions.py audit
+    python3 build_descriptions.py audit
 """
 
 import argparse
@@ -577,7 +577,13 @@ def find_long_paragraph(root):
         if re.search(r"cookie|privacy|copyright|all rights reserved|newsletter|"
                      r"sign up|log ?in|javascript", txt, re.I):
             continue
-        if not is_product_prose(txt) or is_supplier_paragraph(txt):
+        # CAVEAT catches "Please note: The pigment-dyeing process gives each
+        # garment unique character..." -- a real fact about the product, but a
+        # production disclaimer, not a description of the garment. It was
+        # already filtered out of the rich-HTML path; it has to be filtered
+        # here too, because once the SEO and page-furniture paragraphs are
+        # gone a disclaimer is often the longest one left standing.
+        if not is_product_prose(txt) or is_supplier_paragraph(txt) or CAVEAT.match(txt):
             continue
         if len(txt) > len(best):
             best = txt
@@ -871,7 +877,7 @@ def scrape_page(path, site, dump=False):
 
     if not result["description"] and schema:
         val = clean_text(schema.get("description"))
-        if is_product_prose(val):
+        if is_product_prose(val) and not CAVEAT.match(val):
             result["description"] = val
             result["description_source"] = "JSON-LD Product.description"
 
@@ -921,6 +927,16 @@ def scrape_page(path, site, dump=False):
         if note:
             result["supplier_note"] = note
             result["supplier_source"] = "responsible-sourcing paragraph on the page"
+
+    # Any caveat paragraph on the page is real product information, so it is
+    # preserved as a bullet rather than thrown away -- just never used as the
+    # description.
+    for node in root.iter():
+        if node.tag != "p":
+            continue
+        for line in split_lines(node.inner_text()):
+            if CAVEAT.match(line) and 40 < len(line) < 400 and line not in result["features"]:
+                result["features"].append(line)
 
     result["features"] = [safe_feature(f) for f in result["features"]
                          if not BOILERPLATE_LINE.search(f)]
@@ -1685,7 +1701,7 @@ def main():
     ap = argparse.ArgumentParser(
         description="Scrape, polish, and audit product descriptions for the Ink Pusher catalog.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="Run `python build_descriptions.py <subcommand> -h` for each one's flags.",
+        epilog="Run `python3 build_descriptions.py <subcommand> -h` for each one's flags.",
     )
     sub = ap.add_subparsers(dest="cmd", required=True)
 

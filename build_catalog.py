@@ -104,7 +104,9 @@ one for every color -- but it's an approximation. Skim the output and nudge
 any that look off before publishing.
 """
 
+import argparse
 import io
+import os
 import json
 import re
 import sys
@@ -611,7 +613,7 @@ def warn_about_id_collisions(catalog, product_id, brand, style):
         print(f"    Pass just the brand name (e.g. \"Bella/Canvas\", not \"Bella/Canvas 6400CVC\").\n")
 
 
-def run_description_scrape(site, source, brand, style, csv_path):
+def run_description_scrape(site, source, brand, style, csv_path, want_fetch=True):
     """--descriptions: hand the same saved page to build_descriptions.py so the
     product's write-up lands in the bulk-import CSV in the same run as its
     photos. Deliberately non-fatal -- the catalog entry and images are already
@@ -651,7 +653,40 @@ def run_description_scrape(site, source, brand, style, csv_path):
                            found["features"], found["supplier_note"])
     bd.write_csv(csv_path, rows)
     print(f"  {what.capitalize()} '{product}' in {Path(csv_path).resolve()}")
-    print("  Import it from Product Admin -> Bulk tools, or polish it first:")
+
+    # The page had specs but nothing describing the garment -- the normal case
+    # on S&S. Go get one from the manufacturer rather than leaving a blank cell
+    # and a follow-up step to forget.
+    row = next((r for r in rows if r.get("Product") == product), None)
+    needs_description = row is not None and not (row.get("Description") or "").strip()
+    if needs_description and want_fetch:
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            print("\n  No description on that page (normal for S&S -- its spec list IS its copy).")
+            print("  Looking one up on the manufacturer's site needs an API key. Set one with:")
+            print("    python3 build_descriptions.py setkey")
+            print(f"  then: python3 build_descriptions.py fetch --only \"{product}\"")
+            return
+        print("\n  No description on that page (normal for S&S -- its spec list IS its copy).")
+        print("  Looking one up on the manufacturer's own site. This does a live web")
+        print("  search and costs a few cents; pass --no-fetch to skip it.\n")
+        try:
+            args = argparse.Namespace(
+                csv=csv_path, only=product, from_catalog=False,
+                catalog="catalog.json", limit=None, domains=None,
+                model="claude-opus-5",
+            )
+            bd.cmd_fetch(args)
+        except SystemExit:
+            pass
+        except Exception as e:
+            print(f"  ! the lookup failed ({e}). The photos and catalog entry are fine;")
+            print(f"    retry with: python3 build_descriptions.py fetch --only \"{product}\"")
+        return
+    if needs_description:
+        print(f"  No description found. To look one up on the manufacturer's site:")
+        print(f"    python3 build_descriptions.py fetch --only \"{product}\"")
+        return
+    print("  Import it from Product Admin -> Bulk tools, or reword it first:")
     print(f"    python3 build_descriptions.py polish --only \"{product}\"")
 
 
@@ -690,6 +725,12 @@ def main():
     # product and describing it are the same job in practice, so the default is
     # to do both; --no-descriptions opts out.
     want_descriptions = True
+    # Also ON BY DEFAULT, and it matters most where the scrape can't help: an
+    # S&S page carries no prose about the garment at all, and S&S is most of
+    # this catalog. Without this, "add a product" reliably ends with an empty
+    # description and a second command nobody remembers to run. This one costs
+    # money (a live web search, a few cents), so --no-fetch turns it off.
+    want_fetch = True
 
     cleaned = []
     i = 0
@@ -697,6 +738,10 @@ def main():
         arg = rest[i]
         if arg == "--no-descriptions":
             want_descriptions = False
+            i += 1
+            continue
+        if arg == "--no-fetch":
+            want_fetch = False
             i += 1
             continue
         if arg == "--descriptions":
@@ -729,7 +774,7 @@ def main():
     cropping = any(v > 0 for v in crop.values())
 
     if len(rest) < 5:
-        print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions]")
+        print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions] [--no-fetch]")
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
@@ -876,7 +921,7 @@ def main():
             print(f"  - {name}: {reason}")
 
     if want_descriptions:
-        run_description_scrape(site, source, brand, style, descriptions_csv)
+        run_description_scrape(site, source, brand, style, descriptions_csv, want_fetch)
 
     if site == "sanmar":
         style_num, all_slugs = sanmar_list_other_colors(html)

@@ -37,3 +37,30 @@ easy to reintroduce:
 `mockup_generator_v2_3.html` deliberately share one palette and the same
 "sticker" card treatment (2px outline, hard offset shadow). If the palette
 changes, change it in all four — they are meant to read as one product.
+
+## Protection against accidental deletion
+
+Files in a git repo can't usefully be locked in Finder. Git has to rewrite them
+on a pull or a branch switch, and `build_catalog.py` / `build_descriptions.py`
+have to rewrite `catalog.json`, `product_descriptions.csv` and `catalog_images/`
+on every run. A locked file breaks both, in ways that look like the tools are
+broken rather than like a lock.
+
+Deleting a file locally isn't really the danger anyway — it's in the Trash, and
+`git checkout HEAD -- .` brings it back. The damage happens when a deletion gets
+**committed and pushed**: then it's gone from GitHub too, and whoever pulls next
+loses it as well.
+
+So there's a pre-commit hook in `.githooks/` that refuses any commit deleting
+`catalog.json`, `product_descriptions.csv`, a `build_*.py`, anything in
+`squarespace/`, or more than 25 files at once from `catalog_images/`. Removing
+one discontinued colour's photos stays routine; wiping a folder does not.
+
+**On a second machine the hook has to be switched on once**, from Terminal in
+this folder:
+
+```
+git config core.hooksPath .githooks
+```
+
+To delete something deliberately, commit from Terminal with `--no-verify`.

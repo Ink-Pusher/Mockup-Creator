@@ -1,0 +1,46 @@
+#!/bin/sh
+# Refuses a commit that DELETES something the catalog can't work without.
+#
+# Files in a git repo can't usefully be locked in Finder: git has to be able to
+# rewrite them on a pull or a branch switch, and the scripts have to be able to
+# rewrite catalog.json, product_descriptions.csv and catalog_images/ on every
+# run. A locked file breaks both, loudly and confusingly.
+#
+# Deleting a file locally isn't the real danger anyway -- it's in the Trash, and
+# git can restore it. The damage happens when a deletion gets COMMITTED and
+# PUSHED: now it's gone from GitHub, and the next person to pull loses it too.
+# That's the step this stops.
+#
+# To delete something on purpose:  git commit --no-verify
+
+PROTECTED='^(catalog\.json|product_descriptions\.csv|build_[a-z_]+\.py|squarespace/|catalog_images/)'
+IMAGE_DELETE_LIMIT=25
+
+deleted=$(git diff --cached --name-only --diff-filter=D | grep -E "$PROTECTED")
+[ -z "$deleted" ] && exit 0
+
+images=$(printf '%s\n' "$deleted" | grep -c '^catalog_images/')
+others=$(printf '%s\n' "$deleted" | grep -v '^catalog_images/')
+
+# Removing a discontinued colour's photos is routine; removing hundreds is not.
+if [ -z "$others" ] && [ "$images" -le "$IMAGE_DELETE_LIMIT" ]; then
+  exit 0
+fi
+
+echo ""
+echo "  ✋ This commit DELETES files the catalog depends on."
+echo ""
+if [ -n "$others" ]; then
+  printf '%s\n' "$others" | sed 's/^/      /'
+fi
+if [ "$images" -gt 0 ]; then
+  echo "      ...and $images file(s) under catalog_images/"
+fi
+echo ""
+echo "  If that wasn't deliberate, nothing is lost -- put them back with:"
+echo "      git checkout HEAD -- ."
+echo ""
+echo "  If you really do mean to delete them, commit again from Terminal with:"
+echo "      git commit --no-verify -m \"your message\""
+echo ""
+exit 1

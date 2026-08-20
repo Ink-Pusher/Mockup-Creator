@@ -22,6 +22,17 @@ SETUP (one time):
 USAGE:
     python build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
         [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]
+        [--descriptions [product_descriptions.csv]]
+
+    --descriptions ALSO reads the product's write-up (description paragraph,
+    spec bullets, responsible-supplier note) off the very same saved page and
+    merges it into a CSV shaped for Product Admin's "Bulk tools -> Import
+    descriptions (CSV)" importer -- so one run covers a product's photos, its
+    catalog.json entry, AND its copy. See build_descriptions.py, which does
+    the actual work and can also be run on its own; that file's docstring
+    explains where the text is found and what to do when a page defeats it.
+    Never fatal: if no write-up can be found, the photos and catalog entry are
+    still written and the run just tells you to follow up.
 
     kind must be one of: tee, hoodie, cap, tote
 
@@ -565,6 +576,84 @@ PREEXTRACTED_IMAGE_SITES = {"sanmar-pdf"}
 # Main pipeline -- identical regardless of which site the data came from
 # ---------------------------------------------------------------------------
 
+def warn_about_id_collisions(catalog, product_id, brand, style):
+    """Catch the two ways a product quietly ends up broken in the catalog.
+
+    Both actually happened. Typing the brand as "BellaCanvas" once and
+    "Bella/Canvas" another time produced ids `bellacanvas-3001y` and
+    `bella-canvas-3001y` -- two entries for the same shirt, and since the
+    photos only ever went into one folder, the other showed 39 broken
+    thumbnails on the live catalog page. Separately, passing a <brand> that
+    already ended in the style number produced `bella-canvas-6400-cvc-6400-cvc`,
+    whose images were written under a different folder than the entry pointed
+    at, breaking all 33 of its colours the same way.
+
+    Warn rather than refuse: a genuinely new style whose name resembles an
+    existing one is legitimate, and this script isn't in a position to know
+    the difference."""
+    def norm(t):
+        return re.sub(r"[^a-z0-9]", "", (t or "").lower())
+
+    key = norm(f"{brand}{style}")
+    for p in catalog.get("products", []):
+        if p.get("id") == product_id:
+            continue
+        if norm(f"{p.get('brand','')}{p.get('style','')}") == key:
+            print(f"\n  ! WARNING: '{p['id']}' is already {p.get('brand')} {p.get('style')} --")
+            print(f"    the same product as this run's '{product_id}', just slugged differently.")
+            print(f"    You'll end up with two entries and one of them will have no photos.")
+            print(f"    Re-run using the brand spelled exactly as '{p.get('brand')}' to update it instead.\n")
+
+    if norm(style) and product_id.count(slugify(style)) > 1:
+        print(f"\n  ! WARNING: the style '{style}' appears twice in the generated id")
+        print(f"    '{product_id}' -- the <brand> argument probably already contains it.")
+        print(f"    Pass just the brand name (e.g. \"Bella/Canvas\", not \"Bella/Canvas 6400CVC\").\n")
+
+
+def run_description_scrape(site, source, brand, style, csv_path):
+    """--descriptions: hand the same saved page to build_descriptions.py so the
+    product's write-up lands in the bulk-import CSV in the same run as its
+    photos. Deliberately non-fatal -- the catalog entry and images are already
+    written and correct by the time this runs, so a description that can't be
+    found is a note to follow up on, never a reason to fail the run."""
+    print("\n--- descriptions (--descriptions) ---")
+    if site == "sanmar-pdf":
+        print("  A Media Library PDF has no description text in it -- skipping.")
+        print("  Save the SanMar product PAGE and run:")
+        print(f"    python build_descriptions.py scrape --site sanmar <page.html> \"{brand}\" {style}")
+        return
+    try:
+        import build_descriptions as bd
+    except ImportError:
+        print("  build_descriptions.py isn't next to this script -- skipping.")
+        return
+
+    csv_path = csv_path or bd.DEFAULT_CSV
+    try:
+        found = bd.scrape_page(source, site)
+    except Exception as e:
+        print(f"  ! couldn't read a write-up off that page: {e}")
+        return
+
+    product = f"{brand} {style}".strip()
+    if not found["description"] and not found["features"]:
+        print(f"  Nothing usable found for '{product}'. To see what the page did offer:")
+        print(f"    python build_descriptions.py scrape --site {site} {source} \"{brand}\" {style} --dump")
+        return
+
+    print(f"  Description : {found['description_source'] or 'not found'}")
+    print(f"  Features    : {found['features_source'] or 'not found'} ({len(found['features'])} bullet(s))")
+    print(f"  Supplier    : {found['supplier_note'] or '(none found)'}")
+
+    rows = bd.read_csv(csv_path)
+    what, _ = bd.merge_row(rows, product, found["description"],
+                           found["features"], found["supplier_note"])
+    bd.write_csv(csv_path, rows)
+    print(f"  {what.capitalize()} '{product}' in {Path(csv_path).resolve()}")
+    print("  Import it from Product Admin -> Bulk tools, or polish it first:")
+    print(f"    python build_descriptions.py polish --only \"{product}\"")
+
+
 def main():
     args = sys.argv[1:]
     if len(args) < 2 or args[0] != "--site":
@@ -588,10 +677,27 @@ def main():
         "--crop-top": "top", "--crop-bottom": "bottom",
         "--crop-left": "left", "--crop-right": "right",
     }
+    # --descriptions [csv]: after the images/catalog.json work is done, also
+    # run build_descriptions.py's scraper over the SAME saved page and merge
+    # this product's write-up into the CSV the Product Admin bulk importer
+    # reads. Optional and off by default -- the page is already in memory, so
+    # this costs one extra parse and no extra downloads.
+    descriptions_csv = None
+    want_descriptions = False
+
     cleaned = []
     i = 0
     while i < len(rest):
         arg = rest[i]
+        if arg == "--descriptions":
+            want_descriptions = True
+            nxt = rest[i + 1] if i + 1 < len(rest) else None
+            if nxt and not nxt.startswith("--") and nxt.lower().endswith(".csv"):
+                descriptions_csv = nxt
+                i += 2
+            else:
+                i += 1
+            continue
         if arg in CROP_FLAGS:
             if i + 1 >= len(rest):
                 print(f"{arg} needs a value (fraction between 0 and 0.49, e.g. {arg} 0.18)")
@@ -613,7 +719,7 @@ def main():
     cropping = any(v > 0 for v in crop.values())
 
     if len(rest) < 5:
-        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]")
+        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv]]")
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
@@ -705,6 +811,7 @@ def main():
         sys.exit(1)
 
     catalog = load_catalog(catalog_path)
+    warn_about_id_collisions(catalog, product_id, brand, style)
     existing = next((p for p in catalog["products"] if p.get("id") == product_id), None)
     popular_value = existing.get("popular", False) if existing else False
 
@@ -732,6 +839,22 @@ def main():
     })
     save_catalog(catalog_path, catalog)
 
+    # Merging keeps colors that were added by earlier runs, which is what makes
+    # the one-color-per-run SanMar workflow work -- but it also silently keeps a
+    # color the vendor has since RENAMED or discontinued. Its swatch stays on
+    # the catalog and product pages pointing at an image that was never saved,
+    # so it renders as an empty square. ("Athletic Heather" on Bella/Canvas 6400
+    # was exactly this: S&S now lists it as "Solid Athletic Grey".)
+    stale = [c for c in final_colors
+             if not Path(c["front"]).exists() or not Path(c["back"]).exists()]
+    if stale:
+        print(f"\n  ! {len(stale)} color(s) on this product have no image file on disk:")
+        for c in stale:
+            print(f"      - {c['name']}")
+        print("    They aren't on the page you just saved, so they were left untouched rather")
+        print("    than deleted. If the vendor renamed or discontinued them, remove them from")
+        print(f"    {catalog_path} -- otherwise they show as blank swatches on the live site.")
+
     print(f"\nDone.")
     print(f"Images saved under: {image_dir.resolve()}")
     print(f"Catalog updated: {catalog_path.resolve()}")
@@ -741,6 +864,9 @@ def main():
         print(f"\nSkipped {len(skipped)} color(s):")
         for name, reason in skipped:
             print(f"  - {name}: {reason}")
+
+    if want_descriptions:
+        run_description_scrape(site, source, brand, style, descriptions_csv)
 
     if site == "sanmar":
         style_num, all_slugs = sanmar_list_other_colors(html)

@@ -579,6 +579,78 @@ PREEXTRACTED_IMAGE_SITES = {"sanmar-pdf"}
 # Main pipeline -- identical regardless of which site the data came from
 # ---------------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------------
+# Multi-colour swatches
+# ---------------------------------------------------------------------------
+# A two-tone product ("White/ Charcoal", a ringer tee, a raglan, most trucker
+# hats) gets ONE sampled hex, because sample_swatch_hex averages the middle of
+# the photo. On a swatch that reads as a single muddy colour that matches
+# neither half -- "Grey Heather/ Black" sampled as #cac6c7, which is just the
+# grey.
+#
+# The colour NAME already carries the answer, and the catalog itself is the
+# colour dictionary: "Charcoal" and "Black" both exist as solid colours on
+# other products, with hexes sampled from real photos. So component hexes are
+# resolved by looking each half of the name up against every solid colour in
+# the catalog. No hand-maintained colour table to keep current, and it gets
+# better on its own as more solid colours are added.
+#
+# Writes `hexes: [...]` alongside the existing `hex`, which is left untouched
+# as the fallback for the ~23% whose parts never appear as a solid anywhere
+# (e.g. "Quarry", "Biscuit", "Arid Multicam").
+
+MULTI_NAME_RE = re.compile(r"\s*/\s*")
+
+
+def _norm_colour_name(name):
+    n = (name or "").lower()
+    n = re.sub(r"\b(cmb|combo|solid|blend|tri-?blend)\b", " ", n)
+    n = re.sub(r"[^a-z0-9]+", " ", n).strip()
+    n = n.replace("gray", "grey")
+    # "Charcoal Heather" and "Heather Charcoal" name the same colour.
+    return " ".join(sorted(n.split()))
+
+
+def _median_hex(hexes):
+    import statistics
+    chans = [[int(h.lstrip("#")[i:i + 2], 16) for h in hexes] for i in (0, 2, 4)]
+    return "#{:02x}{:02x}{:02x}".format(*[int(statistics.median(c)) for c in chans])
+
+
+def annotate_multi_colour_swatches(catalog):
+    """Fill in `hexes` on every multi-part colour whose components can be
+    resolved. Re-run over the whole catalog each time, so a colour that was
+    unresolvable before becomes resolvable once its component turns up as a
+    solid on some later product."""
+    lookup = {}
+    for prod in catalog.get("products", []):
+        for col in prod.get("colors", []):
+            if MULTI_NAME_RE.search(col.get("name", "")):
+                continue
+            key = _norm_colour_name(col.get("name"))
+            if key and col.get("hex"):
+                lookup.setdefault(key, []).append(col["hex"])
+    lookup = {k: _median_hex(v) for k, v in lookup.items()}
+
+    resolved = unresolved = 0
+    for prod in catalog.get("products", []):
+        for col in prod.get("colors", []):
+            name = col.get("name", "")
+            if not MULTI_NAME_RE.search(name):
+                col.pop("hexes", None)   # in case a name was corrected to a solid
+                continue
+            parts = [_norm_colour_name(x) for x in MULTI_NAME_RE.split(name)]
+            hexes = [lookup.get(x) for x in parts if x]
+            if hexes and all(hexes):
+                col["hexes"] = hexes[:3]   # three bands is the most a swatch can show legibly
+                resolved += 1
+            else:
+                col.pop("hexes", None)
+                unresolved += 1
+    return resolved, unresolved
+
+
 def warn_about_id_collisions(catalog, product_id, brand, style):
     """Catch the two ways a product quietly ends up broken in the catalog.
 
@@ -892,6 +964,14 @@ def main():
         "popular": popular_value,
         "colors": final_colors,
     })
+    # Do this before saving, and over the WHOLE catalog rather than just this
+    # product -- the colour a new two-tone name needs may live on a product
+    # added months ago, and vice versa.
+    resolved, unresolved = annotate_multi_colour_swatches(catalog)
+    if resolved or unresolved:
+        print(f"\nTwo-tone swatches: {resolved} colour(s) resolved into components, "
+              f"{unresolved} left as a single averaged swatch.")
+
     save_catalog(catalog_path, catalog)
 
     # Merging keeps colors that were added by earlier runs, which is what makes

@@ -444,6 +444,7 @@ async function loadCatalog(){
           colors: p.colors.map(c => ({
             name: c.name,
             hex: c.hex,
+            hexes: c.hexes || null,
             frontSrc: CATALOG_BASE_URL + c.front,
             backSrc: CATALOG_BASE_URL + c.back,
           })),
@@ -541,6 +542,25 @@ function renderBrandFilter(inCategory){
 
 
 // Perceived brightness, for spreading the swatch sample across light->dark.
+// A two-tone product -- a ringer or raglan tee, most trucker hats -- has ONE
+// averaged hex in catalog.json, sampled from the middle of the photo, and it
+// matches neither half: "Grey Heather/ Black" sampled as #cac6c7, which is
+// just the grey. build_catalog.py now resolves those names into their
+// component colours and stores them as `hexes`. Drawn as hard-stop diagonal
+// bands so a swatch shows what the garment actually is.
+// (Duplicated in apparel_catalog.html, product_detail.html and the Mockup
+// Studio -- keep the three in sync, as with the tag taxonomy.)
+function swatchBackground(c){
+  const parts = Array.isArray(c && c.hexes) && c.hexes.length > 1 ? c.hexes.slice(0, 3) : null;
+  if(!parts) return (c && c.hex) || "#ccc";
+  const step = 100 / parts.length;
+  // Doubled stops rather than the newer two-position syntax, for the widest
+  // browser support -- this renders on whatever a customer happens to use.
+  const stops = parts
+    .map((h, i) => `${h} ${i * step}%, ${h} ${(i + 1) * step}%`)
+    .join(", ");
+  return `linear-gradient(135deg, ${stops})`;
+}
 function swatchLuma(hex){
   const h = String(hex||"").replace("#","");
   if(h.length !== 6) return null;
@@ -563,7 +583,7 @@ function swatchRowHTML(product){
   const total = (product.colors || []).length;
   if(!total) return "";
   const dots = swatchSample(product.colors, 6)
-    .map(c => `<span class="pswatch" style="background:${c.hex}" title="${String(c.name||"").replace(/"/g,"&quot;")}"></span>`)
+    .map(c => `<span class="pswatch" style="background:${swatchBackground(c)}" title="${String(c.name||"").replace(/"/g,"&quot;")}"></span>`)
     .join("");
   return `<div class="pswatches">${dots}<span class="pcount">${total} color${total===1?"":"s"}</span></div>`;
 }

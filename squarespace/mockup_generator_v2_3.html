@@ -1716,6 +1716,7 @@ async function loadRealCatalog(){
       colors: p.colors.map(c => ({
         name: c.name,
         hex: c.hex,
+        hexes: c.hexes || null,
         frontSrc: CATALOG_BASE_URL + c.front,
         backSrc: CATALOG_BASE_URL + c.back,
       })),
@@ -2854,6 +2855,25 @@ function miniIcon(kind, color){
 }
 
 /* ---------- Swatches ---------- */
+// A two-tone product -- a ringer or raglan tee, most trucker hats -- has ONE
+// averaged hex in catalog.json, sampled from the middle of the photo, and it
+// matches neither half: "Grey Heather/ Black" sampled as #cac6c7, which is
+// just the grey. build_catalog.py now resolves those names into their
+// component colours and stores them as `hexes`. Drawn as hard-stop diagonal
+// bands so a swatch shows what the garment actually is.
+// (Duplicated in apparel_catalog.html, product_detail.html and the Mockup
+// Studio -- keep the three in sync, as with the tag taxonomy.)
+function swatchBackground(c){
+  const parts = Array.isArray(c && c.hexes) && c.hexes.length > 1 ? c.hexes.slice(0, 3) : null;
+  if(!parts) return (c && c.hex) || "#ccc";
+  const step = 100 / parts.length;
+  // Doubled stops rather than the newer two-position syntax, for the widest
+  // browser support -- this renders on whatever a customer happens to use.
+  const stops = parts
+    .map((h, i) => `${h} ${i * step}%, ${h} ${(i + 1) * step}%`)
+    .join(", ");
+  return `linear-gradient(135deg, ${stops})`;
+}
 function renderSwatches(){
   const grid = document.getElementById("swatchGrid");
   const section = document.querySelector(".swatch-section");
@@ -2875,7 +2895,7 @@ function renderSwatches(){
       product.colors.forEach((c,i)=>{
         const item = document.createElement("div");
         item.className = "swatch-item" + (i===state.colorIndex ? " active" : "");
-        item.innerHTML = `<div class="swatch-dot" style="background:${c.hex}"></div><div class="swatch-name">${escapeHtml(c.name)}</div>`;
+        item.innerHTML = `<div class="swatch-dot" style="background:${swatchBackground(c)}"></div><div class="swatch-name">${escapeHtml(c.name)}</div>`;
         item.onclick = ()=>{ state.colorIndex = i; renderAll(); };
         grid.appendChild(item);
       });
@@ -2887,7 +2907,7 @@ function renderSwatches(){
   product.colors.forEach((c,i)=>{
     const item = document.createElement("div");
     item.className = "swatch-item" + (i===state.colorIndex ? " active" : "");
-    item.innerHTML = `<div class="swatch-dot" style="background:${c.hex}"></div><div class="swatch-name">${escapeHtml(c.name)}</div>`;
+    item.innerHTML = `<div class="swatch-dot" style="background:${swatchBackground(c)}"></div><div class="swatch-name">${escapeHtml(c.name)}</div>`;
     item.onclick = ()=>{ state.colorIndex = i; renderAll(); };
     grid.appendChild(item);
   });

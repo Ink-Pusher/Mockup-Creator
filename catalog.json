@@ -13467,6 +13467,262 @@
           "back": "catalog_images/bella-canvas-6400/vintage-white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "hanes-p170",
+      "name": "Unisex EcoSmart Hooded Sweatshirt",
+      "brand": "Hanes",
+      "style": "P170",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f4f5f7",
+          "front": "catalog_images/hanes-p170/white_front.jpg",
+          "back": "catalog_images/hanes-p170/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2b292c",
+          "front": "catalog_images/hanes-p170/black_front.jpg",
+          "back": "catalog_images/hanes-p170/black_back.jpg"
+        },
+        {
+          "name": "Army Brown",
+          "hex": "#564639",
+          "front": "catalog_images/hanes-p170/army-brown_front.jpg",
+          "back": "catalog_images/hanes-p170/army-brown_back.jpg"
+        },
+        {
+          "name": "Ash",
+          "hex": "#dbdbdb",
+          "front": "catalog_images/hanes-p170/ash_front.jpg",
+          "back": "catalog_images/hanes-p170/ash_back.jpg"
+        },
+        {
+          "name": "Athletic Cardinal",
+          "hex": "#691731",
+          "front": "catalog_images/hanes-p170/athletic-cardinal_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-cardinal_back.jpg"
+        },
+        {
+          "name": "Athletic Crimson",
+          "hex": "#ba2632",
+          "front": "catalog_images/hanes-p170/athletic-crimson_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-crimson_back.jpg"
+        },
+        {
+          "name": "Athletic Dark Green",
+          "hex": "#36564c",
+          "front": "catalog_images/hanes-p170/athletic-dark-green_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-dark-green_back.jpg"
+        },
+        {
+          "name": "Athletic Gold",
+          "hex": "#e5d09d",
+          "front": "catalog_images/hanes-p170/athletic-gold_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-gold_back.jpg"
+        },
+        {
+          "name": "Athletic Navy",
+          "hex": "#2a314b",
+          "front": "catalog_images/hanes-p170/athletic-navy_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-navy_back.jpg"
+        },
+        {
+          "name": "Athletic Purple",
+          "hex": "#442e6e",
+          "front": "catalog_images/hanes-p170/athletic-purple_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-purple_back.jpg"
+        },
+        {
+          "name": "Athletic Red",
+          "hex": "#c10f2a",
+          "front": "catalog_images/hanes-p170/athletic-red_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-red_back.jpg"
+        },
+        {
+          "name": "Athletic Royal",
+          "hex": "#1d5ab6",
+          "front": "catalog_images/hanes-p170/athletic-royal_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-royal_back.jpg"
+        },
+        {
+          "name": "Athletic Teal",
+          "hex": "#03b5b9",
+          "front": "catalog_images/hanes-p170/athletic-teal_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-teal_back.jpg"
+        },
+        {
+          "name": "Athletic Yellow",
+          "hex": "#efd538",
+          "front": "catalog_images/hanes-p170/athletic-yellow_front.jpg",
+          "back": "catalog_images/hanes-p170/athletic-yellow_back.jpg"
+        },
+        {
+          "name": "Carolina Blue",
+          "hex": "#779fdd",
+          "front": "catalog_images/hanes-p170/carolina-blue_front.jpg",
+          "back": "catalog_images/hanes-p170/carolina-blue_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#4e4d4f",
+          "front": "catalog_images/hanes-p170/charcoal-heather_front.jpg",
+          "back": "catalog_images/hanes-p170/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Deep Forest",
+          "hex": "#414e47",
+          "front": "catalog_images/hanes-p170/deep-forest_front.jpg",
+          "back": "catalog_images/hanes-p170/deep-forest_back.jpg"
+        },
+        {
+          "name": "Deep Red",
+          "hex": "#950336",
+          "front": "catalog_images/hanes-p170/deep-red_front.jpg",
+          "back": "catalog_images/hanes-p170/deep-red_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#374783",
+          "front": "catalog_images/hanes-p170/deep-royal_front.jpg",
+          "back": "catalog_images/hanes-p170/deep-royal_back.jpg"
+        },
+        {
+          "name": "Denim Blue",
+          "hex": "#57618b",
+          "front": "catalog_images/hanes-p170/denim-blue_front.jpg",
+          "back": "catalog_images/hanes-p170/denim-blue_back.jpg"
+        },
+        {
+          "name": "Fatigue Green",
+          "hex": "#716b5d",
+          "front": "catalog_images/hanes-p170/fatigue-green_front.jpg",
+          "back": "catalog_images/hanes-p170/fatigue-green_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#50546e",
+          "front": "catalog_images/hanes-p170/heather-navy_front.jpg",
+          "back": "catalog_images/hanes-p170/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#e44059",
+          "front": "catalog_images/hanes-p170/heather-red_front.jpg",
+          "back": "catalog_images/hanes-p170/heather-red_back.jpg"
+        },
+        {
+          "name": "Kelly Green",
+          "hex": "#3fa563",
+          "front": "catalog_images/hanes-p170/kelly-green_front.jpg",
+          "back": "catalog_images/hanes-p170/kelly-green_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#afcbe3",
+          "front": "catalog_images/hanes-p170/light-blue_front.jpg",
+          "back": "catalog_images/hanes-p170/light-blue_back.jpg"
+        },
+        {
+          "name": "Light Steel",
+          "hex": "#c0bfc2",
+          "front": "catalog_images/hanes-p170/light-steel_front.jpg",
+          "back": "catalog_images/hanes-p170/light-steel_back.jpg"
+        },
+        {
+          "name": "Lime",
+          "hex": "#9abc65",
+          "front": "catalog_images/hanes-p170/lime_front.jpg",
+          "back": "catalog_images/hanes-p170/lime_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#581d23",
+          "front": "catalog_images/hanes-p170/maroon_front.jpg",
+          "back": "catalog_images/hanes-p170/maroon_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#3a3f52",
+          "front": "catalog_images/hanes-p170/navy_front.jpg",
+          "back": "catalog_images/hanes-p170/navy_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#e8511b",
+          "front": "catalog_images/hanes-p170/orange_front.jpg",
+          "back": "catalog_images/hanes-p170/orange_back.jpg"
+        },
+        {
+          "name": "Pale Pink",
+          "hex": "#eed0d7",
+          "front": "catalog_images/hanes-p170/pale-pink_front.jpg",
+          "back": "catalog_images/hanes-p170/pale-pink_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#5a4f87",
+          "front": "catalog_images/hanes-p170/purple_front.jpg",
+          "back": "catalog_images/hanes-p170/purple_back.jpg"
+        },
+        {
+          "name": "Safety Green",
+          "hex": "#d3e77a",
+          "front": "catalog_images/hanes-p170/safety-green_front.jpg",
+          "back": "catalog_images/hanes-p170/safety-green_back.jpg"
+        },
+        {
+          "name": "Safety Orange",
+          "hex": "#ef7c0c",
+          "front": "catalog_images/hanes-p170/safety-orange_front.jpg",
+          "back": "catalog_images/hanes-p170/safety-orange_back.jpg"
+        },
+        {
+          "name": "Sand",
+          "hex": "#d6cbbb",
+          "front": "catalog_images/hanes-p170/sand_front.jpg",
+          "back": "catalog_images/hanes-p170/sand_back.jpg"
+        },
+        {
+          "name": "Smoke Grey",
+          "hex": "#514f54",
+          "front": "catalog_images/hanes-p170/smoke-grey_front.jpg",
+          "back": "catalog_images/hanes-p170/smoke-grey_back.jpg"
+        },
+        {
+          "name": "Teal",
+          "hex": "#019dc4",
+          "front": "catalog_images/hanes-p170/teal_front.jpg",
+          "back": "catalog_images/hanes-p170/teal_back.jpg"
+        },
+        {
+          "name": "Tennessee Orange",
+          "hex": "#ef863b",
+          "front": "catalog_images/hanes-p170/tennessee-orange_front.jpg",
+          "back": "catalog_images/hanes-p170/tennessee-orange_back.jpg"
+        },
+        {
+          "name": "Texas Orange",
+          "hex": "#ca6039",
+          "front": "catalog_images/hanes-p170/texas-orange_front.jpg",
+          "back": "catalog_images/hanes-p170/texas-orange_back.jpg"
+        },
+        {
+          "name": "Wow Pink",
+          "hex": "#fc68aa",
+          "front": "catalog_images/hanes-p170/wow-pink_front.jpg",
+          "back": "catalog_images/hanes-p170/wow-pink_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#eede6d",
+          "front": "catalog_images/hanes-p170/yellow_front.jpg",
+          "back": "catalog_images/hanes-p170/yellow_back.jpg"
+        }
+      ]
     }
   ]
 }

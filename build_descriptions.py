@@ -379,9 +379,24 @@ SEO_BOILERPLATE = re.compile(
     r"free shipping|wholesale .{0,30}\bat\b|available at\b|"
     r"lowest price|great (?:clothing|selection|prices)|"
     r"in-?stock quantit|for your next program|decorator[- ]friendly|"
-    r"merch drops?\b|view .{0,20}quantities|order .{0,40} for your",
+    r"merch drops?\b|view .{0,20}quantities|order .{0,40} for your|"
+    r"live inventory|fast (?:U\.?S\.?|domestic) shipping|wholesale pricing|"
+    r"team stores?\b|favou?rite for merch",
     re.I,
 )
+
+# Sites whose <meta> description is store marketing rather than anything about
+# the garment, so the meta fallback is skipped for them outright. This is a
+# per-site fact, not a guess: across six real S&S pages checked (Next Level
+# 6410 and 7610, Bella/Canvas 3901 and 3001, Independent SS4500, Hanes P170)
+# the meta has been distributor copy every time, in six different phrasings --
+# "Shop for great clothing...", "Order ... for your next program", "Stock ...
+# with confidence", "...See live inventory and fast U.S. shipping at wholesale
+# pricing". Chasing each new phrasing with another keyword is a losing game;
+# the honest rule is that this source is never the product description here.
+# On-page PARAGRAPHS are still read normally -- S&S does sometimes carry real
+# copy there (SS4500 has a genuine one), which is why this skips only the meta.
+NO_META_DESCRIPTION = {"ssactivewear"}
 
 # Page furniture that sits in a <p> right alongside the real product copy:
 # inventory legends, returns policy, ordering instructions. Long enough and
@@ -866,7 +881,7 @@ def scrape_page(path, site, dump=False):
             result["description"] = val
             result["description_source"] = "longest product-copy paragraph"
 
-    if not result["description"]:
+    if not result["description"] and site not in NO_META_DESCRIPTION:
         val = from_meta(root, {"og:description", "twitter:description", "description"})
         if val:
             result["description"] = val

@@ -22,9 +22,10 @@ SETUP (one time):
 USAGE:
     python build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
         [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]
-        [--descriptions [product_descriptions.csv]]
+        [--descriptions [product_descriptions.csv]] [--no-descriptions]
 
-    --descriptions ALSO reads the product's write-up (description paragraph,
+    Reading the write-up is ON BY DEFAULT. Pass --descriptions only to point it
+    at a different CSV; pass --no-descriptions to skip it. It ALSO reads the product's write-up (description paragraph,
     spec bullets, responsible-supplier note) off the very same saved page and
     merges it into a CSV shaped for Product Admin's "Bulk tools -> Import
     descriptions (CSV)" importer -- so one run covers a product's photos, its
@@ -683,12 +684,21 @@ def main():
     # reads. Optional and off by default -- the page is already in memory, so
     # this costs one extra parse and no extra downloads.
     descriptions_csv = None
-    want_descriptions = False
+    # ON BY DEFAULT. It was opt-in at first, and the result was a product added
+    # with its photos and catalog entry but no write-up -- which looks like a
+    # silent failure, because nothing says the step was skipped. Adding a
+    # product and describing it are the same job in practice, so the default is
+    # to do both; --no-descriptions opts out.
+    want_descriptions = True
 
     cleaned = []
     i = 0
     while i < len(rest):
         arg = rest[i]
+        if arg == "--no-descriptions":
+            want_descriptions = False
+            i += 1
+            continue
         if arg == "--descriptions":
             want_descriptions = True
             nxt = rest[i + 1] if i + 1 < len(rest) else None
@@ -719,7 +729,7 @@ def main():
     cropping = any(v > 0 for v in crop.values())
 
     if len(rest) < 5:
-        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv]]")
+        print(f"Usage: python {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions]")
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]

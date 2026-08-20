@@ -16,6 +16,9 @@ reads:
 
 So the end-to-end flow for a new product becomes:
 
+    0. Open Terminal in the repo: GitHub Desktop -> Repository -> Open in
+       Terminal (Cmd-`). The repo lives wherever you cloned it, so there's no
+       one correct path to memorise.
     1. python3 build_catalog.py --site ... (photos + catalog.json, as before)
     2. python3 build_descriptions.py scrape --site ...   <- this script
     3. python3 build_descriptions.py polish              <- optional, see below
@@ -1490,8 +1493,13 @@ def cmd_doctor(args):
 
     here = Path.cwd()
     in_repo = (here / "build_descriptions.py").exists() and (here / "build_catalog.py").exists()
+    # Deliberately not a hardcoded path: the repo lives wherever each person
+    # cloned it, and telling someone to cd into a folder that isn't theirs is
+    # how "no such file or directory" happens in the first place.
     check("Running from the Mockup-Creator folder", in_repo, f"you are in {here}",
-          "cd ~/Documents/GitHub/Mockup-Creator\nthen run this command again")
+          "In GitHub Desktop: Repository menu -> Open in Terminal (Cmd-`),\n"
+          "which opens Terminal already in the right folder. Then run this again.\n"
+          "(Or drag the Mockup-Creator folder onto the Terminal icon in your Dock.)")
 
     cat = Path(args.catalog)
     n = None

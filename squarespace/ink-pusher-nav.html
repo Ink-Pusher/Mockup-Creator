@@ -1,0 +1,759 @@
+<!-- ================================================
+     INK PUSHER — Squarespace Landing Page Nav
+     Updated: swapped accent green to #28e9aa to match
+     the rest of the site, changed the "View Full Product
+     List" icon from a down-arrow to a 3-bar (hamburger)
+     icon, and made the mobile/desktop layout re-check
+     itself on resize/orientation change (not just once
+     on load) so rotating a phone or resizing a window
+     across the 768px breakpoint never strands a dropdown
+     in the wrong spot.
+     Paste into a Code Block at the top of the page
+     ================================================ -->
+<style>
+#ip-wrap {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    position: relative;
+    z-index: 9999;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+#ip-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
+#ip-wrap a { text-decoration: none; }
+
+/* ── Single nav bar ── */
+#ip-nav {
+    background: #000;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+    min-height: 70px;
+    overflow: visible;
+    position: relative;
+}
+
+/* ── View Full Product List ── */
+#ip-vpa {
+    display: inline-flex;
+    align-items: center;
+    background: #28e9aa;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-right: 12px;
+    font-size: 14px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    box-shadow: 2px 2px 0 #000;
+    white-space: nowrap;
+    flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+    transition: transform .1s, box-shadow .1s;
+}
+#ip-vpa:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
+
+/* Mega dropdown — position:fixed + JS-positioned, so it
+   escapes Squarespace's per-section stacking contexts entirely
+   (fixed is relative to the viewport, not any ancestor section) */
+#ip-mega {
+    display: none;
+    position: fixed;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 0 12px 12px 12px;
+    box-shadow: 6px 6px 0 #28e9aa;
+    padding: 24px;
+    z-index: 2147483647;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0 24px;
+    min-width: 980px;
+}
+#ip-mega.open { display: grid; }
+
+.ip-mega-col { display: flex; flex-direction: column; gap: 2px; }
+.ip-mega-col h4 {
+    font-size: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+.ip-mega-col a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border-left: 2px solid transparent;
+    transition: background .1s, padding-left .1s;
+}
+.ip-mega-col a:hover { background: #28e9aa; padding-left: 12px; }
+
+/* ── Nav items ── */
+#ip-items {
+    display: flex;
+    align-items: stretch;
+    align-self: stretch; /* fill #ip-nav's full height edge-to-edge against
+                             the white top/bottom rail, not just centered */
+    list-style: none;
+    flex: 1;
+    overflow: visible;
+    background: #fff; /* this is what makes the gaps between items — and
+                          the dividers themselves — read as white cutouts */
+}
+.ip-item {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex: 1; /* equal-width boxes — simpler and more reliable than sizing
+                each one to its own text, which is what kept going wrong */
+    justify-content: center;
+    list-style: none;
+}
+/* A real (small) gap between items, not an overlap — the white #ip-items
+   background shows through it, and because only the right edge has a
+   point, that gap naturally reads as an arrow-shaped white divider */
+.ip-item + .ip-item {
+    margin-left: 8px;
+}
+.ip-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    padding: 8px 24px;
+    color: var(--ip-text, #fff);
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    white-space: normal; /* longer labels wrap to a second line and stay
+                             centered, instead of forcing a wider box */
+    line-height: 1.3;
+    cursor: pointer;
+    flex: 1 1 auto;
+    position: relative; /* anchors the ::before shape below */
+    z-index: 0; /* establishes a local stacking context so the ::before's
+                   negative z-index only sinks behind THIS element's own
+                   text, not behind unrelated ancestors like #ip-items */
+    transition: color .15s;
+}
+/* The chevron shape lives ENTIRELY on this background layer, completely
+   separate from the text above it. The text sits in a plain rectangular
+   box with ordinary padding and is never itself clip-path'd, so it can
+   never be cut by the notch no matter how the shape's math resolves. */
+.ip-link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--ip-fill, #000);
+    z-index: -1;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%, 14px 50%);
+    transition: background-color .15s;
+}
+/* First item has nothing to its left, so it keeps a flat left edge */
+.ip-item:first-child .ip-link::before {
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
+}
+/* Promotional (the last real item, before the plain Search/Login <li>)
+   keeps its notch on the left but drops the point on the right — no
+   divider is needed between it and the login pill */
+.ip-item:nth-last-child(2) .ip-link::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 14px 50%);
+}
+/* Rainbow hover fill, one distinct color per item running left to right —
+   set as variables so both the background layer and the text color pick
+   them up together */
+.ip-item:nth-child(1):hover > .ip-link { --ip-fill: #ff4d3d; --ip-text: #fff; }
+.ip-item:nth-child(2):hover > .ip-link { --ip-fill: #9b5de5; --ip-text: #fff; }
+.ip-item:nth-child(3):hover > .ip-link { --ip-fill: #3a86ff; --ip-text: #fff; }
+.ip-item:nth-child(4):hover > .ip-link { --ip-fill: #28e9aa; --ip-text: #000; }
+.ip-item:nth-child(5):hover > .ip-link { --ip-fill: #ffd60a; --ip-text: #000; }
+.ip-caret { font-size: 11px; opacity: 1; flex-shrink: 0; }
+
+
+
+
+/* Dropdowns — fixed positioning, JS-calculated, same fix as
+   the mega-menu so they escape section stacking contexts */
+.ip-drop {
+    display: none;
+    position: fixed;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 6px 6px 0 #28e9aa;
+    padding: 8px 0;
+    z-index: 2147483647;
+    min-width: 200px;
+    list-style: none;
+}
+.ip-drop.open { display: block; }
+.ip-drop li { list-style: none; }
+.ip-drop li a {
+    display: block;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    transition: background .12s, padding-left .12s;
+}
+.ip-drop li a:hover { background: #28e9aa; padding-left: 26px; }
+
+/* Category sub-header inside a dropdown (e.g. "Displays" under
+   Signs & Banners), matching the .ip-dropdown-header treatment
+   on the white-label site */
+.ip-drop li.ip-drop-header {
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #888;
+    padding: 8px 20px 4px;
+    pointer-events: none;
+}
+.ip-drop li.ip-drop-divider {
+    height: 1px;
+    background: #eee;
+    margin: 6px 10px;
+    padding: 0;
+    pointer-events: none;
+}
+
+/* ── Right side ── */
+/* The Search/Login <li> is a direct child of #ip-items too, so without
+   this it would inherit #ip-items' white background — restore the black
+   backing here since only the gaps between the 5 nav items should be
+   white cutouts, not the login area. */
+#ip-items > li:last-child {
+    background: #000;
+}
+#ip-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+#ip-login {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #28e9aa;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    box-shadow: 2px 2px 0 #000;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform .1s, box-shadow .1s;
+}
+#ip-login:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
+
+/* ── Hamburger ── */
+#ip-burger {
+    display: none;
+    background: none;
+    border: 2px solid #000;
+    border-radius: 6px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   SAFETY BREAKPOINT — keeps the now-larger nav
+   text from crowding/overflowing on laptop-size
+   screens, before the mobile layout takes over
+   ══════════════════════════════════════════ */
+@media (max-width: 1280px) and (min-width: 769px) {
+    #ip-nav { padding: 0 12px; }
+    #ip-vpa { font-size: 12px; padding: 9px 16px; margin-right: 8px; }
+    .ip-item + .ip-item { margin-left: 5px; }
+    .ip-link { font-size: 12px; padding: 8px 18px; gap: 4px; }
+    .ip-link::before { clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%, 9px 50%); }
+    .ip-item:first-child .ip-link::before { clip-path: polygon(0 0, calc(100% - 9px) 0, 100% 50%, calc(100% - 9px) 100%, 0 100%); }
+    .ip-item:nth-last-child(2) .ip-link::before { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 9px 50%); }
+    .ip-caret { font-size: 10px; }
+    #ip-login { font-size: 11px; padding: 6px 10px; }
+}
+
+/* ══════════════════════════════════════════
+   MOBILE
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    #ip-nav { flex-wrap: wrap; padding: 8px 16px; gap: 8px; align-items: center; }
+    #ip-burger { display: flex; margin-left: auto; }
+    #ip-vpa { font-size: 11px; padding: 8px 12px; margin-right: 0; }
+    #ip-items { display: none; flex-direction: column; width: 100%; border-top: 1px solid #333; padding-top: 4px; background: transparent; align-self: auto; }
+    #ip-items.open { display: flex; }
+    .ip-item {
+        flex: none; width: 100%; flex-direction: column; justify-content: flex-start;
+        border-bottom: 1px solid #222;
+        margin-left: 0; /* chevron shapes are desktop-only */
+    }
+    .ip-link { justify-content: space-between; text-align: left; padding: 12px 4px; font-size: 14px; white-space: normal; }
+    .ip-link::before { content: none; }
+    .ip-item:nth-child(1):hover > .ip-link,
+    .ip-item:nth-child(2):hover > .ip-link,
+    .ip-item:nth-child(3):hover > .ip-link,
+    .ip-item:nth-child(4):hover > .ip-link,
+    .ip-item:nth-child(5):hover > .ip-link { --ip-fill: transparent; --ip-text: #fff; }
+    /* On mobile, dropdowns become static (in normal flow) instead
+       of fixed/floating, and are shown via .open class only */
+    .ip-drop { position: static !important; top: auto !important; left: auto !important; box-shadow: none; border: none; border-left: 3px solid #28e9aa; margin-left: 12px; border-radius: 0; background: #1a1a1a; }
+    .ip-drop li a { color: #fff; }
+    #ip-items > li:last-child { flex: none; justify-content: flex-start; }
+    #ip-right { width: 100%; flex-direction: column; margin-left: 0; padding: 8px 0; }
+    #ip-login { width: 100%; justify-content: center; border-radius: 8px; padding: 10px; font-size: 13px; }
+    #ip-mega { position: static !important; top: auto !important; left: auto !important; min-width: 0; width: 100%; grid-template-columns: 1fr 1fr; border-radius: 0; box-shadow: none; border: none; border-top: 2px solid #333; padding: 16px 8px; }
+}
+@media (max-width: 480px) {
+    #ip-mega { grid-template-columns: 1fr; }
+}
+</style>
+
+<div id="ip-wrap">
+<nav id="ip-nav">
+
+    <!-- View Full Product List -->
+    <a href="https://store.inkpusherscreenprinting.com/products/allproducts.html"
+       id="ip-vpa" onclick="ipVpaClick(event)">
+        &#9776; View Full Product List
+    </a>
+
+    <!-- Mega dropdown — CSS adjacent sibling of #ip-vpa -->
+    <div id="ip-mega">
+        <div class="ip-mega-col">
+            <h4>Business Cards</h4>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/105-Brown-Kraft-Cards">Brown Kraft Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/68-Natural-Cards">Natural Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/33-Business-Cards">Standard Business Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/51-Hot-Foil">Hot Foil</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/29-Inline-Foil">Inline Foil</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/110-Painted-Edge-Cards">Painted Edge Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/72-Pearl-Cards">Pearl Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/73-Plastic-Cards">Plastic Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/107-Raised-Foil">Raised Foil</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/108-Raised-Spot-Uv">Raised Spot UV</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/85-Silk-Cards">Silk Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/88-Suede-Cards">Suede Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/45-Waterproof">Waterproof</a>
+        </div>
+        <div class="ip-mega-col">
+            <h4>Marketing</h4>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/74-Postcards">Postcards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/50-Flyers-And-Brochures">Flyers &amp; Brochures</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/58-Letterhead">Letterhead</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/53-Greeting-Cards">Greeting Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/97-Booklets">Booklets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/67-Ncr-Forms">NCR Forms</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/36-Calendars">Calendars</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/38-Catalogs">Catalogs</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/43-Door-Hangers">Door Hangers</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/47-Event-Tickets">Event Tickets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/54-Hang-Tags">Hang Tags</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/55-Header-Cards">Header Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/61-Magnets">Magnets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/192-Menus">Menus</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/69-Notepads">Notepads</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/76-Presentation-Folders">Presentation Folders</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/79-Rack-Cards">Rack Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/83-Sell-Sheets">Sell Sheets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/91-Tear-Off-Cards">Tear Off Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/93-Trading-Cards">Trading Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/48-Every-Door-Direct-Mail">Every Door Direct Mail</a>
+        </div>
+        <div class="ip-mega-col">
+            <h4>Cards &amp; Stationery</h4>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/33-Business-Cards">Standard Business Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/110-Painted-Edge-Cards">Painted Edge Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/47-Event-Tickets">Event Tickets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/678-Envelope">Envelopes</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/43-Door-Hangers">Door Hangers</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/30-Announcement-Cards">Announcement Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/53-Greeting-Cards">Greeting Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/58-Letterhead">Letterhead</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/67-Ncr-Forms">NCR Forms</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/68-Natural-Cards">Natural Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/72-Pearl-Cards">Pearl Cards</a>
+        </div>
+        <div class="ip-mega-col">
+            <h4>Signs &amp; Posters</h4>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/56-Indoor-Banners">Indoor Banners</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/130-Fabric-Banners">Fabric Banners</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/49-Flags">Flags</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/28-Adhesive-Vinyl">Adhesive Vinyl</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/37-Car-Magnets">Car Magnets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/57-Large-Posters">Large Posters</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/98-Outdoor-Banners">Outdoor Banners</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/75-Posters">Posters</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/126-Sidewalk-Signs">Sidewalk Signs</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/84-Signs">Signs</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/95-Window-Clings">Window Clings</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/96-Window-Graphics">Window Graphics</a>
+            <h4 style="margin-top:14px">Displays</h4>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/31-Banners-With-Stand">Banners with Stand</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/39-Counter-Cards">Counter Cards</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/637-Displays">Displays</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/293-Event-Tents">Event Tents</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/129-Table-Covers">Table Covers</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/90-Table-Tent-Cards">Table Tent Cards</a>
+        </div>
+        <div class="ip-mega-col">
+            <h4>Promotional</h4>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/34-Buttons">Buttons</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/92-Tote-Bags">Tote Bags</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/81-Roll-Labels">Roll Labels</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/28-Adhesive-Vinyl">Adhesive Vinyl</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/64-Mounted-Canvas">Mounted Canvas</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/37-Car-Magnets">Car Magnets</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/70-Packaging">Packaging</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/35-Cd-And-Dvd">CD and DVD</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/product-view.html/65-Mugs">Mugs</a>
+            <h4 style="margin-top:14px">Services</h4>
+            <a href="https://www.inkpusherscreenprinting.com/services">Design Services</a>
+            <a href="https://store.inkpusherscreenprinting.com/services/mailing-services.html">Mailing Services</a>
+            <a href="https://store.inkpusherscreenprinting.com/orders/custom-quote.html">Custom Quote</a>
+            <a href="https://store.inkpusherscreenprinting.com/store/request-sample.html">Request Samples</a>
+        </div>
+    </div>
+
+    <!-- Hamburger — mobile only -->
+    <button id="ip-burger" onclick="ipToggleNav()" aria-label="Menu">&#9776;</button>
+
+    <!-- Nav items — matches the white-label site's top nav exactly:
+         Business Cards / Marketing / Cards & Stationery /
+         Signs & Banners (incl. Displays) / Promotional -->
+    <ul id="ip-items">
+
+        <li class="ip-item">
+            <a href="https://store.inkpusherscreenprinting.com/products/businesscards.html" class="ip-link" onclick="ipToggleDrop(event,this)">
+                Business Cards <span class="ip-caret">&#9660;</span>
+            </a>
+            <ul class="ip-drop">
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/105-Brown-Kraft-Cards">Brown Kraft Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/68-Natural-Cards">Natural Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/33-Business-Cards">Standard Business Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/51-Hot-Foil">Hot Foil</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/29-Inline-Foil">Inline Foil</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/110-Painted-Edge-Cards">Painted Edge Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/72-Pearl-Cards">Pearl Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/73-Plastic-Cards">Plastic Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/107-Raised-Foil">Raised Foil</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/108-Raised-Spot-Uv">Raised Spot UV</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/85-Silk-Cards">Silk Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/88-Suede-Cards">Suede Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/45-Waterproof">Waterproof</a></li>
+            </ul>
+        </li>
+
+        <li class="ip-item">
+            <a href="https://store.inkpusherscreenprinting.com/products/marketing.html" class="ip-link" onclick="ipToggleDrop(event,this)">
+                Marketing <span class="ip-caret">&#9660;</span>
+            </a>
+            <ul class="ip-drop">
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/74-Postcards">Postcards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/50-Flyers-And-Brochures">Flyers &amp; Brochures</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/58-Letterhead">Letterhead</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/53-Greeting-Cards">Greeting Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/97-Booklets">Booklets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/67-Ncr-Forms">NCR Forms</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/36-Calendars">Calendars</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/38-Catalogs">Catalogs</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/43-Door-Hangers">Door Hangers</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/47-Event-Tickets">Event Tickets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/54-Hang-Tags">Hang Tags</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/55-Header-Cards">Header Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/61-Magnets">Magnets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/192-Menus">Menus</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/69-Notepads">Notepads</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/76-Presentation-Folders">Presentation Folders</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/79-Rack-Cards">Rack Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/83-Sell-Sheets">Sell Sheets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/91-Tear-Off-Cards">Tear Off Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/93-Trading-Cards">Trading Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/48-Every-Door-Direct-Mail">Every Door Direct Mail</a></li>
+            </ul>
+        </li>
+
+        <li class="ip-item">
+            <a href="https://store.inkpusherscreenprinting.com/products/cardsandstationary.html" class="ip-link" onclick="ipToggleDrop(event,this)">
+                Cards &amp; Stationery <span class="ip-caret">&#9660;</span>
+            </a>
+            <ul class="ip-drop">
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/33-Business-Cards">Standard Business Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/110-Painted-Edge-Cards">Painted Edge Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/47-Event-Tickets">Event Tickets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/678-Envelope">Envelopes</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/43-Door-Hangers">Door Hangers</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/30-Announcement-Cards">Announcement Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/53-Greeting-Cards">Greeting Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/58-Letterhead">Letterhead</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/67-Ncr-Forms">NCR Forms</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/68-Natural-Cards">Natural Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/72-Pearl-Cards">Pearl Cards</a></li>
+            </ul>
+        </li>
+
+        <li class="ip-item">
+            <a href="https://store.inkpusherscreenprinting.com/products/signsandbanners.html" class="ip-link" onclick="ipToggleDrop(event,this)">
+                Signs &amp; Banners <span class="ip-caret">&#9660;</span>
+            </a>
+            <ul class="ip-drop">
+                <li class="ip-drop-header">Signs &amp; Posters</li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/56-Indoor-Banners">Indoor Banners</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/130-Fabric-Banners">Fabric Banners</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/49-Flags">Flags</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/28-Adhesive-Vinyl">Adhesive Vinyl</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/37-Car-Magnets">Car Magnets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/57-Large-Posters">Large Posters</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/98-Outdoor-Banners">Outdoor Banners</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/75-Posters">Posters</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/126-Sidewalk-Signs">Sidewalk Signs</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/84-Signs">Signs</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/95-Window-Clings">Window Clings</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/96-Window-Graphics">Window Graphics</a></li>
+                <li class="ip-drop-divider"></li>
+                <li class="ip-drop-header">Displays</li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/31-Banners-With-Stand">Banners with Stand</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/39-Counter-Cards">Counter Cards</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/637-Displays">Displays</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/293-Event-Tents">Event Tents</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/129-Table-Covers">Table Covers</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/90-Table-Tent-Cards">Table Tent Cards</a></li>
+            </ul>
+        </li>
+
+        <li class="ip-item">
+            <a href="https://store.inkpusherscreenprinting.com/products/promotional.html" class="ip-link" onclick="ipToggleDrop(event,this)">
+                Promotional <span class="ip-caret">&#9660;</span>
+            </a>
+            <ul class="ip-drop">
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/34-Buttons">Buttons</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/92-Tote-Bags">Tote Bags</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/81-Roll-Labels">Roll Labels</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/28-Adhesive-Vinyl">Adhesive Vinyl</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/64-Mounted-Canvas">Mounted Canvas</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/37-Car-Magnets">Car Magnets</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/70-Packaging">Packaging</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/35-Cd-And-Dvd">CD and DVD</a></li>
+                <li><a href="https://store.inkpusherscreenprinting.com/store/product-view.html/65-Mugs">Mugs</a></li>
+            </ul>
+        </li>
+
+        <!-- Search + Login -->
+        <li style="list-style:none;flex:1 0 auto;display:flex;align-items:center;justify-content:flex-end;padding:0 0 0 8px;">
+            <div id="ip-right">
+                <a href="https://store.inkpusherscreenprinting.com/account/login.html" id="ip-login">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="10" r="3"></circle><path d="M6.5 19a6.5 6.5 0 0 1 11 0"></path></svg>
+                    Login / Create Account
+                </a>
+            </div>
+        </li>
+
+    </ul>
+
+</nav>
+</div>
+
+<script>
+var ipMobile = window.innerWidth <= 768;
+
+function ipToggleNav() {
+    document.getElementById('ip-items').classList.toggle('open');
+}
+
+/* ── Desktop: position + show/hide on hover, since these are
+   fixed-position and can't use CSS-only hover tricks ── */
+function ipPositionAndShow(trigger, panel) {
+    var rect = trigger.getBoundingClientRect();
+    panel.style.top = rect.bottom + 'px';
+    panel.style.left = rect.left + 'px';
+    panel.classList.add('open');
+}
+function ipHide(panel) {
+    panel.classList.remove('open');
+}
+
+var ipMega, ipVpa;
+var ipItemDropPairs = [];
+var ipAllPanels = [];
+var ipCloseTimer = null;
+
+function ipCloseAll() {
+    ipAllPanels.forEach(function (p) { p.classList.remove('open'); });
+}
+
+function ipOpenOnly(trigger, panel) {
+    clearTimeout(ipCloseTimer);
+    ipCloseAll();
+    ipPositionAndShow(trigger, panel);
+}
+
+// Small delay before actually closing, so a brief gap between
+// the trigger and the panel (or between the panel's own edge
+// and a link inside it) doesn't slam the menu shut before the
+// mouse arrives. Each new mousemove check restarts the timer
+// rather than closing instantly.
+function ipScheduleClose() {
+    clearTimeout(ipCloseTimer);
+    ipCloseTimer = setTimeout(ipCloseAll, 250);
+}
+
+// Move every dropdown panel to <body> (desktop) or back to its
+// original spot in the markup (mobile), based on the CURRENT
+// window width. This re-runs on every resize/orientation change
+// — not just once on load — so switching between phone-portrait,
+// phone-landscape and desktop widths never leaves a panel
+// stranded in the wrong place (e.g. a phone rotated to landscape
+// is often wider than 768px, which used to break things).
+function ipApplyLayout() {
+    var wasMobile = ipMobile;
+    ipMobile = window.innerWidth <= 768;
+
+    if (ipMobile === wasMobile) return; // didn't cross the breakpoint, nothing to do
+
+    ipCloseAll();
+
+    if (ipMobile) {
+        // Back to mobile — restore panels to exactly where they
+        // started in the HTML (captured once on load)
+        if (ipMega._ipOrig) ipMega._ipOrig.parent.insertBefore(ipMega, ipMega._ipOrig.next);
+        ipItemDropPairs.forEach(function (pair) {
+            if (pair.drop._ipOrig) pair.drop._ipOrig.parent.insertBefore(pair.drop, pair.drop._ipOrig.next);
+        });
+    } else {
+        // Back to desktop — re-parent to <body> so the fixed-position
+        // panels escape Squarespace's per-section stacking contexts
+        document.body.appendChild(ipMega);
+        ipItemDropPairs.forEach(function (pair) { document.body.appendChild(pair.drop); });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    ipVpa = document.getElementById('ip-vpa');
+    ipMega = document.getElementById('ip-mega');
+
+    // ── Grab item/dropdown pairs BEFORE moving anything, since
+    // once a .ip-drop is re-parented to <body> it's no longer
+    // findable via item.querySelector('.ip-drop') — that query
+    // has to happen first, while the DOM is still in its original
+    // nested structure. ──
+    document.querySelectorAll('.ip-item').forEach(function (item) {
+        var link = item.querySelector('.ip-link');
+        var drop = item.querySelector('.ip-drop');
+        if (drop) ipItemDropPairs.push({ item: item, link: link, drop: drop });
+    });
+
+    ipAllPanels = [ipMega];
+    ipItemDropPairs.forEach(function (pair) { ipAllPanels.push(pair.drop); });
+
+    // Capture each panel's original parent + next-sibling ONCE,
+    // before anything gets moved, so ipApplyLayout can always put
+    // it back in exactly the right place later, no matter how many
+    // times the window crosses the mobile/desktop breakpoint.
+    ipMega._ipOrig = { parent: ipMega.parentNode, next: ipMega.nextSibling };
+    ipItemDropPairs.forEach(function (pair) {
+        pair.drop._ipOrig = { parent: pair.drop.parentNode, next: pair.drop.nextSibling };
+    });
+
+    if (!ipMobile) {
+        document.body.appendChild(ipMega);
+        ipItemDropPairs.forEach(function (pair) { document.body.appendChild(pair.drop); });
+    }
+
+    // View Full Product List -> mega menu
+    // (bound directly to the button itself — NOT a parent wrapper —
+    // since #ip-vpa's actual parent is the whole #ip-nav bar, which
+    // was the cause of the Login button incorrectly triggering this)
+    ipVpa.addEventListener('mouseenter', function () {
+        if (ipMobile) return;
+        ipOpenOnly(ipVpa, ipMega);
+    });
+
+    // Each nav item's dropdown — using the pairs captured above,
+    // not a fresh querySelector that would now fail
+    ipItemDropPairs.forEach(function (pair) {
+        pair.item.addEventListener('mouseenter', function () {
+            if (ipMobile) return;
+            ipOpenOnly(pair.link, pair.drop);
+        });
+    });
+
+    // Single global check: if the mouse isn't currently over the
+    // nav bar OR any open panel, schedule a close (with a short
+    // grace period) rather than closing instantly — this is what
+    // lets the cursor cross the small gap between a trigger and
+    // its dropdown without the menu vanishing first.
+    document.addEventListener('mousemove', function (e) {
+        if (ipMobile) return;
+        var nav = document.getElementById('ip-nav');
+        var overNav = nav.contains(e.target);
+        var overOpenPanel = false;
+        ipAllPanels.forEach(function (p) {
+            if (p.classList.contains('open') && p.contains(e.target)) overOpenPanel = true;
+        });
+        if (overNav || overOpenPanel) {
+            clearTimeout(ipCloseTimer);
+        } else {
+            ipScheduleClose();
+        }
+    });
+
+    // Close on scroll so panels never get stranded mid-page
+    window.addEventListener('scroll', ipCloseAll);
+
+    // Debounced resize/orientation handling — keeps ipMobile and
+    // panel placement in sync no matter how the window or device
+    // orientation changes after the page has already loaded
+    var ipResizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(ipResizeTimer);
+        ipResizeTimer = setTimeout(ipApplyLayout, 150);
+    });
+});
+
+/* ── Mobile: click-to-toggle, panels become static (see CSS) ── */
+function ipToggleDrop(e, el) {
+    if (!ipMobile) return;
+    e.preventDefault();
+    var item = el.closest('.ip-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.ip-item').forEach(function(i){
+        i.classList.remove('open');
+        var d = i.querySelector('.ip-drop');
+        if (d) d.classList.remove('open');
+    });
+    if (!isOpen) {
+        item.classList.add('open');
+        var drop = item.querySelector('.ip-drop');
+        if (drop) drop.classList.add('open');
+    }
+}
+function ipVpaClick(e) {
+    if (!ipMobile) return;
+    e.preventDefault();
+    document.getElementById('ip-mega').classList.toggle('open');
+}
+</script>

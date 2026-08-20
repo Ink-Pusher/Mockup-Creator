@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mockup Studio — Product Admin</title>
+<meta name="robots" content="noindex, nofollow" />
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.5.4/papaparse.min.js"></script>
+<style>
+  :root{
+    --mint:#8FF0C8; --mint-deep:#5FE0AE; --ink:#0d0d0d; --grey:#6b6b66;
+    --paper:#ffffff; --paper-2:#f5f4f0; --outline:#0d0d0d; --btn-fill:#f2f1eb;
+    --border-soft:#eee; --danger:#e05252;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:var(--paper-2); color:var(--ink); min-height:100vh;
+  }
+  .wrap{max-width:1320px;margin:0 auto;padding:32px 24px 80px;}
+  h1{font-size:20px;font-weight:800;margin:0;}
+  .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
+  .topbar-sub{font-size:12.5px;color:var(--grey);margin-top:2px;}
+  .btn{
+    padding:9px 16px;border-radius:10px;border:2px solid var(--outline);background:var(--btn-fill);
+    color:var(--ink);font-weight:700;font-size:13px;cursor:pointer;font-family:inherit;
+    box-shadow:3px 3px 0 rgba(0,0,0,0.10);transition:box-shadow .12s,transform .12s;
+  }
+  .btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--mint-deep);}
+  .btn.primary{background:var(--mint);}
+  .btn.danger-outline{background:var(--paper);color:var(--danger);border-color:var(--danger);}
+  .btn.danger-outline:hover{box-shadow:4px 4px 0 var(--danger);}
+
+  /* ---------- Login screen ---------- */
+  #loginScreen{
+    max-width:380px;margin:80px auto;background:var(--paper);border:2px solid var(--outline);
+    border-radius:16px;padding:32px;box-shadow:5px 5px 0 rgba(0,0,0,0.12);
+  }
+  #loginScreen h1{margin-bottom:6px;}
+  #loginScreen p{font-size:12.5px;color:var(--grey);margin:0 0 22px;}
+  #loginScreen label{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--grey);display:block;margin-bottom:5px;}
+  #loginScreen input{
+    width:100%;box-sizing:border-box;border:2px solid var(--outline);border-radius:10px;
+    padding:9px 12px;font-size:13px;font-family:inherit;background:var(--btn-fill);color:var(--ink);
+    margin-bottom:16px;
+  }
+  #loginScreen input:focus{outline:none;box-shadow:3px 3px 0 var(--mint-deep);}
+  #loginScreen .btn{width:100%;}
+  #loginError{font-size:12px;color:var(--danger);margin:-8px 0 14px;display:none;}
+  #configWarning{
+    display:none;max-width:520px;margin:60px auto;background:#fff2ec;border:2px solid #e4a382;
+    border-radius:14px;padding:22px 24px;font-size:13px;line-height:1.6;color:#6b3a1f;
+  }
+  #configWarning code{background:#fff;padding:1px 5px;border-radius:4px;border:1px solid #e4a382;}
+
+  /* ---------- Main admin UI ---------- */
+  #adminApp{display:none;}
+  .status-bar{
+    display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--grey);margin-bottom:18px;
+    min-height:18px;
+  }
+  .status-bar.saving::before{content:"Saving…";font-weight:700;color:var(--mint-deep);}
+  .status-bar.saved::before{content:"Saved ✓";font-weight:700;color:var(--mint-deep);}
+  .status-bar.error::before{content:"⚠ Couldn't save -- check your connection and try again.";font-weight:700;color:var(--danger);}
+
+  .category-block{margin-bottom:36px;}
+  .category-block h2{
+    font-size:14px;letter-spacing:0.08em;text-transform:uppercase;font-weight:800;
+    margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--outline);
+  }
+  .admin-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;}
+  .admin-card{
+    position:relative;background:var(--paper);border:2px solid var(--outline);border-radius:14px;
+    padding:10px 10px 12px;box-shadow:3px 3px 0 rgba(0,0,0,0.10);transition:box-shadow .12s,opacity .15s;
+  }
+  .admin-card.hidden-product{opacity:.45;}
+  .admin-card.dragging{opacity:.3;}
+  .admin-card.drag-over{outline:3px solid var(--mint-deep);outline-offset:-3px;}
+  .admin-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:6px;margin-bottom:8px;}
+  .admin-drag-handle{cursor:grab;color:var(--grey);flex-shrink:0;padding:2px;}
+  .admin-thumb{
+    width:100%;aspect-ratio:1/1;margin-bottom:8px;border-radius:9px;overflow:hidden;
+    background:#ffffff;display:flex;align-items:center;justify-content:center;
+  }
+  .admin-thumb img{width:100%;height:100%;object-fit:contain;display:block;}
+  .admin-pname{font-weight:800;font-size:12px;line-height:1.25;}
+  .admin-pmeta{font-size:10.5px;color:var(--grey);margin-top:2px;margin-bottom:10px;}
+  .visibility-toggle{
+    display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;cursor:pointer;
+    user-select:none;
+  }
+  .visibility-toggle input{width:15px;height:15px;accent-color:var(--mint-deep);cursor:pointer;}
+  .empty-note{font-size:12.5px;color:var(--grey);padding:20px 0;text-align:center;}
+
+  /* ---------- Sidebar layout ---------- */
+  .admin-layout{display:flex;gap:28px;align-items:flex-start;}
+  .admin-sidebar{
+    width:230px;flex-shrink:0;position:sticky;top:20px;
+    max-height:calc(100vh - 40px);overflow-y:auto;padding-bottom:20px;
+  }
+  .admin-main{flex:1;min-width:0;}
+  @media (max-width:860px){
+    .admin-layout{flex-direction:column;}
+    .admin-sidebar{position:static;width:100%;max-height:none;}
+  }
+
+  .sidebar-section{margin-bottom:22px;}
+  .sidebar-section h3{
+    font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--grey);margin:0 0 10px;
+  }
+
+  .admin-search-wrap{position:relative;}
+  .admin-search-wrap svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--grey);pointer-events:none;}
+  #adminSearchInput{
+    width:100%;box-sizing:border-box;border:2px solid var(--outline);border-radius:10px;
+    padding:9px 12px 9px 34px;font-size:13px;font-family:inherit;background:var(--btn-fill);color:var(--ink);
+  }
+  #adminSearchInput:focus{outline:none;box-shadow:3px 3px 0 var(--mint-deep);}
+
+  .sidebar-nav-item{
+    display:block;width:100%;text-align:left;border:none;background:none;font-family:inherit;
+    font-size:13px;font-weight:700;color:var(--ink);padding:8px 9px;border-radius:8px;cursor:pointer;
+    margin-bottom:2px;
+  }
+  .sidebar-nav-item:hover{background:var(--btn-fill);}
+  .sidebar-nav-item.active{background:var(--mint);}
+
+  .sidebar-chip-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .sidebar-chip{
+    font-size:11.5px;font-weight:700;padding:6px 11px;border-radius:999px;border:2px solid var(--outline);
+    background:var(--paper);color:var(--ink);cursor:pointer;
+  }
+  .sidebar-chip.active{background:var(--ink);color:var(--paper);}
+
+  .sidebar-brand-list{max-height:220px;overflow-y:auto;}
+  .sidebar-brand-row{display:flex;align-items:center;gap:8px;padding:5px 4px;border-radius:6px;cursor:pointer;font-size:12.5px;font-weight:600;}
+  .sidebar-brand-row:hover{background:var(--btn-fill);}
+  .sidebar-brand-row input{width:14px;height:14px;accent-color:var(--mint-deep);cursor:pointer;flex-shrink:0;}
+
+  .sidebar-clear-btn{
+    border:none;background:none;color:var(--grey);font-size:11.5px;font-weight:700;
+    text-decoration:underline;cursor:pointer;font-family:inherit;padding:0;
+  }
+  .no-results-note{font-size:13px;color:var(--grey);padding:30px 0;text-align:center;}
+
+  /* ---------- Bulk visibility actions ---------- */
+  .category-block h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px;}
+  .bulk-actions{display:flex;gap:12px;text-transform:none;letter-spacing:0;font-size:11.5px;}
+  .bulk-actions button{border:none;background:none;color:var(--grey);font-weight:700;text-decoration:underline;cursor:pointer;font-family:inherit;padding:0;}
+  .bulk-actions button:hover{color:var(--ink);}
+
+  /* ---------- Editable name/brand/style ---------- */
+  .admin-edit-field{
+    width:100%;box-sizing:border-box;border:1.5px solid transparent;border-radius:6px;
+    background:none;font-family:inherit;color:var(--ink);padding:2px 4px;margin:0 -4px;
+  }
+  .admin-edit-field:hover{border-color:var(--border-soft);}
+  .admin-edit-field:focus{outline:none;border-color:var(--outline);background:var(--btn-fill);box-shadow:2px 2px 0 var(--mint-deep);}
+  .admin-edit-brandstyle{font-weight:800;font-size:12px;}
+  .admin-edit-name{font-size:10.5px;color:var(--grey);margin-top:2px;}
+  .admin-edit-row{display:flex;gap:4px;}
+  .admin-edit-row .admin-edit-field{width:auto;flex:1;min-width:0;}
+
+  /* ---------- Edit content link + modal ---------- */
+  .edit-content-link{
+    display:block;width:100%;text-align:left;background:none;border:none;font-family:inherit;
+    font-size:11.5px;font-weight:700;color:var(--grey);text-decoration:underline;cursor:pointer;
+    padding:8px 0 0;margin-top:2px;border-top:1px solid var(--border-soft);
+  }
+  .edit-content-link:hover{color:var(--ink);}
+  .edit-content-link.has-content{color:var(--mint-deep);}
+
+  /* This page runs pasted into a Squarespace Code Block, underneath the
+     site's own nav bar -- which is its own Code Block with
+     `position:relative; z-index:9999` on #ip-wrap. Two consequences that
+     the "bulk tools panel is stuck behind the nav bar" symptom came from,
+     and what's done about each:
+
+     1. z-index:999999 here only ever competed inside whatever stacking
+        context Squarespace's section wrapper happens to create around
+        this block -- and that whole context paints below #ip-wrap's 9999,
+        so no number written here could ever win. The overlay is instead
+        re-homed onto <body> when it opens (see openModal), which puts it
+        in the ROOT stacking context where this z-index is compared
+        against #ip-wrap's directly. That's the actual fix; the number
+        below is just "higher than anything Squarespace or the nav uses".
+        Re-homing also protects `position:fixed` from an ancestor with a
+        `transform` on it (Squarespace's scroll animations add them),
+        which would silently re-anchor this to that ancestor instead of
+        the viewport.
+
+     2. Because the nav is in normal flow rather than fixed, it scrolls
+        away -- which is exactly why scrolling down "fixed" it, and why
+        nothing looked wrong when this file is opened standalone.
+
+     The overlay itself no longer scrolls; the modal box does, via its own
+     max-height. A tall modal (the bulk tools one especially) now stays
+     entirely within the viewport instead of running off the top and
+     bottom edges, so there's never a reason to scroll the page to reach
+     part of it. --nav-clearance is measured at open time and is 0 unless
+     there's a FIXED/sticky header genuinely covering the viewport's top
+     edge, which the in-flow nav above is not. */
+  .modal-overlay{
+    display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);
+    z-index:2147483647; /* the nav's own dropdowns (#ip-mega, .ip-drop) sit at
+                          this same ceiling; openModal re-appends this overlay
+                          to <body> each time it opens, so it lands later in
+                          the DOM and wins the tie. */
+    align-items:center;justify-content:center;
+    padding:calc(var(--nav-clearance, 0px) + 24px) 16px 24px;
+    overflow:hidden;overscroll-behavior:contain;
+  }
+  .modal-overlay.open{display:flex;}
+  .content-modal{
+    background:var(--paper);border:2px solid var(--outline);border-radius:16px;
+    box-shadow:6px 6px 0 rgba(0,0,0,0.18);padding:26px;max-width:560px;width:100%;
+    max-height:100%;overflow-y:auto;-webkit-overflow-scrolling:touch;
+  }
+  .content-modal h2{font-size:17px;font-weight:800;margin:0 0 2px;}
+  .content-modal .modal-sub{font-size:12px;color:var(--grey);margin:0 0 20px;}
+  .content-modal label{
+    font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;
+    color:var(--grey);display:block;margin-bottom:6px;
+  }
+  .content-modal textarea, .content-modal input[type="text"]{
+    width:100%;box-sizing:border-box;border:2px solid var(--outline);border-radius:10px;
+    padding:10px 12px;font-size:13px;font-family:inherit;background:var(--btn-fill);color:var(--ink);
+    margin-bottom:16px;resize:vertical;
+  }
+  .content-modal textarea:focus, .content-modal input:focus{outline:none;box-shadow:3px 3px 0 var(--mint-deep);}
+  .content-modal .field-hint{font-size:11px;color:var(--grey);margin:-12px 0 14px;}
+  .logo-preview{
+    display:none;height:32px;margin:-10px 0 16px;border-radius:6px;
+  }
+  .modal-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:6px;}
+  .modal-status{font-size:12px;color:var(--grey);}
+  .modal-status.saved{color:var(--mint-deep);font-weight:700;}
+  .modal-status.error{color:var(--danger);font-weight:700;}
+  .modal-btn-row{display:flex;gap:8px;}
+
+  /* ---------- Bulk tools ---------- */
+  /* Wider than the write-up modal because this one is a table: at 640px the
+     product name, the match badge and the description preview were all
+     wrapping to two or three lines each, which made a long import very hard
+     to scan. Still capped so the description column can't stretch to an
+     unreadable line length on a big display. */
+  .bulk-modal .content-modal{max-width:1000px;}
+  .bulk-tabs{display:flex;gap:8px;margin-bottom:18px;border-bottom:2px solid var(--border-soft);}
+  .bulk-tab{
+    padding:9px 4px 11px;font-weight:700;font-size:13px;color:var(--grey);background:none;border:none;
+    cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-2px;
+  }
+  .bulk-tab.active{color:var(--ink);border-bottom-color:var(--mint-deep);}
+  .bulk-pane{display:none;}
+  .bulk-pane.active{display:block;}
+
+  .csv-drop{
+    border:2px dashed var(--outline);border-radius:12px;padding:22px;text-align:center;
+    font-size:13px;color:var(--grey);margin-bottom:14px;
+  }
+  .csv-drop input[type="file"]{margin-top:0;}
+  .csv-source-hint{font-size:11.5px;color:var(--grey);margin:12px auto 0;max-width:44ch;line-height:1.5;}
+  .csv-source-hint code{background:var(--btn-fill);padding:1px 4px;border-radius:4px;font-size:11px;}
+  /* "or" divider -- the two routes load the same file, so the local picker
+     stays available (offline, or a one-off spreadsheet) but reads as the
+     secondary option it now is. */
+  .csv-or{
+    display:flex;align-items:center;gap:10px;margin:16px 0 12px;
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--grey);
+  }
+  .csv-or::before, .csv-or::after{content:"";flex:1;height:1px;background:var(--border-soft);}
+  .csv-preview-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:14px;max-height:400px;overflow-y:auto;display:block;}
+  /* Fixed column proportions: without these the description column collapses
+     to whatever's left after the other two have taken what they want, which
+     is the opposite of what you want to read. */
+  .csv-preview-table th:nth-child(1), .csv-preview-table td:nth-child(1){width:24%;}
+  .csv-preview-table th:nth-child(2), .csv-preview-table td:nth-child(2){width:30%;}
+  .csv-preview-table th:nth-child(3), .csv-preview-table td:nth-child(3){width:46%;}
+  .csv-preview-table td:nth-child(3){color:var(--grey);line-height:1.45;}
+
+  /* ---------- Filter pills (shared by both bulk panes) ----------
+     Both lists have the same shape of problem: mostly rows that need nothing
+     done to them, with the few that do need something scattered through. Same
+     control solves both, so it's one set of styles rather than two that drift. */
+  .pill-filter-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:12px;}
+  .pill-filter{
+    font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:999px;
+    border:2px solid var(--outline);background:var(--paper);color:var(--ink);
+    cursor:pointer;font-family:inherit;
+  }
+  .pill-filter:hover{background:var(--btn-fill);}
+  .pill-filter.active{background:var(--ink);color:var(--paper);}
+  .pill-filter[disabled]{opacity:.35;cursor:default;}
+  .pill-filter[disabled]:hover{background:var(--paper);}
+  .pill-filter .n{opacity:.65;font-weight:600;margin-left:4px;}
+  .pill-filter.active .n{opacity:.8;}
+  .pill-filter-note{font-size:11.5px;color:var(--grey);margin-left:auto;}
+  .pill-filter-empty{font-size:12.5px;color:var(--grey);padding:22px 4px;text-align:center;}
+  .csv-preview-table th{text-align:left;padding:6px 8px;border-bottom:2px solid var(--outline);position:sticky;top:0;background:var(--paper);}
+  .csv-preview-table td{padding:6px 8px;border-bottom:1px solid var(--border-soft);vertical-align:top;}
+  .csv-row-matched{color:var(--ink);}
+  .csv-row-unmatched{color:var(--danger);}
+  .csv-match-badge{font-size:10.5px;font-weight:800;padding:2px 7px;border-radius:999px;}
+  .csv-match-badge.ok{background:var(--mint);color:#0d0d0d;}
+  .csv-match-badge.bad{background:#fde3e3;color:var(--danger);}
+  .csv-manual-match{
+    font-size:12px;font-family:inherit;padding:5px 7px;border-radius:7px;
+    border:1.5px solid var(--danger);background:#fff6f6;color:var(--ink);max-width:220px;
+  }
+  .csv-overwrite-row{
+    display:flex;align-items:center;gap:6px;font-size:11px;color:var(--grey);font-weight:600;
+    margin-top:6px;cursor:pointer;max-width:220px;
+  }
+  .csv-overwrite-row input{width:13px;height:13px;accent-color:var(--danger);cursor:pointer;flex-shrink:0;}
+
+  .bulk-logo-list{max-height:280px;overflow-y:auto;border:2px solid var(--border-soft);border-radius:10px;padding:8px;margin-bottom:14px;}
+  /* SQUARESPACE OVERRIDES display ON <label>. The filter pills above are a
+     <div> and lay out as flex correctly; these rows are <label> and do not,
+     which means a plain `.bulk-logo-row{display:flex}` here silently loses.
+     That was harmless while every child was inline-level -- they just flowed
+     on one line anyway -- but a child with `display:flex` is BLOCK-level, so
+     adding the check-mark slot broke each row onto its own line and doubled
+     the height of the list.
+
+     Two independent defences, since the host stylesheet isn't ours to read:
+       1. Raise this rule's specificity (and force display) so the row really
+          is a flex container.
+       2. Keep every child inline-level anyway, so that even if some future
+          host rule wins again, the row still reads as one line. Nothing in
+          here depends on flex to stay on a single row. */
+  .bulk-logo-list label.bulk-logo-row{
+    display:flex !important;
+    flex-wrap:nowrap;
+    align-items:center;gap:9px;padding:6px 4px;font-size:13px;font-weight:600;border-radius:6px;
+  }
+  .bulk-logo-row:hover{background:var(--btn-fill);}
+  .bulk-logo-row input{
+    width:15px;height:15px;accent-color:var(--mint-deep);cursor:pointer;flex-shrink:0;
+    display:inline-block;vertical-align:middle;margin:0;
+  }
+  /* Shows the actual assigned logo, not a tick.
+     A green check circle sitting immediately beside a checkbox read as two
+     controls -- "why are there two boxes, and why is one already ticked?" --
+     because both are small square-ish marks in the same spot. A thumbnail of
+     the real logo can't be confused for a control: it's a picture, and it
+     also answers the more useful question, which is WHICH logo is on there.
+     The checkbox stays purely "selected for this assignment", so a row can
+     never look pre-selected when it isn't.
+     Fixed-width slot, always present (empty when there's no logo), so names
+     stay aligned in a column. Inline-level, for the reason above. */
+  .logo-thumb{
+    width:26px;height:20px;flex-shrink:0;
+    display:inline-block;vertical-align:middle;text-align:center;line-height:20px;
+  }
+  .logo-thumb img{
+    max-width:26px;max-height:20px;width:auto;height:auto;
+    object-fit:contain;vertical-align:middle;display:inline-block;
+  }
+  /* A logo_url that no longer resolves still means "a logo is assigned", but
+     it's worth seeing rather than showing a blank slot that reads as "none". */
+  .logo-thumb.broken{
+    background:var(--btn-fill);border:1.5px solid var(--border-soft);border-radius:5px;
+    font-size:10px;font-weight:800;color:var(--grey);line-height:17px;
+  }
+  .bulk-logo-row.is-set .logo-row-name{color:var(--grey);font-weight:600;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div id="configWarning">
+    <strong>Not configured yet.</strong> This admin page needs your Supabase project's URL and
+    public "anon" key before it can do anything. Open this file and fill in
+    <code>SUPABASE_URL</code> and <code>SUPABASE_ANON_KEY</code> near the top of the script,
+    right after you've run the setup SQL in your Supabase project.
+  </div>
+
+  <div id="loginScreen" style="display:none;">
+    <h1>Product Admin</h1>
+    <p>Sign in to control which products are featured and in what order.</p>
+    <label for="loginEmail">Email</label>
+    <input type="email" id="loginEmail" autocomplete="username" />
+    <label for="loginPassword">Password</label>
+    <input type="password" id="loginPassword" autocomplete="current-password" />
+    <div id="loginError"></div>
+    <button type="button" class="btn primary" id="loginBtn">Sign in</button>
+  </div>
+
+  <div id="adminApp">
+    <div class="topbar">
+      <div>
+        <h1>Product Admin</h1>
+        <div class="topbar-sub">Toggle visibility, drag to reorder within a category, or edit a product's description. Changes go live immediately for every visitor.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button type="button" class="btn" id="bulkToolsBtn">Bulk tools</button>
+        <button type="button" class="btn danger-outline" id="signOutBtn">Sign out</button>
+      </div>
+    </div>
+    <div class="status-bar" id="statusBar"></div>
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <div class="sidebar-section">
+          <div class="admin-search-wrap">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" id="adminSearchInput" placeholder="Search…" autocomplete="off" />
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <h3>Category</h3>
+          <div id="sidebarCategoryList"></div>
+        </div>
+        <div class="sidebar-section" id="sidebarTagSection" style="display:none;">
+          <h3>Filter</h3>
+          <div class="sidebar-chip-row" id="sidebarTagList"></div>
+        </div>
+        <div class="sidebar-section" id="sidebarBrandSection" style="display:none;">
+          <h3>Brand</h3>
+          <div class="sidebar-brand-list" id="sidebarBrandList"></div>
+        </div>
+        <div class="sidebar-section">
+          <h3>Content status</h3>
+          <label class="sidebar-brand-row" style="cursor:pointer;">
+            <input type="checkbox" id="missingContentFilter" />
+            Missing a write-up <span id="missingContentCount" style="color:var(--grey);font-weight:500;margin-left:auto;"></span>
+          </label>
+        </div>
+        <div class="sidebar-section" id="sidebarClearSection" style="display:none;">
+          <button type="button" class="sidebar-clear-btn" id="sidebarClearBtn">Clear all filters</button>
+        </div>
+      </aside>
+      <main class="admin-main">
+        <div id="categoriesWrap"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="contentModalOverlay">
+    <div class="content-modal">
+      <h2 id="contentModalTitle">Edit product write-up</h2>
+      <p class="modal-sub">Shows on this product's detail page. Leave any field blank to hide that section -- nothing shows a placeholder.</p>
+
+      <label for="cmDescription">Description</label>
+      <textarea id="cmDescription" rows="3" placeholder="A short paragraph about the fabric, fit, and feel..."></textarea>
+
+      <label for="cmFeatures">Features</label>
+      <textarea id="cmFeatures" rows="5" placeholder="One per line, e.g.&#10;4.2 oz./yd² (US), 50/25/25 poly/cotton/rayon&#10;Fabric laundered&#10;Side seams"></textarea>
+      <div class="field-hint">One feature per line -- each line becomes its own bullet point.</div>
+
+      <label for="cmLogoUrl">Logo image URL (optional)</label>
+      <input type="text" id="cmLogoUrl" placeholder="https://..." />
+      <img class="logo-preview" id="cmLogoPreview" alt="" />
+
+      <label for="cmSupplierNote">Responsible supplier note</label>
+      <textarea id="cmSupplierNote" rows="2" placeholder="e.g. This product was made in a facility that is FLA certified."></textarea>
+
+      <div class="modal-actions">
+        <div class="modal-status" id="modalStatus"></div>
+        <div class="modal-btn-row">
+          <button type="button" class="btn" id="modalCancelBtn">Cancel</button>
+          <button type="button" class="btn primary" id="modalSaveBtn">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay bulk-modal" id="bulkModalOverlay">
+    <div class="content-modal">
+      <h2>Bulk tools</h2>
+      <p class="modal-sub">Update many products in one pass instead of one at a time.</p>
+
+      <div class="bulk-tabs">
+        <button type="button" class="bulk-tab active" data-tab="csv">Import descriptions (CSV)</button>
+        <button type="button" class="bulk-tab" data-tab="logo">Assign a logo to multiple products</button>
+      </div>
+
+      <!-- ---------- CSV import pane ---------- -->
+      <div class="bulk-pane active" id="csvPane">
+        <p class="field-hint" style="margin:-4px 0 12px;">
+          Columns: <strong>Product</strong> (matched by brand + style, e.g. "Next Level 6010"),
+          <strong>Description</strong>, <strong>Features</strong> (separate multiple with a <code>|</code> pipe),
+          <strong>Supplier Note</strong>. Any row that doesn't clearly match one product is flagged below
+          instead of silently skipped or guessed at.
+        </p>
+        <div class="csv-drop">
+          <button type="button" class="btn primary" id="csvGithubBtn">Import from GitHub</button>
+          <div class="csv-source-hint">
+            Reads <code>product_descriptions.csv</code> straight from the Mockup-Creator
+            repo, so there's no file to find and no way to pick a stale copy.
+            It reads the <strong>pushed</strong> version -- if a run isn't pushed yet, push it first.
+          </div>
+          <div class="csv-or"><span>or choose a file</span></div>
+          <input type="file" id="csvFileInput" accept=".csv,text/csv" />
+        </div>
+        <div id="csvPreviewWrap"></div>
+        <div class="modal-actions">
+          <div class="modal-status" id="csvStatus"></div>
+          <div class="modal-btn-row">
+            <button type="button" class="btn" id="csvCancelBtn">Close</button>
+            <button type="button" class="btn primary" id="csvImportBtn" style="display:none;" disabled>Import matched rows</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---------- Bulk logo pane ---------- -->
+      <div class="bulk-pane" id="logoPane">
+        <label for="bulkLogoUrl">Logo image URL</label>
+        <input type="text" id="bulkLogoUrl" placeholder="https://..." />
+        <img class="logo-preview" id="bulkLogoPreview" alt="" />
+
+        <label>Apply to</label>
+        <div class="pill-filter-row" id="bulkLogoFilters"></div>
+        <div class="bulk-logo-list" id="bulkLogoList"></div>
+
+        <div class="modal-actions">
+          <div class="modal-status" id="bulkLogoStatus"></div>
+          <div class="modal-btn-row">
+            <button type="button" class="btn" id="logoCancelBtn">Close</button>
+            <button type="button" class="btn primary" id="bulkLogoAssignBtn" disabled>Assign to selected</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ============================================================
+// Fill these in once you've created your Supabase project and run the
+// setup SQL (see the setup instructions provided alongside this file).
+// The anon key is safe to leave visible in this file -- Row Level
+// Security on the product_overrides table is what actually restricts
+// writes to a signed-in session, not secrecy of this key.
+// ============================================================
+const SUPABASE_URL = "https://wkmwqqtwijimkqfijjrc.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_1ik4UyMIim4n-3FbWCzRRA_kHCy0N5G";
+
+// Same catalog source the live mockup tool reads from -- this page reads
+// catalog.json directly too, purely to know what products/photos exist;
+// it never writes to catalog.json itself, only to the overrides table.
+const CATALOG_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/catalog.json";
+const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/";
+
+// Mirrors CATEGORY_DEFS in the main mockup tool -- keep these in sync if
+// that list ever changes, so products group the same way in both places.
+const CATEGORY_DEFS = [
+  { id:"all",    label:"All",                   kinds:null },
+  { id:"tee",    label:"T-Shirts / Tanks",      kinds:["tee","tank"] },
+  { id:"hoodie", label:"Sweatshirts / Hoodies",  kinds:["hoodie","sweatshirt"] },
+  { id:"cap",    label:"Headware",               kinds:["cap","hat","beanie"] },
+  { id:"tote",   label:"Tote Bags",              kinds:["tote"] },
+];
+function categoryOf(product){
+  const def = CATEGORY_DEFS.find(c => c.kinds && c.kinds.includes(product.kind));
+  return def ? def.id : null;
+}
+
+// Same fit/style tag taxonomy as apparel_catalog.html -- ported directly
+// so "filter by style" behaves identically here and on the live catalog
+// page. See that file if this list ever needs to change.
+const FIT_TAGS = [
+  { id:"womens", label:"Women's",  test:(p)=> /women'?s|\bladies\b/i.test(p.name) },
+  { id:"youth",  label:"Youth",    test:(p)=> /\byouth\b/i.test(p.name) },
+  { id:"unisex", label:"Unisex",   test:(p)=> !/women'?s|\bladies\b|\byouth\b/i.test(p.name) },
+];
+const STYLE_TAGS = [
+  { id:"tank",        label:"Tanks",        test:(p)=> p.kind==="tank" },
+  { id:"crop-top",    label:"Crop Tops",    test:(p)=> /\bcrop\b/i.test(p.name) },
+  { id:"tee",         label:"Tees",         test:(p)=> p.kind==="tee" && !/\bcrop\b/i.test(p.name) },
+  { id:"hoodie",      label:"Hoodies",      test:(p)=> p.kind==="hoodie" },
+  { id:"sweatshirt",  label:"Sweatshirts",  test:(p)=> p.kind==="sweatshirt" },
+  { id:"tote",        label:"Totes",        test:(p)=> p.kind==="tote" },
+  { id:"trucker-hat", label:"Trucker Hats", test:(p)=> /trucker/i.test(p.name) },
+  { id:"dad-hat",     label:"Dad Hats",     test:(p)=> /dad\s*(hat|cap)|low[\s-]?profile/i.test(p.name) },
+  { id:"bucket-hat",  label:"Bucket Hats",  test:(p)=> /bucket/i.test(p.name) },
+  { id:"snapback",    label:"Snapbacks",    test:(p)=> /snapback/i.test(p.name) },
+  { id:"beanie",      label:"Beanies",      test:(p)=> p.kind==="beanie" || /beanie/i.test(p.name) },
+  { id:"cap",         label:"Caps",         test:(p)=> (p.kind==="cap"||p.kind==="hat") && !/trucker|dad\s*(hat|cap)|low[\s-]?profile|bucket|snapback|beanie/i.test(p.name) },
+];
+const ALL_TAGS = [...FIT_TAGS, ...STYLE_TAGS];
+function resolveProductTags(p){
+  return ALL_TAGS.filter(t => t.test(p)).map(t => t.id);
+}
+
+let supabaseClient = null;
+let allProducts = [];
+let overridesById = new Map(); // product_id -> { visible, sort_order, brand_override, style_override, name_override }
+let contentById = new Map();   // product_id -> { description, features, logo_url, supplier_note }
+let modalProductId = null;
+const adminState = { searchQuery: "", activeBrands: new Set(), activeCategory: "all", activeTags: new Set(), missingContentOnly: false };
+
+function setStatus(kind){
+  const bar = document.getElementById("statusBar");
+  bar.className = "status-bar" + (kind ? " " + kind : "");
+}
+
+async function init(){
+  if(!SUPABASE_URL || !SUPABASE_ANON_KEY){
+    document.getElementById("configWarning").style.display = "block";
+    return;
+  }
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const { data: { session } } = await supabaseClient.auth.getSession();
+  if(session){
+    showAdmin();
+  } else {
+    document.getElementById("loginScreen").style.display = "block";
+  }
+}
+
+document.getElementById("loginBtn").onclick = async ()=>{
+  const email = document.getElementById("loginEmail").value.trim();
+  const password = document.getElementById("loginPassword").value;
+  const errEl = document.getElementById("loginError");
+  errEl.style.display = "none";
+  if(!email || !password) return;
+  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+  if(error){
+    errEl.textContent = error.message || "Couldn't sign in -- check your email and password.";
+    errEl.style.display = "block";
+    return;
+  }
+  showAdmin();
+};
+document.getElementById("loginPassword").addEventListener("keydown", (e)=>{
+  if(e.key === "Enter") document.getElementById("loginBtn").click();
+});
+
+document.getElementById("signOutBtn").onclick = async ()=>{
+  await supabaseClient.auth.signOut();
+  document.getElementById("adminApp").style.display = "none";
+  document.getElementById("loginScreen").style.display = "block";
+  document.getElementById("loginEmail").value = "";
+  document.getElementById("loginPassword").value = "";
+};
+
+async function showAdmin(){
+  document.getElementById("loginScreen").style.display = "none";
+  document.getElementById("adminApp").style.display = "block";
+  await loadEverything();
+}
+
+async function loadEverything(){
+  setStatus("");
+  // See the matching comment in mockup_generator_v2.html's loadRealCatalog()
+  // -- cache:"no-store" alone only stops the browser's own cache; GitHub's
+  // CDN in front of raw.githubusercontent.com caches independently for a
+  // few minutes per edge node, so a fresh push might not show here
+  // immediately without this cache-busting query param.
+  const [catalogRes, overridesRes, contentRes] = await Promise.all([
+    fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
+    supabaseClient.from("product_overrides").select("*"),
+    supabaseClient.from("product_content").select("*"),
+  ]);
+  allProducts = (catalogRes.products || []).map(p => ({
+    id: p.id, name: p.name, brand: p.brand, style: p.style, kind: p.kind,
+    popular: p.popular !== false,
+  }));
+  overridesById = new Map((overridesRes.data || []).map(o => [o.product_id, o]));
+  contentById = new Map((contentRes.data || []).map(c => [c.product_id, c]));
+  renderSidebarCategoryList();
+  renderSidebarTagList();
+  renderSidebarBrandList();
+  renderCategories();
+}
+
+function currentVisible(p){
+  const o = overridesById.get(p.id);
+  return o && typeof o.visible === "boolean" ? o.visible : p.popular;
+}
+function currentSortOrder(p){
+  const o = overridesById.get(p.id);
+  return o && typeof o.sort_order === "number" ? o.sort_order : null;
+}
+// Falls back to catalog.json's original value whenever no override is
+// set -- same fallback rule used everywhere else these overrides apply
+// (apparel_catalog.html, product_detail.html).
+function currentBrand(p){ const o = overridesById.get(p.id); return (o && o.brand_override) || p.brand; }
+function currentStyle(p){ const o = overridesById.get(p.id); return (o && o.style_override) || p.style; }
+function currentName(p){ const o = overridesById.get(p.id); return (o && o.name_override) || p.name; }
+
+function matchesFilters(p){
+  if(adminState.activeBrands.size && !adminState.activeBrands.has(currentBrand(p))) return false;
+  if(adminState.activeTags.size){
+    const tags = resolveProductTags(p);
+    if(![...adminState.activeTags].every(id => tags.includes(id))) return false;
+  }
+  if(adminState.searchQuery){
+    const q = adminState.searchQuery;
+    const haystack = `${currentBrand(p)} ${currentStyle(p)} ${currentName(p)}`.toLowerCase();
+    if(!haystack.includes(q)) return false;
+  }
+  if(adminState.missingContentOnly && hasExistingContent(p.id)) return false;
+  return true;
+}
+
+function renderCategories(){
+  updateMissingContentCount(); // stays in sync with every render, not just specific save actions
+  const wrap = document.getElementById("categoriesWrap");
+  wrap.innerHTML = "";
+  let anyRendered = false;
+  const catsToShow = adminState.activeCategory === "all"
+    ? CATEGORY_DEFS.filter(c => c.kinds)
+    : CATEGORY_DEFS.filter(c => c.id === adminState.activeCategory);
+  catsToShow.forEach(catDef=>{
+    const inCat = allProducts.filter(p => categoryOf(p) === catDef.id && matchesFilters(p));
+    if(!inCat.length) return;
+    anyRendered = true;
+    const ordered = inCat.slice().sort((a,b)=>{
+      const ao = currentSortOrder(a), bo = currentSortOrder(b);
+      if(ao != null && bo != null) return ao - bo;
+      if(ao != null) return -1;
+      if(bo != null) return 1;
+      return 0;
+    });
+
+    const block = document.createElement("div");
+    block.className = "category-block";
+    block.innerHTML = `<h2>${catDef.label}<span class="bulk-actions"><button type="button" data-bulk="show">Show all</button><button type="button" data-bulk="hide">Hide all</button></span></h2>`;
+    // Applies to whatever's currently displayed in this section -- if a
+    // search/brand/tag filter is narrowing things down, "Show all" only
+    // touches the narrowed set, not the whole category. Same batch-upsert
+    // approach as reorderWithinCategory, for the same reason: one request
+    // for N products instead of N separate ones.
+    block.querySelector('[data-bulk="show"]').onclick = ()=> bulkSetVisibility(ordered, true);
+    block.querySelector('[data-bulk="hide"]').onclick = ()=> bulkSetVisibility(ordered, false);
+    const grid = document.createElement("div");
+    grid.className = "admin-grid";
+    grid.dataset.category = catDef.id;
+
+    let dragSrcId = null;
+    ordered.forEach(p=>{
+      const card = document.createElement("div");
+      const visible = currentVisible(p);
+      card.className = "admin-card" + (visible ? "" : " hidden-product");
+      card.dataset.id = p.id;
+      const thumbSrc = `${CATALOG_BASE_URL}catalog_images/${p.id}/featured_front.jpg`;
+      const escAttr = (s) => String(s).replace(/"/g, "&quot;");
+      card.innerHTML = `
+        <div class="admin-card-top">
+          <svg class="admin-drag-handle" width="14" height="14" viewBox="0 0 16 16" fill="currentColor" title="Drag to reorder"><circle cx="4" cy="3" r="1.4"/><circle cx="12" cy="3" r="1.4"/><circle cx="4" cy="8" r="1.4"/><circle cx="12" cy="8" r="1.4"/><circle cx="4" cy="13" r="1.4"/><circle cx="12" cy="13" r="1.4"/></svg>
+        </div>
+        <div class="admin-thumb"><img src="${thumbSrc}" alt="${p.name}" loading="lazy" onerror="this.style.opacity=0" /></div>
+        <div class="admin-edit-row">
+          <input class="admin-edit-field admin-edit-brandstyle" data-field="brand_override" value="${escAttr(currentBrand(p))}" title="Brand" />
+        </div>
+        <div class="admin-edit-row">
+          <input class="admin-edit-field admin-edit-brandstyle" data-field="style_override" value="${escAttr(currentStyle(p))}" title="Style" style="max-width:70px;" />
+        </div>
+        <input class="admin-edit-field admin-edit-name" data-field="name_override" value="${escAttr(currentName(p))}" title="Full product name" />
+        <label class="visibility-toggle">
+          <input type="checkbox" ${visible ? "checked" : ""} />
+          ${visible ? "Visible" : "Hidden"}
+        </label>
+        <button type="button" class="edit-content-link${contentById.has(p.id) ? " has-content" : ""}">Edit Description${contentById.has(p.id) ? " ✓" : ""}</button>
+      `;
+
+      card.querySelector(".edit-content-link").onclick = ()=> openContentModal(p);
+
+      // Corrects a catalog.json typo/rename without touching catalog.json
+      // itself -- saves as an override, same table as visibility/order.
+      // Saves on blur (not every keystroke) so a half-typed edit never
+      // gets written mid-correction.
+      card.querySelectorAll(".admin-edit-field").forEach(input=>{
+        input.addEventListener("blur", async ()=>{
+          const field = input.dataset.field;
+          const value = input.value.trim();
+          const catalogDefault = field === "brand_override" ? p.brand : field === "style_override" ? p.style : p.name;
+          // Saves null (not an empty string) when the field matches the
+          // catalog default -- keeps "not overridden" and "overridden to
+          // literally match the original" from being indistinguishable
+          // later, and lets a blanked-out field cleanly fall back.
+          await saveOverride(p.id, { [field]: (value && value !== catalogDefault) ? value : null });
+        });
+      });
+
+      card.querySelector('input[type="checkbox"]').onchange = async (e)=>{
+        card.classList.toggle("hidden-product", !e.target.checked);
+        card.querySelector(".visibility-toggle").lastChild.textContent = e.target.checked ? "Visible" : "Hidden";
+        await saveOverride(p.id, { visible: e.target.checked });
+      };
+
+      const handle = card.querySelector(".admin-drag-handle");
+      handle.addEventListener("mousedown", ()=>{ card.draggable = true; });
+      card.addEventListener("dragstart", (e)=>{
+        dragSrcId = p.id;
+        card.classList.add("dragging");
+        e.dataTransfer.effectAllowed = "move";
+      });
+      card.addEventListener("dragend", ()=>{
+        card.draggable = false;
+        card.classList.remove("dragging");
+        grid.querySelectorAll(".admin-card").forEach(c=>c.classList.remove("drag-over"));
+      });
+      card.addEventListener("dragover", (e)=>{
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        card.classList.add("drag-over");
+      });
+      card.addEventListener("dragleave", ()=> card.classList.remove("drag-over"));
+      card.addEventListener("drop", async (e)=>{
+        e.preventDefault();
+        card.classList.remove("drag-over");
+        if(!dragSrcId || dragSrcId === p.id) return;
+        await reorderWithinCategory(catDef.id, dragSrcId, p.id);
+        dragSrcId = null;
+      });
+
+      grid.appendChild(card);
+    });
+
+    block.appendChild(grid);
+    wrap.appendChild(block);
+  });
+  if(!anyRendered){
+    wrap.innerHTML = allProducts.length
+      ? `<div class="no-results-note">No products match your search/filter. <button type="button" id="clearAdminFiltersBtn" style="border:none;background:none;color:var(--mint-deep);font-weight:700;text-decoration:underline;cursor:pointer;font-family:inherit;">Clear</button></div>`
+      : `<div class="empty-note">No products loaded from the catalog yet.</div>`;
+    const clearBtn = document.getElementById("clearAdminFiltersBtn");
+    if(clearBtn) clearBtn.onclick = clearAllFilters;
+  }
+}
+
+// Batch-saves one visibility value across every product currently shown
+// in a category section (see renderCategories -- "Show all"/"Hide all").
+// Same reasoning as reorderWithinCategory's batching: one request for N
+// products instead of N sequential ones.
+async function bulkSetVisibility(products, visible){
+  setStatus("saving");
+  const rows = products.map(p=>{
+    const existing = overridesById.get(p.id) || {};
+    const merged = { ...existing, visible, product_id: p.id, updated_at: new Date().toISOString() };
+    overridesById.set(p.id, merged);
+    return merged;
+  });
+  const { error } = await supabaseClient.from("product_overrides").upsert(rows);
+  setStatus(error ? "error" : "saved");
+  if(error){ console.error("[admin] bulk visibility save failed:", error); return; }
+  renderCategories();
+}
+
+async function saveOverride(productId, fields){
+  setStatus("saving");
+  const existing = overridesById.get(productId) || {};
+  const merged = { ...existing, ...fields, product_id: productId, updated_at: new Date().toISOString() };
+  overridesById.set(productId, merged);
+  // Forwards the whole merged object -- previously this hand-picked just
+  // visible/sort_order, a leftover from before brand/style/name overrides
+  // existed, which silently dropped them on every save. Spreading the
+  // full object means any future override field added here won't need
+  // this function updated to match, too.
+  const { error } = await supabaseClient.from("product_overrides").upsert(merged);
+  setStatus(error ? "error" : "saved");
+  if(error) console.error("[admin] save failed:", error);
+}
+
+// Reassigns sequential sort_order (0, 1, 2...) to every product in this
+// category, in their NEW order, and saves all of them in one batch --
+// simpler and more robust than trying to fit a single item "between" two
+// existing fractional values.
+async function reorderWithinCategory(categoryId, draggedId, targetId){
+  const inCat = allProducts.filter(p => categoryOf(p) === categoryId);
+  const ordered = inCat.slice().sort((a,b)=>{
+    const ao = currentSortOrder(a), bo = currentSortOrder(b);
+    if(ao != null && bo != null) return ao - bo;
+    if(ao != null) return -1;
+    if(bo != null) return 1;
+    return 0;
+  });
+  const ids = ordered.map(p=>p.id);
+  const from = ids.indexOf(draggedId);
+  if(from === -1) return;
+  ids.splice(from, 1);
+  const to = ids.indexOf(targetId);
+  if(to === -1) return;
+  ids.splice(to, 0, draggedId);
+
+  setStatus("saving");
+  const rows = ids.map((id, i)=>{
+    const existing = overridesById.get(id) || {};
+    const product = allProducts.find(p=>p.id===id);
+    const merged = {
+      ...existing,
+      // Preserves the same fallback currentVisible() uses elsewhere --
+      // a product with no override row yet defaults to catalog.json's
+      // own "popular" flag, not just blanket-true, so reordering never
+      // silently makes a not-featured product visible.
+      visible: existing.visible !== undefined ? existing.visible : product.popular,
+      sort_order: i,
+      product_id: id,
+      updated_at: new Date().toISOString(),
+    };
+    overridesById.set(id, merged);
+    return merged;
+  });
+  const { error } = await supabaseClient.from("product_overrides").upsert(rows);
+  setStatus(error ? "error" : "saved");
+  if(error){ console.error("[admin] reorder save failed:", error); return; }
+  renderCategories();
+}
+
+// ---------- Modal open/close ----------
+// Every modal on this page goes through these two, rather than toggling
+// .open directly, so the Squarespace-embed fixes described in the
+// .modal-overlay CSS block apply to all of them uniformly.
+
+// How much of the viewport's TOP edge is permanently covered by a fixed
+// or sticky site header. Returns 0 both when this file is opened
+// standalone and on the live site, where the Ink Pusher nav is in normal
+// flow (position:relative) and therefore scrolls away rather than sitting
+// over the viewport -- it exists so that swapping the nav to a sticky one
+// later doesn't quietly reintroduce a modal tucked underneath it.
+function measureNavClearance(){
+  let clearance = 0;
+  const candidates = document.querySelectorAll(
+    'header, #header, [role="banner"], #ip-wrap, .sqs-announcement-bar-dropzone'
+  );
+  candidates.forEach(el=>{
+    const cs = getComputedStyle(el);
+    if(cs.position !== "fixed" && cs.position !== "sticky") return;
+    if(cs.display === "none" || cs.visibility === "hidden") return;
+    const r = el.getBoundingClientRect();
+    // Only something currently parked against the top of the viewport is
+    // in the way; a sticky element further down the page is not.
+    if(r.height > 0 && r.top <= 4) clearance = Math.max(clearance, r.bottom);
+  });
+  return Math.min(Math.round(clearance), 240); // cap, in case of a mis-measure
+}
+
+let openModalCount = 0;
+let bodyOverflowBeforeModal = "";
+function openModal(id){
+  const overlay = document.getElementById(id);
+  if(!overlay) return;
+  // Re-home onto <body> so this sits in the root stacking context (and so
+  // position:fixed is anchored to the viewport) -- see the CSS comment.
+  // A no-op after the first open, and harmless standalone.
+  if(overlay.parentElement !== document.body) document.body.appendChild(overlay);
+  overlay.style.setProperty("--nav-clearance", measureNavClearance() + "px");
+  overlay.classList.add("open");
+  if(openModalCount++ === 0){
+    bodyOverflowBeforeModal = document.body.style.overflow;
+    document.body.style.overflow = "hidden"; // don't scroll the page behind it
+  }
+}
+function closeModal(id){
+  const overlay = document.getElementById(id);
+  if(!overlay || !overlay.classList.contains("open")) return;
+  overlay.classList.remove("open");
+  openModalCount = Math.max(0, openModalCount - 1);
+  if(openModalCount === 0) document.body.style.overflow = bodyOverflowBeforeModal;
+}
+document.addEventListener("keydown", (e)=>{
+  if(e.key !== "Escape") return;
+  const open = document.querySelector(".modal-overlay.open");
+  if(open) closeModal(open.id);
+});
+// A header can change height as the window resizes; keep an open modal
+// sitting correctly under whatever it measures to now.
+window.addEventListener("resize", ()=>{
+  document.querySelectorAll(".modal-overlay.open").forEach(o=>{
+    o.style.setProperty("--nav-clearance", measureNavClearance() + "px");
+  });
+});
+
+// ---------- Content edit modal ----------
+function openContentModal(product){
+  modalProductId = product.id;
+  const existing = contentById.get(product.id) || {};
+  document.getElementById("contentModalTitle").textContent = `Edit write-up — ${product.brand} ${product.style}`;
+  document.getElementById("cmDescription").value = existing.description || "";
+  document.getElementById("cmFeatures").value = (existing.features || []).join("\n");
+  document.getElementById("cmLogoUrl").value = existing.logo_url || "";
+  document.getElementById("cmSupplierNote").value = existing.supplier_note || "";
+  updateLogoPreview();
+  document.getElementById("modalStatus").textContent = "";
+  document.getElementById("modalStatus").className = "modal-status";
+  openModal("contentModalOverlay");
+}
+function closeContentModal(){
+  closeModal("contentModalOverlay");
+  modalProductId = null;
+}
+function updateLogoPreview(){
+  const url = document.getElementById("cmLogoUrl").value.trim();
+  const img = document.getElementById("cmLogoPreview");
+  if(url){
+    img.src = url;
+    img.style.display = "inline-block";
+  } else {
+    img.style.display = "none";
+    img.removeAttribute("src");
+  }
+}
+document.getElementById("cmLogoUrl").addEventListener("input", updateLogoPreview);
+document.getElementById("cmLogoPreview").addEventListener("error", ()=>{
+  document.getElementById("cmLogoPreview").style.display = "none";
+});
+document.getElementById("modalCancelBtn").onclick = closeContentModal;
+document.getElementById("contentModalOverlay").addEventListener("click", (e)=>{
+  if(e.target.id === "contentModalOverlay") closeContentModal();
+});
+document.getElementById("modalSaveBtn").onclick = async ()=>{
+  if(!modalProductId) return;
+  const statusEl = document.getElementById("modalStatus");
+  statusEl.textContent = "Saving…";
+  statusEl.className = "modal-status";
+
+  // Blank lines (e.g. accidental double line-breaks while typing) are
+  // dropped rather than saved as empty bullet points.
+  const features = document.getElementById("cmFeatures").value
+    .split("\n").map(s => s.trim()).filter(Boolean);
+  const row = {
+    product_id: modalProductId,
+    description: document.getElementById("cmDescription").value.trim() || null,
+    features: features.length ? features : null,
+    logo_url: document.getElementById("cmLogoUrl").value.trim() || null,
+    supplier_note: document.getElementById("cmSupplierNote").value.trim() || null,
+    updated_at: new Date().toISOString(),
+  };
+  const { error } = await supabaseClient.from("product_content").upsert(row);
+  if(error){
+    console.error("[admin] content save failed:", error);
+    statusEl.textContent = "Couldn't save -- check your connection and try again.";
+    statusEl.className = "modal-status error";
+    return;
+  }
+  contentById.set(modalProductId, row);
+  statusEl.textContent = "Saved ✓";
+  statusEl.className = "modal-status saved";
+  renderCategories(); // refreshes the "Add write-up" / "Edit write-up ✓" label on the card
+  setTimeout(closeContentModal, 500);
+};
+
+// ---------- Search + brand filter ----------
+// ---------- Sidebar: search, category, tags, brand ----------
+document.getElementById("adminSearchInput").addEventListener("input", (e)=>{
+  adminState.searchQuery = e.target.value.trim().toLowerCase();
+  renderSidebarTagList();
+  renderSidebarBrandList();
+  renderCategories();
+  updateClearAllVisibility();
+});
+
+function productsInActiveCategory(){
+  return adminState.activeCategory === "all"
+    ? allProducts
+    : allProducts.filter(p => categoryOf(p) === adminState.activeCategory);
+}
+// Filters by category + search, plus optionally tags/brand -- each
+// sidebar list is computed with its OWN dimension excluded, so checking
+// a tag correctly narrows which brands still show as relevant (and vice
+// versa) instead of only reacting to the category.
+function productsForSidebar(opts){
+  opts = opts || {};
+  let list = productsInActiveCategory();
+  if(adminState.searchQuery){
+    const q = adminState.searchQuery;
+    list = list.filter(p => `${currentBrand(p)} ${currentStyle(p)} ${currentName(p)}`.toLowerCase().includes(q));
+  }
+  if(!opts.excludeTags && adminState.activeTags.size){
+    list = list.filter(p=>{
+      const tags = resolveProductTags(p);
+      return [...adminState.activeTags].every(id => tags.includes(id));
+    });
+  }
+  if(!opts.excludeBrands && adminState.activeBrands.size){
+    list = list.filter(p => adminState.activeBrands.has(currentBrand(p)));
+  }
+  return list;
+}
+
+function renderSidebarCategoryList(){
+  const wrap = document.getElementById("sidebarCategoryList");
+  wrap.innerHTML = "";
+  CATEGORY_DEFS.forEach(cat=>{
+    const item = document.createElement("button");
+    item.type = "button";
+    item.className = "sidebar-nav-item" + (cat.id === adminState.activeCategory ? " active" : "");
+    item.textContent = cat.label;
+    item.onclick = ()=>{
+      adminState.activeCategory = cat.id;
+      // Category change clears tag/brand filters, same reasoning as the
+      // live catalog page -- a brand or tag relevant to one category
+      // might not exist in another, so carrying it over just traps you
+      // in a confusing "0 results" state.
+      adminState.activeTags = new Set();
+      adminState.activeBrands = new Set();
+      renderSidebarCategoryList();
+      renderSidebarTagList();
+      renderSidebarBrandList();
+      renderCategories();
+      updateClearAllVisibility();
+    };
+    wrap.appendChild(item);
+  });
+}
+
+function renderSidebarTagList(){
+  const section = document.getElementById("sidebarTagSection");
+  const wrap = document.getElementById("sidebarTagList");
+  const inContext = productsForSidebar({ excludeTags: true });
+  const presentTagIds = new Set();
+  inContext.forEach(p => resolveProductTags(p).forEach(id => presentTagIds.add(id)));
+  const relevantTags = ALL_TAGS.filter(t => presentTagIds.has(t.id));
+  section.style.display = relevantTags.length ? "block" : "none";
+  wrap.innerHTML = "";
+  relevantTags.forEach(tag=>{
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "sidebar-chip" + (adminState.activeTags.has(tag.id) ? " active" : "");
+    chip.textContent = tag.label;
+    chip.onclick = ()=>{
+      if(adminState.activeTags.has(tag.id)) adminState.activeTags.delete(tag.id);
+      else adminState.activeTags.add(tag.id);
+      renderSidebarTagList();
+      renderSidebarBrandList();
+      renderCategories();
+      updateClearAllVisibility();
+    };
+    wrap.appendChild(chip);
+  });
+}
+
+function renderSidebarBrandList(){
+  const section = document.getElementById("sidebarBrandSection");
+  const wrap = document.getElementById("sidebarBrandList");
+  const brands = [...new Set(productsForSidebar({ excludeBrands: true }).map(p => currentBrand(p)).filter(Boolean))]
+    .sort((a,b) => a.localeCompare(b, undefined, { sensitivity:"base" }));
+  section.style.display = brands.length >= 2 ? "block" : "none";
+  wrap.innerHTML = "";
+  brands.forEach(b=>{
+    const safe = b.replace(/"/g, "&quot;");
+    const row = document.createElement("label");
+    row.className = "sidebar-brand-row";
+    row.innerHTML = `<input type="checkbox" data-brand="${safe}" ${adminState.activeBrands.has(b) ? "checked" : ""}/>${b}`;
+    row.querySelector("input").onchange = (e)=>{
+      if(e.target.checked) adminState.activeBrands.add(b); else adminState.activeBrands.delete(b);
+      renderSidebarTagList();
+      renderCategories();
+      updateClearAllVisibility();
+    };
+    wrap.appendChild(row);
+  });
+}
+
+function clearAllFilters(){
+  adminState.searchQuery = "";
+  adminState.activeBrands = new Set();
+  adminState.activeCategory = "all";
+  adminState.activeTags = new Set();
+  adminState.missingContentOnly = false;
+  document.getElementById("adminSearchInput").value = "";
+  document.getElementById("missingContentFilter").checked = false;
+  renderSidebarCategoryList();
+  renderSidebarTagList();
+  renderSidebarBrandList();
+  renderCategories();
+  updateClearAllVisibility();
+}
+function updateClearAllVisibility(){
+  const active = adminState.searchQuery || adminState.activeBrands.size || adminState.activeTags.size || adminState.activeCategory !== "all" || adminState.missingContentOnly;
+  document.getElementById("sidebarClearSection").style.display = active ? "block" : "none";
+}
+document.getElementById("sidebarClearBtn").onclick = clearAllFilters;
+document.getElementById("missingContentFilter").addEventListener("change", (e)=>{
+  adminState.missingContentOnly = e.target.checked;
+  renderCategories();
+  updateClearAllVisibility();
+});
+// Live count, refreshed whenever the underlying data changes (see
+// loadEverything and every place content gets saved) -- an at-a-glance
+// health check for the catalog as a whole, not just the current filter.
+function updateMissingContentCount(){
+  const missing = allProducts.filter(p => !hasExistingContent(p.id)).length;
+  document.getElementById("missingContentCount").textContent = missing ? `(${missing})` : "";
+}
+
+// ---------- Bulk tools: modal open/close/tabs ----------
+document.getElementById("bulkToolsBtn").onclick = ()=>{
+  openModal("bulkModalOverlay");
+  bulkLogoSelected.clear();
+  bulkLogoFilter = "none";
+  renderBulkLogoList();
+  updateBulkLogoButtonState(); // refresh in case products/content changed since last open
+};
+function closeBulkModal(){ closeModal("bulkModalOverlay"); }
+document.getElementById("csvCancelBtn").onclick = closeBulkModal;
+document.getElementById("logoCancelBtn").onclick = closeBulkModal;
+document.getElementById("bulkModalOverlay").addEventListener("click", (e)=>{
+  if(e.target.id === "bulkModalOverlay") closeBulkModal();
+});
+document.querySelectorAll(".bulk-tab").forEach(tab=>{
+  tab.onclick = ()=>{
+    document.querySelectorAll(".bulk-tab").forEach(t=>t.classList.remove("active"));
+    document.querySelectorAll(".bulk-pane").forEach(p=>p.classList.remove("active"));
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.tab === "csv" ? "csvPane" : "logoPane").classList.add("active");
+  };
+});
+
+// ---------- CSV import ----------
+// Matches each CSV row's "Product" column against the real catalog by
+// brand+style rather than requiring an exact internal product_id --
+// nobody typing a spreadsheet by hand should need to know or guess at
+// an id string. Normalizes both sides (lowercase, punctuation stripped)
+// before comparing, with a looser "contains" fallback if there's no
+// exact match, but a row that matches more than one product this way is
+// flagged as unmatched rather than silently guessing wrong.
+function normalizeForMatch(s){
+  return String(s || "").toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+}
+function wordsOf(s){ return normalizeForMatch(s).split(" ").filter(Boolean); }
+// True if needleWords appears as a contiguous run of WHOLE words inside
+// haystackWords -- deliberately not a raw substring check. A raw
+// substring check treats "ss4500" as present inside "ss4500z" (it's
+// literally a character prefix of it), which silently matched two real,
+// different products against the same CSV row and made both look
+// ambiguous. Comparing whole words instead means "ss4500" and "ss4500z"
+// are simply different words, exactly as a person reading them would
+// expect, regardless of one being a character-prefix of the other.
+function containsWordSequence(haystackWords, needleWords){
+  if(!needleWords.length || needleWords.length > haystackWords.length) return false;
+  for(let i=0; i<=haystackWords.length-needleWords.length; i++){
+    if(needleWords.every((w,j)=> haystackWords[i+j] === w)) return true;
+  }
+  return false;
+}
+function matchProductByName(name){
+  const targetWords = wordsOf(name);
+  if(!targetWords.length) return null;
+  const exact = allProducts.filter(p => wordsOf(`${p.brand} ${p.style}`).join(" ") === targetWords.join(" "));
+  if(exact.length === 1) return exact[0];
+  if(exact.length > 1) return null; // ambiguous -- don't guess
+  const loose = allProducts.filter(p=>{
+    const pWords = wordsOf(`${p.brand} ${p.style}`);
+    return containsWordSequence(targetWords, pWords) || containsWordSequence(pWords, targetWords);
+  });
+  return loose.length === 1 ? loose[0] : null;
+}
+
+let csvParsedRows = []; // { product, matched, description, features, supplierNote }
+// Both import routes -- the local file picker and the GitHub button -- end up
+// here, so a row is interpreted identically either way and the preview,
+// matching and overwrite protections are shared rather than duplicated.
+function ingestCsvResults(results, statusEl, whatFailed){
+  if(results.errors && results.errors.length){
+    statusEl.textContent = `Couldn't read ${whatFailed} -- make sure it's a valid CSV.`;
+    statusEl.className = "modal-status error";
+    console.error("[admin] CSV parse errors:", results.errors);
+    return false;
+  }
+  csvParsedRows = (results.data || []).map(row=>{
+    const productName = row["Product"] || row["product"] || "";
+    const matched = matchProductByName(productName);
+    return {
+      productName,
+      matched,
+      description: (row["Description"] || row["description"] || "").trim(),
+      features: (row["Features"] || row["features"] || "").split("|").map(s=>s.trim()).filter(Boolean),
+      supplierNote: (row["Supplier Note"] || row["supplier note"] || row["Supplier note"] || "").trim(),
+      overwrite: false, // existing content is protected by default -- see hasExistingContent below
+    };
+  });
+  csvFilter = "todo";
+  renderCsvPreview();
+  return true;
+}
+
+document.getElementById("csvFileInput").addEventListener("change", (e)=>{
+  const file = e.target.files[0];
+  if(!file) return;
+  const statusEl = document.getElementById("csvStatus");
+  statusEl.textContent = "";
+  Papa.parse(file, {
+    header: true,
+    skipEmptyLines: true,
+    complete: (results)=> ingestCsvResults(results, statusEl, "that file"),
+    error: (err)=>{
+      statusEl.textContent = "Couldn't read that file -- make sure it's a valid CSV.";
+      statusEl.className = "modal-status error";
+      console.error("[admin] CSV read error:", err);
+    },
+  });
+});
+
+// ---------- Import from GitHub ----------
+// Same file the scripts write, read from the repo instead of from disk. Two
+// problems this removes: hunting for product_descriptions.csv, and the much
+// quieter one of importing a stale copy left in someone's Downloads folder --
+// which is exactly how this catalog ended up with descriptions in one file and
+// products in another. Nothing about the import itself changes: the same
+// preview, the same brand+style matching, the same protection of write-ups
+// that already exist. It only changes where the bytes come from.
+const DESCRIPTIONS_CSV_URL = CATALOG_BASE_URL + "product_descriptions.csv";
+document.getElementById("csvGithubBtn").onclick = async ()=>{
+  const btn = document.getElementById("csvGithubBtn");
+  const statusEl = document.getElementById("csvStatus");
+  btn.disabled = true;
+  const label = btn.textContent;
+  btn.textContent = "Loading…";
+  statusEl.textContent = "";
+  statusEl.className = "modal-status";
+  try {
+    // Cache-busted for the same reason as catalog.json: GitHub's CDN serves
+    // raw files from its own cache for a few minutes, so a plain fetch right
+    // after a push can still hand back the previous version.
+    const res = await fetch(`${DESCRIPTIONS_CSV_URL}?t=${Date.now()}`, { cache: "no-store" });
+    if(res.status === 404){
+      statusEl.textContent = "product_descriptions.csv isn't in the repo yet -- push it first, or choose a file below.";
+      statusEl.className = "modal-status error";
+      return;
+    }
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = await res.text();
+    const results = Papa.parse(text, { header: true, skipEmptyLines: true });
+    if(ingestCsvResults(results, statusEl, "the file from GitHub")){
+      statusEl.textContent = `Loaded ${csvParsedRows.length} row(s) from GitHub.`;
+      statusEl.className = "modal-status saved";
+    }
+  } catch (err) {
+    console.error("[admin] couldn't load the CSV from GitHub:", err);
+    statusEl.textContent = "Couldn't reach GitHub just now -- check your connection, or choose a file below.";
+    statusEl.className = "modal-status error";
+  } finally {
+    btn.disabled = false;
+    btn.textContent = label;
+  }
+};
+// True if this product already has a real write-up saved -- a row with
+// only a logo_url (from the bulk logo tool) doesn't count as "existing
+// content" for this purpose, since that's a different field entirely.
+function hasExistingContent(productId){
+  const c = contentById.get(productId);
+  return !!(c && (c.description || (c.features && c.features.length) || c.supplier_note));
+}
+function willActuallyImport(r){
+  if(!r.matched) return false;
+  if(hasExistingContent(r.matched.id) && !r.overwrite) return false;
+  return true;
+}
+// Which of the three states a row is in. Everything that decides ordering,
+// filtering and wording keys off this one function, so the three can't drift
+// apart from each other.
+function csvRowState(r){
+  if(!r.matched) return "unmatched";                       // needs a person to pick
+  if(hasExistingContent(r.matched.id) && !r.overwrite) return "protected"; // nothing to do
+  return "new";                                            // will be written
+}
+const CSV_FILTERS = [
+  { id:"todo",      label:"Needs you",           states:["unmatched","new"] },
+  { id:"new",       label:"Will import",         states:["new"] },
+  { id:"unmatched", label:"No match",            states:["unmatched"] },
+  { id:"protected", label:"Already written",     states:["protected"] },
+  { id:"all",       label:"All",                 states:null },
+];
+let csvFilter = "todo";
+
+function renderCsvPreview(){
+  const wrap = document.getElementById("csvPreviewWrap");
+  const importBtn = document.getElementById("csvImportBtn");
+  if(!csvParsedRows.length){
+    wrap.innerHTML = `<p class="field-hint">No rows found in that file.</p>`;
+    importBtn.style.display = "none";
+    return;
+  }
+  const willImportCount = csvParsedRows.filter(willActuallyImport).length;
+  const protectedCount = csvParsedRows.filter(r => r.matched && hasExistingContent(r.matched.id) && !r.overwrite).length;
+  const sortedProducts = allProducts.slice().sort((a,b)=> `${a.brand} ${a.style}`.localeCompare(`${b.brand} ${b.style}`));
+
+  // Keep each row's original CSV position so a row can still be edited by
+  // index after being reordered for display.
+  const indexed = csvParsedRows.map((r, i)=> ({ r, i, state: csvRowState(r) }));
+  const counts = indexed.reduce((acc, x)=>{ acc[x.state] = (acc[x.state]||0)+1; return acc; }, {});
+  const countFor = (f)=> f.states ? f.states.reduce((n,st)=> n + (counts[st]||0), 0) : indexed.length;
+
+  // If nothing needs attention, "Needs you" would open on an empty table --
+  // fall back to showing everything rather than looking broken.
+  if(csvFilter === "todo" && countFor(CSV_FILTERS[0]) === 0) csvFilter = "all";
+  const activeDef = CSV_FILTERS.find(f => f.id === csvFilter) || CSV_FILTERS[4];
+
+  const filterHTML = `<div class="pill-filter-row">${CSV_FILTERS.map(f=>{
+    const n = countFor(f);
+    return `<button type="button" class="pill-filter${f.id===csvFilter?" active":""}" data-filter="${f.id}"${n===0&&f.id!=="all"?" disabled":""}>${f.label}<span class="n">${n}</span></button>`;
+  }).join("")}<span class="pill-filter-note">newest imports first</span></div>`;
+
+  // Rows that need a decision sort above rows that don't. Within a group the
+  // spreadsheet's own order is kept, so a batch added together stays together.
+  const rank = { unmatched: 0, new: 1, protected: 2 };
+  const visible = indexed
+    .filter(x => !activeDef.states || activeDef.states.includes(x.state))
+    .sort((a, b)=> rank[a.state] - rank[b.state] || a.i - b.i);
+
+  let html = filterHTML;
+  if(!visible.length){
+    html += `<div class="pill-filter-empty">No rows in that group.</div>`;
+    wrap.innerHTML = html;
+    wrap.querySelectorAll(".pill-filter").forEach(btn=>{
+      btn.onclick = ()=>{ csvFilter = btn.dataset.filter; renderCsvPreview(); };
+    });
+    importBtn.style.display = "inline-block";
+    importBtn.disabled = willImportCount === 0;
+    return;
+  }
+  html += `<table class="csv-preview-table"><thead><tr><th>Product (from CSV)</th><th>Match</th><th>Description preview</th></tr></thead><tbody>`;
+  visible.forEach(({ r, i })=>{
+    // A row that couldn't auto-match gets a manual picker instead of just
+    // a red dead-end -- whatever the reason automatic matching missed
+    // it, picking the right product directly here is always available
+    // as a fallback, rather than needing the CSV text itself fixed.
+    let matchCell;
+    if(!r.matched){
+      matchCell = `<select class="csv-manual-match" data-row-index="${i}">
+          <option value="">No match -- pick one?</option>
+          ${sortedProducts.map(p=>`<option value="${escapeHtmlAdmin(p.id)}">${escapeHtmlAdmin(p.brand)} ${escapeHtmlAdmin(p.style)}</option>`).join("")}
+        </select>`;
+    } else {
+      matchCell = `<span class="csv-match-badge ok">${escapeHtmlAdmin(r.matched.brand + " " + r.matched.style)}</span>`;
+      // Existing content is protected by default -- importing never
+      // silently overwrites a description someone already wrote unless
+      // this box is explicitly checked for that specific row.
+      if(hasExistingContent(r.matched.id)){
+        matchCell += `<label class="csv-overwrite-row"><input type="checkbox" class="csv-overwrite-check" data-row-index="${i}" ${r.overwrite ? "checked" : ""}/> already has a write-up -- overwrite it?</label>`;
+      }
+    }
+    html += `<tr class="${r.matched ? "csv-row-matched" : "csv-row-unmatched"}">
+      <td>${escapeHtmlAdmin(r.productName)}</td>
+      <td>${matchCell}</td>
+      <td>${escapeHtmlAdmin(r.description).slice(0,150)}${r.description.length>150?"…":""}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>`;
+  wrap.innerHTML = html;
+  wrap.querySelectorAll(".pill-filter").forEach(btn=>{
+    btn.onclick = ()=>{ csvFilter = btn.dataset.filter; renderCsvPreview(); };
+  });
+  wrap.querySelectorAll(".csv-manual-match").forEach(sel=>{
+    sel.onchange = ()=>{
+      const idx = Number(sel.dataset.rowIndex);
+      csvParsedRows[idx].matched = allProducts.find(p=>p.id === sel.value) || null;
+      renderCsvPreview(); // moves this row into the matched/green state and updates the import button
+    };
+  });
+  wrap.querySelectorAll(".csv-overwrite-check").forEach(cb=>{
+    cb.onchange = ()=>{
+      csvParsedRows[Number(cb.dataset.rowIndex)].overwrite = cb.checked;
+      renderCsvPreview();
+    };
+  });
+  importBtn.style.display = "inline-block";
+  importBtn.disabled = willImportCount === 0;
+  const skippedUnmatched = csvParsedRows.length - csvParsedRows.filter(r=>r.matched).length;
+  const notes = [];
+  if(skippedUnmatched) notes.push(`${skippedUnmatched} unmatched`);
+  if(protectedCount) notes.push(`${protectedCount} protected (already have a write-up)`);
+  importBtn.textContent = willImportCount
+    ? `Import ${willImportCount} row${willImportCount===1?"":"s"}${notes.length ? ` (${notes.join(", ")} skipped)` : ""}`
+    : "Nothing to import";
+}
+function escapeHtmlAdmin(s){
+  return String(s==null?"":s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+document.getElementById("csvImportBtn").onclick = async ()=>{
+  const statusEl = document.getElementById("csvStatus");
+  const rows = csvParsedRows.filter(willActuallyImport);
+  if(!rows.length) return;
+  statusEl.textContent = "Importing…";
+  statusEl.className = "modal-status";
+  const payload = rows.map(r=>({
+    product_id: r.matched.id,
+    description: r.description || null,
+    features: r.features.length ? r.features : null,
+    supplier_note: r.supplierNote || null,
+    // Deliberately NOT touching logo_url here -- CSV rows don't carry
+    // one (see the bulk logo tool instead), and an upsert with this key
+    // omitted leaves whatever logo is already saved untouched rather
+    // than blanking it out.
+    updated_at: new Date().toISOString(),
+  }));
+  const { error } = await supabaseClient.from("product_content").upsert(payload);
+  if(error){
+    console.error("[admin] CSV import failed:", error);
+    statusEl.textContent = "Import failed -- check your connection and try again.";
+    statusEl.className = "modal-status error";
+    return;
+  }
+  payload.forEach(row=>{
+    const existing = contentById.get(row.product_id) || {};
+    contentById.set(row.product_id, { ...existing, ...row });
+  });
+  statusEl.textContent = `Imported ${rows.length} product${rows.length===1?"":"s"} ✓`;
+  statusEl.className = "modal-status saved";
+  renderCategories();
+};
+
+// ---------- Bulk logo assignment ----------
+document.getElementById("bulkLogoUrl").addEventListener("input", ()=>{
+  const url = document.getElementById("bulkLogoUrl").value.trim();
+  const img = document.getElementById("bulkLogoPreview");
+  if(url){ img.src = url; img.style.display = "inline-block"; }
+  else { img.style.display = "none"; img.removeAttribute("src"); }
+  updateBulkLogoButtonState();
+});
+document.getElementById("bulkLogoPreview").addEventListener("error", ()=>{
+  document.getElementById("bulkLogoPreview").style.display = "none";
+});
+// Selection lives here rather than in the DOM, because switching filter
+// re-renders the list -- reading `input:checked` back off the page would
+// silently drop everything the filter had hidden.
+let bulkLogoSelected = new Set();
+let bulkLogoFilter = "none";  // opens on the products still needing a logo
+const LOGO_FILTERS = [
+  { id:"none", label:"Needs a logo", test:(has)=> !has },
+  { id:"yes",  label:"Has a logo",   test:(has)=> has },
+  { id:"all",  label:"All",          test:()=> true },
+];
+// A logo that 404s falls back to a small "!" chip rather than an empty slot,
+// so a dead URL reads as "assigned but broken" instead of "none assigned".
+const LOGO_ERR = `this.parentElement.classList.add('broken');this.parentElement.textContent='!';this.parentElement.title='Logo assigned, but the image did not load';`;
+
+function renderBulkLogoList(){
+  const wrap = document.getElementById("bulkLogoList");
+  const filterWrap = document.getElementById("bulkLogoFilters");
+  const products = allProducts.slice()
+    .sort((a,b)=> `${a.brand} ${a.style}`.localeCompare(`${b.brand} ${b.style}`))
+    .map(p => {
+      const logoUrl = (contentById.get(p.id) || {}).logo_url || "";
+      return { p, logoUrl, hasLogo: !!logoUrl };
+    });
+
+  const countFor = (f)=> products.filter(x => f.test(x.hasLogo)).length;
+  // Don't open on an empty list once every product has a logo.
+  if(bulkLogoFilter === "none" && countFor(LOGO_FILTERS[0]) === 0) bulkLogoFilter = "all";
+  const active = LOGO_FILTERS.find(f => f.id === bulkLogoFilter) || LOGO_FILTERS[2];
+
+  filterWrap.innerHTML = LOGO_FILTERS.map(f=>{
+    const n = countFor(f);
+    return `<button type="button" class="pill-filter${f.id===bulkLogoFilter?" active":""}" data-logo-filter="${f.id}"${n===0&&f.id!=="all"?" disabled":""}>${f.label}<span class="n">${n}</span></button>`;
+  }).join("") + `<span class="pill-filter-note">${bulkLogoSelected.size} selected</span>`;
+  filterWrap.querySelectorAll(".pill-filter").forEach(btn=>{
+    btn.onclick = ()=>{ bulkLogoFilter = btn.dataset.logoFilter; renderBulkLogoList(); };
+  });
+
+  const visible = products.filter(x => active.test(x.hasLogo));
+  wrap.innerHTML = "";
+  if(!visible.length){
+    wrap.innerHTML = `<div class="pill-filter-empty">No products in that group.</div>`;
+    return;
+  }
+  visible.forEach(({ p, hasLogo, logoUrl })=>{
+    const row = document.createElement("label");
+    row.className = "bulk-logo-row" + (hasLogo ? " is-set" : "");
+    row.innerHTML =
+      `<input type="checkbox" data-id="${p.id}" ${bulkLogoSelected.has(p.id) ? "checked" : ""}/>` +
+      `<span class="logo-thumb" title="${hasLogo ? "Logo assigned" : "No logo yet"}">` +
+        (hasLogo ? `<img src="${escapeHtmlAdmin(logoUrl)}" alt="" loading="lazy" onerror="${LOGO_ERR}" />` : "") +
+      `</span>` +
+      `<span class="logo-row-name">${escapeHtmlAdmin(p.brand)} ${escapeHtmlAdmin(p.style)}</span>`;
+    row.querySelector("input").onchange = (e)=>{
+      if(e.target.checked) bulkLogoSelected.add(p.id); else bulkLogoSelected.delete(p.id);
+      // Only the "N selected" readout needs updating, not the whole list --
+      // re-rendering here would fight the click that just happened.
+      const note = document.querySelector("#bulkLogoFilters .pill-filter-note");
+      if(note) note.textContent = `${bulkLogoSelected.size} selected`;
+      updateBulkLogoButtonState();
+    };
+    wrap.appendChild(row);
+  });
+}
+function updateBulkLogoButtonState(){
+  const url = document.getElementById("bulkLogoUrl").value.trim();
+  const n = bulkLogoSelected.size;
+  const btn = document.getElementById("bulkLogoAssignBtn");
+  btn.disabled = !(url && n);
+  // Name the count on the button: a selection can include products the current
+  // filter is hiding, so "Assign to selected" alone would understate it.
+  btn.textContent = n ? `Assign to ${n} selected` : "Assign to selected";
+}
+document.getElementById("bulkLogoAssignBtn").onclick = async ()=>{
+  const statusEl = document.getElementById("bulkLogoStatus");
+  const url = document.getElementById("bulkLogoUrl").value.trim();
+  const ids = [...bulkLogoSelected];
+  if(!url || !ids.length) return;
+  statusEl.textContent = "Assigning…";
+  statusEl.className = "modal-status";
+  // Merges into whatever content already exists for each product --
+  // this only ever touches logo_url, never clobbers a description or
+  // features someone already wrote for that product.
+  const payload = ids.map(id=>{
+    const existing = contentById.get(id) || {};
+    return { ...existing, product_id: id, logo_url: url, updated_at: new Date().toISOString() };
+  });
+  const { error } = await supabaseClient.from("product_content").upsert(payload);
+  if(error){
+    console.error("[admin] bulk logo assign failed:", error);
+    statusEl.textContent = "Couldn't save -- check your connection and try again.";
+    statusEl.className = "modal-status error";
+    return;
+  }
+  payload.forEach(row => contentById.set(row.product_id, row));
+  statusEl.textContent = `Logo assigned to ${ids.length} product${ids.length===1?"":"s"} ✓`;
+  statusEl.className = "modal-status saved";
+  bulkLogoSelected.clear();       // they're done; leaving them ticked invites a second accidental assign
+  updateBulkLogoButtonState();
+  renderBulkLogoList();
+  renderCategories();
+};
+
+init();
+</script>
+</body>
+</html>

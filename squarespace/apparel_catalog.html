@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ink Pusher — Apparel Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<style>
+  /* ---------- Design tokens ----------
+     Deliberately identical to the Mockup Studio's tokens (same hex values,
+     same "sticker" offset-shadow + thick outline treatment, same font).
+     This page and the Mockup Studio are meant to feel like one product,
+     not two -- so nothing here is a fresh design decision, it's a direct
+     port. If the Mockup Studio's palette ever changes, copy the new
+     values here too. */
+  :root{
+    --mint:#8FF0C8;
+    --mint-deep:#5FE0AE;
+    --ink:#0d0d0d;
+    --paper:#ffffff;
+    --paper-2:#f7f7f5;
+    --grey:#6b6b68;
+    --outline:#0d0d0d;
+    --hover:#f2fdf8;
+    --border-soft:#eee;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink); background:var(--paper-2);
+  }
+  h1,h2,.brand-font{font-family:"Poppins",-apple-system,sans-serif;}
+
+  .wrap{max-width:1280px;margin:0 auto;padding:28px 20px 64px;}
+
+  .catalog-header{margin-bottom:20px;}
+  .catalog-header h1{
+    font-weight:800; font-size:28px; margin:0 0 4px;
+  }
+  .catalog-header p{margin:0;color:var(--grey);font-size:14px;}
+
+  /* ---------- Sidebar layout ----------
+     Same pattern as admin.html's sidebar -- sticky, own scroll region,
+     stacks above the grid on narrow viewports instead of squeezing. */
+  .catalog-layout{display:flex;gap:28px;align-items:flex-start;}
+  .catalog-sidebar{
+    width:230px;flex-shrink:0;position:sticky;top:20px;
+    max-height:calc(100vh - 40px);overflow-y:auto;padding-bottom:20px;
+  }
+  .catalog-main{flex:1;min-width:0;}
+  @media (max-width:860px){
+    .catalog-layout{flex-direction:column;}
+    .catalog-sidebar{position:static;width:100%;max-height:none;}
+  }
+  .sidebar-section{margin-bottom:22px;}
+  .sidebar-section h3{
+    font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+    color:var(--grey);margin:0 0 10px;
+  }
+
+  /* ---------- Category nav ----------
+     Vertical list instead of horizontal pill tabs now that this lives in
+     a sidebar column -- same active/hover treatment, just stacked. */
+  .category-tabs{display:flex;flex-direction:column;gap:2px;}
+  .category-tab{
+    font-family:"Poppins",sans-serif; font-weight:700; font-size:14px;
+    padding:9px 12px; border-radius:9px; border:none;
+    background:none; color:var(--ink); cursor:pointer; text-align:left;
+    transition:background .12s;
+  }
+  .category-tab:hover{background:var(--hover);}
+  .category-tab.active{background:var(--mint);}
+
+  /* ---------- Filter chips ---------- */
+  .filter-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .filter-chip{
+    font-size:11.5px; font-weight:700; padding:6px 11px; border-radius:999px;
+    border:2px solid var(--outline); background:var(--paper); color:var(--ink);
+    cursor:pointer; transition:background .12s;
+  }
+  .filter-chip:hover{background:var(--hover);}
+  .filter-chip.active{background:var(--ink);color:var(--paper);}
+  .filter-clear{
+    font-size:11.5px; font-weight:600; color:var(--grey); background:none; border:none;
+    cursor:pointer; text-decoration:underline; padding:0;
+  }
+
+  /* ---------- Brand filter ----------
+     Inline checkbox list now that it lives in an always-visible sidebar
+     -- the dropdown/trigger mechanism this used before only made sense
+     when it had to share space in a horizontal toolbar. */
+  .brand-panel-list{max-height:220px;overflow-y:auto;}
+  .brand-check-row{
+    display:flex;align-items:center;gap:8px;padding:5px 4px;border-radius:6px;cursor:pointer;
+    font-size:12.5px;font-weight:600;color:var(--ink);
+  }
+  .brand-check-row:hover{background:var(--hover);}
+  .brand-check-row input{width:14px;height:14px;accent-color:var(--mint-deep);cursor:pointer;flex-shrink:0;}
+
+  /* ---------- Product grid & cards ----------
+     .product-card/.thumb/.pname/.pmeta match the Mockup Studio's classes
+     exactly, same reasoning as the tokens above. */
+  .product-grid{
+    /* 210px lands on exactly 4 columns at this page's main-content width
+       once the sidebar takes its share (982px main width: 4*210px cards
+       + 3*16px gaps = 888px, comfortable margin before a 5th would fit,
+       and before dropping to 3). Recompute this if the sidebar width or
+       page max-width ever changes. */
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap:16px;
+  }
+  .product-card{
+    background:var(--paper); border:2px solid var(--outline); border-radius:14px;
+    padding:10px 10px 12px; text-align:center; cursor:pointer; overflow:hidden;
+    box-shadow:3px 3px 0 rgba(0,0,0,0.10);
+    transition:box-shadow .12s, transform .12s;
+    display:block; text-decoration:none; color:inherit;
+  }
+  .product-card:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,0,0,0.14);}
+  .product-card .thumb{
+    width:100%;aspect-ratio:1/1;margin:0 0 10px;display:flex;align-items:center;justify-content:center;
+    border-radius:9px;overflow:hidden;background:#ffffff;
+  }
+  .product-card .thumb img{width:100%;height:100%;object-fit:contain;display:block;}
+  .product-card .pname{font-weight:800;font-size:13px;line-height:1.3;}
+  .product-card .pmeta{font-size:11px;color:var(--grey);margin-top:1px;}
+
+  /* ---------- Colour preview on a card ----------
+     Distributors show a swatch strip and a colour count on their listing
+     pages, and it's genuinely the thing you want before deciding whether to
+     click: "does this come in the colour I need". The room comes from
+     tightening the gap between the style line and the product name, which was
+     looser than it needed to be.
+     Built from inline-block rather than flex on purpose -- Squarespace
+     overrides `display` on some elements inside a Code Block, and nothing here
+     should depend on flex to stay on one line. */
+  .pswatches{margin-top:7px;text-align:center;line-height:1;white-space:nowrap;overflow:hidden;}
+  .pswatch{
+    display:inline-block;width:11px;height:11px;border-radius:50%;
+    border:1px solid rgba(0,0,0,0.18);   /* keeps white and cream visible */
+    vertical-align:middle;margin-right:3px;
+  }
+  .pcount{
+    display:inline-block;font-size:10.5px;color:var(--grey);font-weight:600;
+    vertical-align:middle;margin-left:2px;
+  }
+  .product-grid-empty, .product-grid-loading, .product-grid-error{
+    grid-column:1/-1; text-align:center; padding:48px 10px; color:var(--grey); font-size:14px;
+  }
+  .product-grid-error{color:#b33;}
+
+  @media (max-width:640px){
+    .product-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;}
+    .catalog-header h1{font-size:22px;}
+  }
+
+  /* ---------- Search + "Browse all" ----------
+     Both moved into the sidebar as quick-jump tools, distinct from the
+     narrowing filters below them -- searching or browsing all bypasses
+     filtering entirely rather than being a kind of filter itself.
+     Layout notes carried over unchanged from before:
+     - Search results stay position:fixed, JS-positioned against the
+       input's real coordinates every time it opens (positionSearchResults).
+       No `transform` on this wrap or any ancestor, ever -- a transform on
+       an ancestor changes what a position:fixed descendant is positioned
+       relative to, silently breaking this the moment the box is focused.
+     - The "Browse all" panel stays position:absolute off its own
+       position:relative trigger wrapper (NOT position:fixed -- that drifted
+       away from its trigger in earlier testing). */
+  .catalog-search-wrap{position:relative;margin-bottom:10px;}
+  .catalog-search-wrap svg{
+    position:absolute;left:11px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--grey);
+  }
+  #catalogSearchInput{
+    width:100%;box-sizing:border-box;border:2px solid var(--outline);border-radius:10px;padding:9px 12px 9px 34px;
+    font-size:13px;font-weight:600;background:var(--paper);color:var(--ink);font-family:inherit;
+  }
+  #catalogSearchInput::placeholder{color:var(--grey);font-weight:500;}
+  #catalogSearchInput:focus{outline:none;box-shadow:3px 3px 0 var(--mint-deep);}
+  /* z-index and the re-homing in openSearchResults() go together, for the same
+     reason as the Product Admin modals: this page is pasted into a Squarespace
+     Code Block below the site nav, and that nav (#ip-wrap) is position:relative
+     with z-index:9999. This dropdown also lives inside .catalog-sidebar, which
+     is position:sticky -- and sticky ALWAYS creates a stacking context, so an
+     85 here was only ever competing with the sidebar's own children, never
+     with the nav. It has not visibly bitten yet because the dropdown usually
+     opens below where the nav sits, but the two do overlap when the page is
+     scrolled only slightly. Re-homing onto <body> puts it in the root stacking
+     context where this number means what it says. Positioning is unaffected:
+     it is position:fixed with JS-computed coordinates already (see
+     positionSearchResults), so it does not care what its parent is. */
+  .catalog-search-results{
+    position:fixed;z-index:2147483000;
+    background:var(--paper);border:2px solid var(--outline);border-radius:10px;
+    box-shadow:4px 4px 0 rgba(0,0,0,0.14);max-height:320px;overflow-y:auto;
+    display:none;
+  }
+  .catalog-search-results.open{display:block;}
+  .catalog-search-results .result-item{
+    padding:9px 13px;cursor:pointer;display:flex;flex-direction:column;gap:1px;
+    border-bottom:1px solid var(--border-soft);
+  }
+  .catalog-search-results .result-item:last-child{border-bottom:none;}
+  .catalog-search-results .result-item .rname{font-weight:700;font-size:13px;color:var(--ink);}
+  .catalog-search-results .result-item .rmeta{font-size:11.5px;color:var(--grey);font-weight:500;}
+  .catalog-search-results .result-item:hover,
+  .catalog-search-results .result-item.active{background:var(--mint);}
+  .catalog-search-results .result-item:hover .rname, .catalog-search-results .result-item.active .rname,
+  .catalog-search-results .result-item:hover .rmeta, .catalog-search-results .result-item.active .rmeta{color:#0d0d0d;}
+  .catalog-search-results .result-empty{padding:14px;font-size:12.5px;color:var(--grey);text-align:center;}
+
+  .catalog-mega-wrap{position:relative;}
+  .catalog-mega-trigger{
+    width:100%;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:8px;
+    border:2px solid var(--outline);border-radius:10px;padding:9px 12px;font-size:13px;
+    font-weight:700;background:var(--paper);color:var(--ink);cursor:pointer;font-family:inherit;
+    text-align:left;
+    transition:box-shadow .12s, transform .12s;
+  }
+  .catalog-mega-trigger span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .catalog-mega-trigger svg{flex-shrink:0;transition:transform .15s;}
+  .catalog-mega-trigger:hover{background:var(--hover);}
+  .catalog-mega-trigger.open svg{transform:rotate(180deg);}
+  .mega-panel{
+    display:none;position:absolute;top:calc(100% + 6px);left:0;z-index:60;
+    width:100%;box-sizing:border-box;
+    background:var(--paper);border:2px solid var(--outline);
+    border-radius:14px;box-shadow:5px 5px 0 rgba(0,0,0,0.18);padding:10px;
+  }
+  .mega-panel.open{display:block;}
+  .mega-panel.align-right{left:auto;right:0;}
+  .mega-list{max-height:280px;overflow-y:auto;padding-right:4px;}
+  .mega-list::-webkit-scrollbar{width:7px;}
+  .mega-list::-webkit-scrollbar-track{background:var(--paper-2);border-radius:4px;}
+  .mega-list::-webkit-scrollbar-thumb{background:#c9c5bb;border-radius:4px;}
+  .mega-item{
+    display:block;width:100%;text-align:left;border:none;background:none;font-family:inherit;
+    color:var(--ink);font-size:13px;font-weight:600;padding:8px 10px;border-radius:6px;cursor:pointer;
+    line-height:1.35;
+  }
+  .mega-item:hover{background:var(--mint);color:#0d0d0d;}
+  .mega-item .mega-item-meta{display:block;font-size:11px;font-weight:500;color:var(--grey);}
+  .mega-item:hover .mega-item-meta{color:#0d0d0d;opacity:.75;}
+  .mega-panel-empty{font-size:12.5px;color:var(--grey);padding:10px 6px;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="catalog-header">
+    <h1>Apparel Catalog</h1>
+    <p>Browse every blank garment style we print on. Pick a style to see all its colors and details.</p>
+  </div>
+
+  <div class="catalog-layout">
+    <aside class="catalog-sidebar">
+      <div class="sidebar-section">
+        <div class="catalog-search-wrap">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="catalogSearchInput" placeholder="Search…" autocomplete="off" />
+          <div class="catalog-search-results" id="catalogSearchResults"></div>
+        </div>
+        <div class="catalog-mega-wrap">
+          <button type="button" class="catalog-mega-trigger" id="catalogMegaTrigger">
+            <span>Browse full catalog (A–Z)</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="mega-panel" id="catalogMegaPanel"></div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <h3>Category</h3>
+        <div class="category-tabs" id="categoryTabs"></div>
+      </div>
+      <div class="sidebar-section" id="tagFilterSection">
+        <h3>Filter</h3>
+        <div class="filter-row" id="filterRow"></div>
+      </div>
+      <div class="sidebar-section" id="brandFilterSection">
+        <h3>Brand</h3>
+        <div class="brand-panel-list" id="brandFilterPanel"></div>
+      </div>
+      <div class="sidebar-section" id="clearAllSection" style="display:none;">
+        <button type="button" class="filter-clear" id="clearAllFiltersBtn">Clear all filters</button>
+      </div>
+    </aside>
+    <main class="catalog-main">
+      <div class="product-grid" id="productGrid">
+        <div class="product-grid-loading">Loading catalog…</div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+// ---------- Configuration ----------
+// Same catalog.json this reads is already used by the Mockup Studio -- one
+// source of truth, so a product added there shows up here automatically,
+// with no separate sync step.
+const CATALOG_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/catalog.json";
+const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/";
+// UPDATE THIS to the actual URL of the product detail page once it's
+// created in Squarespace -- a product's id gets appended as ?id=<id>.
+const PRODUCT_DETAIL_PAGE_URL = "/product-detail";
+
+// Read-only lookup -- no login involved, same as product_detail.html's use
+// of this table. Row Level Security allows public SELECT (see
+// supabase_setup.sql); only admin.html's signed-in session can write.
+// Until these are filled in, this page just shows catalog.json's data
+// exactly as-is, with no hidden products and no name corrections applied
+// -- same graceful "not configured yet" fallback as the other files.
+const SUPABASE_URL = "https://wkmwqqtwijimkqfijjrc.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_1ik4UyMIim4n-3FbWCzRRA_kHCy0N5G";
+let supabaseClient = null;
+if(SUPABASE_URL && SUPABASE_ANON_KEY){
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+async function loadOverrides(){
+  if(!supabaseClient) return new Map();
+  try {
+    const { data, error } = await supabaseClient.from("product_overrides").select("*");
+    if(error){ console.warn("[apparel-catalog] couldn't load overrides:", error); return new Map(); }
+    return new Map((data || []).map(o => [o.product_id, o]));
+  } catch (err) {
+    console.warn("[apparel-catalog] couldn't load overrides:", err);
+    return new Map();
+  }
+}
+
+const MAX_GRID_CARDS = 500; // defensive ceiling only, not a real-world limit
+
+// ---------- Category/filter taxonomy ----------
+// Identical to the Mockup Studio's -- same categories, same auto-derived
+// fit/style tags from each product's kind/name, so a product's filter
+// behavior here always matches how it behaves there.
+const CATEGORY_DEFS = [
+  { id:"all",    label:"All",                   kinds:null },
+  { id:"tee",    label:"T-Shirts / Tanks",       kinds:["tee","tank"] },
+  { id:"hoodie", label:"Sweatshirts / Hoodies",  kinds:["hoodie","sweatshirt"] },
+  { id:"cap",    label:"Headware",               kinds:["cap","hat","beanie"] },
+  { id:"tote",   label:"Tote Bags",              kinds:["tote"] },
+];
+const FIT_TAGS = [
+  { id:"womens", label:"Women's",  test:(p)=> /women'?s|\bladies\b/i.test(p.name) },
+  { id:"youth",  label:"Youth",    test:(p)=> /\byouth\b/i.test(p.name) },
+  { id:"unisex", label:"Unisex",   test:(p)=> !/women'?s|\bladies\b|\byouth\b/i.test(p.name) },
+];
+const STYLE_TAGS = [
+  { id:"tank",        label:"Tanks",        test:(p)=> p.kind==="tank" },
+  { id:"crop-top",    label:"Crop Tops",    test:(p)=> /\bcrop\b/i.test(p.name) },
+  { id:"tee",         label:"Tees",         test:(p)=> p.kind==="tee" && !/\bcrop\b/i.test(p.name) },
+  // Split by NAME rather than by `kind`, because kind is not trustworthy for
+  // fleece: Independent Trading IND4000 "Pullover Hoodie" is filed as
+  // kind=sweatshirt, and several other kind=sweatshirt entries are "Hooded
+  // Sweatshirt". The old `hoodie`/`sweatshirt` pair inherited that mess and
+  // gave two groups that didn't correspond to anything a customer is choosing
+  // between. Zip / pullover / crewneck is the real decision, and the three are
+  // mutually exclusive across every fleece product in the catalog.
+  { id:"zip-hoodie",      label:"Zip Hoodies",      test:(p)=> /\bzip\b|full[\s-]?zip/i.test(p.name) },
+  { id:"pullover-hoodie", label:"Pullover Hoodies", test:(p)=> (p.kind==="hoodie"||/hood/i.test(p.name)) && !/\bzip\b|full[\s-]?zip/i.test(p.name) },
+  { id:"crewneck",        label:"Crewnecks",        test:(p)=> /crew/i.test(p.name) && !/hood/i.test(p.name) },
+  { id:"tote",        label:"Totes",        test:(p)=> p.kind==="tote" },
+  { id:"trucker-hat", label:"Trucker Hats", test:(p)=> /trucker/i.test(p.name) },
+  { id:"dad-hat",     label:"Dad Hats",     test:(p)=> /dad\s*(hat|cap)|low[\s-]?profile/i.test(p.name) },
+  { id:"bucket-hat",  label:"Bucket Hats",  test:(p)=> /bucket/i.test(p.name) },
+  { id:"snapback",    label:"Snapbacks",    test:(p)=> /snapback/i.test(p.name) },
+  { id:"beanie",      label:"Beanies",      test:(p)=> p.kind==="beanie" || /beanie/i.test(p.name) },
+  { id:"cap",         label:"Caps",         test:(p)=> (p.kind==="cap"||p.kind==="hat") && !/trucker|dad\s*(hat|cap)|low[\s-]?profile|bucket|snapback|beanie/i.test(p.name) },
+];
+const ALL_TAGS = [...FIT_TAGS, ...STYLE_TAGS];
+
+function resolveProductTags(p){
+  if(Array.isArray(p.tags) && p.tags.length) return p.tags;
+  return ALL_TAGS.filter(t => t.test(p)).map(t => t.id);
+}
+function categoryOf(product){
+  const def = CATEGORY_DEFS.find(c => c.kinds && c.kinds.includes(product.kind));
+  return def ? def.id : "other";
+}
+function pickThumbColor(product){
+  // Same two ways to control a card's photo as the Mockup Studio: a
+  // featured_front.jpg file in the product's folder, or a thumbnailColor
+  // field in catalog.json -- see loadCatalog() below for where that
+  // marker file gets checked.
+  const withPhoto = product.colors.filter(c => c.frontSrc);
+  if(!withPhoto.length) return null;
+  if(product.thumbnailColor){
+    const match = withPhoto.find(c => c.name.toLowerCase() === product.thumbnailColor.toLowerCase());
+    if(match) return match;
+  }
+  return withPhoto.find(c => !/^white$/i.test(c.name)) || withPhoto[0];
+}
+
+// ---------- State ----------
+let CATALOG = { products: [] };
+const state = {
+  activeCategory: "all",
+  activeTags: new Set(),
+  activeBrands: new Set(),
+};
+
+// ---------- Load catalog ----------
+async function loadCatalog(){
+  const grid = document.getElementById("productGrid");
+  try {
+    // Cache-busting query param for the same reason as the Mockup Studio:
+    // GitHub's own CDN caches raw.githubusercontent.com responses for a
+    // few minutes independently of the browser, so a plain fetch can
+    // still serve a stale catalog right after a product is added.
+    const [res, overridesById] = await Promise.all([
+      fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }),
+      loadOverrides(),
+    ]);
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    if(!data.products || !data.products.length){
+      grid.innerHTML = `<div class="product-grid-error">The catalog loaded but listed zero products.</div>`;
+      return;
+    }
+    CATALOG.products = data.products
+      // Hidden products (toggled off in admin.html) never appear here --
+      // a product with no override row yet defaults to visible, same as
+      // every other tool reading this table.
+      .filter(p => {
+        const o = overridesById.get(p.id);
+        return !o || o.visible !== false;
+      })
+      .map(p => {
+        const o = overridesById.get(p.id) || {};
+        return {
+          id: p.id,
+          // Falls back to catalog.json's value whenever an override is
+          // blank/not set -- these exist purely for typo fixes/renames
+          // from admin.html, not a second source of truth.
+          name: o.name_override || p.name,
+          brand: o.brand_override || p.brand,
+          style: o.style_override || p.style,
+          kind: p.kind,
+          thumbnailColor: p.thumbnailColor || null,
+          tags: p.tags || null,
+          sortOrder: typeof o.sort_order === "number" ? o.sort_order : null,
+          colors: p.colors.map(c => ({
+            name: c.name,
+            hex: c.hex,
+            frontSrc: CATALOG_BASE_URL + c.front,
+            backSrc: CATALOG_BASE_URL + c.back,
+          })),
+        };
+      })
+      // A manual drag-reorder from admin.html applies here too, not just
+      // in the Mockup Studio -- this was missing entirely before. Products
+      // with an explicit sort_order sort by it first; anything without one
+      // (never touched in admin.html) just keeps catalog.json's own order,
+      // appended after the explicitly-ordered ones.
+      .sort((a,b)=>{
+        if(a.sortOrder != null && b.sortOrder != null) return a.sortOrder - b.sortOrder;
+        if(a.sortOrder != null) return -1;
+        if(b.sortOrder != null) return 1;
+        return 0;
+      });
+    render();
+  } catch (err) {
+    console.error("[apparel-catalog] failed to load catalog:", err);
+    grid.innerHTML = `<div class="product-grid-error">Couldn't load the catalog right now. Please refresh, or check back shortly.</div>`;
+  }
+}
+
+// ---------- Render: category tabs ----------
+function renderCategoryTabs(){
+  const wrap = document.getElementById("categoryTabs");
+  wrap.innerHTML = "";
+  CATEGORY_DEFS.forEach(cat=>{
+    const tab = document.createElement("button");
+    tab.type = "button";
+    tab.className = "category-tab" + (cat.id===state.activeCategory ? " active" : "");
+    tab.textContent = cat.label;
+    tab.onclick = ()=>{
+      state.activeCategory = cat.id;
+      state.activeTags = new Set();   // category change clears filters, same as the Mockup Studio --
+      state.activeBrands = new Set(); // a brand selected in one category might not exist in another
+      render();
+    };
+    wrap.appendChild(tab);
+  });
+}
+
+// ---------- Render: tag filter chips + brand list ----------
+function renderFilterRow(inCategory){
+  const tagSection = document.getElementById("tagFilterSection");
+  const wrap = document.getElementById("filterRow");
+  wrap.innerHTML = "";
+  // Only show chips for tags that actually appear in the current
+  // category -- no point offering "Trucker Hats" while looking at tees.
+  const presentTagIds = new Set();
+  inCategory.forEach(p => resolveProductTags(p).forEach(id => presentTagIds.add(id)));
+  const relevantTags = ALL_TAGS.filter(t => presentTagIds.has(t.id));
+  tagSection.style.display = relevantTags.length ? "block" : "none";
+
+  relevantTags.forEach(tag=>{
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "filter-chip" + (state.activeTags.has(tag.id) ? " active" : "");
+    chip.textContent = tag.label;
+    chip.onclick = ()=>{
+      if(state.activeTags.has(tag.id)) state.activeTags.delete(tag.id);
+      else state.activeTags.add(tag.id);
+      render();
+    };
+    wrap.appendChild(chip);
+  });
+
+  renderBrandFilter(inCategory);
+}
+
+// Plain inline checkbox list, not a dropdown -- the sidebar it lives in
+// is always visible, so there's no need for a trigger/open/close
+// mechanism the way this worked back when it shared a horizontal
+// toolbar. Only shown when there are at least 2 brands to choose between
+// in the current category -- a single-option list isn't a useful filter.
+function renderBrandFilter(inCategory){
+  const section = document.getElementById("brandFilterSection");
+  const panel = document.getElementById("brandFilterPanel");
+  const brands = [...new Set(inCategory.map(p => p.brand).filter(Boolean))]
+    .sort((a,b) => a.localeCompare(b, undefined, { sensitivity:"base" }));
+  section.style.display = brands.length >= 2 ? "block" : "none";
+  panel.innerHTML = "";
+  brands.forEach(b=>{
+    const safe = b.replace(/"/g, "&quot;");
+    const row = document.createElement("label");
+    row.className = "brand-check-row";
+    row.innerHTML = `<input type="checkbox" data-brand="${safe}" ${state.activeBrands.has(b) ? "checked" : ""}/>${b}`;
+    row.querySelector("input").onchange = (e)=>{
+      if(e.target.checked) state.activeBrands.add(b); else state.activeBrands.delete(b);
+      render();
+    };
+    panel.appendChild(row);
+  });
+}
+
+
+// Perceived brightness, for spreading the swatch sample across light->dark.
+function swatchLuma(hex){
+  const h = String(hex||"").replace("#","");
+  if(h.length !== 6) return null;
+  const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16);
+  if([r,g,b].some(Number.isNaN)) return null;
+  return 0.299*r + 0.587*g + 0.114*b;
+}
+// Up to `max` swatches chosen as an even spread across the product's colour
+// range, NOT the first few -- catalog.json tends to list whites and heathers
+// together, so taking the first six often produced six near-identical dots
+// that said nothing about the range on offer.
+function swatchSample(colors, max){
+  const withHex = (colors||[]).filter(c => swatchLuma(c.hex) !== null);
+  if(withHex.length <= max) return withHex;
+  const sorted = withHex.slice().sort((a,b)=> swatchLuma(a.hex) - swatchLuma(b.hex));
+  const step = (sorted.length - 1) / (max - 1);
+  return Array.from({length:max}, (_,i)=> sorted[Math.round(i*step)]);
+}
+function swatchRowHTML(product){
+  const total = (product.colors || []).length;
+  if(!total) return "";
+  const dots = swatchSample(product.colors, 6)
+    .map(c => `<span class="pswatch" style="background:${c.hex}" title="${String(c.name||"").replace(/"/g,"&quot;")}"></span>`)
+    .join("");
+  return `<div class="pswatches">${dots}<span class="pcount">${total} color${total===1?"":"s"}</span></div>`;
+}
+// ---------- Render: product grid ----------
+function renderProductGrid(filtered){
+  const grid = document.getElementById("productGrid");
+  grid.innerHTML = "";
+  if(!filtered.length){
+    grid.innerHTML = `<div class="product-grid-empty">No products match those filters -- try clearing one.</div>`;
+    return;
+  }
+  filtered.slice(0, MAX_GRID_CARDS).forEach(p=>{
+    const thumbColor = pickThumbColor(p);
+    const featuredSrc = `${CATALOG_BASE_URL}catalog_images/${p.id}/featured_front.jpg`;
+    const fallbackSrc = thumbColor ? thumbColor.frontSrc : "";
+    const thumbHTML = thumbColor
+      ? `<img src="${featuredSrc}" data-fallback="${fallbackSrc}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback; this.removeAttribute('data-fallback');} else {this.onerror=null;}" alt="${p.name}" loading="lazy" />`
+      : "";
+    const card = document.createElement("a");
+    card.className = "product-card";
+    card.href = `${PRODUCT_DETAIL_PAGE_URL}?id=${encodeURIComponent(p.id)}`;
+    card.innerHTML = `
+      <div class="thumb">${thumbHTML}</div>
+      <div class="pname">${p.brand} ${p.style}</div>
+      <div class="pmeta">${p.name}</div>
+      ${swatchRowHTML(p)}
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ---------- Render: everything ----------
+function render(){
+  renderCategoryTabs();
+  const catDef = CATEGORY_DEFS.find(c => c.id === state.activeCategory);
+  const inCategory = (!catDef || !catDef.kinds)
+    ? CATALOG.products
+    : CATALOG.products.filter(p => categoryOf(p) === state.activeCategory);
+  renderFilterRow(inCategory);
+
+  // AND logic across tag filters (a product must match every active tag),
+  // combined with OR logic within the brand selection (a product only
+  // ever has one brand, so "Bella/Canvas OR Gildan" is the useful
+  // question, not "...AND...") -- same reasoning as the Mockup Studio.
+  const hasActiveFilter = state.activeTags.size || state.activeBrands.size;
+  const filtered = hasActiveFilter
+    ? inCategory.filter(p => {
+        const tags = resolveProductTags(p);
+        const tagsOk = [...state.activeTags].every(id => tags.includes(id));
+        const brandOk = state.activeBrands.size === 0 || state.activeBrands.has(p.brand);
+        return tagsOk && brandOk;
+      })
+    : inCategory;
+
+  renderProductGrid(filtered);
+  document.getElementById("clearAllSection").style.display =
+    (state.activeCategory !== "all" || state.activeTags.size || state.activeBrands.size) ? "block" : "none";
+}
+document.getElementById("clearAllFiltersBtn").onclick = ()=>{
+  state.activeCategory = "all";
+  state.activeTags = new Set();
+  state.activeBrands = new Set();
+  render();
+};
+
+function goToProduct(id){
+  window.location.href = `${PRODUCT_DETAIL_PAGE_URL}?id=${encodeURIComponent(id)}`;
+}
+
+// ---------- Search autocomplete ----------
+// Ranked substring match against brand/style/name, same scoring as the
+// Mockup Studio: brand/style matches outrank name-only matches, and a
+// match right at the start of brand/style outranks one buried mid-string.
+function filterProducts(query){
+  const q = (query||"").trim().toLowerCase();
+  if(!q) return [];
+  return CATALOG.products
+    .map(p=>{
+      const brand = (p.brand||"").toLowerCase();
+      const style = (p.style||"").toLowerCase();
+      const name = (p.name||"").toLowerCase();
+      if(!`${brand} ${style} ${name}`.includes(q)) return null;
+      let score = 2;
+      if(brand.startsWith(q) || style.startsWith(q)) score = 0;
+      else if(brand.includes(q) || style.includes(q)) score = 1;
+      return { p, score };
+    })
+    .filter(Boolean)
+    .sort((a,b)=> a.score-b.score)
+    .map(s=>s.p);
+}
+let searchMatches = [];
+let searchActiveIndex = -1;
+function renderSearchResults(){
+  const wrap = document.getElementById("catalogSearchResults");
+  const query = searchInputEl.value;
+  searchActiveIndex = -1;
+  if(!query.trim()){
+    wrap.classList.remove("open"); wrap.innerHTML = ""; searchMatches = [];
+    return;
+  }
+  searchMatches = filterProducts(query);
+  wrap.innerHTML = "";
+  if(!searchMatches.length){
+    wrap.innerHTML = `<div class="result-empty">No matches</div>`;
+  } else {
+    searchMatches.forEach(p=>{
+      const item = document.createElement("div");
+      item.className = "result-item";
+      item.innerHTML = `<span class="rname">${p.brand} ${p.style}</span><span class="rmeta">${p.name}</span>`;
+      // mousedown, not click -- fires before the input's blur handler
+      // closes the list, so the pick registers instead of getting
+      // swallowed by the list disappearing first.
+      item.onmousedown = (e)=>{ e.preventDefault(); goToProduct(p.id); };
+      wrap.appendChild(item);
+    });
+  }
+  openSearchResults(wrap);
+}
+// Re-home the dropdown onto <body> the first time it opens -- see the CSS
+// comment on .catalog-search-results. A no-op on every later open, and
+// harmless when this file is opened standalone.
+function openSearchResults(wrap){
+  if(wrap.parentElement !== document.body) document.body.appendChild(wrap);
+  positionSearchResults();
+  wrap.classList.add("open");
+}
+function positionSearchResults(){
+  const wrap = document.getElementById("catalogSearchResults");
+  const rect = searchInputEl.getBoundingClientRect();
+  wrap.style.left = rect.left + "px";
+  wrap.style.top = (rect.bottom + 6) + "px";
+  wrap.style.width = rect.width + "px";
+}
+function highlightSearchResult(){
+  const items = Array.from(document.querySelectorAll("#catalogSearchResults .result-item"));
+  items.forEach((it,i)=> it.classList.toggle("active", i===searchActiveIndex));
+  if(items[searchActiveIndex]) items[searchActiveIndex].scrollIntoView({ block:"nearest" });
+}
+const searchInputEl = document.getElementById("catalogSearchInput");
+searchInputEl.addEventListener("input", renderSearchResults);
+searchInputEl.addEventListener("focus", ()=>{ if(searchInputEl.value.trim()) renderSearchResults(); });
+searchInputEl.addEventListener("blur", ()=>{
+  setTimeout(()=>{ document.getElementById("catalogSearchResults").classList.remove("open"); }, 120);
+});
+searchInputEl.addEventListener("keydown", (e)=>{
+  const wrap = document.getElementById("catalogSearchResults");
+  if(!wrap.classList.contains("open") || !searchMatches.length) return;
+  if(e.key === "ArrowDown"){ e.preventDefault(); searchActiveIndex = Math.min(searchActiveIndex+1, searchMatches.length-1); highlightSearchResult(); }
+  else if(e.key === "ArrowUp"){ e.preventDefault(); searchActiveIndex = Math.max(searchActiveIndex-1, 0); highlightSearchResult(); }
+  else if(e.key === "Enter"){ if(searchActiveIndex>=0 && searchMatches[searchActiveIndex]){ e.preventDefault(); goToProduct(searchMatches[searchActiveIndex].id); } }
+  else if(e.key === "Escape"){ wrap.classList.remove("open"); }
+});
+window.addEventListener("scroll", ()=>{
+  const wrap = document.getElementById("catalogSearchResults");
+  if(wrap.classList.contains("open")) positionSearchResults();
+}, true);
+window.addEventListener("resize", ()=>{
+  const wrap = document.getElementById("catalogSearchResults");
+  if(wrap.classList.contains("open")) positionSearchResults();
+});
+
+// ---------- "Browse full catalog" panel ----------
+// Simpler than the Mockup Studio's version on purpose: this page already
+// has category tabs and filter chips doing the "browse by type" job, so
+// this panel's whole reason to exist is different -- a fast, flat A-Z
+// jump list for someone who already knows the name they're looking for.
+// One list, alphabetized by brand then style, no letter-header dividers
+// and no category split (both would just be visual noise for that use
+// case here).
+function renderCatalogMegaPanel(){
+  const panel = document.getElementById("catalogMegaPanel");
+  const items = CATALOG.products.slice()
+    .sort((a,b) => `${a.brand} ${a.style}`.localeCompare(`${b.brand} ${b.style}`, undefined, { sensitivity:"base" }));
+  const listHTML = items.length
+    ? items.map(p => `<button type="button" class="mega-item" data-id="${p.id}">
+        ${p.brand} ${p.style}
+        <span class="mega-item-meta">${p.name}</span>
+      </button>`).join("")
+    : `<div class="mega-panel-empty">No products yet</div>`;
+  panel.innerHTML = `<div class="mega-list">${listHTML}</div>`;
+  panel.querySelectorAll(".mega-item").forEach(btn=>{
+    btn.onclick = ()=> goToProduct(btn.dataset.id);
+  });
+}
+function positionMegaPanel(){
+  const panel = document.getElementById("catalogMegaPanel");
+  panel.classList.remove("align-right");
+  requestAnimationFrame(()=>{
+    const rect = panel.getBoundingClientRect();
+    if(rect.right > window.innerWidth - 12) panel.classList.add("align-right");
+  });
+}
+function openCatalogMegaPanel(){
+  renderCatalogMegaPanel();
+  document.getElementById("catalogMegaPanel").classList.add("open");
+  document.getElementById("catalogMegaTrigger").classList.add("open");
+  positionMegaPanel();
+}
+function closeCatalogMegaPanel(){
+  document.getElementById("catalogMegaPanel").classList.remove("open");
+  document.getElementById("catalogMegaTrigger").classList.remove("open");
+}
+document.getElementById("catalogMegaTrigger").onclick = (e)=>{
+  e.stopPropagation();
+  document.getElementById("catalogMegaPanel").classList.contains("open") ? closeCatalogMegaPanel() : openCatalogMegaPanel();
+};
+document.addEventListener("click", (e)=>{
+  const wrap = document.querySelector(".catalog-mega-wrap");
+  if(wrap && !wrap.contains(e.target)) closeCatalogMegaPanel();
+});
+window.addEventListener("resize", ()=>{
+  if(document.getElementById("catalogMegaPanel").classList.contains("open")) positionMegaPanel();
+});
+
+loadCatalog();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ink Pusher — Product Details</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Same design tokens as the catalog listing page and the Mockup Studio
+     -- see apparel_catalog.html for the full explanation. Keep these
+     three files' token blocks in sync if the palette ever changes. */
+  :root{
+    --mint:#8FF0C8; --mint-deep:#5FE0AE; --ink:#0d0d0d; --paper:#ffffff;
+    --paper-2:#f7f7f5; --grey:#6b6b68; --outline:#0d0d0d; --hover:#f2fdf8;
+    --border-soft:#eee;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    color:var(--ink); background:var(--paper-2);
+  }
+  h1,h2,.brand-font{font-family:"Poppins",-apple-system,sans-serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 72px;}
+
+  .breadcrumb{font-size:13px;color:var(--grey);margin-bottom:18px;}
+  .breadcrumb a{color:var(--grey);text-decoration:none;}
+  .breadcrumb a:hover{text-decoration:underline;}
+
+  /* ---------- Two-column layout ----------
+     Deliberately NOT a duplicated thumbnail-rail + swatch-grid pair (the
+     reference screenshot has both, but they represent the same colors
+     twice -- this catalog has one front/back photo per color, not a
+     multi-angle shoot, so a second representation of the same list would
+     just be redundant). One swatch grid drives the hero image; a
+     Front/Back toggle covers the angle instead. */
+  .pd-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+  @media (max-width:860px){ .pd-grid{grid-template-columns:1fr;gap:28px;} }
+
+  .pd-hero-stack{display:flex;flex-direction:column;gap:16px;}
+  .pd-hero{
+    background:#fff;border:2px solid var(--outline);border-radius:16px;
+    box-shadow:4px 4px 0 rgba(0,0,0,0.10);
+    aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;
+    position:relative;
+  }
+  .pd-hero img{width:100%;height:100%;object-fit:contain;display:block;}
+  .pd-hero-label{
+    position:absolute;top:12px;left:12px;font-size:11px;font-weight:800;
+    text-transform:uppercase;letter-spacing:.05em;color:var(--grey);
+    background:var(--paper);padding:4px 10px;border-radius:999px;border:1.5px solid var(--border-soft);
+  }
+
+  .pd-title-row{display:flex;align-items:center;gap:16px;margin-bottom:6px;}
+  .pd-title-row .pd-title{flex:0 1 auto;}
+  .pd-title-row .pd-logo{
+    /* Fills whatever width is left in the row after the title, rather
+       than a fixed size -- flex:1 makes the box itself exactly "from
+       where the title text ends to the container's right edge", and
+       object-fit contains the actual logo within that box at a fixed
+       height so it can't grow tall the way a width-only percentage did
+       (a wide, short logo like a lockup with a tagline underneath still
+       stayed short there, but a squarer one turned very tall). Anchored
+       left so the visible logo starts right where the title ends, not
+       centered with empty space on either side.
+       min-width:0 overrides flex's default min-width:auto, which would
+       otherwise refuse to let the image shrink below its natural size
+       and could push the row wider than the column if the title is long. */
+    flex:1 1 0%; min-width:0; height:64px;
+    object-fit:contain; object-position:left center; display:block;
+  }
+  .pd-title{font-weight:800;font-size:26px;line-height:1.15;margin:0;}
+  .pd-subtitle{color:var(--grey);font-size:13.5px;margin:2px 0 18px;}
+
+  .pd-color-label{font-weight:700;font-size:14px;margin-bottom:9px;}
+  .pd-color-label span{font-weight:600;color:var(--grey);}
+  .pd-swatch-grid{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:22px;}
+  .pd-swatch{
+    width:34px;height:34px;border-radius:8px;border:2px solid var(--outline);cursor:pointer;
+    padding:0;box-shadow:2px 2px 0 rgba(0,0,0,0.10);position:relative;
+  }
+  .pd-swatch.active{outline:3px solid var(--mint-deep);outline-offset:1px;}
+  .pd-swatch[data-light="1"]{border-color:#ccc;}
+
+  .pd-description{font-size:14.5px;line-height:1.6;margin-bottom:20px;}
+  .pd-features h3, .pd-supplier h3{font-size:14px;font-weight:800;margin:0 0 8px;}
+  .pd-features ul{margin:0 0 20px;padding-left:20px;font-size:14px;line-height:1.55;}
+  .pd-features li{margin-bottom:6px;}
+  .pd-supplier{font-size:13.5px;color:var(--ink);line-height:1.55;}
+  .pd-supplier strong{font-weight:800;}
+
+  .pd-content-empty{color:var(--grey);font-size:13.5px;font-style:italic;}
+
+  /* ---------- Related products ---------- */
+  .related-section{margin-top:56px;}
+  .related-section h2{font-size:18px;font-weight:800;margin:0 0 16px;}
+  .related-grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:16px;
+  }
+  .product-card{
+    background:var(--paper); border:2px solid var(--outline); border-radius:14px;
+    padding:10px 10px 12px; text-align:center; cursor:pointer; overflow:hidden;
+    box-shadow:3px 3px 0 rgba(0,0,0,0.10); text-decoration:none; color:inherit; display:block;
+    transition:box-shadow .12s, transform .12s;
+  }
+  .product-card:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,0,0,0.14);}
+  .product-card .thumb{
+    width:100%;aspect-ratio:1/1;margin:0 0 10px;display:flex;align-items:center;justify-content:center;
+    border-radius:9px;overflow:hidden;background:#fff;
+  }
+  .product-card .thumb img{width:100%;height:100%;object-fit:contain;display:block;}
+  .product-card .pname{font-weight:800;font-size:13px;line-height:1.3;}
+  .product-card .pmeta{font-size:11px;color:var(--grey);margin-top:1px;}
+
+  /* ---------- Colour preview on a card ----------
+     Distributors show a swatch strip and a colour count on their listing
+     pages, and it's genuinely the thing you want before deciding whether to
+     click: "does this come in the colour I need". The room comes from
+     tightening the gap between the style line and the product name, which was
+     looser than it needed to be.
+     Built from inline-block rather than flex on purpose -- Squarespace
+     overrides `display` on some elements inside a Code Block, and nothing here
+     should depend on flex to stay on one line. */
+  .pswatches{margin-top:7px;text-align:center;line-height:1;white-space:nowrap;overflow:hidden;}
+  .pswatch{
+    display:inline-block;width:11px;height:11px;border-radius:50%;
+    border:1px solid rgba(0,0,0,0.18);   /* keeps white and cream visible */
+    vertical-align:middle;margin-right:3px;
+  }
+  .pcount{
+    display:inline-block;font-size:10.5px;color:var(--grey);font-weight:600;
+    vertical-align:middle;margin-left:2px;
+  }
+  .pd-loading, .pd-error{padding:60px 10px;text-align:center;color:var(--grey);font-size:14px;}
+  .pd-error{color:#b33;}
+</style>
+</head>
+<body>
+
+<div class="wrap" id="pageContent">
+  <div class="pd-loading">Loading product…</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+// ================================================================
+// Product write-ups (description/features/logo/supplier note) now live
+// in Supabase, edited through admin.html's "Edit write-up" button on
+// each product -- not in this file. See admin-setup-guide.md for the
+// one-time setup. Until SUPABASE_URL/SUPABASE_ANON_KEY below are filled
+// in, every product's detail page still works fine, it just shows no
+// write-up section, exactly like a product nobody's written up yet.
+const SUPABASE_URL = "https://wkmwqqtwijimkqfijjrc.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_1ik4UyMIim4n-3FbWCzRRA_kHCy0N5G";
+
+const CATALOG_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/catalog.json";
+const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/";
+// Should point back at the catalog listing page -- update to match its
+// real URL once that page is live.
+const CATALOG_PAGE_URL = "/new-apparel-catalog";
+// Same taxonomy as apparel_catalog.html and the Mockup Studio -- keep the three
+// in sync. CATEGORY_DEFS is the coarse grouping used by the listing page's
+// tabs; the tag lists below are what actually drive "You may also like", for
+// the reason described on scoreRelated().
+const CATEGORY_DEFS = [
+  { id:"tee",    kinds:["tee","tank"] },
+  { id:"hoodie", kinds:["hoodie","sweatshirt"] },
+  { id:"cap",    kinds:["cap","hat","beanie"] },
+  { id:"tote",   kinds:["tote"] },
+];
+function categoryOf(product){
+  const def = CATEGORY_DEFS.find(c => c.kinds.includes(product.kind));
+  return def ? def.id : "other";
+}
+const FIT_TAGS = [
+  { id:"womens", test:(p)=> /women'?s|\bladies\b/i.test(p.name) },
+  { id:"youth",  test:(p)=> /\byouth\b/i.test(p.name) },
+  { id:"unisex", test:(p)=> !/women'?s|\bladies\b|\byouth\b/i.test(p.name) },
+];
+const STYLE_TAGS = [
+  { id:"tank",        test:(p)=> p.kind==="tank" },
+  { id:"crop-top",    test:(p)=> /\bcrop\b/i.test(p.name) },
+  { id:"tee",         test:(p)=> p.kind==="tee" && !/\bcrop\b/i.test(p.name) },
+  // Split by NAME rather than by `kind`, because kind is not trustworthy for
+  // fleece: Independent Trading IND4000 "Pullover Hoodie" is filed as
+  // kind=sweatshirt, and several other kind=sweatshirt entries are "Hooded
+  // Sweatshirt". The old `hoodie`/`sweatshirt` pair inherited that mess and
+  // gave two groups that didn't correspond to anything a customer is choosing
+  // between. Zip / pullover / crewneck is the real decision, and the three are
+  // mutually exclusive across every fleece product in the catalog.
+  { id:"zip-hoodie",      test:(p)=> /\bzip\b|full[\s-]?zip/i.test(p.name) },
+  { id:"pullover-hoodie", test:(p)=> (p.kind==="hoodie"||/hood/i.test(p.name)) && !/\bzip\b|full[\s-]?zip/i.test(p.name) },
+  { id:"crewneck",        test:(p)=> /crew/i.test(p.name) && !/hood/i.test(p.name) },
+  { id:"tote",        test:(p)=> p.kind==="tote" },
+  { id:"trucker-hat", test:(p)=> /trucker/i.test(p.name) },
+  { id:"dad-hat",     test:(p)=> /dad\s*(hat|cap)|low[\s-]?profile/i.test(p.name) },
+  { id:"bucket-hat",  test:(p)=> /bucket/i.test(p.name) },
+  { id:"snapback",    test:(p)=> /snapback/i.test(p.name) },
+  { id:"beanie",      test:(p)=> p.kind==="beanie" || /beanie/i.test(p.name) },
+  { id:"cap",         test:(p)=> (p.kind==="cap"||p.kind==="hat") && !/trucker|dad\s*(hat|cap)|low[\s-]?profile|bucket|snapback|beanie/i.test(p.name) },
+];
+const ALL_TAGS = [...FIT_TAGS, ...STYLE_TAGS];
+function resolveProductTags(p){
+  if(Array.isArray(p.tags) && p.tags.length) return p.tags;
+  return ALL_TAGS.filter(t => t.test(p)).map(t => t.id);
+}
+function escapeHtml(s){
+  return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function getProductIdFromUrl(){
+  return new URLSearchParams(window.location.search).get("id");
+}
+
+let CATALOG = { products: [] };
+let currentProduct = null;
+let currentContent = {};
+let currentColorIndex = 0;
+
+let supabaseClient = null;
+if(SUPABASE_URL && SUPABASE_ANON_KEY){
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+// Read-only lookup -- no login involved. The product_content table's Row
+// Level Security policy allows public SELECT (see supabase_setup.sql),
+// only INSERT/UPDATE is restricted to a signed-in admin.html session.
+// Returns {} (not an error) if Supabase isn't configured yet, or if this
+// particular product has no write-up saved yet -- both are treated the
+// same as "nothing to show here," not a failure.
+async function loadProductContent(id){
+  if(!supabaseClient) return {};
+  try {
+    const { data, error } = await supabaseClient.from("product_content").select("*").eq("product_id", id).maybeSingle();
+    if(error){ console.warn("[product-detail] couldn't load write-up content:", error); return {}; }
+    return data || {};
+  } catch (err) {
+    console.warn("[product-detail] couldn't load write-up content:", err);
+    return {};
+  }
+}
+// Same table admin.html writes to when correcting a typo'd brand/style/
+// name -- reuses the same supabaseClient as loadProductContent above,
+// just a different table.
+async function loadOverride(id){
+  if(!supabaseClient) return {};
+  try {
+    const { data, error } = await supabaseClient.from("product_overrides").select("*").eq("product_id", id).maybeSingle();
+    if(error){ console.warn("[product-detail] couldn't load overrides:", error); return {}; }
+    return data || {};
+  } catch (err) {
+    console.warn("[product-detail] couldn't load overrides:", err);
+    return {};
+  }
+}
+
+async function loadAndRender(){
+  const root = document.getElementById("pageContent");
+  const id = getProductIdFromUrl();
+  if(!id){
+    root.innerHTML = `<div class="pd-error">No product specified. <a href="${CATALOG_PAGE_URL}">Back to the catalog</a>.</div>`;
+    return;
+  }
+  try {
+    const [res, override] = await Promise.all([
+      fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }),
+      loadOverride(id),
+    ]);
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    CATALOG.products = (data.products || []).map(p => ({
+      id: p.id, name: p.name, brand: p.brand, style: p.style, kind: p.kind,
+      tags: p.tags || null,
+      colors: p.colors.map(c => ({
+        name: c.name, hex: c.hex,
+        frontSrc: CATALOG_BASE_URL + c.front,
+        backSrc: CATALOG_BASE_URL + c.back,
+      })),
+    }));
+    currentProduct = CATALOG.products.find(p => p.id === id);
+    if(!currentProduct){
+      root.innerHTML = `<div class="pd-error">Couldn't find that product. <a href="${CATALOG_PAGE_URL}">Back to the catalog</a>.</div>`;
+      return;
+    }
+    // Falls back to catalog.json's original value whenever an override is
+    // blank -- same as the catalog listing page.
+    if(override.name_override) currentProduct.name = override.name_override;
+    if(override.brand_override) currentProduct.brand = override.brand_override;
+    if(override.style_override) currentProduct.style = override.style_override;
+    currentContent = await loadProductContent(id);
+    currentColorIndex = 0;
+    renderPage();
+  } catch (err) {
+    console.error("[product-detail] failed to load catalog:", err);
+    root.innerHTML = `<div class="pd-error">Couldn't load product data right now. Please refresh, or check back shortly.</div>`;
+  }
+}
+
+function renderPage(){
+  const root = document.getElementById("pageContent");
+  const p = currentProduct;
+  const content = currentContent;
+
+  root.innerHTML = `
+    <div class="breadcrumb"><a href="${CATALOG_PAGE_URL}">Catalog</a> &nbsp;&rsaquo;&nbsp; ${escapeHtml(p.name)}</div>
+    <div class="pd-grid">
+      <div class="pd-hero-stack">
+        <div class="pd-hero"><span class="pd-hero-label">Front</span><img id="pdHeroImgFront" alt="${escapeHtml(p.name)} -- front" /></div>
+        <div class="pd-hero"><span class="pd-hero-label">Back</span><img id="pdHeroImgBack" alt="${escapeHtml(p.name)} -- back" /></div>
+      </div>
+      <div>
+        <div class="pd-title-row">
+          <h1 class="pd-title">${escapeHtml(p.brand)} ${escapeHtml(p.style)}</h1>
+          ${content.logo_url ? `<img class="pd-logo" src="${escapeHtml(content.logo_url)}" alt="" />` : ""}
+        </div>
+        <div class="pd-subtitle">${escapeHtml(p.name)}</div>
+
+        <div class="pd-color-label">Color: <span id="pdColorName"></span></div>
+        <div class="pd-swatch-grid" id="pdSwatchGrid"></div>
+
+        ${content.description
+          ? `<div class="pd-description">${escapeHtml(content.description)}</div>`
+          : `<div class="pd-description pd-content-empty">Description coming soon.</div>`}
+
+        ${content.features && content.features.length ? `
+          <div class="pd-features">
+            <h3>Features:</h3>
+            <ul>${content.features.map(f => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
+          </div>` : ""}
+
+        ${content.supplier_note ? `
+          <div class="pd-supplier"><strong>Responsible Supplier:</strong> ${escapeHtml(content.supplier_note)}</div>` : ""}
+      </div>
+    </div>
+
+    <div class="related-section">
+      <h2>You may also like</h2>
+      <div class="related-grid" id="relatedGrid"></div>
+    </div>
+  `;
+
+  renderSwatches();
+  renderHeroImages();
+
+  renderRelated();
+}
+
+function renderSwatches(){
+  const grid = document.getElementById("pdSwatchGrid");
+  grid.innerHTML = "";
+  currentProduct.colors.forEach((c, i)=>{
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "pd-swatch" + (i === currentColorIndex ? " active" : "");
+    btn.style.background = c.hex || "#ccc";
+    btn.title = c.name;
+    btn.setAttribute("aria-label", c.name);
+    if(isLightColor(c.hex)) btn.dataset.light = "1";
+    btn.onclick = ()=>{
+      currentColorIndex = i;
+      renderSwatches();
+      renderHeroImages();
+    };
+    grid.appendChild(btn);
+  });
+  document.getElementById("pdColorName").textContent = currentProduct.colors[currentColorIndex].name;
+}
+function isLightColor(hex){
+  if(!hex) return false;
+  const h = hex.replace("#","");
+  if(h.length !== 6) return false;
+  const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16);
+  return (0.299*r + 0.587*g + 0.114*b) > 235; // near-white swatches need a visible border
+}
+// Both front and back shown stacked, always -- no toggle. A single square
+// hero image left a lot of empty space below it next to the taller right
+// column (title/swatches/description/features); stacking front+back fills
+// that space with genuinely useful content instead of a toggle control.
+function renderHeroImages(){
+  const color = currentProduct.colors[currentColorIndex];
+  document.getElementById("pdHeroImgFront").src = color.frontSrc;
+  document.getElementById("pdHeroImgBack").src = color.backSrc;
+}
+
+// Perceived brightness, for spreading the swatch sample across light->dark.
+function swatchLuma(hex){
+  const h = String(hex||"").replace("#","");
+  if(h.length !== 6) return null;
+  const r = parseInt(h.slice(0,2),16), g = parseInt(h.slice(2,4),16), b = parseInt(h.slice(4,6),16);
+  if([r,g,b].some(Number.isNaN)) return null;
+  return 0.299*r + 0.587*g + 0.114*b;
+}
+// Up to `max` swatches chosen as an even spread across the product's colour
+// range, NOT the first few -- catalog.json tends to list whites and heathers
+// together, so taking the first six often produced six near-identical dots
+// that said nothing about the range on offer.
+function swatchSample(colors, max){
+  const withHex = (colors||[]).filter(c => swatchLuma(c.hex) !== null);
+  if(withHex.length <= max) return withHex;
+  const sorted = withHex.slice().sort((a,b)=> swatchLuma(a.hex) - swatchLuma(b.hex));
+  const step = (sorted.length - 1) / (max - 1);
+  return Array.from({length:max}, (_,i)=> sorted[Math.round(i*step)]);
+}
+function swatchRowHTML(product){
+  const total = (product.colors || []).length;
+  if(!total) return "";
+  const dots = swatchSample(product.colors, 6)
+    .map(c => `<span class="pswatch" style="background:${c.hex}" title="${String(c.name||"").replace(/"/g,"&quot;")}"></span>`)
+    .join("");
+  return `<div class="pswatches">${dots}<span class="pcount">${total} color${total===1?"":"s"}</span></div>`;
+}
+function pickThumbColor(product){
+  const withPhoto = product.colors.filter(c => c.frontSrc);
+  if(!withPhoto.length) return null;
+  return withPhoto.find(c => !/^white$/i.test(c.name)) || withPhoto[0];
+}
+// Ranks by how much a product actually resembles this one, rather than just
+// "same category". Category is far too coarse for this job: it puts tanks and
+// tees in one bucket, so a tank's recommendations came out as eight unisex
+// tees purely because tees are listed first and the old code took the first
+// eight. What a person browsing a tank wants to see is other tanks.
+//
+// The STYLE tag is the dominant term because it answers "what kind of garment
+// is this" more precisely than `kind` does -- it separates crop tops from
+// tees, and trucker/dad/bucket/snapback from each other, all of which live
+// under one `kind` in catalog.json. Fit is next (someone looking at a women's
+// cut usually wants women's cuts), then kind, then brand as a light tiebreak
+// so a rail doesn't fill up with one label.
+function tagSets(p){
+  const tags = resolveProductTags(p);
+  return {
+    style: new Set(tags.filter(t => STYLE_TAGS.some(x => x.id === t))),
+    fit:   new Set(tags.filter(t => FIT_TAGS.some(x => x.id === t))),
+  };
+}
+function scoreRelated(a, b){
+  const A = tagSets(a), B = tagSets(b);
+  // Compare the whole SET of style tags, not just the first one that matched.
+  // A "Women's Racerback Crop Tank" carries both `tank` and `crop-top`; taking
+  // only the first would have made it unrelated to a crop top, which is
+  // obviously wrong to anyone looking at the two garments.
+  const sharedStyle = [...A.style].filter(t => B.style.has(t)).length;
+  const sharedFit   = [...A.fit].filter(t => B.fit.has(t)).length;
+  let score = sharedStyle * 100;
+  if(sharedFit) score += 30;
+  if(a.kind === b.kind) score += 20;
+  if(a.brand === b.brand) score += 10;   // light tiebreak, not a grouping rule
+  if(categoryOf(a) === categoryOf(b)) score += 5;
+  // Qualifying is a separate question from ranking. Sharing only a FIT tag is
+  // not relatedness -- "unisex" is true of most of the catalog, and on a
+  // numeric floor alone it was enough to put a beanie and a tee on a tote
+  // bag's page once the six real totes ran out. Fewer cards beats wrong ones.
+  return { score, related: sharedStyle > 0 || a.kind === b.kind };
+}
+
+
+function renderRelated(){
+  const wrap = document.getElementById("relatedGrid");
+  const cat = categoryOf(currentProduct);
+  const scored = CATALOG.products
+    .filter(p => p.id !== currentProduct.id)
+    .map(p => ({ p, ...scoreRelated(currentProduct, p) }))
+    .sort((x, y) => y.score - x.score || x.p.name.localeCompare(y.p.name));
+  let related = scored.filter(x => x.related).slice(0, 8).map(x => x.p);
+  // Only if that leaves the rail nearly empty is it worth relaxing to the
+  // coarse same-category grouping, which at least keeps garments with garments.
+  if(related.length < 3){
+    related = scored.filter(x => categoryOf(x.p) === cat).slice(0, 8).map(x => x.p);
+  }
+  if(!related.length){
+    wrap.innerHTML = `<div class="pd-content-empty">Nothing else in this category yet.</div>`;
+    return;
+  }
+  wrap.innerHTML = "";
+  related.forEach(p=>{
+    const thumbColor = pickThumbColor(p);
+    const featuredSrc = `${CATALOG_BASE_URL}catalog_images/${p.id}/featured_front.jpg`;
+    const fallbackSrc = thumbColor ? thumbColor.frontSrc : "";
+    const card = document.createElement("a");
+    card.className = "product-card";
+    card.href = `?id=${encodeURIComponent(p.id)}`;
+    card.innerHTML = `
+      <div class="thumb">${thumbColor ? `<img src="${featuredSrc}" data-fallback="${fallbackSrc}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback; this.removeAttribute('data-fallback');} else {this.onerror=null;}" alt="${escapeHtml(p.name)}" loading="lazy" />` : ""}</div>
+      <div class="pname">${escapeHtml(p.brand)} ${escapeHtml(p.style)}</div>
+      <div class="pmeta">${escapeHtml(p.name)}</div>
+      ${swatchRowHTML(p)}
+    `;
+    wrap.appendChild(card);
+  });
+}
+
+loadAndRender();
+</script>
+
+</body>
+</html>

@@ -1428,6 +1428,101 @@ def cmd_fetch(args):
     print("Spot-check the Source column before importing -- these came off pages nobody vetted.")
 
 
+
+# ---------------------------------------------------------------------------
+# doctor -- "is my machine set up?"
+# ---------------------------------------------------------------------------
+# Exists so that setting a new person up is one command rather than a list of
+# things to check by eye. Every check says what's wrong AND the exact fix, so
+# nobody has to come back and ask.
+
+def cmd_doctor(args):
+    import platform
+    ok = True
+
+    def check(label, passed, detail="", fix=""):
+        nonlocal ok
+        print(f"  [{'OK' if passed else '--'}] {label}")
+        if detail:
+            print(f"       {detail}")
+        if not passed:
+            ok = False
+            if fix:
+                for line in fix.split("\n"):
+                    print(f"       -> {line}")
+
+    print("\nInk Pusher catalog tools -- setup check\n")
+
+    v = sys.version_info
+    check("Python 3.9 or newer", v >= (3, 9), f"found {platform.python_version()}",
+          "Install Python from python.org, then run this again with python3")
+
+    here = Path.cwd()
+    in_repo = (here / "build_descriptions.py").exists() and (here / "build_catalog.py").exists()
+    check("Running from the Mockup-Creator folder", in_repo, f"you are in {here}",
+          "cd ~/Documents/GitHub/Mockup-Creator\nthen run this command again")
+
+    cat = Path(args.catalog)
+    n = None
+    if cat.exists():
+        try:
+            n = len(json.loads(cat.read_text()).get("products", []))
+        except json.JSONDecodeError:
+            n = None
+    check("catalog.json found and readable", n is not None,
+          f"{n} products" if n is not None else f"{cat} missing or not valid JSON",
+          "In GitHub Desktop: Fetch origin, then Pull origin")
+
+    try:
+        import anthropic
+        have_sdk, sdk_v = True, getattr(anthropic, "__version__", "?")
+    except ImportError:
+        have_sdk, sdk_v = False, ""
+    check("Anthropic SDK installed", have_sdk, f"anthropic {sdk_v}" if have_sdk else "not installed",
+          "python3 -m pip install anthropic")
+
+    key = os.environ.get("ANTHROPIC_API_KEY", "")
+    # Never print the key itself -- just enough to tell one from another.
+    shown = f"...{key[-4:]}" if len(key) > 8 else ""
+    check("ANTHROPIC_API_KEY set", bool(key),
+          f"key ending {shown}" if key else "not set",
+          'echo \'export ANTHROPIC_API_KEY="sk-ant-...your key..."\' >> ~/.zshrc\n'
+          "then close and reopen Terminal.\n"
+          "Get a key at console.anthropic.com -> API keys.\n"
+          "(A Claude subscription is NOT an API key -- it's separate.)")
+
+    if have_sdk and key and not args.offline:
+        print("\n  Testing the key against the API (one tiny request)...")
+        try:
+            r = anthropic.Anthropic().messages.create(
+                model=args.model, max_tokens=16,
+                messages=[{"role": "user", "content": "Reply with just: ok"}],
+            )
+            txt = next((b.text for b in r.content if b.type == "text"), "").strip()
+            check("API key works", bool(txt), f"model replied {txt!r}")
+        except anthropic.AuthenticationError:
+            check("API key works", False, "the API rejected that key",
+                  "Check for a typo, or make a new key at console.anthropic.com")
+        except anthropic.APIStatusError as e:
+            code = getattr(e, "status_code", "?")
+            check("API key works", False, f"API returned {code}",
+                  "If this is 400 with a credit message, add credits at console.anthropic.com -> Billing"
+                  if code == 400 else "Try again shortly.")
+        except anthropic.APIConnectionError:
+            check("API key works", False, "couldn't reach the API", "Check your internet connection")
+    elif not args.offline:
+        print("\n  (Skipping the live API test until the two items above are sorted.)")
+
+    print()
+    if ok:
+        print("  All set. `scrape`, `fetch`, `polish` and `audit` will all work.\n")
+    else:
+        print("  Fix the items marked [--] above, then run this again.")
+        print("  `scrape` and `audit` work without the SDK or a key -- only")
+        print("  `fetch` and `polish` need those two.\n")
+    sys.exit(0 if ok else 1)
+
+
 # ---------------------------------------------------------------------------
 # audit
 # ---------------------------------------------------------------------------
@@ -1502,6 +1597,12 @@ def main():
                     help="comma-separated allowlist, e.g. bellacanvas.com,nextlevelapparel.com")
     fp.add_argument("--model", default="claude-opus-5")
     fp.set_defaults(func=cmd_fetch)
+
+    d = sub.add_parser("doctor", help="check this machine is set up correctly (start here)")
+    d.add_argument("--catalog", default=DEFAULT_CATALOG)
+    d.add_argument("--model", default="claude-opus-5")
+    d.add_argument("--offline", action="store_true", help="skip the live API test")
+    d.set_defaults(func=cmd_doctor)
 
     a = sub.add_parser("audit", help="list catalog products with no description yet")
     a.add_argument("--csv", default=DEFAULT_CSV)

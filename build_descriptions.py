@@ -1523,6 +1523,116 @@ def cmd_doctor(args):
     sys.exit(0 if ok else 1)
 
 
+
+# ---------------------------------------------------------------------------
+# setkey -- store the API key without anyone having to edit a file
+# ---------------------------------------------------------------------------
+# Setting this by hand went wrong three times in a row, and every failure was a
+# different mechanism: the key echoed to screen (and into shell history) when
+# typed as part of an `echo` command; TextEdit can silently swap straight
+# quotes for curly ones, which zsh won't parse; two commands pasted onto one
+# line redirected into a file called `.zshrcopen`; and an edit that isn't saved
+# leaves a stale key behind that looks exactly like a working one.
+#
+# None of those are user error so much as a bad interface. This replaces all of
+# it: the key is read with getpass (never displayed, never enters shell
+# history), written programmatically so quoting can't be mangled, any previous
+# line is replaced rather than appended to, and the result is verified against
+# the live API immediately -- so you find out it works before you leave.
+
+def cmd_setkey(args):
+    import getpass
+
+    shell_file = Path(os.path.expanduser(args.file))
+    print("\n  Store your Anthropic API key\n")
+    print("  1. Get a key at console.anthropic.com -> API keys -> Create Key")
+    print("  2. Copy it, then paste it below and press Return.")
+    print("\n  Your paste will NOT appear on screen -- that's deliberate, not a")
+    print("  freeze. Paste with Cmd-V as usual, then press Return.\n")
+
+    try:
+        raw = getpass.getpass("  API key: ")
+    except (EOFError, KeyboardInterrupt):
+        print("\n  Cancelled -- nothing was changed.")
+        sys.exit(1)
+
+    # Be forgiving about what actually lands on the clipboard: surrounding
+    # quotes, a whole `export NAME="..."` line copied from instructions, or
+    # stray whitespace and newlines from the console's copy button.
+    key = raw.strip()
+    m = re.search(r'ANTHROPIC_API_KEY\s*=\s*["\']?([^"\'\s]+)', key)
+    if m:
+        key = m.group(1)
+    key = key.strip().strip('"').strip("'").strip()
+
+    if not key:
+        print("\n  Nothing was pasted -- nothing was changed. Try again.")
+        sys.exit(1)
+    if not key.startswith("sk-ant-"):
+        print(f"\n  That doesn't look like an Anthropic API key (they start with"
+              f" 'sk-ant-'). Nothing was changed.")
+        sys.exit(1)
+    if len(key) < 40 or any(c.isspace() for c in key):
+        print("\n  That key looks incomplete or has a space in it -- the copy may")
+        print("  have been cut short. Nothing was changed; try copying it again.")
+        sys.exit(1)
+
+    existing = shell_file.read_text() if shell_file.exists() else ""
+    if existing:
+        backup = shell_file.with_suffix(shell_file.suffix + ".backup")
+        backup.write_text(existing)
+
+    # Drop every previous line for this variable, so a stale key can't be left
+    # sitting above the new one where it's easy to mistake for the live value.
+    kept = [ln for ln in existing.splitlines()
+            if not re.match(r'\s*export\s+ANTHROPIC_API_KEY\s*=', ln)]
+    removed = len(existing.splitlines()) - len(kept)
+    kept.append(f'export ANTHROPIC_API_KEY="{key}"')
+    shell_file.write_text("\n".join(kept).strip() + "\n")
+
+    print(f"\n  Saved to {shell_file} (key ending ...{key[-4:]})")
+    if removed:
+        print(f"  Replaced {removed} earlier ANTHROPIC_API_KEY line(s).")
+        print(f"  Previous file kept as {shell_file.name}.backup")
+
+    try:
+        import anthropic
+    except ImportError:
+        print("\n  Can't test it yet -- the SDK isn't installed. Run:")
+        print("    python3 -m pip install anthropic")
+        print("  then: python3 build_descriptions.py doctor")
+        return
+
+    print("\n  Testing it against the API...")
+    os.environ["ANTHROPIC_API_KEY"] = key
+    try:
+        r = anthropic.Anthropic(api_key=key).messages.create(
+            model=args.model, max_tokens=16,
+            messages=[{"role": "user", "content": "Reply with just: ok"}],
+        )
+        txt = next((b.text for b in r.content if b.type == "text"), "").strip()
+        print(f"  Works -- the model replied {txt!r}.\n")
+        print("  You're done. Quit Terminal (Cmd-Q) and reopen it so the key")
+        print("  loads for future commands, then everything will just work.\n")
+    except anthropic.AuthenticationError:
+        print("\n  The API rejected that key.")
+        print("  Most likely it was revoked, or the copy was incomplete.")
+        print("  Make a fresh key at console.anthropic.com and run this again.\n")
+        sys.exit(1)
+    except anthropic.APIStatusError as e:
+        code = getattr(e, "status_code", "?")
+        print(f"\n  The key was saved, but the API returned {code}.")
+        if code == 400:
+            print("  This usually means the account has no credits yet --")
+            print("  add some at console.anthropic.com -> Billing, then run:")
+            print("    python3 build_descriptions.py doctor\n")
+        else:
+            print("  Try `python3 build_descriptions.py doctor` again shortly.\n")
+    except anthropic.APIConnectionError:
+        print("\n  The key was saved, but I couldn't reach the API.")
+        print("  Check your internet, then run: python3 build_descriptions.py doctor\n")
+
+
 # ---------------------------------------------------------------------------
 # audit
 # ---------------------------------------------------------------------------
@@ -1603,6 +1713,11 @@ def main():
     d.add_argument("--model", default="claude-opus-5")
     d.add_argument("--offline", action="store_true", help="skip the live API test")
     d.set_defaults(func=cmd_doctor)
+
+    k = sub.add_parser("setkey", help="store your API key safely (no file editing)")
+    k.add_argument("--file", default="~/.zshrc")
+    k.add_argument("--model", default="claude-opus-5")
+    k.set_defaults(func=cmd_setkey)
 
     a = sub.add_parser("audit", help="list catalog products with no description yet")
     a.add_argument("--csv", default=DEFAULT_CSV)

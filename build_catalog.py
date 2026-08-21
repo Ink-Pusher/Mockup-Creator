@@ -672,8 +672,15 @@ def annotate_multi_colour_swatches(catalog):
 # right, and when it misses something the fix is adding a word.
 
 PATTERN_NAME_RE = re.compile(
-    r"camo|multicam|\bveil\b|tie.?dye|tie dye|\bmarl(e|ed)?\b|acid wash|"
-    r"mineral wash|splatter|houndstooth|leopard|digital",
+    # Generic words first, then the camo BRANDS -- Realtree, Kryptek, Veil,
+    # Obskura, Poseidon and Mossy Oak name patterns without ever saying "camo",
+    # so a colour like "Realtree Edge/ Brown" or "Kryptek Highlander" was
+    # falling through to a flat averaged colour. Worse than merely dull: those
+    # sit in a grid beside real two-tone splits, so one camo hat rendering as a
+    # single flat brown reads as a rendering fault rather than a colour.
+    r"camo|multicam|tie.?dye|tie dye|\bmarl(e|ed)?\b|acid wash|"
+    r"mineral wash|splatter|houndstooth|leopard|digital|"
+    r"realtree|kryptek|\bveil\b|obskura|poseidon|mossy ?oak|prym|kuiu",
     re.I,
 )
 SWATCH_TILE_PX = 96

@@ -7688,31 +7688,36 @@
           "name": "Kryptek Highlander",
           "hex": "#7c6650",
           "front": "catalog_images/yupoong-6606/kryptek-highlander_front.jpg",
-          "back": "catalog_images/yupoong-6606/kryptek-highlander_back.jpg"
+          "back": "catalog_images/yupoong-6606/kryptek-highlander_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/kryptek-highlander_swatch.jpg"
         },
         {
           "name": "Kryptek Pontus",
           "hex": "#2b5b84",
           "front": "catalog_images/yupoong-6606/kryptek-pontus_front.jpg",
-          "back": "catalog_images/yupoong-6606/kryptek-pontus_back.jpg"
+          "back": "catalog_images/yupoong-6606/kryptek-pontus_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/kryptek-pontus_swatch.jpg"
         },
         {
           "name": "Kryptek Raid",
           "hex": "#5f5e63",
           "front": "catalog_images/yupoong-6606/kryptek-raid_front.jpg",
-          "back": "catalog_images/yupoong-6606/kryptek-raid_back.jpg"
+          "back": "catalog_images/yupoong-6606/kryptek-raid_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/kryptek-raid_swatch.jpg"
         },
         {
           "name": "Kryptek Typhon",
           "hex": "#313237",
           "front": "catalog_images/yupoong-6606/kryptek-typhon_front.jpg",
-          "back": "catalog_images/yupoong-6606/kryptek-typhon_back.jpg"
+          "back": "catalog_images/yupoong-6606/kryptek-typhon_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/kryptek-typhon_swatch.jpg"
         },
         {
           "name": "Kryptek Wraith",
           "hex": "#dbdbda",
           "front": "catalog_images/yupoong-6606/kryptek-wraith_front.jpg",
-          "back": "catalog_images/yupoong-6606/kryptek-wraith_back.jpg"
+          "back": "catalog_images/yupoong-6606/kryptek-wraith_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/kryptek-wraith_swatch.jpg"
         },
         {
           "name": "Maroon/ Grey",
@@ -7824,7 +7829,8 @@
           "name": "Obskura Nox",
           "hex": "#343031",
           "front": "catalog_images/yupoong-6606/obskura-nox_front.jpg",
-          "back": "catalog_images/yupoong-6606/obskura-nox_back.jpg"
+          "back": "catalog_images/yupoong-6606/obskura-nox_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/obskura-nox_swatch.jpg"
         },
         {
           "name": "Pink",
@@ -7836,25 +7842,29 @@
           "name": "Poseidon Black",
           "hex": "#524e50",
           "front": "catalog_images/yupoong-6606/poseidon-black_front.jpg",
-          "back": "catalog_images/yupoong-6606/poseidon-black_back.jpg"
+          "back": "catalog_images/yupoong-6606/poseidon-black_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/poseidon-black_swatch.jpg"
         },
         {
           "name": "Realtree Edge/ Brown",
           "hex": "#88745f",
           "front": "catalog_images/yupoong-6606/realtree-edge-brown_front.jpg",
-          "back": "catalog_images/yupoong-6606/realtree-edge-brown_back.jpg"
+          "back": "catalog_images/yupoong-6606/realtree-edge-brown_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/realtree-edge-brown_swatch.jpg"
         },
         {
           "name": "Realtree Max7/ Brown",
           "hex": "#544b41",
           "front": "catalog_images/yupoong-6606/realtree-max7-brown_front.jpg",
-          "back": "catalog_images/yupoong-6606/realtree-max7-brown_back.jpg"
+          "back": "catalog_images/yupoong-6606/realtree-max7-brown_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/realtree-max7-brown_swatch.jpg"
         },
         {
           "name": "Realtree Original/ Black",
           "hex": "#5b4d49",
           "front": "catalog_images/yupoong-6606/realtree-original-black_front.jpg",
-          "back": "catalog_images/yupoong-6606/realtree-original-black_back.jpg"
+          "back": "catalog_images/yupoong-6606/realtree-original-black_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/realtree-original-black_swatch.jpg"
         },
         {
           "name": "Red",
@@ -9481,7 +9491,8 @@
           "name": "Heathered PoseidonBlue",
           "hex": "#234758",
           "front": "catalog_images/district-dt1101/heathered-poseidonblue_front.png",
-          "back": "catalog_images/district-dt1101/heathered-poseidonblue_back.png"
+          "back": "catalog_images/district-dt1101/heathered-poseidonblue_back.png",
+          "swatch": "catalog_images/district-dt1101/heathered-poseidonblue_swatch.jpg"
         },
         {
           "name": "HeatheredCharcoal",

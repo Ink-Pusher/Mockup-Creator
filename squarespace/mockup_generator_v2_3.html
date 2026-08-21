@@ -946,7 +946,18 @@
   .swatch-grid::-webkit-scrollbar-thumb:hover{background:var(--grey);}
   .swatch-item{text-align:center;cursor:pointer;}
   .swatch-dot{
-    width:32px;height:32px;border-radius:9px;margin:0 auto 4px;border:2px solid transparent;
+    width:32px;height:32px;border-radius:9px;margin:0 auto 4px;
+    /* A real outline on EVERY swatch, not just the selected one. With a
+       transparent border, a pale colour had no edge at all against this
+       background -- "Multicam Alpine/ White" and "Carolina Blue/ White"
+       floated with no box around them, and the grid read as inconsistent
+       once camo tiles sat beside them. Matches the 1px outline the catalog
+       cards already put on their dots, so the two surfaces agree. */
+    border:2px solid rgba(13,13,13,0.18);
+    /* Keep the fill inside the border. Under the default border-box clip a
+       camo photo paints beneath the semi-transparent border and muddies it,
+       so the outline stops reading as an outline. */
+    background-clip:padding-box;
     position:relative;
   }
   .swatch-item.active .swatch-dot{border-color:var(--outline);}

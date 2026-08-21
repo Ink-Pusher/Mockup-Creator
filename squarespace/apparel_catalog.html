@@ -569,7 +569,12 @@ function swatchBackground(c){
   // no two-colour split either, so build_catalog.py cuts a square of the real
   // fabric out of the product photo and stores it as `swatch`. Showing the
   // actual cloth beats any approximation, so it wins over both other cases.
-  if(c && c.swatchSrc) return `url("${c.swatchSrc}") center / cover`;
+  // SINGLE quotes around the URL, deliberately. This value gets interpolated
+  // into a double-quoted style="..." attribute, so double quotes here end the
+  // attribute early: the browser sees style="background:url(" , drops the
+  // whole declaration as invalid, and the swatch renders as nothing at all --
+  // which is exactly how camo came out blank in the Mockup Studio.
+  if(c && c.swatchSrc) return `url('${c.swatchSrc}') center / cover`;
   const parts = Array.isArray(c && c.hexes) && c.hexes.length > 1 ? c.hexes.slice(0, 3) : null;
   if(!parts) return (c && c.hex) || "#ccc";
   const step = 100 / parts.length;

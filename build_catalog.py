@@ -1099,10 +1099,16 @@ def main():
     # Do this before saving, and over the WHOLE catalog rather than just this
     # product -- the colour a new two-tone name needs may live on a product
     # added months ago, and vice versa.
-    made, skipped, failed = build_pattern_swatches(catalog)
-    if made or failed:
-        print(f"\nPattern swatches: {made} new tile(s) cut from the product photos"
-              + (f", {failed} colour(s) had no clean patch of fabric to cut from" if failed else ""))
+    # Named tiles_* deliberately. These were unpacked as `made, skipped, failed`
+    # once, which silently rebound `skipped` -- the list of colours that failed
+    # to download, built further up and printed further down -- to an int. The
+    # run then crashed on len(skipped) AFTER writing catalog.json but BEFORE
+    # reading the product's description, so the product appeared complete while
+    # its write-up was silently never fetched.
+    tiles_made, tiles_existing, tiles_failed = build_pattern_swatches(catalog)
+    if tiles_made or tiles_failed:
+        print(f"\nPattern swatches: {tiles_made} new tile(s) cut from the product photos"
+              + (f", {tiles_failed} colour(s) had no clean patch of fabric to cut from" if tiles_failed else ""))
 
     resolved, unresolved = annotate_multi_colour_swatches(catalog)
     if resolved or unresolved:

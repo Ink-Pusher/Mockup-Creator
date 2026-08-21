@@ -15114,6 +15114,83 @@
           "back": "catalog_images/bella-canvas-3513/true-royal-triblend_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-4051",
+      "name": "Women's Basic Tee",
+      "brand": "AS Colour",
+      "style": "4051",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Tee Army",
+          "hex": "#4c4b37",
+          "front": "catalog_images/as-colour-4051/tee-army_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-army_back.jpg"
+        },
+        {
+          "name": "Tee Black",
+          "hex": "#1f1f1f",
+          "front": "catalog_images/as-colour-4051/tee-black_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-black_back.jpg"
+        },
+        {
+          "name": "Tee Bone",
+          "hex": "#e3dfdb",
+          "front": "catalog_images/as-colour-4051/tee-bone_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-bone_back.jpg"
+        },
+        {
+          "name": "Tee Coal",
+          "hex": "#343432",
+          "front": "catalog_images/as-colour-4051/tee-coal_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-coal_back.jpg"
+        },
+        {
+          "name": "Tee Grey Marle",
+          "hex": "#8d8d8e",
+          "front": "catalog_images/as-colour-4051/tee-grey-marle_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-4051/tee-grey-marle_swatch.jpg"
+        },
+        {
+          "name": "Tee Natural",
+          "hex": "#f3efea",
+          "front": "catalog_images/as-colour-4051/tee-natural_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-natural_back.jpg"
+        },
+        {
+          "name": "Tee Pale Blue",
+          "hex": "#abbdc0",
+          "front": "catalog_images/as-colour-4051/tee-pale-blue_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-pale-blue_back.jpg"
+        },
+        {
+          "name": "Tee Pale Pink",
+          "hex": "#ebc0b8",
+          "front": "catalog_images/as-colour-4051/tee-pale-pink_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-pale-pink_back.jpg"
+        },
+        {
+          "name": "Tee Slate Blue",
+          "hex": "#6a8589",
+          "front": "catalog_images/as-colour-4051/tee-slate-blue_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-slate-blue_back.jpg"
+        },
+        {
+          "name": "Tee Tan",
+          "hex": "#ccac82",
+          "front": "catalog_images/as-colour-4051/tee-tan_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-tan_back.jpg"
+        },
+        {
+          "name": "Tee White",
+          "hex": "#f2f1f4",
+          "front": "catalog_images/as-colour-4051/tee-white_front.jpg",
+          "back": "catalog_images/as-colour-4051/tee-white_back.jpg"
+        }
+      ]
     }
   ]
 }

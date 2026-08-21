@@ -651,6 +651,131 @@ def annotate_multi_colour_swatches(catalog):
     return resolved, unresolved
 
 
+
+# ---------------------------------------------------------------------------
+# Pattern swatches (camo, tie-dye, marle)
+# ---------------------------------------------------------------------------
+# A camo colourway has no single colour, so the averaged hex is meaningless --
+# Forest Camo sampled as #464234, a flat olive-brown that appears nowhere on
+# the garment. Splitting into components the way two-tone names do won't help
+# either: camo isn't two colours in two regions, it's a pattern.
+#
+# But we already have a photograph of the fabric. So instead of synthesising a
+# pattern, cut a small square OUT of the real garment and use that as the
+# swatch. It's exact by construction, for camo and equally for anything else
+# patterned, with no pattern-specific code.
+#
+# Detection is by NAME, not by measuring how varied the photo is. Variance
+# looked promising and then flagged 335 colours, most of them wrong: the middle
+# of a zip hoodie is a zipper, a ribbed beanie is high-contrast by nature, and
+# every one of those needs a human to adjudicate. A name list is smaller, it is
+# right, and when it misses something the fix is adding a word.
+
+PATTERN_NAME_RE = re.compile(
+    r"camo|multicam|\bveil\b|tie.?dye|tie dye|\bmarl(e|ed)?\b|acid wash|"
+    r"mineral wash|splatter|houndstooth|leopard|digital",
+    re.I,
+)
+SWATCH_TILE_PX = 96
+
+
+def _fabric_mask(rgb, alpha=None):
+    """Where the garment actually is in a product photo.
+
+    Two kinds of source image here. Most are opaque on white, so the background
+    is the near-white region CONNECTED TO THE BORDER -- not merely every pale
+    pixel, which would classify a white tee as background and find no fabric at
+    all. The SanMar PDF path instead yields RGBA cutouts on a TRANSPARENT
+    background; converted to RGB that background becomes black, white-detection
+    finds nothing, and every crop then straddles the garment edge and scores as
+    a wild pattern. Where there's an alpha channel it is the authoritative
+    answer, so use it."""
+    from scipy import ndimage
+    if alpha is not None:
+        return ndimage.binary_erosion(alpha > 200, np.ones((9, 9)))
+    near_white = np.all(rgb > 236, axis=-1)
+    labels, _ = ndimage.label(near_white, np.ones((3, 3)))
+    border = set(labels[0, :]) | set(labels[-1, :]) | set(labels[:, 0]) | set(labels[:, -1])
+    border.discard(0)
+    return ndimage.binary_erosion(~np.isin(labels, list(border)), np.ones((9, 9)))
+
+
+def extract_pattern_tile(image_path):
+    """A square of real fabric, or None if no clean one can be found.
+
+    Candidates are placed across the chest and each is checked against the
+    fabric mask -- a tee's bounding box includes the gaps beside the sleeves,
+    so a crop positioned by geometry alone can land on background. Of the
+    valid ones, the MEDIAN-variance crop is kept: a zip or a placket skews one
+    crop, while a real pattern skews all of them, so the median is the one that
+    represents the fabric."""
+    import statistics
+    try:
+        img = Image.open(image_path)
+        alpha = np.array(img.getchannel("A")) if "A" in img.getbands() else None
+        arr = np.array(img.convert("RGB"))
+    except Exception:
+        return None
+    h, w, _ = arr.shape
+    mask = _fabric_mask(arr, alpha)
+    ys, xs = np.where(mask)
+    if len(ys) < 200:
+        return None
+    gx0, gx1, gy0, gy1 = xs.min(), xs.max(), ys.min(), ys.max()
+    side = max(12, int(min(gx1 - gx0, gy1 - gy0) * 0.16))
+    found = []
+    for fy in (0.42, 0.55, 0.32):
+        for fx in (0.28, 0.72, 0.5, 0.20, 0.80):
+            cx = int(gx0 + (gx1 - gx0) * fx)
+            cy = int(gy0 + (gy1 - gy0) * fy)
+            L, T = cx - side // 2, cy - side // 2
+            if L < 0 or T < 0 or L + side > w or T + side > h:
+                continue
+            if not mask[T:T + side, L:L + side].all():
+                continue
+            found.append(arr[T:T + side, L:L + side])
+            if len(found) >= 3:
+                break
+        if len(found) >= 3:
+            break
+    if not found:
+        return None
+    stds = [c.reshape(-1, 3).astype(float).std(axis=0).mean() for c in found]
+    med = statistics.median(stds)
+    best = found[min(range(len(stds)), key=lambda i: abs(stds[i] - med))]
+    tile = Image.fromarray(best).resize((SWATCH_TILE_PX, SWATCH_TILE_PX), Image.LANCZOS)
+    return tile
+
+
+def build_pattern_swatches(catalog, product_id=None):
+    """Write a `<colour>_swatch.jpg` tile for every patterned colour that
+    doesn't have one, and record it on the colour as `swatch`. Skips work
+    already done, so re-running is cheap."""
+    made = skipped = failed = 0
+    for prod in catalog.get("products", []):
+        if product_id and prod.get("id") != product_id:
+            continue
+        for col in prod.get("colors", []):
+            if not PATTERN_NAME_RE.search(col.get("name", "")):
+                col.pop("swatch", None)      # a renamed colour stops being patterned
+                continue
+            rel = f"catalog_images/{prod['id']}/{slugify(col['name'])}_swatch.jpg"
+            if Path(rel).exists():
+                col["swatch"] = rel
+                skipped += 1
+                continue
+            tile = extract_pattern_tile(col.get("front", ""))
+            if tile is None:
+                col.pop("swatch", None)
+                failed += 1
+                continue
+            Path(rel).parent.mkdir(parents=True, exist_ok=True)
+            tile.save(rel, quality=92)
+            col["swatch"] = rel
+            made += 1
+    return made, skipped, failed
+
+
 def warn_about_id_collisions(catalog, product_id, brand, style):
     """Catch the two ways a product quietly ends up broken in the catalog.
 
@@ -967,6 +1092,11 @@ def main():
     # Do this before saving, and over the WHOLE catalog rather than just this
     # product -- the colour a new two-tone name needs may live on a product
     # added months ago, and vice versa.
+    made, skipped, failed = build_pattern_swatches(catalog)
+    if made or failed:
+        print(f"\nPattern swatches: {made} new tile(s) cut from the product photos"
+              + (f", {failed} colour(s) had no clean patch of fabric to cut from" if failed else ""))
+
     resolved, unresolved = annotate_multi_colour_swatches(catalog)
     if resolved or unresolved:
         print(f"\nTwo-tone swatches: {resolved} colour(s) resolved into components, "

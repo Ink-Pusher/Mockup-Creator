@@ -271,6 +271,7 @@ async function loadAndRender(){
       tags: p.tags || null,
       colors: p.colors.map(c => ({
         name: c.name, hex: c.hex, hexes: c.hexes || null,
+        swatchSrc: c.swatch ? CATALOG_BASE_URL + c.swatch : null,
         frontSrc: CATALOG_BASE_URL + c.front,
         backSrc: CATALOG_BASE_URL + c.back,
       })),
@@ -393,6 +394,11 @@ function renderHeroImages(){
 // (Duplicated in apparel_catalog.html, product_detail.html and the Mockup
 // Studio -- keep the three in sync, as with the tag taxonomy.)
 function swatchBackground(c){
+  // A patterned colourway -- camo, tie-dye, marle -- has no single colour and
+  // no two-colour split either, so build_catalog.py cuts a square of the real
+  // fabric out of the product photo and stores it as `swatch`. Showing the
+  // actual cloth beats any approximation, so it wins over both other cases.
+  if(c && c.swatchSrc) return `url("${c.swatchSrc}") center / cover`;
   const parts = Array.isArray(c && c.hexes) && c.hexes.length > 1 ? c.hexes.slice(0, 3) : null;
   if(!parts) return (c && c.hex) || "#ccc";
   const step = 100 / parts.length;

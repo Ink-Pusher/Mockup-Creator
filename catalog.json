@@ -732,7 +732,8 @@
           "name": "Army Camo",
           "hex": "#5d5942",
           "front": "catalog_images/independent-trading-co-ind4000/army-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/army-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/army-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/army-camo_swatch.jpg"
         },
         {
           "name": "Ash Heather",
@@ -750,7 +751,8 @@
           "name": "Black Camo",
           "hex": "#3b383d",
           "front": "catalog_images/independent-trading-co-ind4000/black-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/black-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/black-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/black-camo_swatch.jpg"
         },
         {
           "name": "Blue Aqua",
@@ -808,19 +810,22 @@
           "name": "Darkwood Tree Camo",
           "hex": "#4f4a44",
           "front": "catalog_images/independent-trading-co-ind4000/darkwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/darkwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/darkwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/darkwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Deadwood Tree Camo",
           "hex": "#7e766b",
           "front": "catalog_images/independent-trading-co-ind4000/deadwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/deadwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/deadwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/deadwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Duck Camo",
           "hex": "#514539",
           "front": "catalog_images/independent-trading-co-ind4000/duck-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/duck-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/duck-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/duck-camo_swatch.jpg"
         },
         {
           "name": "Dusty Pink",
@@ -838,7 +843,8 @@
           "name": "Forest Camo",
           "hex": "#464234",
           "front": "catalog_images/independent-trading-co-ind4000/forest-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/forest-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/forest-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/forest-camo_swatch.jpg"
         },
         {
           "name": "Gold",
@@ -872,7 +878,8 @@
           "name": "Houndstooth",
           "hex": "#95928d",
           "front": "catalog_images/independent-trading-co-ind4000/houndstooth_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/houndstooth_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/houndstooth_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/houndstooth_swatch.jpg"
         },
         {
           "name": "Lavender",
@@ -926,7 +933,8 @@
           "name": "Realtree APX Camo",
           "hex": "#706459",
           "front": "catalog_images/independent-trading-co-ind4000/realtree-apx-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/realtree-apx-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/realtree-apx-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/realtree-apx-camo_swatch.jpg"
         },
         {
           "name": "Red",
@@ -980,7 +988,8 @@
           "name": "Snow Camo",
           "hex": "#88877d",
           "front": "catalog_images/independent-trading-co-ind4000/snow-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/snow-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/snow-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/snow-camo_swatch.jpg"
         },
         {
           "name": "Storm Blue",
@@ -992,7 +1001,8 @@
           "name": "Tiger Camo",
           "hex": "#605849",
           "front": "catalog_images/independent-trading-co-ind4000/tiger-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind4000/tiger-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind4000/tiger-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind4000/tiger-camo_swatch.jpg"
         }
       ]
     },
@@ -1174,7 +1184,8 @@
           "name": "Black/ Camo/ Loden",
           "hex": "#23201e",
           "front": "catalog_images/richardson-168/black-camo-loden_front.jpg",
-          "back": "catalog_images/richardson-168/black-camo-loden_back.jpg"
+          "back": "catalog_images/richardson-168/black-camo-loden_back.jpg",
+          "swatch": "catalog_images/richardson-168/black-camo-loden_swatch.jpg"
         },
         {
           "name": "Brown/ Khaki",
@@ -2382,7 +2393,8 @@
           "name": "Black Duck Camo",
           "hex": "#282829",
           "front": "catalog_images/valucap-vc300a/black-duck-camo_front.jpg",
-          "back": "catalog_images/valucap-vc300a/black-duck-camo_back.jpg"
+          "back": "catalog_images/valucap-vc300a/black-duck-camo_back.jpg",
+          "swatch": "catalog_images/valucap-vc300a/black-duck-camo_swatch.jpg"
         },
         {
           "name": "Brown",
@@ -2394,7 +2406,8 @@
           "name": "Brown Duck Camo",
           "hex": "#846644",
           "front": "catalog_images/valucap-vc300a/brown-duck-camo_front.jpg",
-          "back": "catalog_images/valucap-vc300a/brown-duck-camo_back.jpg"
+          "back": "catalog_images/valucap-vc300a/brown-duck-camo_back.jpg",
+          "swatch": "catalog_images/valucap-vc300a/brown-duck-camo_swatch.jpg"
         },
         {
           "name": "Butter",
@@ -2440,7 +2453,8 @@
           "name": "Green Camo",
           "hex": "#3e3b32",
           "front": "catalog_images/valucap-vc300a/green-camo_front.jpg",
-          "back": "catalog_images/valucap-vc300a/green-camo_back.jpg"
+          "back": "catalog_images/valucap-vc300a/green-camo_back.jpg",
+          "swatch": "catalog_images/valucap-vc300a/green-camo_swatch.jpg"
         },
         {
           "name": "Grey",
@@ -2452,7 +2466,8 @@
           "name": "Grey Camo",
           "hex": "#838287",
           "front": "catalog_images/valucap-vc300a/grey-camo_front.jpg",
-          "back": "catalog_images/valucap-vc300a/grey-camo_back.jpg"
+          "back": "catalog_images/valucap-vc300a/grey-camo_back.jpg",
+          "swatch": "catalog_images/valucap-vc300a/grey-camo_swatch.jpg"
         },
         {
           "name": "Grey/ Navy",
@@ -2564,7 +2579,8 @@
           "name": "Pink Camo",
           "hex": "#bfb4bf",
           "front": "catalog_images/valucap-vc300a/pink-camo_front.jpg",
-          "back": "catalog_images/valucap-vc300a/pink-camo_back.jpg"
+          "back": "catalog_images/valucap-vc300a/pink-camo_back.jpg",
+          "swatch": "catalog_images/valucap-vc300a/pink-camo_swatch.jpg"
         },
         {
           "name": "Purple",
@@ -2600,7 +2616,8 @@
           "name": "Tan Camo",
           "hex": "#8b7c63",
           "front": "catalog_images/valucap-vc300a/tan-camo_front.jpg",
-          "back": "catalog_images/valucap-vc300a/tan-camo_back.jpg"
+          "back": "catalog_images/valucap-vc300a/tan-camo_back.jpg",
+          "swatch": "catalog_images/valucap-vc300a/tan-camo_swatch.jpg"
         },
         {
           "name": "Texas Orange",
@@ -4362,7 +4379,8 @@
           "name": "Grey Marle",
           "hex": "#959498",
           "front": "catalog_images/as-colour-5026/grey-marle_front.jpg",
-          "back": "catalog_images/as-colour-5026/grey-marle_back.jpg"
+          "back": "catalog_images/as-colour-5026/grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-5026/grey-marle_swatch.jpg"
         },
         {
           "name": "Hazy Pink",
@@ -4560,7 +4578,8 @@
           "name": "White Marle",
           "hex": "#e9e9eb",
           "front": "catalog_images/as-colour-5026/white-marle_front.jpg",
-          "back": "catalog_images/as-colour-5026/white-marle_back.jpg"
+          "back": "catalog_images/as-colour-5026/white-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-5026/white-marle_swatch.jpg"
         },
         {
           "name": "Yellow",
@@ -4780,7 +4799,8 @@
           "name": "Grey Marle",
           "hex": "#969697",
           "front": "catalog_images/as-colour-5001/grey-marle_front.jpg",
-          "back": "catalog_images/as-colour-5001/grey-marle_back.jpg"
+          "back": "catalog_images/as-colour-5001/grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-5001/grey-marle_swatch.jpg"
         },
         {
           "name": "Hydro",
@@ -7318,7 +7338,8 @@
           "name": "Black Camo",
           "hex": "#22232a",
           "front": "catalog_images/independent-trading-co-prm180pt/black-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-prm180pt/black-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-prm180pt/black-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180pt/black-camo_swatch.jpg"
         },
         {
           "name": "Classic Navy",
@@ -7330,25 +7351,29 @@
           "name": "Darkwood Tree Camo",
           "hex": "#464546",
           "front": "catalog_images/independent-trading-co-prm180pt/darkwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-prm180pt/darkwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-prm180pt/darkwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180pt/darkwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Deadwood Tree Camo",
           "hex": "#8e8476",
           "front": "catalog_images/independent-trading-co-prm180pt/deadwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-prm180pt/deadwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-prm180pt/deadwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180pt/deadwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Duck Camo",
           "hex": "#514337",
           "front": "catalog_images/independent-trading-co-prm180pt/duck-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-prm180pt/duck-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-prm180pt/duck-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180pt/duck-camo_swatch.jpg"
         },
         {
           "name": "Forest Camo",
           "hex": "#434336",
           "front": "catalog_images/independent-trading-co-prm180pt/forest-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-prm180pt/forest-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-prm180pt/forest-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180pt/forest-camo_swatch.jpg"
         },
         {
           "name": "Grey Heather",
@@ -7456,7 +7481,8 @@
           "name": "Realtree APX Camo",
           "hex": "#786b5e",
           "front": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180pt/realtree-apx-camo_swatch.jpg"
         }
       ]
     },
@@ -7629,7 +7655,8 @@
           "hexes": [
             "#3f3c2e",
             "#252224"
-          ]
+          ],
+          "swatch": "catalog_images/yupoong-6606/green-camo-black_swatch.jpg"
         },
         {
           "name": "Heather Grey/ Black",
@@ -7711,43 +7738,50 @@
           "name": "Multicam Alpine/ White",
           "hex": "#eeeded",
           "front": "catalog_images/yupoong-6606/multicam-alpine-white_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-alpine-white_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-alpine-white_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-alpine-white_swatch.jpg"
         },
         {
           "name": "Multicam Arid/ Brown",
           "hex": "#a88e75",
           "front": "catalog_images/yupoong-6606/multicam-arid-brown_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-arid-brown_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-arid-brown_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-arid-brown_swatch.jpg"
         },
         {
           "name": "Multicam Arid/ Tan",
           "hex": "#aa9277",
           "front": "catalog_images/yupoong-6606/multicam-arid-tan_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-arid-tan_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-arid-tan_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-arid-tan_swatch.jpg"
         },
         {
           "name": "Multicam Black/ Black",
           "hex": "#393433",
           "front": "catalog_images/yupoong-6606/multicam-black-black_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-black-black_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-black-black_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-black-black_swatch.jpg"
         },
         {
           "name": "Multicam Green/ Black",
           "hex": "#8a7d63",
           "front": "catalog_images/yupoong-6606/multicam-green-black_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-green-black_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-green-black_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-green-black_swatch.jpg"
         },
         {
           "name": "Multicam Green/ Khaki",
           "hex": "#938266",
           "front": "catalog_images/yupoong-6606/multicam-green-khaki_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-green-khaki_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-green-khaki_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-green-khaki_swatch.jpg"
         },
         {
           "name": "Multicam Tropic/ Green",
           "hex": "#49452e",
           "front": "catalog_images/yupoong-6606/multicam-tropic-green_front.jpg",
-          "back": "catalog_images/yupoong-6606/multicam-tropic-green_back.jpg"
+          "back": "catalog_images/yupoong-6606/multicam-tropic-green_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/multicam-tropic-green_swatch.jpg"
         },
         {
           "name": "Navy",
@@ -7894,7 +7928,8 @@
           "name": "Veil Wideland",
           "hex": "#6e6058",
           "front": "catalog_images/yupoong-6606/veil-wideland_front.jpg",
-          "back": "catalog_images/yupoong-6606/veil-wideland_back.jpg"
+          "back": "catalog_images/yupoong-6606/veil-wideland_back.jpg",
+          "swatch": "catalog_images/yupoong-6606/veil-wideland_swatch.jpg"
         }
       ]
     },
@@ -8000,7 +8035,8 @@
           "hexes": [
             "#3f3c2e",
             "#252224"
-          ]
+          ],
+          "swatch": "catalog_images/yupoong-6006/green-camo-black_swatch.jpg"
         },
         {
           "name": "Heather/ Black",
@@ -8037,37 +8073,43 @@
           "name": "Multicam Alpine/ White",
           "hex": "#eae9e8",
           "front": "catalog_images/yupoong-6006/multicam-alpine-white_front.jpg",
-          "back": "catalog_images/yupoong-6006/multicam-alpine-white_back.jpg"
+          "back": "catalog_images/yupoong-6006/multicam-alpine-white_back.jpg",
+          "swatch": "catalog_images/yupoong-6006/multicam-alpine-white_swatch.jpg"
         },
         {
           "name": "Multicam Arid/ Brown",
           "hex": "#b39674",
           "front": "catalog_images/yupoong-6006/multicam-arid-brown_front.jpg",
-          "back": "catalog_images/yupoong-6006/multicam-arid-brown_back.jpg"
+          "back": "catalog_images/yupoong-6006/multicam-arid-brown_back.jpg",
+          "swatch": "catalog_images/yupoong-6006/multicam-arid-brown_swatch.jpg"
         },
         {
           "name": "Multicam Arid/ Tan",
           "hex": "#a48971",
           "front": "catalog_images/yupoong-6006/multicam-arid-tan_front.jpg",
-          "back": "catalog_images/yupoong-6006/multicam-arid-tan_back.jpg"
+          "back": "catalog_images/yupoong-6006/multicam-arid-tan_back.jpg",
+          "swatch": "catalog_images/yupoong-6006/multicam-arid-tan_swatch.jpg"
         },
         {
           "name": "Multicam Black/ Black",
           "hex": "#353130",
           "front": "catalog_images/yupoong-6006/multicam-black-black_front.jpg",
-          "back": "catalog_images/yupoong-6006/multicam-black-black_back.jpg"
+          "back": "catalog_images/yupoong-6006/multicam-black-black_back.jpg",
+          "swatch": "catalog_images/yupoong-6006/multicam-black-black_swatch.jpg"
         },
         {
           "name": "Multicam Green/ Black",
           "hex": "#937f62",
           "front": "catalog_images/yupoong-6006/multicam-green-black_front.jpg",
-          "back": "catalog_images/yupoong-6006/multicam-green-black_back.jpg"
+          "back": "catalog_images/yupoong-6006/multicam-green-black_back.jpg",
+          "swatch": "catalog_images/yupoong-6006/multicam-green-black_swatch.jpg"
         },
         {
           "name": "Multicam Tropic/ Green",
           "hex": "#665f3e",
           "front": "catalog_images/yupoong-6006/multicam-tropic-green_front.jpg",
-          "back": "catalog_images/yupoong-6006/multicam-tropic-green_back.jpg"
+          "back": "catalog_images/yupoong-6006/multicam-tropic-green_back.jpg",
+          "swatch": "catalog_images/yupoong-6006/multicam-tropic-green_swatch.jpg"
         },
         {
           "name": "Navy",
@@ -9177,13 +9219,15 @@
           "name": "Green Camo",
           "hex": "#403e2b",
           "front": "catalog_images/sportsman-sp12-sp12/green-camo_front.jpg",
-          "back": "catalog_images/sportsman-sp12-sp12/green-camo_back.jpg"
+          "back": "catalog_images/sportsman-sp12-sp12/green-camo_back.jpg",
+          "swatch": "catalog_images/sportsman-sp12-sp12/green-camo_swatch.jpg"
         },
         {
           "name": "Grey Camo",
           "hex": "#3c3e3b",
           "front": "catalog_images/sportsman-sp12-sp12/grey-camo_front.jpg",
-          "back": "catalog_images/sportsman-sp12-sp12/grey-camo_back.jpg"
+          "back": "catalog_images/sportsman-sp12-sp12/grey-camo_back.jpg",
+          "swatch": "catalog_images/sportsman-sp12-sp12/grey-camo_swatch.jpg"
         },
         {
           "name": "Heather Brown",
@@ -13465,7 +13509,8 @@
           "name": "Black Camo",
           "hex": "#3e3c3e",
           "front": "catalog_images/independent-trading-co-ss4500/black-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/black-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ss4500/black-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ss4500/black-camo_swatch.jpg"
         },
         {
           "name": "Blue Aqua",
@@ -13519,7 +13564,8 @@
           "name": "Duck Camo",
           "hex": "#544638",
           "front": "catalog_images/independent-trading-co-ss4500/duck-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/duck-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ss4500/duck-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ss4500/duck-camo_swatch.jpg"
         },
         {
           "name": "Dusty Pink",
@@ -13537,7 +13583,8 @@
           "name": "Forest Camo",
           "hex": "#777561",
           "front": "catalog_images/independent-trading-co-ss4500/forest-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss4500/forest-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ss4500/forest-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ss4500/forest-camo_swatch.jpg"
         },
         {
           "name": "Forest Green",
@@ -13805,7 +13852,8 @@
           "name": "Grey Acid Wash",
           "hex": "#3d393c",
           "front": "catalog_images/bella-canvas-3901/grey-acid-wash_front.jpg",
-          "back": "catalog_images/bella-canvas-3901/grey-acid-wash_back.jpg"
+          "back": "catalog_images/bella-canvas-3901/grey-acid-wash_back.jpg",
+          "swatch": "catalog_images/bella-canvas-3901/grey-acid-wash_swatch.jpg"
         },
         {
           "name": "Grey Triblend",
@@ -14555,13 +14603,15 @@
           "name": "Darkwood Tree Camo",
           "hex": "#514b45",
           "front": "catalog_images/independent-trading-co-ind330blv/darkwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind330blv/darkwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind330blv/darkwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind330blv/darkwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Deadwood Tree Camo",
           "hex": "#7e766d",
           "front": "catalog_images/independent-trading-co-ind330blv/deadwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ind330blv/deadwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ind330blv/deadwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ind330blv/deadwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Grey Heather",
@@ -14791,7 +14841,8 @@
           "name": "Black Camo",
           "hex": "#242424",
           "front": "catalog_images/independent-trading-co-ss300/black-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss300/black-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ss300/black-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ss300/black-camo_swatch.jpg"
         },
         {
           "name": "Bone",
@@ -14839,7 +14890,8 @@
           "name": "Deadwood Tree Camo",
           "hex": "#847b6e",
           "front": "catalog_images/independent-trading-co-ss300/deadwood-tree-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss300/deadwood-tree-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ss300/deadwood-tree-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ss300/deadwood-tree-camo_swatch.jpg"
         },
         {
           "name": "Dusty Sage",
@@ -14851,7 +14903,8 @@
           "name": "Forest Camo",
           "hex": "#585340",
           "front": "catalog_images/independent-trading-co-ss300/forest-camo_front.jpg",
-          "back": "catalog_images/independent-trading-co-ss300/forest-camo_back.jpg"
+          "back": "catalog_images/independent-trading-co-ss300/forest-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-ss300/forest-camo_swatch.jpg"
         },
         {
           "name": "Grey Heather",

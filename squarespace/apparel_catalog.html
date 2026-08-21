@@ -138,13 +138,26 @@
      should depend on flex to stay on one line. */
   .pswatches{margin-top:7px;text-align:center;line-height:1;white-space:nowrap;overflow:hidden;}
   .pswatch{
-    display:inline-block;width:11px;height:11px;border-radius:50%;
+    display:inline-block;width:15px;height:15px;border-radius:50%;
     border:1px solid rgba(0,0,0,0.18);   /* keeps white and cream visible */
     vertical-align:middle;margin-right:3px;
+    background-size:cover;background-position:center;  /* for the fabric tiles */
   }
   .pcount{
     display:inline-block;font-size:10.5px;color:var(--grey);font-weight:600;
     vertical-align:middle;margin-left:2px;
+  }
+
+  /* Six 15px dots plus "115 colors" needs ~168px, and a card is at least
+     190px wide inside its padding, so the row fits on one line. It does NOT
+     fit on a phone, where cards drop to ~120px inside padding -- and it never
+     did: at the old 11px the count was already being clipped by the row's
+     overflow:hidden, silently. So below 640px the dots shrink slightly and the
+     count moves to its own line, where six 13px dots need 96px of 120px. */
+  @media (max-width:640px){
+    .pswatch{width:13px;height:13px;}
+    .pswatches{white-space:normal;}
+    .pcount{display:block;margin:5px 0 0;}
   }
   .product-grid-empty, .product-grid-loading, .product-grid-error{
     grid-column:1/-1; text-align:center; padding:48px 10px; color:var(--grey); font-size:14px;

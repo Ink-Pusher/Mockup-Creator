@@ -38,6 +38,18 @@ easy to reintroduce:
 "sticker" card treatment (2px outline, hard offset shadow). If the palette
 changes, change it in all four — they are meant to read as one product.
 
+## Where this repo lives
+
+Not in `~/Documents`. That folder is redirected into iCloud Drive, and iCloud
+does two things a git repo cannot tolerate: it evicts file contents to save
+space (leaving `.icloud` placeholders, including potentially inside `.git`),
+and it treats files moved out of its tree as deletions. Moving this repo out of
+iCloud sent one tracked file — a saved vendor page — to iCloud's Trash on the
+way. Git had it, so nothing was lost, but that is the failure mode.
+
+Clone it somewhere outside `~/Documents` and `~/Desktop`. Anywhere else on the
+disk is fine.
+
 ## Protection against accidental deletion
 
 Files in a git repo can't usefully be locked in Finder. Git has to rewrite them

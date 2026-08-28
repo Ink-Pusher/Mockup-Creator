@@ -908,7 +908,14 @@
   .detail-box{
     font-size:13px; line-height:1.3; display:flex; flex-wrap:wrap; align-items:center; gap:12px;
   }
-  .detail-box .field{white-space:nowrap;}
+  /* nowrap + no ellipsis let a long product name set this row's
+     min-content width, which widened the whole main panel -- and the
+     stage's measured size along with it (measured: a long name changed
+     the stage from 1241px to 1820px tall). Every design object lives at
+     absolute canvas coordinates, so a stage resize slid the garment out
+     from under the artwork. Ellipsis caps the row's width so text can
+     never reflow the stage. */
+  .detail-box .field{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52ch;}
   .detail-box .sep{width:1px; align-self:stretch; background:#ddd; display:inline-block;}
   .detail-box b{font-weight:800;}
   .detail-box .lbl{color:var(--grey);font-weight:600;}
@@ -2032,6 +2039,7 @@ function renderEmptyState(product){
 
 function renderAll(){
   lastRender = renderGarment();
+  applyDesignAnchors(lastRender);
   renderDetailBox(lastRender.product, lastRender.color);
   renderEmptyState(lastRender.product);
   renderSwatches();
@@ -2409,6 +2417,77 @@ function determineObjectSide(obj, guides){
   const db = Math.hypot(obj.left-bx, obj.top-by);
   return df <= db ? "front" : "back";
 }
+
+// ---------- Design anchors ----------
+// Every design object carries a designAnchor: its position and scale
+// expressed RELATIVE to its side's garment photo box, not in absolute
+// canvas pixels. Absolute coordinates were the root of a whole family of
+// "my art moved" bugs, because the garment's box is not stable: the stage
+// resizes when the info row's text length changes the panel's width, when
+// the window resizes, and when a product's photos finish loading a moment
+// after a switch (carryDesignsToNewProduct used to bail in that window and
+// leave every object stranded at the OLD product's coordinates). Anything
+// visible got hand-corrected without a second thought; anything on a
+// HIDDEN layer kept the stale placement invisibly, then exported wrong --
+// which is exactly the "second set of artwork layers" report.
+//
+// Applying an anchor is a pure function of (anchor, current box), so it's
+// idempotent: reapplying on every render can never accumulate drift, and
+// an interim layout (photos still loading) self-corrects the moment the
+// real boxes arrive.
+function sideBoxFor(render, side){
+  if(!render) return null;
+  // The guide being non-null is the one reliable signal that this side's
+  // box is a REAL laid-out photo box, not an emptyHalfBox placeholder
+  // drawn while photos load (those look valid but aren't anchored to a
+  // garment).
+  if(side === "front") return render.guideFront ? render.frontBox : null;
+  if(side === "back")  return render.guideBack  ? render.backBox  : null;
+  return null;
+}
+function deriveAnchor(obj, box){
+  return {
+    relX: (obj.left - box.x) / box.w,
+    relY: (obj.top  - box.y) / box.h,
+    relS: obj.scaleX / box.w,
+    ratio: obj.scaleX ? (obj.scaleY / obj.scaleX) : 1,
+  };
+}
+function applyAnchor(obj, box){
+  const a = obj.designAnchor;
+  const sx = a.relS * box.w;
+  obj.set({
+    left: box.x + a.relX * box.w,
+    top:  box.y + a.relY * box.h,
+    scaleX: sx,
+    scaleY: sx * a.ratio,
+  });
+  obj.setCoords();
+}
+function applyDesignAnchors(render){
+  let touched = false;
+  fabricCanvas.getObjects().forEach(obj=>{
+    if(!obj.designSide && render && render.guideFront && render.guideBack){
+      // Text/shapes dropped at canvas centre have no side yet -- infer it
+      // once real boxes exist, same proximity rule as product switching.
+      obj.designSide = determineObjectSide(obj, { frontBox: render.frontBox, backBox: render.backBox });
+    }
+    const box = obj.designSide && sideBoxFor(render, obj.designSide);
+    if(!box || !box.w || !box.h) return;   // side unknown or photos still loading -- try again next render
+    if(!obj.designAnchor){
+      obj.designAnchor = deriveAnchor(obj, box);   // first sighting: record where it is now
+    } else {
+      applyAnchor(obj, box);
+      touched = true;
+    }
+  });
+  if(touched) fabricCanvas.requestRenderAll();
+}
+function refreshAnchor(obj){
+  const box = obj && obj.designSide && sideBoxFor(lastRender, obj.designSide);
+  if(box && box.w && box.h) obj.designAnchor = deriveAnchor(obj, box);
+}
+
 // Re-fits every existing design object onto the newly-selected product's
 // print areas instead of leaving the canvas cleared -- this is what lets
 // someone finish a design on one product, switch to a different shirt
@@ -2426,36 +2505,22 @@ function determineObjectSide(obj, guides){
 // still end up looking quite different in scale, which is an inherent
 // limit of adapting one placement to a differently-shaped area, not a bug.
 function carryDesignsToNewProduct(oldGuides){
+  // Since design anchors exist (see applyDesignAnchors), the only job left
+  // here is SIDE INFERENCE for objects that never got one -- text/shapes
+  // dropped at canvas centre. It must happen against the OLD layout's
+  // guides, while positions still mean what they meant there. The position
+  // remapping this function used to do is gone: renderAll's anchor pass
+  // repositions everything against the new product's real boxes, and --
+  // unlike the old code, which bailed with "leave it where it is" whenever
+  // the new product's photos hadn't loaded yet -- the anchor pass simply
+  // runs again on the render that fires when they arrive. That bail was
+  // the root of designs stranded at the previous product's coordinates,
+  // most visibly on hidden layers nobody hand-corrected afterward.
   if(!oldGuides) return;
-  const newFront = lastRender && lastRender.guideFront;
-  const newBack = lastRender && lastRender.guideBack;
   fabricCanvas.getObjects().forEach(obj=>{
     const side = determineObjectSide(obj, oldGuides);
-    if(!side) return;
-    obj.designSide = side;
-    const oldGuide = side==="front" ? oldGuides.front : oldGuides.back;
-    const newGuide = side==="front" ? newFront : newBack;
-    if(!oldGuide || !newGuide) return; // no valid guide on one end (e.g. a blank custom product) -- leave it where it is
-    const relX = (obj.left - oldGuide.x) / oldGuide.w;
-    const relY = (obj.top - oldGuide.y) / oldGuide.h;
-    const scaleFactor = Math.min(newGuide.w/oldGuide.w, newGuide.h/oldGuide.h);
-    obj.set({
-      left: newGuide.x + relX*newGuide.w,
-      top: newGuide.y + relY*newGuide.h,
-      scaleX: obj.scaleX*scaleFactor,
-      scaleY: obj.scaleY*scaleFactor,
-    });
-    obj.setCoords();
+    if(side && !obj.designSide) obj.designSide = side;
   });
-  fabricCanvas.requestRenderAll();
-  // renderAll() (called before this, so the new guides above exist)
-  // already ran updateDesignOverlays() once -- but that ran BEFORE these
-  // objects moved into their new positions, so the "is this print area
-  // already occupied" check it does could be stale. Re-check now that
-  // everything has actually settled into place.
-  updateDesignOverlays();
-  renderLayersPanel();
-  pushHistory();
 }
 function selectProduct(id){
   const oldGuides = captureCurrentGuides();
@@ -3267,6 +3332,7 @@ function handleFile(file, side, zoneEl){
         }
         img.set({ cornerColor:"#5FE0AE", cornerStrokeColor:"#0d0d0d", borderColor:"#5FE0AE", cornerStyle:"circle", transparentCorners:false, cornerSize:12 });
         img.designSide = side;
+        refreshAnchor(img);   // anchor at birth, so an export or reflow before the next renderAll still has it
         fabricCanvas.add(img);
         img.setCoords();
         fabricCanvas.setActiveObject(img);
@@ -4600,7 +4666,7 @@ let isRestoringHistory = false;
 const HISTORY_DEBOUNCE_MS = 150;
 let pushHistoryTimer = null;
 function commitHistorySnapshot(){
-  const snapshot = fabricCanvas.toJSON(["designSide", "customName"]);
+  const snapshot = fabricCanvas.toJSON(["designSide", "customName", "designAnchor"]);
   historyStack.push(JSON.stringify(snapshot));
   if(historyStack.length > MAX_HISTORY) historyStack.shift();
   updateUndoButton();
@@ -4717,7 +4783,7 @@ async function saveProject(){
       savedAt: new Date().toISOString(),
       productId: state.productId,
       colorIndex: state.colorIndex,
-      canvas: fabricCanvas.toJSON(["designSide", "customName"]),
+      canvas: fabricCanvas.toJSON(["designSide", "customName", "designAnchor"]),
     };
     // Create Your Own products only exist in memory for the current
     // session (see createCustomProduct) -- without this, saving a project
@@ -4874,7 +4940,7 @@ document.addEventListener("keydown", (e)=>{
 // tracking, since both need to react to "the canvas contents changed."
 fabricCanvas.on("object:added", ()=>{ updateDesignOverlays(); pushHistory(); renderLayersPanel(); });
 fabricCanvas.on("object:removed", ()=>{ updateDesignOverlays(); pushHistory(); renderLayersPanel(); });
-fabricCanvas.on("object:modified", ()=>{ updateDesignOverlays(); pushHistory(); renderLayersPanel(); });
+fabricCanvas.on("object:modified", (e)=>{ if(e && e.target) refreshAnchor(e.target); updateDesignOverlays(); pushHistory(); renderLayersPanel(); });
 fabricCanvas.on("object:moving", updateDesignOverlays);
 
 // Arrow-key nudging for the selected design -- 1px per press, 10px with
@@ -5044,7 +5110,7 @@ function drawInfoCard(octx, EXPORT_W, product, color){
   const logoH = 112*hs;
   const dividerGap = 24*hs;
   const cardH = logoH + cardPad*2;
-  let fontSize = 28*hs;
+  let fontSize = 24*hs; // was 28 -- long style names shrank-to-fit anyway, and the card read as shouty next to the garment
   const MAX_CARD_W = EXPORT_W * 0.95;
 
   let logoW = 0;
@@ -5199,25 +5265,27 @@ function renderFullComposite(EXPORT_W){
   try {
     fabricCanvas.getObjects().forEach(obj=>{
       originalObjTransforms.set(obj, { left: obj.left, top: obj.top, scaleX: obj.scaleX, scaleY: obj.scaleY });
-      const liveBox = obj.designSide && liveGuides[obj.designSide];
+      // Anchors, not live-coordinate mapping. The old approach computed each
+      // object's position relative to lastRender's boxes at export time --
+      // correct only while the object's absolute coordinates and lastRender
+      // agreed, which every stage reflow quietly broke (worst on hidden
+      // layers, where nobody hand-corrected the drift before exporting).
+      // The anchor records where the artwork sits relative to its garment,
+      // so applying it against this export's own boxes is exact regardless
+      // of what the live layout has been through since placement.
       const exportBox = obj.designSide && exportGuides[obj.designSide];
-      if(!liveBox || !exportBox || !liveBox.w || !liveBox.h){
-        // No side-specific box to correct against -- shouldn't normally
-        // happen for a real design object, but fall back to the simple
-        // uniform scale rather than leave it unrendered.
-        obj.set({ left: obj.left*scale, top: obj.top*scale, scaleX: obj.scaleX*scale, scaleY: obj.scaleY*scale });
-      } else {
-        const boxScale = exportBox.w / liveBox.w; // front/back boxes always scale uniformly (no distortion), so width alone gives the right factor
-        const relX = (obj.left - liveBox.x) / liveBox.w;
-        const relY = (obj.top - liveBox.y) / liveBox.h;
-        obj.set({
-          left: exportBox.x + relX * exportBox.w,
-          top: exportBox.y + relY * exportBox.h,
-          scaleX: obj.scaleX * boxScale,
-          scaleY: obj.scaleY * boxScale,
-        });
+      if(!obj.designAnchor && obj.designSide){
+        const liveBox = liveGuides[obj.designSide];
+        if(liveBox && liveBox.w) obj.designAnchor = deriveAnchor(obj, liveBox);
       }
-      obj.setCoords();
+      if(obj.designAnchor && exportBox && exportBox.w){
+        applyAnchor(obj, exportBox);
+      } else {
+        // No side or no anchor derivable -- uniform scale keeps it rendered
+        // at least, same fallback as before.
+        obj.set({ left: obj.left*scale, top: obj.top*scale, scaleX: obj.scaleX*scale, scaleY: obj.scaleY*scale });
+        obj.setCoords();
+      }
     });
 
     // Temporarily resize the real fabric canvas to the export's true pixel
@@ -5450,23 +5518,51 @@ async function reencodeAsLosslessPng(canvas){
     return null;
   }
 }
+// Stamps 300dpi into a JPEG's JFIF header (bytes 13-17 of the APP0
+// segment: units flag + X/Y density) -- the JPEG counterpart of
+// addPngDpiMetadata above, and much simpler because JFIF density lives at
+// a fixed offset instead of needing chunk surgery. Same purpose: print
+// software reads a sane default print size instead of assuming 72dpi.
+function addJpegDpiMetadata(blob, dpi){
+  return blob.arrayBuffer().then(ab=>{
+    const b = new Uint8Array(ab);
+    // SOI (FFD8) then APP0 (FFE0) with "JFIF\0" -- the layout every
+    // canvas.toBlob JPEG uses. Anything else: leave the file untouched.
+    if(b[0]!==0xFF||b[1]!==0xD8||b[2]!==0xFF||b[3]!==0xE0) return blob;
+    if(String.fromCharCode(b[6],b[7],b[8],b[9])!=="JFIF") return blob;
+    b[13] = 1;                    // units: dots per inch
+    b[14] = (dpi>>8)&255; b[15] = dpi&255;   // X density
+    b[16] = (dpi>>8)&255; b[17] = dpi&255;   // Y density
+    return new Blob([b], { type: "image/jpeg" });
+  }).catch(err=>{
+    console.warn("[mockup] couldn't tag JPEG with DPI metadata, exporting without it:", err);
+    return blob;
+  });
+}
 async function saveExportCanvas(canvas, filename, fileHandle){
-  // PNG, not JPEG -- these exports exist specifically for client artwork
-  // approval, where crisp line art and text matter more than file size.
-  // JPEG at any quality setting (this used to be 0.92) is fundamentally
-  // lossy right where it matters most for this content: sharp,
-  // high-contrast edges (fine linework, text) get visible
-  // ringing/softening artifacts that a flatter photograph wouldn't show.
-  let blob = await reencodeAsLosslessPng(canvas);
-  if(!blob){
-    blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+  // JPEG at 0.92, revisiting an earlier PNG-only decision. PNG was chosen
+  // for perfectly crisp line art, but real exports were averaging ~2MB,
+  // which in practice meant every batch went out as a Drive folder link
+  // instead of simple attachments -- a worse client experience than the
+  // near-invisible difference between lossless and q0.92 at this
+  // resolution (2800px wide; artifacts JPEG might add live far below
+  // print-review viewing size). The lossless PNG path below survives as
+  // the automatic fallback if JPEG encoding ever fails, and for any
+  // future export shape that needs transparency.
+  let blob = await new Promise(resolve => canvas.toBlob(resolve, "image/jpeg", 0.92));
+  if(blob){
+    blob = await addJpegDpiMetadata(blob, 300);
+  } else {
+    console.warn("[mockup] JPEG encoding unavailable -- falling back to PNG.");
+    blob = await reencodeAsLosslessPng(canvas);
+    if(!blob) blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+    if(blob) blob = await addPngDpiMetadata(blob, 300);
   }
   if(!blob){
     console.error("[mockup] export produced an empty image.");
     alert("Export failed -- the generated image was empty. Check the browser console for details.");
     return;
   }
-  blob = await addPngDpiMetadata(blob, 300);
   try {
     if(fileHandle){
       const writable = await fileHandle.createWritable();
@@ -5497,7 +5593,7 @@ document.getElementById("exportBtn").onclick = async ()=>{
   // else's by product name.
   const jobNameRaw = document.getElementById("jobNameInput")?.value.trim() || "";
   const jobPrefix = jobNameRaw ? `${slugify(jobNameRaw)}_` : "";
-  const filename = `${jobPrefix}ink-pusher-mockup_${slugify(product ? product.name : "mockup")}_${slugify(color ? color.name : "design")}${modeSlug}.png`;
+  const filename = `${jobPrefix}ink-pusher-mockup_${slugify(product ? product.name : "mockup")}_${slugify(color ? color.name : "design")}${modeSlug}.jpg`;
 
   // Ask where to save FIRST (before any canvas work), while the click is
   // still "fresh" -- Chrome/Edge require the save picker to be triggered
@@ -5508,7 +5604,7 @@ document.getElementById("exportBtn").onclick = async ()=>{
     try {
       fileHandle = await window.showSaveFilePicker({
         suggestedName: filename,
-        types: [{ description: "PNG image", accept: { "image/png": [".png"] } }],
+        types: [{ description: "JPEG image", accept: { "image/jpeg": [".jpg", ".jpeg"] } }],
       });
     } catch (err) {
       if(err.name === "AbortError") return; // user closed the dialog -- stop, don't also download

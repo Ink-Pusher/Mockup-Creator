@@ -2464,23 +2464,45 @@ function applyAnchor(obj, box){
   });
   obj.setCoords();
 }
+// The LIVE POSITION is the single source of truth; the anchor is a cache
+// of "where this sits relative to the layout the user last saw." Two
+// modes per render:
+//   - layout UNCHANGED since last render: re-derive every anchor from the
+//     live position. Any code path that moved an object -- arrow-key
+//     nudges (which never fire object:modified), a tool, anything added
+//     later -- is absorbed here without needing to know anchors exist.
+//     This also self-heals objects whose anchors went stale under the
+//     previous version of this code.
+//   - layout CHANGED (stage resize, product switch, photos arriving):
+//     apply the cached anchors against the new boxes, gluing artwork to
+//     the garment through the change.
+let prevAnchorBoxes = { front: null, back: null };
+function sameBox(a, b){
+  return !!a && !!b && Math.abs(a.x-b.x)<0.5 && Math.abs(a.y-b.y)<0.5 &&
+         Math.abs(a.w-b.w)<0.5 && Math.abs(a.h-b.h)<0.5;
+}
 function applyDesignAnchors(render){
+  const boxes = { front: sideBoxFor(render, "front"), back: sideBoxFor(render, "back") };
   let touched = false;
   fabricCanvas.getObjects().forEach(obj=>{
-    if(!obj.designSide && render && render.guideFront && render.guideBack){
+    if(!obj.designSide && boxes.front && boxes.back){
       // Text/shapes dropped at canvas centre have no side yet -- infer it
       // once real boxes exist, same proximity rule as product switching.
       obj.designSide = determineObjectSide(obj, { frontBox: render.frontBox, backBox: render.backBox });
     }
-    const box = obj.designSide && sideBoxFor(render, obj.designSide);
+    const side = obj.designSide;
+    const box = side && boxes[side];
     if(!box || !box.w || !box.h) return;   // side unknown or photos still loading -- try again next render
-    if(!obj.designAnchor){
-      obj.designAnchor = deriveAnchor(obj, box);   // first sighting: record where it is now
-    } else {
+    const layoutChanged = !sameBox(prevAnchorBoxes[side], box);
+    if(obj.designAnchor && layoutChanged){
       applyAnchor(obj, box);
       touched = true;
+    } else {
+      obj.designAnchor = deriveAnchor(obj, box);
     }
   });
+  if(boxes.front) prevAnchorBoxes.front = { ...boxes.front };
+  if(boxes.back)  prevAnchorBoxes.back  = { ...boxes.back };
   if(touched) fabricCanvas.requestRenderAll();
 }
 function refreshAnchor(obj){
@@ -4970,6 +4992,7 @@ document.addEventListener("keydown", (e)=>{
   else if(e.key === "ArrowLeft") obj.left -= step;
   else if(e.key === "ArrowRight") obj.left += step;
   obj.setCoords();
+  refreshAnchor(obj);  // nudges fire no object:modified, so keep the anchor cache honest here
   fabricCanvas.requestRenderAll();
   updateDesignOverlays(); // live feedback, same as a real drag gets via object:moving above
   pushHistory();
@@ -5204,7 +5227,15 @@ function drawInfoCard(octx, EXPORT_W, product, color){
 function renderFullComposite(EXPORT_W){
   const {w,h} = stageSize();
   const scale = EXPORT_W / w;
-  const outH = Math.round(h*scale);
+  // FIXED canvas shape per layout mode, not the live stage's aspect. The
+  // stage's proportions follow the window ("h*scale" here used to mirror
+  // them), so the same design exported from a laptop and a big monitor
+  // produced differently-shaped files -- and any design placement bug
+  // shifted with screen size, which made it maddening to reproduce. The
+  // artwork mapping is relative to each side's garment box, so a fixed
+  // shape costs nothing in placement accuracy: 16:9 landscape for the
+  // side-by-side layout, 3:4 portrait for the stacked/mobile one.
+  const outH = Math.round(isMobileLayout() ? EXPORT_W * 4/3 : EXPORT_W * 9/16);
 
   const canvas = document.createElement("canvas");
   canvas.width = EXPORT_W; canvas.height = outH;
@@ -5265,24 +5296,36 @@ function renderFullComposite(EXPORT_W){
   try {
     fabricCanvas.getObjects().forEach(obj=>{
       originalObjTransforms.set(obj, { left: obj.left, top: obj.top, scaleX: obj.scaleX, scaleY: obj.scaleY });
-      // Anchors, not live-coordinate mapping. The old approach computed each
-      // object's position relative to lastRender's boxes at export time --
-      // correct only while the object's absolute coordinates and lastRender
-      // agreed, which every stage reflow quietly broke (worst on hidden
-      // layers, where nobody hand-corrected the drift before exporting).
-      // The anchor records where the artwork sits relative to its garment,
-      // so applying it against this export's own boxes is exact regardless
-      // of what the live layout has been through since placement.
-      const exportBox = obj.designSide && exportGuides[obj.designSide];
-      if(!obj.designAnchor && obj.designSide){
-        const liveBox = liveGuides[obj.designSide];
-        if(liveBox && liveBox.w) obj.designAnchor = deriveAnchor(obj, liveBox);
+      // Map from the LIVE position, freshly, at export time -- never from a
+      // stored anchor. The live preview is what the user aligned by eye, so
+      // it is the contract the export has to honor ("make sure the export
+      // matches the live preview"). A cached anchor can be stale: arrow-key
+      // nudges set left/top directly and fabric fires no object:modified
+      // for them, which is exactly how "I deleted the hidden layers and it
+      // STILL repositioned my art" happened -- the export was replaying the
+      // pre-nudge anchor. Live coordinates can't be stale by definition,
+      // and renderAll's anchor pass keeps them glued to the garment across
+      // layout changes, so deriving here is always current.
+      if(!obj.designSide){
+        // Text/shapes that were never product-switched have no side tag --
+        // infer it now, or they'd fall into the uniform-scale fallback and
+        // balloon relative to the export's smaller garment.
+        obj.designSide = determineObjectSide(obj, { frontBox: liveGuides.front, backBox: liveGuides.back });
       }
-      if(obj.designAnchor && exportBox && exportBox.w){
-        applyAnchor(obj, exportBox);
+      const liveBox = obj.designSide && liveGuides[obj.designSide];
+      const exportBox = obj.designSide && exportGuides[obj.designSide];
+      if(liveBox && liveBox.w && exportBox && exportBox.w){
+        const rel = deriveAnchor(obj, liveBox);
+        const sx = rel.relS * exportBox.w;
+        obj.set({
+          left: exportBox.x + rel.relX * exportBox.w,
+          top:  exportBox.y + rel.relY * exportBox.h,
+          scaleX: sx,
+          scaleY: sx * rel.ratio,
+        });
+        obj.setCoords();
       } else {
-        // No side or no anchor derivable -- uniform scale keeps it rendered
-        // at least, same fallback as before.
+        // No side determinable -- uniform scale keeps it rendered at least.
         obj.set({ left: obj.left*scale, top: obj.top*scale, scaleX: obj.scaleX*scale, scaleY: obj.scaleY*scale });
         obj.setCoords();
       }

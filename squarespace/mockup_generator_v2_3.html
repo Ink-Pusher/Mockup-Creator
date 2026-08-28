@@ -555,6 +555,10 @@
     width:100%;border:2px solid var(--outline);border-radius:10px;padding:9px 12px;font-size:13px;
     font-weight:700;background-color:var(--btn-fill);cursor:pointer;margin-bottom:10px;
   }
+  .studio-build{
+    margin-top:8px;font-size:10px;color:var(--grey);letter-spacing:.04em;
+    text-align:center;user-select:all;
+  }
   .export-mode-select{
     box-sizing:border-box;width:100%;border:2px solid var(--outline);border-radius:10px;
     padding:9px 12px;font-size:13px;font-weight:700;color:var(--ink);
@@ -1247,6 +1251,7 @@
         <option value="backOnly">Back only</option>
       </select>
       <button class="btn primary" id="exportBtn">Export mockup</button>
+      <div class="studio-build" id="studioBuild" title="Which version of the Mockup Studio this page is running -- if a bug report and this number disagree, the Squarespace block or a cached page is serving an old build"></div>
 
     </div>
   </div>
@@ -5582,6 +5587,30 @@ function addJpegDpiMetadata(blob, dpi){
     return blob;
   });
 }
+// Writes a JFIF COM (comment) marker after the APP0 segment -- invisible
+// in any viewer, readable with exiftool/strings, so an exported file
+// carries proof of which build made it.
+async function addJpegComment(blob, text){
+  try {
+    const b = new Uint8Array(await blob.arrayBuffer());
+    if(b[0]!==0xFF||b[1]!==0xD8) return blob;
+    // insert after APP0 if present (SOI + marker + len), else right after SOI
+    let at = 2;
+    if(b[2]===0xFF && b[3]===0xE0){ at = 4 + ((b[4]<<8)|b[5]); }
+    const txt = new TextEncoder().encode(text);
+    const seg = new Uint8Array(4 + txt.length);
+    seg[0]=0xFF; seg[1]=0xFE;
+    const len = txt.length + 2;
+    seg[2]=(len>>8)&255; seg[3]=len&255;
+    seg.set(txt, 4);
+    const out = new Uint8Array(b.length + seg.length);
+    out.set(b.subarray(0,at),0); out.set(seg,at); out.set(b.subarray(at),at+seg.length);
+    return new Blob([out], { type:"image/jpeg" });
+  } catch(err){
+    console.warn("[mockup] couldn't stamp build comment:", err);
+    return blob;
+  }
+}
 async function saveExportCanvas(canvas, filename, fileHandle){
   // JPEG at 0.92, revisiting an earlier PNG-only decision. PNG was chosen
   // for perfectly crisp line art, but real exports were averaging ~2MB,
@@ -5595,6 +5624,8 @@ async function saveExportCanvas(canvas, filename, fileHandle){
   let blob = await new Promise(resolve => canvas.toBlob(resolve, "image/jpeg", 0.92));
   if(blob){
     blob = await addJpegDpiMetadata(blob, 300);
+    blob = await addJpegComment(blob, `Ink Pusher Mockup Studio ${STUDIO_BUILD}`);
+    console.log(`[mockup] exported with Studio build ${STUDIO_BUILD}`);
   } else {
     console.warn("[mockup] JPEG encoding unavailable -- falling back to PNG.");
     blob = await reencodeAsLosslessPng(canvas);
@@ -5739,6 +5770,16 @@ function initTheme(){
   document.getElementById("darkModeBtn").onclick = ()=> applyTheme("dark");
 }
 initTheme();
+
+/* ---------- Build stamp ----------
+   Bump the rev on EVERY edit to this file. It shows under the Export
+   button and is written into each exported JPEG (console + a JFIF
+   comment), so "which version produced this file?" is answerable instead
+   of guessable -- Squarespace caches Code Blocks and browsers cache
+   pages, and a stale paste is indistinguishable from a real bug without
+   this. */
+const STUDIO_BUILD = "2026-08-24.2";
+document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */
 resizeCanvases();

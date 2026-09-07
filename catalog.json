@@ -864,7 +864,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/grey-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/grey-heather-black_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#252224"
           ]
         },
@@ -1263,7 +1263,7 @@
           "front": "catalog_images/richardson-168/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-168/heather-grey-black_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#252224"
           ]
         },
@@ -1465,7 +1465,7 @@
           "hexes": [
             "#252224",
             "#ecedef",
-            "#afb0b1"
+            "#b0b0b2"
           ]
         },
         {
@@ -1796,7 +1796,7 @@
           "front": "catalog_images/richardson-112/heather-grey-birch-amber-gold_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-birch-amber-gold_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#cbba9c",
             "#9c7942"
           ]
@@ -1813,7 +1813,7 @@
           "front": "catalog_images/richardson-112/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-black_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#252224"
           ]
         },
@@ -1829,7 +1829,7 @@
           "front": "catalog_images/richardson-112/heather-grey-charcoal-maroon_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-charcoal-maroon_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#504d4e",
             "#5a1f2f"
           ]
@@ -1840,7 +1840,7 @@
           "front": "catalog_images/richardson-112/heather-grey-dark-green_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-dark-green_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#1e4033"
           ]
         },
@@ -1850,7 +1850,7 @@
           "front": "catalog_images/richardson-112/heather-grey-light-grey_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#999992"
           ]
         },
@@ -1860,7 +1860,7 @@
           "front": "catalog_images/richardson-112/heather-grey-navy_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-navy_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#283043"
           ]
         },
@@ -1870,7 +1870,7 @@
           "front": "catalog_images/richardson-112/heather-grey-royal_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#184c88"
           ]
         },
@@ -1880,7 +1880,7 @@
           "front": "catalog_images/richardson-112/heather-grey-white_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-white_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#ecedef"
           ]
         },
@@ -2122,7 +2122,7 @@
           "hexes": [
             "#283043",
             "#ecedef",
-            "#afb0b1"
+            "#b0b0b2"
           ]
         },
         {
@@ -2234,7 +2234,7 @@
           "hexes": [
             "#c21430",
             "#ecedef",
-            "#afb0b1"
+            "#b0b0b2"
           ]
         },
         {
@@ -2282,7 +2282,7 @@
           "hexes": [
             "#184c88",
             "#ecedef",
-            "#afb0b1"
+            "#b0b0b2"
           ]
         },
         {
@@ -7664,7 +7664,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-black_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-black_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#252224"
           ]
         },
@@ -7674,7 +7674,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-white_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-white_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#ecedef"
           ]
         },
@@ -8311,7 +8311,7 @@
           "front": "catalog_images/richardson-112fp/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112fp/heather-grey-black_back.jpg",
           "hexes": [
-            "#afb0b1",
+            "#b0b0b2",
             "#252224"
           ]
         },
@@ -9716,7 +9716,7 @@
           "front": "catalog_images/richardson-256/sage-white_front.jpg",
           "back": "catalog_images/richardson-256/sage-white_back.jpg",
           "hexes": [
-            "#92a28f",
+            "#93a491",
             "#ecedef"
           ]
         },
@@ -15779,6 +15779,66 @@
           "hex": "#098dcb",
           "front": "catalog_images/hanes-f260/teal_front.jpg",
           "back": "catalog_images/hanes-f260/teal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "independent-trading-co-afx64crp",
+      "name": "Women\u2019s Lightweight Crop Hooded Sweatshirt",
+      "brand": "Independent Trading Co",
+      "style": "AFX64CRP",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ecedf2",
+          "front": "catalog_images/independent-trading-co-afx64crp/white_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#252125",
+          "front": "catalog_images/independent-trading-co-afx64crp/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/black_back.jpg"
+        },
+        {
+          "name": "Black Camo",
+          "hex": "#312d32",
+          "front": "catalog_images/independent-trading-co-afx64crp/black-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/black-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-afx64crp/black-camo_swatch.jpg"
+        },
+        {
+          "name": "Blush",
+          "hex": "#ebd0c6",
+          "front": "catalog_images/independent-trading-co-afx64crp/blush_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/blush_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#ebe4de",
+          "front": "catalog_images/independent-trading-co-afx64crp/bone_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/bone_back.jpg"
+        },
+        {
+          "name": "Grey Heather",
+          "hex": "#d9d5da",
+          "front": "catalog_images/independent-trading-co-afx64crp/grey-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/grey-heather_back.jpg"
+        },
+        {
+          "name": "Sage",
+          "hex": "#b7c1b4",
+          "front": "catalog_images/independent-trading-co-afx64crp/sage_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/sage_back.jpg"
+        },
+        {
+          "name": "Tie Dye Cotton Candy",
+          "hex": "#dde2ea",
+          "front": "catalog_images/independent-trading-co-afx64crp/tie-dye-cotton-candy_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx64crp/tie-dye-cotton-candy_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-afx64crp/tie-dye-cotton-candy_swatch.jpg"
         }
       ]
     }

@@ -250,6 +250,85 @@ async function loadProductContent(id){
     return {};
   }
 }
+// ---------- CSV fallback for write-ups ----------
+// product_descriptions.csv (written by build_catalog.py / build_descriptions.py,
+// pushed with the rest of the repo) is the write-up's FIRST home; the
+// product_content table is its second, reached only when someone runs
+// admin.html's "Import descriptions (CSV)" tool. That import is a manual
+// step, and in practice it stopped happening once adding products settled
+// into "run the script, push" -- ten products shipped with finished
+// write-ups sitting invisibly in the CSV. So: whenever the table has no
+// write-up for this product, read the CSV straight from GitHub and fill
+// the gap. Push = live, no admin step. Anything saved through admin still
+// wins -- only fields the table leaves empty are filled from the CSV --
+// and any failure here just means "no write-up," never a broken page.
+const DESCRIPTIONS_CSV_URL = CATALOG_BASE_URL + "product_descriptions.csv";
+// Minimal RFC-4180 parser (quoted fields, embedded commas/quotes/newlines).
+// The admin page uses PapaParse for this; a whole library is more than a
+// read-only fallback needs.
+function parseCsv(text){
+  const rows = []; let row = [], field = "", inQ = false;
+  for(let i = 0; i < text.length; i++){
+    const ch = text[i];
+    if(inQ){
+      if(ch === '"'){ if(text[i+1] === '"'){ field += '"'; i++; } else inQ = false; }
+      else field += ch;
+    } else if(ch === '"') inQ = true;
+    else if(ch === ','){ row.push(field); field = ""; }
+    else if(ch === '\n' || ch === '\r'){
+      if(ch === '\r' && text[i+1] === '\n') i++;
+      row.push(field); field = "";
+      if(row.length > 1 || row[0] !== "") rows.push(row);
+      row = [];
+    }
+    else field += ch;
+  }
+  row.push(field);
+  if(row.length > 1 || row[0] !== "") rows.push(row);
+  if(!rows.length) return [];
+  const header = rows[0];
+  return rows.slice(1).map(r => Object.fromEntries(header.map((h, i) => [h, r[i] || ""])));
+}
+// Same normalization + whole-word matching rules as admin.html's CSV
+// importer, so a row that matches there matches here and vice versa.
+function pdNormalize(s){ return String(s || "").toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim(); }
+function pdWords(s){ return pdNormalize(s).split(" ").filter(Boolean); }
+function pdContainsSeq(hay, needle){
+  if(!needle.length || needle.length > hay.length) return false;
+  for(let i = 0; i <= hay.length - needle.length; i++){
+    if(needle.every((w, j) => hay[i + j] === w)) return true;
+  }
+  return false;
+}
+async function fillContentFromCsv(content, candidateNames){
+  // A row holding only a logo_url doesn't count as a write-up -- same rule
+  // admin.html uses to decide whether an import may touch a product.
+  const hasWriteup = !!(content.description || (content.features && content.features.length) || content.supplier_note);
+  if(hasWriteup) return content;
+  try {
+    const res = await fetch(`${DESCRIPTIONS_CSV_URL}?t=${Date.now()}`, { cache: "no-store" });
+    if(!res.ok) return content;
+    const rows = parseCsv(await res.text());
+    const targets = candidateNames.map(pdWords).filter(w => w.length);
+    const row = rows.find(r => {
+      const rw = pdWords(r["Product"]);
+      if(!rw.length) return false;
+      return targets.some(t => rw.join(" ") === t.join(" ") || pdContainsSeq(rw, t) || pdContainsSeq(t, rw));
+    });
+    if(!row) return content;
+    return {
+      ...content,
+      description: content.description || (row["Description"] || "").trim(),
+      features: (content.features && content.features.length)
+        ? content.features
+        : (row["Features"] || "").split("|").map(s => s.trim()).filter(Boolean),
+      supplier_note: content.supplier_note || (row["Supplier Note"] || "").trim(),
+    };
+  } catch (err) {
+    console.warn("[product-detail] CSV write-up fallback unavailable:", err);
+    return content;
+  }
+}
 // Same table admin.html writes to when correcting a typo'd brand/style/
 // name -- reuses the same supabaseClient as loadProductContent above,
 // just a different table.
@@ -296,10 +375,17 @@ async function loadAndRender(){
     }
     // Falls back to catalog.json's original value whenever an override is
     // blank -- same as the catalog listing page.
+    // The CSV fallback below matches rows by brand+style AS THE SCRIPTS
+    // WROTE THEM (catalog.json's originals), so remember those before any
+    // admin override renames what the page displays.
+    const origBrand = currentProduct.brand, origStyle = currentProduct.style;
     if(override.name_override) currentProduct.name = override.name_override;
     if(override.brand_override) currentProduct.brand = override.brand_override;
     if(override.style_override) currentProduct.style = override.style_override;
     currentContent = await loadProductContent(id);
+    currentContent = await fillContentFromCsv(currentContent, [
+      `${origBrand} ${origStyle}`, `${currentProduct.brand} ${currentProduct.style}`,
+    ]);
     currentColorIndex = 0;
     renderPage();
   } catch (err) {

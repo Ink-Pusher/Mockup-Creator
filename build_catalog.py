@@ -445,8 +445,19 @@ def extract_sanmar_pdf(pdf_path: str):
 
 def extract_royalapparel(html: str):
     """Royal Apparel: a full `var prodJSON = {...}` object is embedded with
-    every color and every view (Front/Side/Back/Front2/Side2/Back2) all on
-    one page."""
+    every color and every view all on one page.
+
+    Their altDesc view labels have changed format once already: pages
+    used to say "Front"/"Back" (with Side/Front2/Side2/Back2 alongside),
+    then became bare numbers "1".."6" in the same order -- 1=front,
+    2=side, 3=back for the first model, 4-6 the same three views on a
+    second model (verified by eye against the 57055 page that first
+    broke on the numeric labels; the old word-labeled handling is kept
+    for any page saved before the change). For numeric pages the FRONT
+    comes from the color entry's own imageLg -- Royal Apparel's primary
+    per-color shot, which is the straight-on front (numbered view 1 can
+    be an angled fashion pose, wrong for mockups) -- and the back from
+    view "3", the same model's back."""
     m = re.search(r'var prodJSON\s*=\s*(\{.*?\});', html, re.S)
     if not m:
         raise RuntimeError(
@@ -455,7 +466,9 @@ def extract_royalapparel(html: str):
         )
     data = json.loads(m.group(1))
     product = data["product"][0]
-    colors_meta = {c["colorCode"]: c["description"] for c in product["color"] if c.get("showColor")}
+    colors = [c for c in product["color"] if c.get("showColor")]
+    colors_meta = {c["colorCode"]: c["description"] for c in colors}
+    color_main = {c["colorCode"]: (c.get("imageLg") or c.get("imageZm")) for c in colors}
 
     by_color = {}
     for av in product.get("altView", []):
@@ -463,7 +476,19 @@ def extract_royalapparel(html: str):
         if not code or code not in colors_meta:
             continue
         desc = av.get("altDesc")
-        if desc not in ("Front", "Back"):
+        # Normalize both label formats onto Front/Back. Views 4-6 repeat
+        # front/side/back on a second model; a colour photographed only on
+        # that model (57055's Heather Grey) has ONLY 4-6, so the second
+        # set is kept as a fallback rather than ignored.
+        if desc == "1":
+            desc = "NumFront"
+        elif desc == "3":
+            desc = "NumBack"
+        elif desc == "4":
+            desc = "NumFront2"
+        elif desc == "6":
+            desc = "NumBack2"
+        elif desc not in ("Front", "Back"):
             continue
         by_color.setdefault(code, {})
         existing = by_color[code].get(desc)
@@ -473,10 +498,19 @@ def extract_royalapparel(html: str):
     results = []
     for code, name in colors_meta.items():
         views = by_color.get(code, {})
+        if "Front" in views or "Back" in views:      # old word-labeled page
+            front = views.get("Front", (None,))[0]
+            back = views.get("Back", (None,))[0]
+        else:                                        # numeric page
+            front = (color_main.get(code)
+                     or views.get("NumFront", (None,))[0]
+                     or views.get("NumFront2", (None,))[0])
+            back = (views.get("NumBack", (None,))[0]
+                    or views.get("NumBack2", (None,))[0])
         results.append({
             "name": name.title(),
-            "front": views.get("Front", (None,))[0],
-            "back": views.get("Back", (None,))[0],
+            "front": front,
+            "back": back,
         })
     return results
 

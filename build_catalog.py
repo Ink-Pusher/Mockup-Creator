@@ -35,7 +35,7 @@ USAGE:
     Never fatal: if no write-up can be found, the photos and catalog entry are
     still written and the run just tells you to follow up.
 
-    kind must be one of: tee, hoodie, cap, tote
+    kind must be one of: tee, hoodie, sweatshirt, tank, cap, hat, beanie, tote
 
     The --crop-* flags are optional and default to 0 (no cropping). Each
     takes a fraction between 0 and 0.49 and trims that much off the given
@@ -933,7 +933,7 @@ def main():
     if len(args) < 2 or args[0] != "--site":
         print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]")
         print(f"  site: {' | '.join(EXTRACTORS)}")
-        print("  kind: tee | hoodie | cap | tote")
+        print("  kind: tee | hoodie | sweatshirt | tank | cap | hat | beanie | tote")
         sys.exit(1)
 
     site = args[1]

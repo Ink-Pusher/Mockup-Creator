@@ -1512,6 +1512,40 @@ def cmd_doctor(args):
           f"{n} products" if n is not None else f"{cat} missing or not valid JSON",
           "In GitHub Desktop: Fetch origin, then Pull origin")
 
+    # The packages build_catalog.py needs to process photos. The Anthropic SDK
+    # check below has its own line because polish/fetch work without these;
+    # adding a product does not work without them, and on a brand-new machine
+    # this is the first wall someone hits ("ModuleNotFoundError: PIL").
+    missing = []
+    for mod, pipname in [("PIL", "pillow"), ("numpy", "numpy"), ("cloudscraper", "cloudscraper"),
+                         ("requests", "requests"), ("scipy", "scipy")]:
+        try:
+            __import__(mod)
+        except ImportError:
+            missing.append(pipname)
+    check("Photo-processing packages installed (for build_catalog.py)", not missing,
+          "all present" if not missing else f"missing: {', '.join(missing)}",
+          f"python3 -m pip install {' '.join(missing)}" if missing else "")
+
+    # The delete-protection hook (.githooks/pre-commit) only guards a clone
+    # where core.hooksPath points at it -- git config is per-clone, so a fresh
+    # "Clone repository" in GitHub Desktop starts UNPROTECTED. Setting a local
+    # config value is harmless, so rather than telling someone to run a git
+    # command, just fix it here.
+    if in_repo and (here / ".githooks" / "pre-commit").exists():
+        import subprocess
+        try:
+            r = subprocess.run(["git", "config", "--local", "core.hooksPath"],
+                               capture_output=True, text=True)
+            hooks_on = r.stdout.strip() == ".githooks"
+            if not hooks_on:
+                subprocess.run(["git", "config", "--local", "core.hooksPath", ".githooks"], check=True)
+            check("Accidental-delete protection enabled", True,
+                  "already on" if hooks_on else "was off on this clone -- just enabled it")
+        except Exception as e:
+            check("Accidental-delete protection enabled", False, f"couldn't check git config: {e}",
+                  "Run once, inside this folder:  git config core.hooksPath .githooks")
+
     try:
         import anthropic
         have_sdk, sdk_v = True, getattr(anthropic, "__version__", "?")

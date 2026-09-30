@@ -16839,6 +16839,174 @@
           "back": "catalog_images/royal-apparel-57055/heather-grey_back.jpg"
         }
       ]
+    },
+    {
+      "id": "tultex-246",
+      "name": "Unisex Fine Jersey Ringer T-Shirt",
+      "brand": "Tultex",
+      "style": "246",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ White",
+          "hex": "#292728",
+          "front": "catalog_images/tultex-246/black-white_front.jpg",
+          "back": "catalog_images/tultex-246/black-white_back.jpg",
+          "hexes": [
+            "#252324",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Heather Denim/ Navy",
+          "hex": "#59647a",
+          "front": "catalog_images/tultex-246/heather-denim-navy_front.jpg",
+          "back": "catalog_images/tultex-246/heather-denim-navy_back.jpg",
+          "hexes": [
+            "#5b6580",
+            "#292f41"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#c8c8c8",
+          "front": "catalog_images/tultex-246/heather-grey-black_front.jpg",
+          "back": "catalog_images/tultex-246/heather-grey-black_back.jpg",
+          "hexes": [
+            "#b5b4ba",
+            "#252324"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Heather Charcoal",
+          "hex": "#c6c6c6",
+          "front": "catalog_images/tultex-246/heather-grey-heather-charcoal_front.jpg",
+          "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
+          "hexes": [
+            "#b5b4ba",
+            "#423e43"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Navy",
+          "hex": "#c8c8c8",
+          "front": "catalog_images/tultex-246/heather-grey-navy_front.jpg",
+          "back": "catalog_images/tultex-246/heather-grey-navy_back.jpg",
+          "hexes": [
+            "#b5b4ba",
+            "#292f41"
+          ]
+        },
+        {
+          "name": "Heather Royal/ Navy",
+          "hex": "#425ea1",
+          "front": "catalog_images/tultex-246/heather-royal-navy_front.jpg",
+          "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
+          "hexes": [
+            "#4569ab",
+            "#292f41"
+          ]
+        },
+        {
+          "name": "Navy/ Gold",
+          "hex": "#252b39",
+          "front": "catalog_images/tultex-246/navy-gold_front.jpg",
+          "back": "catalog_images/tultex-246/navy-gold_back.jpg",
+          "hexes": [
+            "#292f41",
+            "#fcb025"
+          ]
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#cf1e36",
+          "front": "catalog_images/tultex-246/red-black_front.jpg",
+          "back": "catalog_images/tultex-246/red-black_back.jpg",
+          "hexes": [
+            "#c21330",
+            "#252324"
+          ]
+        },
+        {
+          "name": "Vintage White/ Black",
+          "hex": "#f3f2ee",
+          "front": "catalog_images/tultex-246/vintage-white-black_front.jpg",
+          "back": "catalog_images/tultex-246/vintage-white-black_back.jpg",
+          "hexes": [
+            "#e8e4e0",
+            "#252324"
+          ]
+        },
+        {
+          "name": "Vintage White/ Inked India",
+          "hex": "#f1f0eb",
+          "front": "catalog_images/tultex-246/vintage-white-inked-india_front.jpg",
+          "back": "catalog_images/tultex-246/vintage-white-inked-india_back.jpg"
+        },
+        {
+          "name": "Vintage White/ Mellow Yellow",
+          "hex": "#f0ede6",
+          "front": "catalog_images/tultex-246/vintage-white-mellow-yellow_front.jpg",
+          "back": "catalog_images/tultex-246/vintage-white-mellow-yellow_back.jpg"
+        },
+        {
+          "name": "Vintage White/ Rio Red",
+          "hex": "#f1eee7",
+          "front": "catalog_images/tultex-246/vintage-white-rio-red_front.jpg",
+          "back": "catalog_images/tultex-246/vintage-white-rio-red_back.jpg"
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#f1f0f5",
+          "front": "catalog_images/tultex-246/white-black_front.jpg",
+          "back": "catalog_images/tultex-246/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#252324"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#f1f1f3",
+          "front": "catalog_images/tultex-246/white-kelly_front.jpg",
+          "back": "catalog_images/tultex-246/white-kelly_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#02865e"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#f1f0f5",
+          "front": "catalog_images/tultex-246/white-navy_front.jpg",
+          "back": "catalog_images/tultex-246/white-navy_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#292f41"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#f1f0f5",
+          "front": "catalog_images/tultex-246/white-red_front.jpg",
+          "back": "catalog_images/tultex-246/white-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#c21330"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#f1f1f3",
+          "front": "catalog_images/tultex-246/white-royal_front.jpg",
+          "back": "catalog_images/tultex-246/white-royal_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#18508e"
+          ]
+        }
+      ]
     }
   ]
 }

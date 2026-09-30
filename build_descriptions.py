@@ -162,6 +162,12 @@ import sys
 from html.parser import HTMLParser
 from pathlib import Path
 
+# The scripts run identically on macOS and Windows; only the words around
+# them differ (which python to type, where the API key persists, how the
+# terminal is opened). Everything user-facing routes through these.
+IS_WINDOWS = (os.name == "nt")
+PY = "python" if IS_WINDOWS else "python3"
+
 DEFAULT_CSV = "product_descriptions.csv"
 DEFAULT_CATALOG = "catalog.json"
 # The first four are the Product Admin importer's own column names -- don't
@@ -1489,17 +1495,23 @@ def cmd_doctor(args):
 
     v = sys.version_info
     check("Python 3.9 or newer", v >= (3, 9), f"found {platform.python_version()}",
-          "Install Python from python.org, then run this again with python3")
+          f"Install Python from python.org, then run this again with {PY}"
+          + (" (tick 'Add python.exe to PATH' in the installer)" if IS_WINDOWS else ""))
 
     here = Path.cwd()
     in_repo = (here / "build_descriptions.py").exists() and (here / "build_catalog.py").exists()
     # Deliberately not a hardcoded path: the repo lives wherever each person
     # cloned it, and telling someone to cd into a folder that isn't theirs is
     # how "no such file or directory" happens in the first place.
+    open_terminal_hint = (
+        "In GitHub Desktop: Repository menu -> Open in Command Prompt (Ctrl-`),\n"
+        "which opens a window already in the right folder. Then run this again."
+        if IS_WINDOWS else
+        "In GitHub Desktop: Repository menu -> Open in Terminal (Cmd-`),\n"
+        "which opens Terminal already in the right folder. Then run this again.\n"
+        "(Or drag the Mockup-Creator folder onto the Terminal icon in your Dock.)")
     check("Running from the Mockup-Creator folder", in_repo, f"you are in {here}",
-          "In GitHub Desktop: Repository menu -> Open in Terminal (Cmd-`),\n"
-          "which opens Terminal already in the right folder. Then run this again.\n"
-          "(Or drag the Mockup-Creator folder onto the Terminal icon in your Dock.)")
+          open_terminal_hint)
 
     cat = Path(args.catalog)
     n = None
@@ -1525,7 +1537,7 @@ def cmd_doctor(args):
             missing.append(pipname)
     check("Photo-processing packages installed (for build_catalog.py)", not missing,
           "all present" if not missing else f"missing: {', '.join(missing)}",
-          f"python3 -m pip install {' '.join(missing)}" if missing else "")
+          f"{PY} -m pip install {' '.join(missing)}" if missing else "")
 
     # The delete-protection hook (.githooks/pre-commit) only guards a clone
     # where core.hooksPath points at it -- git config is per-clone, so a fresh
@@ -1552,17 +1564,18 @@ def cmd_doctor(args):
     except ImportError:
         have_sdk, sdk_v = False, ""
     check("Anthropic SDK installed", have_sdk, f"anthropic {sdk_v}" if have_sdk else "not installed",
-          "python3 -m pip install anthropic")
+          f"{PY} -m pip install anthropic")
 
     key = os.environ.get("ANTHROPIC_API_KEY", "")
     # Never print the key itself -- just enough to tell one from another.
     shown = f"...{key[-4:]}" if len(key) > 8 else ""
+    key_fix = (f"{PY} build_descriptions.py setkey\n"
+               + ("then close this window and open a new one.\n" if IS_WINDOWS
+                  else "then quit Terminal completely (Cmd-Q) and reopen it.\n")
+               + "Get a key at console.anthropic.com -> API keys.\n"
+                 "(A Claude subscription is NOT an API key -- it's separate.)")
     check("ANTHROPIC_API_KEY set", bool(key),
-          f"key ending {shown}" if key else "not set",
-          'echo \'export ANTHROPIC_API_KEY="sk-ant-...your key..."\' >> ~/.zshrc\n'
-          "then close and reopen Terminal.\n"
-          "Get a key at console.anthropic.com -> API keys.\n"
-          "(A Claude subscription is NOT an API key -- it's separate.)")
+          f"key ending {shown}" if key else "not set", key_fix)
 
     if have_sdk and key and not args.offline:
         print("\n  Testing the key against the API (one tiny request)...")
@@ -1621,7 +1634,10 @@ def cmd_setkey(args):
     print("  1. Get a key at console.anthropic.com -> API keys -> Create Key")
     print("  2. Copy it, then paste it below and press Return.")
     print("\n  Your paste will NOT appear on screen -- that's deliberate, not a")
-    print("  freeze. Paste with Cmd-V as usual, then press Return.\n")
+    if IS_WINDOWS:
+        print("  freeze. Paste with right-click or Ctrl-V, then press Enter.\n")
+    else:
+        print("  freeze. Paste with Cmd-V as usual, then press Return.\n")
 
     try:
         raw = getpass.getpass("  API key: ")
@@ -1650,6 +1666,22 @@ def cmd_setkey(args):
         print("  have been cut short. Nothing was changed; try copying it again.")
         sys.exit(1)
 
+    if IS_WINDOWS:
+        # No shell profile to edit on Windows -- persist it as a per-user
+        # environment variable instead, which every future terminal (and
+        # GitHub Desktop's) inherits. setx is the supported way to do that;
+        # it takes effect in NEW windows only, same caveat as the zshrc path.
+        import subprocess
+        r = subprocess.run(["setx", "ANTHROPIC_API_KEY", key],
+                           capture_output=True, text=True)
+        if r.returncode != 0:
+            print("\n  Couldn't save the key (setx failed):")
+            print("  " + (r.stderr or r.stdout).strip())
+            sys.exit(1)
+        print(f"\n  Saved as a Windows user environment variable (key ending ...{key[-4:]}).")
+        _setkey_test(key, args.model)
+        return
+
     existing = shell_file.read_text() if shell_file.exists() else ""
     if existing:
         backup = shell_file.with_suffix(shell_file.suffix + ".backup")
@@ -1668,24 +1700,32 @@ def cmd_setkey(args):
         print(f"  Replaced {removed} earlier ANTHROPIC_API_KEY line(s).")
         print(f"  Previous file kept as {shell_file.name}.backup")
 
+    _setkey_test(key, args.model)
+
+
+def _setkey_test(key, model):
+    """The immediate post-save verification, shared by both platforms'
+    save paths -- you find out the key works before you walk away."""
+    reopen = ("Close this window and open a new one" if IS_WINDOWS
+              else "Quit Terminal (Cmd-Q) and reopen it")
     try:
         import anthropic
     except ImportError:
         print("\n  Can't test it yet -- the SDK isn't installed. Run:")
-        print("    python3 -m pip install anthropic")
-        print("  then: python3 build_descriptions.py doctor")
+        print(f"    {PY} -m pip install anthropic")
+        print(f"  then: {PY} build_descriptions.py doctor")
         return
 
     print("\n  Testing it against the API...")
     os.environ["ANTHROPIC_API_KEY"] = key
     try:
         r = anthropic.Anthropic(api_key=key).messages.create(
-            model=args.model, max_tokens=16,
+            model=model, max_tokens=16,
             messages=[{"role": "user", "content": "Reply with just: ok"}],
         )
         txt = next((b.text for b in r.content if b.type == "text"), "").strip()
         print(f"  Works -- the model replied {txt!r}.\n")
-        print("  You're done. Quit Terminal (Cmd-Q) and reopen it so the key")
+        print(f"  You're done. {reopen} so the key")
         print("  loads for future commands, then everything will just work.\n")
     except anthropic.AuthenticationError:
         print("\n  The API rejected that key.")
@@ -1698,12 +1738,12 @@ def cmd_setkey(args):
         if code == 400:
             print("  This usually means the account has no credits yet --")
             print("  add some at console.anthropic.com -> Billing, then run:")
-            print("    python3 build_descriptions.py doctor\n")
+            print(f"    {PY} build_descriptions.py doctor\n")
         else:
-            print("  Try `python3 build_descriptions.py doctor` again shortly.\n")
+            print(f"  Try `{PY} build_descriptions.py doctor` again shortly.\n")
     except anthropic.APIConnectionError:
         print("\n  The key was saved, but I couldn't reach the API.")
-        print("  Check your internet, then run: python3 build_descriptions.py doctor\n")
+        print(f"  Check your internet, then run: {PY} build_descriptions.py doctor\n")
 
 
 # ---------------------------------------------------------------------------

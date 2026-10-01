@@ -9716,7 +9716,7 @@
           "front": "catalog_images/richardson-256/sage-white_front.jpg",
           "back": "catalog_images/richardson-256/sage-white_back.jpg",
           "hexes": [
-            "#93a491",
+            "#92a28f",
             "#ecedef"
           ]
         },
@@ -17212,6 +17212,70 @@
           "front": "catalog_images/as-colour-1107/white-marle_front.jpg",
           "back": "catalog_images/as-colour-1107/white-marle_back.jpg",
           "swatch": "catalog_images/as-colour-1107/white-marle_swatch.jpg"
+        }
+      ]
+    },
+    {
+      "id": "as-colour-1152",
+      "name": "Class Cord Cap",
+      "brand": "AS Colour",
+      "style": "1152",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Atlantic",
+          "hex": "#0f4348",
+          "front": "catalog_images/as-colour-1152/atlantic_front.jpg",
+          "back": "catalog_images/as-colour-1152/atlantic_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#141515",
+          "front": "catalog_images/as-colour-1152/black_front.jpg",
+          "back": "catalog_images/as-colour-1152/black_back.jpg"
+        },
+        {
+          "name": "Hazy Pink",
+          "hex": "#9e8078",
+          "front": "catalog_images/as-colour-1152/hazy-pink_front.jpg",
+          "back": "catalog_images/as-colour-1152/hazy-pink_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#ad9971",
+          "front": "catalog_images/as-colour-1152/khaki_front.jpg",
+          "back": "catalog_images/as-colour-1152/khaki_back.jpg"
+        },
+        {
+          "name": "Petrol Blue",
+          "hex": "#31323d",
+          "front": "catalog_images/as-colour-1152/petrol-blue_front.jpg",
+          "back": "catalog_images/as-colour-1152/petrol-blue_back.jpg"
+        },
+        {
+          "name": "Powder",
+          "hex": "#a5b4c9",
+          "front": "catalog_images/as-colour-1152/powder_front.jpg",
+          "back": "catalog_images/as-colour-1152/powder_back.jpg"
+        },
+        {
+          "name": "Sage",
+          "hex": "#637e6f",
+          "front": "catalog_images/as-colour-1152/sage_front.jpg",
+          "back": "catalog_images/as-colour-1152/sage_back.jpg"
+        },
+        {
+          "name": "Slate Blue",
+          "hex": "#45748b",
+          "front": "catalog_images/as-colour-1152/slate-blue_front.jpg",
+          "back": "catalog_images/as-colour-1152/slate-blue_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#6e5c48",
+          "front": "catalog_images/as-colour-1152/walnut_front.jpg",
+          "back": "catalog_images/as-colour-1152/walnut_back.jpg"
         }
       ]
     }

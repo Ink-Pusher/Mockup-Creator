@@ -13,7 +13,7 @@
 #
 # To delete something on purpose:  git commit --no-verify
 
-PROTECTED='^(catalog\.json|product_descriptions\.csv|build_[a-z_]+\.py|squarespace/|catalog_images/)'
+PROTECTED='^(catalog\.json|product_descriptions\.csv|build_[a-z_]+\.py|squarespace/|catalog_images/|SETUP\.md|setup\.(ps1|sh)|supabase_[a-z_]+\.sql)'
 IMAGE_DELETE_LIMIT=25
 
 deleted=$(git diff --cached --name-only --diff-filter=D | grep -E "$PROTECTED")

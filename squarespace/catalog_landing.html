@@ -306,16 +306,35 @@ function render(products, landingCfg){
     .filter(r => r.all.length);   // a category with nothing visible just doesn't render
 
   // ---- tiles ----
+  // The tile grid has six slots but seven category rows, which silently
+  // dropped Totes. Tiles are therefore their own small config now: fleece
+  // shares one combined tile (its custom image comes from the Hoodies
+  // row's tile slot in admin) so Totes gets the sixth.
+  const TILE_DEFS = [
+    { id:"unisex-tees", label:"Unisex T-Shirts",      rowIds:["unisex-tees"] },
+    { id:"womens",      label:"Women&rsquo;s Styles", rowIds:["womens"] },
+    { id:"hoodies",     label:"Sweatshirts &amp; Hoodies", rowIds:["hoodies","crewnecks"],
+      href: CATALOG_PAGE_URL + "?cat=hoodie" },
+    { id:"hats",        label:"Hats",                 rowIds:["hats"] },
+    { id:"beanies",     label:"Beanies",              rowIds:["beanies"] },
+    { id:"totes",       label:"Tote Bags",            rowIds:["totes"] },
+  ];
+  const rowById = new Map(rows.map(r => [r.id, r]));
   const tilesEl = document.getElementById("landingTiles");
-  tilesEl.innerHTML = rows.slice(0, 6).map(r => {
-    const custom = r.tileUrl || (CATALOG_BASE_URL + "catalog_images/landing/" + r.id + ".jpg");
-    const first = r.featured[0] || r.all[0];
+  tilesEl.innerHTML = TILE_DEFS.map(t => {
+    const tRows = t.rowIds.map(id => rowById.get(id)).filter(Boolean);
+    if(!tRows.length) return "";
+    const main = tRows[0];
+    const count = tRows.reduce((n, r) => n + r.all.length, 0);
+    const href = t.href || main.href;
+    const custom = main.tileUrl || (CATALOG_BASE_URL + "catalog_images/landing/" + t.id + ".jpg");
+    const first = main.featured[0] || main.all[0];
     const fallback = (CATALOG_BASE_URL + "catalog_images/" + first.id + "/featured_front.jpg");
     const fallback2 = pickThumb(first) || "";
-    return '<a class="tile" href="' + r.href + '">' +
+    return '<a class="tile" href="' + href + '">' +
       '<img src="' + custom + '" data-fb1="' + fallback + '" data-fb2="' + fallback2 + '" ' +
       'onerror="if(this.dataset.fb1){this.src=this.dataset.fb1;this.removeAttribute(\'data-fb1\');}else if(this.dataset.fb2){this.src=this.dataset.fb2;this.removeAttribute(\'data-fb2\');}else{this.onerror=null;}" alt="" />' +
-      '<span class="tlabel">' + r.label + '<small>' + r.all.length + ' styles &rarr;</small></span></a>';
+      '<span class="tlabel">' + t.label + '<small>' + count + ' styles &rarr;</small></span></a>';
   }).join("");
 
   // ---- bands ----

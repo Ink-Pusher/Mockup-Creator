@@ -1256,8 +1256,10 @@ const L_beanie = (p)=> p.kind==="beanie" || /beanie/i.test(p.name);
 const ADMIN_LANDING_ROWS = [
   { id:"unisex-tees", label:"Unisex T-Shirts",        match:(p)=> p.kind==="tee" && !L_womens(p) && !L_youth(p) },
   { id:"womens",      label:"Women's Styles",         match:(p)=> (p.kind==="tee"||p.kind==="tank") && L_womens(p) },
-  { id:"hoodies",     label:"Hoodies",                match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && !L_crew(p) },
-  { id:"crewnecks",   label:"Sweatshirts & Crewnecks",match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && L_crew(p) },
+  { id:"hoodies",     label:"Hoodies",                match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && !L_crew(p),
+    tileNote:"This tile image is the landing page's combined \"Sweatshirts & Hoodies\" tile." },
+  { id:"crewnecks",   label:"Sweatshirts & Crewnecks",match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && L_crew(p),
+    noTile:true },
   { id:"hats",        label:"Hats",                   match:(p)=> (p.kind==="cap"||p.kind==="hat") && !L_beanie(p) },
   { id:"beanies",     label:"Beanies",                match:(p)=> L_beanie(p) },
   { id:"totes",       label:"Tote Bags",              match:(p)=> p.kind==="tote" },
@@ -1332,6 +1334,10 @@ function renderLandingEditor(){
       </div>
       <div class="landing-row-body">
         <div class="tile-box">
+          ${row.noTile ? `
+            <div class="tile-empty">This row has no tile of its own — it shares the combined
+              &ldquo;Sweatshirts &amp; Hoodies&rdquo; tile, uploaded on the Hoodies row.
+              The featured products below still control this row's section.</div>` : `
           ${cfg.tile_url
             ? `<img src="${tileSrc}" alt="" />`
             : `<div class="tile-empty">No custom tile — using a product photo</div>`}
@@ -1340,6 +1346,8 @@ function renderLandingEditor(){
             <button type="button" class="btn tile-upload">Upload tile</button>
             ${cfg.tile_url ? `<button type="button" class="btn danger-outline tile-clear">Remove</button>` : ""}
           </div>
+          ${row.tileNote ? `<div style="margin-top:8px;font-size:11.5px;color:var(--grey);">${row.tileNote}</div>` : ""}
+          `}
         </div>
         <div>
           <div class="feat-chips">${chipsHTML || `<span class="auto-note">No matching products.</span>`}</div>
@@ -1419,7 +1427,8 @@ function renderLandingEditor(){
     const reset = card.querySelector(".feat-reset");
     if(reset) reset.onclick = ()=>{ cfg.featured_ids = []; rerender(); };
 
-    card.querySelector(".tile-upload").onclick = async ()=>{
+    const uploadBtn = card.querySelector(".tile-upload");
+    if(uploadBtn) uploadBtn.onclick = async ()=>{
       const file = card.querySelector(".tile-file").files[0];
       if(!file){ note.textContent = "Choose an image file first."; return; }
       note.textContent = "Uploading…";

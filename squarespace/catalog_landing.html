@@ -67,8 +67,12 @@
      the white card. */
   .lthumb img{position:absolute;inset:4%;width:92%;height:92%;object-fit:contain;transition:transform .25s;}
   .lcard:hover .lthumb img{transform:scale(1.05);}
-  .lname{font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .lmeta{font-size:12px;color:var(--grey);margin:1px 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  /* Both text lines get a FIXED two-line slot: short names leave the
+     second line blank, long names wrap into it, anything longer clips
+     with an ellipsis -- so names are readable without any card ever
+     growing taller than its neighbours. */
+  .lname{font-weight:600;font-size:13.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em;}
+  .lmeta{font-size:12px;color:var(--grey);line-height:1.3;margin:2px 0 3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.6em;}
   .lcol{font-size:11.5px;color:var(--mint-deep);font-weight:600;}
   .landing-status{max-width:1280px;margin:0 auto;padding:30px 24px;color:var(--grey);}
 

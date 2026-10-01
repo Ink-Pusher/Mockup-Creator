@@ -267,6 +267,9 @@
   .feat-chip img{width:26px;height:26px;border-radius:50%;object-fit:cover;background:#f1f0ec;}
   .feat-chip button{border:none;background:none;cursor:pointer;font-size:13px;padding:0 2px;color:var(--grey);}
   .feat-chip button:hover{color:var(--ink);}
+  .feat-chip.grabbable{cursor:grab;}
+  .feat-chip.dragging{opacity:.4;cursor:grabbing;}
+  .feat-chip.drag-over{outline:2px solid var(--mint-deep);outline-offset:1px;}
   .feat-add-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
   .feat-add-row select{font:inherit;font-size:13px;padding:7px 10px;border:1.5px solid var(--border-soft);border-radius:8px;max-width:340px;}
   .landing-save-row{margin-top:12px;display:flex;align-items:center;gap:12px;}
@@ -1308,14 +1311,11 @@ function renderLandingEditor(){
     const autoMode = chosen.length === 0;
     const shown = autoMode ? landingAutoSix(row) : chosen;
 
-    const chipsHTML = shown.map((p, i)=>`
-      <span class="feat-chip" data-id="${p.id}">
+    const chipsHTML = shown.map((p)=>`
+      <span class="feat-chip${autoMode ? "" : " grabbable"}" data-id="${p.id}" ${autoMode ? "" : 'draggable="true" title="Drag to reorder"'}>
         <img src="${landingThumbSrc(p.id)}" onerror="this.style.visibility='hidden'" alt="" />
         ${p.brand} ${p.style}
-        ${autoMode ? "" : `
-          <button type="button" class="chip-left" title="Move left" ${i===0?"disabled":""}>&larr;</button>
-          <button type="button" class="chip-right" title="Move right" ${i===shown.length-1?"disabled":""}>&rarr;</button>
-          <button type="button" class="chip-x" title="Remove">&times;</button>`}
+        ${autoMode ? "" : `<button type="button" class="chip-x" title="Remove">&times;</button>`}
       </span>`).join("");
 
     const optionsHTML = candidates
@@ -1328,7 +1328,7 @@ function renderLandingEditor(){
         <h3>${row.label}</h3>
         <span class="auto-note">${autoMode
           ? "Automatic — follows your product order. Click Rearrange to take control."
-          : chosen.length + " hand-picked — use the arrows to reorder"}</span>
+          : chosen.length + " hand-picked — drag the chips to reorder"}</span>
       </div>
       <div class="landing-row-body">
         <div class="tile-box">
@@ -1380,15 +1380,41 @@ function renderLandingEditor(){
       if(!cfg.featured_ids.includes(sel.value)) cfg.featured_ids.push(sel.value);
       rerender();
     };
+    // Drag a chip onto another to take its place -- the same drag pattern
+    // as the product cards in the Products view, minus the handle (a chip
+    // is small enough to BE the handle).
+    let chipDragId = null;
     card.querySelectorAll(".feat-chip").forEach(chip=>{
       const id = chip.dataset.id;
-      const idx = ()=> cfg.featured_ids.indexOf(id);
       const x = chip.querySelector(".chip-x");
-      if(x) x.onclick = ()=>{ cfg.featured_ids.splice(idx(),1); rerender(); };
-      const l = chip.querySelector(".chip-left");
-      if(l) l.onclick = ()=>{ const i = idx(); if(i>0){ cfg.featured_ids.splice(i-1,0,cfg.featured_ids.splice(i,1)[0]); rerender(); } };
-      const r = chip.querySelector(".chip-right");
-      if(r) r.onclick = ()=>{ const i = idx(); if(i<cfg.featured_ids.length-1){ cfg.featured_ids.splice(i+1,0,cfg.featured_ids.splice(i,1)[0]); rerender(); } };
+      if(x) x.onclick = ()=>{ cfg.featured_ids.splice(cfg.featured_ids.indexOf(id),1); rerender(); };
+      if(autoMode) return;
+      chip.addEventListener("dragstart", (e)=>{
+        chipDragId = id;
+        chip.classList.add("dragging");
+        e.dataTransfer.effectAllowed = "move";
+      });
+      chip.addEventListener("dragend", ()=>{
+        chip.classList.remove("dragging");
+        card.querySelectorAll(".feat-chip").forEach(c=>c.classList.remove("drag-over"));
+      });
+      chip.addEventListener("dragover", (e)=>{
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        chip.classList.add("drag-over");
+      });
+      chip.addEventListener("dragleave", ()=> chip.classList.remove("drag-over"));
+      chip.addEventListener("drop", (e)=>{
+        e.preventDefault();
+        if(!chipDragId || chipDragId === id){ chipDragId = null; return; }
+        const from = cfg.featured_ids.indexOf(chipDragId);
+        const to = cfg.featured_ids.indexOf(id);
+        if(from >= 0 && to >= 0){
+          cfg.featured_ids.splice(to, 0, cfg.featured_ids.splice(from, 1)[0]);
+        }
+        chipDragId = null;
+        rerender();
+      });
     });
     const reset = card.querySelector(".feat-reset");
     if(reset) reset.onclick = ()=>{ cfg.featured_ids = []; rerender(); };

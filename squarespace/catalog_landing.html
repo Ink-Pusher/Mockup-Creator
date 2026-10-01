@@ -26,9 +26,12 @@
   #ip-landing{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:var(--ink);}
   #ip-landing a{-webkit-tap-highlight-color:transparent;}
 
-  .lhead{max-width:1280px;margin:0 auto;padding:40px 24px 8px;}
+  .lhead{max-width:1280px;margin:0 auto;padding:40px 24px 8px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
   .lhead h1{font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(30px,5vw,40px);margin:0 0 8px;letter-spacing:-.02em;}
   .lhead p{color:var(--grey);margin:0 0 26px;font-size:16px;max-width:62ch;line-height:1.5;}
+  .browse-all{flex-shrink:0;margin-bottom:26px;font-family:Poppins,sans-serif;font-weight:700;font-size:15px;color:#fff;background:var(--ink);text-decoration:none;border-radius:999px;padding:14px 26px;transition:background .12s,transform .12s;}
+  .browse-all:hover{background:var(--mint-deep);color:var(--ink);transform:translateY(-1px);}
+  @media(max-width:640px){.lhead{display:block;}.browse-all{display:inline-block;margin-bottom:22px;}}
 
   /* ---------- Category tiles ----------
      Each tile's image comes from catalog_images/landing/<row id>.jpg in
@@ -37,7 +40,9 @@
      phones crop closer to square, so hand-made images should keep the
      garment inside the CENTER SQUARE of the frame (see README). */
   .tiles{max-width:1280px;margin:0 auto;padding:0 24px 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
-  .tile{position:relative;border-radius:14px;overflow:hidden;display:block;aspect-ratio:2.3/1;background:#e9e8e4;}
+  /* 3:2-ish, not letterbox: tall enough to frame a garment without the
+     extreme crop that made the first round of tiles hard to read. */
+  .tile{position:relative;border-radius:14px;overflow:hidden;display:block;aspect-ratio:1.55/1;background:#e9e8e4;}
   .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .25s;}
   .tile:hover img{transform:scale(1.04);}
   /* No more darkening the whole photo -- instead a gradient scrim rises
@@ -109,7 +114,7 @@
   @media(max-width:900px){
     .lgrid{grid-template-columns:repeat(3,minmax(0,1fr));}
     .tiles{grid-template-columns:repeat(2,minmax(0,1fr));}
-    .tile{aspect-ratio:1.5/1;}
+    .tile{aspect-ratio:1.25/1;}
   }
   @media(max-width:640px){
     .lgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
@@ -122,8 +127,11 @@
 <body>
 <div id="ip-landing">
   <div class="lhead">
-    <h1>Browse the Catalog</h1>
-    <p id="lheadBlurb">Look through our most trusted brands and styles. Jump into a category, or start with the most popular picks below.</p>
+    <div>
+      <h1>Browse the Catalog</h1>
+      <p id="lheadBlurb">Look through our most trusted brands and styles. Jump into a category, or start with the most popular picks below.</p>
+    </div>
+    <a class="browse-all" href="/new-apparel-catalog">Browse All &rarr;</a>
   </div>
   <div class="tiles" id="landingTiles"></div>
   <div id="landingBands"></div>

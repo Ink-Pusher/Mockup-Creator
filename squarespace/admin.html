@@ -1327,8 +1327,8 @@ function renderLandingEditor(){
       <div class="landing-row-head">
         <h3>${row.label}</h3>
         <span class="auto-note">${autoMode
-          ? "Automatic — showing the first " + shown.length + " by product order"
-          : chosen.length + " hand-picked"}</span>
+          ? "Automatic — follows your product order. Click Rearrange to take control."
+          : chosen.length + " hand-picked — use the arrows to reorder"}</span>
       </div>
       <div class="landing-row-body">
         <div class="tile-box">
@@ -1344,6 +1344,7 @@ function renderLandingEditor(){
         <div>
           <div class="feat-chips">${chipsHTML || `<span class="auto-note">No matching products.</span>`}</div>
           <div class="feat-add-row">
+            ${autoMode ? `<button type="button" class="btn primary feat-rearrange">Rearrange</button>` : ""}
             <select class="feat-select"><option value="">Add a product…</option>${optionsHTML}</select>
             <button type="button" class="btn feat-add">Add</button>
             ${autoMode ? "" : `<button type="button" class="btn danger-outline feat-reset">Back to automatic</button>`}
@@ -1357,6 +1358,16 @@ function renderLandingEditor(){
 
     const note = card.querySelector(".landing-save-note");
     const rerender = ()=> renderLandingEditor();
+
+    // One obvious entry point into hand-picked mode: seeds the list with
+    // the six currently showing, which turns on the arrows and remove
+    // buttons on every chip. (Adding a product while automatic does the
+    // same seeding, but a labeled button beats a hidden behavior.)
+    const rearrange = card.querySelector(".feat-rearrange");
+    if(rearrange) rearrange.onclick = ()=>{
+      cfg.featured_ids = landingAutoSix(row).map(p => p.id);
+      rerender();
+    };
 
     card.querySelector(".feat-add").onclick = ()=>{
       const sel = card.querySelector(".feat-select");

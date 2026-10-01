@@ -1476,6 +1476,30 @@ def cmd_fetch(args):
 # things to check by eye. Every check says what's wrong AND the exact fix, so
 # nobody has to come back and ask.
 
+def _enable_hooks_in_config(repo_dir):
+    """Set core.hooksPath = .githooks by editing .git/config directly.
+    Used when no `git` executable is reachable (GitHub Desktop installs
+    keep theirs private). Returns (ok, detail)."""
+    cfg = Path(repo_dir) / ".git" / "config"
+    try:
+        if not cfg.exists():
+            return False, ".git/config not found -- is this folder really the clone?"
+        text = cfg.read_text()
+        if re.search(r"(?im)^\s*hookspath\s*=\s*\.githooks\s*$", text):
+            return True, "already on"
+        m = re.search(r"(?im)^\[core\]\s*$", text)
+        if m:
+            insert_at = m.end()
+            text = text[:insert_at] + "\n\thooksPath = .githooks" + text[insert_at:]
+        else:
+            text = text.rstrip("\n") + "\n[core]\n\thooksPath = .githooks\n"
+        cfg.write_text(text)
+        return True, ("was off on this clone -- just enabled it (wrote .git/config "
+                      "directly; no git on PATH, which is fine -- GitHub Desktop has its own)")
+    except Exception as e:
+        return False, f"couldn't edit .git/config: {e}"
+
+
 def cmd_doctor(args):
     import platform
     ok = True
@@ -1545,6 +1569,10 @@ def cmd_doctor(args):
     # config value is harmless, so rather than telling someone to run a git
     # command, just fix it here.
     if in_repo and (here / ".githooks" / "pre-commit").exists():
+        # Prefer asking git itself; but on a GitHub-Desktop-only Windows
+        # machine there IS no `git` on PATH (Desktop keeps its own private
+        # copy), so fall back to editing .git/config directly -- it's a
+        # plain ini file, and hooksPath is just a line under [core].
         import subprocess
         try:
             r = subprocess.run(["git", "config", "--local", "core.hooksPath"],
@@ -1554,9 +1582,10 @@ def cmd_doctor(args):
                 subprocess.run(["git", "config", "--local", "core.hooksPath", ".githooks"], check=True)
             check("Accidental-delete protection enabled", True,
                   "already on" if hooks_on else "was off on this clone -- just enabled it")
-        except Exception as e:
-            check("Accidental-delete protection enabled", False, f"couldn't check git config: {e}",
-                  "Run once, inside this folder:  git config core.hooksPath .githooks")
+        except Exception:
+            ok2, detail = _enable_hooks_in_config(here)
+            check("Accidental-delete protection enabled", ok2, detail,
+                  "" if ok2 else "Run once, inside this folder:  git config core.hooksPath .githooks")
 
     try:
         import anthropic

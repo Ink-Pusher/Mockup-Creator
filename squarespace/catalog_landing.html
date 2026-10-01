@@ -38,8 +38,13 @@
      garment inside the CENTER SQUARE of the frame (see README). */
   .tiles{max-width:1280px;margin:0 auto;padding:0 24px 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
   .tile{position:relative;border-radius:14px;overflow:hidden;display:block;aspect-ratio:2.3/1;background:#e9e8e4;}
-  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.68);transition:transform .25s;}
+  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .25s;}
   .tile:hover img{transform:scale(1.04);}
+  /* No more darkening the whole photo -- instead a gradient scrim rises
+     only from the bottom edge, so the garment shows true-to-color while
+     the white label stays readable over any image. */
+  .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 45%);pointer-events:none;}
+  .tlabel{z-index:1;}
   .tlabel{position:absolute;left:18px;bottom:13px;color:#fff;font-family:Poppins,sans-serif;font-weight:700;font-size:19px;line-height:1.15;text-shadow:0 1px 10px rgba(0,0,0,.55);}
   .tlabel small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:12px;opacity:.95;margin-top:2px;}
 

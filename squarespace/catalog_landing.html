@@ -59,13 +59,35 @@
      than 4:5 stretches the box past it (which made one band render as
      ragged masonry). Absolutely positioning the img takes it out of the
      box's size calculation entirely, so every thumb is exactly 4:5. */
-  .lthumb{background:#f1f0ec;border-radius:12px;aspect-ratio:4/5;overflow:hidden;margin-bottom:9px;position:relative;}
-  .lthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .25s;}
+  .lthumb{background:#fff;border:1px solid #ecebe7;border-radius:12px;aspect-ratio:4/5;overflow:hidden;margin-bottom:9px;position:relative;}
+  /* contain, not cover: the product photos come in several proportions, and
+     cover-cropping them made garments render at visibly different sizes
+     card to card. contain shows every garment whole, centered, in the
+     identical box -- the photos' own white studio background blends into
+     the white card. */
+  .lthumb img{position:absolute;inset:4%;width:92%;height:92%;object-fit:contain;transition:transform .25s;}
   .lcard:hover .lthumb img{transform:scale(1.05);}
   .lname{font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .lmeta{font-size:12px;color:var(--grey);margin:1px 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .lcol{font-size:11.5px;color:var(--mint-deep);font-weight:600;}
   .landing-status{max-width:1280px;margin:0 auto;padding:30px 24px;color:var(--grey);}
+
+  /* ---------- Featured brands band ---------- */
+  .brands-band{background:var(--mint);padding:46px 0 52px;margin-top:10px;}
+  .brands-band .inner{max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;}
+  .brands-band h2{font-family:Poppins,sans-serif;font-weight:800;font-size:26px;color:var(--ink);margin:0 0 8px;letter-spacing:-.01em;}
+  .brands-band p{color:#2e4a3e;font-size:14px;margin:0 auto 26px;max-width:56ch;line-height:1.5;}
+  .brand-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;}
+  /* Tone-on-tone: pills are a lighter tint of the band's own mint rather
+     than stark white -- same-family greens, kept light because the brand
+     logos come in whatever colors the brands use, and only a light
+     surface keeps every one of them legible. */
+  .brand-pill{background:#e6fbf1;border-radius:12px;display:flex;align-items:center;justify-content:center;height:74px;padding:12px 16px;text-decoration:none;transition:transform .12s,background .12s;border:1px solid rgba(13,13,13,.08);}
+  .brand-pill:hover{transform:translateY(-2px);background:#fff;outline:2px solid var(--ink);}
+  .brand-pill img{max-width:100%;max-height:100%;object-fit:contain;}
+  .brand-pill span{font-family:Poppins,sans-serif;font-weight:700;font-size:14px;color:var(--ink);line-height:1.2;}
+  @media(max-width:900px){.brand-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  @media(max-width:640px){.brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.brand-pill{height:64px;}}
 
   @media(max-width:900px){
     .lgrid{grid-template-columns:repeat(3,minmax(0,1fr));}
@@ -88,6 +110,13 @@
   </div>
   <div class="tiles" id="landingTiles"></div>
   <div id="landingBands"></div>
+  <section class="brands-band" id="brandsBand" style="display:none;">
+    <div class="inner">
+      <h2>Shop by Brand</h2>
+      <p>Prefer to start from a label you know? Every brand we stock, one tap away.</p>
+      <div class="brand-grid" id="brandGrid"></div>
+    </div>
+  </section>
   <div class="landing-status" id="landingStatus">Loading the catalog&hellip;</div>
 </div>
 
@@ -173,6 +202,18 @@ async function loadOverrides(){
   } catch(err){ console.warn("[landing] overrides unavailable:", err); return new Map(); }
 }
 
+async function loadBrandLogos(){
+  // The admin's bulk logo tool stores a logo_url per product; one product
+  // per brand is enough to give the brand band its logo. Missing logos
+  // just render as the brand's name in type -- never a broken image.
+  if(!supabaseClient) return new Map();
+  try {
+    const { data, error } = await supabaseClient.from("product_content").select("product_id, logo_url");
+    if(error){ console.warn("[landing] logos unavailable:", error); return new Map(); }
+    return new Map((data||[]).filter(r => r.logo_url).map(r => [r.product_id, r.logo_url]));
+  } catch(err){ console.warn("[landing] logos unavailable:", err); return new Map(); }
+}
+
 async function loadLandingConfig(){
   // Hand-picked featured products + custom tile images, saved from
   // admin.html's Landing Page tab. Missing table or any error just means
@@ -188,10 +229,11 @@ async function loadLandingConfig(){
 async function loadLanding(){
   const statusEl = document.getElementById("landingStatus");
   try {
-    const [catalogRes, overridesById, landingCfg] = await Promise.all([
+    const [catalogRes, overridesById, landingCfg, logoByProduct] = await Promise.all([
       fetch(CATALOG_URL + "?t=" + Date.now(), { cache:"no-store" }).then(r => r.json()),
       loadOverrides(),
       loadLandingConfig(),
+      loadBrandLogos(),
     ]);
     const products = (catalogRes.products || [])
       .filter(p => { const o = overridesById.get(p.id); return !o || o.visible !== false; })
@@ -215,6 +257,7 @@ async function loadLanding(){
         return 0;
       });
     render(products, landingCfg);
+    renderBrands(products, logoByProduct);
     statusEl.style.display = "none";
   } catch(err){
     console.error("[landing] failed to load catalog:", err);
@@ -275,6 +318,39 @@ function render(products, landingCfg){
         '<div class="lgrid">' + cards + '</div>' +
       '</div></section>';
   }).join("");
+}
+
+function renderBrands(products, logoByProduct){
+  // Spelling variants of the same brand ("AS Colour"/"As Colour") merge
+  // into one pill under a canonical label; the catalog page resolves the
+  // link back to every variant, so no product escapes the filter.
+  const CANON = {
+    "ascolour":"AS Colour", "bellacanvas":"Bella/Canvas",
+    "independenttradingco":"Independent Trading Co.",
+    "nextlevelapparel":"Next Level", "nextlevel":"Next Level",
+    "atlantisheadwear":"Atlantis Headwear", "atlantis":"Atlantis Headwear",
+    "sportsmansp12":"Sportsman",
+  };
+  const norm = (b)=> String(b||"").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const byBrand = new Map();
+  products.forEach(p => {
+    if(!p.brand) return;
+    const key = norm(p.brand);
+    const label = CANON[key] || p.brand;
+    const e = byBrand.get(label) || { count: 0, logo: null, linkName: p.brand };
+    e.count++;
+    if(!e.logo && logoByProduct.has(p.id)) e.logo = logoByProduct.get(p.id);
+    byBrand.set(label, e);
+  });
+  const brands = [...byBrand.entries()].sort((a,b)=> b[1].count - a[1].count);
+  if(!brands.length) return;
+  document.getElementById("brandGrid").innerHTML = brands.map(([name, e]) =>
+    '<a class="brand-pill" href="' + CATALOG_PAGE_URL + '?brand=' + encodeURIComponent(e.linkName) + '" title="' + name + ' — ' + e.count + ' styles">' +
+      (e.logo ? '<img src="' + e.logo + '" alt="' + name + '" loading="lazy" ' +
+                'onerror="this.outerHTML=\'<span>' + name.replace(/'/g,"&#39;") + '</span>\'" />'
+              : '<span>' + name + '</span>') +
+    '</a>').join("");
+  document.getElementById("brandsBand").style.display = "block";
 }
 
 loadLanding();

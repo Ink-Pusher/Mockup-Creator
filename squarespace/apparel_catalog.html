@@ -427,6 +427,9 @@ const state = {
     .filter(id => id && ALL_TAGS.some(t => t.id === id));
   if(tags.length) state.activeTags = new Set(tags);
 })();
+// ?brand= can't be validated until the catalog loads (the brand list
+// comes from the products themselves), so it's resolved in loadCatalog.
+const pendingBrandParam = new URLSearchParams(location.search).get("brand");
 
 // ---------- Load catalog ----------
 async function loadCatalog(){
@@ -489,6 +492,18 @@ async function loadCatalog(){
         if(b.sortOrder != null) return 1;
         return 0;
       });
+    if(pendingBrandParam){
+      // Brand spellings drift in catalog.json ("AS Colour"/"As Colour",
+      // "Independent Trading Co"/"Co."), so match on a normalized form and
+      // activate EVERY variant -- a landing-page brand click must catch
+      // all of that brand's products regardless of which spelling each
+      // entry happens to carry.
+      const norm = (b)=> String(b||"").toLowerCase().replace(/[^a-z0-9]/g, "");
+      const want = norm(pendingBrandParam);
+      CATALOG.products.forEach(p => {
+        if(p.brand && norm(p.brand) === want) state.activeBrands.add(p.brand);
+      });
+    }
     render();
   } catch (err) {
     console.error("[apparel-catalog] failed to load catalog:", err);

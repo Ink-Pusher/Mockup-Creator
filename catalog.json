@@ -17288,34 +17288,34 @@
       "popular": false,
       "colors": [
         {
-          "name": "Tee Ash Stone",
-          "hex": "#8d8b91",
-          "front": "catalog_images/as-colour-5040/tee-ash-stone_front.jpg",
-          "back": "catalog_images/as-colour-5040/tee-ash-stone_back.jpg"
+          "name": "Ash Stone",
+          "hex": "#8d8c91",
+          "front": "catalog_images/as-colour-5040/ash-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/ash-stone_back.jpg"
         },
         {
-          "name": "Tee Black Stone",
-          "hex": "#3d3d41",
-          "front": "catalog_images/as-colour-5040/tee-black-stone_front.jpg",
-          "back": "catalog_images/as-colour-5040/tee-black-stone_back.jpg"
+          "name": "Black Stone",
+          "hex": "#3d3c41",
+          "front": "catalog_images/as-colour-5040/black-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/black-stone_back.jpg"
         },
         {
-          "name": "Tee Blue Stone",
+          "name": "Blue Stone",
           "hex": "#40455c",
-          "front": "catalog_images/as-colour-5040/tee-blue-stone_front.jpg",
-          "back": "catalog_images/as-colour-5040/tee-blue-stone_back.jpg"
+          "front": "catalog_images/as-colour-5040/blue-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/blue-stone_back.jpg"
         },
         {
-          "name": "Tee Moss Stone",
-          "hex": "#6f6d60",
-          "front": "catalog_images/as-colour-5040/tee-moss-stone_front.jpg",
-          "back": "catalog_images/as-colour-5040/tee-moss-stone_back.jpg"
+          "name": "Moss Stone",
+          "hex": "#6e6d60",
+          "front": "catalog_images/as-colour-5040/moss-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/moss-stone_back.jpg"
         },
         {
-          "name": "Tee Orchid Stone",
-          "hex": "#b0a5ae",
-          "front": "catalog_images/as-colour-5040/tee-orchid-stone_front.jpg",
-          "back": "catalog_images/as-colour-5040/tee-orchid-stone_back.jpg"
+          "name": "Orchid Stone",
+          "hex": "#b0a5ad",
+          "front": "catalog_images/as-colour-5040/orchid-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/orchid-stone_back.jpg"
         }
       ]
     }

@@ -17278,6 +17278,46 @@
           "back": "catalog_images/as-colour-1152/walnut_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5040",
+      "name": "Staple Stone Wash Tee",
+      "brand": "AS Colour",
+      "style": "5040",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Tee Ash Stone",
+          "hex": "#8d8b91",
+          "front": "catalog_images/as-colour-5040/tee-ash-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/tee-ash-stone_back.jpg"
+        },
+        {
+          "name": "Tee Black Stone",
+          "hex": "#3d3d41",
+          "front": "catalog_images/as-colour-5040/tee-black-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/tee-black-stone_back.jpg"
+        },
+        {
+          "name": "Tee Blue Stone",
+          "hex": "#40455c",
+          "front": "catalog_images/as-colour-5040/tee-blue-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/tee-blue-stone_back.jpg"
+        },
+        {
+          "name": "Tee Moss Stone",
+          "hex": "#6f6d60",
+          "front": "catalog_images/as-colour-5040/tee-moss-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/tee-moss-stone_back.jpg"
+        },
+        {
+          "name": "Tee Orchid Stone",
+          "hex": "#b0a5ae",
+          "front": "catalog_images/as-colour-5040/tee-orchid-stone_front.jpg",
+          "back": "catalog_images/as-colour-5040/tee-orchid-stone_back.jpg"
+        }
+      ]
     }
   ]
 }

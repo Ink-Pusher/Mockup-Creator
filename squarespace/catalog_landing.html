@@ -118,7 +118,7 @@
 <div id="ip-landing">
   <div class="lhead">
     <h1>Browse the Catalog</h1>
-    <p id="lheadBlurb">Every blank we print on &mdash; tees, fleece, headwear and totes from the brands we trust. Jump into a category, or start with the most popular picks below.</p>
+    <p id="lheadBlurb">Look through our most trusted brands and styles. Jump into a category, or start with the most popular picks below.</p>
   </div>
   <div class="tiles" id="landingTiles"></div>
   <div id="landingBands"></div>
@@ -291,12 +291,6 @@ function render(products, landingCfg){
       return { ...r, all, featured, tileUrl: cfg.tile_url || null };
     })
     .filter(r => r.all.length);   // a category with nothing visible just doesn't render
-
-  const totalColors = products.reduce((n,p)=> n + p.colors.length, 0);
-  document.getElementById("lheadBlurb").innerHTML =
-    "Every blank we print on &mdash; " + products.length + " products and " +
-    totalColors.toLocaleString() + "+ colorways from the brands we trust. " +
-    "Jump into a category, or start with the most popular picks below.";
 
   // ---- tiles ----
   const tilesEl = document.getElementById("landingTiles");

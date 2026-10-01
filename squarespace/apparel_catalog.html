@@ -413,6 +413,20 @@ const state = {
   activeTags: new Set(),
   activeBrands: new Set(),
 };
+// Deep links from the category landing page (and anywhere else):
+//   /new-apparel-catalog?cat=hoodie&tags=crewneck
+// land here with that category tab active and those filters applied, so a
+// "Shop all Crewnecks" click drops the visitor into exactly that slice of
+// the catalog. Unknown ids are ignored rather than erroring -- a stale
+// link from an old landing page degrades to the plain catalog.
+(function(){
+  const q = new URLSearchParams(location.search);
+  const cat = q.get("cat");
+  if(cat && CATEGORY_DEFS.some(c => c.id === cat)) state.activeCategory = cat;
+  const tags = (q.get("tags") || "").split(",").map(s => s.trim())
+    .filter(id => id && ALL_TAGS.some(t => t.id === id));
+  if(tags.length) state.activeTags = new Set(tags);
+})();
 
 // ---------- Load catalog ----------
 async function loadCatalog(){

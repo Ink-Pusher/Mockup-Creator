@@ -14,6 +14,7 @@ Any copy still sitting in `~/Downloads` is stale — delete it rather than editi
 | `product_detail.html` | Product detail page (`/product-detail?id=…`) |
 | `mockup_generator_v2_3.html` | Mockup Studio page |
 | `ink-pusher-nav.html` | Nav Code Block at the top of the landing page |
+| `catalog_landing.html` | Catalog landing/storefront page (category tiles + featured rows; edited from admin's Landing Page tab) |
 
 ## Editing these
 

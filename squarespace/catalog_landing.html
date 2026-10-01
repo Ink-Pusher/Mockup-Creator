@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Ink Pusher — Browse the Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<style>
+  /* ---------- Landing page ("Direction B: Editorial Bands") ----------
+     The catalog's storefront: a photo-tile category grid up top for
+     jump-anywhere navigation, then one full-width pastel band per
+     category showing its six "Most Popular" products. Deliberately
+     calmer than the sticker-outline look of the Mockup Studio and the
+     catalog grid -- this page is a shop window, those are workbenches.
+     Shared pieces (palette hexes, fonts, Supabase overrides, the
+     featured_front.jpg thumbnail rule) still match the other pages. */
+  :root{
+    --mint:#8FF0C8;
+    --mint-deep:#5FE0AE;
+    --ink:#0d0d0d;
+    --grey:#6b6b68;
+  }
+  *{box-sizing:border-box;}
+  #ip-landing{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#fff;color:var(--ink);}
+  #ip-landing a{-webkit-tap-highlight-color:transparent;}
+
+  .lhead{max-width:1280px;margin:0 auto;padding:40px 24px 8px;}
+  .lhead h1{font-family:Poppins,sans-serif;font-weight:800;font-size:clamp(30px,5vw,40px);margin:0 0 8px;letter-spacing:-.02em;}
+  .lhead p{color:var(--grey);margin:0 0 26px;font-size:16px;max-width:62ch;line-height:1.5;}
+
+  /* ---------- Category tiles ----------
+     Each tile's image comes from catalog_images/landing/<row id>.jpg in
+     the repo when that file exists (hand-made crops win), otherwise it
+     falls back to the row's first product photo. Desktop crops wide,
+     phones crop closer to square, so hand-made images should keep the
+     garment inside the CENTER SQUARE of the frame (see README). */
+  .tiles{max-width:1280px;margin:0 auto;padding:0 24px 26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+  .tile{position:relative;border-radius:14px;overflow:hidden;display:block;aspect-ratio:2.3/1;background:#e9e8e4;}
+  .tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.68);transition:transform .25s;}
+  .tile:hover img{transform:scale(1.04);}
+  .tlabel{position:absolute;left:18px;bottom:13px;color:#fff;font-family:Poppins,sans-serif;font-weight:700;font-size:19px;line-height:1.15;text-shadow:0 1px 10px rgba(0,0,0,.55);}
+  .tlabel small{display:block;font-family:Inter,sans-serif;font-weight:600;font-size:12px;opacity:.95;margin-top:2px;}
+
+  /* ---------- Category bands ---------- */
+  .band{padding:36px 0 28px;}
+  .inner{max-width:1280px;margin:0 auto;padding:0 24px;}
+  .rowhead{display:grid;grid-template-columns:1fr auto;grid-template-areas:"t s" "b s";align-items:center;margin-bottom:18px;column-gap:16px;}
+  .rowhead h2{grid-area:t;font-family:Poppins,sans-serif;font-weight:800;font-size:25px;margin:0;letter-spacing:-.01em;}
+  .rowhead h2 a{color:var(--ink);text-decoration:none;}
+  .rowhead h2 a:hover{color:var(--mint-deep);}
+  .rowblurb{grid-area:b;color:var(--grey);font-size:13.5px;margin-top:2px;}
+  .shopall{grid-area:s;font-weight:600;font-size:13.5px;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:999px;padding:9px 18px;white-space:nowrap;}
+  .shopall:hover{background:var(--ink);color:#fff;}
+  .lgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;}
+  .lcard{text-decoration:none;color:var(--ink);display:block;}
+  /* aspect-ratio alone is only a PREFERRED size -- a portrait image taller
+     than 4:5 stretches the box past it (which made one band render as
+     ragged masonry). Absolutely positioning the img takes it out of the
+     box's size calculation entirely, so every thumb is exactly 4:5. */
+  .lthumb{background:#f1f0ec;border-radius:12px;aspect-ratio:4/5;overflow:hidden;margin-bottom:9px;position:relative;}
+  .lthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .25s;}
+  .lcard:hover .lthumb img{transform:scale(1.05);}
+  .lname{font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .lmeta{font-size:12px;color:var(--grey);margin:1px 0 3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .lcol{font-size:11.5px;color:var(--mint-deep);font-weight:600;}
+  .landing-status{max-width:1280px;margin:0 auto;padding:30px 24px;color:var(--grey);}
+
+  @media(max-width:900px){
+    .lgrid{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .tiles{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .tile{aspect-ratio:1.5/1;}
+  }
+  @media(max-width:640px){
+    .lgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+    .rowhead{grid-template-columns:1fr;grid-template-areas:"t" "b" "s";row-gap:8px;justify-items:start;}
+    .tlabel{font-size:16px;left:12px;bottom:10px;}
+    .band{padding:28px 0 22px;}
+  }
+</style>
+</head>
+<body>
+<div id="ip-landing">
+  <div class="lhead">
+    <h1>Browse the Catalog</h1>
+    <p id="lheadBlurb">Every blank we print on &mdash; tees, fleece, headwear and totes from the brands we trust. Jump into a category, or start with the most popular picks below.</p>
+  </div>
+  <div class="tiles" id="landingTiles"></div>
+  <div id="landingBands"></div>
+  <div class="landing-status" id="landingStatus">Loading the catalog&hellip;</div>
+</div>
+
+<script>
+// Same data sources as the Apparel Catalog page: catalog.json from the
+// repo (cache-busted past GitHub's CDN), product_overrides from Supabase
+// for visibility, renames, and the admin drag-order. "Most Popular" here
+// IS that drag-order -- the first six visible products matching each row.
+const CATALOG_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/catalog.json";
+const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/";
+const CATALOG_PAGE_URL = "/new-apparel-catalog";
+const PRODUCT_DETAIL_PAGE_URL = "/product-detail";
+const SUPABASE_URL = "https://wkmwqqtwijimkqfijjrc.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_1ik4UyMIim4n-3FbWCzRRA_kHCy0N5G";
+
+// ---------- The rows ----------
+// match() decides what shows in the row; href is where the header and
+// Shop-all button land on the catalog page (its ?cat=&tags= deep links).
+// The page can show slightly MORE than the row (e.g. the Hats link also
+// reaches beanies via the Headware tab) -- rows are a storefront window,
+// the catalog page is the full shelf.
+const womens = (p)=> /women'?s|\bladies\b/i.test(p.name);
+const youth  = (p)=> /\byouth\b/i.test(p.name);
+const crew   = (p)=> /crew/i.test(p.name) && !/hood/i.test(p.name);
+const beanie = (p)=> p.kind==="beanie" || /beanie/i.test(p.name);
+const LANDING_ROWS = [
+  { id:"unisex-tees", label:"Unisex T-Shirts", blurb:"Everyday crowd-pleasers, from budget to premium",
+    match:(p)=> p.kind==="tee" && !womens(p) && !youth(p),
+    href: CATALOG_PAGE_URL + "?cat=tee&tags=unisex" },
+  { id:"womens", label:"Women&rsquo;s Styles", blurb:"Fitted, relaxed, cropped and flowy",
+    match:(p)=> (p.kind==="tee"||p.kind==="tank") && womens(p),
+    href: CATALOG_PAGE_URL + "?cat=tee&tags=womens" },
+  { id:"hoodies", label:"Hoodies", blurb:"Pullovers and zips for every budget",
+    match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && !crew(p),
+    href: CATALOG_PAGE_URL + "?cat=hoodie" },
+  { id:"crewnecks", label:"Sweatshirts &amp; Crewnecks", blurb:"The classic crew, light to heavyweight",
+    match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && crew(p),
+    href: CATALOG_PAGE_URL + "?cat=hoodie&tags=crewneck" },
+  { id:"hats", label:"Hats", blurb:"Truckers, dad caps and snapbacks",
+    match:(p)=> (p.kind==="cap"||p.kind==="hat") && !beanie(p),
+    href: CATALOG_PAGE_URL + "?cat=cap" },
+  { id:"beanies", label:"Beanies", blurb:"Cuffed, slouchy and pom",
+    match:(p)=> beanie(p),
+    href: CATALOG_PAGE_URL + "?cat=cap&tags=beanie" },
+  { id:"totes", label:"Tote Bags", blurb:"Canvas carry-alls ready for print",
+    match:(p)=> p.kind==="tote",
+    href: CATALOG_PAGE_URL + "?cat=tote" },
+];
+const ROW_SIZE = 6;
+const BAND_COLORS = ["#eef7f2","#ffffff","#f3f1ec","#ffffff","#eef3f7","#ffffff","#f7f0ee"];
+
+// Same thumbnail rule as the catalog grid: a hand-placed
+// featured_front.jpg wins, then the product's thumbnailColor, then the
+// first non-white colour.
+function pickThumb(p){
+  const withPhoto = p.colors.filter(c => c.frontSrc);
+  if(!withPhoto.length) return null;
+  if(p.thumbnailColor){
+    const m = withPhoto.find(c => c.name.toLowerCase() === p.thumbnailColor.toLowerCase());
+    if(m) return m.frontSrc;
+  }
+  const pick = withPhoto.find(c => !/^white$/i.test(c.name)) || withPhoto[0];
+  return pick.frontSrc;
+}
+function thumbImgHTML(p, cls){
+  const featured = CATALOG_BASE_URL + "catalog_images/" + p.id + "/featured_front.jpg";
+  const fallback = pickThumb(p) || "";
+  return '<img src="' + featured + '" data-fallback="' + fallback + '" ' +
+    'onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.removeAttribute(\'data-fallback\');}else{this.onerror=null;}" ' +
+    'alt="" loading="lazy" />';
+}
+
+let supabaseClient = null;
+if(SUPABASE_URL && SUPABASE_ANON_KEY && window.supabase){
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+}
+async function loadOverrides(){
+  if(!supabaseClient) return new Map();
+  try {
+    const { data, error } = await supabaseClient.from("product_overrides").select("*");
+    if(error){ console.warn("[landing] overrides unavailable:", error); return new Map(); }
+    return new Map((data||[]).map(o => [o.product_id, o]));
+  } catch(err){ console.warn("[landing] overrides unavailable:", err); return new Map(); }
+}
+
+async function loadLandingConfig(){
+  // Hand-picked featured products + custom tile images, saved from
+  // admin.html's Landing Page tab. Missing table or any error just means
+  // automatic mode -- the page never breaks because config is absent.
+  if(!supabaseClient) return new Map();
+  try {
+    const { data, error } = await supabaseClient.from("landing_rows").select("*");
+    if(error){ console.warn("[landing] config unavailable:", error); return new Map(); }
+    return new Map((data||[]).map(r => [r.row_id, r]));
+  } catch(err){ console.warn("[landing] config unavailable:", err); return new Map(); }
+}
+
+async function loadLanding(){
+  const statusEl = document.getElementById("landingStatus");
+  try {
+    const [catalogRes, overridesById, landingCfg] = await Promise.all([
+      fetch(CATALOG_URL + "?t=" + Date.now(), { cache:"no-store" }).then(r => r.json()),
+      loadOverrides(),
+      loadLandingConfig(),
+    ]);
+    const products = (catalogRes.products || [])
+      .filter(p => { const o = overridesById.get(p.id); return !o || o.visible !== false; })
+      .map(p => {
+        const o = overridesById.get(p.id) || {};
+        return {
+          id: p.id,
+          name: o.name_override || p.name,
+          brand: o.brand_override || p.brand,
+          style: o.style_override || p.style,
+          kind: p.kind,
+          thumbnailColor: p.thumbnailColor || null,
+          sortOrder: typeof o.sort_order === "number" ? o.sort_order : null,
+          colors: p.colors.map(c => ({ name:c.name, frontSrc: CATALOG_BASE_URL + c.front })),
+        };
+      })
+      .sort((a,b)=>{
+        if(a.sortOrder != null && b.sortOrder != null) return a.sortOrder - b.sortOrder;
+        if(a.sortOrder != null) return -1;
+        if(b.sortOrder != null) return 1;
+        return 0;
+      });
+    render(products, landingCfg);
+    statusEl.style.display = "none";
+  } catch(err){
+    console.error("[landing] failed to load catalog:", err);
+    statusEl.textContent = "Couldn't load the catalog right now. Please refresh, or check back shortly.";
+  }
+}
+
+function render(products, landingCfg){
+  const rows = LANDING_ROWS
+    .map(r => {
+      const all = products.filter(r.match);
+      const cfg = landingCfg.get(r.id) || {};
+      // Hand-picked ids (in their saved order) win; ids that no longer
+      // exist or were hidden are skipped; the list tops up automatically
+      // to six so a row never renders half-empty.
+      const picked = (Array.isArray(cfg.featured_ids) ? cfg.featured_ids : [])
+        .map(id => all.find(p => p.id === id)).filter(Boolean);
+      const featured = picked.concat(all.filter(p => !picked.includes(p))).slice(0, ROW_SIZE);
+      return { ...r, all, featured, tileUrl: cfg.tile_url || null };
+    })
+    .filter(r => r.all.length);   // a category with nothing visible just doesn't render
+
+  const totalColors = products.reduce((n,p)=> n + p.colors.length, 0);
+  document.getElementById("lheadBlurb").innerHTML =
+    "Every blank we print on &mdash; " + products.length + " products and " +
+    totalColors.toLocaleString() + "+ colorways from the brands we trust. " +
+    "Jump into a category, or start with the most popular picks below.";
+
+  // ---- tiles ----
+  const tilesEl = document.getElementById("landingTiles");
+  tilesEl.innerHTML = rows.slice(0, 6).map(r => {
+    const custom = r.tileUrl || (CATALOG_BASE_URL + "catalog_images/landing/" + r.id + ".jpg");
+    const first = r.featured[0] || r.all[0];
+    const fallback = (CATALOG_BASE_URL + "catalog_images/" + first.id + "/featured_front.jpg");
+    const fallback2 = pickThumb(first) || "";
+    return '<a class="tile" href="' + r.href + '">' +
+      '<img src="' + custom + '" data-fb1="' + fallback + '" data-fb2="' + fallback2 + '" ' +
+      'onerror="if(this.dataset.fb1){this.src=this.dataset.fb1;this.removeAttribute(\'data-fb1\');}else if(this.dataset.fb2){this.src=this.dataset.fb2;this.removeAttribute(\'data-fb2\');}else{this.onerror=null;}" alt="" />' +
+      '<span class="tlabel">' + r.label + '<small>' + r.all.length + ' styles &rarr;</small></span></a>';
+  }).join("");
+
+  // ---- bands ----
+  document.getElementById("landingBands").innerHTML = rows.map((r,i)=>{
+    const cards = r.featured.map(p =>
+      '<a class="lcard" href="' + PRODUCT_DETAIL_PAGE_URL + '?id=' + encodeURIComponent(p.id) + '">' +
+        '<div class="lthumb">' + thumbImgHTML(p) + '</div>' +
+        '<div class="lname">' + p.brand + ' ' + p.style + '</div>' +
+        '<div class="lmeta">' + p.name + '</div>' +
+        '<div class="lcol">' + p.colors.length + ' colors</div></a>'
+    ).join("");
+    return '<section class="band" style="background:' + BAND_COLORS[i % BAND_COLORS.length] + '">' +
+      '<div class="inner">' +
+        '<div class="rowhead">' +
+          '<h2><a href="' + r.href + '">' + r.label + '</a></h2>' +
+          '<div class="rowblurb">' + r.blurb + '</div>' +
+          '<a class="shopall" href="' + r.href + '">Shop all ' + r.all.length + ' styles</a>' +
+        '</div>' +
+        '<div class="lgrid">' + cards + '</div>' +
+      '</div></section>';
+  }).join("");
+}
+
+loadLanding();
+</script>
+</body>
+</html>

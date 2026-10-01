@@ -247,6 +247,30 @@
      to scan. Still capped so the description column can't stretch to an
      unreadable line length on a big display. */
   .bulk-modal .content-modal{max-width:1000px;}
+  .view-toggle{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;}
+  .view-toggle-btn{border:none;background:#fff;font:inherit;font-weight:700;font-size:13px;padding:8px 16px;cursor:pointer;color:var(--grey);}
+  .view-toggle-btn.active{background:var(--mint);color:var(--ink);}
+  .landing-intro{background:#fff;border:1.5px solid var(--border-soft);border-radius:12px;padding:14px 18px;font-size:13.5px;color:var(--grey);line-height:1.55;margin-bottom:18px;}
+  .landing-intro strong{color:var(--ink);}
+  .landing-row-card{background:#fff;border:2px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 rgba(0,0,0,.10);padding:18px 20px;margin-bottom:18px;}
+  .landing-row-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
+  .landing-row-head h3{margin:0;font-size:17px;}
+  .landing-row-head .auto-note{font-size:12px;color:var(--grey);}
+  .landing-row-body{display:grid;grid-template-columns:240px 1fr;gap:20px;align-items:start;}
+  @media(max-width:800px){.landing-row-body{grid-template-columns:1fr;}}
+  .tile-box{border:1.5px dashed var(--border-soft);border-radius:10px;padding:10px;text-align:center;}
+  .tile-box img{width:100%;aspect-ratio:2.3/1;object-fit:cover;border-radius:8px;background:#f1f0ec;display:block;margin-bottom:8px;}
+  .tile-box .tile-empty{aspect-ratio:2.3/1;display:flex;align-items:center;justify-content:center;background:#f7f7f5;border-radius:8px;color:var(--grey);font-size:12px;margin-bottom:8px;}
+  .tile-box input[type=file]{font-size:11.5px;max-width:100%;}
+  .feat-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;min-height:34px;}
+  .feat-chip{display:flex;align-items:center;gap:7px;border:1.5px solid var(--ink);border-radius:999px;padding:4px 8px 4px 4px;font-size:12.5px;font-weight:600;background:#fff;}
+  .feat-chip img{width:26px;height:26px;border-radius:50%;object-fit:cover;background:#f1f0ec;}
+  .feat-chip button{border:none;background:none;cursor:pointer;font-size:13px;padding:0 2px;color:var(--grey);}
+  .feat-chip button:hover{color:var(--ink);}
+  .feat-add-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+  .feat-add-row select{font:inherit;font-size:13px;padding:7px 10px;border:1.5px solid var(--border-soft);border-radius:8px;max-width:340px;}
+  .landing-save-row{margin-top:12px;display:flex;align-items:center;gap:12px;}
+  .landing-save-note{font-size:12px;color:var(--grey);}
   .bulk-tabs{display:flex;gap:8px;margin-bottom:18px;border-bottom:2px solid var(--border-soft);}
   .bulk-tab{
     padding:9px 4px 11px;font-weight:700;font-size:13px;color:var(--grey);background:none;border:none;
@@ -394,7 +418,11 @@
         <h1>Product Admin</h1>
         <div class="topbar-sub">Toggle visibility, drag to reorder within a category, or edit a product's description. Changes go live immediately for every visitor.</div>
       </div>
-      <div style="display:flex;gap:10px;flex-shrink:0;">
+      <div style="display:flex;gap:10px;flex-shrink:0;align-items:center;">
+        <div class="view-toggle" id="viewToggle">
+          <button type="button" class="view-toggle-btn active" data-view="products">Products</button>
+          <button type="button" class="view-toggle-btn" data-view="landing">Landing Page</button>
+        </div>
         <button type="button" class="btn" id="bulkToolsBtn">Bulk tools</button>
         <button type="button" class="btn danger-outline" id="signOutBtn">Sign out</button>
       </div>
@@ -434,6 +462,17 @@
       <main class="admin-main">
         <div id="categoriesWrap"></div>
       </main>
+    </div>
+
+    <div id="landingEditor" style="display:none;">
+      <div class="landing-intro">
+        Each row below matches a section of the public landing page. <strong>Featured products</strong> picks
+        the six cards shown (leave it empty for automatic: the first six by your product order).
+        <strong>Tile image</strong> is the big category photo at the top of the landing page &mdash; upload a
+        hand-made crop, or leave it empty to use the row's first product photo. Wide images work best
+        (about 1200&times;640); phones crop toward the center square, so keep the garment centered.
+      </div>
+      <div id="landingRowsWrap"></div>
     </div>
   </div>
 
@@ -650,17 +689,23 @@ async function loadEverything(){
   // CDN in front of raw.githubusercontent.com caches independently for a
   // few minutes per edge node, so a fresh push might not show here
   // immediately without this cache-busting query param.
-  const [catalogRes, overridesRes, contentRes] = await Promise.all([
+  const [catalogRes, overridesRes, contentRes, landingRes] = await Promise.all([
     fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
     supabaseClient.from("product_overrides").select("*"),
     supabaseClient.from("product_content").select("*"),
+    supabaseClient.from("landing_rows").select("*"),
   ]);
+  // Landing config is additive: if its table hasn't been created yet the
+  // rest of the admin works untouched, and the Landing tab explains itself.
+  landingTableMissing = !!landingRes.error;
+  landingById = new Map((landingRes.data || []).map(r => [r.row_id, r]));
   allProducts = (catalogRes.products || []).map(p => ({
     id: p.id, name: p.name, brand: p.brand, style: p.style, kind: p.kind,
     popular: p.popular !== false,
   }));
   overridesById = new Map((overridesRes.data || []).map(o => [o.product_id, o]));
   contentById = new Map((contentRes.data || []).map(c => [c.product_id, c]));
+  renderLandingEditor();
   renderSidebarCategoryList();
   renderSidebarTagList();
   renderSidebarBrandList();
@@ -1193,6 +1238,202 @@ document.getElementById("logoCancelBtn").onclick = closeBulkModal;
 document.getElementById("bulkModalOverlay").addEventListener("click", (e)=>{
   if(e.target.id === "bulkModalOverlay") closeBulkModal();
 });
+/* ================= Landing Page editor =================
+   Edits the public landing page (catalog_landing.html): which six
+   products each category row features, and the hand-made tile image at
+   the top. Config lives in the landing_rows table; tile images go to
+   the public "landing" storage bucket. Row ids and labels here MUST
+   match LANDING_ROWS in catalog_landing.html. */
+let landingById = new Map();
+let landingTableMissing = false;
+const L_womens = (p)=> /women'?s|\bladies\b/i.test(p.name);
+const L_youth  = (p)=> /\byouth\b/i.test(p.name);
+const L_crew   = (p)=> /crew/i.test(p.name) && !/hood/i.test(p.name);
+const L_beanie = (p)=> p.kind==="beanie" || /beanie/i.test(p.name);
+const ADMIN_LANDING_ROWS = [
+  { id:"unisex-tees", label:"Unisex T-Shirts",        match:(p)=> p.kind==="tee" && !L_womens(p) && !L_youth(p) },
+  { id:"womens",      label:"Women's Styles",         match:(p)=> (p.kind==="tee"||p.kind==="tank") && L_womens(p) },
+  { id:"hoodies",     label:"Hoodies",                match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && !L_crew(p) },
+  { id:"crewnecks",   label:"Sweatshirts & Crewnecks",match:(p)=> (p.kind==="hoodie"||p.kind==="sweatshirt") && L_crew(p) },
+  { id:"hats",        label:"Hats",                   match:(p)=> (p.kind==="cap"||p.kind==="hat") && !L_beanie(p) },
+  { id:"beanies",     label:"Beanies",                match:(p)=> L_beanie(p) },
+  { id:"totes",       label:"Tote Bags",              match:(p)=> p.kind==="tote" },
+];
+const LANDING_FEATURE_LIMIT = 6;
+
+function landingThumbSrc(id){
+  return `${CATALOG_BASE_URL}catalog_images/${id}/featured_front.jpg`;
+}
+function landingVisible(p){
+  const o = overridesById.get(p.id);
+  return !o || o.visible !== false;
+}
+function landingAutoSix(row){
+  // mirrors the public page's fallback: first six VISIBLE matches in the
+  // same order the catalog page sorts (explicit sort_order first)
+  return allProducts
+    .filter(p => landingVisible(p) && row.match(p))
+    .sort((a,b)=>{
+      const ao = (overridesById.get(a.id)||{}).sort_order, bo = (overridesById.get(b.id)||{}).sort_order;
+      if(typeof ao === "number" && typeof bo === "number") return ao - bo;
+      if(typeof ao === "number") return -1;
+      if(typeof bo === "number") return 1;
+      return 0;
+    })
+    .slice(0, LANDING_FEATURE_LIMIT);
+}
+
+function renderLandingEditor(){
+  const wrap = document.getElementById("landingRowsWrap");
+  if(!wrap) return;
+  if(landingTableMissing){
+    wrap.innerHTML = `<div class="landing-intro" style="border-color:#e0b4b4;color:#8a2f2a;">
+      The landing_rows table isn't set up in Supabase yet, so this tab can't save.
+      Run the SQL in <strong>supabase_landing_setup.sql</strong> (repo root) once in the
+      Supabase SQL editor, then reload this page. The public landing page works fine
+      in automatic mode meanwhile.</div>`;
+    return;
+  }
+  wrap.innerHTML = "";
+  ADMIN_LANDING_ROWS.forEach(row=>{
+    const cfg = landingById.get(row.id) || { row_id: row.id, featured_ids: [], tile_url: null };
+    if(!Array.isArray(cfg.featured_ids)) cfg.featured_ids = [];
+    landingById.set(row.id, cfg);
+    const card = document.createElement("div");
+    card.className = "landing-row-card";
+    card.dataset.row = row.id;
+
+    const candidates = allProducts.filter(p => landingVisible(p) && row.match(p));
+    const chosen = cfg.featured_ids.map(id => allProducts.find(p => p.id === id)).filter(Boolean);
+    const autoMode = chosen.length === 0;
+    const shown = autoMode ? landingAutoSix(row) : chosen;
+
+    const chipsHTML = shown.map((p, i)=>`
+      <span class="feat-chip" data-id="${p.id}">
+        <img src="${landingThumbSrc(p.id)}" onerror="this.style.visibility='hidden'" alt="" />
+        ${p.brand} ${p.style}
+        ${autoMode ? "" : `
+          <button type="button" class="chip-left" title="Move left" ${i===0?"disabled":""}>&larr;</button>
+          <button type="button" class="chip-right" title="Move right" ${i===shown.length-1?"disabled":""}>&rarr;</button>
+          <button type="button" class="chip-x" title="Remove">&times;</button>`}
+      </span>`).join("");
+
+    const optionsHTML = candidates
+      .filter(p => !cfg.featured_ids.includes(p.id))
+      .map(p => `<option value="${p.id}">${p.brand} ${p.style} — ${p.name}</option>`).join("");
+
+    const tileSrc = cfg.tile_url ? `${cfg.tile_url}${cfg.tile_url.includes("?")?"&":"?"}t=${Date.now()}` : "";
+    card.innerHTML = `
+      <div class="landing-row-head">
+        <h3>${row.label}</h3>
+        <span class="auto-note">${autoMode
+          ? "Automatic — showing the first " + shown.length + " by product order"
+          : chosen.length + " hand-picked"}</span>
+      </div>
+      <div class="landing-row-body">
+        <div class="tile-box">
+          ${cfg.tile_url
+            ? `<img src="${tileSrc}" alt="" />`
+            : `<div class="tile-empty">No custom tile — using a product photo</div>`}
+          <input type="file" accept="image/jpeg,image/png,image/webp" class="tile-file" />
+          <div style="margin-top:8px;display:flex;gap:8px;justify-content:center;">
+            <button type="button" class="btn tile-upload">Upload tile</button>
+            ${cfg.tile_url ? `<button type="button" class="btn danger-outline tile-clear">Remove</button>` : ""}
+          </div>
+        </div>
+        <div>
+          <div class="feat-chips">${chipsHTML || `<span class="auto-note">No matching products.</span>`}</div>
+          <div class="feat-add-row">
+            <select class="feat-select"><option value="">Add a product…</option>${optionsHTML}</select>
+            <button type="button" class="btn feat-add">Add</button>
+            ${autoMode ? "" : `<button type="button" class="btn danger-outline feat-reset">Back to automatic</button>`}
+          </div>
+          <div class="landing-save-row">
+            <button type="button" class="btn primary landing-save">Save this row</button>
+            <span class="landing-save-note"></span>
+          </div>
+        </div>
+      </div>`;
+
+    const note = card.querySelector(".landing-save-note");
+    const rerender = ()=> renderLandingEditor();
+
+    card.querySelector(".feat-add").onclick = ()=>{
+      const sel = card.querySelector(".feat-select");
+      if(!sel.value) return;
+      if(cfg.featured_ids.length === 0){
+        // first hand-pick: seed with the current automatic six so adding
+        // one product doesn't silently drop the other five
+        cfg.featured_ids = landingAutoSix(row).map(p => p.id);
+      }
+      if(!cfg.featured_ids.includes(sel.value)) cfg.featured_ids.push(sel.value);
+      rerender();
+    };
+    card.querySelectorAll(".feat-chip").forEach(chip=>{
+      const id = chip.dataset.id;
+      const idx = ()=> cfg.featured_ids.indexOf(id);
+      const x = chip.querySelector(".chip-x");
+      if(x) x.onclick = ()=>{ cfg.featured_ids.splice(idx(),1); rerender(); };
+      const l = chip.querySelector(".chip-left");
+      if(l) l.onclick = ()=>{ const i = idx(); if(i>0){ cfg.featured_ids.splice(i-1,0,cfg.featured_ids.splice(i,1)[0]); rerender(); } };
+      const r = chip.querySelector(".chip-right");
+      if(r) r.onclick = ()=>{ const i = idx(); if(i<cfg.featured_ids.length-1){ cfg.featured_ids.splice(i+1,0,cfg.featured_ids.splice(i,1)[0]); rerender(); } };
+    });
+    const reset = card.querySelector(".feat-reset");
+    if(reset) reset.onclick = ()=>{ cfg.featured_ids = []; rerender(); };
+
+    card.querySelector(".tile-upload").onclick = async ()=>{
+      const file = card.querySelector(".tile-file").files[0];
+      if(!file){ note.textContent = "Choose an image file first."; return; }
+      note.textContent = "Uploading…";
+      const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
+      const path = `${row.id}.${ext === "png" ? "png" : ext === "webp" ? "webp" : "jpg"}`;
+      const { error } = await supabaseClient.storage.from("landing")
+        .upload(path, file, { upsert: true, contentType: file.type, cacheControl: "300" });
+      if(error){ note.textContent = "Upload failed: " + error.message; return; }
+      cfg.tile_url = supabaseClient.storage.from("landing").getPublicUrl(path).data.publicUrl;
+      await saveLandingRow(row.id, cfg, note);
+      rerender();
+    };
+    const clearBtn = card.querySelector(".tile-clear");
+    if(clearBtn) clearBtn.onclick = async ()=>{
+      cfg.tile_url = null;
+      await saveLandingRow(row.id, cfg, note);
+      rerender();
+    };
+    card.querySelector(".landing-save").onclick = ()=> saveLandingRow(row.id, cfg, note);
+
+    wrap.appendChild(card);
+  });
+}
+
+async function saveLandingRow(rowId, cfg, noteEl){
+  if(noteEl) noteEl.textContent = "Saving…";
+  const { error } = await supabaseClient.from("landing_rows").upsert({
+    row_id: rowId,
+    featured_ids: cfg.featured_ids,
+    tile_url: cfg.tile_url,
+    updated_at: new Date().toISOString(),
+  });
+  if(error){
+    if(noteEl) noteEl.textContent = "Save failed: " + error.message;
+    console.error("[admin] landing save failed:", error);
+    return;
+  }
+  if(noteEl) noteEl.textContent = "Saved — live on the landing page.";
+}
+
+// ---------- view toggle ----------
+document.querySelectorAll(".view-toggle-btn").forEach(btn=>{
+  btn.onclick = ()=>{
+    document.querySelectorAll(".view-toggle-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    const landing = btn.dataset.view === "landing";
+    document.querySelector(".admin-layout").style.display = landing ? "none" : "";
+    document.getElementById("landingEditor").style.display = landing ? "block" : "none";
+  };
+});
+
 document.querySelectorAll(".bulk-tab").forEach(tab=>{
   tab.onclick = ()=>{
     document.querySelectorAll(".bulk-tab").forEach(t=>t.classList.remove("active"));

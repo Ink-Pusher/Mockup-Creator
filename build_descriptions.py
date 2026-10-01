@@ -761,12 +761,26 @@ def hint_ascolour(html_text, root):
         if out.get("description"):
             break
 
+    # Store boilerplate that passes the prose test but describes the SHOP,
+    # not the garment. The 5040 (an outlet item) has no description block
+    # at all, and the fallback happily served its outlet disclaimer as the
+    # product copy -- straight onto the live site.
+    STORE_NOISE = re.compile(
+        r"outlet price|not eligible for refunds|refunds or exchanges|"
+        r"free shipping|final sale|discount code|promo code|"
+        r"satisfied with your purchase|exchange or credit|return the items|"
+        r"_chunk|\w+_\w+(-\d+)?\s*:", re.I)  # that last one: raw template key:value dumps
+
+    if out.get("description") and STORE_NOISE.search(out["description"]):
+        out.pop("description"); out.pop("description_source", None)
+
     if not out.get("description"):
         # The mobile variant of the product header leads with the same
         # paragraph, and is present even when the accordion isn't.
         for node in blocks("productView-product"):
             for line in split_lines(node.inner_text()):
-                if is_product_prose(line) and not BARE_HEADING.match(line):
+                if (is_product_prose(line) and not BARE_HEADING.match(line)
+                        and not STORE_NOISE.search(line)):
                     out["description"] = line
                     out["description_source"] = ".productView-product"
                     break

@@ -590,6 +590,17 @@ def extract_ascolour(html: str):
         target = back_by_color if is_back else front_by_color
         target.setdefault(cname, url)
 
+    # Some AS Colour products (beanies, for one) are shot with a single
+    # view per color -- no _BACK photos exist anywhere on the page. A
+    # beanie looks the same from both sides, so rather than dropping
+    # every color for "missing back", reuse the front photo as the back
+    # and say so. Only kicks in when the WHOLE page lacks backs; a page
+    # where just one color's back photo is missing still gets flagged.
+    if front_by_color and not back_by_color:
+        print("  This product has no back photos on the page (normal for"
+              " beanies) -- using each color's front photo for both views.")
+        back_by_color = dict(front_by_color)
+
     colors = sorted(set(front_by_color) | set(back_by_color))
     return [
         {"name": c.replace("_", " ").title(), "front": front_by_color.get(c), "back": back_by_color.get(c)}

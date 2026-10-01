@@ -556,6 +556,31 @@ def extract_ascolour(html: str):
     if not entries:
         return []
 
+    # Generic view shots poison the marker detection two ways: a name
+    # tailed with a view word (TEE_FRONT) varies where colors don't, and
+    # the bare generic back shot (...STAPLE_TEE_BACK -> ...STAPLE_TEE
+    # after stripping) is SHORTER than any color entry, capping how deep
+    # the detector may look (that is exactly how 5040's colors ended up
+    # as "Tee Ash Stone" with six phantom "Tee Front/Main/..." colors).
+    # So: drop view-tailed names first, then drop any entry that is a
+    # pure prefix of the longer ones -- what's left is colors only.
+    entries = [e for e in entries
+               if e[0].upper().split("_")[-1] not in GENERIC]
+    if entries:
+        split0 = [e[0].upper().split("_") for e in entries]
+        lcp = 0
+        min_len0, max_len0 = min(map(len, split0)), max(map(len, split0))
+        for i in range(min_len0):
+            if len({parts[i] for parts in split0}) == 1:
+                lcp = i + 1
+            else:
+                break
+        if max_len0 > lcp:
+            entries = [e for e, parts in zip(entries, split0) if len(parts) > lcp]
+
+    if not entries:
+        return []
+
     # Auto-detect how many leading underscore-segments are the shared
     # product-name marker (vs. the first segment that's actually the
     # color, which differs photo to photo). Always leaves at least one

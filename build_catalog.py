@@ -202,7 +202,7 @@ def download_image_url(url: str, cache_dir: Path):
 
 
 def read_html(source: str) -> str:
-    file_path = Path(source)
+    file_path = resolve_saved_page(source)
     if not file_path.exists():
         raise RuntimeError(
             f"'{source}' is not a file that exists. Save the product page from "
@@ -606,6 +606,19 @@ def extract_ascolour(html: str):
         {"name": c.replace("_", " ").title(), "front": front_by_color.get(c), "back": back_by_color.get(c)}
         for c in colors
     ]
+
+
+def resolve_saved_page(path_str):
+    """Saved vendor pages live in saved_pages/ to keep the repo root
+    readable, but every doc, spreadsheet row and old habit passes a bare
+    filename. Accept either: exact path first, then saved_pages/<name>."""
+    p = Path(path_str)
+    if p.exists():
+        return p
+    alt = Path("saved_pages") / p.name
+    if alt.exists():
+        return alt
+    return p  # let the caller's own error message fire with the original name
 
 
 EXTRACTORS = {
@@ -1027,6 +1040,7 @@ def main():
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
+    source = str(resolve_saved_page(source))
     catalog_path = Path(rest[5]) if len(rest) > 5 else Path("catalog.json")
 
     KNOWN_KINDS = ("tee", "hoodie", "cap", "hat", "tote", "beanie", "sweatshirt", "tank")

@@ -844,7 +844,20 @@ SITE_HINTS = {
 # scrape
 # ---------------------------------------------------------------------------
 
+def _resolve_saved_page(path_str):
+    """Mirror of build_catalog's resolver: bare page names are also looked
+    up inside saved_pages/, where saved vendor pages now live."""
+    p = Path(path_str)
+    if p.exists():
+        return p
+    alt = Path("saved_pages") / p.name
+    if alt.exists():
+        return alt
+    return p
+
+
 def scrape_page(path, site, dump=False):
+    path = str(_resolve_saved_page(path))
     html_text = Path(path).read_text(encoding="utf-8", errors="ignore")
     root = parse_html(html_text)
 

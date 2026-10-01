@@ -17007,6 +17007,86 @@
           ]
         }
       ]
+    },
+    {
+      "id": "next-level-3604",
+      "name": "Unisex Cotton Ringer Tee",
+      "brand": "Next Level",
+      "style": "3604",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Black",
+          "hex": "#ede0d3",
+          "front": "catalog_images/next-level-3604/natural-black_front.jpg",
+          "back": "catalog_images/next-level-3604/natural-black_back.jpg",
+          "hexes": [
+            "#ebe3d9",
+            "#252324"
+          ]
+        },
+        {
+          "name": "Black/ Natural",
+          "hex": "#1a161b",
+          "front": "catalog_images/next-level-3604/black-natural_front.jpg",
+          "back": "catalog_images/next-level-3604/black-natural_back.jpg",
+          "hexes": [
+            "#252324",
+            "#ebe3d9"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#d0ced1",
+          "front": "catalog_images/next-level-3604/heather-grey-black_front.jpg",
+          "back": "catalog_images/next-level-3604/heather-grey-black_back.jpg",
+          "hexes": [
+            "#b5b4ba",
+            "#252324"
+          ]
+        },
+        {
+          "name": "Natural/ Forest Green",
+          "hex": "#f2e9e2",
+          "front": "catalog_images/next-level-3604/natural-forest-green_front.jpg",
+          "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
+          "hexes": [
+            "#ebe3d9",
+            "#244135"
+          ]
+        },
+        {
+          "name": "Natural/ Maroon",
+          "hex": "#ecdfd3",
+          "front": "catalog_images/next-level-3604/natural-maroon_front.jpg",
+          "back": "catalog_images/next-level-3604/natural-maroon_back.jpg",
+          "hexes": [
+            "#ebe3d9",
+            "#5a1f2f"
+          ]
+        },
+        {
+          "name": "Natural/ Midnight Navy",
+          "hex": "#eee2d6",
+          "front": "catalog_images/next-level-3604/natural-midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-3604/natural-midnight-navy_back.jpg",
+          "hexes": [
+            "#ebe3d9",
+            "#23283d"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#eae7ea",
+          "front": "catalog_images/next-level-3604/white-black_front.jpg",
+          "back": "catalog_images/next-level-3604/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#252324"
+          ]
+        }
+      ]
     }
   ]
 }

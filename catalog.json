@@ -17318,6 +17318,94 @@
           "back": "catalog_images/as-colour-5040/orchid-stone_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-4082",
+      "name": "Women's Heavy Faded Tee",
+      "brand": "AS Colour",
+      "style": "4082",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Faded Black",
+          "hex": "#313030",
+          "front": "catalog_images/as-colour-4082/faded-black_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-black_back.jpg"
+        },
+        {
+          "name": "Faded Bone",
+          "hex": "#dad4ce",
+          "front": "catalog_images/as-colour-4082/faded-bone_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-bone_back.jpg"
+        },
+        {
+          "name": "Faded Brown",
+          "hex": "#695e51",
+          "front": "catalog_images/as-colour-4082/faded-brown_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-brown_back.jpg"
+        },
+        {
+          "name": "Faded Chalk",
+          "hex": "#86a6a8",
+          "front": "catalog_images/as-colour-4082/faded-chalk_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-chalk_back.jpg"
+        },
+        {
+          "name": "Faded Coal",
+          "hex": "#363430",
+          "front": "catalog_images/as-colour-4082/faded-coal_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-coal_back.jpg"
+        },
+        {
+          "name": "Faded Ecru",
+          "hex": "#e6e5db",
+          "front": "catalog_images/as-colour-4082/faded-ecru_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-ecru_back.jpg"
+        },
+        {
+          "name": "Faded Grey",
+          "hex": "#7b756e",
+          "front": "catalog_images/as-colour-4082/faded-grey_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-grey_back.jpg"
+        },
+        {
+          "name": "Faded Ink Blue",
+          "hex": "#292c32",
+          "front": "catalog_images/as-colour-4082/faded-ink-blue_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-ink-blue_back.jpg"
+        },
+        {
+          "name": "Faded Olive",
+          "hex": "#7e8868",
+          "front": "catalog_images/as-colour-4082/faded-olive_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-olive_back.jpg"
+        },
+        {
+          "name": "Faded Pink",
+          "hex": "#ab7b71",
+          "front": "catalog_images/as-colour-4082/faded-pink_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-pink_back.jpg"
+        },
+        {
+          "name": "Faded Plum",
+          "hex": "#9a8a8f",
+          "front": "catalog_images/as-colour-4082/faded-plum_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-plum_back.jpg"
+        },
+        {
+          "name": "Faded Powder",
+          "hex": "#abb3c2",
+          "front": "catalog_images/as-colour-4082/faded-powder_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-powder_back.jpg"
+        },
+        {
+          "name": "Faded White",
+          "hex": "#ebebeb",
+          "front": "catalog_images/as-colour-4082/faded-white_front.jpg",
+          "back": "catalog_images/as-colour-4082/faded-white_back.jpg"
+        }
+      ]
     }
   ]
 }

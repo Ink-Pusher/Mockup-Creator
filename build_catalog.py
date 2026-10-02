@@ -515,7 +515,7 @@ def extract_royalapparel(html: str):
     return results
 
 
-def extract_ascolour(html: str):
+def extract_ascolour(html: str, style=None):
     """AS Colour: color name + view are embedded in each image filename
     inside the page's product-schema JSON-LD 'image' array:
     {style}_{PRODUCT_NAME}_{COLOR}__hash.jpg = front,
@@ -538,15 +538,29 @@ def extract_ascolour(html: str):
         )
     data = json.loads(m.group(1))
     images = data.get("image", [])
-    GENERIC = {"MAIN", "FRONT", "TURN", "SIDE", "BACK", "LOOSE"}
+    GENERIC = {"MAIN", "FRONT", "TURN", "SIDE", "BACK", "LOOSE",
+               "EXTRA", "DETAIL"}
 
+    def _is_view_shot(name: str) -> bool:
+        """True when the name's tail is a view/detail word rather than a
+        color -- also catches numbered detail shots like EXTRA_1."""
+        segs = name.upper().split("_")
+        while segs and segs[-1].isdigit():
+            segs.pop()
+        return bool(segs) and segs[-1] in GENERIC
+
+    # AS Colour product pages now embed RELATED products' photos too
+    # (4082's page carries 4083/4084/5082 shots), so keep only filenames
+    # whose leading style number matches the product being added.
     entries = []  # (rest_clean, is_back) per genuine color photo
     for url in images:
         fname = url.rsplit("/", 1)[-1]
-        m2 = re.match(r'\d+_(.+?)__\d+.*\.jpg', fname, re.I)
+        m2 = re.match(r'(\d+)_(.+?)__\d+.*\.jpg', fname, re.I)
         if not m2:
             continue
-        rest = m2.group(1)
+        if style is not None and m2.group(1) != str(style).strip():
+            continue
+        rest = m2.group(2)
         if rest.upper().endswith("_THUMB"):
             continue
         is_back = rest.upper().endswith("_BACK")
@@ -556,16 +570,64 @@ def extract_ascolour(html: str):
     if not entries:
         return []
 
-    # Generic view shots poison the marker detection two ways: a name
-    # tailed with a view word (TEE_FRONT) varies where colors don't, and
-    # the bare generic back shot (...STAPLE_TEE_BACK -> ...STAPLE_TEE
-    # after stripping) is SHORTER than any color entry, capping how deep
-    # the detector may look (that is exactly how 5040's colors ended up
-    # as "Tee Ash Stone" with six phantom "Tee Front/Main/..." colors).
-    # So: drop view-tailed names first, then drop any entry that is a
-    # pure prefix of the longer ones -- what's left is colors only.
-    entries = [e for e in entries
-               if e[0].upper().split("_")[-1] not in GENERIC]
+    # The generic view shots (..._MAIN, ..._FRONT, ...) literally spell
+    # out where the product name ends, so use them as the ORACLE for the
+    # marker instead of inferring it from shared prefixes. Each candidate
+    # (the part before the view word) is scored by how many color photos
+    # it actually prefixes, and the winner takes all -- which also
+    # discards strays from a product RENAME (5082 carries old
+    # FADED_HEAVY_TEE generics next to current HEAVY_FADED_TEE colors,
+    # which made "no shared first segment" a hard error), and keeps a
+    # colorway family prefix like FADED_* out of the marker (every 5082
+    # color is "Faded <something>" -- shared-prefix detection would have
+    # eaten the word FADED and mangled every color name).
+    view_tailed = [e for e in entries if _is_view_shot(e[0])]
+    color_entries = [e for e in entries if not _is_view_shot(e[0])]
+    oracle = None
+    if view_tailed and color_entries:
+        candidates = {}
+        for e in view_tailed:
+            segs = e[0].split("_")
+            while segs and segs[-1].isdigit():
+                segs.pop()
+            prefix = "_".join(segs[:-1])
+            if prefix:
+                candidates.setdefault(prefix.upper(), prefix)
+        scored = []
+        for key, prefix in candidates.items():
+            support = sum(1 for e in color_entries
+                          if e[0].upper().startswith(key + "_"))
+            scored.append((support, prefix))
+        scored.sort(reverse=True)
+        if scored and scored[0][0] > 0:
+            oracle = scored[0][1]
+    if oracle is not None:
+        key = oracle.upper() + "_"
+        kept = [e for e in color_entries if e[0].upper().startswith(key)]
+        dropped = len(color_entries) - len(kept)
+        if dropped:
+            print(f"  (Ignored {dropped} stray photo(s) from an older product"
+                  f" name on this page -- the current one is '{oracle}'.)")
+        front_by_color, back_by_color = {}, {}
+        for rest_clean, is_back, url in kept:
+            cname = rest_clean[len(oracle) + 1:]
+            if not cname or _is_view_shot(cname):
+                continue
+            target = back_by_color if is_back else front_by_color
+            target.setdefault(cname, url)
+        if front_by_color and not back_by_color:
+            print("  This product has no back photos on the page (normal for"
+                  " beanies) -- using each color's front photo for both views.")
+            back_by_color = dict(front_by_color)
+        colors = sorted(set(front_by_color) | set(back_by_color))
+        return [
+            {"name": c.replace("_", " ").title(), "front": front_by_color.get(c), "back": back_by_color.get(c)}
+            for c in colors
+        ]
+
+    # No usable view shots to learn from -- fall back to shared-prefix
+    # detection over the color photos alone (the original approach).
+    entries = color_entries
     if entries:
         split0 = [e[0].upper().split("_") for e in entries]
         lcp = 0
@@ -1094,7 +1156,10 @@ def main():
         colors_raw = EXTRACTORS[site](source)
     else:
         html = read_html(source)
-        colors_raw = EXTRACTORS[site](html)
+        if site == "ascolour":
+            colors_raw = EXTRACTORS[site](html, style=style)
+        else:
+            colors_raw = EXTRACTORS[site](html)
     print(f"Found {len(colors_raw)} color option(s).")
 
     new_colors = []

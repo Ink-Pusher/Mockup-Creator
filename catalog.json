@@ -17723,6 +17723,58 @@
           "back": "catalog_images/bella-canvas-1010/solid-vintage-navy-blend_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-1200",
+      "name": "Women\u2019s Micro Rib 3/4 Raglan Baby Tee",
+      "brand": "Bella/Canvas",
+      "style": "1200",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "AthleticHeather_Black",
+          "hex": "#93969c",
+          "front": "catalog_images/bella-canvas-1200/athleticheather-black_front.png",
+          "back": "catalog_images/bella-canvas-1200/athleticheather-black_back.png"
+        },
+        {
+          "name": "Natural_Black",
+          "hex": "#f3ebd7",
+          "front": "catalog_images/bella-canvas-1200/natural-black_front.png",
+          "back": "catalog_images/bella-canvas-1200/natural-black_back.png"
+        },
+        {
+          "name": "White_Black",
+          "hex": "#eaeef1",
+          "front": "catalog_images/bella-canvas-1200/white-black_front.png",
+          "back": "catalog_images/bella-canvas-1200/white-black_back.png"
+        },
+        {
+          "name": "White_Kelly",
+          "hex": "#eaeef1",
+          "front": "catalog_images/bella-canvas-1200/white-kelly_front.png",
+          "back": "catalog_images/bella-canvas-1200/white-kelly_back.png"
+        },
+        {
+          "name": "White_Navy",
+          "hex": "#eaeef1",
+          "front": "catalog_images/bella-canvas-1200/white-navy_front.png",
+          "back": "catalog_images/bella-canvas-1200/white-navy_back.png"
+        },
+        {
+          "name": "White_Red",
+          "hex": "#eaeef1",
+          "front": "catalog_images/bella-canvas-1200/white-red_front.png",
+          "back": "catalog_images/bella-canvas-1200/white-red_back.png"
+        },
+        {
+          "name": "White_TrueRoyal",
+          "hex": "#eaeef1",
+          "front": "catalog_images/bella-canvas-1200/white-trueroyal_front.png",
+          "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png"
+        }
+      ]
     }
   ]
 }

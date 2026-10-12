@@ -17803,6 +17803,34 @@
           "back": "catalog_images/as-colour-4085/grey-stone_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5085",
+      "name": "Stone Wash Heavy Tee",
+      "brand": "AS Colour",
+      "style": "5085",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Stone",
+          "hex": "#302f33",
+          "front": "catalog_images/as-colour-5085/black-stone_front.jpg",
+          "back": "catalog_images/as-colour-5085/black-stone_back.jpg"
+        },
+        {
+          "name": "Coal Stone",
+          "hex": "#727272",
+          "front": "catalog_images/as-colour-5085/coal-stone_front.jpg",
+          "back": "catalog_images/as-colour-5085/coal-stone_back.jpg"
+        },
+        {
+          "name": "Grey Stone",
+          "hex": "#9d9997",
+          "front": "catalog_images/as-colour-5085/grey-stone_front.jpg",
+          "back": "catalog_images/as-colour-5085/grey-stone_back.jpg"
+        }
+      ]
     }
   ]
 }

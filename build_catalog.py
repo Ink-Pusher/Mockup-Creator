@@ -601,6 +601,12 @@ def extract_ascolour(html: str, style=None):
         scored.sort(reverse=True)
         if scored and scored[0][0] > 0:
             oracle = scored[0][1]
+        # Even when no candidate prefixes any color photo (5085: colors are
+        # bare STYLE_COLOR names), a back photo whose whole name equals a
+        # candidate is the product's generic back shot, not a color --
+        # drop it so it can't masquerade as an orphan color downstream.
+        color_entries = [e for e in color_entries
+                         if not (e[1] and e[0].upper() in candidates)]
     if oracle is not None:
         key = oracle.upper() + "_"
         kept = [e for e in color_entries if e[0].upper().startswith(key)]
@@ -658,13 +664,24 @@ def extract_ascolour(html: str, style=None):
             break
 
     if marker_word_count == 0:
-        raise RuntimeError(
-            "Couldn't figure out AS Colour's product-name marker word from "
-            "the image filenames (expected something like "
-            "STYLE_PRODUCTNAME_COLOR__hash.jpg, shared across every color "
-            "photo). The page may not have all its color swatches loaded -- "
-            "try re-saving after clicking through a couple of colors first."
-        )
+        # Newest AS Colour variation (5085): color photos carry NO product
+        # name at all, just STYLE_COLOR__hash.jpg. If what's left pairs up
+        # cleanly as front/back colors, an empty marker is legitimate --
+        # each full name IS the color. Only pages that don't pair up get
+        # the error.
+        fronts = {rc for rc, is_b, _ in entries if not is_b}
+        backs = {rc for rc, is_b, _ in entries if is_b}
+        if len(fronts) >= 2 and (not backs or backs <= fronts):
+            print("  These color photos carry no product-name marker (just"
+                  " STYLE_COLOR) -- using each full name as the color.")
+        else:
+            raise RuntimeError(
+                "Couldn't figure out AS Colour's product-name marker word from "
+                "the image filenames (expected something like "
+                "STYLE_PRODUCTNAME_COLOR__hash.jpg, shared across every color "
+                "photo). The page may not have all its color swatches loaded -- "
+                "try re-saving after clicking through a couple of colors first."
+            )
 
     front_by_color, back_by_color = {}, {}
     for rest_clean, is_back, url in entries:

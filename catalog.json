@@ -17775,6 +17775,34 @@
           "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png"
         }
       ]
+    },
+    {
+      "id": "as-colour-4085",
+      "name": "Women\u2019s Stone Wash Heavy Tee",
+      "brand": "AS Colour",
+      "style": "4085",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Stone",
+          "hex": "#3c3e41",
+          "front": "catalog_images/as-colour-4085/black-stone_front.jpg",
+          "back": "catalog_images/as-colour-4085/black-stone_back.jpg"
+        },
+        {
+          "name": "Coal Stone",
+          "hex": "#727271",
+          "front": "catalog_images/as-colour-4085/coal-stone_front.jpg",
+          "back": "catalog_images/as-colour-4085/coal-stone_back.jpg"
+        },
+        {
+          "name": "Grey Stone",
+          "hex": "#989491",
+          "front": "catalog_images/as-colour-4085/grey-stone_front.jpg",
+          "back": "catalog_images/as-colour-4085/grey-stone_back.jpg"
+        }
+      ]
     }
   ]
 }

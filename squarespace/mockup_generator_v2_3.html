@@ -1655,26 +1655,83 @@ function backPhotoGuide(box){
   return simpleGuide(box);
 }
 
+// Photo loading is LAZY per product. The old version fired a request for
+// every photo of every color of every product the moment the catalog
+// arrived -- thousands of images stampeding into the browser's six-per-host
+// download queue, so the photos the user actually clicked on sat in line
+// behind hundreds of others ("some load instantly, some never load").
+// Now: the selected product loads immediately, selecting a product jumps
+// it to the front, and everything else trickles in quietly one product at
+// a time in the background, same category first.
+function loadColorPhoto(product, color, key, src, priority){
+  if(!src || color[key]) return Promise.resolve(null);
+  const pendKey = "_" + key + "Pending";
+  if(color[pendKey]) return color[pendKey];
+  const pr = new Promise(resolve=>{
+    const im = new Image();
+    im.crossOrigin = "anonymous"; // required to read pixel data (content detection + export)
+    if("fetchPriority" in im) im.fetchPriority = priority || "auto";
+    im.onload = ()=>{ color[key] = im; delete color[pendKey]; resolve(im); };
+    im.onerror = ()=>{ console.error(`[mockup] failed to load ${key==="backImg"?"back":"front"} photo for ${product.name} / ${color.name}`); delete color[pendKey]; resolve(null); };
+    im.src = src;
+  });
+  color[pendKey] = pr;
+  return pr;
+}
+// All photos the SELECTED product is missing, requested at once at high
+// priority. Safe to call repeatedly (per-photo in-flight guards).
+function ensureProductPhotos(product){
+  if(!product) return Promise.resolve();
+  const jobs = [];
+  product.colors.forEach(color=>{
+    jobs.push(loadColorPhoto(product, color, "frontImg", color.frontSrc, "high")
+      .then(im=>{ if(im && state.productId===product.id) renderAll(); }));
+    jobs.push(loadColorPhoto(product, color, "backImg", color.backSrc, "high")
+      .then(im=>{ if(im && state.productId===product.id) renderAll(); }));
+  });
+  return Promise.all(jobs);
+}
+// If the product the user is LOOKING AT still has photos on the wire,
+// returns a promise for them; the background trickle awaits this between
+// every single image so a product click always effectively jumps the queue.
+function selectedPhotosPending(){
+  const cur = CATALOG.products.find(p=>p.id===state.productId);
+  if(!cur) return null;
+  const pend = [];
+  cur.colors.forEach(c=>{
+    if(c._frontImgPending) pend.push(c._frontImgPending);
+    if(c._backImgPending) pend.push(c._backImgPending);
+  });
+  return pend.length ? Promise.all(pend) : null;
+}
 function preloadRealPhotos(){
-  CATALOG.products.forEach(product=>{
-    product.colors.forEach(color=>{
-      if(color.frontSrc){
-        const fi = new Image();
-        fi.crossOrigin = "anonymous"; // required to read pixel data (content detection + export)
-        fi.onload = ()=>{ color.frontImg = fi; if(state.productId===product.id) renderAll(); };
-        fi.onerror = ()=> console.error(`[mockup] failed to load front photo for ${product.name} / ${color.name}`);
-        fi.src = color.frontSrc;
+  const current = CATALOG.products.find(p=>p.id===state.productId);
+  const currentCat = current ? categoryOf(current) : null;
+  const rest = CATALOG.products.filter(p=>p!==current && !p.pending);
+  // Background order: rest of the user's current category first, then
+  // "popular" products, then everything else.
+  rest.sort((a,b)=>{
+    const ac = (categoryOf(a)===currentCat ? 0 : 1) + (a.popular ? 0 : 2);
+    const bc = (categoryOf(b)===currentCat ? 0 : 1) + (b.popular ? 0 : 2);
+    return ac - bc;
+  });
+  ensureProductPhotos(current).then(async ()=>{
+    for(const product of rest){
+      if(product._photosRequested) continue;
+      product._photosRequested = true;
+      for(const color of product.colors){
+        const wait1 = selectedPhotosPending(); if(wait1) await wait1;
+        await loadColorPhoto(product, color, "frontImg", color.frontSrc, "low")
+          .then(im=>{ if(im && state.productId===product.id) renderAll(); });
+        const wait2 = selectedPhotosPending(); if(wait2) await wait2;
+        await loadColorPhoto(product, color, "backImg", color.backSrc, "low")
+          .then(im=>{ if(im && state.productId===product.id) renderAll(); });
       }
-      if(color.backSrc){
-        const bi = new Image();
-        bi.crossOrigin = "anonymous";
-        bi.onload = ()=>{ color.backImg = bi; if(state.productId===product.id) renderAll(); };
-        bi.onerror = ()=> console.error(`[mockup] failed to load back photo for ${product.name} / ${color.name}`);
-        bi.src = color.backSrc;
-      }
-    });
+    }
+    console.log("[mockup] background photo preload complete");
   });
 }
+
 
 function setCatalogStatus(mode, message){
   const el = document.getElementById("catalogStatus");
@@ -2553,6 +2610,7 @@ function selectProduct(id){
   const oldGuides = captureCurrentGuides();
   state.productId = id;
   state.colorIndex = 0;
+  ensureProductPhotos(CATALOG.products.find(p=>p.id===id));
   updateBgButtons();
   updateDistressButton();
   updateEraserButton();
@@ -4928,6 +4986,7 @@ function loadProject(file){
       if(product){
         state.productId = payload.productId;
         state.colorIndex = Number.isInteger(payload.colorIndex) ? payload.colorIndex : 0;
+        ensureProductPhotos(product);
         const cat = categoryOf ? categoryOf(product) : null; // categoryOf may not exist in older builds
         if(typeof cat === "string" && cat) state.activeCategory = cat;
       } else {
@@ -5778,7 +5837,7 @@ initTheme();
    of guessable -- Squarespace caches Code Blocks and browsers cache
    pages, and a stale paste is indistinguishable from a real bug without
    this. */
-const STUDIO_BUILD = "2026-08-24.2";
+const STUDIO_BUILD = "2026-10-16.1";
 document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */

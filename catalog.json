@@ -17831,6 +17831,28 @@
           "back": "catalog_images/as-colour-5085/grey-stone_back.jpg"
         }
       ]
+    },
+    {
+      "id": "oad-108r",
+      "name": "Jumbo Recycled Tote Bag",
+      "brand": "OAD",
+      "style": "108R",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Recycled Black",
+          "hex": "#484648",
+          "front": "catalog_images/oad-108r/recycled-black_front.jpg",
+          "back": "catalog_images/oad-108r/recycled-black_back.jpg"
+        },
+        {
+          "name": "Recycled Natural",
+          "hex": "#ded8c9",
+          "front": "catalog_images/oad-108r/recycled-natural_front.jpg",
+          "back": "catalog_images/oad-108r/recycled-natural_back.jpg"
+        }
+      ]
     }
   ]
 }

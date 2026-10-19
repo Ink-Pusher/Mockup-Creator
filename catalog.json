@@ -17833,9 +17833,28 @@
       ]
     },
     {
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+      "id": "oad-108r",
+      "name": "Jumbo Recycled Tote Bag",
+      "brand": "OAD",
+      "style": "108R",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Recycled Black",
+          "hex": "#484648",
+          "front": "catalog_images/oad-108r/recycled-black_front.jpg",
+          "back": "catalog_images/oad-108r/recycled-black_back.jpg"
+        },
+        {
+          "name": "Recycled Natural",
+          "hex": "#ded8c9",
+          "front": "catalog_images/oad-108r/recycled-natural_front.jpg",
+          "back": "catalog_images/oad-108r/recycled-natural_back.jpg"
+        }
+      ]
+    },
+    {
       "id": "bella-canvas-3200",
       "name": "Unisex Three-Quarter Sleeve Baseball Tee",
       "brand": "Bella/Canvas",
@@ -18048,30 +18067,6 @@
             "#ecedef",
             "#1b51a5"
           ]
-=======
->>>>>>> Stashed changes
-      "id": "oad-108r",
-      "name": "Jumbo Recycled Tote Bag",
-      "brand": "OAD",
-      "style": "108R",
-      "kind": "tote",
-      "popular": false,
-      "colors": [
-        {
-          "name": "Recycled Black",
-          "hex": "#484648",
-          "front": "catalog_images/oad-108r/recycled-black_front.jpg",
-          "back": "catalog_images/oad-108r/recycled-black_back.jpg"
-        },
-        {
-          "name": "Recycled Natural",
-          "hex": "#ded8c9",
-          "front": "catalog_images/oad-108r/recycled-natural_front.jpg",
-          "back": "catalog_images/oad-108r/recycled-natural_back.jpg"
-<<<<<<< Updated upstream
-=======
->>>>>>> edc4ffd9071287483cf93f423bf0bba29a0092ef
->>>>>>> Stashed changes
         }
       ]
     }

@@ -17833,6 +17833,223 @@
       ]
     },
     {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+      "id": "bella-canvas-3200",
+      "name": "Unisex Three-Quarter Sleeve Baseball Tee",
+      "brand": "Bella/Canvas",
+      "style": "3200",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Heather/ Black",
+          "hex": "#29242a",
+          "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
+          "hexes": [
+            "#2b292e",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Black Marble/ Black",
+          "hex": "#383433",
+          "front": "catalog_images/bella-canvas-3200/black-marble-black_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/black-marble-black_back.jpg"
+        },
+        {
+          "name": "Black/ Deep Heather",
+          "hex": "#1f1c22",
+          "front": "catalog_images/bella-canvas-3200/black-deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/black-deep-heather_back.jpg",
+          "hexes": [
+            "#242224",
+            "#717671"
+          ]
+        },
+        {
+          "name": "Black/ Red",
+          "hex": "#1a181c",
+          "front": "catalog_images/bella-canvas-3200/black-red_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/black-red_back.jpg",
+          "hexes": [
+            "#242224",
+            "#c21330"
+          ]
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#29242a",
+          "front": "catalog_images/bella-canvas-3200/black-white_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/black-white_back.jpg",
+          "hexes": [
+            "#242224",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Deep Heather/ Black",
+          "hex": "#918d8a",
+          "front": "catalog_images/bella-canvas-3200/deep-heather-black_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/deep-heather-black_back.jpg",
+          "hexes": [
+            "#717671",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Grey/ Charcoal Black Triblend",
+          "hex": "#7f7f7d",
+          "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
+          "hexes": [
+            "#8c8a8c",
+            "#312e30"
+          ]
+        },
+        {
+          "name": "Grey/ Maroon Triblend",
+          "hex": "#8c8e8c",
+          "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
+          "hexes": [
+            "#8c8a8c",
+            "#5b1f30"
+          ]
+        },
+        {
+          "name": "Grey/ Navy Triblend",
+          "hex": "#898782",
+          "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
+          "hexes": [
+            "#8c8a8c",
+            "#272e3f"
+          ]
+        },
+        {
+          "name": "Grey/ Red Triblend",
+          "hex": "#85857f",
+          "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
+          "hexes": [
+            "#8c8a8c",
+            "#c21330"
+          ]
+        },
+        {
+          "name": "Grey/ True Royal Triblend",
+          "hex": "#868282",
+          "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
+          "hexes": [
+            "#8c8a8c",
+            "#1b51a5"
+          ]
+        },
+        {
+          "name": "White Fleck/ Charcoal Triblend",
+          "hex": "#e2e1df",
+          "front": "catalog_images/bella-canvas-3200/white-fleck-charcoal-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-fleck-charcoal-triblend_back.jpg",
+          "hexes": [
+            "#dddce4",
+            "#504d4e"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#f4eff4",
+          "front": "catalog_images/bella-canvas-3200/white-black_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#242224"
+          ]
+        },
+        {
+          "name": "White/ Deep Heather",
+          "hex": "#e7e6eb",
+          "front": "catalog_images/bella-canvas-3200/white-deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-deep-heather_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#717671"
+          ]
+        },
+        {
+          "name": "White/ Denim",
+          "hex": "#e6e6e8",
+          "front": "catalog_images/bella-canvas-3200/white-denim_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-denim_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#7690a0"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#dfdbda",
+          "front": "catalog_images/bella-canvas-3200/white-kelly_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-kelly_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#02865e"
+          ]
+        },
+        {
+          "name": "White/ Maroon",
+          "hex": "#e9eaef",
+          "front": "catalog_images/bella-canvas-3200/white-maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-maroon_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#5b1f30"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#eeeff1",
+          "front": "catalog_images/bella-canvas-3200/white-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-navy_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#272e3f"
+          ]
+        },
+        {
+          "name": "White/ Neon Yellow",
+          "hex": "#e4dee4",
+          "front": "catalog_images/bella-canvas-3200/white-neon-yellow_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-neon-yellow_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#d5e959"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#dfe3ef",
+          "front": "catalog_images/bella-canvas-3200/white-red_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#c21330"
+          ]
+        },
+        {
+          "name": "White/ True Royal",
+          "hex": "#ebe7e8",
+          "front": "catalog_images/bella-canvas-3200/white-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-3200/white-true-royal_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#1b51a5"
+          ]
+=======
+>>>>>>> Stashed changes
       "id": "oad-108r",
       "name": "Jumbo Recycled Tote Bag",
       "brand": "OAD",
@@ -17851,6 +18068,10 @@
           "hex": "#ded8c9",
           "front": "catalog_images/oad-108r/recycled-natural_front.jpg",
           "back": "catalog_images/oad-108r/recycled-natural_back.jpg"
+<<<<<<< Updated upstream
+=======
+>>>>>>> edc4ffd9071287483cf93f423bf0bba29a0092ef
+>>>>>>> Stashed changes
         }
       ]
     }

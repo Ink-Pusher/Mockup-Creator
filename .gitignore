@@ -1,5 +1,10 @@
+# Working files the scripts produce locally
 __pycache__/
 downloaded_images/
 *_files/
-downloaded_images/
+
+# OS decoration/metadata files -- created by Finder color tags on Mac and by
+# folder icon colors (desktop.ini) on Windows. Never belong in the repo.
 .DS_Store
+desktop.ini
+Thumbs.db

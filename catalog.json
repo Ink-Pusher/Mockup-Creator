@@ -1768,7 +1768,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#504d4e",
             "#232123"
           ]
@@ -1779,7 +1779,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#504d4e",
             "#272e3f"
           ]
@@ -2475,7 +2475,7 @@
           "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#272e3f"
           ]
         },
@@ -7726,7 +7726,7 @@
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
             "#5a1f30",
-            "#8c8a8c"
+            "#8b8988"
           ]
         },
         {
@@ -11030,7 +11030,7 @@
           "front": "catalog_images/bella-canvas-3480/charcoal-black-triblend-solid-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3480/charcoal-black-triblend-solid-black-triblend_back.jpg",
           "hexes": [
-            "#312e30",
+            "#343337",
             "#232123"
           ]
         },
@@ -17885,7 +17885,7 @@
           "back": "catalog_images/bella-canvas-3200/black-deep-heather_back.jpg",
           "hexes": [
             "#232123",
-            "#717671"
+            "#737674"
           ]
         },
         {
@@ -17914,7 +17914,7 @@
           "front": "catalog_images/bella-canvas-3200/deep-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/deep-heather-black_back.jpg",
           "hexes": [
-            "#717671",
+            "#737674",
             "#232123"
           ]
         },
@@ -17924,8 +17924,8 @@
           "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
-            "#312e30"
+            "#8b8988",
+            "#343337"
           ]
         },
         {
@@ -17934,7 +17934,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#5a1f30"
           ]
         },
@@ -17944,7 +17944,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#272e3f"
           ]
         },
@@ -17954,7 +17954,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#c21330"
           ]
         },
@@ -17964,7 +17964,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8b8988",
             "#1b51a5"
           ]
         },
@@ -17995,7 +17995,7 @@
           "back": "catalog_images/bella-canvas-3200/white-deep-heather_back.jpg",
           "hexes": [
             "#ecedf0",
-            "#717671"
+            "#737674"
           ]
         },
         {
@@ -18305,6 +18305,64 @@
           "hex": "#605f5b",
           "front": "catalog_images/district-dt672/washedcoal_front.png",
           "back": "catalog_images/district-dt672/washedcoal_back.png"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-3512",
+      "name": "Unisex Jersey Hooded Long Sleeve Tee",
+      "brand": "Bella/Canvas",
+      "style": "3512",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e9e4e9",
+          "front": "catalog_images/bella-canvas-3512/white_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2b2b2d",
+          "front": "catalog_images/bella-canvas-3512/black_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/black_back.jpg"
+        },
+        {
+          "name": "Charcoal Black Triblend",
+          "hex": "#343338",
+          "front": "catalog_images/bella-canvas-3512/charcoal-black-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/charcoal-black-triblend_back.jpg"
+        },
+        {
+          "name": "Deep Heather",
+          "hex": "#7b7778",
+          "front": "catalog_images/bella-canvas-3512/deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/deep-heather_back.jpg"
+        },
+        {
+          "name": "Grey Triblend",
+          "hex": "#8a8787",
+          "front": "catalog_images/bella-canvas-3512/grey-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/grey-triblend_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#354555",
+          "front": "catalog_images/bella-canvas-3512/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#d94a5b",
+          "front": "catalog_images/bella-canvas-3512/heather-red_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather True Royal",
+          "hex": "#4f70b7",
+          "front": "catalog_images/bella-canvas-3512/heather-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-3512/heather-true-royal_back.jpg"
         }
       ]
     }

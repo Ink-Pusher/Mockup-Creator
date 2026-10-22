@@ -11020,7 +11020,7 @@
           "front": "catalog_images/bella-canvas-3480/athletic-heather-navy_front.jpg",
           "back": "catalog_images/bella-canvas-3480/athletic-heather-navy_back.jpg",
           "hexes": [
-            "#b5b6b8",
+            "#b9b8b8",
             "#262d3f"
           ]
         },
@@ -11046,7 +11046,7 @@
           "front": "catalog_images/bella-canvas-3480/dark-grey-black_front.jpg",
           "back": "catalog_images/bella-canvas-3480/dark-grey-black_back.jpg",
           "hexes": [
-            "#373639",
+            "#38363a",
             "#232123"
           ]
         },
@@ -17885,7 +17885,7 @@
           "back": "catalog_images/bella-canvas-3200/black-deep-heather_back.jpg",
           "hexes": [
             "#232123",
-            "#737674"
+            "#767778"
           ]
         },
         {
@@ -17914,7 +17914,7 @@
           "front": "catalog_images/bella-canvas-3200/deep-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/deep-heather-black_back.jpg",
           "hexes": [
-            "#737674",
+            "#767778",
             "#232123"
           ]
         },
@@ -17995,7 +17995,7 @@
           "back": "catalog_images/bella-canvas-3200/white-deep-heather_back.jpg",
           "hexes": [
             "#ecedf0",
-            "#737674"
+            "#767778"
           ]
         },
         {
@@ -18567,6 +18567,112 @@
           "hex": "#527162",
           "front": "catalog_images/bella-canvas-4851gd/washed-pine_front.jpg",
           "back": "catalog_images/bella-canvas-4851gd/washed-pine_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-3729",
+      "name": "Unisex Sponge Fleece Drop Shoulder Hoodie Sweatshirt",
+      "brand": "Bella/Canvas",
+      "style": "3729",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#eeeff3",
+          "front": "catalog_images/bella-canvas-3729/white_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#313035",
+          "front": "catalog_images/bella-canvas-3729/black_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/black_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#c5c3cb",
+          "front": "catalog_images/bella-canvas-3729/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Brick",
+          "hex": "#a6342b",
+          "front": "catalog_images/bella-canvas-3729/brick_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/brick_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#3c373e",
+          "front": "catalog_images/bella-canvas-3729/dark-grey_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/dark-grey_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#535053",
+          "front": "catalog_images/bella-canvas-3729/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Dark Lavender",
+          "hex": "#b5a9d2",
+          "front": "catalog_images/bella-canvas-3729/dark-lavender_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/dark-lavender_back.jpg"
+        },
+        {
+          "name": "Deep Heather",
+          "hex": "#7e817d",
+          "front": "catalog_images/bella-canvas-3729/deep-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/deep-heather_back.jpg"
+        },
+        {
+          "name": "Heather Blue Lagoon",
+          "hex": "#91adb0",
+          "front": "catalog_images/bella-canvas-3729/heather-blue-lagoon_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/heather-blue-lagoon_back.jpg"
+        },
+        {
+          "name": "Heather Stone",
+          "hex": "#bbb1ab",
+          "front": "catalog_images/bella-canvas-3729/heather-stone_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/heather-stone_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#cd8586",
+          "front": "catalog_images/bella-canvas-3729/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/mauve_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#525445",
+          "front": "catalog_images/bella-canvas-3729/military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/military-green_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#3d435c",
+          "front": "catalog_images/bella-canvas-3729/navy_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/navy_back.jpg"
+        },
+        {
+          "name": "Peach",
+          "hex": "#f1c5b9",
+          "front": "catalog_images/bella-canvas-3729/peach_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/peach_back.jpg"
+        },
+        {
+          "name": "Storm",
+          "hex": "#afa7b2",
+          "front": "catalog_images/bella-canvas-3729/storm_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/storm_back.jpg"
+        },
+        {
+          "name": "Tan",
+          "hex": "#bca28b",
+          "front": "catalog_images/bella-canvas-3729/tan_front.jpg",
+          "back": "catalog_images/bella-canvas-3729/tan_back.jpg"
         }
       ]
     }

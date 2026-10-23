@@ -717,7 +717,12 @@ async function loadEverything(){
 
 function currentVisible(p){
   const o = overridesById.get(p.id);
-  return o && typeof o.visible === "boolean" ? o.visible : p.popular;
+  // No override row = visible. This MUST match apparel_catalog.html's
+  // default (`!o || o.visible !== false`). It used to fall back to
+  // catalog.json's "popular" flag, which build_catalog.py sets to false
+  // on every new add -- so the admin showed fresh products as "Hidden"
+  // while the live site correctly showed them.
+  return o && typeof o.visible === "boolean" ? o.visible : true;
 }
 function currentSortOrder(p){
   const o = overridesById.get(p.id);
@@ -933,10 +938,10 @@ async function reorderWithinCategory(categoryId, draggedId, targetId){
     const merged = {
       ...existing,
       // Preserves the same fallback currentVisible() uses elsewhere --
-      // a product with no override row yet defaults to catalog.json's
-      // own "popular" flag, not just blanket-true, so reordering never
-      // silently makes a not-featured product visible.
-      visible: existing.visible !== undefined ? existing.visible : product.popular,
+      // no override row = visible, matching the live catalog page. (The
+      // old fallback here wrote visible:false for any new product swept
+      // up in a reorder, silently HIDING it from the live site.)
+      visible: existing.visible !== undefined ? existing.visible : true,
       sort_order: i,
       product_id: id,
       updated_at: new Date().toISOString(),

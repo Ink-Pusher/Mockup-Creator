@@ -18793,6 +18793,46 @@
           "back": "catalog_images/hanes-f170/smoke-grey_back.jpg"
         }
       ]
+    },
+    {
+      "id": "hanes-p180",
+      "name": "Unisex EcoSmart\u00ae Full-Zip Hooded Sweatshirt",
+      "brand": "Hanes",
+      "style": "P180",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#262427",
+          "front": "catalog_images/hanes-p180/black_front.jpg",
+          "back": "catalog_images/hanes-p180/black_back.jpg"
+        },
+        {
+          "name": "Deep Red",
+          "hex": "#ad0127",
+          "front": "catalog_images/hanes-p180/deep-red_front.jpg",
+          "back": "catalog_images/hanes-p180/deep-red_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#2a328d",
+          "front": "catalog_images/hanes-p180/deep-royal_front.jpg",
+          "back": "catalog_images/hanes-p180/deep-royal_back.jpg"
+        },
+        {
+          "name": "Light Steel",
+          "hex": "#b9b8bd",
+          "front": "catalog_images/hanes-p180/light-steel_front.jpg",
+          "back": "catalog_images/hanes-p180/light-steel_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2f3447",
+          "front": "catalog_images/hanes-p180/navy_front.jpg",
+          "back": "catalog_images/hanes-p180/navy_back.jpg"
+        }
+      ]
     }
   ]
 }

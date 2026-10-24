@@ -19133,6 +19133,23 @@
           "back": "catalog_images/hanes-gdh400/summer-squash-yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "independent-trading-co-prm180lst",
+      "name": "Unisex Premium Long Sleeve T-Shirt",
+      "brand": "Independent Trading Co",
+      "style": "PRM180LST",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Realtree APX Camo",
+          "hex": "#625a51",
+          "front": "catalog_images/independent-trading-co-prm180lst/realtree-apx-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm180lst/realtree-apx-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm180lst/realtree-apx-camo_swatch.jpg"
+        }
+      ]
     }
   ]
 }

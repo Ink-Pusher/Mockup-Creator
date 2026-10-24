@@ -18879,6 +18879,106 @@
           "back": "catalog_images/hanes-f280/navy_back.jpg"
         }
       ]
+    },
+    {
+      "id": "hanes-gdh450",
+      "name": "Unisex Garment-Dyed Hooded Sweatshirt",
+      "brand": "Hanes",
+      "style": "GDH450",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#efefef",
+          "front": "catalog_images/hanes-gdh450/white_front.jpg",
+          "back": "catalog_images/hanes-gdh450/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2c2a2c",
+          "front": "catalog_images/hanes-gdh450/black_front.jpg",
+          "back": "catalog_images/hanes-gdh450/black_back.jpg"
+        },
+        {
+          "name": "Anchor Slate",
+          "hex": "#47455b",
+          "front": "catalog_images/hanes-gdh450/anchor-slate_front.jpg",
+          "back": "catalog_images/hanes-gdh450/anchor-slate_back.jpg"
+        },
+        {
+          "name": "Concrete Grey",
+          "hex": "#8d8683",
+          "front": "catalog_images/hanes-gdh450/concrete-grey_front.jpg",
+          "back": "catalog_images/hanes-gdh450/concrete-grey_back.jpg"
+        },
+        {
+          "name": "Crimson Fall",
+          "hex": "#c73d56",
+          "front": "catalog_images/hanes-gdh450/crimson-fall_front.jpg",
+          "back": "catalog_images/hanes-gdh450/crimson-fall_back.jpg"
+        },
+        {
+          "name": "Cypress Green",
+          "hex": "#6a867a",
+          "front": "catalog_images/hanes-gdh450/cypress-green_front.jpg",
+          "back": "catalog_images/hanes-gdh450/cypress-green_back.jpg"
+        },
+        {
+          "name": "Deep Forte Blue",
+          "hex": "#6675c5",
+          "front": "catalog_images/hanes-gdh450/deep-forte-blue_front.jpg",
+          "back": "catalog_images/hanes-gdh450/deep-forte-blue_back.jpg"
+        },
+        {
+          "name": "Faded Fatigue",
+          "hex": "#858375",
+          "front": "catalog_images/hanes-gdh450/faded-fatigue_front.jpg",
+          "back": "catalog_images/hanes-gdh450/faded-fatigue_back.jpg"
+        },
+        {
+          "name": "Field Green",
+          "hex": "#415744",
+          "front": "catalog_images/hanes-gdh450/field-green_front.jpg",
+          "back": "catalog_images/hanes-gdh450/field-green_back.jpg"
+        },
+        {
+          "name": "Grape Soda",
+          "hex": "#5a4b71",
+          "front": "catalog_images/hanes-gdh450/grape-soda_front.jpg",
+          "back": "catalog_images/hanes-gdh450/grape-soda_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#7ed9d2",
+          "front": "catalog_images/hanes-gdh450/mint_front.jpg",
+          "back": "catalog_images/hanes-gdh450/mint_back.jpg"
+        },
+        {
+          "name": "New Railroad Grey",
+          "hex": "#4e4a4b",
+          "front": "catalog_images/hanes-gdh450/new-railroad-grey_front.jpg",
+          "back": "catalog_images/hanes-gdh450/new-railroad-grey_back.jpg"
+        },
+        {
+          "name": "Parchment",
+          "hex": "#e6e0d2",
+          "front": "catalog_images/hanes-gdh450/parchment_front.jpg",
+          "back": "catalog_images/hanes-gdh450/parchment_back.jpg"
+        },
+        {
+          "name": "Saltwater",
+          "hex": "#6b7696",
+          "front": "catalog_images/hanes-gdh450/saltwater_front.jpg",
+          "back": "catalog_images/hanes-gdh450/saltwater_back.jpg"
+        },
+        {
+          "name": "Soothing Blue",
+          "hex": "#d4e0ec",
+          "front": "catalog_images/hanes-gdh450/soothing-blue_front.jpg",
+          "back": "catalog_images/hanes-gdh450/soothing-blue_back.jpg"
+        }
+      ]
     }
   ]
 }

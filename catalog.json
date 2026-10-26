@@ -19150,6 +19150,46 @@
           "swatch": "catalog_images/independent-trading-co-prm180lst/realtree-apx-camo_swatch.jpg"
         }
       ]
+    },
+    {
+      "id": "royal-apparel-37050",
+      "name": "Unisex eco Triblend Fleece Full Zip Hoodie",
+      "brand": "Royal Apparel",
+      "style": "37050",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Eco Tri Grey",
+          "hex": "#e7e6f0",
+          "front": "catalog_images/royal-apparel-37050/eco-tri-grey_front.jpg",
+          "back": "catalog_images/royal-apparel-37050/eco-tri-grey_back.jpg"
+        },
+        {
+          "name": "Eco Tri Kelly",
+          "hex": "#b2d3bb",
+          "front": "catalog_images/royal-apparel-37050/eco-tri-kelly_front.jpg",
+          "back": "catalog_images/royal-apparel-37050/eco-tri-kelly_back.jpg"
+        },
+        {
+          "name": "Eco Tri Purple",
+          "hex": "#cb9dbc",
+          "front": "catalog_images/royal-apparel-37050/eco-tri-purple_front.jpg",
+          "back": "catalog_images/royal-apparel-37050/eco-tri-purple_back.jpg"
+        },
+        {
+          "name": "Eco Tri Royal",
+          "hex": "#96a2cd",
+          "front": "catalog_images/royal-apparel-37050/eco-tri-royal_front.jpg",
+          "back": "catalog_images/royal-apparel-37050/eco-tri-royal_back.jpg"
+        },
+        {
+          "name": "Eco Tri True Red",
+          "hex": "#eb8082",
+          "front": "catalog_images/royal-apparel-37050/eco-tri-true-red_front.jpg",
+          "back": "catalog_images/royal-apparel-37050/eco-tri-true-red_back.jpg"
+        }
+      ]
     }
   ]
 }

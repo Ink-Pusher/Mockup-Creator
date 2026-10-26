@@ -492,7 +492,14 @@ def extract_royalapparel(html: str):
             continue
         by_color.setdefault(code, {})
         existing = by_color[code].get(desc)
-        if existing is None or av["sortOrder"] < existing[1]:
+        # Royal Apparel mislabels the SIDE shot as a second "Back" (seen on
+        # 25055: altDesc "Back" at sortOrder 2 is a 3/4 side pose, the true
+        # back is the "Back" at sortOrder 3). For back views keep the LAST
+        # duplicate; for fronts keep the first as before.
+        want_last = desc in ("Back", "Back2", "NumBack", "NumBack2")
+        better = (existing is None
+                  or (av["sortOrder"] > existing[1] if want_last else av["sortOrder"] < existing[1]))
+        if better:
             by_color[code][desc] = (av.get("imageLg") or av.get("imageZm"), av["sortOrder"])
 
     results = []

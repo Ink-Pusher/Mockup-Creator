@@ -19190,6 +19190,112 @@
           "back": "catalog_images/royal-apparel-37050/eco-tri-true-red_back.jpg"
         }
       ]
+    },
+    {
+      "id": "royal-apparel-25050",
+      "name": "Unisex Triblend Fleece Zip Hoodie",
+      "brand": "Royal Apparel",
+      "style": "25050",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Tri Army",
+          "hex": "#8c8e82",
+          "front": "catalog_images/royal-apparel-25050/tri-army_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-army_back.jpg"
+        },
+        {
+          "name": "Tri Ash",
+          "hex": "#e8e0d2",
+          "front": "catalog_images/royal-apparel-25050/tri-ash_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-ash_back.jpg"
+        },
+        {
+          "name": "Tri Black",
+          "hex": "#464549",
+          "front": "catalog_images/royal-apparel-25050/tri-black_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-black_back.jpg"
+        },
+        {
+          "name": "Tri Burgundy",
+          "hex": "#8b515d",
+          "front": "catalog_images/royal-apparel-25050/tri-burgundy_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-burgundy_back.jpg"
+        },
+        {
+          "name": "Tri Deep Royal",
+          "hex": "#3d6fab",
+          "front": "catalog_images/royal-apparel-25050/tri-deep-royal_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-deep-royal_back.jpg"
+        },
+        {
+          "name": "Tri Denim Navy",
+          "hex": "#626a7e",
+          "front": "catalog_images/royal-apparel-25050/tri-denim-navy_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-denim-navy_back.jpg"
+        },
+        {
+          "name": "Tri Desert Rose",
+          "hex": "#eea095",
+          "front": "catalog_images/royal-apparel-25050/tri-desert-rose_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-desert-rose_back.jpg"
+        },
+        {
+          "name": "Tri Kelly",
+          "hex": "#e9ded1",
+          "front": "catalog_images/royal-apparel-25050/tri-kelly_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-kelly_back.jpg"
+        },
+        {
+          "name": "Tri Oatmeal",
+          "hex": "#dfd8cf",
+          "front": "catalog_images/royal-apparel-25050/tri-oatmeal_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-oatmeal_back.jpg"
+        },
+        {
+          "name": "Tri Onyx",
+          "hex": "#64656a",
+          "front": "catalog_images/royal-apparel-25050/tri-onyx_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-onyx_back.jpg"
+        },
+        {
+          "name": "Tri Pine",
+          "hex": "#86a6a7",
+          "front": "catalog_images/royal-apparel-25050/tri-pine_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-pine_back.jpg"
+        },
+        {
+          "name": "Tri Pool",
+          "hex": "#a0d0f0",
+          "front": "catalog_images/royal-apparel-25050/tri-pool_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-pool_back.jpg"
+        },
+        {
+          "name": "Tri Purple",
+          "hex": "#c6a0be",
+          "front": "catalog_images/royal-apparel-25050/tri-purple_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-purple_back.jpg"
+        },
+        {
+          "name": "Tri Red",
+          "hex": "#e07c7d",
+          "front": "catalog_images/royal-apparel-25050/tri-red_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-red_back.jpg"
+        },
+        {
+          "name": "Tri True Navy",
+          "hex": "#75768b",
+          "front": "catalog_images/royal-apparel-25050/tri-true-navy_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-true-navy_back.jpg"
+        },
+        {
+          "name": "Tri Vintage Grey",
+          "hex": "#8a7f76",
+          "front": "catalog_images/royal-apparel-25050/tri-vintage-grey_front.jpg",
+          "back": "catalog_images/royal-apparel-25050/tri-vintage-grey_back.jpg"
+        }
+      ]
     }
   ]
 }

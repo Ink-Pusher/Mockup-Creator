@@ -18946,14 +18946,22 @@
       ]
     },
     {
+<<<<<<< Updated upstream
       "id": "royal-apparel-5051",
       "name": "Unisex Cotton Tee",
       "brand": "Royal Apparel",
       "style": "5051",
+=======
+      "id": "bella-canvas-1201",
+      "name": "Women's Micro Rib Raglan Baby Tee",
+      "brand": "Bella/Canvas",
+      "style": "1201",
+>>>>>>> Stashed changes
       "kind": "tee",
       "popular": false,
       "colors": [
         {
+<<<<<<< Updated upstream
           "name": "Asphalt",
           "hex": "#626369",
           "front": "catalog_images/royal-apparel-5051/asphalt_front.jpg",
@@ -19488,6 +19496,76 @@
           "hex": "#aaa197",
           "front": "catalog_images/royal-apparel-25055/tri-vintage-grey_front.jpg",
           "back": "catalog_images/royal-apparel-25055/tri-vintage-grey_back.jpg"
+=======
+          "name": "Athletic Heather/ Black",
+          "hex": "#b1b1b9",
+          "front": "catalog_images/bella-canvas-1201/athletic-heather-black_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/athletic-heather-black_back.jpg",
+          "hexes": [
+            "#b9b8b8",
+            "#242224"
+          ]
+        },
+        {
+          "name": "White/ Baby Blue",
+          "hex": "#e7e8ee",
+          "front": "catalog_images/bella-canvas-1201/white-baby-blue_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/white-baby-blue_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#b9cbdc"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#e7e8ee",
+          "front": "catalog_images/bella-canvas-1201/white-black_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/white-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#242224"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#eef0f4",
+          "front": "catalog_images/bella-canvas-1201/white-kelly_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/white-kelly_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#02865e"
+          ]
+        },
+        {
+          "name": "White/ Pink",
+          "hex": "#f5f4f9",
+          "front": "catalog_images/bella-canvas-1201/white-pink_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/white-pink_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#f3ccd3"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#edf0f4",
+          "front": "catalog_images/bella-canvas-1201/white-red_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/white-red_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#c21330"
+          ]
+        },
+        {
+          "name": "White/ True Royal",
+          "hex": "#f4f5f9",
+          "front": "catalog_images/bella-canvas-1201/white-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-1201/white-true-royal_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#1b51a5"
+          ]
+>>>>>>> Stashed changes
         }
       ]
     }

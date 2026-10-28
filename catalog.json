@@ -9216,13 +9216,13 @@
       "popular": false,
       "colors": [
         {
-          "name": "HeatheredCharcoal",
+          "name": "Heathered Charcoal",
           "hex": "#464b4b",
           "front": "catalog_images/district-dt1103/heatheredcharcoal_front.png",
           "back": "catalog_images/district-dt1103/heatheredcharcoal_back.png"
         },
         {
-          "name": "HeatheredSteel",
+          "name": "Heathered Steel",
           "hex": "#8f918f",
           "front": "catalog_images/district-dt1103/heatheredsteel_front.png",
           "back": "catalog_images/district-dt1103/heatheredsteel_back.png"
@@ -9234,13 +9234,13 @@
           "back": "catalog_images/district-dt1103/jetblack_back.png"
         },
         {
-          "name": "MaritimeBlue",
+          "name": "Maritime Blue",
           "hex": "#3d6486",
           "front": "catalog_images/district-dt1103/maritimeblue_front.png",
           "back": "catalog_images/district-dt1103/maritimeblue_back.png"
         },
         {
-          "name": "MilitaryGreen",
+          "name": "Military Green",
           "hex": "#5f624a",
           "front": "catalog_images/district-dt1103/militarygreen_front.png",
           "back": "catalog_images/district-dt1103/militarygreen_back.png"
@@ -9298,50 +9298,50 @@
           "back": "catalog_images/district-dt1101/deep-royal_back.png"
         },
         {
-          "name": "Deep SteelBlue",
+          "name": "Deep Steel Blue",
           "hex": "#364a50",
           "front": "catalog_images/district-dt1101/deep-steelblue_front.png",
           "back": "catalog_images/district-dt1101/deep-steelblue_back.png"
         },
         {
-          "name": "Heathered ForestGreen",
+          "name": "Heathered Forest Green",
           "hex": "#334640",
           "front": "catalog_images/district-dt1101/heathered-forestgreen_front.png",
           "back": "catalog_images/district-dt1101/heathered-forestgreen_back.png"
         },
         {
-          "name": "Heathered PoseidonBlue",
+          "name": "Heathered Poseidon Blue",
           "hex": "#234758",
           "front": "catalog_images/district-dt1101/heathered-poseidonblue_front.png",
           "back": "catalog_images/district-dt1101/heathered-poseidonblue_back.png",
           "swatch": "catalog_images/district-dt1101/heathered-poseidonblue_swatch.jpg"
         },
         {
-          "name": "HeatheredCharcoal",
+          "name": "Heathered Charcoal",
           "hex": "#424747",
           "front": "catalog_images/district-dt1101/heatheredcharcoal_front.png",
           "back": "catalog_images/district-dt1101/heatheredcharcoal_back.png"
         },
         {
-          "name": "HeatheredLatte",
+          "name": "Heathered Latte",
           "hex": "#b1a994",
           "front": "catalog_images/district-dt1101/heatheredlatte_front.png",
           "back": "catalog_images/district-dt1101/heatheredlatte_back.png"
         },
         {
-          "name": "HeatheredLoganberry",
+          "name": "Heathered Loganberry",
           "hex": "#6d2c45",
           "front": "catalog_images/district-dt1101/heatheredloganberry_front.png",
           "back": "catalog_images/district-dt1101/heatheredloganberry_back.png"
         },
         {
-          "name": "HeatheredNavy",
+          "name": "Heathered Navy",
           "hex": "#394856",
           "front": "catalog_images/district-dt1101/heatherednavy_front.png",
           "back": "catalog_images/district-dt1101/heatherednavy_back.png"
         },
         {
-          "name": "HeatheredSteel",
+          "name": "Heathered Steel",
           "hex": "#8a8c8b",
           "front": "catalog_images/district-dt1101/heatheredsteel_front.png",
           "back": "catalog_images/district-dt1101/heatheredsteel_back.png"
@@ -9359,7 +9359,7 @@
           "back": "catalog_images/district-dt1101/laurel-green_back.png"
         },
         {
-          "name": "MaritimeBlue",
+          "name": "Maritime Blue",
           "hex": "#445e7a",
           "front": "catalog_images/district-dt1101/maritimeblue_front.png",
           "back": "catalog_images/district-dt1101/maritimeblue_back.png"

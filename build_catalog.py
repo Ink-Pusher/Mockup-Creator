@@ -437,7 +437,18 @@ def extract_sanmar_pdf(pdf_path: str):
         # squished lowercase one (e.g. "nordicgreen") for display, since
         # SanMar's export sometimes has both for the same color.
         name = sorted(entry["names"], key=lambda n: (" " not in n, n))[0]
-        results.append({"name": name.strip().title() if name.isupper() or name.islower() else name,
+        # SanMar writes two-tone colorways as "AthleticHeather_Black".
+        # Normalize to "Athletic Heather / Black": readable on the site,
+        # and the " / " is what lets annotate_multi_colour_swatches build
+        # the banded two-color swatch (the 1200 raglan shipped with raw
+        # underscore names and identical near-white swatches because of
+        # this).
+        parts = [re.sub(r"(?<=[a-z])(?=[A-Z])", " ", seg).strip()
+                 for seg in name.strip().split("_") if seg.strip()]
+        name = " / ".join(parts)
+        if name.isupper() or name.islower():
+            name = name.title()
+        results.append({"name": name,
                          "front_img": entry["front"], "back_img": entry["back"]})
 
     return sorted(results, key=lambda r: r["name"])

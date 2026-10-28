@@ -19912,6 +19912,28 @@
           "back": "catalog_images/bella-canvas-6405cvc/heather-true-royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-6882gd",
+      "name": "Women's Garment-Dyed Cropped Tee",
+      "brand": "Bella/Canvas",
+      "style": "6882GD",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Vintage White",
+          "hex": "#e9e9e1",
+          "front": "catalog_images/bella-canvas-6882gd/vintage-white_front.jpg",
+          "back": "catalog_images/bella-canvas-6882gd/vintage-white_back.jpg"
+        },
+        {
+          "name": "Light Washed Denim",
+          "hex": "#b8c9d9",
+          "front": "catalog_images/bella-canvas-6882gd/light-washed-denim_front.jpg",
+          "back": "catalog_images/bella-canvas-6882gd/light-washed-denim_back.jpg"
+        }
+      ]
     }
   ]
 }

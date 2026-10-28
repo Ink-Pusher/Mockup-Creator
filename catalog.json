@@ -10842,7 +10842,7 @@
           "front": "catalog_images/bella-canvas-3480/athletic-heather-navy_front.jpg",
           "back": "catalog_images/bella-canvas-3480/athletic-heather-navy_back.jpg",
           "hexes": [
-            "#bdbab9",
+            "#b9b8bb",
             "#282e40"
           ]
         },
@@ -17662,7 +17662,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2c292e",
+            "#2e2a2f",
             "#252324"
           ]
         },
@@ -19505,7 +19505,7 @@
           "front": "catalog_images/bella-canvas-1201/athletic-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-1201/athletic-heather-black_back.jpg",
           "hexes": [
-            "#bdbab9",
+            "#b9b8bb",
             "#252324"
           ]
         },
@@ -19834,6 +19834,82 @@
           "hex": "#4d6fc0",
           "front": "catalog_images/bella-canvas-3005cvc/heather-true-royal_front.jpg",
           "back": "catalog_images/bella-canvas-3005cvc/heather-true-royal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-6405cvc",
+      "name": "Women's Relaxed Heather CVC V-Neck Tee",
+      "brand": "Bella/Canvas",
+      "style": "6405CVC",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Solid Black Blend",
+          "hex": "#2f2f34",
+          "front": "catalog_images/bella-canvas-6405cvc/solid-black-blend_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/solid-black-blend_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#b6b5bd",
+          "front": "catalog_images/bella-canvas-6405cvc/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#2f2a30",
+          "front": "catalog_images/bella-canvas-6405cvc/black-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/black-heather_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#443e45",
+          "front": "catalog_images/bella-canvas-6405cvc/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Heather Dust",
+          "hex": "#e8e0dd",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-dust_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-dust_back.jpg"
+        },
+        {
+          "name": "Heather Mauve",
+          "hex": "#b77a7a",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-mauve_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#555965",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Peach",
+          "hex": "#eaccc3",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-peach_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-peach_back.jpg"
+        },
+        {
+          "name": "Heather Red",
+          "hex": "#e24453",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-red_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-red_back.jpg"
+        },
+        {
+          "name": "Heather Slate",
+          "hex": "#748793",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-slate_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-slate_back.jpg"
+        },
+        {
+          "name": "Heather True Royal",
+          "hex": "#608ad2",
+          "front": "catalog_images/bella-canvas-6405cvc/heather-true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-6405cvc/heather-true-royal_back.jpg"
         }
       ]
     }

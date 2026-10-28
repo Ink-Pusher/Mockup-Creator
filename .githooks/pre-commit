@@ -20,6 +20,25 @@ IMAGE_DELETE_LIMIT=25
 # protected folder (catalog_images -> "(emoji)catalog_images", 2026-10-20, done
 # to color-code it on Windows) moves every file out of the paths the site
 # reads, which breaks exactly like deleting them.
+# Conflict markers inside a staged file mean a merge/stash conflict was
+# "resolved" by committing the raw <<<<<<< ======= >>>>>>> lines. That has
+# shipped twice (2026-10-19 merge, 2026-10-27 stash pop) and each time it
+# made catalog.json invalid JSON and took the live catalog down. Blocked
+# outright -- there is never a reason to commit these markers here.
+for f in catalog.json product_descriptions.csv; do
+  if git show ":$f" 2>/dev/null | grep -qE '^(<<<<<<<|=======$|>>>>>>>)'; then
+    echo ""
+    echo "  ✋ $f contains git conflict markers (<<<<<<< / ======= / >>>>>>>)."
+    echo ""
+    echo "  Do NOT commit this. Fix it in three steps:"
+    echo "    1. Right-click $f in GitHub Desktop -> Discard changes"
+    echo "    2. Pull origin"
+    echo "    3. Re-run your add command (the script rebuilds the file in seconds)"
+    echo ""
+    exit 1
+  fi
+done
+
 deleted=$(git diff --cached --name-only --diff-filter=D --no-renames | grep -E "$PROTECTED")
 [ -z "$deleted" ] && exit 0
 

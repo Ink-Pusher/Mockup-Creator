@@ -10498,7 +10498,7 @@
     },
     {
       "id": "bella-canvas-6400-cvc-6400-cvc",
-      "name": "Women\u2019s Relaxed Fit Heather CVC Tee",
+      "name": "Women’s Relaxed Fit Heather CVC Tee",
       "brand": "Bella/Canvas",
       "style": "6400CVC",
       "kind": "tee",
@@ -10706,7 +10706,7 @@
     },
     {
       "id": "bella-canvas-6405",
-      "name": "Women\u2019s Relaxed Jersey V-Neck Tee",
+      "name": "Women’s Relaxed Jersey V-Neck Tee",
       "brand": "Bella/Canvas",
       "style": "6405",
       "kind": "tee",
@@ -12974,7 +12974,7 @@
     },
     {
       "id": "next-level-5013",
-      "name": "Women\u2019s Festival Muscle Tank Top",
+      "name": "Women’s Festival Muscle Tank Top",
       "brand": "Next Level",
       "style": "5013",
       "kind": "tank",
@@ -13836,7 +13836,7 @@
     },
     {
       "id": "bella-canvas-6400",
-      "name": "Women\u2019s Relaxed Jersey Tee",
+      "name": "Women’s Relaxed Jersey Tee",
       "brand": "Bella/Canvas",
       "style": "6400",
       "kind": "tee",
@@ -15482,7 +15482,7 @@
     },
     {
       "id": "hanes-f260",
-      "name": "Unisex Ultimate Cotton\u00ae Crewneck Sweatshirt",
+      "name": "Unisex Ultimate Cotton® Crewneck Sweatshirt",
       "brand": "Hanes",
       "style": "F260",
       "kind": "sweatshirt",
@@ -15606,7 +15606,7 @@
     },
     {
       "id": "independent-trading-co-afx64crp",
-      "name": "Women\u2019s Lightweight Crop Hooded Sweatshirt",
+      "name": "Women’s Lightweight Crop Hooded Sweatshirt",
       "brand": "Independent Trading Co",
       "style": "AFX64CRP",
       "kind": "hoodie",
@@ -17520,59 +17520,66 @@
     },
     {
       "id": "bella-canvas-1200",
-      "name": "Women\u2019s Micro Rib 3/4 Raglan Baby Tee",
+      "name": "Women’s Micro Rib 3/4 Raglan Baby Tee",
       "brand": "Bella/Canvas",
       "style": "1200",
       "kind": "tee",
       "popular": false,
       "colors": [
         {
-          "name": "AthleticHeather_Black",
-          "hex": "#93969c",
+          "name": "Athletic Heather / Black",
+          "hex": "#979aa0",
           "front": "catalog_images/bella-canvas-1200/athleticheather-black_front.png",
-          "back": "catalog_images/bella-canvas-1200/athleticheather-black_back.png"
+          "back": "catalog_images/bella-canvas-1200/athleticheather-black_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/athleticheather-black_swatch.png"
         },
         {
-          "name": "Natural_Black",
-          "hex": "#f3ebd7",
+          "name": "Natural / Black",
+          "hex": "#f2ead6",
           "front": "catalog_images/bella-canvas-1200/natural-black_front.png",
-          "back": "catalog_images/bella-canvas-1200/natural-black_back.png"
+          "back": "catalog_images/bella-canvas-1200/natural-black_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/natural-black_swatch.png"
         },
         {
-          "name": "White_Black",
-          "hex": "#eaeef1",
+          "name": "White / Black",
+          "hex": "#e8ecef",
           "front": "catalog_images/bella-canvas-1200/white-black_front.png",
-          "back": "catalog_images/bella-canvas-1200/white-black_back.png"
+          "back": "catalog_images/bella-canvas-1200/white-black_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/white-black_swatch.png"
         },
         {
-          "name": "White_Kelly",
-          "hex": "#eaeef1",
+          "name": "White / Kelly",
+          "hex": "#e8ecef",
           "front": "catalog_images/bella-canvas-1200/white-kelly_front.png",
-          "back": "catalog_images/bella-canvas-1200/white-kelly_back.png"
+          "back": "catalog_images/bella-canvas-1200/white-kelly_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/white-kelly_swatch.png"
         },
         {
-          "name": "White_Navy",
-          "hex": "#eaeef1",
+          "name": "White / Navy",
+          "hex": "#e8ecef",
           "front": "catalog_images/bella-canvas-1200/white-navy_front.png",
-          "back": "catalog_images/bella-canvas-1200/white-navy_back.png"
+          "back": "catalog_images/bella-canvas-1200/white-navy_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/white-navy_swatch.png"
         },
         {
-          "name": "White_Red",
-          "hex": "#eaeef1",
+          "name": "White / Red",
+          "hex": "#e8ecef",
           "front": "catalog_images/bella-canvas-1200/white-red_front.png",
-          "back": "catalog_images/bella-canvas-1200/white-red_back.png"
+          "back": "catalog_images/bella-canvas-1200/white-red_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/white-red_swatch.png"
         },
         {
-          "name": "White_TrueRoyal",
-          "hex": "#eaeef1",
+          "name": "White / True Royal",
+          "hex": "#e8ecef",
           "front": "catalog_images/bella-canvas-1200/white-trueroyal_front.png",
-          "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png"
+          "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png",
+          "swatch": "catalog_images/bella-canvas-1200/white-trueroyal_swatch.png"
         }
       ]
     },
     {
       "id": "as-colour-4085",
-      "name": "Women\u2019s Stone Wash Heavy Tee",
+      "name": "Women’s Stone Wash Heavy Tee",
       "brand": "AS Colour",
       "style": "4085",
       "kind": "tee",
@@ -18064,7 +18071,7 @@
     },
     {
       "id": "district-dt672",
-      "name": "Women\u2019s Featherweight French Terry\u2122 Long Sleeve Crewneck",
+      "name": "Women’s Featherweight French Terry™ Long Sleeve Crewneck",
       "brand": "District",
       "style": "DT672",
       "kind": "tee",
@@ -18472,7 +18479,7 @@
     },
     {
       "id": "hanes-f170",
-      "name": "Unisex Ultimate Cotton\u00ae Hooded Sweatshirt",
+      "name": "Unisex Ultimate Cotton® Hooded Sweatshirt",
       "brand": "Hanes",
       "style": "F170",
       "kind": "hoodie",
@@ -18590,7 +18597,7 @@
     },
     {
       "id": "hanes-p180",
-      "name": "Unisex EcoSmart\u00ae Full-Zip Hooded Sweatshirt",
+      "name": "Unisex EcoSmart® Full-Zip Hooded Sweatshirt",
       "brand": "Hanes",
       "style": "P180",
       "kind": "hoodie",
@@ -18630,7 +18637,7 @@
     },
     {
       "id": "hanes-f280",
-      "name": "Unisex Ultimate Cotton\u00ae Full-Zip Hooded Sweatshirt",
+      "name": "Unisex Ultimate Cotton® Full-Zip Hooded Sweatshirt",
       "brand": "Hanes",
       "style": "F280",
       "kind": "hoodie",
@@ -19937,7 +19944,7 @@
     },
     {
       "id": "bella-canvas-8882",
-      "name": "Women\u2019s Flowy Crop Tee",
+      "name": "Women’s Flowy Crop Tee",
       "brand": "Bella/Canvas",
       "style": "8882",
       "kind": "tee",

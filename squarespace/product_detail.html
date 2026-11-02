@@ -23,35 +23,43 @@
   h1,h2,.brand-font{font-family:"Poppins",-apple-system,sans-serif;}
   .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 72px;}
 
-  /* ---------- Search + category toolbar (carried over from the catalog
-     page so nobody has to navigate back just to start a new search) ---------- */
+  /* ---------- Search + category toolbar ----------
+     The search bar is the SAME control as the catalog page's sidebar
+     search -- identical markup, styles (ported verbatim, selectors
+     renamed) and behavior -- so the two pages feel like one tool. */
   .pd-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:20px;}
-  .pd-search-wrap{position:relative;flex:1 1 230px;max-width:340px;min-width:0;}
-  /* Squarespace themes style bare inputs aggressively (own width, height,
-     padding, appearance) -- seen live: the search field rendered oversized
-     and overlapped the first category chip. Everything here is explicit
-     and !important so the theme can't inflate it past its wrapper. */
-  .pd-search-wrap input.pd-search{
-    width:100% !important;max-width:100% !important;min-width:0 !important;
-    box-sizing:border-box !important;height:auto !important;
-    margin:0 !important;padding:9px 13px !important;
-    font-family:inherit !important;font-size:14px !important;line-height:1.4 !important;
-    border:2px solid var(--ink) !important;border-radius:999px !important;
-    background:var(--paper,#fff) !important;color:var(--ink) !important;
-    -webkit-appearance:none;appearance:none;
+  .catalog-search-wrap{position:relative;margin-bottom:0;flex:1 1 230px;max-width:340px;min-width:0;}
+  .catalog-search-wrap svg{
+    position:absolute;left:11px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--grey);
   }
-  .pd-search-wrap input.pd-search:focus{outline:none !important;box-shadow:3px 3px 0 var(--mint-deep) !important;}
-  .pd-search-results{
-    position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:50;
-    background:#fff;border:2px solid var(--ink);border-radius:12px;
-    box-shadow:4px 4px 0 rgba(13,13,13,.14);max-height:300px;overflow:auto;display:none;
+  #pdSearchInput{
+    width:100%;box-sizing:border-box;border:2px solid var(--outline,var(--ink));border-radius:10px;padding:9px 12px 9px 34px;
+    font-size:13px;font-weight:600;background:var(--paper,#fff);color:var(--ink);font-family:inherit;
   }
-  .pd-search-results.open{display:block;}
-  .pd-result-item{padding:9px 13px;cursor:pointer;font-size:13.5px;display:flex;gap:8px;align-items:baseline;}
-  .pd-result-item:hover,.pd-result-item.active{background:var(--mint,#8ff0c8);}
-  .pd-result-item .rname{font-weight:700;white-space:nowrap;}
-  .pd-result-item .rmeta{color:var(--grey);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .pd-result-empty{padding:9px 13px;color:var(--grey);font-size:13.5px;}
+  #pdSearchInput::placeholder{color:var(--grey);font-weight:500;}
+  #pdSearchInput:focus{outline:none;box-shadow:3px 3px 0 var(--mint-deep);}
+  /* Same re-homing + fixed positioning as the catalog page: Squarespace's
+     nav (#ip-wrap) is position:relative with z-index:9999, so the dropdown
+     lives on <body> in the root stacking context. */
+  .catalog-search-results{
+    position:fixed;z-index:2147483000;
+    background:var(--paper,#fff);border:2px solid var(--outline,var(--ink));border-radius:10px;
+    box-shadow:4px 4px 0 rgba(0,0,0,0.14);max-height:320px;overflow-y:auto;
+    display:none;
+  }
+  .catalog-search-results.open{display:block;}
+  .catalog-search-results .result-item{
+    padding:9px 13px;cursor:pointer;display:flex;flex-direction:column;gap:1px;
+    border-bottom:1px solid var(--border-soft,#eee);
+  }
+  .catalog-search-results .result-item:last-child{border-bottom:none;}
+  .catalog-search-results .result-item .rname{font-weight:700;font-size:13px;color:var(--ink);}
+  .catalog-search-results .result-item .rmeta{font-size:11.5px;color:var(--grey);font-weight:500;}
+  .catalog-search-results .result-item:hover,
+  .catalog-search-results .result-item.active{background:var(--mint);}
+  .catalog-search-results .result-item:hover .rname, .catalog-search-results .result-item.active .rname,
+  .catalog-search-results .result-item:hover .rmeta, .catalog-search-results .result-item.active .rmeta{color:#0d0d0d;}
+  .catalog-search-results .result-empty{padding:14px;font-size:12.5px;color:var(--grey);text-align:center;}
   .pd-cats{display:flex;flex-wrap:wrap;gap:7px;}
   .pd-cat-chip{
     font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink);
@@ -440,9 +448,10 @@ function renderPage(){
   root.innerHTML = `
     <div class="breadcrumb"><a href="${CATALOG_PAGE_URL}">Catalog</a> &nbsp;&rsaquo;&nbsp; ${escapeHtml(p.name)}</div>
     <div class="pd-toolbar">
-      <div class="pd-search-wrap">
-        <input type="search" class="pd-search" id="pdSearchInput" placeholder="Search products&hellip;" autocomplete="off" />
-        <div class="pd-search-results" id="pdSearchResults"></div>
+      <div class="catalog-search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="pdSearchInput" placeholder="Search&hellip;" autocomplete="off" />
+        <div class="catalog-search-results" id="pdSearchResults"></div>
       </div>
       <div class="pd-cats">
         ${PD_CATEGORIES.map(c => `<a class="pd-cat-chip" href="${CATALOG_PAGE_URL}${c.qs}">${c.label}</a>`).join("")}
@@ -666,8 +675,10 @@ function productCardEl(p){
   return card;
 }
 
-// ---------- Search (same matching idea as the catalog page's box, but
-// results link straight to each product's detail page -- no round trip) ----------
+// ---------- Search: the catalog page's sidebar search, ported ----------
+// Identical behavior (type-ahead, body re-homing, fixed positioning,
+// mousedown-before-blur picks); the only difference is the destination:
+// results navigate straight to that product's detail page.
 function pdFilterProducts(query){
   const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
   if(!terms.length) return [];
@@ -678,48 +689,63 @@ function pdFilterProducts(query){
 }
 function initSearchBar(){
   const input = document.getElementById("pdSearchInput");
-  const wrap = document.getElementById("pdSearchResults");
+  const resultsEl = () => document.getElementById("pdSearchResults");
   if(!input) return;
-  let matches = [], active = -1;
-  function close(){ wrap.classList.remove("open"); wrap.innerHTML = ""; matches = []; active = -1; }
+  let matches = [], activeIndex = -1;
+  function goToProduct(id){ location.href = `?id=${encodeURIComponent(id)}`; }
+  function position(){
+    const wrap = resultsEl();
+    const rect = input.getBoundingClientRect();
+    wrap.style.left = rect.left + "px";
+    wrap.style.top = (rect.bottom + 6) + "px";
+    wrap.style.width = rect.width + "px";
+  }
+  function open(wrap){
+    if(wrap.parentElement !== document.body) document.body.appendChild(wrap);
+    position();
+    wrap.classList.add("open");
+  }
+  function highlight(){
+    const items = Array.from(resultsEl().querySelectorAll(".result-item"));
+    items.forEach((it,i)=> it.classList.toggle("active", i===activeIndex));
+    if(items[activeIndex]) items[activeIndex].scrollIntoView({ block:"nearest" });
+  }
   function render(){
-    active = -1;
-    if(!input.value.trim()){ close(); return; }
+    const wrap = resultsEl();
+    activeIndex = -1;
+    if(!input.value.trim()){ wrap.classList.remove("open"); wrap.innerHTML = ""; matches = []; return; }
     matches = pdFilterProducts(input.value);
     wrap.innerHTML = "";
     if(!matches.length){
-      wrap.innerHTML = `<div class="pd-result-empty">No matches</div>`;
+      wrap.innerHTML = `<div class="result-empty">No matches</div>`;
     } else {
       matches.forEach(p=>{
         const item = document.createElement("div");
-        item.className = "pd-result-item";
+        item.className = "result-item";
         item.innerHTML = `<span class="rname">${escapeHtml(p.brand)} ${escapeHtml(p.style)}</span><span class="rmeta">${escapeHtml(p.name)}</span>`;
-        // mousedown beats the input's blur, same trick as the catalog page
-        item.onmousedown = (e)=>{ e.preventDefault(); location.href = `?id=${encodeURIComponent(p.id)}`; };
+        item.onmousedown = (e)=>{ e.preventDefault(); goToProduct(p.id); };
         wrap.appendChild(item);
       });
     }
-    wrap.classList.add("open");
+    open(wrap);
   }
   input.addEventListener("input", render);
   input.addEventListener("focus", ()=>{ if(input.value.trim()) render(); });
-  input.addEventListener("blur", ()=> setTimeout(close, 150));
+  input.addEventListener("blur", ()=>{ setTimeout(()=>{ resultsEl().classList.remove("open"); }, 120); });
   input.addEventListener("keydown", (e)=>{
-    const items = [...wrap.querySelectorAll(".pd-result-item")];
-    if(e.key === "ArrowDown" || e.key === "ArrowUp"){
-      e.preventDefault();
-      if(!items.length) return;
-      active = e.key === "ArrowDown" ? Math.min(active+1, items.length-1) : Math.max(active-1, 0);
-      items.forEach((el,i)=>el.classList.toggle("active", i===active));
-    } else if(e.key === "Enter"){
-      e.preventDefault();
-      const pick = matches[active >= 0 ? active : 0];
-      if(pick) location.href = `?id=${encodeURIComponent(pick.id)}`;
-      else if(input.value.trim()) location.href = `${CATALOG_PAGE_URL}?q=${encodeURIComponent(input.value.trim())}`;
-    } else if(e.key === "Escape"){
-      close(); input.blur();
+    const wrap = resultsEl();
+    if(e.key === "Enter" && (!wrap.classList.contains("open") || !matches.length)){
+      if(input.value.trim()) location.href = `${CATALOG_PAGE_URL}?q=${encodeURIComponent(input.value.trim())}`;
+      return;
     }
+    if(!wrap.classList.contains("open") || !matches.length) return;
+    if(e.key === "ArrowDown"){ e.preventDefault(); activeIndex = Math.min(activeIndex+1, matches.length-1); highlight(); }
+    else if(e.key === "ArrowUp"){ e.preventDefault(); activeIndex = Math.max(activeIndex-1, 0); highlight(); }
+    else if(e.key === "Enter"){ e.preventDefault(); goToProduct(matches[activeIndex>=0 ? activeIndex : 0].id); }
+    else if(e.key === "Escape"){ wrap.classList.remove("open"); }
   });
+  window.addEventListener("resize", ()=>{ if(resultsEl().classList.contains("open")) position(); });
+  window.addEventListener("scroll", ()=>{ if(resultsEl().classList.contains("open")) position(); }, { passive:true });
 }
 
 // ---------- Recently viewed (per-browser convenience, localStorage) ----------

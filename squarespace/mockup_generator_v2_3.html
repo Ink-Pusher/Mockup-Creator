@@ -1027,13 +1027,16 @@
       <input type="text" id="catalogSearchInput" placeholder="Search by brand or style #…" autocomplete="off" />
       <div class="catalog-search-results" id="catalogSearchResults"></div>
     </div>
+    <label for="jobNameInput">Job name</label>
+    <input type="text" id="jobNameInput" placeholder="e.g. Smith Wedding Order" autocomplete="off" title="Optional -- prefixes exported filenames" />
+    <span class="row-divider"></span>
+    <!-- Rightmost on purpose: the job-name field used to sit at the far
+         right, directly above the Add Text panel, and kept collecting
+         text meant for the shirt. -->
     <button type="button" class="create-own-btn" id="createOwnBtn">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 5v14M5 12h14"/></svg>
       Create Your Own Mockup
     </button>
-    <span class="row-divider"></span>
-    <label for="jobNameInput">Job name</label>
-    <input type="text" id="jobNameInput" placeholder="e.g. Smith Wedding Order" autocomplete="off" title="Optional -- prefixes exported filenames" />
   </div>
 
   <div class="modal-overlay" id="customModalOverlay">
@@ -5869,7 +5872,7 @@ initTheme();
    of guessable -- Squarespace caches Code Blocks and browsers cache
    pages, and a stale paste is indistinguishable from a real bug without
    this. */
-const STUDIO_BUILD = "2026-11-02.1";
+const STUDIO_BUILD = "2026-11-02.2";
 document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */

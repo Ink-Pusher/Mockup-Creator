@@ -4864,8 +4864,12 @@ document.getElementById("undoBtn").onclick = undo;
 async function saveProject(){
   const projectStatus = document.getElementById("projectStatus");
   const product = CATALOG.products.find(p=>p.id===state.productId);
-  const slug = product ? product.id : "mockup";
-  const filename = `${slug}-project.json`;
+  // A save is the layers for a JOB, not for the product -- so the job
+  // name leads when one is entered, falling back to brand+style.
+  const safe = (t) => String(t||"").replace(/[\/\\:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim();
+  const jobName = safe(document.getElementById("jobNameInput")?.value || "");
+  const base = jobName || (product ? safe(`${product.brand} ${product.style}`) : "mockup");
+  const filename = `${base} - project.json`;
 
   // Same "ask where to save first" pattern as Export -- consistent
   // behavior across both save actions, and Chrome/Edge specifically
@@ -4892,6 +4896,7 @@ async function saveProject(){
       savedAt: new Date().toISOString(),
       productId: state.productId,
       colorIndex: state.colorIndex,
+      jobName: document.getElementById("jobNameInput")?.value.trim() || "",
       canvas: fabricCanvas.toJSON(["designSide", "customName", "designAnchor"]),
     };
     // Create Your Own products only exist in memory for the current
@@ -5005,6 +5010,12 @@ function loadProject(file){
         }
         Promise.all(loaders).then(finishRestoring);
         return;
+      }
+      // Restore the job name too, so a reopened project exports and
+      // re-saves under the same job without retyping it.
+      if(typeof payload.jobName === "string" && payload.jobName){
+        const jn = document.getElementById("jobNameInput");
+        if(jn) jn.value = payload.jobName;
       }
       const product = CATALOG.products.find(p=>p.id===payload.productId);
       if(product){
@@ -5872,7 +5883,7 @@ initTheme();
    of guessable -- Squarespace caches Code Blocks and browsers cache
    pages, and a stale paste is indistinguishable from a real bug without
    this. */
-const STUDIO_BUILD = "2026-11-02.2";
+const STUDIO_BUILD = "2026-11-02.3";
 document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */

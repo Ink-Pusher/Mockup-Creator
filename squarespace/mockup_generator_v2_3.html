@@ -2567,7 +2567,28 @@ function applyDesignAnchors(render){
   if(boxes.back)  prevAnchorBoxes.back  = { ...boxes.back };
   if(touched) fabricCanvas.requestRenderAll();
 }
+// Which side is this object ACTUALLY on right now? designSide is stamped
+// at upload time (whichever side's upload box was used) and used to stay
+// stale forever if the user then dragged the art to the other side -- the
+// export mapped such art against the wrong garment box and shipped it
+// shifted sideways (reported 2026-11-02, reproduced: back art tagged
+// "front" exports ~105px left of where the preview shows it). Proximity
+// of the object's position to each side's real box is the truth.
+function sideFromPosition(obj, render){
+  const fb = render && render.frontBox, bb = render && render.backBox;
+  if(!fb || !bb || !fb.w || !bb.w) return null;
+  const df = Math.hypot(obj.left - (fb.x+fb.w/2), obj.top - (fb.y+fb.h/2));
+  const db = Math.hypot(obj.left - (bb.x+bb.w/2), obj.top - (bb.y+bb.h/2));
+  return df <= db ? "front" : "back";
+}
 function refreshAnchor(obj){
+  if(!obj) return;
+  // Keep the side tag honest before caching the anchor -- both real boxes
+  // must exist, or a placeholder half would misclassify during photo load.
+  if(lastRender && lastRender.guideFront && lastRender.guideBack){
+    const side = sideFromPosition(obj, lastRender);
+    if(side) obj.designSide = side;
+  }
   const box = obj && obj.designSide && sideBoxFor(lastRender, obj.designSide);
   if(box && box.w && box.h) obj.designAnchor = deriveAnchor(obj, box);
 }
@@ -5370,10 +5391,17 @@ function renderFullComposite(EXPORT_W){
       // pre-nudge anchor. Live coordinates can't be stale by definition,
       // and renderAll's anchor pass keeps them glued to the garment across
       // layout changes, so deriving here is always current.
+      // Derive the side from the CURRENT live position whenever both real
+      // boxes exist -- the stored tag can be stale (uploaded to one side,
+      // dragged to the other), and a stale tag maps the art against the
+      // wrong garment box, which is exactly the "export bumped my art
+      // sideways" bug. Fall back to the stored tag only when the live
+      // boxes can't vote.
+      if(lastRender && lastRender.guideFront && lastRender.guideBack){
+        const liveSide = sideFromPosition(obj, lastRender);
+        if(liveSide) obj.designSide = liveSide;
+      }
       if(!obj.designSide){
-        // Text/shapes that were never product-switched have no side tag --
-        // infer it now, or they'd fall into the uniform-scale fallback and
-        // balloon relative to the export's smaller garment.
         obj.designSide = determineObjectSide(obj, { frontBox: liveGuides.front, backBox: liveGuides.back });
       }
       const liveBox = obj.designSide && liveGuides[obj.designSide];
@@ -5718,15 +5746,16 @@ document.getElementById("exportBtn").onclick = async ()=>{
   const product = CATALOG.products.find(p=>p.id===state.productId);
   const color = (product && !product.pending) ? product.colors[state.colorIndex] : null;
   const mode = document.getElementById("exportModeSelect")?.value || "asShown";
-  const modeSlug = mode === "asShown" ? "" : `_${slugify(mode)}`;
-  // A job name is entirely optional -- when set, it becomes the FIRST
-  // part of the filename, ahead of the product/color, so a batch of
-  // exports for the same client sorts and scans together in a folder
-  // instead of the client's files getting scattered among everyone
-  // else's by product name.
+  // Human-readable filename with spaces: "Job - Product Style Color.jpg".
+  // No "ink-pusher-mockup" branding in the name (the exported card already
+  // carries the logo), and the optional job name still leads so a client's
+  // batch sorts together in a folder.
+  const fileSafe = (t) => String(t||"").replace(/[\/\\:*?"<>|]+/g, " ").replace(/\s+/g, " ").trim();
+  const modeSuffix = mode === "asShown" ? "" : " " + fileSafe(mode.replace(/(?<=[a-z])(?=[A-Z])/g, " ").toLowerCase());
   const jobNameRaw = document.getElementById("jobNameInput")?.value.trim() || "";
-  const jobPrefix = jobNameRaw ? `${slugify(jobNameRaw)}_` : "";
-  const filename = `${jobPrefix}ink-pusher-mockup_${slugify(product ? product.name : "mockup")}_${slugify(color ? color.name : "design")}${modeSlug}.jpg`;
+  const jobPrefix = jobNameRaw ? `${fileSafe(jobNameRaw)} - ` : "";
+  const parts = [product ? product.name : "Mockup", product ? product.style : "", color ? color.name : ""];
+  const filename = `${jobPrefix}${fileSafe(parts.filter(Boolean).join(" "))}${modeSuffix}.jpg`;
 
   // Ask where to save FIRST (before any canvas work), while the click is
   // still "fresh" -- Chrome/Edge require the save picker to be triggered
@@ -5837,7 +5866,7 @@ initTheme();
    of guessable -- Squarespace caches Code Blocks and browsers cache
    pages, and a stale paste is indistinguishable from a real bug without
    this. */
-const STUDIO_BUILD = "2026-10-16.1";
+const STUDIO_BUILD = "2026-11-02.1";
 document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */

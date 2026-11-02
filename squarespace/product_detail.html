@@ -23,6 +23,35 @@
   h1,h2,.brand-font{font-family:"Poppins",-apple-system,sans-serif;}
   .wrap{max-width:1180px;margin:0 auto;padding:24px 20px 72px;}
 
+  /* ---------- Search + category toolbar (carried over from the catalog
+     page so nobody has to navigate back just to start a new search) ---------- */
+  .pd-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:20px;}
+  .pd-search-wrap{position:relative;flex:1 1 230px;max-width:340px;}
+  .pd-search{
+    width:100%;padding:9px 13px;font:inherit;font-size:14px;
+    border:2px solid var(--ink);border-radius:999px;background:var(--paper,#fff);
+  }
+  .pd-search:focus{outline:none;box-shadow:3px 3px 0 var(--mint-deep);}
+  .pd-search-results{
+    position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:50;
+    background:#fff;border:2px solid var(--ink);border-radius:12px;
+    box-shadow:4px 4px 0 rgba(13,13,13,.14);max-height:300px;overflow:auto;display:none;
+  }
+  .pd-search-results.open{display:block;}
+  .pd-result-item{padding:9px 13px;cursor:pointer;font-size:13.5px;display:flex;gap:8px;align-items:baseline;}
+  .pd-result-item:hover,.pd-result-item.active{background:var(--mint,#8ff0c8);}
+  .pd-result-item .rname{font-weight:700;white-space:nowrap;}
+  .pd-result-item .rmeta{color:var(--grey);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .pd-result-empty{padding:9px 13px;color:var(--grey);font-size:13.5px;}
+  .pd-cats{display:flex;flex-wrap:wrap;gap:7px;}
+  .pd-cat-chip{
+    font-size:12.5px;font-weight:700;text-decoration:none;color:var(--ink);
+    border:2px solid var(--ink);border-radius:999px;padding:6px 12px;background:#fff;
+    white-space:nowrap;
+  }
+  .pd-cat-chip:hover{background:var(--mint,#8ff0c8);}
+  @media (max-width:700px){ .pd-cats{display:none;} } /* phones: search still fits, chips don't */
+
   .breadcrumb{font-size:13px;color:var(--grey);margin-bottom:18px;}
   .breadcrumb a{color:var(--grey);text-decoration:none;}
   .breadcrumb a:hover{text-decoration:underline;}
@@ -401,6 +430,15 @@ function renderPage(){
 
   root.innerHTML = `
     <div class="breadcrumb"><a href="${CATALOG_PAGE_URL}">Catalog</a> &nbsp;&rsaquo;&nbsp; ${escapeHtml(p.name)}</div>
+    <div class="pd-toolbar">
+      <div class="pd-search-wrap">
+        <input type="search" class="pd-search" id="pdSearchInput" placeholder="Search products&hellip;" autocomplete="off" />
+        <div class="pd-search-results" id="pdSearchResults"></div>
+      </div>
+      <div class="pd-cats">
+        ${PD_CATEGORIES.map(c => `<a class="pd-cat-chip" href="${CATALOG_PAGE_URL}${c.qs}">${c.label}</a>`).join("")}
+      </div>
+    </div>
     <div class="pd-grid">
       <div class="pd-hero-stack">
         <div class="pd-hero"><span class="pd-hero-label">Front</span><img id="pdHeroImgFront" alt="${escapeHtml(p.name)} -- front" /></div>
@@ -435,12 +473,20 @@ function renderPage(){
       <h2>You may also like</h2>
       <div class="related-grid" id="relatedGrid"></div>
     </div>
+
+    <div class="related-section" id="recentSection" style="display:none">
+      <h2>Recently viewed</h2>
+      <div class="related-grid" id="recentGrid"></div>
+    </div>
   `;
 
   renderSwatches();
   renderHeroImages();
 
   renderRelated();
+  initSearchBar();
+  renderRecentlyViewed();
+  recordRecentView(p.id);
 }
 
 function renderSwatches(){
@@ -583,6 +629,113 @@ function scoreRelated(a, b){
   return { score, related: sharedStyle > 0 || a.kind === b.kind };
 }
 
+
+// Category chips mirror the landing page's six rows exactly, deep-linking
+// into the catalog with the same params the landing tiles use.
+const PD_CATEGORIES = [
+  { label: "Unisex Tees",            qs: "?cat=tee&tags=unisex" },
+  { label: "Women's",                qs: "?cat=tee&tags=womens" },
+  { label: "Sweatshirts & Hoodies",  qs: "?cat=hoodie" },
+  { label: "Hats",                   qs: "?cat=cap" },
+  { label: "Beanies",                qs: "?cat=cap&tags=beanie" },
+  { label: "Tote Bags",              qs: "?cat=tote" },
+];
+
+function productCardEl(p){
+  const thumbColor = pickThumbColor(p);
+  const featuredSrc = `${CATALOG_BASE_URL}catalog_images/${p.id}/featured_front.jpg`;
+  const fallbackSrc = thumbColor ? thumbColor.frontSrc : "";
+  const card = document.createElement("a");
+  card.className = "product-card";
+  card.href = `?id=${encodeURIComponent(p.id)}`;
+  card.innerHTML = `
+    <div class="thumb">${thumbColor ? `<img src="${featuredSrc}" data-fallback="${fallbackSrc}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback; this.removeAttribute('data-fallback');} else {this.onerror=null;}" alt="${escapeHtml(p.name)}" loading="lazy" />` : ""}</div>
+    <div class="pname">${escapeHtml(p.brand)} ${escapeHtml(p.style)}</div>
+    <div class="pmeta">${escapeHtml(p.name)}</div>
+    ${swatchRowHTML(p)}
+  `;
+  return card;
+}
+
+// ---------- Search (same matching idea as the catalog page's box, but
+// results link straight to each product's detail page -- no round trip) ----------
+function pdFilterProducts(query){
+  const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+  if(!terms.length) return [];
+  return CATALOG.products.filter(p => {
+    const hay = `${p.brand} ${p.style} ${p.name}`.toLowerCase();
+    return terms.every(t => hay.includes(t));
+  }).slice(0, 8);
+}
+function initSearchBar(){
+  const input = document.getElementById("pdSearchInput");
+  const wrap = document.getElementById("pdSearchResults");
+  if(!input) return;
+  let matches = [], active = -1;
+  function close(){ wrap.classList.remove("open"); wrap.innerHTML = ""; matches = []; active = -1; }
+  function render(){
+    active = -1;
+    if(!input.value.trim()){ close(); return; }
+    matches = pdFilterProducts(input.value);
+    wrap.innerHTML = "";
+    if(!matches.length){
+      wrap.innerHTML = `<div class="pd-result-empty">No matches</div>`;
+    } else {
+      matches.forEach(p=>{
+        const item = document.createElement("div");
+        item.className = "pd-result-item";
+        item.innerHTML = `<span class="rname">${escapeHtml(p.brand)} ${escapeHtml(p.style)}</span><span class="rmeta">${escapeHtml(p.name)}</span>`;
+        // mousedown beats the input's blur, same trick as the catalog page
+        item.onmousedown = (e)=>{ e.preventDefault(); location.href = `?id=${encodeURIComponent(p.id)}`; };
+        wrap.appendChild(item);
+      });
+    }
+    wrap.classList.add("open");
+  }
+  input.addEventListener("input", render);
+  input.addEventListener("focus", ()=>{ if(input.value.trim()) render(); });
+  input.addEventListener("blur", ()=> setTimeout(close, 150));
+  input.addEventListener("keydown", (e)=>{
+    const items = [...wrap.querySelectorAll(".pd-result-item")];
+    if(e.key === "ArrowDown" || e.key === "ArrowUp"){
+      e.preventDefault();
+      if(!items.length) return;
+      active = e.key === "ArrowDown" ? Math.min(active+1, items.length-1) : Math.max(active-1, 0);
+      items.forEach((el,i)=>el.classList.toggle("active", i===active));
+    } else if(e.key === "Enter"){
+      e.preventDefault();
+      const pick = matches[active >= 0 ? active : 0];
+      if(pick) location.href = `?id=${encodeURIComponent(pick.id)}`;
+      else if(input.value.trim()) location.href = `${CATALOG_PAGE_URL}?q=${encodeURIComponent(input.value.trim())}`;
+    } else if(e.key === "Escape"){
+      close(); input.blur();
+    }
+  });
+}
+
+// ---------- Recently viewed (per-browser convenience, localStorage) ----------
+const RECENT_KEY = "ip_recent_products";
+function readRecents(){
+  try { const v = JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"); return Array.isArray(v) ? v : []; }
+  catch(e){ return []; }
+}
+function recordRecentView(id){
+  try {
+    const list = [id, ...readRecents().filter(x => x !== id)].slice(0, 9);
+    localStorage.setItem(RECENT_KEY, JSON.stringify(list));
+  } catch(e){ /* private mode etc. -- the page works fine without it */ }
+}
+function renderRecentlyViewed(){
+  const section = document.getElementById("recentSection");
+  const grid = document.getElementById("recentGrid");
+  if(!section) return;
+  const ids = readRecents().filter(id => id !== currentProduct.id);
+  const prods = ids.map(id => CATALOG.products.find(p => p.id === id)).filter(Boolean).slice(0, 8);
+  if(!prods.length) return;   // first visit: section stays hidden
+  grid.innerHTML = "";
+  prods.forEach(p => grid.appendChild(productCardEl(p)));
+  section.style.display = "";
+}
 
 function renderRelated(){
   const wrap = document.getElementById("relatedGrid");

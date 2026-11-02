@@ -430,6 +430,9 @@ const state = {
 // ?brand= can't be validated until the catalog loads (the brand list
 // comes from the products themselves), so it's resolved in loadCatalog.
 const pendingBrandParam = new URLSearchParams(location.search).get("brand");
+// ?q= prefills the search box and opens its results -- lets other pages
+// (the product detail page's search bar) hand off a query mid-typing.
+const pendingSearchParam = new URLSearchParams(location.search).get("q");
 
 // ---------- Load catalog ----------
 async function loadCatalog(){
@@ -492,6 +495,11 @@ async function loadCatalog(){
         if(b.sortOrder != null) return 1;
         return 0;
       });
+    if(pendingSearchParam && searchInputEl){
+      searchInputEl.value = pendingSearchParam;
+      renderSearchResults();
+      searchInputEl.focus();
+    }
     if(pendingBrandParam){
       // Brand spellings drift in catalog.json ("AS Colour"/"As Colour",
       // "Independent Trading Co"/"Co."), so match on a normalized form and

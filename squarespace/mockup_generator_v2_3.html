@@ -5754,7 +5754,10 @@ document.getElementById("exportBtn").onclick = async ()=>{
   const modeSuffix = mode === "asShown" ? "" : " " + fileSafe(mode.replace(/(?<=[a-z])(?=[A-Z])/g, " ").toLowerCase());
   const jobNameRaw = document.getElementById("jobNameInput")?.value.trim() || "";
   const jobPrefix = jobNameRaw ? `${fileSafe(jobNameRaw)} - ` : "";
-  const parts = [product ? product.name : "Mockup", product ? product.style : "", color ? color.name : ""];
+  // Brand + style + color is what identifies the actual garment at a
+  // glance ("Bella Canvas 3010 White"); the long descriptive product
+  // name just pads the filename out.
+  const parts = [product ? product.brand : "Mockup", product ? product.style : "", color ? color.name : ""];
   const filename = `${jobPrefix}${fileSafe(parts.filter(Boolean).join(" "))}${modeSuffix}.jpg`;
 
   // Ask where to save FIRST (before any canvas work), while the click is

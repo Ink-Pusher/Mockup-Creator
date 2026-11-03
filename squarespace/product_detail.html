@@ -222,7 +222,7 @@ const CATALOG_PAGE_URL = "/new-apparel-catalog";
 // tabs; the tag lists below are what actually drive "You may also like", for
 // the reason described on scoreRelated().
 const CATEGORY_DEFS = [
-  { id:"tee",    kinds:["tee","tank"] },
+  { id:"tee",    kinds:["tee","longsleeve","tank"] },
   { id:"hoodie", kinds:["hoodie","sweatshirt"] },
   { id:"cap",    kinds:["cap","hat","beanie"] },
   { id:"tote",   kinds:["tote"] },
@@ -239,6 +239,7 @@ const FIT_TAGS = [
 const STYLE_TAGS = [
   { id:"tank",        test:(p)=> p.kind==="tank" },
   { id:"crop-top",    test:(p)=> /\bcrop\b/i.test(p.name) },
+  { id:"long-sleeve", test:(p)=> p.kind==="longsleeve" || /long[\s-]?sleeve/i.test(p.name) },
   { id:"tee",         test:(p)=> p.kind==="tee" && !/\bcrop\b/i.test(p.name) },
   // Split by NAME rather than by `kind`, because kind is not trustworthy for
   // fleece: Independent Trading IND4000 "Pullover Hoodie" is filed as

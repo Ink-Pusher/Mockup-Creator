@@ -1162,10 +1162,13 @@ def main():
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
+    # Normalize the kind so the sheet can say "Long Sleeve", "long-sleeve"
+    # or "longsleeve" and they all land on the same catalog kind.
+    kind = re.sub(r"[^a-z]", "", kind.lower())
     source = str(resolve_saved_page(source))
     catalog_path = Path(rest[5]) if len(rest) > 5 else Path("catalog.json")
 
-    KNOWN_KINDS = ("tee", "hoodie", "cap", "hat", "tote", "beanie", "sweatshirt", "tank")
+    KNOWN_KINDS = ("tee", "longsleeve", "hoodie", "cap", "hat", "tote", "beanie", "sweatshirt", "tank")
     if kind not in KNOWN_KINDS:
         print(f"Warning: kind '{kind}' isn't one of the mockup tool's known categories ({'/'.join(KNOWN_KINDS)}).")
         print("The catalog entry will still be written and work fine -- this only means it'll get its own")

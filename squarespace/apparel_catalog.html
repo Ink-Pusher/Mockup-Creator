@@ -350,7 +350,7 @@ const MAX_GRID_CARDS = 500; // defensive ceiling only, not a real-world limit
 // behavior here always matches how it behaves there.
 const CATEGORY_DEFS = [
   { id:"all",    label:"All",                   kinds:null },
-  { id:"tee",    label:"T-Shirts / Tanks",       kinds:["tee","tank"] },
+  { id:"tee",    label:"T-Shirts / Tanks",       kinds:["tee","longsleeve","tank"] },
   { id:"hoodie", label:"Sweatshirts / Hoodies",  kinds:["hoodie","sweatshirt"] },
   { id:"cap",    label:"Headware",               kinds:["cap","hat","beanie"] },
   { id:"tote",   label:"Tote Bags",              kinds:["tote"] },
@@ -363,6 +363,7 @@ const FIT_TAGS = [
 const STYLE_TAGS = [
   { id:"tank",        label:"Tanks",        test:(p)=> p.kind==="tank" },
   { id:"crop-top",    label:"Crop Tops",    test:(p)=> /\bcrop\b/i.test(p.name) },
+  { id:"long-sleeve", label:"Long Sleeves", test:(p)=> p.kind==="longsleeve" || /long[\s-]?sleeve/i.test(p.name) },
   { id:"tee",         label:"Tees",         test:(p)=> p.kind==="tee" && !/\bcrop\b/i.test(p.name) },
   // Split by NAME rather than by `kind`, because kind is not trustworthy for
   // fleece: Independent Trading IND4000 "Pullover Hoodie" is filed as

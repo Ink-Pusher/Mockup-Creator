@@ -590,7 +590,7 @@ const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Cr
 // that list ever changes, so products group the same way in both places.
 const CATEGORY_DEFS = [
   { id:"all",    label:"All",                   kinds:null },
-  { id:"tee",    label:"T-Shirts / Tanks",      kinds:["tee","tank"] },
+  { id:"tee",    label:"T-Shirts / Tanks",      kinds:["tee","longsleeve","tank"] },
   { id:"hoodie", label:"Sweatshirts / Hoodies",  kinds:["hoodie","sweatshirt"] },
   { id:"cap",    label:"Headware",               kinds:["cap","hat","beanie"] },
   { id:"tote",   label:"Tote Bags",              kinds:["tote"] },
@@ -611,7 +611,8 @@ const FIT_TAGS = [
 const STYLE_TAGS = [
   { id:"tank",        label:"Tanks",        test:(p)=> p.kind==="tank" },
   { id:"crop-top",    label:"Crop Tops",    test:(p)=> /\bcrop\b/i.test(p.name) },
-  { id:"tee",         label:"Tees",         test:(p)=> p.kind==="tee" && !/\bcrop\b/i.test(p.name) },
+  { id:"long-sleeve", label:"Long Sleeves", test:(p)=> p.kind==="longsleeve" || /long[\s-]?sleeve/i.test(p.name) },
+  { id:"tee",         label:"Tees",         test:(p)=> (p.kind==="tee"||p.kind==="longsleeve") && !/\bcrop\b/i.test(p.name) },
   { id:"hoodie",      label:"Hoodies",      test:(p)=> p.kind==="hoodie" },
   { id:"sweatshirt",  label:"Sweatshirts",  test:(p)=> p.kind==="sweatshirt" },
   { id:"tote",        label:"Totes",        test:(p)=> p.kind==="tote" },
@@ -1259,8 +1260,8 @@ const L_youth  = (p)=> /\byouth\b/i.test(p.name);
 const L_crew   = (p)=> /crew/i.test(p.name) && !/hood/i.test(p.name);
 const L_beanie = (p)=> p.kind==="beanie" || /beanie/i.test(p.name);
 const ADMIN_LANDING_ROWS = [
-  { id:"unisex-tees", label:"Unisex T-Shirts",        match:(p)=> p.kind==="tee" && !L_womens(p) && !L_youth(p) },
-  { id:"womens",      label:"Women's Styles",         match:(p)=> (p.kind==="tee"||p.kind==="tank") && L_womens(p) },
+  { id:"unisex-tees", label:"Unisex T-Shirts",        match:(p)=> (p.kind==="tee"||p.kind==="longsleeve") && !L_womens(p) && !L_youth(p) },
+  { id:"womens",      label:"Women's Styles",         match:(p)=> (p.kind==="tee"||p.kind==="longsleeve"||p.kind==="tank") && L_womens(p) },
   { id:"hoodies",     label:"Sweatshirts & Hoodies",  match:(p)=> p.kind==="hoodie"||p.kind==="sweatshirt" },
   { id:"hats",        label:"Hats",                   match:(p)=> (p.kind==="cap"||p.kind==="hat") && !L_beanie(p) },
   { id:"beanies",     label:"Beanies",                match:(p)=> L_beanie(p) },

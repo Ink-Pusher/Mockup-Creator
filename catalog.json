@@ -1564,7 +1564,7 @@
           "back": "catalog_images/richardson-112/charcoal-kelly_back.jpg",
           "hexes": [
             "#4f4c4e",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -1614,7 +1614,7 @@
           "back": "catalog_images/richardson-112/charcoal-neon-pink_back.jpg",
           "hexes": [
             "#4f4c4e",
-            "#fb6a92"
+            "#fd7392"
           ]
         },
         {
@@ -1831,7 +1831,7 @@
           "hexes": [
             "#b5b4b9",
             "#4f4c4e",
-            "#5a1f30"
+            "#5b1f31"
           ]
         },
         {
@@ -1916,7 +1916,7 @@
           "front": "catalog_images/richardson-112/kelly-white_front.jpg",
           "back": "catalog_images/richardson-112/kelly-white_back.jpg",
           "hexes": [
-            "#02815d",
+            "#037d5e",
             "#ededf0"
           ]
         },
@@ -2042,7 +2042,7 @@
           "front": "catalog_images/richardson-112/maroon-white_front.jpg",
           "back": "catalog_images/richardson-112/maroon-white_back.jpg",
           "hexes": [
-            "#5a1f30",
+            "#5b1f31",
             "#ededf0"
           ]
         },
@@ -6773,7 +6773,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-kelly_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -6803,7 +6803,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-maroon_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#5a1f30"
+            "#5b1f31"
           ]
         },
         {
@@ -7547,7 +7547,7 @@
           "front": "catalog_images/yupoong-6606/maroon-grey_front.jpg",
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
-            "#5a1f30",
+            "#5b1f31",
             "#8b8988"
           ]
         },
@@ -7896,9 +7896,9 @@
           "front": "catalog_images/yupoong-6006/kelly-white-kelly_front.jpg",
           "back": "catalog_images/yupoong-6006/kelly-white-kelly_back.jpg",
           "hexes": [
-            "#02815d",
+            "#037d5e",
             "#ededf0",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -10842,7 +10842,7 @@
           "front": "catalog_images/bella-canvas-3480/athletic-heather-navy_front.jpg",
           "back": "catalog_images/bella-canvas-3480/athletic-heather-navy_back.jpg",
           "hexes": [
-            "#bab9bb",
+            "#b7b9ba",
             "#282e40"
           ]
         },
@@ -16767,7 +16767,7 @@
           "back": "catalog_images/tultex-246/white-kelly_back.jpg",
           "hexes": [
             "#ededf0",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -16857,7 +16857,7 @@
           "back": "catalog_images/next-level-3604/natural-maroon_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#5a1f30"
+            "#5b1f31"
           ]
         },
         {
@@ -17532,7 +17532,7 @@
           "front": "catalog_images/bella-canvas-1200/athleticheather-black_front.png",
           "back": "catalog_images/bella-canvas-1200/athleticheather-black_back.png",
           "hexes": [
-            "#bab9bb",
+            "#b7b9ba",
             "#252324"
           ]
         },
@@ -17563,7 +17563,7 @@
           "back": "catalog_images/bella-canvas-1200/white-kelly_back.png",
           "hexes": [
             "#ededf0",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -17593,7 +17593,7 @@
           "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png",
           "hexes": [
             "#ededf0",
-            "#1950a3"
+            "#1850a3"
           ]
         }
       ]
@@ -17690,7 +17690,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2d292e",
+            "#2e2a2f",
             "#252324"
           ]
         },
@@ -17698,7 +17698,11 @@
           "name": "Black Marble/ Black",
           "hex": "#383433",
           "front": "catalog_images/bella-canvas-3200/black-marble-black_front.jpg",
-          "back": "catalog_images/bella-canvas-3200/black-marble-black_back.jpg"
+          "back": "catalog_images/bella-canvas-3200/black-marble-black_back.jpg",
+          "hexes": [
+            "#3b3839",
+            "#252324"
+          ]
         },
         {
           "name": "Black/ Deep Heather",
@@ -17757,7 +17761,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
             "#8b8988",
-            "#5a1f30"
+            "#5b1f31"
           ]
         },
         {
@@ -17787,7 +17791,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
             "#8b8988",
-            "#1950a3"
+            "#1850a3"
           ]
         },
         {
@@ -17837,7 +17841,7 @@
           "back": "catalog_images/bella-canvas-3200/white-kelly_back.jpg",
           "hexes": [
             "#ededf0",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -17847,7 +17851,7 @@
           "back": "catalog_images/bella-canvas-3200/white-maroon_back.jpg",
           "hexes": [
             "#ededf0",
-            "#5a1f30"
+            "#5b1f31"
           ]
         },
         {
@@ -17887,7 +17891,7 @@
           "back": "catalog_images/bella-canvas-3200/white-true-royal_back.jpg",
           "hexes": [
             "#ededf0",
-            "#1950a3"
+            "#1850a3"
           ]
         }
       ]
@@ -19533,7 +19537,7 @@
           "front": "catalog_images/bella-canvas-1201/athletic-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-1201/athletic-heather-black_back.jpg",
           "hexes": [
-            "#bab9bb",
+            "#b7b9ba",
             "#252324"
           ]
         },
@@ -19564,7 +19568,7 @@
           "back": "catalog_images/bella-canvas-1201/white-kelly_back.jpg",
           "hexes": [
             "#ededf0",
-            "#02815d"
+            "#037d5e"
           ]
         },
         {
@@ -19594,7 +19598,7 @@
           "back": "catalog_images/bella-canvas-1201/white-true-royal_back.jpg",
           "hexes": [
             "#ededf0",
-            "#1950a3"
+            "#1850a3"
           ]
         }
       ]
@@ -20764,6 +20768,180 @@
           "hex": "#ce0228",
           "front": "catalog_images/bella-canvas-6003/red_front.jpg",
           "back": "catalog_images/bella-canvas-6003/red_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-8800",
+      "name": "Women's Flowy Racerback Tank",
+      "brand": "Bella/Canvas",
+      "style": "8800",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#d8d8d6",
+          "front": "catalog_images/bella-canvas-8800/white_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#302f34",
+          "front": "catalog_images/bella-canvas-8800/black_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/black_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#a7a7a7",
+          "front": "catalog_images/bella-canvas-8800/athletic-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Athletic Heather/ Neon Pink",
+          "hex": "#b2868a",
+          "front": "catalog_images/bella-canvas-8800/athletic-heather-neon-pink_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/athletic-heather-neon-pink_back.jpg",
+          "hexes": [
+            "#b7b9ba",
+            "#fd7392"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ White",
+          "hex": "#c1bfb7",
+          "front": "catalog_images/bella-canvas-8800/athletic-heather-white_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/athletic-heather-white_back.jpg",
+          "hexes": [
+            "#b7b9ba",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#2f2d30",
+          "front": "catalog_images/bella-canvas-8800/black-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/black-heather_back.jpg"
+        },
+        {
+          "name": "Black Marble",
+          "hex": "#3b3839",
+          "front": "catalog_images/bella-canvas-8800/black-marble_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/black-marble_back.jpg"
+        },
+        {
+          "name": "Blue Marble",
+          "hex": "#c7dbf5",
+          "front": "catalog_images/bella-canvas-8800/blue-marble_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/blue-marble_back.jpg"
+        },
+        {
+          "name": "Coral",
+          "hex": "#f2796e",
+          "front": "catalog_images/bella-canvas-8800/coral_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/coral_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#635f5f",
+          "front": "catalog_images/bella-canvas-8800/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/dark-grey-heather_back.jpg"
+        },
+        {
+          "name": "Heather Deep Teal",
+          "hex": "#668ca6",
+          "front": "catalog_images/bella-canvas-8800/heather-deep-teal_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/heather-deep-teal_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#3b4252",
+          "front": "catalog_images/bella-canvas-8800/heather-navy_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/heather-navy_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#257564",
+          "front": "catalog_images/bella-canvas-8800/kelly_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/kelly_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#5b1f34",
+          "front": "catalog_images/bella-canvas-8800/maroon_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/maroon_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#c97e80",
+          "front": "catalog_images/bella-canvas-8800/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/mauve_back.jpg"
+        },
+        {
+          "name": "Midnight",
+          "hex": "#2b2b35",
+          "front": "catalog_images/bella-canvas-8800/midnight_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/midnight_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#5b5a46",
+          "front": "catalog_images/bella-canvas-8800/military-green_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/military-green_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#97eccb",
+          "front": "catalog_images/bella-canvas-8800/mint_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/mint_back.jpg"
+        },
+        {
+          "name": "Neon Pink",
+          "hex": "#fd85a0",
+          "front": "catalog_images/bella-canvas-8800/neon-pink_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/neon-pink_back.jpg"
+        },
+        {
+          "name": "Peach Slub",
+          "hex": "#f0c4b1",
+          "front": "catalog_images/bella-canvas-8800/peach-slub_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/peach-slub_back.jpg"
+        },
+        {
+          "name": "Pebble Brown",
+          "hex": "#927e77",
+          "front": "catalog_images/bella-canvas-8800/pebble-brown_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/pebble-brown_back.jpg"
+        },
+        {
+          "name": "Red Marble",
+          "hex": "#f2bfce",
+          "front": "catalog_images/bella-canvas-8800/red-marble_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/red-marble_back.jpg"
+        },
+        {
+          "name": "Soft Pink",
+          "hex": "#f2dce0",
+          "front": "catalog_images/bella-canvas-8800/soft-pink_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/soft-pink_back.jpg"
+        },
+        {
+          "name": "Storm",
+          "hex": "#858388",
+          "front": "catalog_images/bella-canvas-8800/storm_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/storm_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#12376e",
+          "front": "catalog_images/bella-canvas-8800/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/true-royal_back.jpg"
+        },
+        {
+          "name": "White Marble",
+          "hex": "#c4c4bd",
+          "front": "catalog_images/bella-canvas-8800/white-marble_front.jpg",
+          "back": "catalog_images/bella-canvas-8800/white-marble_back.jpg"
         }
       ]
     }

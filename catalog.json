@@ -20944,6 +20944,34 @@
           "back": "catalog_images/bella-canvas-8800/white-marble_back.jpg"
         }
       ]
+    },
+    {
+      "id": "bella-canvas-8804",
+      "name": "Women\u2019s Flowy Rolled Cuffs Muscle Tee",
+      "brand": "Bella/Canvas",
+      "style": "8804",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ece8e9",
+          "front": "catalog_images/bella-canvas-8804/white_front.jpg",
+          "back": "catalog_images/bella-canvas-8804/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#312c30",
+          "front": "catalog_images/bella-canvas-8804/black_front.jpg",
+          "back": "catalog_images/bella-canvas-8804/black_back.jpg"
+        },
+        {
+          "name": "Dark Grey Heather",
+          "hex": "#5c595b",
+          "front": "catalog_images/bella-canvas-8804/dark-grey-heather_front.jpg",
+          "back": "catalog_images/bella-canvas-8804/dark-grey-heather_back.jpg"
+        }
+      ]
     }
   ]
 }

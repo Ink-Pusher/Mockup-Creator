@@ -5087,6 +5087,154 @@
       ]
     },
     {
+      "id": "port-co-pc099ls",
+      "name": "Beach Wash® Garment-Dyed Long Sleeve Tee",
+      "brand": "Port & Co",
+      "style": "PC099LS",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Amethyst",
+          "hex": "#7a6eba",
+          "front": "catalog_images/port-co-pc099ls/amethyst_front.png",
+          "back": "catalog_images/port-co-pc099ls/amethyst_back.png"
+        },
+        {
+          "name": "Black",
+          "hex": "#242424",
+          "front": "catalog_images/port-co-pc099ls/black_front.png",
+          "back": "catalog_images/port-co-pc099ls/black_back.png"
+        },
+        {
+          "name": "Bluemoon",
+          "hex": "#5994ce",
+          "front": "catalog_images/port-co-pc099ls/bluemoon_front.png",
+          "back": "catalog_images/port-co-pc099ls/bluemoon_back.png"
+        },
+        {
+          "name": "Coal",
+          "hex": "#494a4e",
+          "front": "catalog_images/port-co-pc099ls/coal_front.png",
+          "back": "catalog_images/port-co-pc099ls/coal_back.png"
+        },
+        {
+          "name": "Coolmint",
+          "hex": "#89d6c2",
+          "front": "catalog_images/port-co-pc099ls/coolmint_front.png",
+          "back": "catalog_images/port-co-pc099ls/coolmint_back.png"
+        },
+        {
+          "name": "Denim Blue",
+          "hex": "#3f5264",
+          "front": "catalog_images/port-co-pc099ls/denim-blue_front.png",
+          "back": "catalog_images/port-co-pc099ls/denim-blue_back.png"
+        },
+        {
+          "name": "Dijon",
+          "hex": "#daa457",
+          "front": "catalog_images/port-co-pc099ls/dijon_front.png",
+          "back": "catalog_images/port-co-pc099ls/dijon_back.png"
+        },
+        {
+          "name": "Dovegrey",
+          "hex": "#9ea599",
+          "front": "catalog_images/port-co-pc099ls/dovegrey_front.png",
+          "back": "catalog_images/port-co-pc099ls/dovegrey_back.png"
+        },
+        {
+          "name": "Fruitpunch",
+          "hex": "#db6173",
+          "front": "catalog_images/port-co-pc099ls/fruitpunch_front.png",
+          "back": "catalog_images/port-co-pc099ls/fruitpunch_back.png"
+        },
+        {
+          "name": "Glacier",
+          "hex": "#adcce1",
+          "front": "catalog_images/port-co-pc099ls/glacier_front.png",
+          "back": "catalog_images/port-co-pc099ls/glacier_back.png"
+        },
+        {
+          "name": "Mist",
+          "hex": "#6b89a1",
+          "front": "catalog_images/port-co-pc099ls/mist_front.png",
+          "back": "catalog_images/port-co-pc099ls/mist_back.png"
+        },
+        {
+          "name": "Neoncoral",
+          "hex": "#fe6f7b",
+          "front": "catalog_images/port-co-pc099ls/neoncoral_front.png",
+          "back": "catalog_images/port-co-pc099ls/neoncoral_back.png"
+        },
+        {
+          "name": "Neongreen",
+          "hex": "#90f666",
+          "front": "catalog_images/port-co-pc099ls/neongreen_front.png",
+          "back": "catalog_images/port-co-pc099ls/neongreen_back.png"
+        },
+        {
+          "name": "Neonpink",
+          "hex": "#fe6e99",
+          "front": "catalog_images/port-co-pc099ls/neonpink_front.png",
+          "back": "catalog_images/port-co-pc099ls/neonpink_back.png"
+        },
+        {
+          "name": "Nordicgreen",
+          "hex": "#3e6d5c",
+          "front": "catalog_images/port-co-pc099ls/nordicgreen_front.png",
+          "back": "catalog_images/port-co-pc099ls/nordicgreen_back.png"
+        },
+        {
+          "name": "Peacock",
+          "hex": "#538d8e",
+          "front": "catalog_images/port-co-pc099ls/peacock_front.png",
+          "back": "catalog_images/port-co-pc099ls/peacock_back.png"
+        },
+        {
+          "name": "Pewter",
+          "hex": "#6f7376",
+          "front": "catalog_images/port-co-pc099ls/pewter_front.png",
+          "back": "catalog_images/port-co-pc099ls/pewter_back.png"
+        },
+        {
+          "name": "Poppy",
+          "hex": "#fd5e5e",
+          "front": "catalog_images/port-co-pc099ls/poppy_front.png",
+          "back": "catalog_images/port-co-pc099ls/poppy_back.png"
+        },
+        {
+          "name": "Redrock",
+          "hex": "#944b52",
+          "front": "catalog_images/port-co-pc099ls/redrock_front.png",
+          "back": "catalog_images/port-co-pc099ls/redrock_back.png"
+        },
+        {
+          "name": "Tidalwave",
+          "hex": "#60bbd2",
+          "front": "catalog_images/port-co-pc099ls/tidalwave_front.png",
+          "back": "catalog_images/port-co-pc099ls/tidalwave_back.png"
+        },
+        {
+          "name": "Truenavy",
+          "hex": "#282537",
+          "front": "catalog_images/port-co-pc099ls/truenavy_front.png",
+          "back": "catalog_images/port-co-pc099ls/truenavy_back.png"
+        },
+        {
+          "name": "White",
+          "hex": "#f3f3f3",
+          "front": "catalog_images/port-co-pc099ls/white_front.png",
+          "back": "catalog_images/port-co-pc099ls/white_back.png"
+        },
+        {
+          "name": "Wineberry",
+          "hex": "#7e4753",
+          "front": "catalog_images/port-co-pc099ls/wineberry_front.png",
+          "back": "catalog_images/port-co-pc099ls/wineberry_back.png"
+        }
+      ]
+    },
+    {
       "id": "lat-3507",
       "name": "Womens Fine Jersey V-Neck",
       "brand": "LAT",
@@ -10498,7 +10646,7 @@
     },
     {
       "id": "bella-canvas-6400-cvc-6400-cvc",
-      "name": "Women\u2019s Relaxed Fit Heather CVC Tee",
+      "name": "Women’s Relaxed Fit Heather CVC Tee",
       "brand": "Bella/Canvas",
       "style": "6400CVC",
       "kind": "tee",
@@ -10706,7 +10854,7 @@
     },
     {
       "id": "bella-canvas-6405",
-      "name": "Women\u2019s Relaxed Jersey V-Neck Tee",
+      "name": "Women’s Relaxed Jersey V-Neck Tee",
       "brand": "Bella/Canvas",
       "style": "6405",
       "kind": "tee",
@@ -12974,7 +13122,7 @@
     },
     {
       "id": "next-level-5013",
-      "name": "Women\u2019s Festival Muscle Tank Top",
+      "name": "Women’s Festival Muscle Tank Top",
       "brand": "Next Level",
       "style": "5013",
       "kind": "tank",
@@ -13836,7 +13984,7 @@
     },
     {
       "id": "bella-canvas-6400",
-      "name": "Women\u2019s Relaxed Jersey Tee",
+      "name": "Women’s Relaxed Jersey Tee",
       "brand": "Bella/Canvas",
       "style": "6400",
       "kind": "tee",
@@ -15482,7 +15630,7 @@
     },
     {
       "id": "hanes-f260",
-      "name": "Unisex Ultimate Cotton\u00ae Crewneck Sweatshirt",
+      "name": "Unisex Ultimate Cotton® Crewneck Sweatshirt",
       "brand": "Hanes",
       "style": "F260",
       "kind": "sweatshirt",
@@ -15606,7 +15754,7 @@
     },
     {
       "id": "independent-trading-co-afx64crp",
-      "name": "Women\u2019s Lightweight Crop Hooded Sweatshirt",
+      "name": "Women’s Lightweight Crop Hooded Sweatshirt",
       "brand": "Independent Trading Co",
       "style": "AFX64CRP",
       "kind": "hoodie",
@@ -17520,7 +17668,7 @@
     },
     {
       "id": "bella-canvas-1200",
-      "name": "Women\u2019s Micro Rib 3/4 Raglan Baby Tee",
+      "name": "Women’s Micro Rib 3/4 Raglan Baby Tee",
       "brand": "Bella/Canvas",
       "style": "1200",
       "kind": "tee",
@@ -17600,7 +17748,7 @@
     },
     {
       "id": "as-colour-4085",
-      "name": "Women\u2019s Stone Wash Heavy Tee",
+      "name": "Women’s Stone Wash Heavy Tee",
       "brand": "AS Colour",
       "style": "4085",
       "kind": "tee",
@@ -18096,7 +18244,7 @@
     },
     {
       "id": "district-dt672",
-      "name": "Women\u2019s Featherweight French Terry\u2122 Long Sleeve Crewneck",
+      "name": "Women’s Featherweight French Terry™ Long Sleeve Crewneck",
       "brand": "District",
       "style": "DT672",
       "kind": "longsleeve",
@@ -18504,7 +18652,7 @@
     },
     {
       "id": "hanes-f170",
-      "name": "Unisex Ultimate Cotton\u00ae Hooded Sweatshirt",
+      "name": "Unisex Ultimate Cotton® Hooded Sweatshirt",
       "brand": "Hanes",
       "style": "F170",
       "kind": "hoodie",
@@ -18622,7 +18770,7 @@
     },
     {
       "id": "hanes-p180",
-      "name": "Unisex EcoSmart\u00ae Full-Zip Hooded Sweatshirt",
+      "name": "Unisex EcoSmart® Full-Zip Hooded Sweatshirt",
       "brand": "Hanes",
       "style": "P180",
       "kind": "hoodie",
@@ -18662,7 +18810,7 @@
     },
     {
       "id": "hanes-f280",
-      "name": "Unisex Ultimate Cotton\u00ae Full-Zip Hooded Sweatshirt",
+      "name": "Unisex Ultimate Cotton® Full-Zip Hooded Sweatshirt",
       "brand": "Hanes",
       "style": "F280",
       "kind": "hoodie",
@@ -19969,7 +20117,7 @@
     },
     {
       "id": "bella-canvas-8882",
-      "name": "Women\u2019s Flowy Crop Tee",
+      "name": "Women’s Flowy Crop Tee",
       "brand": "Bella/Canvas",
       "style": "8882",
       "kind": "tee",
@@ -20947,7 +21095,7 @@
     },
     {
       "id": "bella-canvas-8804",
-      "name": "Women\u2019s Flowy Rolled Cuffs Muscle Tee",
+      "name": "Women’s Flowy Rolled Cuffs Muscle Tee",
       "brand": "Bella/Canvas",
       "style": "8804",
       "kind": "tank",

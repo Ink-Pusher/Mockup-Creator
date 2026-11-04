@@ -1005,9 +1005,38 @@ def run_description_scrape(site, source, brand, style, csv_path, want_fetch=True
     found is a note to follow up on, never a reason to fail the run."""
     print("\n--- descriptions (--descriptions) ---")
     if site == "sanmar-pdf":
-        print("  A Media Library PDF has no description text in it -- skipping.")
-        print("  Save the SanMar product PAGE and run:")
-        print(f"    python3 build_descriptions.py scrape --site sanmar <page.html> \"{brand}\" {style}")
+        # A Media Library PDF has no description text in it at all, so
+        # there is nothing to scrape -- but that's no reason to leave the
+        # product blank (SanMar adds used to ship with no description and
+        # nobody remembered the manual follow-up). Go straight to the
+        # manufacturer-site lookup, same as the no-prose S&S path below.
+        try:
+            import build_descriptions as bd
+        except ImportError:
+            print("  build_descriptions.py isn't next to this script -- skipping.")
+            return
+        product = f"{brand} {style}".strip()
+        if not want_fetch:
+            print("  A Media Library PDF has no description text in it; --no-fetch given, skipping.")
+            return
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            print("  A Media Library PDF has no description text in it, and the")
+            print("  manufacturer-site lookup needs an API key. Set one with:")
+            print("    python3 build_descriptions.py setkey")
+            print(f"  then: python3 build_descriptions.py fetch --only \"{product}\"")
+            return
+        print("  A Media Library PDF has no description text in it -- looking one up")
+        print("  on the manufacturer's own site. This does a live web search and")
+        print("  costs a few cents; pass --no-fetch to skip it.\n")
+        try:
+            args = argparse.Namespace(
+                csv=csv_path or bd.DEFAULT_CSV, only=product, from_catalog=True,
+                catalog="catalog.json", limit=None, domains=None,
+                model="claude-opus-5",
+            )
+            bd.cmd_fetch(args)
+        except SystemExit:
+            pass
         return
     try:
         import build_descriptions as bd
@@ -1166,7 +1195,25 @@ def main():
     # or "longsleeve" and they all land on the same catalog kind.
     kind = re.sub(r"[^a-z]", "", kind.lower())
     source = str(resolve_saved_page(source))
-    catalog_path = Path(rest[5]) if len(rest) > 5 else Path("catalog.json")
+    extra = list(rest[5:])
+    # An UNQUOTED two-word kind ("... Long Sleeve catalog.json") splits
+    # into kind="long" + a stray first extra arg -- which then got taken
+    # as the catalog path, silently writing a fresh one-product catalog
+    # into a file named "sleeve" (really happened, twice). Re-join words
+    # while that makes a known kind.
+    KNOWN_KINDS = ("tee", "longsleeve", "hoodie", "cap", "hat", "tote", "beanie", "sweatshirt", "tank")
+    while kind not in KNOWN_KINDS and extra:
+        joined = kind + re.sub(r"[^a-z]", "", extra[0].lower())
+        if joined in KNOWN_KINDS:
+            kind = joined
+            extra.pop(0)
+        else:
+            break
+    catalog_path = Path(extra.pop(0)) if extra else Path("catalog.json")
+    if catalog_path.suffix.lower() != ".json":
+        sys.exit(f"Error: '{catalog_path}' doesn't look like a catalog file (expected something ending "
+                 f"in .json). Check the command -- an unquoted multi-word product name or kind "
+                 f"shifts every argument after it.")
 
     KNOWN_KINDS = ("tee", "longsleeve", "hoodie", "cap", "hat", "tote", "beanie", "sweatshirt", "tank")
     if kind not in KNOWN_KINDS:

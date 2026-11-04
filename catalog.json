@@ -10852,7 +10852,7 @@
           "front": "catalog_images/bella-canvas-3480/charcoal-black-triblend-solid-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3480/charcoal-black-triblend-solid-black-triblend_back.jpg",
           "hexes": [
-            "#343337",
+            "#333237",
             "#252324"
           ]
         },
@@ -17593,7 +17593,7 @@
           "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png",
           "hexes": [
             "#ededf0",
-            "#1850a3"
+            "#154fa2"
           ]
         }
       ]
@@ -17751,7 +17751,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
             "#8b8988",
-            "#343337"
+            "#333237"
           ]
         },
         {
@@ -17791,7 +17791,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
             "#8b8988",
-            "#1850a3"
+            "#154fa2"
           ]
         },
         {
@@ -17891,7 +17891,7 @@
           "back": "catalog_images/bella-canvas-3200/white-true-royal_back.jpg",
           "hexes": [
             "#ededf0",
-            "#1850a3"
+            "#154fa2"
           ]
         }
       ]
@@ -19598,7 +19598,7 @@
           "back": "catalog_images/bella-canvas-1201/white-true-royal_back.jpg",
           "hexes": [
             "#ededf0",
-            "#1850a3"
+            "#154fa2"
           ]
         }
       ]
@@ -20970,6 +20970,46 @@
           "hex": "#5c595b",
           "front": "catalog_images/bella-canvas-8804/dark-grey-heather_front.jpg",
           "back": "catalog_images/bella-canvas-8804/dark-grey-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "bella-canvas-8838",
+      "name": "Women's Slouchy Tank",
+      "brand": "Bella/Canvas",
+      "style": "8838",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Charcoal Black Slub",
+          "hex": "#38363b",
+          "front": "catalog_images/bella-canvas-8838/charcoal-black-slub_front.jpg",
+          "back": "catalog_images/bella-canvas-8838/charcoal-black-slub_back.jpg"
+        },
+        {
+          "name": "Charcoal Black Triblend",
+          "hex": "#333238",
+          "front": "catalog_images/bella-canvas-8838/charcoal-black-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-8838/charcoal-black-triblend_back.jpg"
+        },
+        {
+          "name": "Mauve",
+          "hex": "#d18787",
+          "front": "catalog_images/bella-canvas-8838/mauve_front.jpg",
+          "back": "catalog_images/bella-canvas-8838/mauve_back.jpg"
+        },
+        {
+          "name": "Red Triblend",
+          "hex": "#ec424c",
+          "front": "catalog_images/bella-canvas-8838/red-triblend_front.jpg",
+          "back": "catalog_images/bella-canvas-8838/red-triblend_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#04488d",
+          "front": "catalog_images/bella-canvas-8838/true-royal_front.jpg",
+          "back": "catalog_images/bella-canvas-8838/true-royal_back.jpg"
         }
       ]
     }

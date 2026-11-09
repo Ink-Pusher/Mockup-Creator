@@ -734,6 +734,97 @@ def hint_royalapparel(html_text, root):
     return out
 
 
+# ---------------------------------------------------------------------------
+# Clone freshness guard
+#
+# Three separate incidents came from starting an add on a stale clone (the
+# other person's pushes then collide in catalog.json / the CSV, and the
+# merge dialog has twice been "resolved" in ways that took the live site
+# down). This asks GitHub how this clone's HEAD compares to origin/main
+# BEFORE any work starts, and refuses to run if the clone is behind.
+#
+# Works without a git binary (GitHub Desktop machines don't have one on
+# PATH): the local HEAD sha is read straight out of .git, and the compare
+# is one unauthenticated call to GitHub's public API. Offline or
+# can't-tell situations warn and proceed -- never block real work on a
+# network hiccup.
+def _local_head_sha(repo_root):
+    git_dir = Path(repo_root) / ".git"
+    try:
+        head = (git_dir / "HEAD").read_text().strip()
+        if not head.startswith("ref:"):
+            return head
+        ref = head.split(" ", 1)[1].strip()
+        ref_file = git_dir / ref
+        if ref_file.exists():
+            return ref_file.read_text().strip()
+        packed = git_dir / "packed-refs"
+        if packed.exists():
+            for line in packed.read_text().splitlines():
+                parts = line.strip().split()
+                if len(parts) == 2 and parts[1] == ref:
+                    return parts[0]
+    except OSError:
+        pass
+    return None
+
+def _origin_repo_slug(repo_root):
+    try:
+        cfg = (Path(repo_root) / ".git" / "config").read_text()
+    except OSError:
+        return None
+    m = re.search(r"url\s*=\s*\S*github\.com[:/]([^\s/]+/[^\s/]+?)(?:\.git)?\s*$", cfg, re.M)
+    return m.group(1) if m else None
+
+def ensure_clone_fresh(repo_root=None):
+    """Exit with a fetch-first message if GitHub has commits this clone lacks."""
+    if os.environ.get("SKIP_FRESH_CHECK"):
+        return
+    repo_root = repo_root or Path(__file__).resolve().parent
+    sha = _local_head_sha(repo_root)
+    slug = _origin_repo_slug(repo_root)
+    if not sha or not slug:
+        return  # not a normal clone -- nothing sensible to check
+    import urllib.request, urllib.error
+    url = f"https://api.github.com/repos/{slug}/compare/{sha}...main"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "mockup-creator-fresh-check",
+                                                   "Accept": "application/vnd.github+json"})
+        with urllib.request.urlopen(req, timeout=6) as r:
+            data = json.loads(r.read().decode("utf-8"))
+        status = data.get("status")
+        n = data.get("ahead_by", 0)
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            # Local HEAD isn't on GitHub = there are unpushed commits here,
+            # so the compare can't run. Can't prove freshness -- remind, allow.
+            print("  (Heads up: this clone has unpushed commits, so freshness vs GitHub")
+            print("   can't be verified. If you haven't pulled this session, do it first.)")
+        return
+    except Exception:
+        return  # offline / API hiccup -- never block on that
+    if status == "identical" or (status == "behind"):
+        if status == "behind":
+            print("  (Reminder: you have committed work that isn't pushed yet -- push when done.)")
+        return
+    print()
+    print("  " + "=" * 62)
+    print("  STOP: GitHub has %d commit(s) this computer hasn't pulled yet." % n)
+    print("  Starting an add on an out-of-date copy is what causes the")
+    print("  merge-conflict mess.")
+    print()
+    print("  Fix (takes 10 seconds):")
+    print("    1. Open GitHub Desktop")
+    print("    2. Click  Fetch origin   then  Pull origin")
+    print("    3. Re-run this exact command")
+    if status == "diverged":
+        print()
+        print("  (This clone ALSO has unpushed commits, so the pull may show a")
+        print("   conflict dialog -- if it does: Abort merge, screenshot, and ask.)")
+    print("  " + "=" * 62)
+    sys.exit(1)
+
+
 # Store boilerplate that passes the prose test but describes the SHOP,
 # not the garment. The 5040 and 5085 (outlet items) have no description
 # block at all, and the fallbacks happily served their outlet disclaimer
@@ -1064,6 +1155,7 @@ def merge_row(rows, product, description, features, supplier_note, force=False):
 
 
 def cmd_scrape(args):
+    ensure_clone_fresh()
     if args.site == "sanmar-pdf":
         print("sanmar-pdf is an images-only export -- it has no description text in it.")
         print("Save the SanMar product PAGE too and run: --site sanmar <that file>")
@@ -1186,6 +1278,7 @@ def voice_examples(path, limit=6):
 
 
 def cmd_polish(args):
+    ensure_clone_fresh()
     try:
         import anthropic
     except ImportError:
@@ -1412,6 +1505,7 @@ def call_claude_with_search(client, model, product, existing_features, domains):
 
 
 def cmd_fetch(args):
+    ensure_clone_fresh()
     try:
         import anthropic
     except ImportError:

@@ -1191,6 +1191,13 @@ def main():
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
+    # Refuse to start on a stale clone -- see ensure_clone_fresh in
+    # build_descriptions.py (set SKIP_FRESH_CHECK=1 to override offline).
+    try:
+        import build_descriptions as _bd
+        _bd.ensure_clone_fresh()
+    except ImportError:
+        pass
     # Normalize the kind so the sheet can say "Long Sleeve", "long-sleeve"
     # or "longsleeve" and they all land on the same catalog kind.
     kind = re.sub(r"[^a-z]", "", kind.lower())

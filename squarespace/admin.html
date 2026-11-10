@@ -395,6 +395,55 @@
 </style>
 </head>
 <body>
+<!-- ================= INK PUSHER ADMIN BAR (shared) =================
+     Paste this same block at the very top of EVERY admin page's Code Block.
+     Keep the copies identical; the master copy lives in
+     Ink Pusher Digital Print/site/admin-bar.html.
+     To add a future admin tool: add one line to ADMIN_PAGES below, then paste the
+     updated block into every admin page.
+     Each page says which entry it is with data-current="..." on the script tag.
+     All admin pages share one sign-in (same Supabase project, same inkpusher.com site). -->
+<div id="ipab" class="ipab"></div>
+<style>
+  .ipab{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0d0d0d;color:#fff;
+    display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:8px 16px;margin:0;box-sizing:border-box;
+    position:relative;z-index:5;}
+  .ipab *{box-sizing:border-box;}
+  .ipab-title{font-family:Poppins,-apple-system,sans-serif;font-weight:800;font-size:14px;letter-spacing:.01em;
+    color:#8FF0C8;white-space:nowrap;margin:0;}
+  .ipab-links{display:flex;flex-wrap:wrap;gap:4px;margin:0;padding:0;list-style:none;}
+  .ipab-links li{margin:0;padding:0;list-style:none;}
+  .ipab a.ipab-link{display:inline-block;color:#fff !important;text-decoration:none !important;font-size:13.5px;
+    font-weight:700;line-height:1.2;padding:7px 12px;border-radius:999px;border:0;background:transparent;}
+  .ipab a.ipab-link:hover{background:rgba(255,255,255,.14);}
+  .ipab a.ipab-link.is-on{background:#8FF0C8;color:#0d0d0d !important;}
+  .ipab a.ipab-link:focus-visible{outline:3px solid #5FE0AE;outline-offset:2px;}
+</style>
+<script data-current="apparel">
+(function () {
+  // ---- ADMIN_PAGES: one entry per admin tool (key, label, page address on inkpusher.com) ----
+  var ADMIN_PAGES = [
+    { key: "apparel", label: "Apparel catalog", href: "/admin" },        // CHANGE to your apparel admin page address
+    { key: "print",   label: "Print products",  href: "/print-admin" }   // CHANGE to your print admin page address
+  ];
+  // -------------------------------------------------------------------------------------------
+  var script = document.currentScript;
+  var current = (script && script.getAttribute("data-current")) || "";
+  var bar = document.getElementById("ipab");
+  if (!bar) return;
+  var html = '<p class="ipab-title">Ink Pusher Admin</p><ul class="ipab-links">';
+  for (var i = 0; i < ADMIN_PAGES.length; i++) {
+    var p = ADMIN_PAGES[i], on = p.key === current;
+    html += '<li><a class="ipab-link' + (on ? ' is-on' : '') + '" href="' + p.href + '"' +
+      (on ? ' aria-current="page"' : '') + '>' + p.label + '</a></li>';
+  }
+  bar.innerHTML = html + '</ul>';
+  bar.setAttribute("role", "navigation");
+  bar.setAttribute("aria-label", "Admin pages");
+})();
+</script>
+<!-- =============== end INK PUSHER ADMIN BAR =============== -->
+
 <div class="wrap">
 
   <div id="configWarning">

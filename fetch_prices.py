@@ -218,7 +218,7 @@ def lookup(products, quiet=False):
                 (got if pv else reasons).append((pv, pn) if pv else pn)
             if got:
                 v = max(x[0] for x in got)
-                note = " / ".join(x[1] for x in got) + (" (higher used)" if len(got) > 1 else "")
+                note = " / ".join(x[1] for x in got) + (" (higher used)" if len({x[0] for x in got}) > 1 else "")
             else:
                 v, note = None, "; ".join(reasons) or "no price sources set up"
         if v: found[p["id"]] = (v, note)

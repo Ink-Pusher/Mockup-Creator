@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mockup Studio — Product Admin</title>
+<title>Mockup Studio &#x2014; Product Admin</title>
 <meta name="robots" content="noindex, nofollow" />
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.5.4/papaparse.min.js"></script>
@@ -60,9 +60,9 @@
     display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--grey);margin-bottom:18px;
     min-height:18px;
   }
-  .status-bar.saving::before{content:"Saving…";font-weight:700;color:var(--mint-deep);}
-  .status-bar.saved::before{content:"Saved ✓";font-weight:700;color:var(--mint-deep);}
-  .status-bar.error::before{content:"⚠ Couldn't save -- check your connection and try again.";font-weight:700;color:var(--danger);}
+  .status-bar.saving::before{content:"Saving\2026 ";font-weight:700;color:var(--mint-deep);}
+  .status-bar.saved::before{content:"Saved \2713 ";font-weight:700;color:var(--mint-deep);}
+  .status-bar.error::before{content:"\26a0  Couldn't save -- check your connection and try again.";font-weight:700;color:var(--danger);}
 
   .category-block{margin-bottom:36px;}
   .category-block h2{
@@ -494,7 +494,7 @@
         <div class="sidebar-section">
           <div class="admin-search-wrap">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
-            <input type="text" id="adminSearchInput" placeholder="Search…" autocomplete="off" />
+            <input type="text" id="adminSearchInput" placeholder="Search&#x2026;" autocomplete="off" />
           </div>
         </div>
         <div class="sidebar-section">
@@ -550,7 +550,7 @@
       <textarea id="cmDescription" rows="3" placeholder="A short paragraph about the fabric, fit, and feel..."></textarea>
 
       <label for="cmFeatures">Features</label>
-      <textarea id="cmFeatures" rows="5" placeholder="One per line, e.g.&#10;4.2 oz./yd² (US), 50/25/25 poly/cotton/rayon&#10;Fabric laundered&#10;Side seams"></textarea>
+      <textarea id="cmFeatures" rows="5" placeholder="One per line, e.g.&#10;4.2 oz./yd&#xb2; (US), 50/25/25 poly/cotton/rayon&#10;Fabric laundered&#10;Side seams"></textarea>
       <div class="field-hint">One feature per line -- each line becomes its own bullet point.</div>
 
       <label for="cmLogoUrl">Logo image URL (optional)</label>
@@ -906,7 +906,7 @@ function renderCategories(){
           <input type="checkbox" ${visible ? "checked" : ""} />
           ${visible ? "Visible" : "Hidden"}
         </label>
-        <button type="button" class="edit-content-link${contentById.has(p.id) ? " has-content" : ""}">Edit Description${contentById.has(p.id) ? " ✓" : ""}</button>
+        <button type="button" class="edit-content-link${contentById.has(p.id) ? " has-content" : ""}">Edit Description${contentById.has(p.id) ? " \u2713" : ""}</button>
       `;
 
       card.querySelector(".edit-content-link").onclick = ()=> openContentModal(p);
@@ -1122,7 +1122,7 @@ window.addEventListener("resize", ()=>{
 function openContentModal(product){
   modalProductId = product.id;
   const existing = contentById.get(product.id) || {};
-  document.getElementById("contentModalTitle").textContent = `Edit write-up — ${product.brand} ${product.style}`;
+  document.getElementById("contentModalTitle").textContent = `Edit write-up \u2014 ${product.brand} ${product.style}`;
   document.getElementById("cmDescription").value = existing.description || "";
   document.getElementById("cmFeatures").value = (existing.features || []).join("\n");
   document.getElementById("cmLogoUrl").value = existing.logo_url || "";
@@ -1158,7 +1158,7 @@ document.getElementById("contentModalOverlay").addEventListener("click", (e)=>{
 document.getElementById("modalSaveBtn").onclick = async ()=>{
   if(!modalProductId) return;
   const statusEl = document.getElementById("modalStatus");
-  statusEl.textContent = "Saving…";
+  statusEl.textContent = "Saving\u2026";
   statusEl.className = "modal-status";
 
   // Blank lines (e.g. accidental double line-breaks while typing) are
@@ -1181,9 +1181,9 @@ document.getElementById("modalSaveBtn").onclick = async ()=>{
     return;
   }
   contentById.set(modalProductId, row);
-  statusEl.textContent = "Saved ✓";
+  statusEl.textContent = "Saved \u2713";
   statusEl.className = "modal-status saved";
-  renderCategories(); // refreshes the "Add write-up" / "Edit write-up ✓" label on the card
+  renderCategories(); // refreshes the "Add write-up" / "Edit write-up \u2713" label on the card
   setTimeout(closeContentModal, 500);
 };
 
@@ -1475,21 +1475,21 @@ function renderLandingEditor(){
 
     const optionsHTML = candidates
       .filter(p => !cfg.featured_ids.includes(p.id))
-      .map(p => `<option value="${p.id}">${p.brand} ${p.style} — ${p.name}</option>`).join("");
+      .map(p => `<option value="${p.id}">${p.brand} ${p.style} \u2014 ${p.name}</option>`).join("");
 
     const tileSrc = cfg.tile_url ? `${cfg.tile_url}${cfg.tile_url.includes("?")?"&":"?"}t=${Date.now()}` : "";
     card.innerHTML = `
       <div class="landing-row-head">
         <h3>${row.label}</h3>
         <span class="auto-note">${autoMode
-          ? "Automatic — follows your product order. Click Rearrange to take control."
-          : chosen.length + " hand-picked — drag the chips to reorder"}</span>
+          ? "Automatic \u2014 follows your product order. Click Rearrange to take control."
+          : chosen.length + " hand-picked \u2014 drag the chips to reorder"}</span>
       </div>
       <div class="landing-row-body">
         <div class="tile-box">
           ${cfg.tile_url
             ? `<img src="${tileSrc}" alt="" />`
-            : `<div class="tile-empty">No custom tile — using a product photo</div>`}
+            : `<div class="tile-empty">No custom tile \u2014 using a product photo</div>`}
           <input type="file" accept="image/jpeg,image/png,image/webp" class="tile-file" />
           <div style="margin-top:8px;display:flex;gap:8px;justify-content:center;">
             <button type="button" class="btn tile-upload">Upload tile</button>
@@ -1500,7 +1500,7 @@ function renderLandingEditor(){
           <div class="feat-chips">${chipsHTML || `<span class="auto-note">No matching products.</span>`}</div>
           <div class="feat-add-row">
             ${autoMode ? `<button type="button" class="btn primary feat-rearrange">Rearrange</button>` : ""}
-            <select class="feat-select"><option value="">Add a product…</option>${optionsHTML}</select>
+            <select class="feat-select"><option value="">Add a product\u2026</option>${optionsHTML}</select>
             <button type="button" class="btn feat-add">Add</button>
             ${autoMode ? "" : `<button type="button" class="btn danger-outline feat-reset">Back to automatic</button>`}
           </div>
@@ -1578,7 +1578,7 @@ function renderLandingEditor(){
     if(uploadBtn) uploadBtn.onclick = async ()=>{
       const file = card.querySelector(".tile-file").files[0];
       if(!file){ note.textContent = "Choose an image file first."; return; }
-      note.textContent = "Uploading…";
+      note.textContent = "Uploading\u2026";
       const ext = (file.name.split(".").pop() || "jpg").toLowerCase();
       const path = `${row.id}.${ext === "png" ? "png" : ext === "webp" ? "webp" : "jpg"}`;
       const { error } = await supabaseClient.storage.from("landing")
@@ -1601,7 +1601,7 @@ function renderLandingEditor(){
 }
 
 async function saveLandingRow(rowId, cfg, noteEl){
-  if(noteEl) noteEl.textContent = "Saving…";
+  if(noteEl) noteEl.textContent = "Saving\u2026";
   const { error } = await supabaseClient.from("landing_rows").upsert({
     row_id: rowId,
     featured_ids: cfg.featured_ids,
@@ -1613,7 +1613,7 @@ async function saveLandingRow(rowId, cfg, noteEl){
     console.error("[admin] landing save failed:", error);
     return;
   }
-  if(noteEl) noteEl.textContent = "Saved — live on the landing page.";
+  if(noteEl) noteEl.textContent = "Saved \u2014 live on the landing page.";
 }
 
 // ---------- view toggle ----------
@@ -1735,7 +1735,7 @@ document.getElementById("csvGithubBtn").onclick = async ()=>{
   const statusEl = document.getElementById("csvStatus");
   btn.disabled = true;
   const label = btn.textContent;
-  btn.textContent = "Loading…";
+  btn.textContent = "Loading\u2026";
   statusEl.textContent = "";
   statusEl.className = "modal-status";
   try {
@@ -1863,7 +1863,7 @@ function renderCsvPreview(){
     html += `<tr class="${r.matched ? "csv-row-matched" : "csv-row-unmatched"}">
       <td>${escapeHtmlAdmin(r.productName)}</td>
       <td>${matchCell}</td>
-      <td>${escapeHtmlAdmin(r.description).slice(0,150)}${r.description.length>150?"…":""}</td>
+      <td>${escapeHtmlAdmin(r.description).slice(0,150)}${r.description.length>150?"\u2026":""}</td>
     </tr>`;
   });
   html += `</tbody></table>`;
@@ -1901,7 +1901,7 @@ document.getElementById("csvImportBtn").onclick = async ()=>{
   const statusEl = document.getElementById("csvStatus");
   const rows = csvParsedRows.filter(willActuallyImport);
   if(!rows.length) return;
-  statusEl.textContent = "Importing…";
+  statusEl.textContent = "Importing\u2026";
   statusEl.className = "modal-status";
   const payload = rows.map(r=>({
     product_id: r.matched.id,
@@ -1925,7 +1925,7 @@ document.getElementById("csvImportBtn").onclick = async ()=>{
     const existing = contentById.get(row.product_id) || {};
     contentById.set(row.product_id, { ...existing, ...row });
   });
-  statusEl.textContent = `Imported ${rows.length} product${rows.length===1?"":"s"} ✓`;
+  statusEl.textContent = `Imported ${rows.length} product${rows.length===1?"":"s"} \u2713`;
   statusEl.className = "modal-status saved";
   renderCategories();
 };
@@ -2018,7 +2018,7 @@ document.getElementById("bulkLogoAssignBtn").onclick = async ()=>{
   const url = document.getElementById("bulkLogoUrl").value.trim();
   const ids = [...bulkLogoSelected];
   if(!url || !ids.length) return;
-  statusEl.textContent = "Assigning…";
+  statusEl.textContent = "Assigning\u2026";
   statusEl.className = "modal-status";
   // Merges into whatever content already exists for each product --
   // this only ever touches logo_url, never clobbers a description or
@@ -2035,7 +2035,7 @@ document.getElementById("bulkLogoAssignBtn").onclick = async ()=>{
     return;
   }
   payload.forEach(row => contentById.set(row.product_id, row));
-  statusEl.textContent = `Logo assigned to ${ids.length} product${ids.length===1?"":"s"} ✓`;
+  statusEl.textContent = `Logo assigned to ${ids.length} product${ids.length===1?"":"s"} \u2713`;
   statusEl.className = "modal-status saved";
   bulkLogoSelected.clear();       // they're done; leaving them ticked invites a second accidental assign
   updateBulkLogoButtonState();

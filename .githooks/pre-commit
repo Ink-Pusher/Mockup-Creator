@@ -28,7 +28,7 @@ IMAGE_DELETE_LIMIT=25
 for f in catalog.json product_descriptions.csv; do
   if git show ":$f" 2>/dev/null | grep -qE '^(<<<<<<<|=======$|>>>>>>>)'; then
     echo ""
-    echo "  ✋ $f contains git conflict markers (<<<<<<< / ======= / >>>>>>>)."
+    echo "  ? $f contains git conflict markers (<<<<<<< / ======= / >>>>>>>)."
     echo ""
     echo "  Do NOT commit this. Fix it in three steps:"
     echo "    1. Right-click $f in GitHub Desktop -> Discard changes"
@@ -38,6 +38,22 @@ for f in catalog.json product_descriptions.csv; do
     exit 1
   fi
 done
+
+# ---- ASCII only (2026-11-11): pages get pasted into Squarespace and text gets copied around;
+# any non-ASCII character (em dash, curly quote, check mark) can turn into garbage on the way.
+# Fix with: python3 ascii_safe.py fix <file>   (keeps the page looking exactly the same)
+nonascii=""
+for f in $(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(html|js|css|py|sql|md)$'); do
+  if git show ":$f" | LC_ALL=C grep -q '[^[:print:][:space:]]'; then nonascii="$nonascii $f"; fi
+done
+if [ -n "$nonascii" ]; then
+  echo ""
+  echo "  Stopped: these files have non-ASCII characters (they can show up garbled on the site):"
+  for f in $nonascii; do echo "      $f"; done
+  echo "  Fix them (the page will look the same):  python3 ascii_safe.py fix$nonascii"
+  echo ""
+  exit 1
+fi
 
 deleted=$(git diff --cached --name-only --diff-filter=D --no-renames | grep -E "$PROTECTED")
 [ -z "$deleted" ] && exit 0
@@ -51,7 +67,7 @@ if [ -z "$others" ] && [ "$images" -le "$IMAGE_DELETE_LIMIT" ]; then
 fi
 
 echo ""
-echo "  ✋ This commit DELETES files the catalog depends on."
+echo "  ? This commit DELETES files the catalog depends on."
 echo ""
 if [ -n "$others" ]; then
   printf '%s\n' "$others" | sed 's/^/      /'

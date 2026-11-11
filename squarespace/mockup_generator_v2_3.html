@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Ink Pusher — Mockup Studio</title>
+<title>Ink Pusher &#x2014; Mockup Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1017,14 +1017,14 @@
     <label>Browse full catalog</label>
     <div class="catalog-mega-wrap">
       <button type="button" class="catalog-mega-trigger" id="catalogMegaTrigger">
-        <span id="catalogMegaTriggerLabel">Select a product…</span>
+        <span id="catalogMegaTriggerLabel">Select a product&#x2026;</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="mega-panel" id="catalogMegaPanel"></div>
     </div>
     <div class="catalog-search-wrap">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" id="catalogSearchInput" placeholder="Search by brand or style #…" autocomplete="off" />
+      <input type="text" id="catalogSearchInput" placeholder="Search by brand or style #&#x2026;" autocomplete="off" />
       <div class="catalog-search-results" id="catalogSearchResults"></div>
     </div>
     <label for="jobNameInput">Job name</label>
@@ -1222,17 +1222,17 @@
       </div>
       <label class="inline-label" style="display:block;margin:10px 0 6px;">2. Add a shape</label>
       <div class="shape-grid">
-        <button class="shape-btn" data-shape="circle" title="Circle">●</button>
-        <button class="shape-btn" data-shape="square" title="Square">■</button>
-        <button class="shape-btn" data-shape="triangle" title="Triangle">▲</button>
-        <button class="shape-btn" data-shape="star" title="Star">★</button>
-        <button class="shape-btn" data-shape="heart" title="Heart">♥</button>
+        <button class="shape-btn" data-shape="circle" title="Circle">&#x25cf;</button>
+        <button class="shape-btn" data-shape="square" title="Square">&#x25a0;</button>
+        <button class="shape-btn" data-shape="triangle" title="Triangle">&#x25b2;</button>
+        <button class="shape-btn" data-shape="star" title="Star">&#x2605;</button>
+        <button class="shape-btn" data-shape="heart" title="Heart">&#x2665;</button>
       </div>
       <p class="hint" style="margin-top:6px;">Tip: picking a color while a shape is selected recolors that shape too.</p>
 
 
       <div class="undo-row">
-        <button class="btn" id="undoBtn" disabled title="Undo (Ctrl/Cmd+Z)">↩ Undo</button>
+        <button class="btn" id="undoBtn" disabled title="Undo (Ctrl/Cmd+Z)">&#x21a9; Undo</button>
         <button class="btn" id="clearBtn">Clear designs</button>
       </div>
       <div class="undo-row">
@@ -1309,7 +1309,7 @@ CONFIG.colors = Object.assign({}, DEFAULT_CONFIG.colors, (window.MOCKUP_STUDIO_C
 // default-branded UI on a customer's page.
 document.documentElement.style.setProperty("--mint", CONFIG.colors.mint);
 document.documentElement.style.setProperty("--mint-deep", CONFIG.colors.mintDeep);
-document.title = `${CONFIG.companyName} — Mockup Studio`;
+document.title = `${CONFIG.companyName} \u2014 Mockup Studio`;
 
 const CATALOG_URL = CONFIG.catalogUrl;
 const CATALOG_BASE_URL = CONFIG.catalogBaseUrl;
@@ -1740,9 +1740,9 @@ function setCatalogStatus(mode, message){
   const el = document.getElementById("catalogStatus");
   el.className = "catalog-status" + (mode ? " " + mode : "");
   if(mode === "error"){
-    el.innerHTML = `⚠ ${message} <button id="catalogRetryBtn">Retry</button>`;
+    el.innerHTML = `\u26a0 ${message} <button id="catalogRetryBtn">Retry</button>`;
     document.getElementById("catalogRetryBtn").onclick = ()=>{
-      setCatalogStatus("loading", "Loading product catalog…");
+      setCatalogStatus("loading", "Loading product catalog\u2026");
       loadRealCatalog().then(()=>{
         const firstReal = CATALOG.products.find(p => !p.pending && p.colors.length);
         if(firstReal){ state.productId = firstReal.id; }
@@ -1764,7 +1764,7 @@ function setCatalogStatus(mode, message){
 // success/failure both to the console AND visibly on the page, so this
 // doesn't require opening devtools to diagnose.
 async function loadRealCatalog(){
-  setCatalogStatus("loading", "Loading product catalog…");
+  setCatalogStatus("loading", "Loading product catalog\u2026");
   try {
     // cache:"no-store" only stops the BROWSER's own cache from serving a
     // stale response -- it has no effect on GitHub's own CDN (Fastly),
@@ -2095,7 +2095,7 @@ function renderEmptyState(product){
       el.id="emptyState"; el.className="empty-state";
       stage.appendChild(el);
     }
-    el.innerHTML = `<b>Photos coming soon</b><span>${product.name} isn't linked to the catalog yet — once its product images are added, this view will populate automatically, same as the rest of the line.</span>`;
+    el.innerHTML = `<b>Photos coming soon</b><span>${product.name} isn't linked to the catalog yet \u2014 once its product images are added, this view will populate automatically, same as the rest of the line.</span>`;
     el.style.display="flex";
   } else if(el){
     el.style.display="none";
@@ -2655,7 +2655,7 @@ function updateCatalogMegaTriggerLabel(){
   const label = document.getElementById("catalogMegaTriggerLabel");
   if(!label) return;
   const product = CATALOG.products.find(p => p.id === state.productId && !p.isCustom);
-  label.textContent = product ? `${product.name} — ${product.brand} ${product.style}` : "Select a product…";
+  label.textContent = product ? `${product.name} \u2014 ${product.brand} ${product.style}` : "Select a product\u2026";
 }
 function renderCatalogMegaPanel(){
   const panel = document.getElementById("catalogMegaPanel");
@@ -3359,7 +3359,7 @@ function checkResolutionWarning(img, side){
   if(upscale > 1.6){
     const pct = Math.round(upscale*100);
     console.warn(`[mockup] ${side} design is being enlarged to ${pct}% of its native size (${Math.round(img.width)}x${Math.round(img.height)}px source) -- may look soft or print blurry. A higher-resolution file, or File > Export as PNG instead of copy/paste from Illustrator, will look sharper.`);
-    if(warnEl){ warnEl.textContent = `⚠ Enlarged to ${pct}% of source resolution -- may look soft. Try a higher-res file.`; warnEl.style.display = "block"; }
+    if(warnEl){ warnEl.textContent = `\u26a0 Enlarged to ${pct}% of source resolution -- may look soft. Try a higher-res file.`; warnEl.style.display = "block"; }
   } else if(warnEl){
     warnEl.style.display = "none";
   }
@@ -3885,7 +3885,7 @@ function toggleEraser(){
     // (same approach already used for the distress effect). Once erased,
     // it's a bitmap like any uploaded design -- further color/text edits
     // on that layer need to happen before erasing, not after.
-    setEraserStatus("Converting to an image first…");
+    setEraserStatus("Converting to an image first\u2026");
     const multiplier = Math.max(2, obj.scaleX || 1, obj.scaleY || 1);
     const rasterDataUrl = obj.toDataURL({ format: "png", multiplier });
     replaceActiveImage(rasterDataUrl, obj, (newImg)=>{
@@ -4026,10 +4026,10 @@ async function applyRemoveBackground(){
   btn.disabled = true;
 
   try {
-    setAiStatus("Loading AI model (first use only)…");
+    setAiStatus("Loading AI model (first use only)\u2026");
     const blob = await elementToBlob(obj.getElement());
     const resultUrl = await window.__aiRemoveBackground(blob, (key, current, total)=>{
-      setAiStatus(`Removing background… ${Math.round((current/total)*100)}%`);
+      setAiStatus(`Removing background\u2026 ${Math.round((current/total)*100)}%`);
     });
     replaceActiveImage(resultUrl, obj, ()=>{
       setAiStatus("Background removed.");
@@ -4263,7 +4263,7 @@ function layerLabel(obj){
   if(obj.customName) return obj.customName;
   if(obj.type === "i-text" || obj.type === "text"){
     const t = obj.text || "";
-    return `Text: "${t.length>16 ? t.slice(0,16)+"…" : t}"`;
+    return `Text: "${t.length>16 ? t.slice(0,16)+"\u2026" : t}"`;
   }
   if(obj.type === "image") return obj.designSide ? `${obj.designSide==="front"?"Front":"Back"} design` : "Image";
   if(obj.type === "path") return "Shape";
@@ -4542,7 +4542,7 @@ function renderLayersPanel(){
     const hidden = obj.visible === false;
     row.innerHTML = `
       <span class="layer-drag" title="Drag to reorder">${DRAG_HANDLE_SVG}</span>
-      <button class="layer-eye" title="${hidden ? "Show" : "Hide"}">${hidden ? "🚫" : "👁"}</button>
+      <button class="layer-eye" title="${hidden ? "Show" : "Hide"}">${hidden ? "\ud83d\udeab" : "\ud83d\udc41"}</button>
       <span class="layer-name" title="Double-click to rename">${layerLabel(obj)}</span>
       <button class="layer-rename" title="Rename">${RENAME_SVG}</button>
       <button class="layer-gear" title="Opacity / shadow">${GEAR_SVG}</button>
@@ -4708,10 +4708,10 @@ function updateDistressButton(){
     statusEl.textContent = "";
   } else if(distressTextureErrors[key]){
     btn.disabled = true;
-    statusEl.textContent = `⚠ This texture failed to load -- check it's uploaded to distress_textures/ on GitHub.`;
+    statusEl.textContent = `\u26a0 This texture failed to load -- check it's uploaded to distress_textures/ on GitHub.`;
   } else if(!distressTextureImgs[key]){
     btn.disabled = true;
-    statusEl.textContent = "Loading texture…";
+    statusEl.textContent = "Loading texture\u2026";
   } else if(!hasActive){
     btn.disabled = true;
     statusEl.textContent = "Select an uploaded design, shape, or text first.";
@@ -4936,26 +4936,26 @@ async function saveProject(){
     projectStatus.textContent = "Project saved.";
   }catch(e){
     console.error("[mockup] save project failed:", e);
-    projectStatus.textContent = "⚠ Couldn't save the project -- check the console.";
+    projectStatus.textContent = "\u26a0 Couldn't save the project -- check the console.";
   }
 }
 
 function loadProject(file){
   cancelEraserSession(); // same reasoning as undo() -- loadFromJSON below replaces every object, so any in-progress erase session's stale references need to be dropped first
   const projectStatus = document.getElementById("projectStatus");
-  projectStatus.textContent = "Loading project…";
+  projectStatus.textContent = "Loading project\u2026";
   const reader = new FileReader();
-  reader.onerror = ()=>{ projectStatus.textContent = "⚠ Couldn't read that file."; };
+  reader.onerror = ()=>{ projectStatus.textContent = "\u26a0 Couldn't read that file."; };
   reader.onload = (e)=>{
     let payload;
     try{
       payload = JSON.parse(e.target.result);
     }catch(err){
-      projectStatus.textContent = "⚠ That doesn't look like a valid project file.";
+      projectStatus.textContent = "\u26a0 That doesn't look like a valid project file.";
       return;
     }
     if(!payload || payload.kind !== "ink-pusher-mockup-project" || !payload.canvas){
-      projectStatus.textContent = "⚠ That doesn't look like a valid project file.";
+      projectStatus.textContent = "\u26a0 That doesn't look like a valid project file.";
       return;
     }
     const finishRestoring = ()=>{
@@ -5123,7 +5123,7 @@ document.getElementById("applyDistressBtn").onclick = ()=>{
   // result stays crisp, then shrink the placed image back down by that
   // same factor so it doesn't visually jump in size.
   const statusEl = document.getElementById("distressStatus");
-  statusEl.textContent = "Applying…";
+  statusEl.textContent = "Applying\u2026";
   const multiplier = Math.max(2, obj.scaleX || 1, obj.scaleY || 1);
   const rasterDataUrl = obj.toDataURL({ format: "png", multiplier });
   const rasterImg = new Image();
@@ -5137,7 +5137,7 @@ document.getElementById("applyDistressBtn").onclick = ()=>{
       });
     }catch(e){
       console.error("[mockup] distressing shape/text failed:", e);
-      statusEl.textContent = "⚠ Couldn't apply distress -- check the console.";
+      statusEl.textContent = "\u26a0 Couldn't apply distress -- check the console.";
     }
   };
   rasterImg.src = rasterDataUrl;
@@ -5884,7 +5884,7 @@ initTheme();
    of guessable -- Squarespace caches Code Blocks and browsers cache
    pages, and a stale paste is indistinguishable from a real bug without
    this. */
-const STUDIO_BUILD = "2026-11-03.1";
+const STUDIO_BUILD = "2026-11-11.1";
 document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */

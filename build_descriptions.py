@@ -264,7 +264,7 @@ class Node:
 
         walk(self)
         raw = "".join(parts)
-        lines = [re.sub(r"[ \t ]+", " ", ln).strip() for ln in raw.split("\n")]
+        lines = [re.sub(r"[ \t\u00a0]+", " ", ln).strip() for ln in raw.split("\n")]
         return "\n".join(ln for ln in lines if ln)
 
 
@@ -318,15 +318,15 @@ def clean_text(s):
         return ""
     s = htmllib.unescape(str(s))
     s = re.sub(r"<[^>]+>", " ", s)            # vendors put HTML inside JSON strings
-    s = s.replace(" ", " ").replace(" ", " ")
+    s = s.replace("\u00a0", " ").replace("\u2028", " ")
     s = re.sub(r"[ \t]+", " ", s)
     s = re.sub(r"\n{2,}", "\n", s)
     return s.strip()
 
 
 def split_lines(s):
-    parts = re.split(r"[\n\r]+|(?:\s*[•·●]\s*)", s or "")
-    return [p.strip(" \t-–—•*").strip() for p in parts if p and p.strip(" \t-–—•*").strip()]
+    parts = re.split(r"[\n\r]+|(?:\s*[\u2022\u00b7\u25cf]\s*)", s or "")
+    return [p.strip(" \t-\u2013\u2014\u2022*").strip() for p in parts if p and p.strip(" \t-\u2013\u2014\u2022*").strip()]
 
 
 def iter_jsonld(root):

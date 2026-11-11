@@ -1,5 +1,5 @@
 <!-- ================================================
-     INK PUSHER — Squarespace Landing Page Nav
+     INK PUSHER -- Squarespace Landing Page Nav
      Updated: swapped accent green to #28e9aa to match
      the rest of the site, changed the "View Full Product
      List" icon from a down-arrow to a 3-bar (hamburger)
@@ -22,7 +22,7 @@
 #ip-wrap * { box-sizing: border-box; margin: 0; padding: 0; }
 #ip-wrap a { text-decoration: none; }
 
-/* ── Single nav bar ── */
+/* -- Single nav bar -- */
 #ip-nav {
     background: #000;
     border-top: 5px solid #fff;
@@ -36,7 +36,7 @@
     position: relative;
 }
 
-/* ── View Full Product List ── */
+/* -- View Full Product List -- */
 #ip-vpa {
     display: inline-flex;
     align-items: center;
@@ -59,7 +59,7 @@
 }
 #ip-vpa:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
 
-/* Mega dropdown — position:fixed + JS-positioned, so it
+/* Mega dropdown -- position:fixed + JS-positioned, so it
    escapes Squarespace's per-section stacking contexts entirely
    (fixed is relative to the viewport, not any ancestor section) */
 #ip-mega {
@@ -99,7 +99,7 @@
 }
 .ip-mega-col a:hover { background: #28e9aa; padding-left: 12px; }
 
-/* ── Nav items ── */
+/* -- Nav items -- */
 #ip-items {
     display: flex;
     align-items: stretch;
@@ -108,19 +108,19 @@
     list-style: none;
     flex: 1;
     overflow: visible;
-    background: #fff; /* this is what makes the gaps between items — and
-                          the dividers themselves — read as white cutouts */
+    background: #fff; /* this is what makes the gaps between items \2014  and
+                          the dividers themselves -- read as white cutouts */
 }
 .ip-item {
     position: relative;
     display: flex;
     align-items: stretch;
-    flex: 1; /* equal-width boxes — simpler and more reliable than sizing
+    flex: 1; /* equal-width boxes \2014  simpler and more reliable than sizing
                 each one to its own text, which is what kept going wrong */
     justify-content: center;
     list-style: none;
 }
-/* A real (small) gap between items, not an overlap — the white #ip-items
+/* A real (small) gap between items, not an overlap -- the white #ip-items
    background shows through it, and because only the right edge has a
    point, that gap naturally reads as an arrow-shaped white divider */
 .ip-item + .ip-item {
@@ -167,12 +167,12 @@
     clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
 }
 /* Promotional (the last real item, before the plain Search/Login <li>)
-   keeps its notch on the left but drops the point on the right — no
+   keeps its notch on the left but drops the point on the right \2014  no
    divider is needed between it and the login pill */
 .ip-item:nth-last-child(2) .ip-link::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 14px 50%);
 }
-/* Rainbow hover fill, one distinct color per item running left to right —
+/* Rainbow hover fill, one distinct color per item running left to right --
    set as variables so both the background layer and the text color pick
    them up together */
 .ip-item:nth-child(1):hover > .ip-link { --ip-fill: #ff4d3d; --ip-text: #fff; }
@@ -185,7 +185,7 @@
 
 
 
-/* Dropdowns — fixed positioning, JS-calculated, same fix as
+/* Dropdowns -- fixed positioning, JS-calculated, same fix as
    the mega-menu so they escape section stacking contexts */
 .ip-drop {
     display: none;
@@ -233,9 +233,9 @@
     pointer-events: none;
 }
 
-/* ── Right side ── */
+/* -- Right side -- */
 /* The Search/Login <li> is a direct child of #ip-items too, so without
-   this it would inherit #ip-items' white background — restore the black
+   this it would inherit #ip-items' white background \2014  restore the black
    backing here since only the gaps between the 5 nav items should be
    white cutouts, not the login area. */
 #ip-items > li:last-child {
@@ -268,7 +268,7 @@
 }
 #ip-login:hover { transform: translate(-1px,-1px); box-shadow: 3px 3px 0 #000; }
 
-/* ── Hamburger ── */
+/* -- Hamburger -- */
 #ip-burger {
     display: none;
     background: none;
@@ -281,11 +281,11 @@
     flex-shrink: 0;
 }
 
-/* ══════════════════════════════════════════
-   SAFETY BREAKPOINT — keeps the now-larger nav
+/* ==========================================
+   SAFETY BREAKPOINT -- keeps the now-larger nav
    text from crowding/overflowing on laptop-size
    screens, before the mobile layout takes over
-   ══════════════════════════════════════════ */
+   ========================================== */
 @media (max-width: 1280px) and (min-width: 769px) {
     #ip-nav { padding: 0 12px; }
     #ip-vpa { font-size: 12px; padding: 9px 16px; margin-right: 8px; }
@@ -298,9 +298,9 @@
     #ip-login { font-size: 11px; padding: 6px 10px; }
 }
 
-/* ══════════════════════════════════════════
+/* ==========================================
    MOBILE
-   ══════════════════════════════════════════ */
+   ========================================== */
 @media (max-width: 768px) {
     #ip-nav { flex-wrap: wrap; padding: 8px 16px; gap: 8px; align-items: center; }
     #ip-burger { display: flex; margin-left: auto; }
@@ -342,7 +342,7 @@
         &#9776; View Full Product List
     </a>
 
-    <!-- Mega dropdown — CSS adjacent sibling of #ip-vpa -->
+    <!-- Mega dropdown -- CSS adjacent sibling of #ip-vpa -->
     <div id="ip-mega">
         <div class="ip-mega-col">
             <h4>Business Cards</h4>
@@ -439,10 +439,10 @@
         </div>
     </div>
 
-    <!-- Hamburger — mobile only -->
+    <!-- Hamburger -- mobile only -->
     <button id="ip-burger" onclick="ipToggleNav()" aria-label="Menu">&#9776;</button>
 
-    <!-- Nav items — matches the white-label site's top nav exactly:
+    <!-- Nav items -- matches the white-label site's top nav exactly:
          Business Cards / Marketing / Cards & Stationery /
          Signs & Banners (incl. Displays) / Promotional -->
     <ul id="ip-items">
@@ -584,8 +584,8 @@ function ipToggleNav() {
     document.getElementById('ip-items').classList.toggle('open');
 }
 
-/* ── Desktop: position + show/hide on hover, since these are
-   fixed-position and can't use CSS-only hover tricks ── */
+/* -- Desktop: position + show/hide on hover, since these are
+   fixed-position and can't use CSS-only hover tricks -- */
 function ipPositionAndShow(trigger, panel) {
     var rect = trigger.getBoundingClientRect();
     panel.style.top = rect.bottom + 'px';
@@ -624,7 +624,7 @@ function ipScheduleClose() {
 // Move every dropdown panel to <body> (desktop) or back to its
 // original spot in the markup (mobile), based on the CURRENT
 // window width. This re-runs on every resize/orientation change
-// — not just once on load — so switching between phone-portrait,
+// -- not just once on load -- so switching between phone-portrait,
 // phone-landscape and desktop widths never leaves a panel
 // stranded in the wrong place (e.g. a phone rotated to landscape
 // is often wider than 768px, which used to break things).
@@ -637,14 +637,14 @@ function ipApplyLayout() {
     ipCloseAll();
 
     if (ipMobile) {
-        // Back to mobile — restore panels to exactly where they
+        // Back to mobile -- restore panels to exactly where they
         // started in the HTML (captured once on load)
         if (ipMega._ipOrig) ipMega._ipOrig.parent.insertBefore(ipMega, ipMega._ipOrig.next);
         ipItemDropPairs.forEach(function (pair) {
             if (pair.drop._ipOrig) pair.drop._ipOrig.parent.insertBefore(pair.drop, pair.drop._ipOrig.next);
         });
     } else {
-        // Back to desktop — re-parent to <body> so the fixed-position
+        // Back to desktop -- re-parent to <body> so the fixed-position
         // panels escape Squarespace's per-section stacking contexts
         document.body.appendChild(ipMega);
         ipItemDropPairs.forEach(function (pair) { document.body.appendChild(pair.drop); });
@@ -655,11 +655,11 @@ document.addEventListener('DOMContentLoaded', function () {
     ipVpa = document.getElementById('ip-vpa');
     ipMega = document.getElementById('ip-mega');
 
-    // ── Grab item/dropdown pairs BEFORE moving anything, since
+    // -- Grab item/dropdown pairs BEFORE moving anything, since
     // once a .ip-drop is re-parented to <body> it's no longer
-    // findable via item.querySelector('.ip-drop') — that query
+    // findable via item.querySelector('.ip-drop') -- that query
     // has to happen first, while the DOM is still in its original
-    // nested structure. ──
+    // nested structure. --
     document.querySelectorAll('.ip-item').forEach(function (item) {
         var link = item.querySelector('.ip-link');
         var drop = item.querySelector('.ip-drop');
@@ -684,7 +684,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // View Full Product List -> mega menu
-    // (bound directly to the button itself — NOT a parent wrapper —
+    // (bound directly to the button itself -- NOT a parent wrapper --
     // since #ip-vpa's actual parent is the whole #ip-nav bar, which
     // was the cause of the Login button incorrectly triggering this)
     ipVpa.addEventListener('mouseenter', function () {
@@ -692,7 +692,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ipOpenOnly(ipVpa, ipMega);
     });
 
-    // Each nav item's dropdown — using the pairs captured above,
+    // Each nav item's dropdown -- using the pairs captured above,
     // not a fresh querySelector that would now fail
     ipItemDropPairs.forEach(function (pair) {
         pair.item.addEventListener('mouseenter', function () {
@@ -703,7 +703,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Single global check: if the mouse isn't currently over the
     // nav bar OR any open panel, schedule a close (with a short
-    // grace period) rather than closing instantly — this is what
+    // grace period) rather than closing instantly -- this is what
     // lets the cursor cross the small gap between a trigger and
     // its dropdown without the menu vanishing first.
     document.addEventListener('mousemove', function (e) {
@@ -724,7 +724,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Close on scroll so panels never get stranded mid-page
     window.addEventListener('scroll', ipCloseAll);
 
-    // Debounced resize/orientation handling — keeps ipMobile and
+    // Debounced resize/orientation handling -- keeps ipMobile and
     // panel placement in sync no matter how the window or device
     // orientation changes after the page has already loaded
     var ipResizeTimer;
@@ -734,7 +734,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-/* ── Mobile: click-to-toggle, panels become static (see CSS) ── */
+/* -- Mobile: click-to-toggle, panels become static (see CSS) -- */
 function ipToggleDrop(e, el) {
     if (!ipMobile) return;
     e.preventDefault();

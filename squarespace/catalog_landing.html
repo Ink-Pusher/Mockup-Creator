@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Ink Pusher — Browse the Catalog</title>
+<title>Ink Pusher &#x2014; Browse the Catalog</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -379,7 +379,7 @@ function renderBrands(products, logoByProduct){
   const brands = [...byBrand.entries()].sort((a,b)=> b[1].count - a[1].count);
   if(!brands.length) return;
   document.getElementById("brandGrid").innerHTML = brands.map(([name, e]) =>
-    '<a class="brand-pill" href="' + CATALOG_PAGE_URL + '?brand=' + encodeURIComponent(e.linkName) + '" title="' + name + ' — ' + e.count + ' styles">' +
+    '<a class="brand-pill" href="' + CATALOG_PAGE_URL + '?brand=' + encodeURIComponent(e.linkName) + '" title="' + name + ' \u2014 ' + e.count + ' styles">' +
       (e.logo ? '<img src="' + e.logo + '" alt="' + name + '" loading="lazy" ' +
                 'onerror="this.outerHTML=\'<span>' + name.replace(/'/g,"&#39;") + '</span>\'" />'
               : '<span>' + name + '</span>') +

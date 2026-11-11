@@ -17,8 +17,8 @@ WHERE PRICES COME FROM (Timm's rules, 2026-11-10):
       - SanMar: the SDL data download's CASE_PRICE (that's the price SanMar's site shows; PIECE_PRICE is
         SanMar's own +$1 broken-case price)
       - AS Colour: the Gold price list PDF (one price for every color)
-      - Royal Apparel: the regular price on royalapparel.net's product page (low end of the range = S-XL)
-      - anything else: enter by hand in Product Admin
+      - Royal Apparel and anything else: enter by hand in Product Admin (Royal's case-price table
+        only shows to signed-in accounts; use its COLOR XS-XL case price)
   * most common price among non-white colors in sizes S-XL (all sizes for totes, bags, kids)
   * a style both S&S and SanMar sell gets the HIGHER of the two (either vendor may be the one in stock)
 Product Admin then shows the garment price: vendor price rounded UP to $0.05, + $1 (+ $2 for fleece).
@@ -50,8 +50,8 @@ ROUND_STEP, MARKUP, FLEECE_MARKUP = 0.05, 1.00, 2.00
 FLEECE_KINDS = {"hoodie", "sweatshirt"}
 BASE_SIZES = {"S", "M", "L", "XL", "SM", "MD", "LG", "XS"}
 AS_COLOUR = {"ascolour"}
-ROYAL = {"royalapparel"}                        # read from royalapparel.net's public product page
-HAND_ENTERED = set()                            # brands with no price feed (enter in Product Admin)
+ROYAL = set()                                   # Royal Apparel: see class Royal (off for now)
+HAND_ENTERED = {"royalapparel"}                 # brands with no price feed (enter in Product Admin)
 # ---------------------------------------------------------------------------------------------
 
 def norm(s):
@@ -180,9 +180,9 @@ class ASColour:
 
 # ---------------------------------------------------------------------------------- Royal Apparel
 class Royal:
-    """royalapparel.net product pages carry the style's regular price range publicly ("regLowPrice" /
-    "regHighPrice"): the low end is the base price (S-XL), the high end the biggest sizes. Sale prices
-    are a separate field and never used. One page at a time, with a pause."""
+    """OFF (2026-11-11): the public page's regLowPrice ($6.98 for the 5051) is a single-piece price, not
+    the CASE price Timm uses (5051 color XS-XL case = $5.51, white $4.73). The case-price table only loads
+    for signed-in accounts, so Royal Apparel prices are typed in Product Admin for now."""
     def price(self, p):
         url = f"https://www.royalapparel.net/product/{urllib.parse.quote(p['style'])}"
         try:

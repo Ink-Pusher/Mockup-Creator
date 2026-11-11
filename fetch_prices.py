@@ -17,7 +17,8 @@ WHERE PRICES COME FROM (Timm's rules, 2026-11-10):
       - SanMar: the SDL data download's CASE_PRICE (that's the price SanMar's site shows; PIECE_PRICE is
         SanMar's own +$1 broken-case price)
       - AS Colour: the Gold price list PDF (one price for every color)
-      - Royal Apparel and anything else: enter by hand in Product Admin
+      - Royal Apparel: the regular price on royalapparel.net's product page (low end of the range = S-XL)
+      - anything else: enter by hand in Product Admin
   * most common price among non-white colors in sizes S-XL (all sizes for totes, bags, kids)
   * a style both S&S and SanMar sell gets the HIGHER of the two (either vendor may be the one in stock)
 Product Admin then shows the garment price: vendor price rounded UP to $0.05, + $1 (+ $2 for fleece).
@@ -49,7 +50,8 @@ ROUND_STEP, MARKUP, FLEECE_MARKUP = 0.05, 1.00, 2.00
 FLEECE_KINDS = {"hoodie", "sweatshirt"}
 BASE_SIZES = {"S", "M", "L", "XL", "SM", "MD", "LG", "XS"}
 AS_COLOUR = {"ascolour"}
-HAND_ENTERED = {"royalapparel"}                 # no price feed; enter in Product Admin
+ROYAL = {"royalapparel"}                        # read from royalapparel.net's public product page
+HAND_ENTERED = set()                            # brands with no price feed (enter in Product Admin)
 # ---------------------------------------------------------------------------------------------
 
 def norm(s):
@@ -176,6 +178,26 @@ class ASColour:
         v = self.prices.get(p["style"].upper())
         return (v, f"AS Colour price list ({self.name}) ${v:.2f}") if v else (None, "not on the AS Colour price list")
 
+# ---------------------------------------------------------------------------------- Royal Apparel
+class Royal:
+    """royalapparel.net product pages carry the style's regular price range publicly ("regLowPrice" /
+    "regHighPrice"): the low end is the base price (S-XL), the high end the biggest sizes. Sale prices
+    are a separate field and never used. One page at a time, with a pause."""
+    def price(self, p):
+        url = f"https://www.royalapparel.net/product/{urllib.parse.quote(p['style'])}"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "InkPusherPriceSync/1.0"})
+            with urllib.request.urlopen(req, timeout=45) as r: html = r.read().decode("utf-8", "replace")
+        except Exception as e:
+            return None, f"Royal Apparel page didn't load ({e})"
+        finally:
+            time.sleep(SS_DELAY)
+        lo = re.search(r'"regLowPrice"\s*:\s*([\d.]+)', html) or re.search(r'"regPrice"\s*:\s*([\d.]+)', html)
+        hi = re.search(r'"regHighPrice"\s*:\s*([\d.]+)', html)
+        if not lo or float(lo.group(1)) <= 0: return None, "no price on the Royal Apparel page"
+        v = round(float(lo.group(1)), 2)
+        return v, f"Royal Apparel ${v:.2f}" + (f" (range up to ${float(hi.group(1)):.2f} for big sizes)" if hi and float(hi.group(1)) > v else "")
+
 # ---------------------------------------------------------------------------------- Supabase
 def _post(path, body, token=None, prefer=None):
     h = {"apikey": SUPABASE_ANON_KEY, "Content-Type": "application/json", "Authorization": f"Bearer {token or SUPABASE_ANON_KEY}"}
@@ -221,7 +243,9 @@ def lookup(products, quiet=False):
     for p in products:
         b = norm(p["brand"])
         if b in HAND_ENTERED: misses.append((p, "enter by hand in Product Admin (no price feed)")); continue
-        if b in AS_COLOUR:
+        if b in ROYAL:
+            v, note = Royal().price(p)
+        elif b in AS_COLOUR:
             v, note = asc.price(p) if asc else (None, "AS Colour price list not found")
         else:
             got = []

@@ -22,7 +22,7 @@ SETUP (one time):
 USAGE:
     python3 build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
         [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]
-        [--descriptions [product_descriptions.csv]] [--no-descriptions]
+        [--descriptions [product_descriptions.csv]] [--no-descriptions] [--no-prices]
 
     Reading the write-up is ON BY DEFAULT. Pass --descriptions only to point it
     at a different CSV; pass --no-descriptions to skip it. It ALSO reads the product's write-up (description paragraph,
@@ -34,6 +34,11 @@ USAGE:
     explains where the text is found and what to do when a page defeats it.
     Never fatal: if no write-up can be found, the photos and catalog entry are
     still written and the run just tells you to follow up.
+
+    It also looks up the product's wholesale blank price and saves it to Product
+    Admin (fetch_prices.py: S&S API, SanMar data file, AS Colour price list).
+    One-time setup per computer: python3 fetch_prices.py setup. Pass --no-prices
+    to skip. Never fatal either.
 
     kind must be one of: tee, hoodie, sweatshirt, tank, cap, hat, beanie, tote
 
@@ -1144,6 +1149,10 @@ def main():
     # description and a second command nobody remembers to run. This one costs
     # money (a live web search, a few cents), so --no-fetch turns it off.
     want_fetch = True
+    # Also ON BY DEFAULT: look up the product's wholesale blank price (S&S API, SanMar data file,
+    # AS Colour price list) and save it to Product Admin, so a new product arrives priced for the
+    # price estimator. See fetch_prices.py (one-time setup: python3 fetch_prices.py setup).
+    want_prices = True
 
     cleaned = []
     i = 0
@@ -1155,6 +1164,10 @@ def main():
             continue
         if arg == "--no-fetch":
             want_fetch = False
+            i += 1
+            continue
+        if arg == "--no-prices":
+            want_prices = False
             i += 1
             continue
         if arg == "--descriptions":
@@ -1386,6 +1399,13 @@ def main():
 
     if want_descriptions:
         run_description_scrape(site, source, brand, style, descriptions_csv, want_fetch)
+
+    if want_prices:
+        try:
+            import fetch_prices
+            fetch_prices.update_prices([product_id])
+        except ImportError:
+            print("\n  fetch_prices.py isn't next to this script -- skipping the price lookup.")
 
     if site == "sanmar":
         style_num, all_slugs = sanmar_list_other_colors(html)

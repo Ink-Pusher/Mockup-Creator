@@ -163,6 +163,15 @@
   .admin-edit-row{display:flex;gap:4px;}
   .admin-edit-row .admin-edit-field{width:auto;flex:1;min-width:0;}
 
+  /* ---------- Blank price (print admins only) ---------- */
+  .admin-price{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px;margin:8px 0 4px;padding:7px 8px;border-radius:9px;background:var(--btn-fill);font-size:10.5px;}
+  .admin-price.no-price{background:#fff3f0;}
+  .admin-price span.lbl{display:block;color:var(--grey);font-weight:700;letter-spacing:.02em;}
+  .admin-price .admin-price-in{width:100%;box-sizing:border-box;margin:0;font-size:12px;font-weight:800;}
+  .admin-price-out{grid-column:1 / -1;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--border-soft);padding-top:5px;margin-top:2px;}
+  .admin-price-out strong{font-size:13px;}
+  .admin-price-out em{font-style:normal;color:var(--grey);}
+
   /* ---------- Edit content link + modal ---------- */
   .edit-content-link{
     display:block;width:100%;text-align:left;background:none;border:none;font-family:inherit;
@@ -506,6 +515,10 @@
             <input type="checkbox" id="missingContentFilter" />
             Missing a write-up <span id="missingContentCount" style="color:var(--grey);font-weight:500;margin-left:auto;"></span>
           </label>
+          <label class="sidebar-brand-row" id="missingPriceRow" style="cursor:pointer;display:none;">
+            <input type="checkbox" id="missingPriceFilter" />
+            Missing a price <span id="missingPriceCount" style="color:var(--grey);font-weight:500;margin-left:auto;"></span>
+          </label>
         </div>
         <div class="sidebar-section" id="sidebarClearSection" style="display:none;">
           <button type="button" class="sidebar-clear-btn" id="sidebarClearBtn">Clear all filters</button>
@@ -635,6 +648,18 @@ const SUPABASE_ANON_KEY = "sb_publishable_1ik4UyMIim4n-3FbWCzRRA_kHCy0N5G";
 const CATALOG_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/catalog.json";
 const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Creator/main/";
 
+// Blank prices (the price estimator's garment price). Only print admins can see or edit them
+// (database rule on apparel_blank_costs). Garment price = vendor price rounded UP to the next
+// $0.05, + $1 (+ $2 for fleece) -- the same formula as the estimator (apparel/pricing.js) and
+// fetch_prices.py. An override price replaces that result entirely.
+const PRICE_CONFIG = { roundStep: 0.05, markup: 1.00, fleeceMarkup: 2.00, fleeceKinds: ["hoodie", "sweatshirt"] };
+function garmentPrice(vendorPrice, kind){
+  if(!(vendorPrice > 0)) return null;
+  const cents = Math.ceil(vendorPrice * 100 - 1e-6), step = Math.round(PRICE_CONFIG.roundStep * 100);
+  const rounded = Math.ceil(cents / step) * step / 100;
+  return Math.round((rounded + (PRICE_CONFIG.fleeceKinds.includes(kind) ? PRICE_CONFIG.fleeceMarkup : PRICE_CONFIG.markup)) * 100) / 100;
+}
+
 // Mirrors CATEGORY_DEFS in the main mockup tool -- keep these in sync if
 // that list ever changes, so products group the same way in both places.
 const CATEGORY_DEFS = [
@@ -681,8 +706,11 @@ let supabaseClient = null;
 let allProducts = [];
 let overridesById = new Map(); // product_id -> { visible, sort_order, brand_override, style_override, name_override }
 let contentById = new Map();   // product_id -> { description, features, logo_url, supplier_note }
+let pricesById = new Map();    // product_id -> apparel_blank_costs row (print admins only)
+let canSeePrices = false;
+let adminEmail = "";
 let modalProductId = null;
-const adminState = { searchQuery: "", activeBrands: new Set(), activeCategory: "all", activeTags: new Set(), missingContentOnly: false };
+const adminState = { searchQuery: "", activeBrands: new Set(), activeCategory: "all", activeTags: new Set(), missingContentOnly: false, missingPriceOnly: false };
 
 function setStatus(kind){
   const bar = document.getElementById("statusBar");
@@ -742,12 +770,20 @@ async function loadEverything(){
   // CDN in front of raw.githubusercontent.com caches independently for a
   // few minutes per edge node, so a fresh push might not show here
   // immediately without this cache-busting query param.
-  const [catalogRes, overridesRes, contentRes, landingRes] = await Promise.all([
+  const [catalogRes, overridesRes, contentRes, landingRes, adminRes, pricesRes, userRes] = await Promise.all([
     fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }).then(r => r.json()),
     supabaseClient.from("product_overrides").select("*"),
     supabaseClient.from("product_content").select("*"),
     supabaseClient.from("landing_rows").select("*"),
+    supabaseClient.rpc("is_print_admin"),
+    supabaseClient.from("apparel_blank_costs").select("*"),
+    supabaseClient.auth.getUser(),
   ]);
+  // Prices are private: only print admins get the price row on each card.
+  canSeePrices = adminRes.data === true && !pricesRes.error;
+  pricesById = new Map(((canSeePrices && pricesRes.data) || []).map(r => [r.product_id, r]));
+  adminEmail = (userRes.data && userRes.data.user && userRes.data.user.email) || "";
+  document.getElementById("missingPriceRow").style.display = canSeePrices ? "flex" : "none";
   // Landing config is additive: if its table hasn't been created yet the
   // rest of the admin works untouched, and the Landing tab explains itself.
   landingTableMissing = !!landingRes.error;
@@ -764,6 +800,15 @@ async function loadEverything(){
   renderSidebarBrandList();
   renderCategories();
 }
+
+// what the price estimator charges for the blank: the override if set, else the formula
+function currentPrice(p){
+  const r = pricesById.get(p.id);
+  if(!r) return null;
+  if(r.override_cost != null) return Number(r.override_cost);
+  return r.blank_cost != null ? Number(r.blank_cost) : garmentPrice(Number(r.vendor_price), p.kind);
+}
+const money2 = (n) => n == null ? "" : Number(n).toFixed(2);
 
 function currentVisible(p){
   const o = overridesById.get(p.id);
@@ -797,11 +842,13 @@ function matchesFilters(p){
     if(!haystack.includes(q)) return false;
   }
   if(adminState.missingContentOnly && hasExistingContent(p.id)) return false;
+  if(adminState.missingPriceOnly && currentPrice(p) != null) return false;
   return true;
 }
 
 function renderCategories(){
   updateMissingContentCount(); // stays in sync with every render, not just specific save actions
+  updateMissingPriceCount();
   const wrap = document.getElementById("categoriesWrap");
   wrap.innerHTML = "";
   let anyRendered = false;
@@ -854,6 +901,7 @@ function renderCategories(){
           <input class="admin-edit-field admin-edit-brandstyle" data-field="style_override" value="${escAttr(currentStyle(p))}" title="Style" style="max-width:70px;" />
         </div>
         <input class="admin-edit-field admin-edit-name" data-field="name_override" value="${escAttr(currentName(p))}" title="Full product name" />
+        ${canSeePrices ? priceBlock(p) : ""}
         <label class="visibility-toggle">
           <input type="checkbox" ${visible ? "checked" : ""} />
           ${visible ? "Visible" : "Hidden"}
@@ -862,12 +910,13 @@ function renderCategories(){
       `;
 
       card.querySelector(".edit-content-link").onclick = ()=> openContentModal(p);
+      if(canSeePrices) wirePriceBlock(card, p);
 
       // Corrects a catalog.json typo/rename without touching catalog.json
       // itself -- saves as an override, same table as visibility/order.
       // Saves on blur (not every keystroke) so a half-typed edit never
       // gets written mid-correction.
-      card.querySelectorAll(".admin-edit-field").forEach(input=>{
+      card.querySelectorAll(".admin-edit-field[data-field]").forEach(input=>{   // [data-field]: not the price boxes (wirePriceBlock)
         input.addEventListener("blur", async ()=>{
           const field = input.dataset.field;
           const value = input.value.trim();
@@ -1256,8 +1305,10 @@ function clearAllFilters(){
   adminState.activeCategory = "all";
   adminState.activeTags = new Set();
   adminState.missingContentOnly = false;
+  adminState.missingPriceOnly = false;
   document.getElementById("adminSearchInput").value = "";
   document.getElementById("missingContentFilter").checked = false;
+  document.getElementById("missingPriceFilter").checked = false;
   renderSidebarCategoryList();
   renderSidebarTagList();
   renderSidebarBrandList();
@@ -1265,7 +1316,7 @@ function clearAllFilters(){
   updateClearAllVisibility();
 }
 function updateClearAllVisibility(){
-  const active = adminState.searchQuery || adminState.activeBrands.size || adminState.activeTags.size || adminState.activeCategory !== "all" || adminState.missingContentOnly;
+  const active = adminState.searchQuery || adminState.activeBrands.size || adminState.activeTags.size || adminState.activeCategory !== "all" || adminState.missingContentOnly || adminState.missingPriceOnly;
   document.getElementById("sidebarClearSection").style.display = active ? "block" : "none";
 }
 document.getElementById("sidebarClearBtn").onclick = clearAllFilters;
@@ -1277,6 +1328,56 @@ document.getElementById("missingContentFilter").addEventListener("change", (e)=>
 // Live count, refreshed whenever the underlying data changes (see
 // loadEverything and every place content gets saved) -- an at-a-glance
 // health check for the catalog as a whole, not just the current filter.
+// ---------- Blank price on each card (print admins only) ----------
+function priceBlock(p){
+  const r = pricesById.get(p.id) || {};
+  const shown = currentPrice(p);
+  const tip = r.price_note ? `${r.price_note}${r.checked_at ? " -- checked " + new Date(r.checked_at).toLocaleDateString() : ""}` : "No price yet: type the vendor's original wholesale price (colors, not white).";
+  return `<div class="admin-price${shown == null ? " no-price" : ""}" title="${String(tip).replace(/"/g, "&quot;")}">
+    <label><span class="lbl">Vendor $</span><input class="admin-edit-field admin-price-in" data-price="vendor_price" inputmode="decimal" value="${money2(r.vendor_price)}" placeholder="0.00" /></label>
+    <label><span class="lbl">Override $</span><input class="admin-edit-field admin-price-in" data-price="override_cost" inputmode="decimal" value="${money2(r.override_cost)}" placeholder="none" /></label>
+    <div class="admin-price-out"><em>${r.override_cost != null ? "Override" : "Garment price"}</em><strong>${shown == null ? "No price" : "$" + money2(shown)}</strong></div>
+  </div>`;
+}
+function wirePriceBlock(card, p){
+  card.querySelectorAll(".admin-price-in").forEach(input=>{
+    input.addEventListener("keydown", (e)=>{ if(e.key === "Enter") input.blur(); });
+    input.addEventListener("blur", async ()=>{
+      const field = input.dataset.price, raw = input.value.trim().replace(/[$,\s]/g, "");
+      const value = raw === "" ? null : Number(raw);
+      if(value != null && !(value > 0 && value < 1000)){ input.value = money2((pricesById.get(p.id) || {})[field]); alert("Enter a price like 4.91"); return; }
+      const prev = pricesById.get(p.id) || {};
+      if((prev[field] == null ? null : Number(prev[field])) === value) return;
+      await savePrice(p, field, value);
+    });
+  });
+}
+async function savePrice(p, field, value){
+  setStatus("saving");
+  const prev = pricesById.get(p.id) || {};
+  const now = new Date().toISOString();
+  const vendor = field === "vendor_price" ? value : (prev.vendor_price == null ? null : Number(prev.vendor_price));
+  const row = { product_id: p.id, vendor_price: vendor, override_cost: field === "override_cost" ? value : (prev.override_cost ?? null),
+    blank_cost: garmentPrice(vendor, p.kind), price_note: prev.price_note ?? null, source: prev.source || "manual",
+    checked_at: prev.checked_at ?? null, updated_at: now, updated_by: adminEmail || "product admin" };
+  if(field === "vendor_price"){ row.source = "manual"; row.price_note = value == null ? null : `Typed in Product Admin`; row.checked_at = now; }
+  const { error } = await supabaseClient.from("apparel_blank_costs").upsert(row);
+  setStatus(error ? "error" : "saved");
+  if(error){ console.error("[admin] price save failed:", error); alert("Couldn't save the price: " + error.message); return; }
+  pricesById.set(p.id, row);
+  renderCategories();
+}
+function updateMissingPriceCount(){
+  if(!canSeePrices) return;
+  const missing = allProducts.filter(p => currentPrice(p) == null).length;
+  document.getElementById("missingPriceCount").textContent = missing ? `(${missing})` : "";
+}
+document.getElementById("missingPriceFilter").addEventListener("change", (e)=>{
+  adminState.missingPriceOnly = e.target.checked;
+  renderCategories();
+  updateClearAllVisibility();
+});
+
 function updateMissingContentCount(){
   const missing = allProducts.filter(p => !hasExistingContent(p.id)).length;
   document.getElementById("missingContentCount").textContent = missing ? `(${missing})` : "";

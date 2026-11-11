@@ -87,13 +87,27 @@ def find_file(conf_key, patterns):
 class SS:
     def __init__(self, account, key):
         self.auth = base64.b64encode(f"{account}:{key}".encode()).decode()
-    def get(self, path):
+    def get(self, path, tries=3):
         req = urllib.request.Request(SS_API + path, headers={"Authorization": f"Basic {self.auth}", "Accept": "application/json",
                                                              "User-Agent": "InkPusherPriceSync/1.0"})
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return json.loads(r.read().decode("utf-8"))
+        for n in range(tries):
+            try:
+                with urllib.request.urlopen(req, timeout=45) as r:
+                    return json.loads(r.read().decode("utf-8"))
+            except urllib.error.HTTPError:
+                raise
+            except (urllib.error.URLError, TimeoutError, OSError):
+                if n == tries - 1: raise
+                time.sleep(5 * (n + 1))   # S&S is sometimes slow: wait, then ask again
     def price(self, p):
-        """(price, note) or (None, reason)."""
+        """(price, note) or (None, reason). Never raises for a slow or unreachable S&S."""
+        try:
+            return self._price(p)
+        except urllib.error.HTTPError:
+            raise
+        except (urllib.error.URLError, TimeoutError, OSError):
+            return None, "S&S didn't answer (try again later)"
+    def _price(self, p):
         try:
             hits = self.get(f"/styles/?search={urllib.parse.quote(p['style'])}"); time.sleep(SS_DELAY)
         except urllib.error.HTTPError as e:

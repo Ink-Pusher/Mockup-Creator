@@ -32743,6 +32743,72 @@
           "swatch": "catalog_images/sportsman-sp1450/white-camo-white_swatch.jpg"
         }
       ]
+    },
+    {
+      "id": "sportsman-sp03",
+      "name": "Marled 8 Inch Beanie",
+      "brand": "Sportsman",
+      "style": "SP03",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Dark Grey",
+          "hex": "#3d3a38",
+          "front": "catalog_images/sportsman-sp03/black-dark-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp03/black-dark-grey_back.jpg",
+          "hexes": [
+            "#242224",
+            "#363638"
+          ]
+        },
+        {
+          "name": "Grey/ Charcoal",
+          "hex": "#4c4a48",
+          "front": "catalog_images/sportsman-sp03/grey-charcoal_front.jpg",
+          "back": "catalog_images/sportsman-sp03/grey-charcoal_back.jpg",
+          "hexes": [
+            "#978d92",
+            "#504c4d"
+          ]
+        },
+        {
+          "name": "Navy/ Dark Grey",
+          "hex": "#33333f",
+          "front": "catalog_images/sportsman-sp03/navy-dark-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp03/navy-dark-grey_back.jpg",
+          "hexes": [
+            "#293042",
+            "#363638"
+          ]
+        },
+        {
+          "name": "Pink/ Dark Pink",
+          "hex": "#d46e8a",
+          "front": "catalog_images/sportsman-sp03/pink-dark-pink_front.jpg",
+          "back": "catalog_images/sportsman-sp03/pink-dark-pink_back.jpg"
+        },
+        {
+          "name": "Red/ Maroon",
+          "hex": "#5d0d1b",
+          "front": "catalog_images/sportsman-sp03/red-maroon_front.jpg",
+          "back": "catalog_images/sportsman-sp03/red-maroon_back.jpg",
+          "hexes": [
+            "#c21830",
+            "#5a2231"
+          ]
+        },
+        {
+          "name": "Royal/ Navy",
+          "hex": "#1c2645",
+          "front": "catalog_images/sportsman-sp03/royal-navy_front.jpg",
+          "back": "catalog_images/sportsman-sp03/royal-navy_back.jpg",
+          "hexes": [
+            "#225394",
+            "#293042"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -11020,7 +11020,7 @@
           "front": "catalog_images/bella-canvas-3480/dark-grey-black_front.jpg",
           "back": "catalog_images/bella-canvas-3480/dark-grey-black_back.jpg",
           "hexes": [
-            "#363638",
+            "#363637",
             "#232223"
           ]
         },
@@ -28024,6 +28024,40 @@
           "hex": "#ede8e6",
           "front": "catalog_images/yupoong-1500kc/white_front.jpg",
           "back": "catalog_images/yupoong-1500kc/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "yupoong-1501p",
+      "name": "YP Classics Cuffed Pom Pom Knit Beanie",
+      "brand": "Yupoong",
+      "style": "1501P",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#110f14",
+          "front": "catalog_images/yupoong-1501p/black_front.jpg",
+          "back": "catalog_images/yupoong-1501p/black_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#2b292a",
+          "front": "catalog_images/yupoong-1501p/dark-grey_front.jpg",
+          "back": "catalog_images/yupoong-1501p/dark-grey_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#5b5858",
+          "front": "catalog_images/yupoong-1501p/heather-grey_front.jpg",
+          "back": "catalog_images/yupoong-1501p/heather-grey_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#191627",
+          "front": "catalog_images/yupoong-1501p/navy_front.jpg",
+          "back": "catalog_images/yupoong-1501p/navy_back.jpg"
         }
       ]
     }

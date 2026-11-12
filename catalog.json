@@ -864,7 +864,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/grey-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/grey-heather-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -1263,7 +1263,7 @@
           "front": "catalog_images/richardson-168/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-168/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -1370,7 +1370,7 @@
           "back": "catalog_images/richardson-112/white-navy-cmb_back.jpg",
           "hexes": [
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -1465,7 +1465,7 @@
           "hexes": [
             "#242224",
             "#ededf0",
-            "#b8b8bb"
+            "#b8b8bc"
           ]
         },
         {
@@ -1574,7 +1574,7 @@
           "back": "catalog_images/richardson-112/charcoal-navy_back.jpg",
           "hexes": [
             "#4d4a4b",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -1703,7 +1703,7 @@
           "hexes": [
             "#6b8db6",
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -1736,7 +1736,7 @@
           "back": "catalog_images/richardson-112/cream-navy-amber-gold_back.jpg",
           "hexes": [
             "#d9c9be",
-            "#2a3041",
+            "#293041",
             "#9c7942"
           ]
         },
@@ -1781,7 +1781,7 @@
           "hexes": [
             "#8b8988",
             "#4d4a4b",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -1796,7 +1796,7 @@
           "front": "catalog_images/richardson-112/heather-grey-birch-amber-gold_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-birch-amber-gold_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#cbba9c",
             "#9c7942"
           ]
@@ -1813,7 +1813,7 @@
           "front": "catalog_images/richardson-112/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -1829,7 +1829,7 @@
           "front": "catalog_images/richardson-112/heather-grey-charcoal-maroon_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-charcoal-maroon_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#4d4a4b",
             "#5a2030"
           ]
@@ -1840,7 +1840,7 @@
           "front": "catalog_images/richardson-112/heather-grey-dark-green_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-dark-green_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#184334"
           ]
         },
@@ -1850,7 +1850,7 @@
           "front": "catalog_images/richardson-112/heather-grey-light-grey_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#a0a09d"
           ]
         },
@@ -1860,8 +1860,8 @@
           "front": "catalog_images/richardson-112/heather-grey-navy_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-navy_back.jpg",
           "hexes": [
-            "#b8b8bb",
-            "#2a3041"
+            "#b8b8bc",
+            "#293041"
           ]
         },
         {
@@ -1870,7 +1870,7 @@
           "front": "catalog_images/richardson-112/heather-grey-royal_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#1b5090"
           ]
         },
@@ -1880,7 +1880,7 @@
           "front": "catalog_images/richardson-112/heather-grey-white_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-white_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#ededf0"
           ]
         },
@@ -1973,7 +1973,7 @@
           "back": "catalog_images/richardson-112/khaki-navy-cmb_back.jpg",
           "hexes": [
             "#b8a57d",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -2070,7 +2070,7 @@
           "front": "catalog_images/richardson-112/navy-charcoal_front.jpg",
           "back": "catalog_images/richardson-112/navy-charcoal_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#4d4a4b"
           ]
         },
@@ -2080,7 +2080,7 @@
           "front": "catalog_images/richardson-112/navy-khaki_front.jpg",
           "back": "catalog_images/richardson-112/navy-khaki_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#b8a57d"
           ]
         },
@@ -2090,7 +2090,7 @@
           "front": "catalog_images/richardson-112/navy-khaki-cmb_front.jpg",
           "back": "catalog_images/richardson-112/navy-khaki-cmb_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#b8a57d"
           ]
         },
@@ -2100,7 +2100,7 @@
           "front": "catalog_images/richardson-112/navy-orange_front.jpg",
           "back": "catalog_images/richardson-112/navy-orange_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#f0692a"
           ]
         },
@@ -2110,7 +2110,7 @@
           "front": "catalog_images/richardson-112/navy-white_front.jpg",
           "back": "catalog_images/richardson-112/navy-white_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0"
           ]
         },
@@ -2120,9 +2120,9 @@
           "front": "catalog_images/richardson-112/navy-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/navy-white-heather-grey_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0",
-            "#b8b8bb"
+            "#b8b8bc"
           ]
         },
         {
@@ -2131,7 +2131,7 @@
           "front": "catalog_images/richardson-112/navy-white-red_front.jpg",
           "back": "catalog_images/richardson-112/navy-white-red_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0",
             "#c31330"
           ]
@@ -2234,7 +2234,7 @@
           "hexes": [
             "#c31330",
             "#ededf0",
-            "#b8b8bb"
+            "#b8b8bc"
           ]
         },
         {
@@ -2245,7 +2245,7 @@
           "hexes": [
             "#c31330",
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -2282,7 +2282,7 @@
           "hexes": [
             "#1b5090",
             "#ededf0",
-            "#b8b8bb"
+            "#b8b8bc"
           ]
         },
         {
@@ -2352,7 +2352,7 @@
           "back": "catalog_images/richardson-112/white-navy_back.jpg",
           "hexes": [
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         }
       ]
@@ -2476,7 +2476,7 @@
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
             "#8b8988",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -2948,7 +2948,7 @@
           "back": "catalog_images/adam-s-lp101/khaki-navy_back.jpg",
           "hexes": [
             "#b8a57d",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -6961,7 +6961,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-navy_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -7546,7 +7546,7 @@
           "back": "catalog_images/yupoong-6606/charcoal-navy_back.jpg",
           "hexes": [
             "#4d4a4b",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -7634,7 +7634,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-black_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -7644,7 +7644,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-white_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-white_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#ededf0"
           ]
         },
@@ -7770,7 +7770,7 @@
           "front": "catalog_images/yupoong-6606/navy-silver_front.jpg",
           "back": "catalog_images/yupoong-6606/navy-silver_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#d7d5d4"
           ]
         },
@@ -7780,7 +7780,7 @@
           "front": "catalog_images/yupoong-6606/navy-white_front.jpg",
           "back": "catalog_images/yupoong-6606/navy-white_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0"
           ]
         },
@@ -7790,9 +7790,9 @@
           "front": "catalog_images/yupoong-6606/navy-white-navy_front.jpg",
           "back": "catalog_images/yupoong-6606/navy-white-navy_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -8103,7 +8103,7 @@
           "front": "catalog_images/yupoong-6006/navy-white_front.jpg",
           "back": "catalog_images/yupoong-6006/navy-white_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0"
           ]
         },
@@ -8113,9 +8113,9 @@
           "front": "catalog_images/yupoong-6006/navy-white-navy_front.jpg",
           "back": "catalog_images/yupoong-6006/navy-white-navy_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -8281,7 +8281,7 @@
           "front": "catalog_images/richardson-112fp/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112fp/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -8317,7 +8317,7 @@
           "front": "catalog_images/richardson-112fp/navy-white_front.jpg",
           "back": "catalog_images/richardson-112fp/navy-white_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0"
           ]
         },
@@ -9654,7 +9654,7 @@
           "front": "catalog_images/richardson-256/navy-red_front.jpg",
           "back": "catalog_images/richardson-256/navy-red_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#c31330"
           ]
         },
@@ -9664,7 +9664,7 @@
           "front": "catalog_images/richardson-256/navy-white_front.jpg",
           "back": "catalog_images/richardson-256/navy-white_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#ededf0"
           ]
         },
@@ -10995,7 +10995,7 @@
           "back": "catalog_images/bella-canvas-3480/athletic-heather-navy_back.jpg",
           "hexes": [
             "#bab9bb",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -16811,7 +16811,7 @@
           "back": "catalog_images/tultex-246/heather-denim-navy_back.jpg",
           "hexes": [
             "#49566e",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -16820,7 +16820,7 @@
           "front": "catalog_images/tultex-246/heather-grey-black_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -16830,7 +16830,7 @@
           "front": "catalog_images/tultex-246/heather-grey-heather-charcoal_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#444245"
           ]
         },
@@ -16840,8 +16840,8 @@
           "front": "catalog_images/tultex-246/heather-grey-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-navy_back.jpg",
           "hexes": [
-            "#b8b8bb",
-            "#2a3041"
+            "#b8b8bc",
+            "#293041"
           ]
         },
         {
@@ -16851,7 +16851,7 @@
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
             "#3f69a5",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -16860,7 +16860,7 @@
           "front": "catalog_images/tultex-246/navy-gold_front.jpg",
           "back": "catalog_images/tultex-246/navy-gold_back.jpg",
           "hexes": [
-            "#2a3041",
+            "#293041",
             "#faaf25"
           ]
         },
@@ -16929,7 +16929,7 @@
           "back": "catalog_images/tultex-246/white-navy_back.jpg",
           "hexes": [
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -16988,7 +16988,7 @@
           "front": "catalog_images/next-level-3604/heather-grey-black_front.jpg",
           "back": "catalog_images/next-level-3604/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8bb",
+            "#b8b8bc",
             "#242224"
           ]
         },
@@ -17725,7 +17725,7 @@
           "back": "catalog_images/bella-canvas-1200/white-navy_back.png",
           "hexes": [
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -17923,7 +17923,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
             "#8b8988",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -18013,7 +18013,7 @@
           "back": "catalog_images/bella-canvas-3200/white-navy_back.jpg",
           "hexes": [
             "#ededf0",
-            "#2a3041"
+            "#293041"
           ]
         },
         {
@@ -25291,6 +25291,100 @@
           "hex": "#757570",
           "front": "catalog_images/lane-seven-ls86000gd/pigment-tornado_front.jpg",
           "back": "catalog_images/lane-seven-ls86000gd/pigment-tornado_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls15009",
+      "name": "Heavyweight Long Sleeve Tee",
+      "brand": "Lane Seven",
+      "style": "LS15009",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Army Green",
+          "hex": "#3f3e1f",
+          "front": "catalog_images/lane-seven-ls15009/army-green_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/army-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#202020",
+          "front": "catalog_images/lane-seven-ls15009/black_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/black_back.jpg"
+        },
+        {
+          "name": "Burgundy",
+          "hex": "#681a27",
+          "front": "catalog_images/lane-seven-ls15009/burgundy_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/burgundy_back.jpg"
+        },
+        {
+          "name": "Chestnut",
+          "hex": "#794a38",
+          "front": "catalog_images/lane-seven-ls15009/chestnut_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/chestnut_back.jpg"
+        },
+        {
+          "name": "Colony Blue",
+          "hex": "#8ba6d3",
+          "front": "catalog_images/lane-seven-ls15009/colony-blue_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/colony-blue_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#d5d7e4",
+          "front": "catalog_images/lane-seven-ls15009/heather-grey_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/heather-grey_back.jpg"
+        },
+        {
+          "name": "Matcha",
+          "hex": "#ccd8c4",
+          "front": "catalog_images/lane-seven-ls15009/matcha_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/matcha_back.jpg"
+        },
+        {
+          "name": "Moon Dust",
+          "hex": "#bdbcc1",
+          "front": "catalog_images/lane-seven-ls15009/moon-dust_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/moon-dust_back.jpg"
+        },
+        {
+          "name": "Mushroom",
+          "hex": "#d7c3a8",
+          "front": "catalog_images/lane-seven-ls15009/mushroom_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/mushroom_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#21304e",
+          "front": "catalog_images/lane-seven-ls15009/navy_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/navy_back.jpg"
+        },
+        {
+          "name": "Plum",
+          "hex": "#2b1a2c",
+          "front": "catalog_images/lane-seven-ls15009/plum_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/plum_back.jpg"
+        },
+        {
+          "name": "Smoke",
+          "hex": "#3e3f44",
+          "front": "catalog_images/lane-seven-ls15009/smoke_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/smoke_back.jpg"
+        },
+        {
+          "name": "Toasted Coconut",
+          "hex": "#c79268",
+          "front": "catalog_images/lane-seven-ls15009/toasted-coconut_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/toasted-coconut_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f7f7f7",
+          "front": "catalog_images/lane-seven-ls15009/white_front.jpg",
+          "back": "catalog_images/lane-seven-ls15009/white_back.jpg"
         }
       ]
     }

@@ -29114,6 +29114,28 @@
           "back": "catalog_images/liberty-bags-8502/royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-8503r",
+      "name": "Isabella Midweight Recycled Canvas Tote",
+      "brand": "Liberty Bags",
+      "style": "8503R",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Recycled Black",
+          "hex": "#565557",
+          "front": "catalog_images/liberty-bags-8503r/recycled-black_front.jpg",
+          "back": "catalog_images/liberty-bags-8503r/recycled-black_back.jpg"
+        },
+        {
+          "name": "Recycled Natural",
+          "hex": "#e1dbcd",
+          "front": "catalog_images/liberty-bags-8503r/recycled-natural_front.jpg",
+          "back": "catalog_images/liberty-bags-8503r/recycled-natural_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -28933,6 +28933,56 @@
           ]
         }
       ]
+    },
+    {
+      "id": "liberty-bags-7006",
+      "name": "Bay View Giant Zipper Beach Tote",
+      "brand": "Liberty Bags",
+      "style": "7006",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black",
+          "hex": "#554f51",
+          "front": "catalog_images/liberty-bags-7006/black-black_front.jpg",
+          "back": "catalog_images/liberty-bags-7006/black-black_back.jpg",
+          "hexes": [
+            "#232223",
+            "#232223"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#d7d7d9",
+          "front": "catalog_images/liberty-bags-7006/white-black_front.jpg",
+          "back": "catalog_images/liberty-bags-7006/white-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#232223"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#d7d9dd",
+          "front": "catalog_images/liberty-bags-7006/white-navy_front.jpg",
+          "back": "catalog_images/liberty-bags-7006/white-navy_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#282f3f"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#d5dce3",
+          "front": "catalog_images/liberty-bags-7006/white-royal_front.jpg",
+          "back": "catalog_images/liberty-bags-7006/white-royal_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#1b5092"
+          ]
+        }
+      ]
     }
   ]
 }

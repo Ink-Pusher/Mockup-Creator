@@ -29914,6 +29914,36 @@
           "front": "catalog_images/port-authority-c951/river-blue-navy_front.jpg"
         }
       ]
+    },
+    {
+      "id": "port-authority-c955",
+      "name": "Thermal Knit Cuffed Beanie",
+      "brand": "Port Authority",
+      "style": "C955",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Olive Green",
+          "hex": "#5a5448",
+          "front": "catalog_images/port-authority-c955/olive-green_front.jpg"
+        },
+        {
+          "name": "Storm Grey",
+          "hex": "#616060",
+          "front": "catalog_images/port-authority-c955/storm-grey_front.jpg"
+        },
+        {
+          "name": "Deep Black",
+          "hex": "#444444",
+          "front": "catalog_images/port-authority-c955/deep-black_front.jpg"
+        },
+        {
+          "name": "Insignia Blue",
+          "hex": "#4f5664",
+          "front": "catalog_images/port-authority-c955/insignia-blue_front.jpg"
+        }
+      ]
     }
   ]
 }

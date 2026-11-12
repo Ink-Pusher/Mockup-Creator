@@ -11020,7 +11020,7 @@
           "front": "catalog_images/bella-canvas-3480/dark-grey-black_front.jpg",
           "back": "catalog_images/bella-canvas-3480/dark-grey-black_back.jpg",
           "hexes": [
-            "#363537",
+            "#363637",
             "#242224"
           ]
         },
@@ -30455,6 +30455,36 @@
           "name": "Royal",
           "hex": "#4160c2",
           "front": "catalog_images/q-tees-q800gs/royal_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "q-tees-s800",
+      "name": "Sustainable Recycled Tote Bag",
+      "brand": "Q-Tees",
+      "style": "S800",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#3c3b3f",
+          "front": "catalog_images/q-tees-s800/black_front.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#5b5e60",
+          "front": "catalog_images/q-tees-s800/dark-grey_front.jpg"
+        },
+        {
+          "name": "Navy Blue",
+          "hex": "#616972",
+          "front": "catalog_images/q-tees-s800/navy-blue_front.jpg"
+        },
+        {
+          "name": "Steel Grey",
+          "hex": "#8b8d93",
+          "front": "catalog_images/q-tees-s800/steel-grey_front.jpg"
         }
       ]
     }

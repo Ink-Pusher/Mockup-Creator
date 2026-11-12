@@ -7585,7 +7585,7 @@
           "front": "catalog_images/yupoong-6606/coyote-brown-black_front.jpg",
           "back": "catalog_images/yupoong-6606/coyote-brown-black_back.jpg",
           "hexes": [
-            "#9b7352",
+            "#9c7150",
             "#232223"
           ]
         },
@@ -16999,7 +16999,7 @@
           "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
           "hexes": [
             "#eae3d9",
-            "#244334"
+            "#244033"
           ]
         },
         {
@@ -27878,6 +27878,58 @@
             "#ededf0",
             "#8b8988"
           ]
+        }
+      ]
+    },
+    {
+      "id": "sportsman-sp90",
+      "name": "Chunky Knit Beanie",
+      "brand": "Sportsman",
+      "style": "SP90",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1d1b1e",
+          "front": "catalog_images/sportsman-sp90/black_front.jpg",
+          "back": "catalog_images/sportsman-sp90/black_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#38383c",
+          "front": "catalog_images/sportsman-sp90/charcoal_front.jpg",
+          "back": "catalog_images/sportsman-sp90/charcoal_back.jpg"
+        },
+        {
+          "name": "Coyote Brown",
+          "hex": "#9f562a",
+          "front": "catalog_images/sportsman-sp90/coyote-brown_front.jpg",
+          "back": "catalog_images/sportsman-sp90/coyote-brown_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#0b231a",
+          "front": "catalog_images/sportsman-sp90/forest-green_front.jpg",
+          "back": "catalog_images/sportsman-sp90/forest-green_back.jpg"
+        },
+        {
+          "name": "Grey/ White Speckled",
+          "hex": "#8d8e96",
+          "front": "catalog_images/sportsman-sp90/grey-white-speckled_front.jpg",
+          "back": "catalog_images/sportsman-sp90/grey-white-speckled_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#171c32",
+          "front": "catalog_images/sportsman-sp90/navy_front.jpg",
+          "back": "catalog_images/sportsman-sp90/navy_back.jpg"
+        },
+        {
+          "name": "Oatmeal",
+          "hex": "#c6b19d",
+          "front": "catalog_images/sportsman-sp90/oatmeal_front.jpg",
+          "back": "catalog_images/sportsman-sp90/oatmeal_back.jpg"
         }
       ]
     }

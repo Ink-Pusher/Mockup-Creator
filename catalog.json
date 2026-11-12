@@ -29616,6 +29616,45 @@
           ]
         }
       ]
+    },
+    {
+      "id": "oad-oad103",
+      "name": "Promotional Heavyweight Large Beach Tote",
+      "brand": "OAD",
+      "style": "OAD103",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Black",
+          "hex": "#bbb6ab",
+          "front": "catalog_images/oad-oad103/natural-black_front.jpg",
+          "back": "catalog_images/oad-oad103/natural-black_back.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#242223"
+          ]
+        },
+        {
+          "name": "Natural/ Navy",
+          "hex": "#c5c2ba",
+          "front": "catalog_images/oad-oad103/natural-navy_front.jpg",
+          "back": "catalog_images/oad-oad103/natural-navy_back.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#292f40"
+          ]
+        },
+        {
+          "name": "Natural/ Royal",
+          "hex": "#c7c6c7",
+          "front": "catalog_images/oad-oad103/natural-royal_front.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#225393"
+          ]
+        }
+      ]
     }
   ]
 }

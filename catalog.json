@@ -33175,6 +33175,96 @@
           "back": "catalog_images/valucap-ah30/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "valucap-ah80",
+      "name": "Washed Trucker",
+      "brand": "Valucap",
+      "style": "AH80",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Gold",
+          "hex": "#191413",
+          "front": "catalog_images/valucap-ah80/black-gold_front.jpg",
+          "back": "catalog_images/valucap-ah80/black-gold_back.jpg",
+          "hexes": [
+            "#242224",
+            "#fbaf21"
+          ]
+        },
+        {
+          "name": "Black/ Orange",
+          "hex": "#181616",
+          "front": "catalog_images/valucap-ah80/black-orange_front.jpg",
+          "back": "catalog_images/valucap-ah80/black-orange_back.jpg",
+          "hexes": [
+            "#242224",
+            "#f1692b"
+          ]
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#1c1815",
+          "front": "catalog_images/valucap-ah80/black-white_front.jpg",
+          "back": "catalog_images/valucap-ah80/black-white_back.jpg",
+          "hexes": [
+            "#242224",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Brown/ Khaki",
+          "hex": "#554035",
+          "front": "catalog_images/valucap-ah80/brown-khaki_front.jpg",
+          "back": "catalog_images/valucap-ah80/brown-khaki_back.jpg",
+          "hexes": [
+            "#4c352b",
+            "#b7a684"
+          ]
+        },
+        {
+          "name": "Dark Green/ Gold",
+          "hex": "#233f2a",
+          "front": "catalog_images/valucap-ah80/dark-green-gold_front.jpg",
+          "back": "catalog_images/valucap-ah80/dark-green-gold_back.jpg",
+          "hexes": [
+            "#184939",
+            "#fbaf21"
+          ]
+        },
+        {
+          "name": "Navy/ Grey",
+          "hex": "#1b1c2e",
+          "front": "catalog_images/valucap-ah80/navy-grey_front.jpg",
+          "back": "catalog_images/valucap-ah80/navy-grey_back.jpg",
+          "hexes": [
+            "#293041",
+            "#978d92"
+          ]
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#1c1e2b",
+          "front": "catalog_images/valucap-ah80/navy-white_front.jpg",
+          "back": "catalog_images/valucap-ah80/navy-white_back.jpg",
+          "hexes": [
+            "#293041",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#aa1e26",
+          "front": "catalog_images/valucap-ah80/red-white_front.jpg",
+          "back": "catalog_images/valucap-ah80/red-white_back.jpg",
+          "hexes": [
+            "#c1172f",
+            "#ededef"
+          ]
+        }
+      ]
     }
   ]
 }

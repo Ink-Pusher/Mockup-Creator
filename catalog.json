@@ -29568,6 +29568,54 @@
           "back": "catalog_images/oad-oad100/royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "oad-oad102",
+      "name": "Promotional Heavyweight Medium Beach Tote",
+      "brand": "OAD",
+      "style": "OAD102",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Black",
+          "hex": "#c8c4bc",
+          "front": "catalog_images/oad-oad102/natural-black_front.jpg",
+          "back": "catalog_images/oad-oad102/natural-black_back.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#242223"
+          ]
+        },
+        {
+          "name": "Natural/ Navy",
+          "hex": "#d5d1cd",
+          "front": "catalog_images/oad-oad102/natural-navy_front.jpg",
+          "back": "catalog_images/oad-oad102/natural-navy_back.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#292f40"
+          ]
+        },
+        {
+          "name": "Natural/ Red",
+          "hex": "#d0b8b7",
+          "front": "catalog_images/oad-oad102/natural-red_front.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#c11730"
+          ]
+        },
+        {
+          "name": "Natural/ Royal",
+          "hex": "#bebfc7",
+          "front": "catalog_images/oad-oad102/natural-royal_front.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#225393"
+          ]
+        }
+      ]
     }
   ]
 }

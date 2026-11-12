@@ -28159,6 +28159,80 @@
           "front": "catalog_images/adam-s-va101/white_front.jpg"
         }
       ]
+    },
+    {
+      "id": "adam-s-ol102",
+      "name": "Ollie Distressed Cap",
+      "brand": "Adam's",
+      "style": "OL102",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Tan",
+          "hex": "#414243",
+          "front": "catalog_images/adam-s-ol102/black-tan_front.jpg",
+          "hexes": [
+            "#232223",
+            "#bfa891"
+          ]
+        },
+        {
+          "name": "Charcoal/ Tan",
+          "hex": "#727176",
+          "front": "catalog_images/adam-s-ol102/charcoal-tan_front.jpg",
+          "hexes": [
+            "#4e4a4b",
+            "#bfa891"
+          ]
+        },
+        {
+          "name": "Coral/ Tan",
+          "hex": "#f2939e",
+          "front": "catalog_images/adam-s-ol102/coral-tan_front.jpg",
+          "hexes": [
+            "#ef796b",
+            "#bfa891"
+          ]
+        },
+        {
+          "name": "Light Denim/ Tan",
+          "hex": "#709dc0",
+          "front": "catalog_images/adam-s-ol102/light-denim-tan_front.jpg"
+        },
+        {
+          "name": "Mississippi Mud/ Tan",
+          "hex": "#8d6d5c",
+          "front": "catalog_images/adam-s-ol102/mississippi-mud-tan_front.jpg"
+        },
+        {
+          "name": "Navy/ Tan",
+          "hex": "#465360",
+          "front": "catalog_images/adam-s-ol102/navy-tan_front.jpg",
+          "hexes": [
+            "#282f3f",
+            "#bfa891"
+          ]
+        },
+        {
+          "name": "Royal/ Tan",
+          "hex": "#43557d",
+          "front": "catalog_images/adam-s-ol102/royal-tan_front.jpg",
+          "hexes": [
+            "#184990",
+            "#bfa891"
+          ]
+        },
+        {
+          "name": "Teal/ Tan",
+          "hex": "#548c9b",
+          "front": "catalog_images/adam-s-ol102/teal-tan_front.jpg",
+          "hexes": [
+            "#0d9aa5",
+            "#bfa891"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -192,19 +192,22 @@
   }
   /* "Price this shirt with your print" card under the features: opens the price estimator with this
      product and the selected color already picked (new tab) */
-  .pd-quote{margin-top:26px;padding:22px 22px 24px;border:2px solid var(--ink);border-radius:18px;background:var(--hover);
+  .pd-quote{margin-top:24px;padding:18px 20px 18px;border:2px solid var(--ink);border-radius:18px;background:var(--hover);
     box-shadow:4px 4px 0 var(--ink);}
-  .pd-quote-eyebrow{font-size:11.5px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#0a7a56;margin:0 0 6px;}
-  .pd-quote h3{font-size:20px;font-weight:800;line-height:1.2;margin:0 0 8px;}
-  .pd-quote p{font-size:14px;line-height:1.55;color:var(--grey);margin:0 0 16px;}
-  .pd-quote-steps{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;padding:0;margin:0 0 18px;font-size:13px;font-weight:700;}
-  .pd-quote-steps li{display:flex;align-items:center;gap:6px;}
-  .pd-quote-steps b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;}
+  .pd-quote h3{font-size:19px;font-weight:800;line-height:1.2;margin:0 0 6px;}
+  .pd-quote p{font-size:14px;line-height:1.5;color:var(--grey);margin:0 0 12px;}
+  .pd-quote-steps{display:flex;flex-wrap:wrap;gap:6px 16px;list-style:none;padding:0;margin:0 0 16px;font-size:13px;font-weight:700;line-height:20px;}
+  .pd-quote-steps li{display:flex;align-items:center;gap:6px;margin:0;padding:0;}
+  .pd-quote-steps li::before, .pd-quote-steps li::marker{content:none;}
+  /* explicit box + line-height so the site's own text styles can't push the number off center */
+  .pd-quote-steps b{flex:none;display:block;width:20px;height:20px;line-height:20px;padding:0;margin:0;text-align:center;
+    border-radius:50%;background:var(--ink);color:#fff;font-size:11px;font-weight:800;font-family:inherit;}
   .pd-quote-btn{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:15px;font-weight:800;color:var(--ink) !important;
     background:var(--mint);border:2px solid var(--ink);border-radius:999px;padding:12px 22px;transition:transform .15s ease, box-shadow .15s ease;}
   .pd-quote-btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--ink);background:var(--mint-deep);}
   .pd-quote-btn svg{flex:none;}
-  .pd-quote-note{display:block;font-size:12px;color:var(--grey);margin-top:10px;}
+  .pd-quote-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;}
+  .pd-quote-note{font-size:12px;line-height:1.4;color:var(--grey);}
   @media (max-width:640px){ .pd-quote{padding:18px 16px 20px;} .pd-quote-btn{width:100%;justify-content:center;} }
   .pd-loading, .pd-error{padding:60px 10px;text-align:center;color:var(--grey);font-size:14px;}
   .pd-error{color:#b33;}
@@ -507,15 +510,16 @@ function renderPage(){
 
         ${ESTIMATOR_KINDS[p.kind] ? `
           <div class="pd-quote">
-            <p class="pd-quote-eyebrow">Instant price</p>
             <h3>Price this ${ESTIMATOR_KINDS[p.kind]} with your print</h3>
-            <p>Upload your artwork, choose where it goes and your sizes, and see your price per piece right away. No account needed.</p>
+            <p>Upload your artwork, pick where it goes, add your sizes, and see your price per piece right away. No account needed.</p>
             <ol class="pd-quote-steps"><li><b>1</b>Add your art</li><li><b>2</b>Pick placements</li><li><b>3</b>Get your price</li></ol>
+            <div class="pd-quote-row">
             <a class="pd-quote-btn" id="pdQuoteBtn" href="${ESTIMATOR_PAGE_URL}" target="_blank" rel="noopener">
               Get an instant price
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <span class="pd-quote-note">Opens the price estimator in a new tab with this style<span id="pdQuoteColor"></span> ready to go.</span>
+            <span class="pd-quote-note">Opens in a new tab<span id="pdQuoteColor"></span></span>
+            </div>
           </div>` : ""}
       </div>
     </div>
@@ -570,7 +574,7 @@ function updateQuoteLink(){
   const color = currentProduct.colors[currentColorIndex];
   a.href = ESTIMATOR_PAGE_URL + "?product=" + encodeURIComponent(currentProduct.id) + (color && color.name ? "&color=" + encodeURIComponent(color.name) : "");
   const c = document.getElementById("pdQuoteColor");
-  if(c) c.textContent = color && color.name ? " in " + color.name : "";
+  if(c) c.textContent = color && color.name ? " with " + color.name + " picked" : "";
 }
 function isLightColor(hex){
   if(!hex) return false;

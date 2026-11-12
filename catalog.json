@@ -29507,6 +29507,21 @@
           "back": "catalog_images/liberty-bags-8802/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-8811",
+      "name": "Super Feature Tote",
+      "brand": "Liberty Bags",
+      "style": "8811",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#5f5a58",
+          "front": "catalog_images/liberty-bags-8811/black_front.jpg"
+        }
+      ]
     }
   ]
 }

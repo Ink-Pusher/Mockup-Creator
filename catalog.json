@@ -2026,7 +2026,7 @@
           "front": "catalog_images/richardson-112/loden-black_front.jpg",
           "back": "catalog_images/richardson-112/loden-black_back.jpg",
           "hexes": [
-            "#626555",
+            "#767969",
             "#242224"
           ]
         },
@@ -3683,7 +3683,7 @@
           "front": "catalog_images/richardson-112re/loden-black_front.jpg",
           "back": "catalog_images/richardson-112re/loden-black_back.jpg",
           "hexes": [
-            "#626555",
+            "#767969",
             "#242224"
           ]
         },
@@ -3693,7 +3693,7 @@
           "front": "catalog_images/richardson-112re/loden-khaki_front.jpg",
           "back": "catalog_images/richardson-112re/loden-khaki_back.jpg",
           "hexes": [
-            "#626555",
+            "#767969",
             "#b7a682"
           ]
         },
@@ -9644,7 +9644,7 @@
           "front": "catalog_images/richardson-256/loden-amber-gold_front.jpg",
           "back": "catalog_images/richardson-256/loden-amber-gold_back.jpg",
           "hexes": [
-            "#626555",
+            "#767969",
             "#9c7942"
           ]
         },
@@ -30885,7 +30885,7 @@
           "front": "catalog_images/richardson-110/loden-black_front.jpg",
           "back": "catalog_images/richardson-110/loden-black_back.jpg",
           "hexes": [
-            "#626555",
+            "#767969",
             "#242224"
           ]
         },
@@ -30948,7 +30948,7 @@
           "back": "catalog_images/richardson-112wf/khaki-loden_back.jpg",
           "hexes": [
             "#b7a682",
-            "#626555"
+            "#767969"
           ]
         },
         {
@@ -31850,6 +31850,22 @@
           "hex": "#aaa697",
           "front": "catalog_images/richardson-253/tan_front.jpg",
           "back": "catalog_images/richardson-253/tan_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "richardson-254re",
+      "name": "Ashland Hat",
+      "brand": "Richardson",
+      "style": "254RE",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Loden",
+          "hex": "#8b8e7d",
+          "front": "catalog_images/richardson-254re/loden_front.jpg",
+          "back": "catalog_images/richardson-254re/loden_back.jpg"
         }
       ]
     }

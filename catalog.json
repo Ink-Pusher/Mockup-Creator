@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#424043",
+            "#444245",
             "#232123"
           ]
         },
@@ -16831,7 +16831,7 @@
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
             "#b8b8bb",
-            "#424043"
+            "#444245"
           ]
         },
         {
@@ -28638,6 +28638,36 @@
           "name": "True Navy",
           "hex": "#1a1c25",
           "front": "catalog_images/district-dt815/true-navy_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt618",
+      "name": "Slouch Beanie",
+      "brand": "District",
+      "style": "DT618",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Charcoal Heather",
+          "hex": "#999999",
+          "front": "catalog_images/district-dt618/charcoal-heather_front.jpg"
+        },
+        {
+          "name": "Light Grey Heather",
+          "hex": "#b8b8b8",
+          "front": "catalog_images/district-dt618/light-grey-heather_front.jpg"
+        },
+        {
+          "name": "Black Dip Dye",
+          "hex": "#747474",
+          "front": "catalog_images/district-dt618/black-dip-dye_front.jpg"
+        },
+        {
+          "name": "Navy Dip Dye",
+          "hex": "#9a9fa6",
+          "front": "catalog_images/district-dt618/navy-dip-dye_front.jpg"
         }
       ]
     }

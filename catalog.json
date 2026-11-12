@@ -25989,6 +25989,100 @@
           "back": "catalog_images/lane-seven-ls16001/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lat-3502",
+      "name": "Women's Vintage Wash T-Shirt",
+      "brand": "LAT",
+      "style": "3502",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Washed Basil",
+          "hex": "#778977",
+          "front": "catalog_images/lat-3502/washed-basil_front.jpg",
+          "back": "catalog_images/lat-3502/washed-basil_back.jpg"
+        },
+        {
+          "name": "Washed Black",
+          "hex": "#535353",
+          "front": "catalog_images/lat-3502/washed-black_front.jpg",
+          "back": "catalog_images/lat-3502/washed-black_back.jpg"
+        },
+        {
+          "name": "Washed Coyote Brown",
+          "hex": "#a68364",
+          "front": "catalog_images/lat-3502/washed-coyote-brown_front.jpg",
+          "back": "catalog_images/lat-3502/washed-coyote-brown_back.jpg"
+        },
+        {
+          "name": "Washed Grey",
+          "hex": "#909291",
+          "front": "catalog_images/lat-3502/washed-grey_front.jpg",
+          "back": "catalog_images/lat-3502/washed-grey_back.jpg"
+        },
+        {
+          "name": "Washed Jet Black",
+          "hex": "#171719",
+          "front": "catalog_images/lat-3502/washed-jet-black_front.jpg",
+          "back": "catalog_images/lat-3502/washed-jet-black_back.jpg"
+        },
+        {
+          "name": "Washed Mauvelous",
+          "hex": "#c6878c",
+          "front": "catalog_images/lat-3502/washed-mauvelous_front.jpg",
+          "back": "catalog_images/lat-3502/washed-mauvelous_back.jpg"
+        },
+        {
+          "name": "Washed Natural",
+          "hex": "#e5ddd6",
+          "front": "catalog_images/lat-3502/washed-natural_front.jpg",
+          "back": "catalog_images/lat-3502/washed-natural_back.jpg"
+        },
+        {
+          "name": "Washed Navy",
+          "hex": "#454a5d",
+          "front": "catalog_images/lat-3502/washed-navy_front.jpg",
+          "back": "catalog_images/lat-3502/washed-navy_back.jpg"
+        },
+        {
+          "name": "Washed Oceanside",
+          "hex": "#2d6474",
+          "front": "catalog_images/lat-3502/washed-oceanside_front.jpg",
+          "back": "catalog_images/lat-3502/washed-oceanside_back.jpg"
+        },
+        {
+          "name": "Washed Rouge",
+          "hex": "#a2636a",
+          "front": "catalog_images/lat-3502/washed-rouge_front.jpg",
+          "back": "catalog_images/lat-3502/washed-rouge_back.jpg"
+        },
+        {
+          "name": "Washed Royal",
+          "hex": "#344d99",
+          "front": "catalog_images/lat-3502/washed-royal_front.jpg",
+          "back": "catalog_images/lat-3502/washed-royal_back.jpg"
+        },
+        {
+          "name": "Washed Saltwater",
+          "hex": "#8ac2bb",
+          "front": "catalog_images/lat-3502/washed-saltwater_front.jpg",
+          "back": "catalog_images/lat-3502/washed-saltwater_back.jpg"
+        },
+        {
+          "name": "Washed Tradewind",
+          "hex": "#66afdd",
+          "front": "catalog_images/lat-3502/washed-tradewind_front.jpg",
+          "back": "catalog_images/lat-3502/washed-tradewind_back.jpg"
+        },
+        {
+          "name": "Washed White",
+          "hex": "#ececee",
+          "front": "catalog_images/lat-3502/washed-white_front.jpg",
+          "back": "catalog_images/lat-3502/washed-white_back.jpg"
+        }
+      ]
     }
   ]
 }

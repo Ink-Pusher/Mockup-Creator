@@ -1768,7 +1768,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#4e4a4b",
             "#232223"
           ]
@@ -1779,7 +1779,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#4e4a4b",
             "#282f3f"
           ]
@@ -2475,7 +2475,7 @@
           "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#282f3f"
           ]
         },
@@ -7696,7 +7696,7 @@
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
             "#5a1f2f",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -17902,7 +17902,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#333237"
           ]
         },
@@ -17912,7 +17912,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#5a1f2f"
           ]
         },
@@ -17922,7 +17922,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#282f3f"
           ]
         },
@@ -17932,7 +17932,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#c21630"
           ]
         },
@@ -17942,7 +17942,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#1850a3"
           ]
         },
@@ -27627,7 +27627,7 @@
           "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
           "hexes": [
             "#282f3f",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         }
       ]
@@ -27804,7 +27804,7 @@
           "hexes": [
             "#232223",
             "#ededf0",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27815,7 +27815,7 @@
           "hexes": [
             "#5a1f2f",
             "#ededf0",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27826,7 +27826,7 @@
           "hexes": [
             "#282f3f",
             "#ededf0",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27837,7 +27837,7 @@
           "hexes": [
             "#282f3f",
             "#ededf0",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27848,7 +27848,7 @@
           "hexes": [
             "#c21630",
             "#ededf0",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27859,7 +27859,7 @@
           "hexes": [
             "#1b5192",
             "#ededf0",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         }
       ]
@@ -29259,6 +29259,46 @@
           "name": "White",
           "hex": "#f3f0ec",
           "front": "catalog_images/liberty-bags-8505r/white_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "liberty-bags-8507",
+      "name": "Seaside Cotton Pigment Dyed Large Tote",
+      "brand": "Liberty Bags",
+      "style": "8507",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Blue Jean",
+          "hex": "#8996a7",
+          "front": "catalog_images/liberty-bags-8507/blue-jean_front.jpg",
+          "back": "catalog_images/liberty-bags-8507/blue-jean_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#a19b99",
+          "front": "catalog_images/liberty-bags-8507/grey_front.jpg",
+          "back": "catalog_images/liberty-bags-8507/grey_back.jpg"
+        },
+        {
+          "name": "Sea Glass Green",
+          "hex": "#9bdbca",
+          "front": "catalog_images/liberty-bags-8507/sea-glass-green_front.jpg",
+          "back": "catalog_images/liberty-bags-8507/sea-glass-green_back.jpg"
+        },
+        {
+          "name": "Seafoam Green",
+          "hex": "#8ebfb5",
+          "front": "catalog_images/liberty-bags-8507/seafoam-green_front.jpg",
+          "back": "catalog_images/liberty-bags-8507/seafoam-green_back.jpg"
+        },
+        {
+          "name": "Washed Black",
+          "hex": "#545255",
+          "front": "catalog_images/liberty-bags-8507/washed-black_front.jpg",
+          "back": "catalog_images/liberty-bags-8507/washed-black_back.jpg"
         }
       ]
     }

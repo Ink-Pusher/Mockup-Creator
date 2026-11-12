@@ -8140,9 +8140,9 @@
           "front": "catalog_images/yupoong-6006/pink-white-pink_front.jpg",
           "back": "catalog_images/yupoong-6006/pink-white-pink_back.jpg",
           "hexes": [
-            "#f2c6cc",
+            "#f3c5cc",
             "#ededef",
-            "#f2c6cc"
+            "#f3c5cc"
           ]
         },
         {
@@ -19723,7 +19723,7 @@
           "back": "catalog_images/bella-canvas-1201/white-pink_back.jpg",
           "hexes": [
             "#ededef",
-            "#f2c6cc"
+            "#f3c5cc"
           ]
         },
         {
@@ -33518,7 +33518,7 @@
           "front": "catalog_images/valucap-s102/pink-white_front.jpg",
           "back": "catalog_images/valucap-s102/pink-white_back.jpg",
           "hexes": [
-            "#f2c6cc",
+            "#f3c5cc",
             "#ededef"
           ]
         },
@@ -33935,6 +33935,153 @@
           "hex": "#dcdeeb",
           "front": "catalog_images/valucap-vc400/white_front.jpg",
           "back": "catalog_images/valucap-vc400/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "valucap-vc700",
+      "name": "Foam Trucker",
+      "brand": "Valucap",
+      "style": "VC700",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black",
+          "hex": "#3b393d",
+          "front": "catalog_images/valucap-vc700/black-black_front.jpg",
+          "back": "catalog_images/valucap-vc700/black-black_back.jpg",
+          "hexes": [
+            "#242223",
+            "#242223"
+          ]
+        },
+        {
+          "name": "Navy/ Navy",
+          "hex": "#222337",
+          "front": "catalog_images/valucap-vc700/navy-navy_front.jpg",
+          "back": "catalog_images/valucap-vc700/navy-navy_back.jpg",
+          "hexes": [
+            "#283040",
+            "#283040"
+          ]
+        },
+        {
+          "name": "Pink",
+          "hex": "#fbb0be",
+          "front": "catalog_images/valucap-vc700/pink_front.jpg",
+          "back": "catalog_images/valucap-vc700/pink_back.jpg"
+        },
+        {
+          "name": "Red/ Red",
+          "hex": "#c4131d",
+          "front": "catalog_images/valucap-vc700/red-red_front.jpg",
+          "back": "catalog_images/valucap-vc700/red-red_back.jpg",
+          "hexes": [
+            "#c1172f",
+            "#c1172f"
+          ]
+        },
+        {
+          "name": "Royal/ Royal",
+          "hex": "#023f74",
+          "front": "catalog_images/valucap-vc700/royal-royal_front.jpg",
+          "back": "catalog_images/valucap-vc700/royal-royal_back.jpg",
+          "hexes": [
+            "#215193",
+            "#215193"
+          ]
+        },
+        {
+          "name": "White/ Baby Blue",
+          "hex": "#e2eaee",
+          "front": "catalog_images/valucap-vc700/white-baby-blue_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-baby-blue_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#bfdae9"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#dee0e3",
+          "front": "catalog_images/valucap-vc700/white-black_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-black_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#242223"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#eff1f4",
+          "front": "catalog_images/valucap-vc700/white-kelly_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-kelly_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#098461"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#d6d9e1",
+          "front": "catalog_images/valucap-vc700/white-navy_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-navy_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#283040"
+          ]
+        },
+        {
+          "name": "White/ Pink",
+          "hex": "#ded3d0",
+          "front": "catalog_images/valucap-vc700/white-pink_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-pink_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#f3c5cc"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#f3dee4",
+          "front": "catalog_images/valucap-vc700/white-red_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-red_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#c1172f"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#cfd5dd",
+          "front": "catalog_images/valucap-vc700/white-royal_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-royal_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#215193"
+          ]
+        },
+        {
+          "name": "White/ Royal/ Red",
+          "hex": "#ddc1cd",
+          "front": "catalog_images/valucap-vc700/white-royal-red_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-royal-red_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#215193",
+            "#c1172f"
+          ]
+        },
+        {
+          "name": "White/ White",
+          "hex": "#e2e6e9",
+          "front": "catalog_images/valucap-vc700/white-white_front.jpg",
+          "back": "catalog_images/valucap-vc700/white-white_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#ededef"
+          ]
         }
       ]
     }

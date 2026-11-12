@@ -22,7 +22,10 @@ SETUP (one time):
 USAGE:
     python3 build_catalog.py --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json]
         [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F]
-        [--descriptions [product_descriptions.csv]] [--no-descriptions] [--no-prices]
+        [--descriptions [product_descriptions.csv]] [--no-descriptions] [--no-prices] [--front-only]
+
+    --front-only keeps colors that have a front photo but no back (hats, caps and beanies always do);
+    the site then shows just the front for those colors.
 
     Reading the write-up is ON BY DEFAULT. Pass --descriptions only to point it
     at a different CSV; pass --no-descriptions to skip it. It ALSO reads the product's write-up (description paragraph,
@@ -1270,6 +1273,9 @@ def main():
     # AS Colour price list) and save it to Product Admin, so a new product arrives priced for the
     # price estimator. See fetch_prices.py (one-time setup: python3 fetch_prices.py setup).
     want_prices = True
+    # --front-only: allow colors with a front photo and no back for ANY kind (hats, caps and beanies
+    # always allow it). For a style whose vendor shot only the front of most colors, e.g. ITC PRM180LST.
+    force_front_only = False
 
     cleaned = []
     i = 0
@@ -1285,6 +1291,10 @@ def main():
             continue
         if arg == "--no-prices":
             want_prices = False
+            i += 1
+            continue
+        if arg == "--front-only":
+            force_front_only = True
             i += 1
             continue
         if arg == "--descriptions":
@@ -1396,7 +1406,7 @@ def main():
     # no back shot for several Adam's hats). For those kinds a color with a front
     # and no back is still added, with no "back" in its catalog entry; the site's
     # pages show just the front for it. Everything else still needs both.
-    front_only_ok = kind in FRONT_ONLY_KINDS
+    front_only_ok = kind in FRONT_ONLY_KINDS or force_front_only
     front_only = []
 
     for entry in colors_raw:

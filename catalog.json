@@ -30049,6 +30049,61 @@
           "front": "catalog_images/port-authority-c978/storm-grey_front.jpg"
         }
       ]
+    },
+    {
+      "id": "port-authority-c979",
+      "name": "Cozy Striped Pom Beanie",
+      "brand": "Port Authority",
+      "style": "C979",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Black/ Gusty Grey/ Storm Grey",
+          "hex": "#565859",
+          "front": "catalog_images/port-authority-c979/deep-black-gusty-grey-storm-grey_front.jpg",
+          "hexes": [
+            "#424443",
+            "#929394",
+            "#616060"
+          ]
+        },
+        {
+          "name": "Deep Black/ Rich Red/ Charcoal Heather",
+          "hex": "#451820",
+          "front": "catalog_images/port-authority-c979/deep-black-rich-red-charcoal-heather_front.jpg"
+        },
+        {
+          "name": "Deep Black/ True Royal/ Storm Grey",
+          "hex": "#18315a",
+          "front": "catalog_images/port-authority-c979/deep-black-true-royal-storm-grey_front.jpg",
+          "hexes": [
+            "#424443",
+            "#1951a2",
+            "#616060"
+          ]
+        },
+        {
+          "name": "River Blue Navy/ Marshmallow/ Gusty Grey",
+          "hex": "#8c9095",
+          "front": "catalog_images/port-authority-c979/river-blue-navy-marshmallow-gusty-grey_front.jpg",
+          "hexes": [
+            "#4b525e",
+            "#f7faf3",
+            "#929394"
+          ]
+        },
+        {
+          "name": "Storm Grey/ Marshmallow/ Charcoal Heather",
+          "hex": "#9c9e9f",
+          "front": "catalog_images/port-authority-c979/storm-grey-marshmallow-charcoal-heather_front.jpg",
+          "hexes": [
+            "#616060",
+            "#f7faf3",
+            "#444245"
+          ]
+        }
+      ]
     }
   ]
 }

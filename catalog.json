@@ -28863,6 +28863,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "liberty-bags-7002",
+      "name": "P & O Cruiser Tote Bag",
+      "brand": "Liberty Bags",
+      "style": "7002",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black",
+          "hex": "#5c5c5c",
+          "front": "catalog_images/liberty-bags-7002/black-black_front.jpg",
+          "back": "catalog_images/liberty-bags-7002/black-black_back.jpg",
+          "hexes": [
+            "#232223",
+            "#232223"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/liberty-bags-7002/white-black_front.jpg",
+          "back": "catalog_images/liberty-bags-7002/white-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#232223"
+          ]
+        },
+        {
+          "name": "White/ Forest",
+          "hex": "#e3e4e4",
+          "front": "catalog_images/liberty-bags-7002/white-forest_front.jpg",
+          "back": "catalog_images/liberty-bags-7002/white-forest_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#223c31"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#e3e4e5",
+          "front": "catalog_images/liberty-bags-7002/white-navy_front.jpg",
+          "back": "catalog_images/liberty-bags-7002/white-navy_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#282f3f"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#e7e2e3",
+          "front": "catalog_images/liberty-bags-7002/white-red_front.jpg",
+          "back": "catalog_images/liberty-bags-7002/white-red_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#c2152f"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#e2e4e7",
+          "front": "catalog_images/liberty-bags-7002/white-royal_front.jpg",
+          "back": "catalog_images/liberty-bags-7002/white-royal_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#1b5092"
+          ]
+        }
+      ]
     }
   ]
 }

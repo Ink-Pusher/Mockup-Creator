@@ -30773,6 +30773,139 @@
           ]
         }
       ]
+    },
+    {
+      "id": "richardson-110",
+      "name": "R-Flex Trucker Hat",
+      "brand": "Richardson",
+      "style": "110",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Army Camo/ Black",
+          "hex": "#3c3e37",
+          "front": "catalog_images/richardson-110/army-camo-black_front.jpg",
+          "back": "catalog_images/richardson-110/army-camo-black_back.jpg",
+          "swatch": "catalog_images/richardson-110/army-camo-black_swatch.jpg",
+          "hexes": [
+            "#5d5942",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Black",
+          "hex": "#322d31",
+          "front": "catalog_images/richardson-110/black_front.jpg",
+          "back": "catalog_images/richardson-110/black_back.jpg"
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#231f20",
+          "front": "catalog_images/richardson-110/black-white_front.jpg",
+          "back": "catalog_images/richardson-110/black-white_back.jpg",
+          "hexes": [
+            "#242224",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#515256",
+          "front": "catalog_images/richardson-110/charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-110/charcoal-black_back.jpg",
+          "hexes": [
+            "#4f4c4d",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Charcoal/ Neon Yellow",
+          "hex": "#47484d",
+          "front": "catalog_images/richardson-110/charcoal-neon-yellow_front.jpg",
+          "back": "catalog_images/richardson-110/charcoal-neon-yellow_back.jpg",
+          "hexes": [
+            "#4f4c4d",
+            "#dfec41"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#9ea1aa",
+          "front": "catalog_images/richardson-110/heather-grey-black_front.jpg",
+          "back": "catalog_images/richardson-110/heather-grey-black_back.jpg",
+          "hexes": [
+            "#b5b4b9",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Navy",
+          "hex": "#a1a6b1",
+          "front": "catalog_images/richardson-110/heather-grey-navy_front.jpg",
+          "back": "catalog_images/richardson-110/heather-grey-navy_back.jpg",
+          "hexes": [
+            "#b5b4b9",
+            "#2a3043"
+          ]
+        },
+        {
+          "name": "Heather Grey/ White",
+          "hex": "#8d9197",
+          "front": "catalog_images/richardson-110/heather-grey-white_front.jpg",
+          "back": "catalog_images/richardson-110/heather-grey-white_back.jpg",
+          "hexes": [
+            "#b5b4b9",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Khaki/ Coffee",
+          "hex": "#c7b6a6",
+          "front": "catalog_images/richardson-110/khaki-coffee_front.jpg",
+          "back": "catalog_images/richardson-110/khaki-coffee_back.jpg",
+          "hexes": [
+            "#b7a682",
+            "#4b3c36"
+          ]
+        },
+        {
+          "name": "Loden/ Black",
+          "hex": "#484734",
+          "front": "catalog_images/richardson-110/loden-black_front.jpg",
+          "back": "catalog_images/richardson-110/loden-black_back.jpg",
+          "hexes": [
+            "#626555",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Navy",
+          "hex": "#373a44",
+          "front": "catalog_images/richardson-110/navy_front.jpg",
+          "back": "catalog_images/richardson-110/navy_back.jpg"
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#343a42",
+          "front": "catalog_images/richardson-110/navy-white_front.jpg",
+          "back": "catalog_images/richardson-110/navy-white_back.jpg",
+          "hexes": [
+            "#2a3043",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Royal/ White",
+          "hex": "#1b478e",
+          "front": "catalog_images/richardson-110/royal-white_front.jpg",
+          "back": "catalog_images/richardson-110/royal-white_back.jpg",
+          "hexes": [
+            "#245695",
+            "#ededf0"
+          ]
+        }
+      ]
     }
   ]
 }

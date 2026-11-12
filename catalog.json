@@ -1313,7 +1313,7 @@
           "front": "catalog_images/richardson-168/royal-black_front.jpg",
           "back": "catalog_images/richardson-168/royal-black_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#242224"
           ]
         }
@@ -1390,7 +1390,7 @@
           "back": "catalog_images/richardson-112/white-royal-cmb_back.jpg",
           "hexes": [
             "#ededef",
-            "#225394"
+            "#245294"
           ]
         },
         {
@@ -1654,7 +1654,7 @@
           "back": "catalog_images/richardson-112/charcoal-royal_back.jpg",
           "hexes": [
             "#504d4e",
-            "#225394"
+            "#245294"
           ]
         },
         {
@@ -1871,7 +1871,7 @@
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
             "#b5b4b9",
-            "#225394"
+            "#245294"
           ]
         },
         {
@@ -2260,7 +2260,7 @@
           "front": "catalog_images/richardson-112/royal-black_front.jpg",
           "back": "catalog_images/richardson-112/royal-black_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#242224"
           ]
         },
@@ -2270,7 +2270,7 @@
           "front": "catalog_images/richardson-112/royal-white_front.jpg",
           "back": "catalog_images/richardson-112/royal-white_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef"
           ]
         },
@@ -2280,7 +2280,7 @@
           "front": "catalog_images/richardson-112/royal-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/royal-white-heather-grey_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef",
             "#b5b4b9"
           ]
@@ -2291,7 +2291,7 @@
           "front": "catalog_images/richardson-112/royal-white-red_front.jpg",
           "back": "catalog_images/richardson-112/royal-white-red_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef",
             "#c1172f"
           ]
@@ -7011,7 +7011,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-royal_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#225394"
+            "#245294"
           ]
         },
         {
@@ -7878,7 +7878,7 @@
           "front": "catalog_images/yupoong-6606/royal-white_front.jpg",
           "back": "catalog_images/yupoong-6606/royal-white_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef"
           ]
         },
@@ -8178,7 +8178,7 @@
           "front": "catalog_images/yupoong-6006/royal-white_front.jpg",
           "back": "catalog_images/yupoong-6006/royal-white_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef"
           ]
         },
@@ -8188,9 +8188,9 @@
           "front": "catalog_images/yupoong-6006/royal-white-royal_front.jpg",
           "back": "catalog_images/yupoong-6006/royal-white-royal_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef",
-            "#225394"
+            "#245294"
           ]
         },
         {
@@ -16959,7 +16959,7 @@
           "back": "catalog_images/tultex-246/white-royal_back.jpg",
           "hexes": [
             "#ededef",
-            "#225394"
+            "#245294"
           ]
         }
       ]
@@ -27867,7 +27867,7 @@
           "front": "catalog_images/sportsman-sp60/royal-white-grey_front.jpg",
           "back": "catalog_images/sportsman-sp60/royal-white-grey_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef",
             "#989295"
           ]
@@ -28212,7 +28212,7 @@
           "hex": "#43557d",
           "front": "catalog_images/adam-s-ol102/royal-tan_front.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#c0a891"
           ]
         },
@@ -28939,7 +28939,7 @@
           "back": "catalog_images/liberty-bags-7002/white-royal_back.jpg",
           "hexes": [
             "#ededef",
-            "#225394"
+            "#245294"
           ]
         }
       ]
@@ -28989,7 +28989,7 @@
           "back": "catalog_images/liberty-bags-7006/white-royal_back.jpg",
           "hexes": [
             "#ededef",
-            "#225394"
+            "#245294"
           ]
         }
       ]
@@ -29622,7 +29622,7 @@
           "front": "catalog_images/oad-oad102/natural-royal_front.jpg",
           "hexes": [
             "#e9e2d5",
-            "#225394"
+            "#245294"
           ]
         }
       ]
@@ -29661,7 +29661,7 @@
           "front": "catalog_images/oad-oad103/natural-royal_front.jpg",
           "hexes": [
             "#e9e2d5",
-            "#225394"
+            "#245294"
           ]
         }
       ]
@@ -29691,7 +29691,7 @@
           "back": "catalog_images/oad-oad105/natural-royal_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#225394"
+            "#245294"
           ]
         }
       ]
@@ -30911,7 +30911,7 @@
           "front": "catalog_images/richardson-110/royal-white_front.jpg",
           "back": "catalog_images/richardson-110/royal-white_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#ededef"
           ]
         }
@@ -31198,7 +31198,7 @@
           "front": "catalog_images/richardson-172/royal-charcoal-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/royal-charcoal-black-tri_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#504d4e",
             "#413f41"
           ]
@@ -32719,7 +32719,7 @@
           "hexes": [
             "#b5b4b9",
             "#504d4e",
-            "#225394"
+            "#245294"
           ]
         },
         {
@@ -32804,7 +32804,7 @@
           "front": "catalog_images/sportsman-sp03/royal-navy_front.jpg",
           "back": "catalog_images/sportsman-sp03/royal-navy_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#293041"
           ]
         }
@@ -33038,7 +33038,7 @@
           "front": "catalog_images/sportsman-sp15/royal-light-heather-grey_front.jpg",
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#a7a6a5"
           ]
         },
@@ -33048,7 +33048,7 @@
           "front": "catalog_images/sportsman-sp15/royal-red_front.jpg",
           "back": "catalog_images/sportsman-sp15/royal-red_back.jpg",
           "hexes": [
-            "#225394",
+            "#245294",
             "#c1172f"
           ]
         }
@@ -33309,6 +33309,271 @@
           "hex": "#e3e6ef",
           "front": "catalog_images/valucap-vc100/white_front.jpg",
           "back": "catalog_images/valucap-vc100/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "valucap-s102",
+      "name": "Sandwich With Mesh Back",
+      "brand": "Valucap",
+      "style": "S102",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black",
+          "hex": "#131311",
+          "front": "catalog_images/valucap-s102/black-black_front.jpg",
+          "back": "catalog_images/valucap-s102/black-black_back.jpg",
+          "hexes": [
+            "#242224",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Black/ Gold",
+          "hex": "#262023",
+          "front": "catalog_images/valucap-s102/black-gold_front.jpg",
+          "back": "catalog_images/valucap-s102/black-gold_back.jpg",
+          "hexes": [
+            "#242224",
+            "#fbaf21"
+          ]
+        },
+        {
+          "name": "Black/ Grey",
+          "hex": "#1d1c1c",
+          "front": "catalog_images/valucap-s102/black-grey_front.jpg",
+          "back": "catalog_images/valucap-s102/black-grey_back.jpg",
+          "hexes": [
+            "#242224",
+            "#989295"
+          ]
+        },
+        {
+          "name": "Black/ Red",
+          "hex": "#1e1c1d",
+          "front": "catalog_images/valucap-s102/black-red_front.jpg",
+          "back": "catalog_images/valucap-s102/black-red_back.jpg",
+          "hexes": [
+            "#242224",
+            "#c1172f"
+          ]
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#151415",
+          "front": "catalog_images/valucap-s102/black-white_front.jpg",
+          "back": "catalog_images/valucap-s102/black-white_back.jpg",
+          "hexes": [
+            "#242224",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Brown/ Khaki",
+          "hex": "#584238",
+          "front": "catalog_images/valucap-s102/brown-khaki_front.jpg",
+          "back": "catalog_images/valucap-s102/brown-khaki_back.jpg",
+          "hexes": [
+            "#4c352b",
+            "#b7a684"
+          ]
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#463c3d",
+          "front": "catalog_images/valucap-s102/charcoal-black_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-black_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Charcoal/ Neon Blue",
+          "hex": "#342b2c",
+          "front": "catalog_images/valucap-s102/charcoal-neon-blue_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-neon-blue_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#0692bd"
+          ]
+        },
+        {
+          "name": "Charcoal/ Neon Green",
+          "hex": "#353036",
+          "front": "catalog_images/valucap-s102/charcoal-neon-green_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-neon-green_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#7bce47"
+          ]
+        },
+        {
+          "name": "Charcoal/ Neon Orange",
+          "hex": "#2e2627",
+          "front": "catalog_images/valucap-s102/charcoal-neon-orange_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-neon-orange_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#fd7f2c"
+          ]
+        },
+        {
+          "name": "Charcoal/ Neon Pink",
+          "hex": "#363233",
+          "front": "catalog_images/valucap-s102/charcoal-neon-pink_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-neon-pink_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#fa4e8d"
+          ]
+        },
+        {
+          "name": "Charcoal/ Neon Yellow",
+          "hex": "#332f2c",
+          "front": "catalog_images/valucap-s102/charcoal-neon-yellow_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-neon-yellow_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#dfec41"
+          ]
+        },
+        {
+          "name": "Charcoal/ Royal",
+          "hex": "#38363b",
+          "front": "catalog_images/valucap-s102/charcoal-royal_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-royal_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#245294"
+          ]
+        },
+        {
+          "name": "Charcoal/ White",
+          "hex": "#393132",
+          "front": "catalog_images/valucap-s102/charcoal-white_front.jpg",
+          "back": "catalog_images/valucap-s102/charcoal-white_back.jpg",
+          "hexes": [
+            "#504d4e",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Green Camo/ Black",
+          "hex": "#464643",
+          "front": "catalog_images/valucap-s102/green-camo-black_front.jpg",
+          "back": "catalog_images/valucap-s102/green-camo-black_back.jpg",
+          "swatch": "catalog_images/valucap-s102/green-camo-black_swatch.jpg",
+          "hexes": [
+            "#3e3b2b",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Green Camo/ Tan",
+          "hex": "#3c372c",
+          "front": "catalog_images/valucap-s102/green-camo-tan_front.jpg",
+          "back": "catalog_images/valucap-s102/green-camo-tan_back.jpg",
+          "swatch": "catalog_images/valucap-s102/green-camo-tan_swatch.jpg",
+          "hexes": [
+            "#3e3b2b",
+            "#c0a891"
+          ]
+        },
+        {
+          "name": "Navy/ Grey",
+          "hex": "#24212d",
+          "front": "catalog_images/valucap-s102/navy-grey_front.jpg",
+          "back": "catalog_images/valucap-s102/navy-grey_back.jpg",
+          "hexes": [
+            "#293041",
+            "#989295"
+          ]
+        },
+        {
+          "name": "Navy/ Navy",
+          "hex": "#2c2632",
+          "front": "catalog_images/valucap-s102/navy-navy_front.jpg",
+          "back": "catalog_images/valucap-s102/navy-navy_back.jpg",
+          "hexes": [
+            "#293041",
+            "#293041"
+          ]
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#272837",
+          "front": "catalog_images/valucap-s102/navy-white_front.jpg",
+          "back": "catalog_images/valucap-s102/navy-white_back.jpg",
+          "hexes": [
+            "#293041",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Pink/ White",
+          "hex": "#e699ad",
+          "front": "catalog_images/valucap-s102/pink-white_front.jpg",
+          "back": "catalog_images/valucap-s102/pink-white_back.jpg",
+          "hexes": [
+            "#f3c7cc",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Red",
+          "hex": "#d8102c",
+          "front": "catalog_images/valucap-s102/red_front.jpg",
+          "back": "catalog_images/valucap-s102/red_back.jpg"
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#c9252f",
+          "front": "catalog_images/valucap-s102/red-white_front.jpg",
+          "back": "catalog_images/valucap-s102/red-white_back.jpg",
+          "hexes": [
+            "#c1172f",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Royal",
+          "hex": "#334887",
+          "front": "catalog_images/valucap-s102/royal_front.jpg",
+          "back": "catalog_images/valucap-s102/royal_back.jpg"
+        },
+        {
+          "name": "Royal/ White",
+          "hex": "#2a3861",
+          "front": "catalog_images/valucap-s102/royal-white_front.jpg",
+          "back": "catalog_images/valucap-s102/royal-white_back.jpg",
+          "hexes": [
+            "#245294",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "White/ Royal/ Red",
+          "hex": "#dbdbe4",
+          "front": "catalog_images/valucap-s102/white-royal-red_front.jpg",
+          "back": "catalog_images/valucap-s102/white-royal-red_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#245294",
+            "#c1172f"
+          ]
+        },
+        {
+          "name": "White/ White",
+          "hex": "#dfe2e9",
+          "front": "catalog_images/valucap-s102/white-white_front.jpg",
+          "back": "catalog_images/valucap-s102/white-white_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#ededef"
+          ]
         }
       ]
     }

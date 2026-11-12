@@ -7585,7 +7585,7 @@
           "front": "catalog_images/yupoong-6606/coyote-brown-black_front.jpg",
           "back": "catalog_images/yupoong-6606/coyote-brown-black_back.jpg",
           "hexes": [
-            "#9b7857",
+            "#9b7655",
             "#232224"
           ]
         },
@@ -27382,6 +27382,52 @@
           "hex": "#ebebed",
           "front": "catalog_images/lat-6902/washed-white_front.jpg",
           "back": "catalog_images/lat-6902/washed-white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lat-6904",
+      "name": "Bamboo T-Shirt",
+      "brand": "LAT",
+      "style": "6904",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#19191a",
+          "front": "catalog_images/lat-6904/black_front.jpg",
+          "back": "catalog_images/lat-6904/black_back.jpg"
+        },
+        {
+          "name": "Coyote Brown",
+          "hex": "#856e4f",
+          "front": "catalog_images/lat-6904/coyote-brown_front.jpg",
+          "back": "catalog_images/lat-6904/coyote-brown_back.jpg"
+        },
+        {
+          "name": "Eggshell",
+          "hex": "#ede9e1",
+          "front": "catalog_images/lat-6904/eggshell_front.jpg",
+          "back": "catalog_images/lat-6904/eggshell_back.jpg"
+        },
+        {
+          "name": "Eucalyptus",
+          "hex": "#b6beb3",
+          "front": "catalog_images/lat-6904/eucalyptus_front.jpg",
+          "back": "catalog_images/lat-6904/eucalyptus_back.jpg"
+        },
+        {
+          "name": "Hazel",
+          "hex": "#d0cec1",
+          "front": "catalog_images/lat-6904/hazel_front.jpg",
+          "back": "catalog_images/lat-6904/hazel_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#ededed",
+          "front": "catalog_images/lat-6904/white_front.jpg",
+          "back": "catalog_images/lat-6904/white_back.jpg"
         }
       ]
     }

@@ -24118,6 +24118,40 @@
           "back": "catalog_images/hanes-5190/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "hanes-gdh300",
+      "name": "ComfortWash Unisex Garment Dyed Cotton Tank",
+      "brand": "Hanes",
+      "style": "GDH300",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#282627",
+          "front": "catalog_images/hanes-gdh300/black_front.jpg",
+          "back": "catalog_images/hanes-gdh300/black_back.jpg"
+        },
+        {
+          "name": "Coral Craze",
+          "hex": "#fd7586",
+          "front": "catalog_images/hanes-gdh300/coral-craze_front.jpg",
+          "back": "catalog_images/hanes-gdh300/coral-craze_back.jpg"
+        },
+        {
+          "name": "Summer Squash Yellow",
+          "hex": "#fddb92",
+          "front": "catalog_images/hanes-gdh300/summer-squash-yellow_front.jpg",
+          "back": "catalog_images/hanes-gdh300/summer-squash-yellow_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#efeff1",
+          "front": "catalog_images/hanes-gdh300/white_front.jpg",
+          "back": "catalog_images/hanes-gdh300/white_back.jpg"
+        }
+      ]
     }
   ]
 }

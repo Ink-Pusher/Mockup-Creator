@@ -26519,6 +26519,84 @@
           "back": "catalog_images/lat-3516/wisteria-blackout_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lat-3518",
+      "name": "Women's Boxy Jersey T-Shirt",
+      "brand": "LAT",
+      "style": "3518",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Leopard",
+          "hex": "#333334",
+          "front": "catalog_images/lat-3518/black-leopard_front.jpg",
+          "back": "catalog_images/lat-3518/black-leopard_back.jpg",
+          "swatch": "catalog_images/lat-3518/black-leopard_swatch.jpg"
+        },
+        {
+          "name": "Blended Black",
+          "hex": "#25262b",
+          "front": "catalog_images/lat-3518/blended-black_front.jpg",
+          "back": "catalog_images/lat-3518/blended-black_back.jpg"
+        },
+        {
+          "name": "Blended White",
+          "hex": "#ecedef",
+          "front": "catalog_images/lat-3518/blended-white_front.jpg",
+          "back": "catalog_images/lat-3518/blended-white_back.jpg"
+        },
+        {
+          "name": "Canyon",
+          "hex": "#a67157",
+          "front": "catalog_images/lat-3518/canyon_front.jpg",
+          "back": "catalog_images/lat-3518/canyon_back.jpg"
+        },
+        {
+          "name": "Granite Heather",
+          "hex": "#84848f",
+          "front": "catalog_images/lat-3518/granite-heather_front.jpg",
+          "back": "catalog_images/lat-3518/granite-heather_back.jpg"
+        },
+        {
+          "name": "Mauvelous",
+          "hex": "#e19895",
+          "front": "catalog_images/lat-3518/mauvelous_front.jpg",
+          "back": "catalog_images/lat-3518/mauvelous_back.jpg"
+        },
+        {
+          "name": "Natural Heather",
+          "hex": "#e0ddd5",
+          "front": "catalog_images/lat-3518/natural-heather_front.jpg",
+          "back": "catalog_images/lat-3518/natural-heather_back.jpg"
+        },
+        {
+          "name": "Peachy",
+          "hex": "#f1cfb5",
+          "front": "catalog_images/lat-3518/peachy_front.jpg",
+          "back": "catalog_images/lat-3518/peachy_back.jpg"
+        },
+        {
+          "name": "Saltwater",
+          "hex": "#83cfbe",
+          "front": "catalog_images/lat-3518/saltwater_front.jpg",
+          "back": "catalog_images/lat-3518/saltwater_back.jpg"
+        },
+        {
+          "name": "Vintage Camo",
+          "hex": "#73787f",
+          "front": "catalog_images/lat-3518/vintage-camo_front.jpg",
+          "back": "catalog_images/lat-3518/vintage-camo_back.jpg",
+          "swatch": "catalog_images/lat-3518/vintage-camo_swatch.jpg"
+        },
+        {
+          "name": "White Reptile",
+          "hex": "#ebebed",
+          "front": "catalog_images/lat-3518/white-reptile_front.jpg",
+          "back": "catalog_images/lat-3518/white-reptile_back.jpg"
+        }
+      ]
     }
   ]
 }

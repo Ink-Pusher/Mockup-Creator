@@ -29011,6 +29011,31 @@
           "back": "catalog_images/liberty-bags-7009/royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-7760a",
+      "name": "Cotton Denim Tote Bag",
+      "brand": "Liberty Bags",
+      "style": "7760A",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Denim",
+          "hex": "#383b42",
+          "front": "catalog_images/liberty-bags-7760a/black-denim_front.jpg"
+        },
+        {
+          "name": "Dark Blue Denim",
+          "hex": "#3a557f",
+          "front": "catalog_images/liberty-bags-7760a/dark-blue-denim_front.jpg"
+        },
+        {
+          "name": "Light Blue Denim",
+          "hex": "#4f87a3",
+          "front": "catalog_images/liberty-bags-7760a/light-blue-denim_front.jpg"
+        }
+      ]
     }
   ]
 }

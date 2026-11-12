@@ -1193,7 +1193,7 @@
           "front": "catalog_images/richardson-168/brown-khaki_front.jpg",
           "back": "catalog_images/richardson-168/brown-khaki_back.jpg",
           "hexes": [
-            "#4c352b",
+            "#4c332a",
             "#b7a682"
           ]
         },
@@ -1491,7 +1491,7 @@
           "front": "catalog_images/richardson-112/brown-khaki_front.jpg",
           "back": "catalog_images/richardson-112/brown-khaki_back.jpg",
           "hexes": [
-            "#4c352b",
+            "#4c332a",
             "#b7a682"
           ]
         },
@@ -1501,7 +1501,7 @@
           "front": "catalog_images/richardson-112/brown-khaki-cmb_front.jpg",
           "back": "catalog_images/richardson-112/brown-khaki-cmb_back.jpg",
           "hexes": [
-            "#4c352b",
+            "#4c332a",
             "#b7a682"
           ]
         },
@@ -7503,7 +7503,7 @@
           "front": "catalog_images/yupoong-6606/brown-khaki_front.jpg",
           "back": "catalog_images/yupoong-6606/brown-khaki_back.jpg",
           "hexes": [
-            "#4c352b",
+            "#4c332a",
             "#b7a682"
           ]
         },
@@ -7960,7 +7960,7 @@
           "front": "catalog_images/yupoong-6006/brown-white_front.jpg",
           "back": "catalog_images/yupoong-6006/brown-white_back.jpg",
           "hexes": [
-            "#4c352b",
+            "#4c332a",
             "#ededf0"
           ]
         },
@@ -7970,9 +7970,9 @@
           "front": "catalog_images/yupoong-6006/brown-white-brown_front.jpg",
           "back": "catalog_images/yupoong-6006/brown-white-brown_back.jpg",
           "hexes": [
-            "#4c352b",
+            "#4c332a",
             "#ededf0",
-            "#4c352b"
+            "#4c332a"
           ]
         },
         {
@@ -30904,6 +30904,48 @@
             "#245695",
             "#ededf0"
           ]
+        }
+      ]
+    },
+    {
+      "id": "richardson-112wf",
+      "name": "Fremont Hat",
+      "brand": "Richardson",
+      "style": "112WF",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Brown",
+          "hex": "#3a2f25",
+          "front": "catalog_images/richardson-112wf/brown_front.jpg",
+          "back": "catalog_images/richardson-112wf/brown_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black",
+          "hex": "#4a4645",
+          "front": "catalog_images/richardson-112wf/charcoal-black_front.jpg",
+          "back": "catalog_images/richardson-112wf/charcoal-black_back.jpg",
+          "hexes": [
+            "#4f4c4d",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Khaki/ Loden",
+          "hex": "#91908b",
+          "front": "catalog_images/richardson-112wf/khaki-loden_front.jpg",
+          "back": "catalog_images/richardson-112wf/khaki-loden_back.jpg",
+          "hexes": [
+            "#b7a682",
+            "#626555"
+          ]
+        },
+        {
+          "name": "Navy",
+          "hex": "#424645",
+          "front": "catalog_images/richardson-112wf/navy_front.jpg",
+          "back": "catalog_images/richardson-112wf/navy_back.jpg"
         }
       ]
     }

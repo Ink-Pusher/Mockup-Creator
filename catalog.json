@@ -2179,7 +2179,7 @@
           "front": "catalog_images/richardson-112/purple-white_front.jpg",
           "back": "catalog_images/richardson-112/purple-white_back.jpg",
           "hexes": [
-            "#593b7f",
+            "#593a7c",
             "#ededf0"
           ]
         },
@@ -2342,7 +2342,7 @@
           "hexes": [
             "#ededf0",
             "#6b8db6",
-            "#f3d555"
+            "#f4d661"
           ]
         },
         {
@@ -6981,7 +6981,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-purple_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#593b7f"
+            "#593a7c"
           ]
         },
         {
@@ -7031,7 +7031,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-yellow_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#f3d555"
+            "#f4d661"
           ]
         }
       ]
@@ -7771,7 +7771,7 @@
           "back": "catalog_images/yupoong-6606/navy-silver_back.jpg",
           "hexes": [
             "#2a2f42",
-            "#ddddda"
+            "#dadad7"
           ]
         },
         {
@@ -7891,7 +7891,7 @@
           "back": "catalog_images/yupoong-6606/steel-blue-silver_back.jpg",
           "hexes": [
             "#697a92",
-            "#ddddda"
+            "#dadad7"
           ]
         },
         {
@@ -8189,7 +8189,7 @@
           "front": "catalog_images/yupoong-6006/silver-black_front.jpg",
           "back": "catalog_images/yupoong-6006/silver-black_back.jpg",
           "hexes": [
-            "#ddddda",
+            "#dadad7",
             "#252324"
           ]
         }
@@ -22118,6 +22118,190 @@
           "hex": "#e5e9ec",
           "front": "catalog_images/adam-s-lp108/white_front.jpg",
           "back": "catalog_images/adam-s-lp108/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dm104l",
+      "name": "Women's Perfect Weight Tee",
+      "brand": "District",
+      "style": "DM104L",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bright Turquoise",
+          "hex": "#0b83b8",
+          "front": "catalog_images/district-dm104l/bright-turquoise_front.jpg",
+          "back": "catalog_images/district-dm104l/bright-turquoise_back.jpg"
+        },
+        {
+          "name": "Bright White",
+          "hex": "#e7f0f7",
+          "front": "catalog_images/district-dm104l/bright-white_front.jpg",
+          "back": "catalog_images/district-dm104l/bright-white_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#414342",
+          "front": "catalog_images/district-dm104l/charcoal_front.jpg",
+          "back": "catalog_images/district-dm104l/charcoal_back.jpg"
+        },
+        {
+          "name": "Classic Red",
+          "hex": "#8f161b",
+          "front": "catalog_images/district-dm104l/classic-red_front.jpg",
+          "back": "catalog_images/district-dm104l/classic-red_back.jpg"
+        },
+        {
+          "name": "Dark Fuchsia",
+          "hex": "#d43877",
+          "front": "catalog_images/district-dm104l/dark-fuchsia_front.jpg",
+          "back": "catalog_images/district-dm104l/dark-fuchsia_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#183f76",
+          "front": "catalog_images/district-dm104l/deep-royal_front.jpg",
+          "back": "catalog_images/district-dm104l/deep-royal_back.jpg"
+        },
+        {
+          "name": "Espresso",
+          "hex": "#483c30",
+          "front": "catalog_images/district-dm104l/espresso_front.jpg",
+          "back": "catalog_images/district-dm104l/espresso_back.jpg"
+        },
+        {
+          "name": "Fresh Fatigue",
+          "hex": "#6f7d5a",
+          "front": "catalog_images/district-dm104l/fresh-fatigue_front.jpg",
+          "back": "catalog_images/district-dm104l/fresh-fatigue_back.jpg"
+        },
+        {
+          "name": "Heathered Latte",
+          "hex": "#b7a799",
+          "front": "catalog_images/district-dm104l/heathered-latte_front.jpg",
+          "back": "catalog_images/district-dm104l/heathered-latte_back.jpg"
+        },
+        {
+          "name": "Heathered Steel",
+          "hex": "#898e91",
+          "front": "catalog_images/district-dm104l/heathered-steel_front.jpg",
+          "back": "catalog_images/district-dm104l/heathered-steel_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#111111",
+          "front": "catalog_images/district-dm104l/jet-black_front.jpg",
+          "back": "catalog_images/district-dm104l/jet-black_back.jpg"
+        },
+        {
+          "name": "Maritime Blue",
+          "hex": "#44668b",
+          "front": "catalog_images/district-dm104l/maritime-blue_front.jpg",
+          "back": "catalog_images/district-dm104l/maritime-blue_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#1a2d34",
+          "front": "catalog_images/district-dm104l/new-navy_front.jpg",
+          "back": "catalog_images/district-dm104l/new-navy_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#41376c",
+          "front": "catalog_images/district-dm104l/purple_front.jpg",
+          "back": "catalog_images/district-dm104l/purple_back.jpg"
+        },
+        {
+          "name": "Sangria",
+          "hex": "#6b252d",
+          "front": "catalog_images/district-dm104l/sangria_front.jpg",
+          "back": "catalog_images/district-dm104l/sangria_back.jpg"
+        },
+        {
+          "name": "Coral",
+          "hex": "#ed6363",
+          "front": "catalog_images/district-dm104l/coral_front.jpg",
+          "back": "catalog_images/district-dm104l/coral_back.jpg"
+        },
+        {
+          "name": "Jade",
+          "hex": "#01a29d",
+          "front": "catalog_images/district-dm104l/jade_front.jpg",
+          "back": "catalog_images/district-dm104l/jade_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#b3b5b4",
+          "front": "catalog_images/district-dm104l/silver_front.jpg",
+          "back": "catalog_images/district-dm104l/silver_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#f5e075",
+          "front": "catalog_images/district-dm104l/yellow_front.jpg",
+          "back": "catalog_images/district-dm104l/yellow_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#6b6863",
+          "front": "catalog_images/district-dm104l/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm104l/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Loganberry",
+          "hex": "#8a3355",
+          "front": "catalog_images/district-dm104l/heathered-loganberry_front.jpg",
+          "back": "catalog_images/district-dm104l/heathered-loganberry_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#707786",
+          "front": "catalog_images/district-dm104l/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dm104l/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Tanzanite",
+          "hex": "#313550",
+          "front": "catalog_images/district-dm104l/tanzanite_front.jpg",
+          "back": "catalog_images/district-dm104l/tanzanite_back.jpg"
+        },
+        {
+          "name": "Carnation Pink",
+          "hex": "#f5d6db",
+          "front": "catalog_images/district-dm104l/carnation-pink_front.jpg",
+          "back": "catalog_images/district-dm104l/carnation-pink_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#4d4f39",
+          "front": "catalog_images/district-dm104l/military-green_front.jpg",
+          "back": "catalog_images/district-dm104l/military-green_back.jpg"
+        },
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#34434a",
+          "front": "catalog_images/district-dm104l/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dm104l/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Bright Blue",
+          "hex": "#14679d",
+          "front": "catalog_images/district-dm104l/bright-blue_front.jpg",
+          "back": "catalog_images/district-dm104l/bright-blue_back.jpg"
+        },
+        {
+          "name": "Tundra Blue",
+          "hex": "#6a93b3",
+          "front": "catalog_images/district-dm104l/tundra-blue_front.jpg",
+          "back": "catalog_images/district-dm104l/tundra-blue_back.jpg"
+        },
+        {
+          "name": "Rainforest",
+          "hex": "#1e3030",
+          "front": "catalog_images/district-dm104l/rainforest_front.jpg",
+          "back": "catalog_images/district-dm104l/rainforest_back.jpg"
         }
       ]
     }

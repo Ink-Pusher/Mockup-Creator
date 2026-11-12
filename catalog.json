@@ -1768,7 +1768,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#504d4e",
             "#242224"
           ]
@@ -1779,7 +1779,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#504d4e",
             "#2a3043"
           ]
@@ -2485,7 +2485,7 @@
           "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#2a3043"
           ]
         },
@@ -7706,7 +7706,7 @@
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
             "#5a2231",
-            "#9c9999"
+            "#9a9899"
           ]
         },
         {
@@ -17912,7 +17912,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#333237"
           ]
         },
@@ -17922,7 +17922,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#5a2231"
           ]
         },
@@ -17932,7 +17932,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#2a3043"
           ]
         },
@@ -17942,7 +17942,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#c21830"
           ]
         },
@@ -17952,7 +17952,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#1951a2"
           ]
         },
@@ -27637,7 +27637,7 @@
           "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
           "hexes": [
             "#2a3043",
-            "#9c9999"
+            "#9a9899"
           ]
         }
       ]
@@ -27814,7 +27814,7 @@
           "hexes": [
             "#242224",
             "#ededf0",
-            "#9c9999"
+            "#9a9899"
           ]
         },
         {
@@ -27825,7 +27825,7 @@
           "hexes": [
             "#5a2231",
             "#ededf0",
-            "#9c9999"
+            "#9a9899"
           ]
         },
         {
@@ -27836,7 +27836,7 @@
           "hexes": [
             "#2a3043",
             "#ededf0",
-            "#9c9999"
+            "#9a9899"
           ]
         },
         {
@@ -27847,7 +27847,7 @@
           "hexes": [
             "#2a3043",
             "#ededf0",
-            "#9c9999"
+            "#9a9899"
           ]
         },
         {
@@ -27858,7 +27858,7 @@
           "hexes": [
             "#c21830",
             "#ededf0",
-            "#9c9999"
+            "#9a9899"
           ]
         },
         {
@@ -27869,7 +27869,7 @@
           "hexes": [
             "#245596",
             "#ededf0",
-            "#9c9999"
+            "#9a9899"
           ]
         }
       ]
@@ -31159,7 +31159,7 @@
           "front": "catalog_images/richardson-172/grey-white-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/grey-white-black-tri_back.jpg",
           "hexes": [
-            "#9c9999",
+            "#9a9899",
             "#ededf0",
             "#413f41"
           ]
@@ -32336,6 +32336,46 @@
             "#c21830",
             "#ededf0"
           ]
+        }
+      ]
+    },
+    {
+      "id": "sportsman-sp1200",
+      "name": "Ripstop 5-Panel",
+      "brand": "Sportsman",
+      "style": "SP1200",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Azure Blue",
+          "hex": "#2a69a3",
+          "front": "catalog_images/sportsman-sp1200/azure-blue_front.jpg",
+          "back": "catalog_images/sportsman-sp1200/azure-blue_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#101010",
+          "front": "catalog_images/sportsman-sp1200/black_front.jpg",
+          "back": "catalog_images/sportsman-sp1200/black_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#727272",
+          "front": "catalog_images/sportsman-sp1200/grey_front.jpg",
+          "back": "catalog_images/sportsman-sp1200/grey_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#0f111f",
+          "front": "catalog_images/sportsman-sp1200/navy_front.jpg",
+          "back": "catalog_images/sportsman-sp1200/navy_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#d0d0d0",
+          "front": "catalog_images/sportsman-sp1200/white_front.jpg",
+          "back": "catalog_images/sportsman-sp1200/white_back.jpg"
         }
       ]
     }

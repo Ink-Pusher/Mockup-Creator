@@ -30063,9 +30063,9 @@
           "hex": "#565859",
           "front": "catalog_images/port-authority-c979/deep-black-gusty-grey-storm-grey_front.jpg",
           "hexes": [
-            "#424443",
+            "#2e302f",
             "#929394",
-            "#616060"
+            "#565959"
           ]
         },
         {
@@ -30078,9 +30078,9 @@
           "hex": "#18315a",
           "front": "catalog_images/port-authority-c979/deep-black-true-royal-storm-grey_front.jpg",
           "hexes": [
-            "#424443",
+            "#2e302f",
             "#1951a2",
-            "#616060"
+            "#565959"
           ]
         },
         {
@@ -30088,8 +30088,8 @@
           "hex": "#8c9095",
           "front": "catalog_images/port-authority-c979/river-blue-navy-marshmallow-gusty-grey_front.jpg",
           "hexes": [
-            "#4b525e",
-            "#f7faf3",
+            "#373f4c",
+            "#f1f1e9",
             "#929394"
           ]
         },
@@ -30098,10 +30098,50 @@
           "hex": "#9c9e9f",
           "front": "catalog_images/port-authority-c979/storm-grey-marshmallow-charcoal-heather_front.jpg",
           "hexes": [
-            "#616060",
-            "#f7faf3",
+            "#565959",
+            "#f1f1e9",
             "#444245"
           ]
+        }
+      ]
+    },
+    {
+      "id": "port-authority-c990",
+      "name": "Faux Fur Pom Beanie",
+      "brand": "Port Authority",
+      "style": "C990",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Rosewood",
+          "hex": "#6d3745",
+          "front": "catalog_images/port-authority-c990/rosewood_front.jpg",
+          "back": "catalog_images/port-authority-c990/rosewood_back.jpg"
+        },
+        {
+          "name": "Storm Grey",
+          "hex": "#4c5252",
+          "front": "catalog_images/port-authority-c990/storm-grey_front.jpg",
+          "back": "catalog_images/port-authority-c990/storm-grey_back.jpg"
+        },
+        {
+          "name": "Deep Black",
+          "hex": "#1b1d1c",
+          "front": "catalog_images/port-authority-c990/deep-black_front.jpg",
+          "back": "catalog_images/port-authority-c990/deep-black_back.jpg"
+        },
+        {
+          "name": "Marshmallow",
+          "hex": "#ece9e0",
+          "front": "catalog_images/port-authority-c990/marshmallow_front.jpg",
+          "back": "catalog_images/port-authority-c990/marshmallow_back.jpg"
+        },
+        {
+          "name": "River Blue Navy",
+          "hex": "#16253b",
+          "front": "catalog_images/port-authority-c990/river-blue-navy_front.jpg",
+          "back": "catalog_images/port-authority-c990/river-blue-navy_back.jpg"
         }
       ]
     }

@@ -22618,6 +22618,118 @@
           "back": "catalog_images/district-dt104/rainforest_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt106",
+      "name": "Perfect Weight Icon Tee",
+      "brand": "District",
+      "style": "DT106",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Blue Fog",
+          "hex": "#89a7af",
+          "front": "catalog_images/district-dt106/blue-fog_front.jpg",
+          "back": "catalog_images/district-dt106/blue-fog_back.jpg"
+        },
+        {
+          "name": "Bright Blue",
+          "hex": "#19669a",
+          "front": "catalog_images/district-dt106/bright-blue_front.jpg",
+          "back": "catalog_images/district-dt106/bright-blue_back.jpg"
+        },
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#323f47",
+          "front": "catalog_images/district-dt106/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dt106/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Dune",
+          "hex": "#87775e",
+          "front": "catalog_images/district-dt106/dune_front.jpg",
+          "back": "catalog_images/district-dt106/dune_back.jpg"
+        },
+        {
+          "name": "Metal Grey",
+          "hex": "#545a5a",
+          "front": "catalog_images/district-dt106/metal-grey_front.jpg",
+          "back": "catalog_images/district-dt106/metal-grey_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#4f513b",
+          "front": "catalog_images/district-dt106/military-green_front.jpg",
+          "back": "catalog_images/district-dt106/military-green_back.jpg"
+        },
+        {
+          "name": "Rainforest",
+          "hex": "#213534",
+          "front": "catalog_images/district-dt106/rainforest_front.jpg",
+          "back": "catalog_images/district-dt106/rainforest_back.jpg"
+        },
+        {
+          "name": "Tanzanite",
+          "hex": "#333752",
+          "front": "catalog_images/district-dt106/tanzanite_front.jpg",
+          "back": "catalog_images/district-dt106/tanzanite_back.jpg"
+        },
+        {
+          "name": "Warm Gold",
+          "hex": "#e3a337",
+          "front": "catalog_images/district-dt106/warm-gold_front.jpg",
+          "back": "catalog_images/district-dt106/warm-gold_back.jpg"
+        },
+        {
+          "name": "White Onyx",
+          "hex": "#d8d6c7",
+          "front": "catalog_images/district-dt106/white-onyx_front.jpg",
+          "back": "catalog_images/district-dt106/white-onyx_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#19262e",
+          "front": "catalog_images/district-dt106/new-navy_front.jpg",
+          "back": "catalog_images/district-dt106/new-navy_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#404241",
+          "front": "catalog_images/district-dt106/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt106/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Steel",
+          "hex": "#8a8a88",
+          "front": "catalog_images/district-dt106/heathered-steel_front.jpg",
+          "back": "catalog_images/district-dt106/heathered-steel_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#181a17",
+          "front": "catalog_images/district-dt106/jet-black_front.jpg",
+          "back": "catalog_images/district-dt106/jet-black_back.jpg"
+        },
+        {
+          "name": "Bright White",
+          "hex": "#e9e9e9",
+          "front": "catalog_images/district-dt106/bright-white_front.jpg",
+          "back": "catalog_images/district-dt106/bright-white_back.jpg"
+        },
+        {
+          "name": "Classic Red",
+          "hex": "#8f1417",
+          "front": "catalog_images/district-dt106/classic-red_front.jpg",
+          "back": "catalog_images/district-dt106/classic-red_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#183a6a",
+          "front": "catalog_images/district-dt106/deep-royal_front.jpg",
+          "back": "catalog_images/district-dt106/deep-royal_back.jpg"
+        }
+      ]
     }
   ]
 }

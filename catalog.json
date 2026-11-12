@@ -30014,6 +30014,41 @@
           "front": "catalog_images/port-authority-c977/true-royal_front.jpg"
         }
       ]
+    },
+    {
+      "id": "port-authority-c978",
+      "name": "Cozy Pom Beanie",
+      "brand": "Port Authority",
+      "style": "C978",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Black",
+          "hex": "#191b1a",
+          "front": "catalog_images/port-authority-c978/deep-black_front.jpg"
+        },
+        {
+          "name": "Gusty Grey",
+          "hex": "#797a7c",
+          "front": "catalog_images/port-authority-c978/gusty-grey_front.jpg"
+        },
+        {
+          "name": "Marshmallow",
+          "hex": "#f7faf3",
+          "front": "catalog_images/port-authority-c978/marshmallow_front.jpg"
+        },
+        {
+          "name": "River Blue Navy",
+          "hex": "#232c3b",
+          "front": "catalog_images/port-authority-c978/river-blue-navy_front.jpg"
+        },
+        {
+          "name": "Storm Grey",
+          "hex": "#414548",
+          "front": "catalog_images/port-authority-c978/storm-grey_front.jpg"
+        }
+      ]
     }
   ]
 }

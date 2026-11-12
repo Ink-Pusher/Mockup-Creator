@@ -29944,6 +29944,36 @@
           "front": "catalog_images/port-authority-c955/insignia-blue_front.jpg"
         }
       ]
+    },
+    {
+      "id": "port-authority-c958",
+      "name": "Chunky Knit Beanie",
+      "brand": "Port Authority",
+      "style": "C958",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Grey Smoke Heather",
+          "hex": "#575757",
+          "front": "catalog_images/port-authority-c958/grey-smoke-heather_front.jpg"
+        },
+        {
+          "name": "Dress Blue Navy Heather",
+          "hex": "#3b4454",
+          "front": "catalog_images/port-authority-c958/dress-blue-navy-heather_front.jpg"
+        },
+        {
+          "name": "Silver Heather",
+          "hex": "#cdcdcd",
+          "front": "catalog_images/port-authority-c958/silver-heather_front.jpg"
+        },
+        {
+          "name": "Deep Black",
+          "hex": "#1a1819",
+          "front": "catalog_images/port-authority-c958/deep-black_front.jpg"
+        }
+      ]
     }
   ]
 }

@@ -30948,6 +30948,56 @@
           "back": "catalog_images/richardson-112wf/navy_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-112wh",
+      "name": "Hawthorne Hat",
+      "brand": "Richardson",
+      "style": "112WH",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#282828",
+          "front": "catalog_images/richardson-112wh/black_front.jpg",
+          "back": "catalog_images/richardson-112wh/black_back.jpg"
+        },
+        {
+          "name": "Buck Brown/ Dark Khaki",
+          "hex": "#72624c",
+          "front": "catalog_images/richardson-112wh/buck-brown-dark-khaki_front.jpg",
+          "back": "catalog_images/richardson-112wh/buck-brown-dark-khaki_back.jpg"
+        },
+        {
+          "name": "Burnt Red/ Charcoal",
+          "hex": "#723133",
+          "front": "catalog_images/richardson-112wh/burnt-red-charcoal_front.jpg",
+          "back": "catalog_images/richardson-112wh/burnt-red-charcoal_back.jpg"
+        },
+        {
+          "name": "Dark Olive/ Coffee",
+          "hex": "#2d3227",
+          "front": "catalog_images/richardson-112wh/dark-olive-coffee_front.jpg",
+          "back": "catalog_images/richardson-112wh/dark-olive-coffee_back.jpg",
+          "hexes": [
+            "#393729",
+            "#4b3c36"
+          ]
+        },
+        {
+          "name": "Rhino Grey/ Light Grey",
+          "hex": "#646464",
+          "front": "catalog_images/richardson-112wh/rhino-grey-light-grey_front.jpg",
+          "back": "catalog_images/richardson-112wh/rhino-grey-light-grey_back.jpg"
+        },
+        {
+          "name": "Whiskey Brown/ Brown",
+          "hex": "#735625",
+          "front": "catalog_images/richardson-112wh/whiskey-brown-brown_front.jpg",
+          "back": "catalog_images/richardson-112wh/whiskey-brown-brown_back.jpg"
+        }
+      ]
     }
   ]
 }

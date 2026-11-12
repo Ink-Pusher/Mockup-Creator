@@ -1438,7 +1438,7 @@
           "back": "catalog_images/richardson-112/black-light-grey-cmb_back.jpg",
           "hexes": [
             "#242223",
-            "#a6a5a1"
+            "#a6a6a2"
           ]
         },
         {
@@ -1831,7 +1831,7 @@
           "hexes": [
             "#b5b4b8",
             "#4f4c4b",
-            "#5a2231"
+            "#5a2230"
           ]
         },
         {
@@ -1851,7 +1851,7 @@
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
             "#b5b4b8",
-            "#a6a5a1"
+            "#a6a6a2"
           ]
         },
         {
@@ -1999,7 +1999,7 @@
           "back": "catalog_images/richardson-112/light-blue-light-grey-cmb_back.jpg",
           "hexes": [
             "#abb7d5",
-            "#a6a5a1"
+            "#a6a6a2"
           ]
         },
         {
@@ -2026,7 +2026,7 @@
           "front": "catalog_images/richardson-112/loden-black_front.jpg",
           "back": "catalog_images/richardson-112/loden-black_back.jpg",
           "hexes": [
-            "#767969",
+            "#666555",
             "#242223"
           ]
         },
@@ -2042,7 +2042,7 @@
           "front": "catalog_images/richardson-112/maroon-white_front.jpg",
           "back": "catalog_images/richardson-112/maroon-white_back.jpg",
           "hexes": [
-            "#5a2231",
+            "#5a2230",
             "#ededef"
           ]
         },
@@ -2352,7 +2352,7 @@
           "hexes": [
             "#ededef",
             "#6a89c1",
-            "#f4d65e"
+            "#f5d767"
           ]
         },
         {
@@ -3683,7 +3683,7 @@
           "front": "catalog_images/richardson-112re/loden-black_front.jpg",
           "back": "catalog_images/richardson-112re/loden-black_back.jpg",
           "hexes": [
-            "#767969",
+            "#666555",
             "#242223"
           ]
         },
@@ -3693,7 +3693,7 @@
           "front": "catalog_images/richardson-112re/loden-khaki_front.jpg",
           "back": "catalog_images/richardson-112re/loden-khaki_back.jpg",
           "hexes": [
-            "#767969",
+            "#666555",
             "#b7a686"
           ]
         },
@@ -6961,7 +6961,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-maroon_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#5a2231"
+            "#5a2230"
           ]
         },
         {
@@ -7041,7 +7041,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-yellow_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#f4d65e"
+            "#f5d767"
           ]
         }
       ]
@@ -7705,7 +7705,7 @@
           "front": "catalog_images/yupoong-6606/maroon-grey_front.jpg",
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
-            "#5a2231",
+            "#5a2230",
             "#928c91"
           ]
         },
@@ -9644,7 +9644,7 @@
           "front": "catalog_images/richardson-256/loden-amber-gold_front.jpg",
           "back": "catalog_images/richardson-256/loden-amber-gold_back.jpg",
           "hexes": [
-            "#767969",
+            "#666555",
             "#9c7942"
           ]
         },
@@ -17019,7 +17019,7 @@
           "back": "catalog_images/next-level-3604/natural-maroon_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#5a2231"
+            "#5a2230"
           ]
         },
         {
@@ -17923,7 +17923,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
             "#928c91",
-            "#5a2231"
+            "#5a2230"
           ]
         },
         {
@@ -18013,7 +18013,7 @@
           "back": "catalog_images/bella-canvas-3200/white-maroon_back.jpg",
           "hexes": [
             "#ededef",
-            "#5a2231"
+            "#5a2230"
           ]
         },
         {
@@ -27823,7 +27823,7 @@
           "front": "catalog_images/sportsman-sp60/maroon-white-grey_front.jpg",
           "back": "catalog_images/sportsman-sp60/maroon-white-grey_back.jpg",
           "hexes": [
-            "#5a2231",
+            "#5a2230",
             "#ededef",
             "#928c91"
           ]
@@ -30885,7 +30885,7 @@
           "front": "catalog_images/richardson-110/loden-black_front.jpg",
           "back": "catalog_images/richardson-110/loden-black_back.jpg",
           "hexes": [
-            "#767969",
+            "#666555",
             "#242223"
           ]
         },
@@ -30948,7 +30948,7 @@
           "back": "catalog_images/richardson-112wf/khaki-loden_back.jpg",
           "hexes": [
             "#b7a686",
-            "#767969"
+            "#666555"
           ]
         },
         {
@@ -31986,7 +31986,7 @@
           "front": "catalog_images/richardson-258/light-grey-black_front.jpg",
           "back": "catalog_images/richardson-258/light-grey-black_back.jpg",
           "hexes": [
-            "#a6a5a1",
+            "#a6a6a2",
             "#242223"
           ]
         },
@@ -31996,7 +31996,7 @@
           "front": "catalog_images/richardson-258/light-grey-white_front.jpg",
           "back": "catalog_images/richardson-258/light-grey-white_back.jpg",
           "hexes": [
-            "#a6a5a1",
+            "#a6a6a2",
             "#ededef"
           ]
         },
@@ -32321,7 +32321,7 @@
           "front": "catalog_images/richardson-134/maroon-black-white_front.jpg",
           "back": "catalog_images/richardson-134/maroon-black-white_back.jpg",
           "hexes": [
-            "#5a2231",
+            "#5a2230",
             "#242223",
             "#ededef"
           ]
@@ -32795,7 +32795,7 @@
           "back": "catalog_images/sportsman-sp03/red-maroon_back.jpg",
           "hexes": [
             "#c2162f",
-            "#5a2231"
+            "#5a2230"
           ]
         },
         {
@@ -35149,6 +35149,58 @@
           "hex": "#993135",
           "front": "catalog_images/yupoong-6245ec/rose_front.jpg",
           "back": "catalog_images/yupoong-6245ec/rose_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "yupoong-6245pt",
+      "name": "YP Classics Peached Cotton Twill Dad Cap",
+      "brand": "Yupoong",
+      "style": "6245PT",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#282423",
+          "front": "catalog_images/yupoong-6245pt/black_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/black_back.jpg"
+        },
+        {
+          "name": "Diamond Blue",
+          "hex": "#a3dcd3",
+          "front": "catalog_images/yupoong-6245pt/diamond-blue_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/diamond-blue_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#cac5bf",
+          "front": "catalog_images/yupoong-6245pt/light-grey_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/light-grey_back.jpg"
+        },
+        {
+          "name": "Loden",
+          "hex": "#665c40",
+          "front": "catalog_images/yupoong-6245pt/loden_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/loden_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#532528",
+          "front": "catalog_images/yupoong-6245pt/maroon_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/maroon_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#ebe7e6",
+          "front": "catalog_images/yupoong-6245pt/white_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/white_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#f5db9e",
+          "front": "catalog_images/yupoong-6245pt/yellow_front.jpg",
+          "back": "catalog_images/yupoong-6245pt/yellow_back.jpg"
         }
       ]
     }

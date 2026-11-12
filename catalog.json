@@ -30609,6 +30609,26 @@
           "back": "catalog_images/q-tees-q1000/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "q-tees-q1100",
+      "name": "Heavy Canvas Gusset Tote Bag with Color Handles",
+      "brand": "Q-Tees",
+      "style": "Q1100",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Red",
+          "hex": "#e2b8b3",
+          "front": "catalog_images/q-tees-q1100/natural-red_front.jpg",
+          "back": "catalog_images/q-tees-q1100/natural-red_back.jpg",
+          "hexes": [
+            "#e9e2d5",
+            "#c21830"
+          ]
+        }
+      ]
     }
   ]
 }

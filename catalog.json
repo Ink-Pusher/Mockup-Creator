@@ -35470,6 +35470,26 @@
           "back": "catalog_images/yupoong-6277y/red_back.jpg"
         }
       ]
+    },
+    {
+      "id": "yupoong-6311",
+      "name": "Flexfit Melange Trucker Cap",
+      "brand": "Yupoong",
+      "style": "6311",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heather Grey/ Navy",
+          "hex": "#9fa0a1",
+          "front": "catalog_images/yupoong-6311/heather-grey-navy_front.jpg",
+          "back": "catalog_images/yupoong-6311/heather-grey-navy_back.jpg",
+          "hexes": [
+            "#b5b4b8",
+            "#29303f"
+          ]
+        }
+      ]
     }
   ]
 }

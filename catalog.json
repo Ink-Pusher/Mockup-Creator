@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#4a484b",
+            "#46454b",
             "#232224"
           ]
         },
@@ -864,7 +864,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/grey-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/grey-heather-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -1263,7 +1263,7 @@
           "front": "catalog_images/richardson-168/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-168/heather-grey-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -1428,7 +1428,7 @@
           "back": "catalog_images/richardson-112/black-gold_back.jpg",
           "hexes": [
             "#232224",
-            "#fbb025"
+            "#fbb024"
           ]
         },
         {
@@ -1465,7 +1465,7 @@
           "hexes": [
             "#232224",
             "#eeeef0",
-            "#bcbabf"
+            "#bcb9bc"
           ]
         },
         {
@@ -1511,7 +1511,7 @@
           "front": "catalog_images/richardson-112/cardinal-black_front.jpg",
           "back": "catalog_images/richardson-112/cardinal-black_back.jpg",
           "hexes": [
-            "#851b2a",
+            "#841c2c",
             "#232224"
           ]
         },
@@ -1521,7 +1521,7 @@
           "front": "catalog_images/richardson-112/cardinal-white_front.jpg",
           "back": "catalog_images/richardson-112/cardinal-white_back.jpg",
           "hexes": [
-            "#851b2a",
+            "#841c2c",
             "#eeeef0"
           ]
         },
@@ -1564,7 +1564,7 @@
           "back": "catalog_images/richardson-112/charcoal-kelly_back.jpg",
           "hexes": [
             "#4e4a4b",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -1594,7 +1594,7 @@
           "back": "catalog_images/richardson-112/charcoal-neon-green_back.jpg",
           "hexes": [
             "#4e4a4b",
-            "#7dc951"
+            "#7bce4a"
           ]
         },
         {
@@ -1614,7 +1614,7 @@
           "back": "catalog_images/richardson-112/charcoal-neon-pink_back.jpg",
           "hexes": [
             "#4e4a4b",
-            "#fb5990"
+            "#fb518f"
           ]
         },
         {
@@ -1796,7 +1796,7 @@
           "front": "catalog_images/richardson-112/heather-grey-birch-amber-gold_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-birch-amber-gold_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#cbba9c",
             "#9c7942"
           ]
@@ -1813,7 +1813,7 @@
           "front": "catalog_images/richardson-112/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -1829,7 +1829,7 @@
           "front": "catalog_images/richardson-112/heather-grey-charcoal-maroon_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-charcoal-maroon_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#4e4a4b",
             "#5a1f30"
           ]
@@ -1840,7 +1840,7 @@
           "front": "catalog_images/richardson-112/heather-grey-dark-green_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-dark-green_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#184334"
           ]
         },
@@ -1850,7 +1850,7 @@
           "front": "catalog_images/richardson-112/heather-grey-light-grey_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#a0a09d"
           ]
         },
@@ -1860,7 +1860,7 @@
           "front": "catalog_images/richardson-112/heather-grey-navy_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-navy_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#293041"
           ]
         },
@@ -1870,7 +1870,7 @@
           "front": "catalog_images/richardson-112/heather-grey-royal_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#1a4d91"
           ]
         },
@@ -1880,7 +1880,7 @@
           "front": "catalog_images/richardson-112/heather-grey-white_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-white_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#eeeef0"
           ]
         },
@@ -1916,7 +1916,7 @@
           "front": "catalog_images/richardson-112/kelly-white_front.jpg",
           "back": "catalog_images/richardson-112/kelly-white_back.jpg",
           "hexes": [
-            "#03845f",
+            "#03805e",
             "#eeeef0"
           ]
         },
@@ -2122,7 +2122,7 @@
           "hexes": [
             "#293041",
             "#eeeef0",
-            "#bcbabf"
+            "#bcb9bc"
           ]
         },
         {
@@ -2179,7 +2179,7 @@
           "front": "catalog_images/richardson-112/purple-white_front.jpg",
           "back": "catalog_images/richardson-112/purple-white_back.jpg",
           "hexes": [
-            "#523a7c",
+            "#523a79",
             "#eeeef0"
           ]
         },
@@ -2234,7 +2234,7 @@
           "hexes": [
             "#c41330",
             "#eeeef0",
-            "#bcbabf"
+            "#bcb9bc"
           ]
         },
         {
@@ -2282,7 +2282,7 @@
           "hexes": [
             "#1a4d91",
             "#eeeef0",
-            "#bcbabf"
+            "#bcb9bc"
           ]
         },
         {
@@ -2938,7 +2938,7 @@
           "back": "catalog_images/adam-s-lp101/khaki-forest_back.jpg",
           "hexes": [
             "#b8a57d",
-            "#233c32"
+            "#223c31"
           ]
         },
         {
@@ -3068,7 +3068,7 @@
           "back": "catalog_images/adam-s-lp101/stone-forest_back.jpg",
           "hexes": [
             "#c2b4a9",
-            "#233c32"
+            "#223c31"
           ]
         },
         {
@@ -6891,7 +6891,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-forest_back.jpg",
           "hexes": [
             "#eae3d9",
-            "#233c32"
+            "#223c31"
           ]
         },
         {
@@ -6901,7 +6901,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-gold_back.jpg",
           "hexes": [
             "#eae3d9",
-            "#fbb025"
+            "#fbb024"
           ]
         },
         {
@@ -6921,7 +6921,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-kelly_back.jpg",
           "hexes": [
             "#eae3d9",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -6981,7 +6981,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-purple_back.jpg",
           "hexes": [
             "#eae3d9",
-            "#523a7c"
+            "#523a79"
           ]
         },
         {
@@ -7556,7 +7556,7 @@
           "back": "catalog_images/yupoong-6606/charcoal-neon-green_back.jpg",
           "hexes": [
             "#4e4a4b",
-            "#7dc951"
+            "#7bce4a"
           ]
         },
         {
@@ -7623,7 +7623,7 @@
           "front": "catalog_images/yupoong-6606/green-camo-black_front.jpg",
           "back": "catalog_images/yupoong-6606/green-camo-black_back.jpg",
           "hexes": [
-            "#3f3c2e",
+            "#3e3b2b",
             "#232224"
           ],
           "swatch": "catalog_images/yupoong-6606/green-camo-black_swatch.jpg"
@@ -7634,7 +7634,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-black_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -7644,7 +7644,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-white_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-white_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#eeeef0"
           ]
         },
@@ -8013,7 +8013,7 @@
           "front": "catalog_images/yupoong-6006/green-camo-black_front.jpg",
           "back": "catalog_images/yupoong-6006/green-camo-black_back.jpg",
           "hexes": [
-            "#3f3c2e",
+            "#3e3b2b",
             "#232224"
           ],
           "swatch": "catalog_images/yupoong-6006/green-camo-black_swatch.jpg"
@@ -8044,9 +8044,9 @@
           "front": "catalog_images/yupoong-6006/kelly-white-kelly_front.jpg",
           "back": "catalog_images/yupoong-6006/kelly-white-kelly_back.jpg",
           "hexes": [
-            "#03845f",
+            "#03805e",
             "#eeeef0",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -8130,9 +8130,9 @@
           "front": "catalog_images/yupoong-6006/pink-white-pink_front.jpg",
           "back": "catalog_images/yupoong-6006/pink-white-pink_back.jpg",
           "hexes": [
-            "#f3c7cd",
+            "#f3c7cc",
             "#eeeef0",
-            "#f3c7cd"
+            "#f3c7cc"
           ]
         },
         {
@@ -8281,7 +8281,7 @@
           "front": "catalog_images/richardson-112fp/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112fp/heather-grey-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -9582,7 +9582,7 @@
           "front": "catalog_images/richardson-256/cardinal-white_front.jpg",
           "back": "catalog_images/richardson-256/cardinal-white_back.jpg",
           "hexes": [
-            "#851b2a",
+            "#841c2c",
             "#eeeef0"
           ]
         },
@@ -16820,7 +16820,7 @@
           "front": "catalog_images/tultex-246/heather-grey-black_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -16830,8 +16830,8 @@
           "front": "catalog_images/tultex-246/heather-grey-heather-charcoal_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
-            "#bcbabf",
-            "#4a484b"
+            "#bcb9bc",
+            "#46454b"
           ]
         },
         {
@@ -16840,7 +16840,7 @@
           "front": "catalog_images/tultex-246/heather-grey-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-navy_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#293041"
           ]
         },
@@ -16850,7 +16850,7 @@
           "front": "catalog_images/tultex-246/heather-royal-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
-            "#3f69a5",
+            "#4569ab",
             "#293041"
           ]
         },
@@ -16861,7 +16861,7 @@
           "back": "catalog_images/tultex-246/navy-gold_back.jpg",
           "hexes": [
             "#293041",
-            "#fbb025"
+            "#fbb024"
           ]
         },
         {
@@ -16919,7 +16919,7 @@
           "back": "catalog_images/tultex-246/white-kelly_back.jpg",
           "hexes": [
             "#eeeef0",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -16988,7 +16988,7 @@
           "front": "catalog_images/next-level-3604/heather-grey-black_front.jpg",
           "back": "catalog_images/next-level-3604/heather-grey-black_back.jpg",
           "hexes": [
-            "#bcbabf",
+            "#bcb9bc",
             "#232224"
           ]
         },
@@ -17715,7 +17715,7 @@
           "back": "catalog_images/bella-canvas-1200/white-kelly_back.png",
           "hexes": [
             "#eeeef0",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -17993,7 +17993,7 @@
           "back": "catalog_images/bella-canvas-3200/white-kelly_back.jpg",
           "hexes": [
             "#eeeef0",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -19720,7 +19720,7 @@
           "back": "catalog_images/bella-canvas-1201/white-kelly_back.jpg",
           "hexes": [
             "#eeeef0",
-            "#03845f"
+            "#03805e"
           ]
         },
         {
@@ -19730,7 +19730,7 @@
           "back": "catalog_images/bella-canvas-1201/white-pink_back.jpg",
           "hexes": [
             "#eeeef0",
-            "#f3c7cd"
+            "#f3c7cc"
           ]
         },
         {
@@ -20956,7 +20956,7 @@
           "back": "catalog_images/bella-canvas-8800/athletic-heather-neon-pink_back.jpg",
           "hexes": [
             "#bab9bb",
-            "#fb5990"
+            "#fb518f"
           ]
         },
         {
@@ -27428,6 +27428,204 @@
           "hex": "#ededed",
           "front": "catalog_images/lat-6904/white_front.jpg",
           "back": "catalog_images/lat-6904/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sportsman-sp08",
+      "name": "8 Inch Beanie",
+      "brand": "Sportsman",
+      "style": "SP08",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1c1c1c",
+          "front": "catalog_images/sportsman-sp08/black_front.jpg",
+          "back": "catalog_images/sportsman-sp08/black_back.jpg"
+        },
+        {
+          "name": "Blaze Orange",
+          "hex": "#e23c2d",
+          "front": "catalog_images/sportsman-sp08/blaze-orange_front.jpg",
+          "back": "catalog_images/sportsman-sp08/blaze-orange_back.jpg"
+        },
+        {
+          "name": "Brown",
+          "hex": "#3e2f2a",
+          "front": "catalog_images/sportsman-sp08/brown_front.jpg",
+          "back": "catalog_images/sportsman-sp08/brown_back.jpg"
+        },
+        {
+          "name": "Camel",
+          "hex": "#beb08e",
+          "front": "catalog_images/sportsman-sp08/camel_front.jpg",
+          "back": "catalog_images/sportsman-sp08/camel_back.jpg"
+        },
+        {
+          "name": "Cardinal",
+          "hex": "#801c34",
+          "front": "catalog_images/sportsman-sp08/cardinal_front.jpg",
+          "back": "catalog_images/sportsman-sp08/cardinal_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#5f6064",
+          "front": "catalog_images/sportsman-sp08/dark-heather-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp08/dark-heather-grey_back.jpg"
+        },
+        {
+          "name": "Forest",
+          "hex": "#203530",
+          "front": "catalog_images/sportsman-sp08/forest_front.jpg",
+          "back": "catalog_images/sportsman-sp08/forest_back.jpg"
+        },
+        {
+          "name": "Gold",
+          "hex": "#fcb102",
+          "front": "catalog_images/sportsman-sp08/gold_front.jpg",
+          "back": "catalog_images/sportsman-sp08/gold_back.jpg"
+        },
+        {
+          "name": "Green Camo",
+          "hex": "#383328",
+          "front": "catalog_images/sportsman-sp08/green-camo_front.jpg",
+          "back": "catalog_images/sportsman-sp08/green-camo_back.jpg",
+          "swatch": "catalog_images/sportsman-sp08/green-camo_swatch.jpg"
+        },
+        {
+          "name": "Grey Camo",
+          "hex": "#4a4d49",
+          "front": "catalog_images/sportsman-sp08/grey-camo_front.jpg",
+          "back": "catalog_images/sportsman-sp08/grey-camo_back.jpg",
+          "swatch": "catalog_images/sportsman-sp08/grey-camo_swatch.jpg"
+        },
+        {
+          "name": "Heather Brown",
+          "hex": "#655554",
+          "front": "catalog_images/sportsman-sp08/heather-brown_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-brown_back.jpg"
+        },
+        {
+          "name": "Heather Cardinal",
+          "hex": "#774653",
+          "front": "catalog_images/sportsman-sp08/heather-cardinal_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-cardinal_back.jpg"
+        },
+        {
+          "name": "Heather Charcoal",
+          "hex": "#46454b",
+          "front": "catalog_images/sportsman-sp08/heather-charcoal_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-charcoal_back.jpg"
+        },
+        {
+          "name": "Heather Dark Royal",
+          "hex": "#344865",
+          "front": "catalog_images/sportsman-sp08/heather-dark-royal_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-dark-royal_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#a1a3a4",
+          "front": "catalog_images/sportsman-sp08/heather-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-grey_back.jpg"
+        },
+        {
+          "name": "Heather Kelly",
+          "hex": "#338057",
+          "front": "catalog_images/sportsman-sp08/heather-kelly_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-kelly_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#59627d",
+          "front": "catalog_images/sportsman-sp08/heather-navy_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Orange",
+          "hex": "#f4694a",
+          "front": "catalog_images/sportsman-sp08/heather-orange_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-orange_back.jpg"
+        },
+        {
+          "name": "Heather Purple",
+          "hex": "#7c5d9f",
+          "front": "catalog_images/sportsman-sp08/heather-purple_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-purple_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#6b8ddd",
+          "front": "catalog_images/sportsman-sp08/heather-royal_front.jpg",
+          "back": "catalog_images/sportsman-sp08/heather-royal_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#036833",
+          "front": "catalog_images/sportsman-sp08/kelly_front.jpg",
+          "back": "catalog_images/sportsman-sp08/kelly_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#481c29",
+          "front": "catalog_images/sportsman-sp08/maroon_front.jpg",
+          "back": "catalog_images/sportsman-sp08/maroon_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#242831",
+          "front": "catalog_images/sportsman-sp08/navy_front.jpg",
+          "back": "catalog_images/sportsman-sp08/navy_back.jpg"
+        },
+        {
+          "name": "Neon Green",
+          "hex": "#61de38",
+          "front": "catalog_images/sportsman-sp08/neon-green_front.jpg",
+          "back": "catalog_images/sportsman-sp08/neon-green_back.jpg"
+        },
+        {
+          "name": "Neon Pink",
+          "hex": "#fb4a8c",
+          "front": "catalog_images/sportsman-sp08/neon-pink_front.jpg",
+          "back": "catalog_images/sportsman-sp08/neon-pink_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#e5abb2",
+          "front": "catalog_images/sportsman-sp08/pink_front.jpg",
+          "back": "catalog_images/sportsman-sp08/pink_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#413156",
+          "front": "catalog_images/sportsman-sp08/purple_front.jpg",
+          "back": "catalog_images/sportsman-sp08/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#a50225",
+          "front": "catalog_images/sportsman-sp08/red_front.jpg",
+          "back": "catalog_images/sportsman-sp08/red_back.jpg"
+        },
+        {
+          "name": "Royal Blue",
+          "hex": "#033b81",
+          "front": "catalog_images/sportsman-sp08/royal-blue_front.jpg",
+          "back": "catalog_images/sportsman-sp08/royal-blue_back.jpg"
+        },
+        {
+          "name": "Safety Yellow",
+          "hex": "#b5f453",
+          "front": "catalog_images/sportsman-sp08/safety-yellow_front.jpg",
+          "back": "catalog_images/sportsman-sp08/safety-yellow_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#dadcd7",
+          "front": "catalog_images/sportsman-sp08/white_front.jpg",
+          "back": "catalog_images/sportsman-sp08/white_back.jpg"
         }
       ]
     }

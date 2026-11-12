@@ -29655,6 +29655,36 @@
           ]
         }
       ]
+    },
+    {
+      "id": "oad-oad105",
+      "name": "Contrasting Handles Tote",
+      "brand": "OAD",
+      "style": "OAD105",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Black",
+          "hex": "#dbd3cc",
+          "front": "catalog_images/oad-oad105/natural-black_front.jpg",
+          "back": "catalog_images/oad-oad105/natural-black_back.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#242223"
+          ]
+        },
+        {
+          "name": "Natural/ Royal",
+          "hex": "#e3dfda",
+          "front": "catalog_images/oad-oad105/natural-royal_front.jpg",
+          "back": "catalog_images/oad-oad105/natural-royal_back.jpg",
+          "hexes": [
+            "#eae3d8",
+            "#225393"
+          ]
+        }
+      ]
     }
   ]
 }

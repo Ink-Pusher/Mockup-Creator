@@ -17852,7 +17852,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2d292e",
+            "#2e2a2f",
             "#242224"
           ]
         },
@@ -32229,6 +32229,70 @@
           "hex": "#f1f1f6",
           "front": "catalog_images/richardson-320/white_front.jpg",
           "back": "catalog_images/richardson-320/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "richardson-130",
+      "name": "Marled Beanie",
+      "brand": "Richardson",
+      "style": "130",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Heather",
+          "hex": "#5e6067",
+          "front": "catalog_images/richardson-130/black-heather_front.jpg",
+          "back": "catalog_images/richardson-130/black-heather_back.jpg"
+        },
+        {
+          "name": "Crimson Heather",
+          "hex": "#d4555b",
+          "front": "catalog_images/richardson-130/crimson-heather_front.jpg",
+          "back": "catalog_images/richardson-130/crimson-heather_back.jpg"
+        },
+        {
+          "name": "Deep Blue Heather",
+          "hex": "#294666",
+          "front": "catalog_images/richardson-130/deep-blue-heather_front.jpg",
+          "back": "catalog_images/richardson-130/deep-blue-heather_back.jpg"
+        },
+        {
+          "name": "Melon Heather",
+          "hex": "#da4b4e",
+          "front": "catalog_images/richardson-130/melon-heather_front.jpg",
+          "back": "catalog_images/richardson-130/melon-heather_back.jpg"
+        },
+        {
+          "name": "Peri Blue Heather",
+          "hex": "#85a3d8",
+          "front": "catalog_images/richardson-130/peri-blue-heather_front.jpg",
+          "back": "catalog_images/richardson-130/peri-blue-heather_back.jpg"
+        },
+        {
+          "name": "Sky Blue Heather",
+          "hex": "#4f72ad",
+          "front": "catalog_images/richardson-130/sky-blue-heather_front.jpg",
+          "back": "catalog_images/richardson-130/sky-blue-heather_back.jpg"
+        },
+        {
+          "name": "Steel Grey Heather",
+          "hex": "#8e94a0",
+          "front": "catalog_images/richardson-130/steel-grey-heather_front.jpg",
+          "back": "catalog_images/richardson-130/steel-grey-heather_back.jpg"
+        },
+        {
+          "name": "Surf Green Heather",
+          "hex": "#69a8a0",
+          "front": "catalog_images/richardson-130/surf-green-heather_front.jpg",
+          "back": "catalog_images/richardson-130/surf-green-heather_back.jpg"
+        },
+        {
+          "name": "Turquoise Heather",
+          "hex": "#41b9d4",
+          "front": "catalog_images/richardson-130/turquoise-heather_front.jpg",
+          "back": "catalog_images/richardson-130/turquoise-heather_back.jpg"
         }
       ]
     }

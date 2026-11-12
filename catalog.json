@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#424043",
+            "#444245",
             "#242324"
           ]
         },
@@ -864,7 +864,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/grey-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/grey-heather-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -1263,7 +1263,7 @@
           "front": "catalog_images/richardson-168/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-168/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -1465,7 +1465,7 @@
           "hexes": [
             "#242324",
             "#ededf0",
-            "#b8b8ba"
+            "#b8b8bb"
           ]
         },
         {
@@ -1796,7 +1796,7 @@
           "front": "catalog_images/richardson-112/heather-grey-birch-amber-gold_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-birch-amber-gold_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#cbba9c",
             "#9c7942"
           ]
@@ -1813,7 +1813,7 @@
           "front": "catalog_images/richardson-112/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -1829,7 +1829,7 @@
           "front": "catalog_images/richardson-112/heather-grey-charcoal-maroon_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-charcoal-maroon_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#4d4a4b",
             "#5a2030"
           ]
@@ -1840,7 +1840,7 @@
           "front": "catalog_images/richardson-112/heather-grey-dark-green_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-dark-green_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#184334"
           ]
         },
@@ -1850,7 +1850,7 @@
           "front": "catalog_images/richardson-112/heather-grey-light-grey_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#a0a09d"
           ]
         },
@@ -1860,7 +1860,7 @@
           "front": "catalog_images/richardson-112/heather-grey-navy_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-navy_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#2a3041"
           ]
         },
@@ -1870,7 +1870,7 @@
           "front": "catalog_images/richardson-112/heather-grey-royal_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#1b5090"
           ]
         },
@@ -1880,7 +1880,7 @@
           "front": "catalog_images/richardson-112/heather-grey-white_front.jpg",
           "back": "catalog_images/richardson-112/heather-grey-white_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#ededf0"
           ]
         },
@@ -2122,7 +2122,7 @@
           "hexes": [
             "#2a3041",
             "#ededf0",
-            "#b8b8ba"
+            "#b8b8bb"
           ]
         },
         {
@@ -2234,7 +2234,7 @@
           "hexes": [
             "#c31330",
             "#ededf0",
-            "#b8b8ba"
+            "#b8b8bb"
           ]
         },
         {
@@ -2282,7 +2282,7 @@
           "hexes": [
             "#1b5090",
             "#ededf0",
-            "#b8b8ba"
+            "#b8b8bb"
           ]
         },
         {
@@ -7634,7 +7634,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-black_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -7644,7 +7644,7 @@
           "front": "catalog_images/yupoong-6606/heather-grey-white_front.jpg",
           "back": "catalog_images/yupoong-6606/heather-grey-white_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#ededf0"
           ]
         },
@@ -8281,7 +8281,7 @@
           "front": "catalog_images/richardson-112fp/heather-grey-black_front.jpg",
           "back": "catalog_images/richardson-112fp/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -9618,7 +9618,7 @@
           "front": "catalog_images/richardson-256/dusty-blue-white_front.jpg",
           "back": "catalog_images/richardson-256/dusty-blue-white_back.jpg",
           "hexes": [
-            "#aac0b6",
+            "#acc1b7",
             "#ededf0"
           ]
         },
@@ -9690,7 +9690,7 @@
           "front": "catalog_images/richardson-256/sage-white_front.jpg",
           "back": "catalog_images/richardson-256/sage-white_back.jpg",
           "hexes": [
-            "#92a491",
+            "#91a492",
             "#ededf0"
           ]
         },
@@ -16820,7 +16820,7 @@
           "front": "catalog_images/tultex-246/heather-grey-black_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -16830,8 +16830,8 @@
           "front": "catalog_images/tultex-246/heather-grey-heather-charcoal_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
-            "#b8b8ba",
-            "#424043"
+            "#b8b8bb",
+            "#444245"
           ]
         },
         {
@@ -16840,7 +16840,7 @@
           "front": "catalog_images/tultex-246/heather-grey-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-grey-navy_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#2a3041"
           ]
         },
@@ -16988,7 +16988,7 @@
           "front": "catalog_images/next-level-3604/heather-grey-black_front.jpg",
           "back": "catalog_images/next-level-3604/heather-grey-black_back.jpg",
           "hexes": [
-            "#b8b8ba",
+            "#b8b8bb",
             "#242324"
           ]
         },
@@ -24797,6 +24797,136 @@
           "hex": "#a0a389",
           "front": "catalog_images/lane-seven-ls15000cvc/olive-heather_front.jpg",
           "back": "catalog_images/lane-seven-ls15000cvc/olive-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls15001",
+      "name": "Heavyweight Tee",
+      "brand": "Lane Seven",
+      "style": "LS15001",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#221f26",
+          "front": "catalog_images/lane-seven-ls15001/black_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/black_back.jpg"
+        },
+        {
+          "name": "Bubblegum Pink",
+          "hex": "#f6e9f0",
+          "front": "catalog_images/lane-seven-ls15001/bubblegum-pink_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/bubblegum-pink_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#69646a",
+          "front": "catalog_images/lane-seven-ls15001/charcoal-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Colony Blue",
+          "hex": "#b2bde1",
+          "front": "catalog_images/lane-seven-ls15001/colony-blue_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/colony-blue_back.jpg"
+        },
+        {
+          "name": "Copper",
+          "hex": "#cb6036",
+          "front": "catalog_images/lane-seven-ls15001/copper_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/copper_back.jpg"
+        },
+        {
+          "name": "Dusty Blue",
+          "hex": "#e3eaf4",
+          "front": "catalog_images/lane-seven-ls15001/dusty-blue_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/dusty-blue_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#d7d9e5",
+          "front": "catalog_images/lane-seven-ls15001/heather-grey_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/heather-grey_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#94819e",
+          "front": "catalog_images/lane-seven-ls15001/lavender_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/lavender_back.jpg"
+        },
+        {
+          "name": "Matcha",
+          "hex": "#b9c4b3",
+          "front": "catalog_images/lane-seven-ls15001/matcha_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/matcha_back.jpg"
+        },
+        {
+          "name": "Moon Dust",
+          "hex": "#cdcdcd",
+          "front": "catalog_images/lane-seven-ls15001/moon-dust_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/moon-dust_back.jpg"
+        },
+        {
+          "name": "Mushroom",
+          "hex": "#dbc6ae",
+          "front": "catalog_images/lane-seven-ls15001/mushroom_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/mushroom_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#eae9e5",
+          "front": "catalog_images/lane-seven-ls15001/natural_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#242f41",
+          "front": "catalog_images/lane-seven-ls15001/navy_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/navy_back.jpg"
+        },
+        {
+          "name": "Plum",
+          "hex": "#271928",
+          "front": "catalog_images/lane-seven-ls15001/plum_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/plum_back.jpg"
+        },
+        {
+          "name": "Sage",
+          "hex": "#89a59d",
+          "front": "catalog_images/lane-seven-ls15001/sage_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/sage_back.jpg"
+        },
+        {
+          "name": "Seafoam",
+          "hex": "#a5bcb4",
+          "front": "catalog_images/lane-seven-ls15001/seafoam_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/seafoam_back.jpg"
+        },
+        {
+          "name": "Smoke",
+          "hex": "#3f3f41",
+          "front": "catalog_images/lane-seven-ls15001/smoke_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/smoke_back.jpg"
+        },
+        {
+          "name": "Sport Green",
+          "hex": "#223c3d",
+          "front": "catalog_images/lane-seven-ls15001/sport-green_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/sport-green_back.jpg"
+        },
+        {
+          "name": "Toasted Coconut",
+          "hex": "#c38b60",
+          "front": "catalog_images/lane-seven-ls15001/toasted-coconut_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/toasted-coconut_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#fafbfd",
+          "front": "catalog_images/lane-seven-ls15001/white_front.jpg",
+          "back": "catalog_images/lane-seven-ls15001/white_back.jpg"
         }
       ]
     }

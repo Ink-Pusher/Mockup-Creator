@@ -24619,6 +24619,82 @@
           "back": "catalog_images/independent-trading-co-ss3000/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lane-seven-lst002",
+      "name": "Vintage Crewneck Tee",
+      "brand": "Lane Seven",
+      "style": "LST002",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Cloud Black",
+          "hex": "#3f3d49",
+          "front": "catalog_images/lane-seven-lst002/cloud-black_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/cloud-black_back.jpg"
+        },
+        {
+          "name": "Cloud Purple",
+          "hex": "#645086",
+          "front": "catalog_images/lane-seven-lst002/cloud-purple_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/cloud-purple_back.jpg"
+        },
+        {
+          "name": "Cloud Rock",
+          "hex": "#989797",
+          "front": "catalog_images/lane-seven-lst002/cloud-rock_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/cloud-rock_back.jpg"
+        },
+        {
+          "name": "Vintage Arctic",
+          "hex": "#eceade",
+          "front": "catalog_images/lane-seven-lst002/vintage-arctic_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-arctic_back.jpg"
+        },
+        {
+          "name": "Vintage Black",
+          "hex": "#36363b",
+          "front": "catalog_images/lane-seven-lst002/vintage-black_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-black_back.jpg"
+        },
+        {
+          "name": "Vintage Camel",
+          "hex": "#be946d",
+          "front": "catalog_images/lane-seven-lst002/vintage-camel_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-camel_back.jpg"
+        },
+        {
+          "name": "Vintage Coffee",
+          "hex": "#b69171",
+          "front": "catalog_images/lane-seven-lst002/vintage-coffee_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-coffee_back.jpg"
+        },
+        {
+          "name": "Vintage Denim",
+          "hex": "#3c4467",
+          "front": "catalog_images/lane-seven-lst002/vintage-denim_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-denim_back.jpg"
+        },
+        {
+          "name": "Vintage Mustard",
+          "hex": "#f2c06b",
+          "front": "catalog_images/lane-seven-lst002/vintage-mustard_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-mustard_back.jpg"
+        },
+        {
+          "name": "Vintage Olive",
+          "hex": "#5b5533",
+          "front": "catalog_images/lane-seven-lst002/vintage-olive_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-olive_back.jpg"
+        },
+        {
+          "name": "Vintage Zinc",
+          "hex": "#c6b9c0",
+          "front": "catalog_images/lane-seven-lst002/vintage-zinc_front.jpg",
+          "back": "catalog_images/lane-seven-lst002/vintage-zinc_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -19700,7 +19700,7 @@
           "back": "catalog_images/bella-canvas-1201/white-baby-blue_back.jpg",
           "hexes": [
             "#ededf0",
-            "#b9d0e2"
+            "#bad6e9"
           ]
         },
         {
@@ -25165,6 +25165,52 @@
           "hex": "#f4f5f9",
           "front": "catalog_images/lane-seven-ls81000/white_front.jpg",
           "back": "catalog_images/lane-seven-ls81000/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls81001",
+      "name": "Womens Relaxed Tee",
+      "brand": "Lane Seven",
+      "style": "LS81001",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Baby Blue",
+          "hex": "#c8e4ef",
+          "front": "catalog_images/lane-seven-ls81001/baby-blue_front.jpg",
+          "back": "catalog_images/lane-seven-ls81001/baby-blue_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1c1d20",
+          "front": "catalog_images/lane-seven-ls81001/black_front.jpg",
+          "back": "catalog_images/lane-seven-ls81001/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#f2ede7",
+          "front": "catalog_images/lane-seven-ls81001/bone_front.jpg",
+          "back": "catalog_images/lane-seven-ls81001/bone_back.jpg"
+        },
+        {
+          "name": "Bubblegum Pink",
+          "hex": "#f8e5eb",
+          "front": "catalog_images/lane-seven-ls81001/bubblegum-pink_front.jpg",
+          "back": "catalog_images/lane-seven-ls81001/bubblegum-pink_back.jpg"
+        },
+        {
+          "name": "Matcha",
+          "hex": "#d1dcba",
+          "front": "catalog_images/lane-seven-ls81001/matcha_front.jpg",
+          "back": "catalog_images/lane-seven-ls81001/matcha_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f6f7fb",
+          "front": "catalog_images/lane-seven-ls81001/white_front.jpg",
+          "back": "catalog_images/lane-seven-ls81001/white_back.jpg"
         }
       ]
     }

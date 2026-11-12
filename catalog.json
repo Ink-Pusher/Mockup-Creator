@@ -1718,7 +1718,7 @@
           "front": "catalog_images/richardson-112/cream-black-loden-green_front.jpg",
           "back": "catalog_images/richardson-112/cream-black-loden-green_back.jpg",
           "hexes": [
-            "#d7c8bc",
+            "#d9c9be",
             "#242324",
             "#65674d"
           ]
@@ -1735,7 +1735,7 @@
           "front": "catalog_images/richardson-112/cream-navy-amber-gold_front.jpg",
           "back": "catalog_images/richardson-112/cream-navy-amber-gold_back.jpg",
           "hexes": [
-            "#d7c8bc",
+            "#d9c9be",
             "#2a3041",
             "#9c7942"
           ]
@@ -25027,6 +25027,52 @@
           "hex": "#f0eff4",
           "front": "catalog_images/lane-seven-ls16005/pigment-white_front.jpg",
           "back": "catalog_images/lane-seven-ls16005/pigment-white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls17005",
+      "name": "Heavy Core Tee",
+      "brand": "Lane Seven",
+      "style": "LS17005",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Arona",
+          "hex": "#b2c8c6",
+          "front": "catalog_images/lane-seven-ls17005/arona_front.jpg",
+          "back": "catalog_images/lane-seven-ls17005/arona_back.jpg"
+        },
+        {
+          "name": "Asphalt",
+          "hex": "#4f4f4f",
+          "front": "catalog_images/lane-seven-ls17005/asphalt_front.jpg",
+          "back": "catalog_images/lane-seven-ls17005/asphalt_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#222121",
+          "front": "catalog_images/lane-seven-ls17005/black_front.jpg",
+          "back": "catalog_images/lane-seven-ls17005/black_back.jpg"
+        },
+        {
+          "name": "Chocolate Brown",
+          "hex": "#61493d",
+          "front": "catalog_images/lane-seven-ls17005/chocolate-brown_front.jpg",
+          "back": "catalog_images/lane-seven-ls17005/chocolate-brown_back.jpg"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e5e2d9",
+          "front": "catalog_images/lane-seven-ls17005/cream_front.jpg",
+          "back": "catalog_images/lane-seven-ls17005/cream_back.jpg"
+        },
+        {
+          "name": "Moss Grey",
+          "hex": "#d3d2b3",
+          "front": "catalog_images/lane-seven-ls17005/moss-grey_front.jpg",
+          "back": "catalog_images/lane-seven-ls17005/moss-grey_back.jpg"
         }
       ]
     }

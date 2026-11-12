@@ -1313,7 +1313,7 @@
           "front": "catalog_images/richardson-168/royal-black_front.jpg",
           "back": "catalog_images/richardson-168/royal-black_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#242223"
           ]
         }
@@ -1390,7 +1390,7 @@
           "back": "catalog_images/richardson-112/white-royal-cmb_back.jpg",
           "hexes": [
             "#edeef0",
-            "#215293"
+            "#225393"
           ]
         },
         {
@@ -1654,7 +1654,7 @@
           "back": "catalog_images/richardson-112/charcoal-royal_back.jpg",
           "hexes": [
             "#4f4b4b",
-            "#215293"
+            "#225393"
           ]
         },
         {
@@ -1871,7 +1871,7 @@
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
             "#b6b6ba",
-            "#215293"
+            "#225393"
           ]
         },
         {
@@ -2260,7 +2260,7 @@
           "front": "catalog_images/richardson-112/royal-black_front.jpg",
           "back": "catalog_images/richardson-112/royal-black_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#242223"
           ]
         },
@@ -2270,7 +2270,7 @@
           "front": "catalog_images/richardson-112/royal-white_front.jpg",
           "back": "catalog_images/richardson-112/royal-white_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0"
           ]
         },
@@ -2280,7 +2280,7 @@
           "front": "catalog_images/richardson-112/royal-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/royal-white-heather-grey_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0",
             "#b6b6ba"
           ]
@@ -2291,7 +2291,7 @@
           "front": "catalog_images/richardson-112/royal-white-red_front.jpg",
           "back": "catalog_images/richardson-112/royal-white-red_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0",
             "#c11730"
           ]
@@ -6870,7 +6870,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-black_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-black_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#242223"
           ]
         },
@@ -6880,7 +6880,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-carolina-blue_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-carolina-blue_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#84acdb"
           ]
         },
@@ -6890,7 +6890,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-forest_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-forest_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#243c34"
           ]
         },
@@ -6900,7 +6900,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-gold_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-gold_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#fbb024"
           ]
         },
@@ -6910,7 +6910,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-hot-pink_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-hot-pink_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#f7698e"
           ]
         },
@@ -6920,7 +6920,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-kelly_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-kelly_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#0a8563"
           ]
         },
@@ -6930,7 +6930,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-lavender_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-lavender_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#bfb3ca"
           ]
         },
@@ -6940,7 +6940,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-lime_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-lime_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#a6d174"
           ]
         },
@@ -6950,7 +6950,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-maroon_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-maroon_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#5a1f30"
           ]
         },
@@ -6960,7 +6960,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-navy_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-navy_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#292f40"
           ]
         },
@@ -6970,7 +6970,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-orange_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-orange_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#f0692a"
           ]
         },
@@ -6980,7 +6980,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-purple_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-purple_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#533b79"
           ]
         },
@@ -6990,7 +6990,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-red_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-red_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#c11730"
           ]
         },
@@ -7000,8 +7000,8 @@
           "front": "catalog_images/q-tees-qtb6000/natural-royal_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-royal_back.jpg",
           "hexes": [
-            "#eae3d9",
-            "#215293"
+            "#eae3d8",
+            "#225393"
           ]
         },
         {
@@ -7010,7 +7010,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-sapphire_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-sapphire_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#2986c1"
           ]
         },
@@ -7020,7 +7020,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-turquoise_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-turquoise_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#0299ce"
           ]
         },
@@ -7030,7 +7030,7 @@
           "front": "catalog_images/q-tees-qtb6000/natural-yellow_front.jpg",
           "back": "catalog_images/q-tees-qtb6000/natural-yellow_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#f5d555"
           ]
         }
@@ -7868,7 +7868,7 @@
           "front": "catalog_images/yupoong-6606/royal-white_front.jpg",
           "back": "catalog_images/yupoong-6606/royal-white_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0"
           ]
         },
@@ -8168,7 +8168,7 @@
           "front": "catalog_images/yupoong-6006/royal-white_front.jpg",
           "back": "catalog_images/yupoong-6006/royal-white_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0"
           ]
         },
@@ -8178,9 +8178,9 @@
           "front": "catalog_images/yupoong-6006/royal-white-royal_front.jpg",
           "back": "catalog_images/yupoong-6006/royal-white-royal_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0",
-            "#215293"
+            "#225393"
           ]
         },
         {
@@ -16949,7 +16949,7 @@
           "back": "catalog_images/tultex-246/white-royal_back.jpg",
           "hexes": [
             "#edeef0",
-            "#215293"
+            "#225393"
           ]
         }
       ]
@@ -16968,7 +16968,7 @@
           "front": "catalog_images/next-level-3604/natural-black_front.jpg",
           "back": "catalog_images/next-level-3604/natural-black_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#242223"
           ]
         },
@@ -16979,7 +16979,7 @@
           "back": "catalog_images/next-level-3604/black-natural_back.jpg",
           "hexes": [
             "#242223",
-            "#eae3d9"
+            "#eae3d8"
           ]
         },
         {
@@ -16998,7 +16998,7 @@
           "front": "catalog_images/next-level-3604/natural-forest-green_front.jpg",
           "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#244334"
           ]
         },
@@ -17008,7 +17008,7 @@
           "front": "catalog_images/next-level-3604/natural-maroon_front.jpg",
           "back": "catalog_images/next-level-3604/natural-maroon_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#5a1f30"
           ]
         },
@@ -17018,7 +17018,7 @@
           "front": "catalog_images/next-level-3604/natural-midnight-navy_front.jpg",
           "back": "catalog_images/next-level-3604/natural-midnight-navy_back.jpg",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#23283d"
           ]
         },
@@ -17694,7 +17694,7 @@
           "front": "catalog_images/bella-canvas-1200/natural-black_front.png",
           "back": "catalog_images/bella-canvas-1200/natural-black_back.png",
           "hexes": [
-            "#eae3d9",
+            "#eae3d8",
             "#242223"
           ]
         },
@@ -27857,7 +27857,7 @@
           "front": "catalog_images/sportsman-sp60/royal-white-grey_front.jpg",
           "back": "catalog_images/sportsman-sp60/royal-white-grey_back.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#edeef0",
             "#978d92"
           ]
@@ -28202,7 +28202,7 @@
           "hex": "#43557d",
           "front": "catalog_images/adam-s-ol102/royal-tan_front.jpg",
           "hexes": [
-            "#215293",
+            "#225393",
             "#c1a891"
           ]
         },
@@ -28929,7 +28929,7 @@
           "back": "catalog_images/liberty-bags-7002/white-royal_back.jpg",
           "hexes": [
             "#edeef0",
-            "#215293"
+            "#225393"
           ]
         }
       ]
@@ -28979,7 +28979,7 @@
           "back": "catalog_images/liberty-bags-7006/white-royal_back.jpg",
           "hexes": [
             "#edeef0",
-            "#215293"
+            "#225393"
           ]
         }
       ]
@@ -29520,6 +29520,52 @@
           "name": "Black",
           "hex": "#5f5a58",
           "front": "catalog_images/liberty-bags-8811/black_front.jpg"
+        }
+      ]
+    },
+    {
+      "id": "oad-oad100",
+      "name": "Promotional Canvas Shopper Tote",
+      "brand": "OAD",
+      "style": "OAD100",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#413d40",
+          "front": "catalog_images/oad-oad100/black_front.jpg",
+          "back": "catalog_images/oad-oad100/black_back.jpg"
+        },
+        {
+          "name": "Lime Green",
+          "hex": "#87c464",
+          "front": "catalog_images/oad-oad100/lime-green_front.jpg",
+          "back": "catalog_images/oad-oad100/lime-green_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e6ded5",
+          "front": "catalog_images/oad-oad100/natural_front.jpg",
+          "back": "catalog_images/oad-oad100/natural_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#555265",
+          "front": "catalog_images/oad-oad100/navy_front.jpg",
+          "back": "catalog_images/oad-oad100/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#bf1d37",
+          "front": "catalog_images/oad-oad100/red_front.jpg",
+          "back": "catalog_images/oad-oad100/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#3b6599",
+          "front": "catalog_images/oad-oad100/royal_front.jpg",
+          "back": "catalog_images/oad-oad100/royal_back.jpg"
         }
       ]
     }

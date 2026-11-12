@@ -16999,7 +16999,7 @@
           "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#244235"
+            "#244334"
           ]
         },
         {
@@ -24927,6 +24927,106 @@
           "hex": "#fafbfd",
           "front": "catalog_images/lane-seven-ls15001/white_front.jpg",
           "back": "catalog_images/lane-seven-ls15001/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls16005",
+      "name": "Urban Heavy Tee",
+      "brand": "Lane Seven",
+      "style": "LS16005",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Forest Green",
+          "hex": "#174332",
+          "front": "catalog_images/lane-seven-ls16005/forest-green_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/forest-green_back.jpg"
+        },
+        {
+          "name": "PFD",
+          "hex": "#ece8e5",
+          "front": "catalog_images/lane-seven-ls16005/pfd_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pfd_back.jpg"
+        },
+        {
+          "name": "Pigment Black",
+          "hex": "#323337",
+          "front": "catalog_images/lane-seven-ls16005/pigment-black_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-black_back.jpg"
+        },
+        {
+          "name": "Pigment Burro",
+          "hex": "#dfc4ae",
+          "front": "catalog_images/lane-seven-ls16005/pigment-burro_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-burro_back.jpg"
+        },
+        {
+          "name": "Pigment French Oak",
+          "hex": "#e6ded0",
+          "front": "catalog_images/lane-seven-ls16005/pigment-french-oak_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-french-oak_back.jpg"
+        },
+        {
+          "name": "Pigment Grape Ice",
+          "hex": "#a2b6db",
+          "front": "catalog_images/lane-seven-ls16005/pigment-grape-ice_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-grape-ice_back.jpg"
+        },
+        {
+          "name": "Pigment Lunar Rock",
+          "hex": "#ececec",
+          "front": "catalog_images/lane-seven-ls16005/pigment-lunar-rock_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-lunar-rock_back.jpg"
+        },
+        {
+          "name": "Pigment Midnight Navy",
+          "hex": "#334b55",
+          "front": "catalog_images/lane-seven-ls16005/pigment-midnight-navy_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-midnight-navy_back.jpg"
+        },
+        {
+          "name": "Pigment Oil Green",
+          "hex": "#c4d2b9",
+          "front": "catalog_images/lane-seven-ls16005/pigment-oil-green_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-oil-green_back.jpg"
+        },
+        {
+          "name": "Pigment Peanut Butter",
+          "hex": "#e6b33f",
+          "front": "catalog_images/lane-seven-ls16005/pigment-peanut-butter_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-peanut-butter_back.jpg"
+        },
+        {
+          "name": "Pigment Pebble Blue",
+          "hex": "#74accb",
+          "front": "catalog_images/lane-seven-ls16005/pigment-pebble-blue_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-pebble-blue_back.jpg"
+        },
+        {
+          "name": "Pigment Pistachio",
+          "hex": "#eae7d4",
+          "front": "catalog_images/lane-seven-ls16005/pigment-pistachio_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-pistachio_back.jpg"
+        },
+        {
+          "name": "Pigment Salmon",
+          "hex": "#f6d6cc",
+          "front": "catalog_images/lane-seven-ls16005/pigment-salmon_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-salmon_back.jpg"
+        },
+        {
+          "name": "Pigment Tornado",
+          "hex": "#7d7878",
+          "front": "catalog_images/lane-seven-ls16005/pigment-tornado_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-tornado_back.jpg"
+        },
+        {
+          "name": "Pigment White",
+          "hex": "#f0eff4",
+          "front": "catalog_images/lane-seven-ls16005/pigment-white_front.jpg",
+          "back": "catalog_images/lane-seven-ls16005/pigment-white_back.jpg"
         }
       ]
     }

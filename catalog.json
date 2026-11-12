@@ -28789,6 +28789,26 @@
           "front": "catalog_images/liberty-bags-a134/tan_front.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-psb810",
+      "name": "Sublimation Small Tote Bag",
+      "brand": "Liberty Bags",
+      "style": "PSB810",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White/ Black",
+          "hex": "#e0e0e1",
+          "front": "catalog_images/liberty-bags-psb810/white-black_front.jpg",
+          "back": "catalog_images/liberty-bags-psb810/white-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#232223"
+          ]
+        }
+      ]
     }
   ]
 }

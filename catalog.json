@@ -17842,7 +17842,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2e2a2f",
+            "#2d292e",
             "#242324"
           ]
         },
@@ -24751,6 +24751,52 @@
           "hex": "#f4f5f9",
           "front": "catalog_images/lane-seven-ls15000/white_front.jpg",
           "back": "catalog_images/lane-seven-ls15000/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls15000cvc",
+      "name": "Deluxe CVC Tee",
+      "brand": "Lane Seven",
+      "style": "LS15000CVC",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Heather",
+          "hex": "#27262b",
+          "front": "catalog_images/lane-seven-ls15000cvc/black-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15000cvc/black-heather_back.jpg"
+        },
+        {
+          "name": "Brown Heather",
+          "hex": "#ad9d8d",
+          "front": "catalog_images/lane-seven-ls15000cvc/brown-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15000cvc/brown-heather_back.jpg"
+        },
+        {
+          "name": "Burgundy Heather",
+          "hex": "#b65461",
+          "front": "catalog_images/lane-seven-ls15000cvc/burgundy-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15000cvc/burgundy-heather_back.jpg"
+        },
+        {
+          "name": "Navy Heather",
+          "hex": "#52576c",
+          "front": "catalog_images/lane-seven-ls15000cvc/navy-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15000cvc/navy-heather_back.jpg"
+        },
+        {
+          "name": "Oatmeal Heather",
+          "hex": "#dbdbd5",
+          "front": "catalog_images/lane-seven-ls15000cvc/oatmeal-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15000cvc/oatmeal-heather_back.jpg"
+        },
+        {
+          "name": "Olive Heather",
+          "hex": "#a0a389",
+          "front": "catalog_images/lane-seven-ls15000cvc/olive-heather_front.jpg",
+          "back": "catalog_images/lane-seven-ls15000cvc/olive-heather_back.jpg"
         }
       ]
     }

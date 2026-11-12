@@ -5,20 +5,20 @@ site. They are here so a bad paste has something to roll back to, and so two
 people aren't each editing a private copy in their own Downloads folder.
 
 **The repo is now the source of truth. Edit here, then paste into Squarespace.**
-Any copy still sitting in `~/Downloads` is stale — delete it rather than editing it.
+Any copy still sitting in `~/Downloads` is stale -- delete it rather than editing it.
 
 | File | Where it's pasted |
 |---|---|
 | `admin.html` | Product Admin page (the private, `noindex` one) |
 | `apparel_catalog.html` | Apparel Catalog listing page |
-| `product_detail.html` | Product detail page (`/product-detail?id=…`) |
+| `product_detail.html` | Product detail page (`/product-detail?id=...`). Since 2026-11-12 the page holds only a loader: after editing, run `python3 scripts/publish_squarespace_pages.py product-detail` in the Ink Pusher Digital Print repo (Timm's Mac) and it updates live within ~5 min |
 | `mockup_generator_v2_3.html` | Mockup Studio page |
 | `ink-pusher-nav.html` | Nav Code Block at the top of the landing page |
 | `catalog_landing.html` | Catalog landing/storefront page (category tiles + featured rows; edited from admin's Landing Page tab) |
 
 ## Editing these
 
-Nothing here is built or bundled — each file is pasted whole into its Code Block,
+Nothing here is built or bundled -- each file is pasted whole into its Code Block,
 so what's in the file is exactly what runs.
 
 Two things about the Squarespace environment have caused real bugs, and both are
@@ -37,7 +37,7 @@ easy to reintroduce:
 `admin.html`, `apparel_catalog.html`, `product_detail.html` and
 `mockup_generator_v2_3.html` deliberately share one palette and the same
 "sticker" card treatment (2px outline, hard offset shadow). If the palette
-changes, change it in all four — they are meant to read as one product.
+changes, change it in all four -- they are meant to read as one product.
 
 ## Where this repo lives
 
@@ -45,7 +45,7 @@ Not in `~/Documents`. That folder is redirected into iCloud Drive, and iCloud
 does two things a git repo cannot tolerate: it evicts file contents to save
 space (leaving `.icloud` placeholders, including potentially inside `.git`),
 and it treats files moved out of its tree as deletions. Moving this repo out of
-iCloud sent one tracked file — a saved vendor page — to iCloud's Trash on the
+iCloud sent one tracked file -- a saved vendor page -- to iCloud's Trash on the
 way. Git had it, so nothing was lost, but that is the failure mode.
 
 Clone it somewhere outside `~/Documents` and `~/Desktop`. Anywhere else on the
@@ -59,7 +59,7 @@ have to rewrite `catalog.json`, `product_descriptions.csv` and `catalog_images/`
 on every run. A locked file breaks both, in ways that look like the tools are
 broken rather than like a lock.
 
-Deleting a file locally isn't really the danger anyway — it's in the Trash, and
+Deleting a file locally isn't really the danger anyway -- it's in the Trash, and
 `git checkout HEAD -- .` brings it back. The damage happens when a deletion gets
 **committed and pushed**: then it's gone from GitHub too, and whoever pulls next
 loses it as well.

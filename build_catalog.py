@@ -115,6 +115,7 @@ import os
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 import numpy as np
@@ -748,8 +749,116 @@ def resolve_saved_page(path_str):
     return p  # let the caller's own error message fire with the original name
 
 
+# ---------------------------------------------------------------------------
+# No saved page at all: read the vendor's own data instead (bulk_add.py uses
+# these). Pass "-" where the saved page would go.
+#   ss-api      S&S's API (the account number + key from fetch_prices.py setup)
+#   sanmar-sdl  SanMar's SDL data download (the same file the price lookup reads)
+# Same output as the page extractors, so everything downstream is unchanged.
+# ---------------------------------------------------------------------------
+
+API_SITES = {"ss-api", "sanmar-sdl"}
+API_WRITEUP = {"description": "", "features": []}   # filled by extract_ss_api for the descriptions step
+
+
+def _ss_relpath(api_path):
+    """S&S API image path ("Images/Color/120349_f_fm.jpg") -> the relative path
+    build_color_template's CDN template expects ("Color/120349_f"), so these
+    photos download at the same size and cache the same way as a saved page's."""
+    if not api_path:
+        return None
+    m = re.match(r"^Images/(.+?)_f[a-z]\.jpg$", api_path)
+    return m.group(1) if m else None
+
+
+def extract_ss_api(brand, style):
+    import html as _html
+    import urllib.error
+    import urllib.parse
+    import fetch_prices as fp
+    conf = fp.load_conf()
+    if not (conf.get("ss_account") and conf.get("ss_key")):
+        raise RuntimeError("No S&S API account on this computer. Run: python3 fetch_prices.py setup")
+    ss = fp.SS(conf["ss_account"], conf["ss_key"])
+    try:
+        hits = ss.get(f"/styles/?search={urllib.parse.quote(style)}")
+    except urllib.error.HTTPError as e:
+        raise RuntimeError("S&S doesn't list this style" if e.code == 404 else f"S&S error {e.code}")
+    time.sleep(fp.SS_DELAY)
+    b = fp.norm(brand)
+    same = [h for h in hits if fp.norm(h.get("styleName")) == fp.norm(style)]
+    st = next((h for h in same if (fp.norm(h.get("brandName"))[:6] and
+               (fp.norm(h.get("brandName")).startswith(b[:6]) or b.startswith(fp.norm(h.get("brandName"))[:6])))), None)
+    st = st or (same[0] if len(same) == 1 else None)
+    if not st:
+        raise RuntimeError(f"S&S has no {brand} {style}"
+                           + (f" (it has: {', '.join(sorted({h.get('brandName', '') for h in same}))})" if same else ""))
+    skus = ss.get(f"/products/?styleid={st['styleID']}")
+    time.sleep(fp.SS_DELAY)
+    colors = {}
+    for sku in skus:
+        c = colors.setdefault(sku.get("colorName") or "", {})
+        for k in ("colorFrontImage", "colorBackImage"):
+            if sku.get(k) and not c.get(k):
+                c[k] = sku[k]
+    API_WRITEUP["description"] = ""
+    API_WRITEUP["features"] = [re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", "", li))).strip()
+                               for li in re.findall(r"<li[^>]*>(.*?)</li>", st.get("description") or "", re.S | re.I)]
+    API_WRITEUP["features"] = [f for f in API_WRITEUP["features"] if f]
+    results = []
+    for name, c in colors.items():
+        if not name:
+            continue
+        fr, bk = _ss_relpath(c.get("colorFrontImage")), _ss_relpath(c.get("colorBackImage"))
+        results.append({
+            "name": name,
+            "front": bct.CDN_IMAGE_URL_TEMPLATE.format(path=fr) if fr else None,
+            "back": bct.CDN_IMAGE_URL_TEMPLATE.format(path=bk) if bk else None,
+            "_ss_relpath_front": fr,
+            "_ss_relpath_back": bk,
+        })
+    return results
+
+
+def extract_sanmar_sdl(brand, style):
+    """Every color of one style from SanMar's SDL file: flat front/back shots,
+    falling back to on-model shots for a color that has no flat ones."""
+    import csv as _csv
+    import zipfile
+    import fetch_prices as fp
+    path = fp.find_file("sanmar_sdl", ["~/Downloads/SanMar_SDL_N*.zip", "~/Downloads/SanMar_SDL_N*.csv", "~/Downloads/SanMar_SDL*.zip"])
+    if not path:
+        raise RuntimeError("Can't find the SanMar SDL download (SanMar_SDL_N.zip in Downloads, or run fetch_prices.py setup)")
+    if str(path).endswith(".zip"):
+        z = zipfile.ZipFile(path)
+        f = z.open(next(n for n in z.namelist() if n.lower().endswith(".csv")))
+    else:
+        f = open(path, "rb")
+    want, mill = style.strip().upper(), fp.norm(brand)[:4]
+    colors, status = {}, ""
+    with io.TextIOWrapper(f, encoding="utf-8-sig", errors="replace") as t:
+        for r in _csv.DictReader(t):
+            if (r.get("STYLE#") or "").strip().upper() != want:
+                continue
+            if mill and fp.norm(r.get("MILL"))[:4] != mill:
+                continue
+            status = r.get("PRODUCT_STATUS") or status
+            c = colors.setdefault((r.get("COLOR_NAME") or "").strip(), {})
+            for k, keys in (("front", ("FRONT_FLAT_IMAGE_URL", "FRONT_MODEL_IMAGE_URL")),
+                            ("back", ("BACK_FLAT_IMAGE_URL", "BACK_MODEL_IMAGE_URL"))):
+                if not c.get(k):
+                    c[k] = next(((r.get(x) or "").strip() for x in keys if (r.get(x) or "").strip()), None)
+    if not colors:
+        raise RuntimeError(f"{brand} {style} isn't in the SanMar file ({path.name})")
+    if status == "Discontinued":
+        print(f"  ! SanMar lists {style} as discontinued")
+    return [{"name": n, "front": c.get("front"), "back": c.get("back")} for n, c in colors.items() if n]
+
+
 EXTRACTORS = {
     "ssactivewear": extract_ssactivewear,
+    "ss-api": extract_ss_api,
+    "sanmar-sdl": extract_sanmar_sdl,
     "sanmar": extract_sanmar,
     "sanmar-pdf": extract_sanmar_pdf,
     "royalapparel": extract_royalapparel,
@@ -1009,7 +1118,9 @@ def run_description_scrape(site, source, brand, style, csv_path, want_fetch=True
     written and correct by the time this runs, so a description that can't be
     found is a note to follow up on, never a reason to fail the run."""
     print("\n--- descriptions (--descriptions) ---")
-    if site == "sanmar-pdf":
+    if site in ("sanmar-pdf", "sanmar-sdl"):
+        # (sanmar-sdl: the SDL file's description is one run-on paragraph with
+        # the bullets glued together, so it gets the same lookup as a PDF.)
         # A Media Library PDF has no description text in it at all, so
         # there is nothing to scrape -- but that's no reason to leave the
         # product blank (SanMar adds used to ship with no description and
@@ -1051,7 +1162,11 @@ def run_description_scrape(site, source, brand, style, csv_path, want_fetch=True
 
     csv_path = csv_path or bd.DEFAULT_CSV
     try:
-        found = bd.scrape_page(source, site)
+        if site == "ss-api":
+            found = {"description": "", "features": list(API_WRITEUP["features"]), "supplier_note": "",
+                     "description_source": "", "features_source": "S&S API"}
+        else:
+            found = bd.scrape_page(source, site)
     except Exception as e:
         print(f"  ! couldn't read a write-up off that page: {e}")
         return
@@ -1214,7 +1329,8 @@ def main():
     # Normalize the kind so the sheet can say "Long Sleeve", "long-sleeve"
     # or "longsleeve" and they all land on the same catalog kind.
     kind = re.sub(r"[^a-z]", "", kind.lower())
-    source = str(resolve_saved_page(source))
+    if site not in API_SITES:
+        source = str(resolve_saved_page(source))
     extra = list(rest[5:])
     # An UNQUOTED two-word kind ("... Long Sleeve catalog.json") splits
     # into kind="long" + a stray first extra arg -- which then got taken
@@ -1259,6 +1375,11 @@ def main():
     print(f"Reading {source} (site: {site}) ...")
     if preextracted:
         colors_raw = EXTRACTORS[site](source)
+    elif site in API_SITES:
+        try:
+            colors_raw = EXTRACTORS[site](brand, style)
+        except RuntimeError as e:
+            sys.exit(f"Error: {e}")
     else:
         html = read_html(source)
         if site == "ascolour":
@@ -1285,7 +1406,7 @@ def main():
                 skipped.append((name, "missing front or back image URL on this page"))
                 continue
             print(f"  {name}: downloading front/back...")
-            if site == "ssactivewear":
+            if site in ("ssactivewear", "ss-api"):
                 front_img = bct.download_image(entry["_ss_relpath_front"], DOWNLOAD_CACHE_DIR)
                 back_img = bct.download_image(entry["_ss_relpath_back"], DOWNLOAD_CACHE_DIR)
             else:

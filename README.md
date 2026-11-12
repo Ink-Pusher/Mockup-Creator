@@ -24,6 +24,16 @@ them lets a missing photo be re-pulled without re-saving the page).
 A commit that deletes any protected file gets stopped with a warning.
 `doctor` (in build_descriptions.py) checks a machine's whole setup -- start there.
 
+## Adding many products at once (S&S and SanMar)
+
+`python3 bulk_add.py bulk_lists/checklist.csv --dry-run` shows what would be added and how big the
+photos are; drop `--dry-run` to add them (`--priority` for the bold ones, `--limit N` for a batch).
+No saved pages: photos, write-up and price come from the S&S API and the SanMar SDL file, and each
+product gets an automatically picked featured photo that keeps the library's colors varied
+(`python3 bulk_add.py feature --report`). One commit per product; push between batches.
+Royal Apparel and AS Colour still need a saved page and `build_catalog.py`.
+`bulk_lists/checklist.csv` was made from the Apparel Catalog Checklist doc; add rows to grow it.
+
 ## Prices (Product Admin and the price estimator)
 
 Adding a product with `build_catalog.py` now also looks up its wholesale blank price and saves it to

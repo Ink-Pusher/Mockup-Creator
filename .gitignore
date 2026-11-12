@@ -8,3 +8,6 @@ downloaded_images/
 .DS_Store
 desktop.ini
 Thumbs.db
+
+# bulk_add.py run logs
+bulk_logs/

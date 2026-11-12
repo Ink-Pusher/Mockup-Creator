@@ -25075,6 +25075,52 @@
           "back": "catalog_images/lane-seven-ls17005/moss-grey_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lane-seven-ls24005",
+      "name": "Element Tee",
+      "brand": "Lane Seven",
+      "style": "LS24005",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#111111",
+          "front": "catalog_images/lane-seven-ls24005/black_front.jpg",
+          "back": "catalog_images/lane-seven-ls24005/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#eae4d3",
+          "front": "catalog_images/lane-seven-ls24005/bone_front.jpg",
+          "back": "catalog_images/lane-seven-ls24005/bone_back.jpg"
+        },
+        {
+          "name": "Cacao",
+          "hex": "#6f573f",
+          "front": "catalog_images/lane-seven-ls24005/cacao_front.jpg",
+          "back": "catalog_images/lane-seven-ls24005/cacao_back.jpg"
+        },
+        {
+          "name": "Dove Grey",
+          "hex": "#dadada",
+          "front": "catalog_images/lane-seven-ls24005/dove-grey_front.jpg",
+          "back": "catalog_images/lane-seven-ls24005/dove-grey_back.jpg"
+        },
+        {
+          "name": "Plum",
+          "hex": "#281c2a",
+          "front": "catalog_images/lane-seven-ls24005/plum_front.jpg",
+          "back": "catalog_images/lane-seven-ls24005/plum_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f8f8f8",
+          "front": "catalog_images/lane-seven-ls24005/white_front.jpg",
+          "back": "catalog_images/lane-seven-ls24005/white_back.jpg"
+        }
+      ]
     }
   ]
 }

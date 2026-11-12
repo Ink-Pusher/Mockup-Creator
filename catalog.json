@@ -34084,6 +34084,52 @@
           ]
         }
       ]
+    },
+    {
+      "id": "valucap-vc990",
+      "name": "Contrast Stitch",
+      "brand": "Valucap",
+      "style": "VC990",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Grey",
+          "hex": "#333232",
+          "front": "catalog_images/valucap-vc990/black-grey_front.jpg",
+          "back": "catalog_images/valucap-vc990/black-grey_back.jpg",
+          "hexes": [
+            "#242223",
+            "#989295"
+          ]
+        },
+        {
+          "name": "Brown/ Khaki",
+          "hex": "#7c6159",
+          "front": "catalog_images/valucap-vc990/brown-khaki_front.jpg",
+          "back": "catalog_images/valucap-vc990/brown-khaki_back.jpg",
+          "hexes": [
+            "#4c352b",
+            "#b6a584"
+          ]
+        },
+        {
+          "name": "Golden Brown/ Khaki",
+          "hex": "#b06f40",
+          "front": "catalog_images/valucap-vc990/golden-brown-khaki_front.jpg",
+          "back": "catalog_images/valucap-vc990/golden-brown-khaki_back.jpg"
+        },
+        {
+          "name": "Olive Green/ Navy",
+          "hex": "#675f56",
+          "front": "catalog_images/valucap-vc990/olive-green-navy_front.jpg",
+          "back": "catalog_images/valucap-vc990/olive-green-navy_back.jpg",
+          "hexes": [
+            "#5a5448",
+            "#283040"
+          ]
+        }
+      ]
     }
   ]
 }

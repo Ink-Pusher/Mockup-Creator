@@ -27628,6 +27628,26 @@
           "back": "catalog_images/sportsman-sp08/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "sportsman-sp09",
+      "name": "Bottom Stripe Beanie",
+      "brand": "Sportsman",
+      "style": "SP09",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Navy/ Grey",
+          "hex": "#0a1022",
+          "front": "catalog_images/sportsman-sp09/navy-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
+          "hexes": [
+            "#293041",
+            "#8b8988"
+          ]
+        }
+      ]
     }
   ]
 }

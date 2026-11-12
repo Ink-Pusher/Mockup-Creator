@@ -39,11 +39,14 @@ for f in catalog.json product_descriptions.csv; do
   fi
 done
 
-# ---- ASCII only (2026-11-11): pages get pasted into Squarespace and text gets copied around;
+# ---- ASCII only (2026-11-11): our own pages get pasted into Squarespace and text gets copied around;
 # any non-ASCII character (em dash, curly quote, check mark) can turn into garbage on the way.
 # Fix with: python3 ascii_safe.py fix <file>   (keeps the page looking exactly the same)
 nonascii=""
-for f in $(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(html|js|css|py|sql|md)$'); do
+# Saved vendor pages (Brand_Style.html at the top level or in saved_pages/) are skipped: they're the
+# vendor's own page, only read by the scripts, never shown on the site -- and they always have curly
+# quotes and the like in them, which blocked adding a product (2026-11-12, As_Colour_4001.html).
+for f in $(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(html|js|css|py|sql|md)$' | grep -vE '^(saved_pages/)?[^/]+_[^/]+\.html$' ); do
   if git show ":$f" | LC_ALL=C grep -q '[^[:print:][:space:]]'; then nonascii="$nonascii $f"; fi
 done
 if [ -n "$nonascii" ]; then

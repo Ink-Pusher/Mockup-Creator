@@ -127,6 +127,19 @@
   }
   .pd-swatch.active{outline:3px solid var(--mint-deep);outline-offset:1px;}
   .pd-swatch[data-light="1"]{border-color:#ccc;}
+  /* Live stock (edge function apparel-stock, S&S styles only): sizes for the selected color, and a
+     slash through any color that's out of stock everywhere */
+  .pd-swatch.out::after{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:2px;margin-left:-1px;
+    background:#c0392b;transform:rotate(45deg);border-radius:2px;}
+  .pd-stock{margin:-8px 0 22px;}
+  .pd-stock-head{font-size:13px;font-weight:700;margin-bottom:7px;}
+  .pd-stock-head span{font-weight:500;color:var(--grey);}
+  .pd-stock-sizes{display:flex;flex-wrap:wrap;gap:6px;}
+  .pd-stock-size{display:block;min-width:52px;padding:5px 8px;border:1.5px solid var(--ink);border-radius:9px;text-align:center;
+    font-size:12px;line-height:1.25;background:var(--paper,#fff);}
+  .pd-stock-size b{display:block;font-size:12.5px;font-weight:800;}
+  .pd-stock-size.low{border-color:#d68910;background:#fef5e7;}
+  .pd-stock-size.out{border-color:#ccc;color:#999;background:#f6f6f6;}
 
   .pd-description{font-size:14.5px;line-height:1.6;margin-bottom:20px;}
   .pd-features h3, .pd-supplier h3{font-size:14px;font-weight:800;margin:0 0 8px;}
@@ -296,6 +309,10 @@ function getProductIdFromUrl(){
 let CATALOG = { products: [] };
 let currentProduct = null;
 let currentContent = {};
+// live stock for S&S styles (see loadStock); null until it answers, {available:false} for other suppliers
+const STOCK_URL = "https://wkmwqqtwijimkqfijjrc.supabase.co/functions/v1/apparel-stock";
+const STOCK_LOW = 24;
+let currentStock = null;
 let currentColorIndex = 0;
 
 let supabaseClient = null;
@@ -456,7 +473,9 @@ async function loadAndRender(){
       `${origBrand} ${origStyle}`, `${currentProduct.brand} ${currentProduct.style}`,
     ]);
     currentColorIndex = 0;
+    currentStock = null;
     renderPage();
+    loadStock(origBrand, origStyle, currentProduct.id);
   } catch (err) {
     console.error("[product-detail] failed to load catalog:", err);
     root.innerHTML = `<div class="pd-error">Couldn't load product data right now. Please refresh, or check back shortly.</div>`;
@@ -494,6 +513,7 @@ function renderPage(){
 
         <div class="pd-color-label">Color: <span id="pdColorName"></span></div>
         <div class="pd-swatch-grid" id="pdSwatchGrid"></div>
+        <div class="pd-stock" id="pdStock" style="display:none"></div>
 
         ${content.description
           ? `<div class="pd-description">${escapeHtml(content.description)}</div>`
@@ -558,6 +578,8 @@ function renderSwatches(){
     // otherwise a "White/ Navy" reads as floating with no left edge.
     const bands = (c.hexes && c.hexes.length ? c.hexes : [c.hex]);
     if(bands.some(isLightColor)) btn.dataset.light = "1";
+    const st = stockFor(c);
+    if(st && st.total === 0){ btn.classList.add("out"); btn.title = c.name + " (out of stock)"; }
     btn.onclick = ()=>{
       currentColorIndex = i;
       renderSwatches();
@@ -567,6 +589,48 @@ function renderSwatches(){
   });
   document.getElementById("pdColorName").textContent = currentProduct.colors[currentColorIndex].name;
   updateQuoteLink();
+  renderStock();
+}
+// Live warehouse stock. Brand + style as catalog.json has them (the function only looks up catalog styles).
+// Anything that goes wrong just leaves the section hidden: stock is a bonus, never a broken page.
+async function loadStock(brand, style, productId){
+  try {
+    const r = await fetch(STOCK_URL + "?brand=" + encodeURIComponent(brand) + "&style=" + encodeURIComponent(style));
+    if(!r.ok) return;
+    const data = await r.json();
+    if(!currentProduct || currentProduct.id !== productId) return;   // shopper moved on
+    currentStock = data;
+    if(data.available) renderSwatches();
+  } catch (e) { /* no stock section */ }
+}
+function stockNorm(t){ return String(t || "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
+function stockFor(color){
+  if(!currentStock || !currentStock.available || !currentStock.colors) return null;
+  if(!currentStock._byName){
+    currentStock._byName = {};
+    Object.keys(currentStock.colors).forEach(n => { currentStock._byName[stockNorm(n)] = currentStock.colors[n]; });
+  }
+  return currentStock._byName[stockNorm(color.name)] || null;
+}
+function stockAge(iso){
+  const m = Math.max(0, Math.round((Date.now() - new Date(iso).getTime()) / 60000));
+  return m < 1 ? "just now" : m === 1 ? "1 minute ago" : m < 60 ? m + " minutes ago" : "over an hour ago";
+}
+function renderStock(){
+  const box = document.getElementById("pdStock");
+  if(!box) return;
+  const color = currentProduct.colors[currentColorIndex];
+  const st = color ? stockFor(color) : null;
+  if(!st || !st.sizes || !st.sizes.length){ box.style.display = "none"; box.innerHTML = ""; return; }
+  const chips = st.sizes.map(([size, q]) => {
+    const cls = q <= 0 ? " out" : q <= STOCK_LOW ? " low" : "";
+    const label = q <= 0 ? "Out" : q <= STOCK_LOW ? q + " left" : q >= 5000 ? "5,000+" : q.toLocaleString("en-US");
+    return `<span class="pd-stock-size${cls}"><b>${escapeHtml(size)}</b>${label}</span>`;
+  }).join("");
+  box.innerHTML = `<div class="pd-stock-head">${st.total > 0 ? "In stock" : "Out of stock"} in ${escapeHtml(color.name)}
+    <span>&middot; warehouse stock, updated ${stockAge(currentStock.updated)}</span></div>
+    <div class="pd-stock-sizes">${chips}</div>`;
+  box.style.display = "";
 }
 function updateQuoteLink(){
   const a = document.getElementById("pdQuoteBtn");

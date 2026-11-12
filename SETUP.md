@@ -48,6 +48,19 @@ hand.
    (Mac: `python3`). All `[OK]` = fully set up. Anything marked `[--]`
    comes with its exact fix.
 
+5. **Optional: price lookup.** So a product you add arrives with its
+   wholesale price, run `python fetch_prices.py setup` (Mac: `python3`)
+   in the same window. It asks for, in order:
+   - the S&S account number and API key -- Timm types these in himself
+     (the key is hidden as it's typed), or press Return to skip
+   - where the SanMar SDL download and the AS Colour price list PDF are:
+     put `SanMar_SDL_N.zip` and `gold.pdf` (from Timm) in Downloads and
+     just press Return
+   - your Product Admin sign-in -- it must be a print admin account
+     (Timm adds you); the password is used once and never saved
+   Everything is kept in your user folder (`.inkpusher`), never in the
+   repo. Skip this step and prices just get filled in later on Timm's Mac.
+
 After setup, the day-to-day workflow (adding products) is in
 "Catalog Onboarding - Part 2" on Google Drive.
 

@@ -2306,13 +2306,23 @@
           "name": "White/ Aluminum/ Black",
           "hex": "#e3e3e3",
           "front": "catalog_images/richardson-112/white-aluminum-black_front.jpg",
-          "back": "catalog_images/richardson-112/white-aluminum-black_back.jpg"
+          "back": "catalog_images/richardson-112/white-aluminum-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#d0d0d2",
+            "#242224"
+          ]
         },
         {
           "name": "White/ Aluminum/ Navy",
           "hex": "#e3e3e3",
           "front": "catalog_images/richardson-112/white-aluminum-navy_front.jpg",
-          "back": "catalog_images/richardson-112/white-aluminum-navy_back.jpg"
+          "back": "catalog_images/richardson-112/white-aluminum-navy_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#d0d0d2",
+            "#2a3043"
+          ]
         },
         {
           "name": "White/ Black",
@@ -31434,6 +31444,46 @@
           "hex": "#f1f0f5",
           "front": "catalog_images/richardson-213/white_front.jpg",
           "back": "catalog_images/richardson-213/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "richardson-217",
+      "name": "Macleay Hat",
+      "brand": "Richardson",
+      "style": "217",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Aluminum",
+          "hex": "#d0d0d2",
+          "front": "catalog_images/richardson-217/aluminum_front.jpg",
+          "back": "catalog_images/richardson-217/aluminum_back.jpg"
+        },
+        {
+          "name": "Aqua Blue",
+          "hex": "#b4cbd6",
+          "front": "catalog_images/richardson-217/aqua-blue_front.jpg",
+          "back": "catalog_images/richardson-217/aqua-blue_back.jpg"
+        },
+        {
+          "name": "Blue Mist",
+          "hex": "#95b7d4",
+          "front": "catalog_images/richardson-217/blue-mist_front.jpg",
+          "back": "catalog_images/richardson-217/blue-mist_back.jpg"
+        },
+        {
+          "name": "Medium Grey",
+          "hex": "#8e9194",
+          "front": "catalog_images/richardson-217/medium-grey_front.jpg",
+          "back": "catalog_images/richardson-217/medium-grey_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#dfe0e5",
+          "front": "catalog_images/richardson-217/white_front.jpg",
+          "back": "catalog_images/richardson-217/white_back.jpg"
         }
       ]
     }

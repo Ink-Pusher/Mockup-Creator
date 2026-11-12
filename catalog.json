@@ -1768,7 +1768,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#504d4e",
             "#242224"
           ]
@@ -1779,7 +1779,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#504d4e",
             "#293041"
           ]
@@ -2485,7 +2485,7 @@
           "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#293041"
           ]
         },
@@ -7706,7 +7706,7 @@
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
             "#5a2231",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -17912,7 +17912,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#333237"
           ]
         },
@@ -17922,7 +17922,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#5a2231"
           ]
         },
@@ -17932,7 +17932,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#293041"
           ]
         },
@@ -17942,7 +17942,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#c1172f"
           ]
         },
@@ -17952,7 +17952,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#1951a2"
           ]
         },
@@ -27637,7 +27637,7 @@
           "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
           "hexes": [
             "#293041",
-            "#989295"
+            "#978d92"
           ]
         }
       ]
@@ -27814,7 +27814,7 @@
           "hexes": [
             "#242224",
             "#ededef",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -27825,7 +27825,7 @@
           "hexes": [
             "#5a2231",
             "#ededef",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -27836,7 +27836,7 @@
           "hexes": [
             "#293041",
             "#ededef",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -27847,7 +27847,7 @@
           "hexes": [
             "#293041",
             "#ededef",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -27858,7 +27858,7 @@
           "hexes": [
             "#c1172f",
             "#ededef",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -27869,7 +27869,7 @@
           "hexes": [
             "#245294",
             "#ededef",
-            "#989295"
+            "#978d92"
           ]
         }
       ]
@@ -31159,7 +31159,7 @@
           "front": "catalog_images/richardson-172/grey-white-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/grey-white-black-tri_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#ededef",
             "#413f41"
           ]
@@ -32768,7 +32768,7 @@
           "front": "catalog_images/sportsman-sp03/grey-charcoal_front.jpg",
           "back": "catalog_images/sportsman-sp03/grey-charcoal_back.jpg",
           "hexes": [
-            "#989295",
+            "#978d92",
             "#504d4e"
           ]
         },
@@ -33241,7 +33241,7 @@
           "back": "catalog_images/valucap-ah80/navy-grey_back.jpg",
           "hexes": [
             "#293041",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -33347,7 +33347,7 @@
           "back": "catalog_images/valucap-s102/black-grey_back.jpg",
           "hexes": [
             "#242224",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -33489,7 +33489,7 @@
           "back": "catalog_images/valucap-s102/navy-grey_back.jpg",
           "hexes": [
             "#293041",
-            "#989295"
+            "#978d92"
           ]
         },
         {
@@ -33574,6 +33574,40 @@
             "#ededef",
             "#ededef"
           ]
+        }
+      ]
+    },
+    {
+      "id": "valucap-sm140",
+      "name": "Performance Microfiber",
+      "brand": "Valucap",
+      "style": "SM140",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#0f0f0f",
+          "front": "catalog_images/valucap-sm140/black_front.jpg",
+          "back": "catalog_images/valucap-sm140/black_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#464646",
+          "front": "catalog_images/valucap-sm140/grey_front.jpg",
+          "back": "catalog_images/valucap-sm140/grey_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2f3441",
+          "front": "catalog_images/valucap-sm140/navy_front.jpg",
+          "back": "catalog_images/valucap-sm140/navy_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#d5d5d5",
+          "front": "catalog_images/valucap-sm140/white_front.jpg",
+          "back": "catalog_images/valucap-sm140/white_back.jpg"
         }
       ]
     }

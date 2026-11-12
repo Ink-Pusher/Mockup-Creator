@@ -29884,6 +29884,36 @@
           "front": "catalog_images/port-authority-c939/true-royal-heather_front.jpg"
         }
       ]
+    },
+    {
+      "id": "port-authority-c951",
+      "name": "Rib Knit Cuff Beanie",
+      "brand": "Port Authority",
+      "style": "C951",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Black",
+          "hex": "#4e4e4e",
+          "front": "catalog_images/port-authority-c951/deep-black_front.jpg"
+        },
+        {
+          "name": "Deep Smoke",
+          "hex": "#7b7c79",
+          "front": "catalog_images/port-authority-c951/deep-smoke_front.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#68696b",
+          "front": "catalog_images/port-authority-c951/graphite_front.jpg"
+        },
+        {
+          "name": "River Blue Navy",
+          "hex": "#555960",
+          "front": "catalog_images/port-authority-c951/river-blue-navy_front.jpg"
+        }
+      ]
     }
   ]
 }

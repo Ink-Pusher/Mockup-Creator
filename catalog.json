@@ -31116,6 +31116,84 @@
           "back": "catalog_images/richardson-169/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-172",
+      "name": "Pulse Sportmesh R-Flex Hat",
+      "brand": "Richardson",
+      "style": "172",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Charcoal Split",
+          "hex": "#272429",
+          "front": "catalog_images/richardson-172/black-charcoal-split_front.jpg",
+          "back": "catalog_images/richardson-172/black-charcoal-split_back.jpg"
+        },
+        {
+          "name": "Black/ White Split",
+          "hex": "#252122",
+          "front": "catalog_images/richardson-172/black-white-split_front.jpg",
+          "back": "catalog_images/richardson-172/black-white-split_back.jpg"
+        },
+        {
+          "name": "Charcoal/ Black Split",
+          "hex": "#767780",
+          "front": "catalog_images/richardson-172/charcoal-black-split_front.jpg",
+          "back": "catalog_images/richardson-172/charcoal-black-split_back.jpg"
+        },
+        {
+          "name": "Grey/ White/ Black Tri",
+          "hex": "#abacb2",
+          "front": "catalog_images/richardson-172/grey-white-black-tri_front.jpg",
+          "back": "catalog_images/richardson-172/grey-white-black-tri_back.jpg",
+          "hexes": [
+            "#9a9899",
+            "#ededf0",
+            "#413f41"
+          ]
+        },
+        {
+          "name": "Navy/ White Split",
+          "hex": "#272633",
+          "front": "catalog_images/richardson-172/navy-white-split_front.jpg",
+          "back": "catalog_images/richardson-172/navy-white-split_back.jpg"
+        },
+        {
+          "name": "Navy/ White/ Red Tri",
+          "hex": "#2a2737",
+          "front": "catalog_images/richardson-172/navy-white-red-tri_front.jpg",
+          "back": "catalog_images/richardson-172/navy-white-red-tri_back.jpg",
+          "hexes": [
+            "#2a3043",
+            "#ededf0",
+            "#d86064"
+          ]
+        },
+        {
+          "name": "Red/ Charcoal/ Black Tri",
+          "hex": "#d20d33",
+          "front": "catalog_images/richardson-172/red-charcoal-black-tri_front.jpg",
+          "back": "catalog_images/richardson-172/red-charcoal-black-tri_back.jpg",
+          "hexes": [
+            "#c21830",
+            "#504c4e",
+            "#413f41"
+          ]
+        },
+        {
+          "name": "Royal/ Charcoal/ Black Tri",
+          "hex": "#1a4c96",
+          "front": "catalog_images/richardson-172/royal-charcoal-black-tri_front.jpg",
+          "back": "catalog_images/richardson-172/royal-charcoal-black-tri_back.jpg",
+          "hexes": [
+            "#245695",
+            "#504c4e",
+            "#413f41"
+          ]
+        }
+      ]
     }
   ]
 }

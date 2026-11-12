@@ -23866,6 +23866,70 @@
           "back": "catalog_images/district-dt105/heathered-charcoal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt109",
+      "name": "Perfect Blend CVC Long Sleeve Tee",
+      "brand": "District",
+      "style": "DT109",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#232323",
+          "front": "catalog_images/district-dt109/black_front.jpg",
+          "back": "catalog_images/district-dt109/black_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#989898",
+          "front": "catalog_images/district-dt109/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt109/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#53544e",
+          "front": "catalog_images/district-dt109/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt109/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#4e5c69",
+          "front": "catalog_images/district-dt109/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt109/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Heathered Olive",
+          "hex": "#585d47",
+          "front": "catalog_images/district-dt109/heathered-olive_front.jpg",
+          "back": "catalog_images/district-dt109/heathered-olive_back.jpg"
+        },
+        {
+          "name": "Heathered Teal",
+          "hex": "#12858c",
+          "front": "catalog_images/district-dt109/heathered-teal_front.jpg",
+          "back": "catalog_images/district-dt109/heathered-teal_back.jpg"
+        },
+        {
+          "name": "Heathered Royal",
+          "hex": "#577bc9",
+          "front": "catalog_images/district-dt109/heathered-royal_front.jpg",
+          "back": "catalog_images/district-dt109/heathered-royal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#a0a0a0",
+          "front": "catalog_images/district-dt109/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt109/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e2e2e2",
+          "front": "catalog_images/district-dt109/white_front.jpg",
+          "back": "catalog_images/district-dt109/white_back.jpg"
+        }
+      ]
     }
   ]
 }

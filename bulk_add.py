@@ -21,6 +21,8 @@ USAGE:
 
   Options: --priority   only rows marked priority
            --brand X    only rows for one brand (repeatable)
+           --kind K     only rows of one kind, e.g. beanie or tote (repeatable)
+           --skip STYLE leave one style out, e.g. a discontinued one (repeatable)
            --limit N    stop after N products
            --no-fetch   skip the paid manufacturer-site description lookup
            --no-commit  don't make a git commit per product (default: one commit
@@ -255,6 +257,8 @@ def main():
     dry, pri, fetch, commit = "--dry-run" in opts, "--priority" in opts, "--no-fetch" not in opts, "--no-commit" not in opts
     limit = int(opts[opts.index("--limit") + 1]) if "--limit" in opts else None
     brands = {slugify(opts[i + 1]) for i, o in enumerate(opts) if o == "--brand" and i + 1 < len(opts)}
+    skip = {_norm(opts[i + 1]) for i, o in enumerate(opts) if o == "--skip" and i + 1 < len(opts)}
+    kinds = {re.sub(r"[^a-z]", "", opts[i + 1].lower()) for i, o in enumerate(opts) if o == "--kind" and i + 1 < len(opts)}
 
     rows = read_list(path)
     products = load_catalog()
@@ -262,6 +266,8 @@ def main():
     for r in rows:
         if pri and not r["priority"]: continue
         if brands and slugify(r["brand"]) not in brands: continue
+        if kinds and r["kind"] not in kinds: continue
+        if _norm(r["style"]) in skip: continue
         if already_have(r, products): continue
         if r.get("site") not in API_SITES: manual.append(r); continue
         if r["kind"] not in KINDS or not r.get("style") or not r.get("name"):

@@ -762,7 +762,7 @@ def resolve_saved_page(path_str):
 
 API_SITES = {"ss-api", "sanmar-sdl"}
 # kinds that may be added with a front photo only (see main)
-FRONT_ONLY_KINDS = {"hat", "cap", "beanie"}
+FRONT_ONLY_KINDS = {"hat", "cap", "beanie", "tote"}
 API_WRITEUP = {"description": "", "features": []}   # filled by extract_ss_api for the descriptions step
 
 

@@ -32512,6 +32512,237 @@
           "back": "catalog_images/sportsman-sp1400/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "sportsman-sp1450",
+      "name": "Lo Pro Trucker",
+      "brand": "Sportsman",
+      "style": "SP1450",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black Camo/ Black",
+          "hex": "#1b1b1b",
+          "front": "catalog_images/sportsman-sp1450/black-camo-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/black-camo-black_back.jpg",
+          "swatch": "catalog_images/sportsman-sp1450/black-camo-black_swatch.jpg",
+          "hexes": [
+            "#2a282e",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Chino Black Duck Camo/ Black",
+          "hex": "#413d3c",
+          "front": "catalog_images/sportsman-sp1450/chino-black-duck-camo-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-black-duck-camo-black_back.jpg",
+          "swatch": "catalog_images/sportsman-sp1450/chino-black-duck-camo-black_swatch.jpg"
+        },
+        {
+          "name": "Chino Black/ White",
+          "hex": "#0e0e0e",
+          "front": "catalog_images/sportsman-sp1450/chino-black-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-black-white_back.jpg"
+        },
+        {
+          "name": "Chino Cardinal/ White",
+          "hex": "#9c3640",
+          "front": "catalog_images/sportsman-sp1450/chino-cardinal-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-cardinal-white_back.jpg"
+        },
+        {
+          "name": "Chino Charcoal/ Black",
+          "hex": "#2c2a28",
+          "front": "catalog_images/sportsman-sp1450/chino-charcoal-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-charcoal-black_back.jpg"
+        },
+        {
+          "name": "Chino Duck Camo/ White",
+          "hex": "#7e5b3b",
+          "front": "catalog_images/sportsman-sp1450/chino-duck-camo-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-duck-camo-white_back.jpg",
+          "swatch": "catalog_images/sportsman-sp1450/chino-duck-camo-white_swatch.jpg"
+        },
+        {
+          "name": "Chino Forest Green/ White",
+          "hex": "#245b54",
+          "front": "catalog_images/sportsman-sp1450/chino-forest-green-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-forest-green-white_back.jpg"
+        },
+        {
+          "name": "Chino Grey/ Black",
+          "hex": "#706c68",
+          "front": "catalog_images/sportsman-sp1450/chino-grey-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-grey-black_back.jpg"
+        },
+        {
+          "name": "Chino Khaki/ Black",
+          "hex": "#bcb1a9",
+          "front": "catalog_images/sportsman-sp1450/chino-khaki-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-khaki-black_back.jpg"
+        },
+        {
+          "name": "Chino Maroon/ Black",
+          "hex": "#7e2a3e",
+          "front": "catalog_images/sportsman-sp1450/chino-maroon-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-maroon-black_back.jpg"
+        },
+        {
+          "name": "Chino Navy/ White",
+          "hex": "#080c27",
+          "front": "catalog_images/sportsman-sp1450/chino-navy-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-navy-white_back.jpg"
+        },
+        {
+          "name": "Chino Orange/ White",
+          "hex": "#e54e2f",
+          "front": "catalog_images/sportsman-sp1450/chino-orange-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-orange-white_back.jpg"
+        },
+        {
+          "name": "Chino Red/ White",
+          "hex": "#b5041f",
+          "front": "catalog_images/sportsman-sp1450/chino-red-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-red-white_back.jpg"
+        },
+        {
+          "name": "Chino Royal/ White",
+          "hex": "#1a2e68",
+          "front": "catalog_images/sportsman-sp1450/chino-royal-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-royal-white_back.jpg"
+        },
+        {
+          "name": "Chino Sky Blue/ White",
+          "hex": "#6e8caf",
+          "front": "catalog_images/sportsman-sp1450/chino-sky-blue-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-sky-blue-white_back.jpg"
+        },
+        {
+          "name": "Chino Stone/ Navy",
+          "hex": "#e8e6d8",
+          "front": "catalog_images/sportsman-sp1450/chino-stone-navy_front.jpg"
+        },
+        {
+          "name": "Chino Vegas Gold/ Black",
+          "hex": "#b79253",
+          "front": "catalog_images/sportsman-sp1450/chino-vegas-gold-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/chino-vegas-gold-black_back.jpg"
+        },
+        {
+          "name": "Chino White/ Navy",
+          "hex": "#e8e8e8",
+          "front": "catalog_images/sportsman-sp1450/chino-white-navy_front.jpg"
+        },
+        {
+          "name": "Grey Camo/ Black",
+          "hex": "#676767",
+          "front": "catalog_images/sportsman-sp1450/grey-camo-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/grey-camo-black_back.jpg",
+          "swatch": "catalog_images/sportsman-sp1450/grey-camo-black_swatch.jpg",
+          "hexes": [
+            "#4a4d49",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Black",
+          "hex": "#77767d",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-black_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-black_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Charcoal",
+          "hex": "#777777",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-charcoal_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-charcoal_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#504c4d"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Forest Green",
+          "hex": "#787b7b",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-forest-green_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-forest-green_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#244334"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Navy",
+          "hex": "#747476",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-navy_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-navy_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#293042"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Orange",
+          "hex": "#917571",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-orange_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-orange_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#f1692b"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Red",
+          "hex": "#b59999",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-red_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-red_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#c21830"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Royal",
+          "hex": "#777882",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-royal_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-royal_back.jpg",
+          "hexes": [
+            "#b6b6ba",
+            "#504c4d",
+            "#225394"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Charcoal/ Vegas Gold",
+          "hex": "#887e76",
+          "front": "catalog_images/sportsman-sp1450/heather-grey-charcoal-vegas-gold_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/heather-grey-charcoal-vegas-gold_back.jpg"
+        },
+        {
+          "name": "Navy Camo/ White",
+          "hex": "#282e40",
+          "front": "catalog_images/sportsman-sp1450/navy-camo-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/navy-camo-white_back.jpg",
+          "swatch": "catalog_images/sportsman-sp1450/navy-camo-white_swatch.jpg"
+        },
+        {
+          "name": "White Camo/ White",
+          "hex": "#b1b2b1",
+          "front": "catalog_images/sportsman-sp1450/white-camo-white_front.jpg",
+          "back": "catalog_images/sportsman-sp1450/white-camo-white_back.jpg",
+          "swatch": "catalog_images/sportsman-sp1450/white-camo-white_swatch.jpg"
+        }
+      ]
     }
   ]
 }

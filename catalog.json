@@ -16999,7 +16999,7 @@
           "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#254736"
+            "#244235"
           ]
         },
         {
@@ -23730,6 +23730,88 @@
           "hex": "#2c3846",
           "front": "catalog_images/district-dt6000p/new-navy_front.jpg",
           "back": "catalog_images/district-dt6000p/new-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6065",
+      "name": "Heavyweight Very Important Tee",
+      "brand": "District",
+      "style": "DT6065",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Baked Clay",
+          "hex": "#7f4e35",
+          "front": "catalog_images/district-dt6065/baked-clay_front.jpg",
+          "back": "catalog_images/district-dt6065/baked-clay_back.jpg"
+        },
+        {
+          "name": "Bordeaux",
+          "hex": "#412f39",
+          "front": "catalog_images/district-dt6065/bordeaux_front.jpg",
+          "back": "catalog_images/district-dt6065/bordeaux_back.jpg"
+        },
+        {
+          "name": "Dark Royal",
+          "hex": "#23334d",
+          "front": "catalog_images/district-dt6065/dark-royal_front.jpg",
+          "back": "catalog_images/district-dt6065/dark-royal_back.jpg"
+        },
+        {
+          "name": "Desert Tan",
+          "hex": "#ab9880",
+          "front": "catalog_images/district-dt6065/desert-tan_front.jpg",
+          "back": "catalog_images/district-dt6065/desert-tan_back.jpg"
+        },
+        {
+          "name": "Griege",
+          "hex": "#eee5d4",
+          "front": "catalog_images/district-dt6065/griege_front.jpg",
+          "back": "catalog_images/district-dt6065/griege_back.jpg"
+        },
+        {
+          "name": "Navy Blue",
+          "hex": "#222c2e",
+          "front": "catalog_images/district-dt6065/navy-blue_front.jpg",
+          "back": "catalog_images/district-dt6065/navy-blue_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#4e5244",
+          "front": "catalog_images/district-dt6065/olive_front.jpg",
+          "back": "catalog_images/district-dt6065/olive_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f1f3f8",
+          "front": "catalog_images/district-dt6065/white_front.jpg",
+          "back": "catalog_images/district-dt6065/white_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#4a4e4f",
+          "front": "catalog_images/district-dt6065/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6065/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#afb3b2",
+          "front": "catalog_images/district-dt6065/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6065/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#233d32",
+          "front": "catalog_images/district-dt6065/forest-green_front.jpg",
+          "back": "catalog_images/district-dt6065/forest-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#242424",
+          "front": "catalog_images/district-dt6065/black_front.jpg",
+          "back": "catalog_images/district-dt6065/black_back.jpg"
         }
       ]
     }

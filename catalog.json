@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#4a484b",
+            "#464448",
             "#242324"
           ]
         },
@@ -1303,7 +1303,7 @@
           "front": "catalog_images/richardson-168/red-black_front.jpg",
           "back": "catalog_images/richardson-168/red-black_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#242324"
           ]
         },
@@ -1380,7 +1380,7 @@
           "back": "catalog_images/richardson-112/white-red-cmb_back.jpg",
           "hexes": [
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -1476,7 +1476,7 @@
           "hexes": [
             "#242324",
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -1644,7 +1644,7 @@
           "back": "catalog_images/richardson-112/charcoal-red_back.jpg",
           "hexes": [
             "#4c4a4b",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -2133,7 +2133,7 @@
           "hexes": [
             "#2a2f43",
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -2201,7 +2201,7 @@
           "front": "catalog_images/richardson-112/red-black_front.jpg",
           "back": "catalog_images/richardson-112/red-black_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#242324"
           ]
         },
@@ -2211,7 +2211,7 @@
           "front": "catalog_images/richardson-112/red-white_front.jpg",
           "back": "catalog_images/richardson-112/red-white_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef"
           ]
         },
@@ -2221,7 +2221,7 @@
           "front": "catalog_images/richardson-112/red-white-black_front.jpg",
           "back": "catalog_images/richardson-112/red-white-black_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef",
             "#242324"
           ]
@@ -2232,7 +2232,7 @@
           "front": "catalog_images/richardson-112/red-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/red-white-heather-grey_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef",
             "#b5b4b6"
           ]
@@ -2243,7 +2243,7 @@
           "front": "catalog_images/richardson-112/red-white-navy_front.jpg",
           "back": "catalog_images/richardson-112/red-white-navy_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef",
             "#2a2f43"
           ]
@@ -2293,7 +2293,7 @@
           "hexes": [
             "#185091",
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -6991,7 +6991,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-red_back.jpg",
           "hexes": [
             "#ebe3d9",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -7848,7 +7848,7 @@
           "front": "catalog_images/yupoong-6606/red-black_front.jpg",
           "back": "catalog_images/yupoong-6606/red-black_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#242324"
           ]
         },
@@ -7858,7 +7858,7 @@
           "front": "catalog_images/yupoong-6606/red-white_front.jpg",
           "back": "catalog_images/yupoong-6606/red-white_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef"
           ]
         },
@@ -8147,7 +8147,7 @@
           "front": "catalog_images/yupoong-6006/red-black_front.jpg",
           "back": "catalog_images/yupoong-6006/red-black_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#242324"
           ]
         },
@@ -8157,9 +8157,9 @@
           "front": "catalog_images/yupoong-6006/red-white-red_front.jpg",
           "back": "catalog_images/yupoong-6006/red-white-red_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -9655,7 +9655,7 @@
           "back": "catalog_images/richardson-256/navy-red_back.jpg",
           "hexes": [
             "#2a2f43",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -9680,7 +9680,7 @@
           "front": "catalog_images/richardson-256/red-white_front.jpg",
           "back": "catalog_images/richardson-256/red-white_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#ededef"
           ]
         },
@@ -16831,7 +16831,7 @@
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
             "#b5b4b6",
-            "#4a484b"
+            "#464448"
           ]
         },
         {
@@ -16870,7 +16870,7 @@
           "front": "catalog_images/tultex-246/red-black_front.jpg",
           "back": "catalog_images/tultex-246/red-black_back.jpg",
           "hexes": [
-            "#c31530",
+            "#c41430",
             "#242324"
           ]
         },
@@ -16939,7 +16939,7 @@
           "back": "catalog_images/tultex-246/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -17735,7 +17735,7 @@
           "back": "catalog_images/bella-canvas-1200/white-red_back.png",
           "hexes": [
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -17873,7 +17873,7 @@
           "back": "catalog_images/bella-canvas-3200/black-red_back.jpg",
           "hexes": [
             "#242324",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -17933,7 +17933,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
             "#8b8988",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -18033,7 +18033,7 @@
           "back": "catalog_images/bella-canvas-3200/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -19740,7 +19740,7 @@
           "back": "catalog_images/bella-canvas-1201/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c31530"
+            "#c41430"
           ]
         },
         {
@@ -24150,6 +24150,78 @@
           "hex": "#efeff1",
           "front": "catalog_images/hanes-gdh300/white_front.jpg",
           "back": "catalog_images/hanes-gdh300/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "independent-trading-co-afx90unz",
+      "name": "Unisex Lightweight Zip Hood",
+      "brand": "Independent Trading Co",
+      "style": "AFX90UNZ",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Alpine Green",
+          "hex": "#455b4f",
+          "front": "catalog_images/independent-trading-co-afx90unz/alpine-green_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/alpine-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#2b2c2c",
+          "front": "catalog_images/independent-trading-co-afx90unz/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/black_back.jpg"
+        },
+        {
+          "name": "Black Camo",
+          "hex": "#343235",
+          "front": "catalog_images/independent-trading-co-afx90unz/black-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/black-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-afx90unz/black-camo_swatch.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#35343c",
+          "front": "catalog_images/independent-trading-co-afx90unz/charcoal-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Classic Navy",
+          "hex": "#2f3548",
+          "front": "catalog_images/independent-trading-co-afx90unz/classic-navy_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/classic-navy_back.jpg"
+        },
+        {
+          "name": "Forest Camo",
+          "hex": "#4c493d",
+          "front": "catalog_images/independent-trading-co-afx90unz/forest-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/forest-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-afx90unz/forest-camo_swatch.jpg"
+        },
+        {
+          "name": "Gunmetal Heather",
+          "hex": "#8b8a8f",
+          "front": "catalog_images/independent-trading-co-afx90unz/gunmetal-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/gunmetal-heather_back.jpg"
+        },
+        {
+          "name": "Misty Blue",
+          "hex": "#92aec0",
+          "front": "catalog_images/independent-trading-co-afx90unz/misty-blue_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/misty-blue_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#d40732",
+          "front": "catalog_images/independent-trading-co-afx90unz/red_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/red_back.jpg"
+        },
+        {
+          "name": "Rust",
+          "hex": "#c05f56",
+          "front": "catalog_images/independent-trading-co-afx90unz/rust_front.jpg",
+          "back": "catalog_images/independent-trading-co-afx90unz/rust_back.jpg"
         }
       ]
     }

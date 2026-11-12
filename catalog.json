@@ -30998,6 +30998,48 @@
           "back": "catalog_images/richardson-112wh/whiskey-brown-brown_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-155",
+      "name": "Lite Trail Hat",
+      "brand": "Richardson",
+      "style": "155",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Blue Heather/ Navy",
+          "hex": "#43567f",
+          "front": "catalog_images/richardson-155/blue-heather-navy_front.jpg",
+          "hexes": [
+            "#96a9cc",
+            "#2a3043"
+          ]
+        },
+        {
+          "name": "Charcoal Heather/ Black",
+          "hex": "#313137",
+          "front": "catalog_images/richardson-155/charcoal-heather-black_front.jpg",
+          "hexes": [
+            "#444245",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Navy Heather/ White",
+          "hex": "#5e6b8c",
+          "front": "catalog_images/richardson-155/navy-heather-white_front.jpg",
+          "hexes": [
+            "#4b5365",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Steel Heather/ Charcoal",
+          "hex": "#9497a0",
+          "front": "catalog_images/richardson-155/steel-heather-charcoal_front.jpg"
+        }
+      ]
     }
   ]
 }

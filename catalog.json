@@ -2309,7 +2309,7 @@
           "back": "catalog_images/richardson-112/white-aluminum-black_back.jpg",
           "hexes": [
             "#ededf0",
-            "#d5d7d9",
+            "#dadfdf",
             "#242224"
           ]
         },
@@ -2320,7 +2320,7 @@
           "back": "catalog_images/richardson-112/white-aluminum-navy_back.jpg",
           "hexes": [
             "#ededf0",
-            "#d5d7d9",
+            "#dadfdf",
             "#2a3043"
           ]
         },
@@ -31776,6 +31776,46 @@
           "hex": "#ededed",
           "front": "catalog_images/richardson-225/white_front.jpg",
           "back": "catalog_images/richardson-225/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "richardson-228",
+      "name": "Low Pro Performance Laser Perforated",
+      "brand": "Richardson",
+      "style": "228",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Aluminum",
+          "hex": "#dfdfdf",
+          "front": "catalog_images/richardson-228/aluminum_front.jpg",
+          "back": "catalog_images/richardson-228/aluminum_back.jpg"
+        },
+        {
+          "name": "Blue Mist",
+          "hex": "#aec8e2",
+          "front": "catalog_images/richardson-228/blue-mist_front.jpg",
+          "back": "catalog_images/richardson-228/blue-mist_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#393b45",
+          "front": "catalog_images/richardson-228/graphite_front.jpg",
+          "back": "catalog_images/richardson-228/graphite_back.jpg"
+        },
+        {
+          "name": "Mint Green",
+          "hex": "#c4ebcd",
+          "front": "catalog_images/richardson-228/mint-green_front.jpg",
+          "back": "catalog_images/richardson-228/mint-green_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e3e3e7",
+          "front": "catalog_images/richardson-228/white_front.jpg",
+          "back": "catalog_images/richardson-228/white_back.jpg"
         }
       ]
     }

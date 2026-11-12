@@ -25259,6 +25259,40 @@
           "back": "catalog_images/lane-seven-ls82001/mauve-wine_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lane-seven-ls86000gd",
+      "name": "Womens Urban Crop Tee Garment Dyed",
+      "brand": "Lane Seven",
+      "style": "LS86000GD",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Pigment Black",
+          "hex": "#212224",
+          "front": "catalog_images/lane-seven-ls86000gd/pigment-black_front.jpg",
+          "back": "catalog_images/lane-seven-ls86000gd/pigment-black_back.jpg"
+        },
+        {
+          "name": "Pigment Burro",
+          "hex": "#dbbd93",
+          "front": "catalog_images/lane-seven-ls86000gd/pigment-burro_front.jpg",
+          "back": "catalog_images/lane-seven-ls86000gd/pigment-burro_back.jpg"
+        },
+        {
+          "name": "Pigment Lunar Rock",
+          "hex": "#e4e4e2",
+          "front": "catalog_images/lane-seven-ls86000gd/pigment-lunar-rock_front.jpg",
+          "back": "catalog_images/lane-seven-ls86000gd/pigment-lunar-rock_back.jpg"
+        },
+        {
+          "name": "Pigment Tornado",
+          "hex": "#757570",
+          "front": "catalog_images/lane-seven-ls86000gd/pigment-tornado_front.jpg",
+          "back": "catalog_images/lane-seven-ls86000gd/pigment-tornado_back.jpg"
+        }
+      ]
     }
   ]
 }

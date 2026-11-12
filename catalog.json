@@ -31935,6 +31935,142 @@
           "back": "catalog_images/richardson-257/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-258",
+      "name": "5 Panel Classic Rope Cap",
+      "brand": "Richardson",
+      "style": "258",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ White",
+          "hex": "#202020",
+          "front": "catalog_images/richardson-258/black-white_front.jpg",
+          "back": "catalog_images/richardson-258/black-white_back.jpg",
+          "hexes": [
+            "#242224",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Dark Grey/ White",
+          "hex": "#494543",
+          "front": "catalog_images/richardson-258/dark-grey-white_front.jpg",
+          "back": "catalog_images/richardson-258/dark-grey-white_back.jpg",
+          "hexes": [
+            "#363638",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Dark Olive Green/ White",
+          "hex": "#43402e",
+          "front": "catalog_images/richardson-258/dark-olive-green-white_front.jpg",
+          "back": "catalog_images/richardson-258/dark-olive-green-white_back.jpg"
+        },
+        {
+          "name": "Light Blue/ White",
+          "hex": "#284663",
+          "front": "catalog_images/richardson-258/light-blue-white_front.jpg",
+          "back": "catalog_images/richardson-258/light-blue-white_back.jpg",
+          "hexes": [
+            "#adbeda",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Light Grey/ Black",
+          "hex": "#bbbbbb",
+          "front": "catalog_images/richardson-258/light-grey-black_front.jpg",
+          "back": "catalog_images/richardson-258/light-grey-black_back.jpg",
+          "hexes": [
+            "#a6a5a0",
+            "#242224"
+          ]
+        },
+        {
+          "name": "Light Grey/ White",
+          "hex": "#bbbbbb",
+          "front": "catalog_images/richardson-258/light-grey-white_front.jpg",
+          "back": "catalog_images/richardson-258/light-grey-white_back.jpg",
+          "hexes": [
+            "#a6a5a0",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#1a2132",
+          "front": "catalog_images/richardson-258/navy-white_front.jpg",
+          "back": "catalog_images/richardson-258/navy-white_back.jpg",
+          "hexes": [
+            "#2a3043",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#9f2726",
+          "front": "catalog_images/richardson-258/red-white_front.jpg",
+          "back": "catalog_images/richardson-258/red-white_back.jpg",
+          "hexes": [
+            "#c21830",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Smoke Blue/ White",
+          "hex": "#7ca2ae",
+          "front": "catalog_images/richardson-258/smoke-blue-white_front.jpg",
+          "back": "catalog_images/richardson-258/smoke-blue-white_back.jpg",
+          "hexes": [
+            "#87a6a9",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Soft Blue/ Navy",
+          "hex": "#bdd7e1",
+          "front": "catalog_images/richardson-258/soft-blue-navy_front.jpg",
+          "back": "catalog_images/richardson-258/soft-blue-navy_back.jpg",
+          "hexes": [
+            "#bbd2d6",
+            "#2a3043"
+          ]
+        },
+        {
+          "name": "White/ Kelly Green",
+          "hex": "#f4f4f4",
+          "front": "catalog_images/richardson-258/white-kelly-green_front.jpg",
+          "back": "catalog_images/richardson-258/white-kelly-green_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#038d60"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#f4f4f4",
+          "front": "catalog_images/richardson-258/white-navy_front.jpg",
+          "back": "catalog_images/richardson-258/white-navy_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#2a3043"
+          ]
+        },
+        {
+          "name": "White/Black",
+          "hex": "#f4f4f4",
+          "front": "catalog_images/richardson-258/white-black_front.jpg",
+          "back": "catalog_images/richardson-258/white-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#242224"
+          ]
+        }
+      ]
     }
   ]
 }

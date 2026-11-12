@@ -32295,6 +32295,49 @@
           "back": "catalog_images/richardson-130/turquoise-heather_back.jpg"
         }
       ]
+    },
+    {
+      "id": "richardson-134",
+      "name": "Striped Beanie With Cuff Pom",
+      "brand": "Richardson",
+      "style": "134",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Cardinal/ Black/ White",
+          "hex": "#5d141b",
+          "front": "catalog_images/richardson-134/cardinal-black-white_front.jpg",
+          "back": "catalog_images/richardson-134/cardinal-black-white_back.jpg",
+          "hexes": [
+            "#841c2c",
+            "#242224",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Maroon/ Black/ White",
+          "hex": "#351a1f",
+          "front": "catalog_images/richardson-134/maroon-black-white_front.jpg",
+          "back": "catalog_images/richardson-134/maroon-black-white_back.jpg",
+          "hexes": [
+            "#5a2231",
+            "#242224",
+            "#ededf0"
+          ]
+        },
+        {
+          "name": "Navy/ Red/ White",
+          "hex": "#482436",
+          "front": "catalog_images/richardson-134/navy-red-white_front.jpg",
+          "back": "catalog_images/richardson-134/navy-red-white_back.jpg",
+          "hexes": [
+            "#2a3043",
+            "#c21830",
+            "#ededf0"
+          ]
+        }
+      ]
     }
   ]
 }

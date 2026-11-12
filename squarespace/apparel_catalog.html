@@ -291,6 +291,10 @@
         <h3>Filter</h3>
         <div class="filter-row" id="filterRow"></div>
       </div>
+      <div class="sidebar-section" id="hatFilterSection" style="display:none">
+        <h3>Hat details</h3>
+        <div class="filter-row" id="hatFilterRow"></div>
+      </div>
       <div class="sidebar-section" id="brandFilterSection">
         <h3>Brand</h3>
         <div class="brand-panel-list" id="brandFilterPanel"></div>
@@ -376,17 +380,28 @@ const STYLE_TAGS = [
   { id:"pullover-hoodie", label:"Pullover Hoodies", test:(p)=> (p.kind==="hoodie"||/hood/i.test(p.name)) && !/\bzip\b|full[\s-]?zip/i.test(p.name) },
   { id:"crewneck",        label:"Crewnecks",        test:(p)=> /crew/i.test(p.name) && !/hood/i.test(p.name) },
   { id:"tote",        label:"Totes",        test:(p)=> p.kind==="tote" },
-  { id:"trucker-hat", label:"Trucker Hats", test:(p)=> /trucker/i.test(p.name) },
-  { id:"dad-hat",     label:"Dad Hats",     test:(p)=> /dad\s*(hat|cap)|low[\s-]?profile/i.test(p.name) },
-  { id:"bucket-hat",  label:"Bucket Hats",  test:(p)=> /bucket/i.test(p.name) },
-  { id:"snapback",    label:"Snapbacks",    test:(p)=> /snapback/i.test(p.name) },
+  // Hats: by name, or by the "hatTags" bulk_add.py reads off each hat's feature
+  // bullets (python3 bulk_add.py tag-hats). The hat resource guide links here.
+  { id:"trucker-hat", label:"Trucker Hats", test:(p)=> /trucker/i.test(p.name) || hasHatTag(p,"trucker") },
+  { id:"dad-hat",     label:"Dad Hats",     test:(p)=> /dad\s*(hat|cap)|low[\s-]?profile/i.test(p.name) || hasHatTag(p,"dad") },
+  { id:"bucket-hat",  label:"Bucket Hats",  test:(p)=> /bucket/i.test(p.name) || hasHatTag(p,"bucket") },
+  { id:"snapback",    label:"Snapbacks",    test:(p)=> /snapback/i.test(p.name) || hasHatTag(p,"snapback") },
   { id:"beanie",      label:"Beanies",      test:(p)=> p.kind==="beanie" || /beanie/i.test(p.name) },
-  { id:"cap",         label:"Caps",         test:(p)=> (p.kind==="cap"||p.kind==="hat") && !/trucker|dad\s*(hat|cap)|low[\s-]?profile|bucket|snapback|beanie/i.test(p.name) },
+  { id:"cap",         label:"Caps",         test:(p)=> (p.kind==="cap"||p.kind==="hat") && !/trucker|dad\s*(hat|cap)|low[\s-]?profile|bucket|snapback|beanie/i.test(p.name)
+                                                       && !["trucker","dad","bucket","snapback"].some(t => hasHatTag(p,t)) },
 ];
-const ALL_TAGS = [...FIT_TAGS, ...STYLE_TAGS];
+function hasHatTag(p, t){ return Array.isArray(p.hatTags) && p.hatTags.includes(t); }
+// Hat details: second row of chips, shown only when hats are in view.
+const HAT_TAGS = [
+  ["structured","Structured"], ["unstructured","Unstructured"],
+  ["5-panel","5-Panel"], ["6-panel","6-Panel"], ["7-panel","7-Panel"],
+  ["hook-loop","Hook & Loop"], ["buckle","Buckle Strap"], ["fitted","Fitted / Stretch"],
+  ["cotton-twill","Cotton Twill"], ["mesh","Mesh"], ["corduroy","Corduroy"], ["wool","Wool Blend"],
+].map(([id,label]) => ({ id, label, test:(p)=> hasHatTag(p,id) }));
+const ALL_TAGS = [...FIT_TAGS, ...STYLE_TAGS, ...HAT_TAGS];
 
 function resolveProductTags(p){
-  if(Array.isArray(p.tags) && p.tags.length) return p.tags;
+  if(Array.isArray(p.tags) && p.tags.length) return [...p.tags, ...HAT_TAGS.filter(t => t.test(p)).map(t => t.id)];
   return ALL_TAGS.filter(t => t.test(p)).map(t => t.id);
 }
 function categoryOf(product){
@@ -474,6 +489,7 @@ async function loadCatalog(){
           kind: p.kind,
           thumbnailColor: p.thumbnailColor || null,
           tags: p.tags || null,
+          hatTags: p.hatTags || null,
           sortOrder: typeof o.sort_order === "number" ? o.sort_order : null,
           colors: p.colors.map(c => ({
             name: c.name,
@@ -548,10 +564,15 @@ function renderFilterRow(inCategory){
   // category -- no point offering "Trucker Hats" while looking at tees.
   const presentTagIds = new Set();
   inCategory.forEach(p => resolveProductTags(p).forEach(id => presentTagIds.add(id)));
-  const relevantTags = ALL_TAGS.filter(t => presentTagIds.has(t.id));
+  const relevantTags = [...FIT_TAGS, ...STYLE_TAGS].filter(t => presentTagIds.has(t.id));
+  const relevantHatTags = HAT_TAGS.filter(t => presentTagIds.has(t.id));
   tagSection.style.display = relevantTags.length ? "block" : "none";
+  const hatSection = document.getElementById("hatFilterSection");
+  const hatWrap = document.getElementById("hatFilterRow");
+  hatWrap.innerHTML = "";
+  hatSection.style.display = (relevantHatTags.length && state.activeCategory === "cap") ? "block" : "none";
 
-  relevantTags.forEach(tag=>{
+  const addChip = (tag, into)=>{
     const chip = document.createElement("button");
     chip.type = "button";
     chip.className = "filter-chip" + (state.activeTags.has(tag.id) ? " active" : "");
@@ -561,8 +582,10 @@ function renderFilterRow(inCategory){
       else state.activeTags.add(tag.id);
       render();
     };
-    wrap.appendChild(chip);
-  });
+    into.appendChild(chip);
+  };
+  relevantTags.forEach(tag => addChip(tag, wrap));
+  relevantHatTags.forEach(tag => addChip(tag, hatWrap));
 
   renderBrandFilter(inCategory);
 }

@@ -1317,6 +1317,14 @@
             "#242223"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "7-panel",
+        "snapback",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -2365,6 +2373,14 @@
             "#29303f"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -2641,6 +2657,13 @@
           "front": "catalog_images/valucap-vc300a/yellow_front.jpg",
           "back": "catalog_images/valucap-vc300a/yellow_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -2765,6 +2788,13 @@
           "front": "catalog_images/valucap-sp500/wine_front.jpg",
           "back": "catalog_images/valucap-sp500/wine_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -3105,6 +3135,14 @@
           "front": "catalog_images/adam-s-lp101/wild-plum_front.jpg",
           "back": "catalog_images/adam-s-lp101/wild-plum_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -3703,6 +3741,13 @@
           "front": "catalog_images/richardson-112re/navy_front.jpg",
           "back": "catalog_images/richardson-112re/navy_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill"
       ]
     },
     {
@@ -6520,6 +6565,9 @@
           "front": "catalog_images/as-colour-1123/powder-white_front.jpg",
           "back": "catalog_images/as-colour-1123/powder-white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "snapback"
       ]
     },
     {
@@ -6830,6 +6878,10 @@
           "front": "catalog_images/as-colour-1114/white_front.jpg",
           "back": "catalog_images/as-colour-1114/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "snapback"
       ]
     },
     {
@@ -7949,6 +8001,13 @@
           "back": "catalog_images/yupoong-6606/veil-wideland_back.jpg",
           "swatch": "catalog_images/yupoong-6606/veil-wideland_swatch.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "mesh"
       ]
     },
     {
@@ -8255,6 +8314,13 @@
             "#242223"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "5-panel",
+        "snapback",
+        "mesh"
       ]
     },
     {
@@ -8395,6 +8461,14 @@
           "front": "catalog_images/richardson-112fp/pale-khaki-loden-green_front.jpg",
           "back": "catalog_images/richardson-112fp/pale-khaki-loden-green_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "5-panel",
+        "snapback",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -9776,6 +9850,11 @@
             "#242223"
           ]
         }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "mesh"
       ]
     },
     {
@@ -15692,6 +15771,12 @@
           "front": "catalog_images/valucap-ah35/stone_front.jpg",
           "back": "catalog_images/valucap-ah35/stone_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle"
       ]
     },
     {
@@ -17285,6 +17370,10 @@
           "front": "catalog_images/as-colour-1152/walnut_front.jpg",
           "back": "catalog_images/as-colour-1152/walnut_back.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "6-panel"
       ]
     },
     {
@@ -22168,6 +22257,13 @@
           "front": "catalog_images/adam-s-lp108/white_front.jpg",
           "back": "catalog_images/adam-s-lp108/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "mesh"
       ]
     },
     {
@@ -28203,6 +28299,11 @@
           "hex": "#d8d7dd",
           "front": "catalog_images/adam-s-va101/white_front.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "bucket",
+        "cotton-twill"
       ]
     },
     {
@@ -28277,6 +28378,14 @@
             "#c0a891"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -28322,6 +28431,14 @@
           "hex": "#c5bcb1",
           "front": "catalog_images/adam-s-lp104/stone_front.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -28812,7 +28929,8 @@
           "front": "catalog_images/adam-s-sb101/black_front.jpg",
           "back": "catalog_images/adam-s-sb101/black_back.jpg"
         }
-      ]
+      ],
+      "hatTags": []
     },
     {
       "id": "liberty-bags-a134",
@@ -30967,6 +31085,13 @@
             "#ededef"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -31009,6 +31134,14 @@
           "front": "catalog_images/richardson-112wf/navy_front.jpg",
           "back": "catalog_images/richardson-112wf/navy_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -31059,6 +31192,13 @@
           "front": "catalog_images/richardson-112wh/whiskey-brown-brown_front.jpg",
           "back": "catalog_images/richardson-112wh/whiskey-brown-brown_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "5-panel",
+        "snapback",
+        "mesh"
       ]
     },
     {
@@ -31101,6 +31241,9 @@
           "hex": "#9497a0",
           "front": "catalog_images/richardson-155/steel-heather-charcoal_front.jpg"
         }
+      ],
+      "hatTags": [
+        "mesh"
       ]
     },
     {
@@ -31177,6 +31320,11 @@
           "front": "catalog_images/richardson-169/white_front.jpg",
           "back": "catalog_images/richardson-169/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "7-panel",
+        "snapback"
       ]
     },
     {
@@ -31255,6 +31403,11 @@
             "#413f41"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel"
       ]
     },
     {
@@ -31313,6 +31466,12 @@
           "front": "catalog_images/richardson-212/white_front.jpg",
           "back": "catalog_images/richardson-212/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill"
       ]
     },
     {
@@ -31497,6 +31656,9 @@
           "front": "catalog_images/richardson-213/white_front.jpg",
           "back": "catalog_images/richardson-213/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker"
       ]
     },
     {
@@ -31537,7 +31699,8 @@
           "front": "catalog_images/richardson-217/white_front.jpg",
           "back": "catalog_images/richardson-217/white_back.jpg"
         }
-      ]
+      ],
+      "hatTags": []
     },
     {
       "id": "richardson-220",
@@ -31637,6 +31800,11 @@
           "front": "catalog_images/richardson-220/white_front.jpg",
           "back": "catalog_images/richardson-220/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "6-panel",
+        "hook-loop"
       ]
     },
     {
@@ -31713,6 +31881,9 @@
           "front": "catalog_images/richardson-222/white_front.jpg",
           "back": "catalog_images/richardson-222/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker"
       ]
     },
     {
@@ -31741,6 +31912,11 @@
           "front": "catalog_images/richardson-224re/heather-maroon_front.jpg",
           "back": "catalog_images/richardson-224re/heather-maroon_back.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "6-panel",
+        "hook-loop"
       ]
     },
     {
@@ -31829,6 +32005,11 @@
           "front": "catalog_images/richardson-225/white_front.jpg",
           "back": "catalog_images/richardson-225/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "hook-loop"
       ]
     },
     {
@@ -31869,7 +32050,8 @@
           "front": "catalog_images/richardson-228/white_front.jpg",
           "back": "catalog_images/richardson-228/white_back.jpg"
         }
-      ]
+      ],
+      "hatTags": []
     },
     {
       "id": "richardson-253",
@@ -31903,6 +32085,12 @@
           "front": "catalog_images/richardson-253/tan_front.jpg",
           "back": "catalog_images/richardson-253/tan_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "snapback",
+        "corduroy"
       ]
     },
     {
@@ -31919,6 +32107,12 @@
           "front": "catalog_images/richardson-254re/loden_front.jpg",
           "back": "catalog_images/richardson-254re/loden_back.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -31986,6 +32180,11 @@
           "front": "catalog_images/richardson-257/white_front.jpg",
           "back": "catalog_images/richardson-257/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "7-panel",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -32122,6 +32321,11 @@
             "#242223"
           ]
         }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "snapback"
       ]
     },
     {
@@ -32282,6 +32486,9 @@
           "front": "catalog_images/richardson-320/white_front.jpg",
           "back": "catalog_images/richardson-320/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "cotton-twill"
       ]
     },
     {
@@ -32429,6 +32636,12 @@
           "front": "catalog_images/sportsman-sp1200/white_front.jpg",
           "back": "catalog_images/sportsman-sp1200/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "unstructured",
+        "5-panel",
+        "buckle",
+        "mesh"
       ]
     },
     {
@@ -32493,6 +32706,12 @@
           "front": "catalog_images/sportsman-sp1300/white_front.jpg",
           "back": "catalog_images/sportsman-sp1300/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "snapback",
+        "cotton-twill"
       ]
     },
     {
@@ -32563,6 +32782,13 @@
           "front": "catalog_images/sportsman-sp1400/white_front.jpg",
           "back": "catalog_images/sportsman-sp1400/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill"
       ]
     },
     {
@@ -32794,6 +33020,13 @@
           "back": "catalog_images/sportsman-sp1450/white-camo-white_back.jpg",
           "swatch": "catalog_images/sportsman-sp1450/white-camo-white_swatch.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill"
       ]
     },
     {
@@ -33226,6 +33459,11 @@
           "front": "catalog_images/valucap-ah30/white_front.jpg",
           "back": "catalog_images/valucap-ah30/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "buckle"
       ]
     },
     {
@@ -33316,6 +33554,14 @@
             "#ededef"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "hook-loop",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -33362,6 +33608,12 @@
           "front": "catalog_images/valucap-vc100/white_front.jpg",
           "back": "catalog_images/valucap-vc100/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill"
       ]
     },
     {
@@ -33627,6 +33879,14 @@
             "#ededef"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "hook-loop",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -33661,6 +33921,12 @@
           "front": "catalog_images/valucap-sm140/white_front.jpg",
           "back": "catalog_images/valucap-sm140/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "hook-loop"
       ]
     },
     {
@@ -33725,6 +33991,13 @@
           "front": "catalog_images/valucap-vc200/white_front.jpg",
           "back": "catalog_images/valucap-vc200/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "hook-loop",
+        "cotton-twill"
       ]
     },
     {
@@ -33801,6 +34074,13 @@
           "front": "catalog_images/valucap-vc300y/white_front.jpg",
           "back": "catalog_images/valucap-vc300y/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -33823,6 +34103,13 @@
           "front": "catalog_images/valucap-vc350/red_front.jpg",
           "back": "catalog_images/valucap-vc350/red_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "hook-loop",
+        "cotton-twill"
       ]
     },
     {
@@ -33988,6 +34275,14 @@
           "front": "catalog_images/valucap-vc400/white_front.jpg",
           "back": "catalog_images/valucap-vc400/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "cotton-twill",
+        "mesh"
       ]
     },
     {
@@ -34135,6 +34430,13 @@
             "#ededef"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "5-panel",
+        "snapback",
+        "mesh"
       ]
     },
     {
@@ -34181,6 +34483,14 @@
             "#29303f"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "dad",
+        "unstructured",
+        "6-panel",
+        "hook-loop",
+        "mesh"
       ]
     },
     {
@@ -34221,6 +34531,11 @@
           "front": "catalog_images/yupoong-110c/white_front.jpg",
           "back": "catalog_images/yupoong-110c/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "hook-loop"
       ]
     },
     {
@@ -34329,6 +34644,12 @@
           "front": "catalog_images/yupoong-110f/white_front.jpg",
           "back": "catalog_images/yupoong-110f/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "snapback",
+        "wool"
       ]
     },
     {
@@ -34588,6 +34909,12 @@
           "front": "catalog_images/yupoong-110m/white_front.jpg",
           "back": "catalog_images/yupoong-110m/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "snapback",
+        "mesh"
       ]
     },
     {
@@ -34652,6 +34979,10 @@
           "front": "catalog_images/yupoong-180/white_front.jpg",
           "back": "catalog_images/yupoong-180/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "fitted"
       ]
     },
     {
@@ -34710,6 +35041,12 @@
           "front": "catalog_images/yupoong-5001/white_front.jpg",
           "back": "catalog_images/yupoong-5001/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "fitted",
+        "cotton-twill"
       ]
     },
     {
@@ -34771,6 +35108,11 @@
             "#ededef"
           ]
         }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "snapback"
       ]
     },
     {
@@ -34799,6 +35141,12 @@
           "front": "catalog_images/yupoong-5789m/navy_front.jpg",
           "back": "catalog_images/yupoong-5789m/navy_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "snapback",
+        "wool"
       ]
     },
     {
@@ -35073,6 +35421,9 @@
           "front": "catalog_images/yupoong-6210/white_front.jpg",
           "back": "catalog_images/yupoong-6210/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "fitted"
       ]
     },
     {
@@ -35162,6 +35513,13 @@
           "front": "catalog_images/yupoong-6245cm/white_front.jpg",
           "back": "catalog_images/yupoong-6245cm/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -35202,6 +35560,13 @@
           "front": "catalog_images/yupoong-6245ec/rose_front.jpg",
           "back": "catalog_images/yupoong-6245ec/rose_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -35254,6 +35619,13 @@
           "front": "catalog_images/yupoong-6245pt/yellow_front.jpg",
           "back": "catalog_images/yupoong-6245pt/yellow_back.jpg"
         }
+      ],
+      "hatTags": [
+        "dad",
+        "unstructured",
+        "6-panel",
+        "buckle",
+        "cotton-twill"
       ]
     },
     {
@@ -35441,6 +35813,13 @@
           "front": "catalog_images/yupoong-6277/white_front.jpg",
           "back": "catalog_images/yupoong-6277/white_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "fitted",
+        "cotton-twill",
+        "wool"
       ]
     },
     {
@@ -35469,6 +35848,13 @@
           "front": "catalog_images/yupoong-6277y/red_front.jpg",
           "back": "catalog_images/yupoong-6277y/red_back.jpg"
         }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "fitted",
+        "cotton-twill",
+        "wool"
       ]
     },
     {
@@ -35489,6 +35875,12 @@
             "#29303f"
           ]
         }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "fitted"
       ]
     },
     {

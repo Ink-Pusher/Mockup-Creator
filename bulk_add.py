@@ -18,6 +18,7 @@ USAGE:
     python3 bulk_add.py bulk_lists/checklist.csv --limit 10     # add the next 10 not yet in the catalog
     python3 bulk_add.py feature <product-id> [...]              # (re)pick featured photos
     python3 bulk_add.py feature --report                        # how many featured photos per color family
+    python3 bulk_add.py tag-hats                                # (re)tag every hat: panels, closure, fabric ...
 
   Options: --priority   only rows marked priority
            --brand X    only rows for one brand (repeatable)
@@ -200,6 +201,72 @@ def cmd_feature(args):
             print("  ! no such product, or it has no photos")
 
 
+# ------------------------------------------------------------------ hat tags
+# Hats get "hatTags" in catalog.json, read off the name and the write-up's feature
+# bullets, for the Headwear filter chips and the hat resource guide's links
+# (inkpusher.com/hat-resource-guide). New hats are tagged as they're added;
+# "tag-hats" redoes them all. A hat with "hatTagsManual": true is left alone.
+HAT_RULES = [
+    ("trucker",      r"trucker|mesh back"),
+    ("dad",          r"\bdad\b|unstructured.*low[- ]profile|low[- ]profile.*unstructured"),
+    ("structured",   r"(?<!un)structured"),
+    ("unstructured", r"unstructured"),
+    ("5-panel",      r"\b5[- ]panel|five[- ]panel"),
+    ("6-panel",      r"\b6[- ]panel|six[- ]panel"),
+    ("7-panel",      r"\b7[- ]panel|seven[- ]panel"),
+    ("snapback",     r"snap ?back|plastic snap|snap closure"),
+    ("hook-loop",    r"hook[- ]and[- ]loop|hook & loop|velcro"),
+    ("buckle",       r"buckle|slide closure|tri-glide|brass"),
+    ("fitted",       r"\bfitted\b|flexfit|stretch[- ]fit|stretch band"),
+    ("bucket",       r"bucket"),
+    ("corduroy",     r"corduroy"),
+    ("cotton-twill", r"\btwill\b"),
+    ("mesh",         r"\bmesh\b"),
+    ("wool",         r"\bwool"),
+]
+CLOSURES = {"snapback", "hook-loop", "buckle"}
+
+
+def hat_tags(p, desc):
+    text = (p["name"] + " " + desc.get(_norm(f"{p['brand']} {p['style']}"), "")).lower()
+    tags = [t for t, rx in HAT_RULES if re.search(rx, text)]
+    if "fitted" in tags and CLOSURES & set(tags):
+        tags.remove("fitted")   # Flexfit 110 etc.: stretch band, but adjustable at the back
+    return tags
+
+
+def _hat_descs():
+    out = {}
+    path = HERE / "product_descriptions.csv"
+    if path.exists():
+        with open(path, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                out[_norm(r.get("Product", ""))] = (r.get("Description") or "") + " " + (r.get("Features") or "")
+    return out
+
+
+def tag_hats(only_id=None, quiet=False):
+    cat = json.loads(CATALOG.read_text())
+    desc, n = _hat_descs(), 0
+    for p in cat["products"]:
+        if p.get("kind") not in ("hat", "cap") or p.get("hatTagsManual"):
+            continue
+        if only_id and p["id"] != only_id:
+            continue
+        tags = hat_tags(p, desc)
+        if p.get("hatTags") != tags:
+            p["hatTags"] = tags; n += 1
+        if not quiet:
+            print(f"  {p['id']:22s} {', '.join(tags) or '(none)'}")
+    CATALOG.write_text(json.dumps(cat, indent=2))
+    return n
+
+
+def cmd_tag_hats(args):
+    n = tag_hats()
+    print(f"{n} hat(s) changed. Commit catalog.json and push to update the site.")
+
+
 # ------------------------------------------------------------------ the list
 def read_list(path):
     with open(path, newline="", encoding="utf-8-sig") as f:
@@ -235,6 +302,8 @@ def add_item(r, log, fetch, commit):
     if not p:
         return "not in catalog.json after the run -- see the log"
     best = pick_featured(r["id"], products, quiet=True)
+    if r["kind"] in ("hat", "cap"):
+        tag_hats(r["id"], quiet=True)
     log.write(f"featured: {best['name'] if best else '(none)'}\n")
     if commit:
         # all of catalog_images: a new two-tone or pattern color can add a swatch tile to OTHER products too
@@ -251,6 +320,8 @@ def main():
     argv = sys.argv[1:]
     if argv[:1] == ["feature"]:
         return cmd_feature(argv[1:])
+    if argv[:1] == ["tag-hats"]:
+        return cmd_tag_hats(argv[1:])
     if not argv or argv[0].startswith("-"):
         sys.exit(__doc__)
     path, opts = argv[0], argv[1:]

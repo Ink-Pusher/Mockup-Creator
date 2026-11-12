@@ -19700,7 +19700,7 @@
           "back": "catalog_images/bella-canvas-1201/white-baby-blue_back.jpg",
           "hexes": [
             "#ededf0",
-            "#bad6e9"
+            "#bfdae9"
           ]
         },
         {
@@ -25211,6 +25211,52 @@
           "hex": "#f6f7fb",
           "front": "catalog_images/lane-seven-ls81001/white_front.jpg",
           "back": "catalog_images/lane-seven-ls81001/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "lane-seven-ls82001",
+      "name": "Womens Baby Tee",
+      "brand": "Lane Seven",
+      "style": "LS82001",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Baby Blue",
+          "hex": "#c5e1ec",
+          "front": "catalog_images/lane-seven-ls82001/baby-blue_front.jpg",
+          "back": "catalog_images/lane-seven-ls82001/baby-blue_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#222323",
+          "front": "catalog_images/lane-seven-ls82001/black_front.jpg",
+          "back": "catalog_images/lane-seven-ls82001/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#ebe2db",
+          "front": "catalog_images/lane-seven-ls82001/bone_front.jpg",
+          "back": "catalog_images/lane-seven-ls82001/bone_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#adabbc",
+          "front": "catalog_images/lane-seven-ls82001/heather-grey_front.jpg",
+          "back": "catalog_images/lane-seven-ls82001/heather-grey_back.jpg"
+        },
+        {
+          "name": "Lilac",
+          "hex": "#dbcce2",
+          "front": "catalog_images/lane-seven-ls82001/lilac_front.jpg",
+          "back": "catalog_images/lane-seven-ls82001/lilac_back.jpg"
+        },
+        {
+          "name": "Mauve Wine",
+          "hex": "#5e2640",
+          "front": "catalog_images/lane-seven-ls82001/mauve-wine_front.jpg",
+          "back": "catalog_images/lane-seven-ls82001/mauve-wine_back.jpg"
         }
       ]
     }

@@ -28843,6 +28843,26 @@
           "back": "catalog_images/liberty-bags-r1500/royal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-psb1516",
+      "name": "Sublimation Medium Tote Bag",
+      "brand": "Liberty Bags",
+      "style": "PSB1516",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White/ Black",
+          "hex": "#e4e5e4",
+          "front": "catalog_images/liberty-bags-psb1516/white-black_front.jpg",
+          "back": "catalog_images/liberty-bags-psb1516/white-black_back.jpg",
+          "hexes": [
+            "#ededf0",
+            "#232223"
+          ]
+        }
+      ]
     }
   ]
 }

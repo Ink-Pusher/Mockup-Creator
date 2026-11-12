@@ -27804,6 +27804,82 @@
           "back": "catalog_images/sportsman-sp12sl/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "sportsman-sp60",
+      "name": "Striped Pom Pom Beanie",
+      "brand": "Sportsman",
+      "style": "SP60",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ White/ Grey/ Red",
+          "hex": "#6a5561",
+          "front": "catalog_images/sportsman-sp60/black-white-grey-red_front.jpg",
+          "back": "catalog_images/sportsman-sp60/black-white-grey-red_back.jpg",
+          "hexes": [
+            "#232223",
+            "#ededf0",
+            "#8b8988"
+          ]
+        },
+        {
+          "name": "Maroon/ White/ Grey",
+          "hex": "#836c77",
+          "front": "catalog_images/sportsman-sp60/maroon-white-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp60/maroon-white-grey_back.jpg",
+          "hexes": [
+            "#5a1f30",
+            "#ededf0",
+            "#8b8988"
+          ]
+        },
+        {
+          "name": "Navy/ White/ Grey/ Gold",
+          "hex": "#6b6661",
+          "front": "catalog_images/sportsman-sp60/navy-white-grey-gold_front.jpg",
+          "back": "catalog_images/sportsman-sp60/navy-white-grey-gold_back.jpg",
+          "hexes": [
+            "#282f3f",
+            "#ededf0",
+            "#8b8988"
+          ]
+        },
+        {
+          "name": "Navy/ White/ Grey/ Red",
+          "hex": "#69576c",
+          "front": "catalog_images/sportsman-sp60/navy-white-grey-red_front.jpg",
+          "back": "catalog_images/sportsman-sp60/navy-white-grey-red_back.jpg",
+          "hexes": [
+            "#282f3f",
+            "#ededf0",
+            "#8b8988"
+          ]
+        },
+        {
+          "name": "Red/ White/ Grey/ Black",
+          "hex": "#a84051",
+          "front": "catalog_images/sportsman-sp60/red-white-grey-black_front.jpg",
+          "back": "catalog_images/sportsman-sp60/red-white-grey-black_back.jpg",
+          "hexes": [
+            "#c4132f",
+            "#ededf0",
+            "#8b8988"
+          ]
+        },
+        {
+          "name": "Royal/ White/ Grey",
+          "hex": "#6377a8",
+          "front": "catalog_images/sportsman-sp60/royal-white-grey_front.jpg",
+          "back": "catalog_images/sportsman-sp60/royal-white-grey_back.jpg",
+          "hexes": [
+            "#194b91",
+            "#ededf0",
+            "#8b8988"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -481,7 +481,7 @@ async function loadCatalog(){
             hexes: c.hexes || null,
             swatchSrc: c.swatch ? CATALOG_BASE_URL + c.swatch : null,
             frontSrc: CATALOG_BASE_URL + c.front,
-            backSrc: CATALOG_BASE_URL + c.back,
+            backSrc: c.back ? CATALOG_BASE_URL + c.back : null,   // hats, caps and beanies can have a front photo only (no "back" in catalog.json)
           })),
         };
       })

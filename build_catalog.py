@@ -758,6 +758,8 @@ def resolve_saved_page(path_str):
 # ---------------------------------------------------------------------------
 
 API_SITES = {"ss-api", "sanmar-sdl"}
+# kinds that may be added with a front photo only (see main)
+FRONT_ONLY_KINDS = {"hat", "cap", "beanie"}
 API_WRITEUP = {"description": "", "features": []}   # filled by extract_ss_api for the descriptions step
 
 
@@ -1390,55 +1392,68 @@ def main():
 
     new_colors = []
     skipped = []
+    # Hats, caps and beanies often have only a FRONT photo at the vendor (S&S has
+    # no back shot for several Adam's hats). For those kinds a color with a front
+    # and no back is still added, with no "back" in its catalog entry; the site's
+    # pages show just the front for it. Everything else still needs both.
+    front_only_ok = kind in FRONT_ONLY_KINDS
+    front_only = []
 
     for entry in colors_raw:
         name = entry["name"]
 
         if preextracted:
             front_img, back_img = entry.get("front_img"), entry.get("back_img")
-            if front_img is None or back_img is None:
+            if front_img is None or (back_img is None and not front_only_ok):
                 skipped.append((name, "missing front or back image"))
                 continue
             out_ext = "png"  # preserve alpha transparency from the PDF cutouts
         else:
             front_url, back_url = entry.get("front"), entry.get("back")
-            if not front_url or not back_url:
+            if not front_url or (not back_url and not front_only_ok):
                 skipped.append((name, "missing front or back image URL on this page"))
                 continue
-            print(f"  {name}: downloading front/back...")
+            print(f"  {name}: downloading front{'/back' if back_url else ' (no back photo)'}...")
             if site in ("ssactivewear", "ss-api"):
                 front_img = bct.download_image(entry["_ss_relpath_front"], DOWNLOAD_CACHE_DIR)
-                back_img = bct.download_image(entry["_ss_relpath_back"], DOWNLOAD_CACHE_DIR)
+                back_img = bct.download_image(entry["_ss_relpath_back"], DOWNLOAD_CACHE_DIR) if entry.get("_ss_relpath_back") else None
             else:
                 front_img = download_image_url(front_url, DOWNLOAD_CACHE_DIR)
-                back_img = download_image_url(back_url, DOWNLOAD_CACHE_DIR)
-            if front_img is None or back_img is None:
+                back_img = download_image_url(back_url, DOWNLOAD_CACHE_DIR) if back_url else None
+            if front_img is None or (back_img is None and (back_url or not front_only_ok)):
                 skipped.append((name, "one or both images failed to download"))
                 continue
             out_ext = "jpg"
 
         if cropping:
             front_img = crop_fraction(front_img, **crop)
-            back_img = crop_fraction(back_img, **crop)
+            if back_img is not None:
+                back_img = crop_fraction(back_img, **crop)
 
         color_slug = slugify(name)
         front_out = image_dir / f"{color_slug}_front.{out_ext}"
         back_out = image_dir / f"{color_slug}_back.{out_ext}"
         if out_ext == "png":
             front_img.save(front_out)
-            back_img.save(back_out)
+            if back_img is not None:
+                back_img.save(back_out)
         else:
             front_img.convert("RGB").save(front_out, quality=90)
-            back_img.convert("RGB").save(back_out, quality=90)
+            if back_img is not None:
+                back_img.convert("RGB").save(back_out, quality=90)
 
         hex_color = sample_swatch_hex(front_img)
 
-        new_colors.append({
+        entry_out = {
             "name": name,
             "hex": hex_color,
             "front": f"catalog_images/{product_id}/{front_out.name}",
-            "back": f"catalog_images/{product_id}/{back_out.name}",
-        })
+        }
+        if back_img is not None:
+            entry_out["back"] = f"catalog_images/{product_id}/{back_out.name}"
+        else:
+            front_only.append(name)
+        new_colors.append(entry_out)
 
     if not new_colors:
         print("No colors were processed successfully -- nothing to add to the catalog.")
@@ -1499,7 +1514,7 @@ def main():
     # so it renders as an empty square. ("Athletic Heather" on Bella/Canvas 6400
     # was exactly this: S&S now lists it as "Solid Athletic Grey".)
     stale = [c for c in final_colors
-             if not Path(c["front"]).exists() or not Path(c["back"]).exists()]
+             if not Path(c["front"]).exists() or (c.get("back") and not Path(c["back"]).exists())]
     if stale:
         print(f"\n  ! {len(stale)} color(s) on this product have no image file on disk:")
         for c in stale:
@@ -1513,6 +1528,9 @@ def main():
     print(f"Catalog updated: {catalog_path.resolve()}")
     print(f"Colors added/updated this run: {len(new_colors)}")
     print(f"Total colors now on this product: {len(final_colors)}")
+    if front_only:
+        print(f"\nFront photo only (the vendor has no back shot) for {len(front_only)} color(s): "
+              + ", ".join(front_only))
     if skipped:
         print(f"\nSkipped {len(skipped)} color(s):")
         for name, reason in skipped:

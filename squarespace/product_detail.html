@@ -451,7 +451,7 @@ async function loadAndRender(){
         name: c.name, hex: c.hex, hexes: c.hexes || null,
         swatchSrc: c.swatch ? CATALOG_BASE_URL + c.swatch : null,
         frontSrc: CATALOG_BASE_URL + c.front,
-        backSrc: CATALOG_BASE_URL + c.back,
+        backSrc: c.back ? CATALOG_BASE_URL + c.back : null,   // hats, caps and beanies can have a front photo only (no "back" in catalog.json)
       })),
     }));
     currentProduct = CATALOG.products.find(p => p.id === id);
@@ -654,7 +654,9 @@ function isLightColor(hex){
 function renderHeroImages(){
   const color = currentProduct.colors[currentColorIndex];
   document.getElementById("pdHeroImgFront").src = color.frontSrc;
-  document.getElementById("pdHeroImgBack").src = color.backSrc;
+  const back = document.getElementById("pdHeroImgBack");
+  if(color.backSrc) back.src = color.backSrc; else back.removeAttribute("src");
+  back.closest(".pd-hero").style.display = color.backSrc ? "" : "none";   // front-only hat: no empty Back box
 }
 
 // Perceived brightness, for spreading the swatch sample across light->dark.

@@ -1802,7 +1802,7 @@ async function loadRealCatalog(){
         hexes: c.hexes || null,
         swatchSrc: c.swatch ? CATALOG_BASE_URL + c.swatch : null,
         frontSrc: CATALOG_BASE_URL + c.front,
-        backSrc: CATALOG_BASE_URL + c.back,
+        backSrc: c.back ? CATALOG_BASE_URL + c.back : null,   // hats, caps and beanies can have a front photo only (no "back" in catalog.json)
       })),
     }));
     // A product is ALSO treated as featured if a file named exactly
@@ -2021,7 +2021,9 @@ function renderGarment(opts={}){
     gb = backPhotoGuide(boxes.back);
     frontBox = boxes.front;
     backBox = boxes.back;
-  } else if(isCustom){
+  } else if(isCustom || (color.frontImg && !color.backSrc)){
+    // (also a catalog hat/cap/beanie that has a front photo only: the back half stays empty, with no
+    // back design guide, instead of waiting forever for a back photo that doesn't exist)
     if(color.frontImg){
       frontBox = drawSinglePhoto(ctx, color.frontImg, "front", w, h, stacked, isExport);
       gf = frontPhotoGuide(frontBox);

@@ -212,7 +212,8 @@ def read_list(path):
 def dry_run_item(r):
     import build_catalog as B
     colors = B.EXTRACTORS[r["site"]](r["brand"], r["style"])
-    ok = [c for c in colors if c.get("front") and c.get("back")]
+    front_only_ok = r["kind"] in B.FRONT_ONLY_KINDS
+    ok = [c for c in colors if c.get("front") and (c.get("back") or front_only_ok)]
     if not ok:
         raise RuntimeError(f"none of its {len(colors)} colors has both a front and a back photo in the vendor data"
                            " (needs a saved page)")

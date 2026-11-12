@@ -29036,6 +29036,28 @@
           "front": "catalog_images/liberty-bags-7760a/light-blue-denim_front.jpg"
         }
       ]
+    },
+    {
+      "id": "liberty-bags-7761a",
+      "name": "Cotton Denim Gusseted Tote Bag",
+      "brand": "Liberty Bags",
+      "style": "7761A",
+      "kind": "tote",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Dark Blue Denim",
+          "hex": "#3c4355",
+          "front": "catalog_images/liberty-bags-7761a/dark-blue-denim_front.jpg",
+          "back": "catalog_images/liberty-bags-7761a/dark-blue-denim_back.jpg"
+        },
+        {
+          "name": "Light Blue Denim",
+          "hex": "#677c95",
+          "front": "catalog_images/liberty-bags-7761a/light-blue-denim_front.jpg",
+          "back": "catalog_images/liberty-bags-7761a/light-blue-denim_back.jpg"
+        }
+      ]
     }
   ]
 }

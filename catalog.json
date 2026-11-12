@@ -27250,6 +27250,46 @@
           "back": "catalog_images/lat-6901/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lat-6901eco",
+      "name": "Eco Friendly CVC T-Shirt",
+      "brand": "LAT",
+      "style": "6901ECO",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#191919",
+          "front": "catalog_images/lat-6901eco/black_front.jpg",
+          "back": "catalog_images/lat-6901eco/black_back.jpg"
+        },
+        {
+          "name": "Eggshell",
+          "hex": "#ece7e1",
+          "front": "catalog_images/lat-6901eco/eggshell_front.jpg",
+          "back": "catalog_images/lat-6901eco/eggshell_back.jpg"
+        },
+        {
+          "name": "Eucalyptus",
+          "hex": "#b3bbb0",
+          "front": "catalog_images/lat-6901eco/eucalyptus_front.jpg",
+          "back": "catalog_images/lat-6901eco/eucalyptus_back.jpg"
+        },
+        {
+          "name": "Hazel",
+          "hex": "#cfcdc0",
+          "front": "catalog_images/lat-6901eco/hazel_front.jpg",
+          "back": "catalog_images/lat-6901eco/hazel_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#efeff0",
+          "front": "catalog_images/lat-6901eco/white_front.jpg",
+          "back": "catalog_images/lat-6901eco/white_back.jpg"
+        }
+      ]
     }
   ]
 }

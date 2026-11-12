@@ -1303,7 +1303,7 @@
           "front": "catalog_images/richardson-168/red-black_front.jpg",
           "back": "catalog_images/richardson-168/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -1370,7 +1370,7 @@
           "back": "catalog_images/richardson-112/white-navy-cmb_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -1380,7 +1380,7 @@
           "back": "catalog_images/richardson-112/white-red-cmb_back.jpg",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -1476,7 +1476,7 @@
           "hexes": [
             "#242223",
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -1574,7 +1574,7 @@
           "back": "catalog_images/richardson-112/charcoal-navy_back.jpg",
           "hexes": [
             "#4f4c4b",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -1644,7 +1644,7 @@
           "back": "catalog_images/richardson-112/charcoal-red_back.jpg",
           "hexes": [
             "#4f4c4b",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -1703,7 +1703,7 @@
           "hexes": [
             "#6a89c1",
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -1736,7 +1736,7 @@
           "back": "catalog_images/richardson-112/cream-navy-amber-gold_back.jpg",
           "hexes": [
             "#dbcabc",
-            "#292f3f",
+            "#29303f",
             "#9c7942"
           ]
         },
@@ -1781,7 +1781,7 @@
           "hexes": [
             "#978d92",
             "#4f4c4b",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -1861,7 +1861,7 @@
           "back": "catalog_images/richardson-112/heather-grey-navy_back.jpg",
           "hexes": [
             "#b5b4b8",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -1973,7 +1973,7 @@
           "back": "catalog_images/richardson-112/khaki-navy-cmb_back.jpg",
           "hexes": [
             "#b6a586",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -2070,7 +2070,7 @@
           "front": "catalog_images/richardson-112/navy-charcoal_front.jpg",
           "back": "catalog_images/richardson-112/navy-charcoal_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#4f4c4b"
           ]
         },
@@ -2080,7 +2080,7 @@
           "front": "catalog_images/richardson-112/navy-khaki_front.jpg",
           "back": "catalog_images/richardson-112/navy-khaki_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#b6a586"
           ]
         },
@@ -2090,7 +2090,7 @@
           "front": "catalog_images/richardson-112/navy-khaki-cmb_front.jpg",
           "back": "catalog_images/richardson-112/navy-khaki-cmb_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#b6a586"
           ]
         },
@@ -2100,7 +2100,7 @@
           "front": "catalog_images/richardson-112/navy-orange_front.jpg",
           "back": "catalog_images/richardson-112/navy-orange_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#f16a2b"
           ]
         },
@@ -2110,7 +2110,7 @@
           "front": "catalog_images/richardson-112/navy-white_front.jpg",
           "back": "catalog_images/richardson-112/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -2120,7 +2120,7 @@
           "front": "catalog_images/richardson-112/navy-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/navy-white-heather-grey_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
             "#b5b4b8"
           ]
@@ -2131,9 +2131,9 @@
           "front": "catalog_images/richardson-112/navy-white-red_front.jpg",
           "back": "catalog_images/richardson-112/navy-white-red_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -2201,7 +2201,7 @@
           "front": "catalog_images/richardson-112/red-black_front.jpg",
           "back": "catalog_images/richardson-112/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -2211,7 +2211,7 @@
           "front": "catalog_images/richardson-112/red-white_front.jpg",
           "back": "catalog_images/richardson-112/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -2221,7 +2221,7 @@
           "front": "catalog_images/richardson-112/red-white-black_front.jpg",
           "back": "catalog_images/richardson-112/red-white-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef",
             "#242223"
           ]
@@ -2232,7 +2232,7 @@
           "front": "catalog_images/richardson-112/red-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/red-white-heather-grey_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef",
             "#b5b4b8"
           ]
@@ -2243,9 +2243,9 @@
           "front": "catalog_images/richardson-112/red-white-navy_front.jpg",
           "back": "catalog_images/richardson-112/red-white-navy_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -2293,7 +2293,7 @@
           "hexes": [
             "#215193",
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -2321,7 +2321,7 @@
           "hexes": [
             "#ededef",
             "#dadfdf",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -2362,7 +2362,7 @@
           "back": "catalog_images/richardson-112/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         }
       ]
@@ -2486,7 +2486,7 @@
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
             "#978d92",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -2958,7 +2958,7 @@
           "back": "catalog_images/adam-s-lp101/khaki-navy_back.jpg",
           "hexes": [
             "#b6a586",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -6971,7 +6971,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-navy_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -7001,7 +7001,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-red_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -7556,7 +7556,7 @@
           "back": "catalog_images/yupoong-6606/charcoal-navy_back.jpg",
           "hexes": [
             "#4f4c4b",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -7808,7 +7808,7 @@
           "front": "catalog_images/yupoong-6606/navy-silver_front.jpg",
           "back": "catalog_images/yupoong-6606/navy-silver_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#d1d0ce"
           ]
         },
@@ -7818,7 +7818,7 @@
           "front": "catalog_images/yupoong-6606/navy-white_front.jpg",
           "back": "catalog_images/yupoong-6606/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -7828,9 +7828,9 @@
           "front": "catalog_images/yupoong-6606/navy-white-navy_front.jpg",
           "back": "catalog_images/yupoong-6606/navy-white-navy_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -7886,7 +7886,7 @@
           "front": "catalog_images/yupoong-6606/red-black_front.jpg",
           "back": "catalog_images/yupoong-6606/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -7896,7 +7896,7 @@
           "front": "catalog_images/yupoong-6606/red-white_front.jpg",
           "back": "catalog_images/yupoong-6606/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -8165,7 +8165,7 @@
           "front": "catalog_images/yupoong-6006/navy-white_front.jpg",
           "back": "catalog_images/yupoong-6006/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -8175,9 +8175,9 @@
           "front": "catalog_images/yupoong-6006/navy-white-navy_front.jpg",
           "back": "catalog_images/yupoong-6006/navy-white-navy_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -8209,7 +8209,7 @@
           "front": "catalog_images/yupoong-6006/red-black_front.jpg",
           "back": "catalog_images/yupoong-6006/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -8219,9 +8219,9 @@
           "front": "catalog_images/yupoong-6006/red-white-red_front.jpg",
           "back": "catalog_images/yupoong-6006/red-white-red_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -8379,7 +8379,7 @@
           "front": "catalog_images/richardson-112fp/navy-white_front.jpg",
           "back": "catalog_images/richardson-112fp/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -9716,8 +9716,8 @@
           "front": "catalog_images/richardson-256/navy-red_front.jpg",
           "back": "catalog_images/richardson-256/navy-red_back.jpg",
           "hexes": [
-            "#292f3f",
-            "#c1162f"
+            "#29303f",
+            "#c2162f"
           ]
         },
         {
@@ -9726,7 +9726,7 @@
           "front": "catalog_images/richardson-256/navy-white_front.jpg",
           "back": "catalog_images/richardson-256/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -9742,7 +9742,7 @@
           "front": "catalog_images/richardson-256/red-white_front.jpg",
           "back": "catalog_images/richardson-256/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -11057,7 +11057,7 @@
           "back": "catalog_images/bella-canvas-3480/athletic-heather-navy_back.jpg",
           "hexes": [
             "#bab9bb",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -16873,7 +16873,7 @@
           "back": "catalog_images/tultex-246/heather-denim-navy_back.jpg",
           "hexes": [
             "#495268",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -16903,7 +16903,7 @@
           "back": "catalog_images/tultex-246/heather-grey-navy_back.jpg",
           "hexes": [
             "#b5b4b8",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -16913,7 +16913,7 @@
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
             "#5274b0",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -16922,7 +16922,7 @@
           "front": "catalog_images/tultex-246/navy-gold_front.jpg",
           "back": "catalog_images/tultex-246/navy-gold_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#fbaf21"
           ]
         },
@@ -16932,7 +16932,7 @@
           "front": "catalog_images/tultex-246/red-black_front.jpg",
           "back": "catalog_images/tultex-246/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -16991,7 +16991,7 @@
           "back": "catalog_images/tultex-246/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -17001,7 +17001,7 @@
           "back": "catalog_images/tultex-246/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -17787,7 +17787,7 @@
           "back": "catalog_images/bella-canvas-1200/white-navy_back.png",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -17797,7 +17797,7 @@
           "back": "catalog_images/bella-canvas-1200/white-red_back.png",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -17935,7 +17935,7 @@
           "back": "catalog_images/bella-canvas-3200/black-red_back.jpg",
           "hexes": [
             "#242223",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -17985,7 +17985,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
             "#978d92",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -17995,7 +17995,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
             "#978d92",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -18075,7 +18075,7 @@
           "back": "catalog_images/bella-canvas-3200/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -18095,7 +18095,7 @@
           "back": "catalog_images/bella-canvas-3200/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -19785,7 +19785,7 @@
           "back": "catalog_images/bella-canvas-1201/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -27688,7 +27688,7 @@
           "front": "catalog_images/sportsman-sp09/navy-grey_front.jpg",
           "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#978d92"
           ]
         }
@@ -27886,7 +27886,7 @@
           "front": "catalog_images/sportsman-sp60/navy-white-grey-gold_front.jpg",
           "back": "catalog_images/sportsman-sp60/navy-white-grey-gold_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
             "#978d92"
           ]
@@ -27897,7 +27897,7 @@
           "front": "catalog_images/sportsman-sp60/navy-white-grey-red_front.jpg",
           "back": "catalog_images/sportsman-sp60/navy-white-grey-red_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
             "#978d92"
           ]
@@ -27908,7 +27908,7 @@
           "front": "catalog_images/sportsman-sp60/red-white-grey-black_front.jpg",
           "back": "catalog_images/sportsman-sp60/red-white-grey-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef",
             "#978d92"
           ]
@@ -28255,7 +28255,7 @@
           "hex": "#465360",
           "front": "catalog_images/adam-s-ol102/navy-tan_front.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#c0a891"
           ]
         },
@@ -28971,7 +28971,7 @@
           "back": "catalog_images/liberty-bags-7002/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -28981,7 +28981,7 @@
           "back": "catalog_images/liberty-bags-7002/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -29031,7 +29031,7 @@
           "back": "catalog_images/liberty-bags-7006/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -29656,7 +29656,7 @@
           "back": "catalog_images/oad-oad102/natural-navy_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -29665,7 +29665,7 @@
           "front": "catalog_images/oad-oad102/natural-red_front.jpg",
           "hexes": [
             "#e9e2d5",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -29704,7 +29704,7 @@
           "back": "catalog_images/oad-oad103/natural-navy_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -30687,7 +30687,7 @@
           "back": "catalog_images/q-tees-q1100/natural-red_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#c1162f"
+            "#c2162f"
           ]
         }
       ]
@@ -30908,7 +30908,7 @@
           "back": "catalog_images/richardson-110/heather-grey-navy_back.jpg",
           "hexes": [
             "#b5b4b8",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -30953,7 +30953,7 @@
           "front": "catalog_images/richardson-110/navy-white_front.jpg",
           "back": "catalog_images/richardson-110/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -31075,7 +31075,7 @@
           "front": "catalog_images/richardson-155/blue-heather-navy_front.jpg",
           "hexes": [
             "#96a9cc",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -31228,7 +31228,7 @@
           "front": "catalog_images/richardson-172/navy-white-red-tri_front.jpg",
           "back": "catalog_images/richardson-172/navy-white-red-tri_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
             "#d86064"
           ]
@@ -31239,7 +31239,7 @@
           "front": "catalog_images/richardson-172/red-charcoal-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/red-charcoal-black-tri_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#4f4c4b",
             "#413f41"
           ]
@@ -32058,7 +32058,7 @@
           "front": "catalog_images/richardson-258/navy-white_front.jpg",
           "back": "catalog_images/richardson-258/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -32068,7 +32068,7 @@
           "front": "catalog_images/richardson-258/red-white_front.jpg",
           "back": "catalog_images/richardson-258/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -32089,7 +32089,7 @@
           "back": "catalog_images/richardson-258/soft-blue-navy_back.jpg",
           "hexes": [
             "#bbd2d6",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -32109,7 +32109,7 @@
           "back": "catalog_images/richardson-258/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -32384,8 +32384,8 @@
           "front": "catalog_images/richardson-134/navy-red-white_front.jpg",
           "back": "catalog_images/richardson-134/navy-red-white_back.jpg",
           "hexes": [
-            "#292f3f",
-            "#c1162f",
+            "#29303f",
+            "#c2162f",
             "#ededef"
           ]
         }
@@ -32738,7 +32738,7 @@
           "hexes": [
             "#b5b4b8",
             "#4f4c4b",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -32760,7 +32760,7 @@
           "hexes": [
             "#b5b4b8",
             "#4f4c4b",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -32830,7 +32830,7 @@
           "front": "catalog_images/sportsman-sp03/navy-dark-grey_front.jpg",
           "back": "catalog_images/sportsman-sp03/navy-dark-grey_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#3a373b"
           ]
         },
@@ -32846,7 +32846,7 @@
           "front": "catalog_images/sportsman-sp03/red-maroon_front.jpg",
           "back": "catalog_images/sportsman-sp03/red-maroon_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#5a2330"
           ]
         },
@@ -32857,7 +32857,7 @@
           "back": "catalog_images/sportsman-sp03/royal-navy_back.jpg",
           "hexes": [
             "#215193",
-            "#292f3f"
+            "#29303f"
           ]
         }
       ]
@@ -32893,7 +32893,7 @@
           "back": "catalog_images/sportsman-sp15/black-red_back.jpg",
           "hexes": [
             "#242223",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -32919,7 +32919,7 @@
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-navy_back.jpg",
           "hexes": [
             "#4a474b",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -32929,7 +32929,7 @@
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-red_back.jpg",
           "hexes": [
             "#4a474b",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -33020,7 +33020,7 @@
           "front": "catalog_images/sportsman-sp15/navy-gold_front.jpg",
           "back": "catalog_images/sportsman-sp15/navy-gold_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#fbaf21"
           ]
         },
@@ -33030,8 +33030,8 @@
           "front": "catalog_images/sportsman-sp15/navy-red_front.jpg",
           "back": "catalog_images/sportsman-sp15/navy-red_back.jpg",
           "hexes": [
-            "#292f3f",
-            "#c1162f"
+            "#29303f",
+            "#c2162f"
           ]
         },
         {
@@ -33064,7 +33064,7 @@
           "front": "catalog_images/sportsman-sp15/red-black_front.jpg",
           "back": "catalog_images/sportsman-sp15/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -33074,7 +33074,7 @@
           "front": "catalog_images/sportsman-sp15/red-gold_front.jpg",
           "back": "catalog_images/sportsman-sp15/red-gold_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#fbaf21"
           ]
         },
@@ -33101,7 +33101,7 @@
           "back": "catalog_images/sportsman-sp15/royal-red_back.jpg",
           "hexes": [
             "#215193",
-            "#c1162f"
+            "#c2162f"
           ]
         }
       ]
@@ -33292,7 +33292,7 @@
           "front": "catalog_images/valucap-ah80/navy-grey_front.jpg",
           "back": "catalog_images/valucap-ah80/navy-grey_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#978d92"
           ]
         },
@@ -33302,7 +33302,7 @@
           "front": "catalog_images/valucap-ah80/navy-white_front.jpg",
           "back": "catalog_images/valucap-ah80/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -33312,7 +33312,7 @@
           "front": "catalog_images/valucap-ah80/red-white_front.jpg",
           "back": "catalog_images/valucap-ah80/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         }
@@ -33409,7 +33409,7 @@
           "back": "catalog_images/valucap-s102/black-red_back.jpg",
           "hexes": [
             "#242223",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -33540,7 +33540,7 @@
           "front": "catalog_images/valucap-s102/navy-grey_front.jpg",
           "back": "catalog_images/valucap-s102/navy-grey_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#978d92"
           ]
         },
@@ -33550,8 +33550,8 @@
           "front": "catalog_images/valucap-s102/navy-navy_front.jpg",
           "back": "catalog_images/valucap-s102/navy-navy_back.jpg",
           "hexes": [
-            "#292f3f",
-            "#292f3f"
+            "#29303f",
+            "#29303f"
           ]
         },
         {
@@ -33560,7 +33560,7 @@
           "front": "catalog_images/valucap-s102/navy-white_front.jpg",
           "back": "catalog_images/valucap-s102/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -33586,7 +33586,7 @@
           "front": "catalog_images/valucap-s102/red-white_front.jpg",
           "back": "catalog_images/valucap-s102/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -33614,7 +33614,7 @@
           "hexes": [
             "#ededef",
             "#215193",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -33904,7 +33904,7 @@
           "front": "catalog_images/valucap-vc400/navy-charcoal_front.jpg",
           "back": "catalog_images/valucap-vc400/navy-charcoal_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#4f4c4b"
           ]
         },
@@ -33914,7 +33914,7 @@
           "front": "catalog_images/valucap-vc400/navy-white_front.jpg",
           "back": "catalog_images/valucap-vc400/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -33924,9 +33924,9 @@
           "front": "catalog_images/valucap-vc400/navy-white-red_front.jpg",
           "back": "catalog_images/valucap-vc400/navy-white-red_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -33947,7 +33947,7 @@
           "front": "catalog_images/valucap-vc400/red-black_front.jpg",
           "back": "catalog_images/valucap-vc400/red-black_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#242223"
           ]
         },
@@ -33957,7 +33957,7 @@
           "front": "catalog_images/valucap-vc400/red-white_front.jpg",
           "back": "catalog_images/valucap-vc400/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -33979,7 +33979,7 @@
           "hexes": [
             "#215193",
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -34014,8 +34014,8 @@
           "front": "catalog_images/valucap-vc700/navy-navy_front.jpg",
           "back": "catalog_images/valucap-vc700/navy-navy_back.jpg",
           "hexes": [
-            "#292f3f",
-            "#292f3f"
+            "#29303f",
+            "#29303f"
           ]
         },
         {
@@ -34030,8 +34030,8 @@
           "front": "catalog_images/valucap-vc700/red-red_front.jpg",
           "back": "catalog_images/valucap-vc700/red-red_back.jpg",
           "hexes": [
-            "#c1162f",
-            "#c1162f"
+            "#c2162f",
+            "#c2162f"
           ]
         },
         {
@@ -34081,7 +34081,7 @@
           "back": "catalog_images/valucap-vc700/white-navy_back.jpg",
           "hexes": [
             "#ededef",
-            "#292f3f"
+            "#29303f"
           ]
         },
         {
@@ -34101,7 +34101,7 @@
           "back": "catalog_images/valucap-vc700/white-red_back.jpg",
           "hexes": [
             "#ededef",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -34122,7 +34122,7 @@
           "hexes": [
             "#ededef",
             "#215193",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -34178,7 +34178,7 @@
           "back": "catalog_images/valucap-vc990/olive-green-navy_back.jpg",
           "hexes": [
             "#5a5448",
-            "#292f3f"
+            "#29303f"
           ]
         }
       ]
@@ -34264,7 +34264,7 @@
           "back": "catalog_images/yupoong-110f/black-red_back.jpg",
           "hexes": [
             "#242223",
-            "#c1162f"
+            "#c2162f"
           ]
         },
         {
@@ -34504,7 +34504,7 @@
           "front": "catalog_images/yupoong-110m/navy-white_front.jpg",
           "back": "catalog_images/yupoong-110m/navy-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef"
           ]
         },
@@ -34514,7 +34514,7 @@
           "front": "catalog_images/yupoong-110m/navy-white-white_front.jpg",
           "back": "catalog_images/yupoong-110m/navy-white-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
             "#ededef"
           ]
@@ -34562,7 +34562,7 @@
           "front": "catalog_images/yupoong-110m/red-white_front.jpg",
           "back": "catalog_images/yupoong-110m/red-white_back.jpg",
           "hexes": [
-            "#c1162f",
+            "#c2162f",
             "#ededef"
           ]
         },
@@ -34766,7 +34766,7 @@
           "front": "catalog_images/yupoong-5079/navy-white-white_front.jpg",
           "back": "catalog_images/yupoong-5079/navy-white-white_back.jpg",
           "hexes": [
-            "#292f3f",
+            "#29303f",
             "#ededef",
             "#ededef"
           ]
@@ -35440,6 +35440,34 @@
           "hex": "#efedf3",
           "front": "catalog_images/yupoong-6277/white_front.jpg",
           "back": "catalog_images/yupoong-6277/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "yupoong-6277y",
+      "name": "Flexfit Wooly Combed Cap Youth",
+      "brand": "Yupoong",
+      "style": "6277Y",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#2b2a2e",
+          "front": "catalog_images/yupoong-6277y/black_front.jpg",
+          "back": "catalog_images/yupoong-6277y/black_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#2e3751",
+          "front": "catalog_images/yupoong-6277y/navy_front.jpg",
+          "back": "catalog_images/yupoong-6277y/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#d3132d",
+          "front": "catalog_images/yupoong-6277y/red_front.jpg",
+          "back": "catalog_images/yupoong-6277y/red_back.jpg"
         }
       ]
     }

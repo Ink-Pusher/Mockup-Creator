@@ -28670,6 +28670,25 @@
           "front": "catalog_images/district-dt618/navy-dip-dye_front.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt620",
+      "name": "Spaced-Dyed Beanie",
+      "brand": "District",
+      "style": "DT620",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Charcoal",
+          "hex": "#727272",
+          "front": "catalog_images/district-dt620/black-charcoal_front.jpg",
+          "hexes": [
+            "#232123",
+            "#4e4a4b"
+          ]
+        }
+      ]
     }
   ]
 }

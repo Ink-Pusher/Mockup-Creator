@@ -4,17 +4,17 @@ These are the real, current contents of the Code Blocks on the live Squarespace
 site. They are here so a bad paste has something to roll back to, and so two
 people aren't each editing a private copy in their own Downloads folder.
 
-**The repo is now the source of truth. Edit here, then paste into Squarespace.**
+**The repo is now the source of truth. Edit here, then publish (loader pages) or paste into Squarespace (the rest).**
 Any copy still sitting in `~/Downloads` is stale -- delete it rather than editing it.
 
 | File | Where it's pasted |
 |---|---|
-| `admin.html` | Product Admin page (the private, `noindex` one) |
-| `apparel_catalog.html` | Apparel Catalog listing page |
+| `admin.html` | Product Admin page (the private, `noindex` one) Loader page since 2026-11-12: after editing, run `python3 scripts/publish_squarespace_pages.py product-admin` in the Ink Pusher Digital Print repo (Timm's Mac); live within ~5 min. |
+| `apparel_catalog.html` | Apparel Catalog listing page Loader page since 2026-11-12: after editing, run `python3 scripts/publish_squarespace_pages.py apparel-catalog` in the Ink Pusher Digital Print repo (Timm's Mac); live within ~5 min. |
 | `product_detail.html` | Product detail page (`/product-detail?id=...`). Since 2026-11-12 the page holds only a loader: after editing, run `python3 scripts/publish_squarespace_pages.py product-detail` in the Ink Pusher Digital Print repo (Timm's Mac) and it updates live within ~5 min |
-| `mockup_generator_v2_3.html` | Mockup Studio page |
+| `mockup_generator_v2_3.html` | Mockup Studio page Loader page since 2026-11-12: after editing, run `python3 scripts/publish_squarespace_pages.py mockup-studio` in the Ink Pusher Digital Print repo (Timm's Mac); live within ~5 min. |
 | `ink-pusher-nav.html` | Nav Code Block at the top of the landing page |
-| `catalog_landing.html` | Catalog landing/storefront page (category tiles + featured rows; edited from admin's Landing Page tab) |
+| `catalog_landing.html` | Catalog landing/storefront page (category tiles + featured rows; edited from admin's Landing Page tab) Loader page since 2026-11-12: after editing, run `python3 scripts/publish_squarespace_pages.py catalog-landing` in the Ink Pusher Digital Print repo (Timm's Mac); live within ~5 min. |
 
 ## Editing these
 

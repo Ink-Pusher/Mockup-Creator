@@ -35201,6 +35201,22 @@
           "back": "catalog_images/as-colour-4062/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-4065",
+      "name": "Women's Maple Faded Tee",
+      "brand": "AS Colour",
+      "style": "4065",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Faded Black",
+          "hex": "#363636",
+          "front": "catalog_images/as-colour-4065/faded-black_front.jpg",
+          "back": "catalog_images/as-colour-4065/faded-black_back.jpg"
+        }
+      ]
     }
   ]
 }

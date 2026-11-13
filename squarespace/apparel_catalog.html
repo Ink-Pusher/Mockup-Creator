@@ -257,6 +257,141 @@
   .mega-item .mega-item-meta{display:block;font-size:11px;font-weight:500;color:var(--grey);}
   .mega-item:hover .mega-item-meta{color:#0d0d0d;opacity:.75;}
   .mega-panel-empty{font-size:12.5px;color:var(--grey);padding:10px 6px;}
+  /* =====================================================================
+     FEATURED VIEW (the default page): rotating heroes, recently viewed,
+     most popular, category bands, instant-quote band, shop by brand.
+     "All products" switches to the plain grid below it. Heroes, band
+     photos and the Popular flag are edited in Product Admin.
+     ===================================================================== */
+  .viewbar{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin:0 0 16px;}
+  .view-seg{display:inline-flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden;background:#fff;}
+  .view-seg button{font-family:"Poppins",sans-serif;font-weight:800;font-size:13px;padding:8px 16px;border:none;background:none;color:var(--ink);cursor:pointer;}
+  .view-seg button.on{background:var(--ink);color:#fff;}
+  .viewbar .hint{font-size:12px;color:var(--grey);}
+  .kicker{font-family:"Poppins",sans-serif;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;}
+  .fbtn{display:inline-flex;align-items:center;gap:8px;font-family:"Poppins",sans-serif;font-weight:800;font-size:14px;color:var(--ink) !important;
+    background:var(--mint);border:2px solid var(--ink);border-radius:999px;padding:11px 20px;text-decoration:none;box-shadow:3px 3px 0 var(--ink);
+    transition:transform .12s, box-shadow .12s;cursor:pointer;}
+  .fbtn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink);}
+  .fbtn.ghost{background:#fff;}
+  .fbtn svg{flex:none;}
+
+  /* hero carousel */
+  .hero-wrap{position:relative;}
+  .hero{position:relative;border:2px solid var(--ink);border-radius:22px;overflow:hidden;box-shadow:5px 5px 0 var(--ink);height:460px;background:#ecebe8;}
+  .hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s ease, visibility .6s;}
+  .hero-slide.on{opacity:1;visibility:visible;}
+  .hero-pics{position:absolute;inset:0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;}
+  .hero-pics img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;}
+  .hero-card{position:absolute;left:24px;bottom:24px;background:#fff;border:2px solid var(--ink);border-radius:18px;padding:20px 22px;max-width:440px;box-shadow:4px 4px 0 var(--ink);}
+  .hero-card h2{font-size:34px;line-height:1.05;margin:4px 0 8px;font-weight:800;}
+  .hero-card p{margin:0 0 16px;font-size:14px;color:var(--grey);line-height:1.5;}
+  .hero-card .kicker{color:var(--grey);}
+  .hero.theme-dark{background:#2c3a4a;} .hero .slide-dark .hero-card .kicker{color:#5b7fa6;}
+  .hero .slide-mint{background:var(--mint);} .hero .slide-warm{background:#FFE3D3;} .hero .slide-dark{background:#2c3a4a;}
+  .hero-sticker{position:absolute;width:160px;height:160px;background:#fff;border:2px solid var(--ink);border-radius:50%;padding:16px;box-shadow:4px 4px 0 var(--ink);}
+  .hero-sticker img{width:100%;height:100%;object-fit:contain;}
+  .hero-sticker.s0{right:31%;top:18px;transform:rotate(-8deg);} .hero-sticker.s1{right:22px;top:150px;transform:rotate(7deg);width:140px;height:140px;}
+  .hero-dots{position:absolute;right:18px;bottom:18px;display:flex;gap:7px;z-index:3;}
+  .hero-dots button{width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--ink);padding:0;cursor:pointer;}
+  .hero-dots button.on{background:var(--ink);}
+  .hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:#fff;
+    display:grid;place-items:center;cursor:pointer;box-shadow:2px 2px 0 var(--ink);padding:0;color:var(--ink);}
+  .hero-arrow.prev{left:12px;} .hero-arrow.next{right:12px;}
+  @media (max-width:860px){
+    .hero{height:auto;}
+    .hero-slide{position:relative;display:none;}
+    .hero-slide.on{display:block;}
+    .hero-pics{position:relative;height:300px;}
+    .hero-pics img:nth-child(n+3){display:none;}   /* two photos on a phone */
+    .hero-card{position:relative;left:auto;bottom:auto;margin:-36px 12px 46px;max-width:none;}
+    .hero-card h2{font-size:26px;}
+    .hero-sticker{width:96px;height:96px;padding:10px;} .hero-sticker.s0{right:12px;top:12px;} .hero-sticker.s1{display:none;}
+    .hero-arrow{top:150px;}
+  }
+
+  /* rows */
+  .row-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:34px 0 12px;}
+  .row-head h2{font-size:22px;font-weight:800;margin:0;}
+  .row-head .row-link{font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;color:var(--ink);border:none;border-bottom:2px solid var(--mint-deep);
+    background:none;padding:0;cursor:pointer;text-decoration:none;}
+  .scroller{display:grid;grid-auto-flow:column;grid-auto-columns:200px;gap:16px;overflow-x:auto;padding:4px 6px 14px 2px;scroll-snap-type:x mandatory;}
+  .scroller .product-card{scroll-snap-align:start;}
+  .scroller.recent{grid-auto-columns:160px;}
+  .scroller.recent .product-card{padding:8px;}
+  .scroller.recent .pmeta, .scroller.recent .pswatches{display:none;}
+  .row4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+  @media (max-width:1000px){ .row4{grid-template-columns:repeat(2,minmax(0,1fr));} }
+  @media (max-width:640px){ .scroller{grid-auto-columns:150px;gap:10px;} .row4{gap:10px;} }
+  .product-card{position:relative;}
+  .pbadge{position:absolute;top:10px;left:10px;z-index:2;font-family:"Poppins",sans-serif;font-weight:800;font-size:10px;letter-spacing:.04em;
+    text-transform:uppercase;padding:4px 9px;border-radius:999px;border:2px solid var(--ink);background:#FFD84D;color:var(--ink);line-height:1.2;}
+
+  /* category bands */
+  .band{display:grid;grid-template-columns:1.15fr 1fr;margin:46px 0 14px;border:2px solid var(--ink);border-radius:22px;overflow:hidden;min-height:340px;
+    box-shadow:4px 4px 0 rgba(0,0,0,.12);}
+  .band.flip{grid-template-columns:1fr 1.15fr;} .band.flip .band-pic{order:2;}
+  .band-pic{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:#ecebe8;min-height:340px;}
+  .band-pic img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;max-height:400px;}
+  .band-pic.stage{display:flex;align-items:center;justify-content:center;background:#fff;padding:18px 6px;}
+  .band-pic.stage img{object-fit:contain;min-width:0;height:auto;max-height:300px;}
+  .band-pic.stage img:nth-child(1){width:36%;transform:rotate(-7deg) translateY(-12px);}
+  .band-pic.stage img:nth-child(2){width:28%;transform:rotate(4deg) translateY(30px);}
+  .band-pic.stage img:nth-child(3){width:36%;transform:rotate(7deg) translateY(-6px);}
+  .band-text{padding:30px 34px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;}
+  .band-text h2{font-size:32px;margin:0 0 10px;font-weight:800;line-height:1.05;}
+  .band-text p{margin:0 0 18px;font-size:15px;line-height:1.5;max-width:400px;}
+  .band.t1{background:#FFE3D3;} .band.t2{background:#DCEBFF;} .band.t3{background:#FFF1B8;} .band.t4{background:#E4F7EC;}
+  @media (max-width:860px){
+    .band, .band.flip{grid-template-columns:1fr;} .band.flip .band-pic{order:0;}
+    .band-pic{min-height:260px;} .band-pic img{max-height:300px;}
+    .band-text{padding:22px 20px;} .band-text h2{font-size:26px;}
+  }
+
+  /* instant quote band */
+  .quote-band{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center;margin:46px 0 8px;padding:28px 30px;border:2px solid var(--ink);
+    border-radius:20px;background:var(--mint);box-shadow:5px 5px 0 var(--ink);}
+  .quote-band h2{font-size:26px;font-weight:800;margin:6px 0 8px;line-height:1.15;}
+  .quote-band p{margin:0 0 14px;font-size:14px;line-height:1.5;max-width:470px;}
+  .quote-band .fbtn{background:#fff;}
+  .qsteps{display:flex;flex-wrap:wrap;gap:8px 16px;list-style:none;padding:0;margin:0 0 18px;font-weight:700;font-size:13px;line-height:20px;}
+  .qsteps li{display:flex;align-items:center;gap:6px;margin:0;padding:0;}
+  .qsteps li::before, .qsteps li::marker{content:none;}
+  .qsteps b{flex:none;display:block;width:20px;height:20px;line-height:20px;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;text-align:center;}
+  .qticket{background:#fff;border:2px solid var(--ink);border-radius:14px;padding:16px 18px;font-size:13px;transform:rotate(1.5deg);box-shadow:4px 4px 0 var(--ink);}
+  .qticket .t-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed #ccc;}
+  .qticket .t-total{display:flex;justify-content:space-between;gap:10px;padding-top:10px;font-family:"Poppins",sans-serif;font-weight:800;font-size:15px;}
+  .qticket .t-total span:last-child{background:var(--mint);border-radius:6px;padding:0 8px;}
+  @media (max-width:860px){ .quote-band{grid-template-columns:1fr;padding:22px 20px;} }
+
+  /* shop by brand (carried over from the old landing page) */
+  .brands-band{margin:46px 0 0;padding:30px 26px 32px;border:2px solid var(--ink);border-radius:22px;background:#fff;text-align:center;}
+  .brands-band h2{font-size:26px;font-weight:800;margin:0 0 6px;}
+  .brands-band p{color:var(--grey);font-size:14px;margin:0 auto 22px;max-width:56ch;line-height:1.5;}
+  .brand-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;}
+  .brand-pill{background:#fff;border:2px solid var(--border-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;height:84px;
+    padding:10px 14px;text-decoration:none;transition:transform .12s, border-color .12s;cursor:pointer;}
+  .brand-pill:hover{transform:translateY(-2px);border-color:var(--ink);}
+  .brand-pill img{width:100%;height:100%;object-fit:contain;}
+  .brand-pill span{font-family:"Poppins",sans-serif;font-weight:700;font-size:14px;color:var(--ink);line-height:1.2;}
+  @media(max-width:1000px){.brand-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  @media(max-width:640px){.brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}.brand-pill{height:70px;}}
+  @media (prefers-reduced-motion: reduce){ .hero-slide{transition:none;} }
+  /* phones: main column = screen width (the swipe rows would otherwise stretch it), categories
+     as one swipeable row, and filters + brands folded behind a button so the page starts sooner */
+  .mobile-filter-btn{display:none;}
+  @media (max-width:860px){
+    .catalog-main{width:100%;}
+    .viewbar{display:none;}
+    .catalog-sidebar{padding-bottom:4px;}
+    .catalog-sidebar .category-tabs{flex-direction:row;overflow-x:auto;gap:6px;padding-bottom:4px;}
+    .catalog-sidebar .category-tab{white-space:nowrap;border:2px solid var(--ink);border-radius:999px;padding:7px 13px;font-size:13px;}
+    .mobile-filter-btn{display:inline-flex;align-items:center;gap:6px;font-family:"Poppins",sans-serif;font-weight:800;font-size:13px;
+      border:2px solid var(--ink);border-radius:999px;background:#fff;color:var(--ink);padding:7px 14px;cursor:pointer;margin-bottom:6px;}
+    .catalog-sidebar:not(.filters-open) #tagFilterSection,
+    .catalog-sidebar:not(.filters-open) #hatFilterSection,
+    .catalog-sidebar:not(.filters-open) #brandFilterSection{display:none !important;}
+  }
 </style>
 </head>
 <body>
@@ -287,6 +422,7 @@
         <h3>Category</h3>
         <div class="category-tabs" id="categoryTabs"></div>
       </div>
+      <button type="button" class="mobile-filter-btn" id="mobileFilterBtn">Filters &amp; brands <span aria-hidden="true">&#9662;</span></button>
       <div class="sidebar-section" id="tagFilterSection">
         <h3>Filter</h3>
         <div class="filter-row" id="filterRow"></div>
@@ -304,7 +440,15 @@
       </div>
     </aside>
     <main class="catalog-main">
-      <div class="product-grid" id="productGrid">
+      <div class="viewbar">
+        <div class="view-seg" role="tablist">
+          <button type="button" id="viewFeaturedBtn" class="on">Featured</button>
+          <button type="button" id="viewAllBtn">All products</button>
+        </div>
+        <span class="hint" id="viewHint">Switch to see every product in one list</span>
+      </div>
+      <div id="featuredView"></div>
+      <div class="product-grid" id="productGrid" style="display:none">
         <div class="product-grid-loading">Loading catalog&#x2026;</div>
       </div>
     </main>
@@ -353,13 +497,14 @@ const MAX_GRID_CARDS = 500; // defensive ceiling only, not a real-world limit
 // fit/style tags from each product's kind/name, so a product's filter
 // behavior here always matches how it behaves there.
 const CATEGORY_DEFS = [
-  { id:"all",    label:"All",                   kinds:null },
+  { id:"all",    label:"All products",          kinds:null },
   { id:"tee",    label:"T-Shirts / Tanks",       kinds:["tee","longsleeve","tank"] },
   { id:"hoodie", label:"Sweatshirts / Hoodies",  kinds:["hoodie","sweatshirt"] },
-  { id:"cap",    label:"Headware",               kinds:["cap","hat","beanie"] },
+  { id:"cap",    label:"Headwear",               kinds:["cap","hat","beanie"] },
   { id:"tote",   label:"Tote Bags",              kinds:["tote"] },
 ];
 const FIT_TAGS = [
+  { id:"popular", label:"Popular", test:(p)=> !!p.popular },
   { id:"womens", label:"Women's",  test:(p)=> /women'?s|\bladies\b/i.test(p.name) },
   { id:"youth",  label:"Youth",    test:(p)=> /\byouth\b/i.test(p.name) },
   { id:"unisex", label:"Unisex",   test:(p)=> !/women'?s|\bladies\b|\byouth\b/i.test(p.name) },
@@ -401,7 +546,7 @@ const HAT_TAGS = [
 const ALL_TAGS = [...FIT_TAGS, ...STYLE_TAGS, ...HAT_TAGS];
 
 function resolveProductTags(p){
-  if(Array.isArray(p.tags) && p.tags.length) return [...p.tags, ...HAT_TAGS.filter(t => t.test(p)).map(t => t.id)];
+  if(Array.isArray(p.tags) && p.tags.length) return [...p.tags, ...(p.popular ? ["popular"] : []), ...HAT_TAGS.filter(t => t.test(p)).map(t => t.id)];
   return ALL_TAGS.filter(t => t.test(p)).map(t => t.id);
 }
 function categoryOf(product){
@@ -425,6 +570,9 @@ function pickThumbColor(product){
 // ---------- State ----------
 let CATALOG = { products: [] };
 const state = {
+  // "featured" = the storefront (heroes, popular, category bands); "grid" = every product.
+  // Any category, filter, brand or deep link (?cat= ?tags= ?brand= ?view=all) means the grid.
+  view: "featured",
   activeCategory: "all",
   activeTags: new Set(),
   activeBrands: new Set(),
@@ -442,6 +590,10 @@ const state = {
   const tags = (q.get("tags") || "").split(",").map(s => s.trim())
     .filter(id => id && ALL_TAGS.some(t => t.id === id));
   if(tags.length) state.activeTags = new Set(tags);
+})();
+(function(){
+  const q = new URLSearchParams(location.search);
+  if(q.get("view") === "all" || q.get("cat") || q.get("tags") || q.get("brand")) state.view = "grid";
 })();
 // ?brand= can't be validated until the catalog loads (the brand list
 // comes from the products themselves), so it's resolved in loadCatalog.
@@ -462,6 +614,7 @@ async function loadCatalog(){
       fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }),
       loadOverrides(),
     ]);
+    featuredDataPromise = loadFeaturedData();
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     if(!data.products || !data.products.length){
@@ -490,6 +643,8 @@ async function loadCatalog(){
           thumbnailColor: p.thumbnailColor || null,
           tags: p.tags || null,
           hatTags: p.hatTags || null,
+          // Product Admin's Popular toggle wins; untouched products use catalog.json's flag
+          popular: typeof o.popular === "boolean" ? o.popular : p.popular === true,
           sortOrder: typeof o.sort_order === "number" ? o.sort_order : null,
           colors: p.colors.map(c => ({
             name: c.name,
@@ -540,12 +695,19 @@ async function loadCatalog(){
 function renderCategoryTabs(){
   const wrap = document.getElementById("categoryTabs");
   wrap.innerHTML = "";
+  const feat = document.createElement("button");
+  feat.type = "button";
+  feat.className = "category-tab" + (state.view === "featured" ? " active" : "");
+  feat.textContent = "\u2605 Featured";
+  feat.onclick = ()=> showFeatured();
+  wrap.appendChild(feat);
   CATEGORY_DEFS.forEach(cat=>{
     const tab = document.createElement("button");
     tab.type = "button";
-    tab.className = "category-tab" + (cat.id===state.activeCategory ? " active" : "");
+    tab.className = "category-tab" + (state.view === "grid" && cat.id===state.activeCategory ? " active" : "");
     tab.textContent = cat.label;
     tab.onclick = ()=>{
+      state.view = "grid";
       state.activeCategory = cat.id;
       state.activeTags = new Set();   // category change clears filters, same as the Mockup Studio --
       state.activeBrands = new Set(); // a brand selected in one category might not exist in another
@@ -580,6 +742,7 @@ function renderFilterRow(inCategory){
     chip.onclick = ()=>{
       if(state.activeTags.has(tag.id)) state.activeTags.delete(tag.id);
       else state.activeTags.add(tag.id);
+      state.view = "grid";
       render();
     };
     into.appendChild(chip);
@@ -609,6 +772,7 @@ function renderBrandFilter(inCategory){
     row.innerHTML = `<input type="checkbox" data-brand="${safe}" ${state.activeBrands.has(b) ? "checked" : ""}/>${b}`;
     row.querySelector("input").onchange = (e)=>{
       if(e.target.checked) state.activeBrands.add(b); else state.activeBrands.delete(b);
+      state.view = "grid";
       render();
     };
     panel.appendChild(row);
@@ -670,7 +834,7 @@ function swatchRowHTML(product){
   const dots = swatchSample(product.colors, 6)
     .map(c => `<span class="pswatch" style="background:${swatchBackground(c)}" title="${String(c.name||"").replace(/"/g,"&quot;")}"></span>`)
     .join("");
-  return `<div class="pswatches">${dots}<span class="pcount">${total} color${total===1?"":"s"}</span></div>`;
+  return `<div class="pswatches">${dots}</div>`;
 }
 // ---------- Render: product grid ----------
 function renderProductGrid(filtered){
@@ -690,12 +854,7 @@ function renderProductGrid(filtered){
     const card = document.createElement("a");
     card.className = "product-card";
     card.href = `${PRODUCT_DETAIL_PAGE_URL}?id=${encodeURIComponent(p.id)}`;
-    card.innerHTML = `
-      <div class="thumb">${thumbHTML}</div>
-      <div class="pname">${p.brand} ${p.style}</div>
-      <div class="pmeta">${p.name}</div>
-      ${swatchRowHTML(p)}
-    `;
+    card.innerHTML = productCardInner(p, thumbHTML);
     grid.appendChild(card);
   });
 }
@@ -724,6 +883,14 @@ function render(){
     : inCategory;
 
   renderProductGrid(filtered);
+  const featured = state.view === "featured";
+  document.getElementById("productGrid").style.display = featured ? "none" : "";
+  document.getElementById("featuredView").style.display = featured ? "" : "none";
+  document.querySelector(".catalog-header").style.display = featured ? "none" : "";
+  document.getElementById("viewFeaturedBtn").classList.toggle("on", featured);
+  document.getElementById("viewAllBtn").classList.toggle("on", !featured);
+  document.getElementById("viewHint").textContent = featured ? "Switch to see every product in one list" : "Back to the featured picks";
+  if(featured) renderFeatured();
   document.getElementById("clearAllSection").style.display =
     (state.activeCategory !== "all" || state.activeTags.size || state.activeBrands.size) ? "block" : "none";
 }
@@ -883,6 +1050,226 @@ document.addEventListener("click", (e)=>{
 window.addEventListener("resize", ()=>{
   if(document.getElementById("catalogMegaPanel").classList.contains("open")) positionMegaPanel();
 });
+
+// =====================================================================
+// FEATURED VIEW
+// Heroes (catalog_heroes), band photos (catalog_bands), the products in
+// each band (landing_rows, the hand-picked rows from the old landing
+// page) and brand logos (product_content.logo_url) are all edited in
+// Product Admin. Anything missing falls back to the built-in defaults
+// below, so the page never shows an empty section.
+// =====================================================================
+const ESTIMATOR_PAGE_URL = "https://inkpusher.com/price-estimator";
+const RECENT_KEY = "ip_recently_viewed";   // written by product_detail.html
+const DEFAULT_HERO = {
+  kicker: "", headline: "Find your next favorite blank.",
+  body: "Tees, hoodies, hats and totes from the brands we print on every day.",
+  button_label: "Get an instant quote", button_url: ESTIMATOR_PAGE_URL, theme: "light", stickers: [],
+  photos: ["featured_defaults/hero-1.jpg", "featured_defaults/hero-2.jpg", "featured_defaults/hero-3.jpg"],
+};
+const BANDS = [
+  { id:"tees", title:"T-Shirts &amp; Tanks", cat:"tee", tone:"t1", rows:["unisex-tees","womens"],
+    blurb:"Soft everyday basics, heavyweight boxy fits and vintage washes, for every crew and every budget.",
+    photos:["featured_defaults/tees-1.jpg", "featured_defaults/tees-2.jpg"] },
+  { id:"hoodies", title:"Sweatshirts &amp; Hoodies", cat:"hoodie", tone:"t2", flip:true, rows:["hoodies"],
+    blurb:"Pullovers, zips, crops and crewnecks in midweight and heavyweight fleece.",
+    photos:["featured_defaults/hoodies-1.jpg", "featured_defaults/hoodies-2.jpg"] },
+  { quote:true },
+  { id:"headwear", title:"Headwear", cat:"cap", tone:"t3", stage:true, rows:["hats","beanies"],
+    blurb:"Truckers, dad hats, snapbacks and beanies, built for embroidery and patches.",
+    photos:["featured_defaults/headwear-1.jpg", "catalog_images/sportsman-sp90/featured_front.jpg", "featured_defaults/headwear-3.jpg"] },
+  { id:"totes", title:"Tote Bags", cat:"tote", tone:"t4", flip:true, stage:true, rows:["totes"],
+    blurb:"Canvas, recycled and jumbo totes for events, merch tables and retail.",
+    photos:["catalog_images/liberty-bags-8801/featured_front.jpg", "catalog_images/liberty-bags-8507/featured_front.jpg", "catalog_images/oad-oad113/featured_front.jpg"] },
+];
+const ARROW_SVG = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const esc = (t)=> String(t == null ? "" : t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const photoSrc = (u)=> /^https?:/i.test(u) ? u : CATALOG_BASE_URL + u;
+let featuredDataPromise = null;
+let featuredData = null;
+
+async function loadFeaturedData(){
+  const empty = { heroes: [], bands: new Map(), rows: new Map(), logos: new Map() };
+  if(!supabaseClient) return empty;
+  const safe = (p)=> p.then(r => r.error ? (console.warn("[apparel-catalog]", r.error), []) : (r.data || [])).catch(e => (console.warn(e), []));
+  const [heroes, bands, rows, logos] = await Promise.all([
+    safe(supabaseClient.from("catalog_heroes").select("*").eq("active", true).order("position")),
+    safe(supabaseClient.from("catalog_bands").select("*")),
+    safe(supabaseClient.from("landing_rows").select("*")),
+    safe(supabaseClient.from("product_content").select("product_id, logo_url")),
+  ]);
+  const today = new Date().toISOString().slice(0, 10);
+  return {
+    heroes: heroes.filter(h => (!h.starts_on || h.starts_on <= today) && (!h.ends_on || h.ends_on >= today)
+                               && Array.isArray(h.photos) && h.photos.length).slice(0, 5),
+    bands: new Map(bands.map(b => [b.band_id, b])),
+    rows: new Map(rows.map(r => [r.row_id, r])),
+    logos: new Map(logos.filter(r => r.logo_url).map(r => [r.product_id, r.logo_url])),
+  };
+}
+
+function productCardInner(p, thumbHTML){
+  return `${p.popular ? '<span class="pbadge">Popular</span>' : ""}
+      <div class="thumb">${thumbHTML}</div>
+      <div class="pname">${p.brand} ${p.style}</div>
+      <div class="pmeta">${p.name}</div>
+      ${swatchRowHTML(p)}`;
+}
+function productCardHTML(p){
+  const thumbColor = pickThumbColor(p);
+  const fallback = thumbColor ? thumbColor.frontSrc : "";
+  const img = `<img src="${CATALOG_BASE_URL}catalog_images/${p.id}/featured_front.jpg" data-fallback="${fallback}" onerror="if(this.dataset.fallback){this.src=this.dataset.fallback; this.removeAttribute('data-fallback');} else {this.onerror=null;}" alt="${esc(p.name)}" loading="lazy" />`;
+  return `<a class="product-card" href="${PRODUCT_DETAIL_PAGE_URL}?id=${encodeURIComponent(p.id)}">${productCardInner(p, img)}</a>`;
+}
+
+function showGrid(cat, tags){
+  state.view = "grid";
+  state.activeCategory = cat || "all";
+  state.activeTags = new Set(tags || []);
+  state.activeBrands = new Set();
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+function showFeatured(){
+  state.view = "featured";
+  state.activeCategory = "all";
+  state.activeTags = new Set();
+  state.activeBrands = new Set();
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+document.getElementById("viewFeaturedBtn").onclick = showFeatured;
+document.getElementById("mobileFilterBtn").onclick = ()=> document.querySelector(".catalog-sidebar").classList.toggle("filters-open");
+document.getElementById("viewAllBtn").onclick = ()=> showGrid("all");
+
+function recentProducts(){
+  let ids = [];
+  try { ids = JSON.parse(localStorage.getItem(RECENT_KEY) || "[]"); } catch(e) {}
+  const byId = new Map(CATALOG.products.map(p => [p.id, p]));
+  return (Array.isArray(ids) ? ids : []).map(id => byId.get(id)).filter(Boolean).slice(0, 12);
+}
+
+// up to `n` products for a band: hand-picked landing rows first (interleaved
+// when a band draws on two rows), then popular ones, then catalog order
+function bandProducts(band, n){
+  const inBand = CATALOG.products.filter(p => categoryOf(p) === band.cat);
+  const byId = new Map(inBand.map(p => [p.id, p]));
+  const lists = band.rows.map(r => ((featuredData.rows.get(r) || {}).featured_ids || []).map(id => byId.get(id)).filter(Boolean));
+  const out = [];
+  for(let i = 0; out.length < n && lists.some(l => i < l.length); i++)
+    lists.forEach(l => { if(l[i] && !out.includes(l[i]) && out.length < n) out.push(l[i]); });
+  inBand.filter(p => p.popular).concat(inBand).forEach(p => { if(out.length < n && !out.includes(p)) out.push(p); });
+  return out;
+}
+
+let heroTimer = null;
+function heroHTML(heroes){
+  const slides = heroes.map((h, i) => {
+    const photos = (h.photos || []).slice(0, 3).map(u => `<img src="${esc(photoSrc(u))}" alt="" loading="${i ? "lazy" : "eager"}" />`).join("");
+    const stickers = (h.stickers || []).slice(0, 2).map((id, k) =>
+      `<span class="hero-sticker s${k}"><img src="${CATALOG_BASE_URL}catalog_images/${encodeURIComponent(id)}/featured_front.jpg" alt="" loading="lazy" /></span>`).join("");
+    const btn = h.button_label && h.button_url
+      ? `<a class="fbtn" href="${esc(h.button_url)}"${/price-estimator/.test(h.button_url) ? ' target="_blank" rel="noopener"' : ""}>${esc(h.button_label)} ${ARROW_SVG}</a>` : "";
+    return `<div class="hero-slide slide-${esc(h.theme || "light")}${i === 0 ? " on" : ""}" data-i="${i}">
+      <div class="hero-pics">${photos}</div>${stickers}
+      <div class="hero-card">${h.kicker ? `<span class="kicker">${esc(h.kicker)}</span>` : ""}
+        ${h.headline ? `<h2>${esc(h.headline)}</h2>` : ""}${h.body ? `<p>${esc(h.body)}</p>` : ""}${btn}</div></div>`;
+  }).join("");
+  const nav = heroes.length > 1
+    ? `<button type="button" class="hero-arrow prev" aria-label="Previous">&#8249;</button><button type="button" class="hero-arrow next" aria-label="Next">&#8250;</button>
+       <div class="hero-dots">${heroes.map((_, i) => `<button type="button" aria-label="Slide ${i+1}" class="${i === 0 ? "on" : ""}" data-i="${i}"></button>`).join("")}</div>` : "";
+  return `<div class="hero-wrap"><section class="hero">${slides}${nav}</section></div>`;
+}
+function startHero(root){
+  clearInterval(heroTimer);
+  const slides = [...root.querySelectorAll(".hero-slide")];
+  if(slides.length < 2) return;
+  const dots = [...root.querySelectorAll(".hero-dots button")];
+  let cur = 0;
+  const go = (i)=>{
+    cur = (i + slides.length) % slides.length;
+    slides.forEach((s, k) => s.classList.toggle("on", k === cur));
+    dots.forEach((d, k) => d.classList.toggle("on", k === cur));
+  };
+  const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const play = ()=>{ clearInterval(heroTimer); if(!reduce) heroTimer = setInterval(()=> go(cur + 1), 7000); };
+  root.querySelector(".hero-arrow.prev").onclick = ()=>{ go(cur - 1); play(); };
+  root.querySelector(".hero-arrow.next").onclick = ()=>{ go(cur + 1); play(); };
+  dots.forEach(d => d.onclick = ()=>{ go(+d.dataset.i); play(); });
+  const hero = root.querySelector(".hero");
+  hero.onmouseenter = ()=> clearInterval(heroTimer);
+  hero.onmouseleave = play;
+  play();
+}
+
+function brandsHTML(){
+  const CANON = { "ascolour":"AS Colour", "bellacanvas":"Bella/Canvas", "independenttradingco":"Independent Trading Co.",
+    "nextlevelapparel":"Next Level", "nextlevel":"Next Level", "atlantisheadwear":"Atlantis Headwear", "atlantis":"Atlantis Headwear", "sportsmansp12":"Sportsman" };
+  const norm = (b)=> String(b||"").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const byBrand = new Map();
+  CATALOG.products.forEach(p => {
+    if(!p.brand) return;
+    const label = CANON[norm(p.brand)] || p.brand;
+    const e = byBrand.get(label) || { count: 0, logo: null, variants: new Set() };
+    e.count++; e.variants.add(p.brand);
+    if(!e.logo && featuredData.logos.has(p.id)) e.logo = featuredData.logos.get(p.id);
+    byBrand.set(label, e);
+  });
+  const brands = [...byBrand.entries()].sort((a,b)=> b[1].count - a[1].count);
+  if(!brands.length) return "";
+  return `<section class="brands-band"><h2>Shop by brand</h2><p>Prefer to start from a label you know? Every brand we stock, one tap away.</p>
+    <div class="brand-grid">${brands.map(([name, e]) => `<button type="button" class="brand-pill" data-brands="${esc([...e.variants].join("|"))}" title="${esc(name)}">${
+      e.logo ? `<img src="${esc(e.logo)}" alt="${esc(name)}" loading="lazy" onerror="this.outerHTML='<span>${esc(name).replace(/'/g, "&#39;")}</span>'" />` : `<span>${esc(name)}</span>`
+    }</button>`).join("")}</div></section>`;
+}
+
+function renderFeatured(){
+  const root = document.getElementById("featuredView");
+  if(!featuredData){
+    root.innerHTML = `<div class="product-grid-loading">Loading&#x2026;</div>`;
+    (featuredDataPromise || (featuredDataPromise = loadFeaturedData())).then(d => { featuredData = d; if(state.view === "featured") renderFeatured(); });
+    return;
+  }
+  const heroes = featuredData.heroes.length ? featuredData.heroes : [DEFAULT_HERO];
+  const recent = recentProducts();
+  const popular = CATALOG.products.filter(p => p.popular);
+  let html = heroHTML(heroes);
+  if(recent.length) html += `<div class="row-head"><h2>Recently viewed</h2><button type="button" class="row-link" id="recentClear">Clear</button></div>
+    <div class="scroller recent">${recent.map(productCardHTML).join("")}</div>`;
+  if(popular.length) html += `<div class="row-head"><h2>Most popular</h2><button type="button" class="row-link" data-grid="all" data-tags="popular">See all popular</button></div>
+    <div class="scroller">${popular.map(productCardHTML).join("")}</div>`;
+  BANDS.forEach(b => {
+    if(b.quote){
+      html += `<section class="quote-band"><div><span class="kicker">Instant quote</span><h2>Know your price in under a minute</h2>
+        <p>Pick any blank, upload your art, choose placements and quantities. Your price per piece updates as you go. No account, no waiting on an email.</p>
+        <ol class="qsteps"><li><b>1</b>Pick a blank</li><li><b>2</b>Add your art</li><li><b>3</b>Get your price</li></ol>
+        <a class="fbtn" href="${ESTIMATOR_PAGE_URL}" target="_blank" rel="noopener">Open the price estimator ${ARROW_SVG}</a></div>
+        <div aria-hidden="true"><div class="qticket"><div class="t-row"><span>50 x your favorite tee</span><span>pick a color</span></div>
+        <div class="t-row"><span>Front print</span><span>your art</span></div><div class="t-row"><span>Back print</span><span>optional</span></div>
+        <div class="t-total"><span>Price per piece</span><span>instant</span></div></div></div></section>`;
+      return;
+    }
+    const prods = bandProducts(b, 4);
+    if(!prods.length) return;
+    const saved = featuredData.bands.get(b.id);
+    const photos = (saved && Array.isArray(saved.photos) && saved.photos.length ? saved.photos : b.photos).slice(0, b.stage ? 3 : 2);
+    html += `<section class="band ${b.tone}${b.flip ? " flip" : ""}"><div class="band-pic${b.stage ? " stage" : ""}">${
+        photos.map(u => `<img src="${esc(photoSrc(u))}" alt="" loading="lazy" />`).join("")}</div>
+      <div class="band-text"><h2>${b.title}</h2><p>${b.blurb}</p><button type="button" class="fbtn ghost" data-grid="${b.cat}">Shop ${b.title} ${ARROW_SVG}</button></div></section>
+      <div class="row4">${prods.map(productCardHTML).join("")}</div>`;
+  });
+  html += brandsHTML();
+  root.innerHTML = html;
+  startHero(root);
+  root.querySelectorAll("[data-grid]").forEach(el => el.onclick = ()=> showGrid(el.dataset.grid, el.dataset.tags ? el.dataset.tags.split(",") : []));
+  root.querySelectorAll(".brand-pill").forEach(el => el.onclick = ()=>{
+    showGrid("all");
+    el.dataset.brands.split("|").forEach(b => state.activeBrands.add(b));
+    render();
+  });
+  const clr = document.getElementById("recentClear");
+  if(clr) clr.onclick = ()=>{ try { localStorage.removeItem(RECENT_KEY); } catch(e) {} renderFeatured(); };
+}
 
 loadCatalog();
 </script>

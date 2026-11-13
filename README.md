@@ -50,3 +50,18 @@ Only print admins can see or change prices; staff sign-ins don't see them.
   S&S and SanMar sell gets the higher price. Royal Apparel: type it on the card.
 - A price typed on a card is kept by later refreshes (unless `--force`); overrides are never touched.
 - Skip it for one add: `--no-prices`.
+
+## Featured catalog page (heroes, popular, category bands)
+
+The catalog page opens on a **Featured** view: up to 5 rotating heroes, Recently viewed, Most popular,
+a band per category, an instant-quote band and Shop by brand. **All products** (or any category,
+filter or brand) switches to the full grid. Everything is edited in Product Admin:
+
+- **Products tab**: the **Popular** checkbox on each card (badge + Most popular row).
+- **Featured Page tab**: heroes (photos, text, button, start/end dates, on/off), category band photos,
+  and the products shown under each band (the old landing rows).
+
+Photos are chosen from `model_photos.json`, a list of S&S's on-model and side-view photos for products
+we carry. Refresh it after adding products: `python3 model_photos.py` (about 10 minutes), then commit
+and push `model_photos.json`. A picked photo is copied into our own Supabase storage. The built-in
+fallback photos live in `featured_defaults/`.

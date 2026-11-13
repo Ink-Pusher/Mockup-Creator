@@ -464,6 +464,13 @@ async function loadAndRender(){
     // The CSV fallback below matches rows by brand+style AS THE SCRIPTS
     // WROTE THEM (catalog.json's originals), so remember those before any
     // admin override renames what the page displays.
+    // "Recently viewed" row on the catalog page's Featured view: newest first, 12 max,
+    // kept only in this visitor's own browser.
+    try {
+      const KEY = "ip_recently_viewed";
+      const prev = JSON.parse(localStorage.getItem(KEY) || "[]");
+      localStorage.setItem(KEY, JSON.stringify([id].concat((Array.isArray(prev) ? prev : []).filter(x => x !== id)).slice(0, 12)));
+    } catch(e) {}
     const origBrand = currentProduct.brand, origStyle = currentProduct.style;
     if(override.name_override) currentProduct.name = override.name_override;
     if(override.brand_override) currentProduct.brand = override.brand_override;

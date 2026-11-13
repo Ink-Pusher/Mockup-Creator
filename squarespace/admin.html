@@ -401,6 +401,35 @@
     font-size:10px;font-weight:800;color:var(--grey);line-height:17px;
   }
   .bulk-logo-row.is-set .logo-row-name{color:var(--grey);font-weight:600;}
+  /* ---------- Featured page editor (heroes + band photos) ---------- */
+  .fe-h{font-size:18px;margin:22px 0 8px;}
+  .hero-ed{background:#fff;border:2px solid var(--ink);border-radius:14px;box-shadow:3px 3px 0 rgba(0,0,0,.10);padding:16px 18px;margin-bottom:16px;}
+  .hero-ed.off{opacity:.6;}
+  .hero-ed-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;}
+  .hero-ed-head h3{margin:0;font-size:16px;flex:1;}
+  .hero-ed-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;}
+  .hero-ed-grid label{display:block;font-size:11.5px;font-weight:700;color:var(--grey);margin-bottom:3px;}
+  .hero-ed-grid input[type=text], .hero-ed-grid input[type=date], .hero-ed-grid select, .hero-ed-grid textarea{width:100%;font:inherit;font-size:13px;padding:7px 9px;border:1.5px solid var(--border-soft);border-radius:8px;box-sizing:border-box;}
+  .hero-ed-grid .wide{grid-column:1/-1;}
+  @media(max-width:800px){.hero-ed-grid{grid-template-columns:1fr;}}
+  .slots{display:flex;gap:10px;flex-wrap:wrap;}
+  .slot{width:110px;}
+  .slot .ph{width:110px;height:138px;border:1.5px dashed var(--border-soft);border-radius:10px;background:#f7f7f5 center/cover no-repeat;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--grey);}
+  .slot.contain .ph{background-size:contain;background-color:#fff;}
+  .slot .slot-btns{display:flex;gap:4px;margin-top:5px;}
+  .slot .slot-btns button{flex:1;font:inherit;font-size:11px;font-weight:700;padding:4px 0;border:1.5px solid var(--ink);border-radius:7px;background:#fff;cursor:pointer;}
+  .pp-modal{max-width:880px;width:94vw;}
+  .pp-top{display:flex;gap:10px;align-items:center;margin-bottom:8px;}
+  .pp-top input{flex:1;font:inherit;font-size:14px;padding:9px 12px;border:1.5px solid var(--border-soft);border-radius:9px;}
+  .pp-upload{cursor:pointer;white-space:nowrap;}
+  .pp-note{font-size:12.5px;color:var(--grey);min-height:18px;margin-bottom:6px;}
+  .pp-results{max-height:58vh;overflow-y:auto;}
+  .pp-prod{margin-bottom:14px;}
+  .pp-prod h4{margin:0 0 6px;font-size:13px;}
+  .pp-imgs{display:flex;gap:8px;flex-wrap:wrap;}
+  .pp-imgs button{width:92px;height:115px;border:1.5px solid var(--border-soft);border-radius:8px;background:#fff center/cover no-repeat;cursor:pointer;padding:0;}
+  .pp-imgs button.side{background-size:contain;}
+  .pp-imgs button:hover{outline:2.5px solid var(--mint-deep);}
 </style>
 </head>
 <body>
@@ -482,7 +511,7 @@
       <div style="display:flex;gap:10px;flex-shrink:0;align-items:center;">
         <div class="view-toggle" id="viewToggle">
           <button type="button" class="view-toggle-btn active" data-view="products">Products</button>
-          <button type="button" class="view-toggle-btn" data-view="landing">Landing Page</button>
+          <button type="button" class="view-toggle-btn" data-view="landing">Featured Page</button>
         </div>
         <button type="button" class="btn" id="bulkToolsBtn">Bulk tools</button>
         <button type="button" class="btn danger-outline" id="signOutBtn">Sign out</button>
@@ -530,14 +559,42 @@
     </div>
 
     <div id="landingEditor" style="display:none;">
+      <h2 class="fe-h">Heroes</h2>
       <div class="landing-intro">
-        Each row below matches a section of the public landing page. <strong>Featured products</strong> picks
+        The big rotating banner at the top of the catalog page (up to 5; they rotate every 7 seconds). Each hero has up to
+        <strong>3 photos</strong> (left to right) and up to <strong>2 round product stickers</strong>. Turn one off, or give it
+        start/end dates (for example a "Stay cozy" hero from December through February) and it switches itself on and off.
+        Choose photos from the model photo library (S&amp;S's on-model shots of products we carry) or upload your own; tall
+        photos (about 4:5) of people work best.
+      </div>
+      <div id="heroesWrap"></div>
+      <h2 class="fe-h">Category band photos</h2>
+      <div class="landing-intro">The photo panel beside each category band. Garment bands show 2 photos, Headwear and Totes
+        show 3 product shots on white (the hats look best as side views). Empty = the built-in defaults.</div>
+      <div id="bandsWrap"></div>
+      <h2 class="fe-h">Products in each band</h2>
+      <div class="landing-intro">
+        The cards under each category band on the catalog page come from these rows: the first 4 picks show
+        (T-Shirts mixes Unisex and Women's, Headwear mixes Hats and Beanies; empty = popular products first).
+        These rows also still feed the old landing page until it's retired. <strong>Featured products</strong> picks
         the six cards shown (leave it empty for automatic: the first six by your product order).
         <strong>Tile image</strong> is the big category photo at the top of the landing page &mdash; upload a
         hand-made crop, or leave it empty to use the row's first product photo. Images around 1200&times;775 work best
         (roughly 3:2); phones crop a touch squarer, so keep the garment centered.
       </div>
       <div id="landingRowsWrap"></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="photoPickerOverlay">
+    <div class="content-modal pp-modal">
+      <h2>Choose a photo</h2>
+      <p class="modal-sub" id="ppSub">Search a product we carry, then click a photo. It's copied into our own storage.</p>
+      <div class="pp-top"><input type="text" id="ppSearch" placeholder="Search products, e.g. hoodie, Bella 6400, Lane Seven..." autocomplete="off" />
+        <label class="btn pp-upload">Upload my own<input type="file" id="ppFile" accept="image/jpeg,image/png,image/webp" hidden /></label></div>
+      <div class="pp-note" id="ppNote"></div>
+      <div class="pp-results" id="ppResults"></div>
+      <div class="modal-actions"><button type="button" class="btn" id="ppCancel">Cancel</button></div>
     </div>
   </div>
 
@@ -790,11 +847,12 @@ async function loadEverything(){
   landingById = new Map((landingRes.data || []).map(r => [r.row_id, r]));
   allProducts = (catalogRes.products || []).map(p => ({
     id: p.id, name: p.name, brand: p.brand, style: p.style, kind: p.kind,
-    popular: p.popular !== false,
+    popular: p.popular === true,   // catalog.json's flag; same rule as the live page
   }));
   overridesById = new Map((overridesRes.data || []).map(o => [o.product_id, o]));
   contentById = new Map((contentRes.data || []).map(c => [c.product_id, c]));
   renderLandingEditor();
+  loadFeaturedEditor();
   renderSidebarCategoryList();
   renderSidebarTagList();
   renderSidebarBrandList();
@@ -818,6 +876,12 @@ function currentVisible(p){
   // on every new add -- so the admin showed fresh products as "Hidden"
   // while the live site correctly showed them.
   return o && typeof o.visible === "boolean" ? o.visible : true;
+}
+// "Popular" badge + Most popular row on the catalog page: the toggle here wins, untouched products
+// use catalog.json's flag (same rule as apparel_catalog.html)
+function currentPopular(p){
+  const o = overridesById.get(p.id);
+  return o && typeof o.popular === "boolean" ? o.popular : p.popular;
 }
 function currentSortOrder(p){
   const o = overridesById.get(p.id);
@@ -906,6 +970,10 @@ function renderCategories(){
           <input type="checkbox" ${visible ? "checked" : ""} />
           ${visible ? "Visible" : "Hidden"}
         </label>
+        <label class="visibility-toggle popular-toggle" title="Popular badge + Most popular row on the catalog page">
+          <input type="checkbox" class="popular-check" ${currentPopular(p) ? "checked" : ""} />
+          Popular
+        </label>
         <button type="button" class="edit-content-link${contentById.has(p.id) ? " has-content" : ""}">Edit Description${contentById.has(p.id) ? " \u2713" : ""}</button>
       `;
 
@@ -929,7 +997,10 @@ function renderCategories(){
         });
       });
 
-      card.querySelector('input[type="checkbox"]').onchange = async (e)=>{
+      card.querySelector(".popular-check").onchange = async (e)=>{
+        await saveOverride(p.id, { popular: e.target.checked });
+      };
+      card.querySelector('.visibility-toggle:not(.popular-toggle) input[type="checkbox"]').onchange = async (e)=>{
         card.classList.toggle("hidden-product", !e.target.checked);
         card.querySelector(".visibility-toggle").lastChild.textContent = e.target.checked ? "Visible" : "Hidden";
         await saveOverride(p.id, { visible: e.target.checked });
@@ -1615,6 +1686,259 @@ async function saveLandingRow(rowId, cfg, noteEl){
   }
   if(noteEl) noteEl.textContent = "Saved \u2014 live on the landing page.";
 }
+
+
+/* ================= Featured page: heroes + band photos =================
+   Edits the catalog page's Featured view (apparel_catalog.html): rotating
+   heroes (catalog_heroes) and the category band photo panels
+   (catalog_bands). Both tables are writable by print admins only. Photos
+   are copied into the public "landing" bucket (heroes/, bands/) so the
+   live page never depends on S&S's own image links. Band ids MUST match
+   BANDS in apparel_catalog.html. */
+const FE_MAX_HEROES = 5;
+const FE_BANDS = [
+  { id:"tees",     label:"T-Shirts & Tanks",        slots:2 },
+  { id:"hoodies",  label:"Sweatshirts & Hoodies",   slots:2 },
+  { id:"headwear", label:"Headwear",                slots:3, contain:true },
+  { id:"totes",    label:"Tote Bags",               slots:3, contain:true },
+];
+const FE_BUTTONS = [
+  ["Price estimator", "https://inkpusher.com/price-estimator"],
+  ["Popular products", "/new-apparel-catalog?view=all&tags=popular"],
+  ["T-Shirts", "/new-apparel-catalog?cat=tee"],
+  ["Sweatshirts & Hoodies", "/new-apparel-catalog?cat=hoodie"],
+  ["Headwear", "/new-apparel-catalog?cat=cap"],
+  ["Beanies", "/new-apparel-catalog?cat=cap&tags=beanie"],
+  ["Tote Bags", "/new-apparel-catalog?cat=tote"],
+];
+let feHeroes = [], feBands = new Map(), feLibrary = null, feTablesMissing = false;
+const feEsc = (t)=> String(t == null ? "" : t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const fePhotoSrc = (u)=> /^https?:/i.test(u) ? u : CATALOG_BASE_URL + u;
+
+async function loadFeaturedEditor(){
+  const [h, b] = await Promise.all([
+    supabaseClient.from("catalog_heroes").select("*").order("position"),
+    supabaseClient.from("catalog_bands").select("*"),
+  ]);
+  feTablesMissing = !!(h.error || b.error);
+  feHeroes = (h.data || []).map(x => ({ ...x, photos: x.photos || [], stickers: x.stickers || [] }));
+  feBands = new Map((b.data || []).map(x => [x.band_id, x]));
+  renderHeroesEditor();
+  renderBandsEditor();
+}
+
+function slotHTML(url, i, contain){
+  return `<div class="slot${contain ? " contain" : ""}"><div class="ph" style="${url ? `background-image:url('${feEsc(fePhotoSrc(url))}')` : ""}">${url ? "" : "empty"}</div>
+    <div class="slot-btns"><button type="button" data-pick="${i}">${url ? "Change" : "Choose"}</button>${url ? `<button type="button" data-clear="${i}">Remove</button>` : ""}</div></div>`;
+}
+
+function renderHeroesEditor(){
+  const wrap = document.getElementById("heroesWrap");
+  if(feTablesMissing){
+    wrap.innerHTML = `<div class="landing-intro" style="border-color:#e0b4b4;color:#8a2f2a;">The catalog_heroes / catalog_bands tables aren't set up yet (migration 20261113000001_catalog_featured.sql in the Ink Pusher Digital Print repo).</div>`;
+    return;
+  }
+  const productOpts = allProducts.slice().sort((a,b)=> `${currentBrand(a)} ${currentStyle(a)}`.localeCompare(`${currentBrand(b)} ${currentStyle(b)}`))
+    .map(p => `<option value="${feEsc(p.id)}">${feEsc(currentBrand(p) + " " + currentStyle(p) + " - " + currentName(p))}</option>`).join("");
+  const today = new Date().toISOString().slice(0,10);
+  wrap.innerHTML = "";
+  feHeroes.forEach((h, idx) => {
+    const live = h.active && (!h.starts_on || h.starts_on <= today) && (!h.ends_on || h.ends_on >= today) && h.photos.length;
+    const card = document.createElement("div");
+    card.className = "hero-ed" + (live ? "" : " off");
+    const preset = FE_BUTTONS.find(b => b[1] === h.button_url);
+    card.innerHTML = `
+      <div class="hero-ed-head"><h3>Hero ${idx + 1}${live ? " &middot; live" : h.active ? " &middot; not showing (dates or no photos)" : " &middot; off"}</h3>
+        <label class="visibility-toggle"><input type="checkbox" class="f-active" ${h.active ? "checked" : ""}/> On</label>
+        <button type="button" class="btn f-up" ${idx === 0 ? "disabled" : ""}>&uarr;</button>
+        <button type="button" class="btn f-down" ${idx === feHeroes.length - 1 ? "disabled" : ""}>&darr;</button>
+        <button type="button" class="btn danger-outline f-del">Delete</button></div>
+      <div class="hero-ed-grid">
+        <div class="wide"><label>Photos (left to right)</label><div class="slots">${[0,1,2].map(i => slotHTML(h.photos[i], i)).join("")}</div></div>
+        <div><label>Small line above the headline (optional)</label><input type="text" class="f-kicker" value="${feEsc(h.kicker)}" placeholder="Winter collection" /></div>
+        <div><label>Headline</label><input type="text" class="f-headline" value="${feEsc(h.headline)}" placeholder="Stay cozy." /></div>
+        <div class="wide"><label>Text</label><textarea class="f-body" rows="2" placeholder="Browse our selection of cold weather gear.">${feEsc(h.body)}</textarea></div>
+        <div><label>Button text (blank = no button)</label><input type="text" class="f-btnlabel" value="${feEsc(h.button_label)}" placeholder="Shop cold weather gear" /></div>
+        <div><label>Button goes to</label><select class="f-btnpreset">${FE_BUTTONS.map(b => `<option value="${feEsc(b[1])}"${preset && preset[1] === b[1] ? " selected" : ""}>${feEsc(b[0])}</option>`).join("")}
+          <option value=""${preset ? "" : " selected"}>Custom link...</option></select>
+          <input type="text" class="f-btnurl" value="${feEsc(h.button_url)}" placeholder="https://..." style="margin-top:6px;${preset ? "display:none" : ""}" /></div>
+        <div><label>Starts (optional)</label><input type="date" class="f-start" value="${h.starts_on || ""}" /></div>
+        <div><label>Ends (optional)</label><input type="date" class="f-end" value="${h.ends_on || ""}" /></div>
+        <div><label>Background behind the photos</label><select class="f-theme">${[["light","Light grey"],["dark","Dark navy"],["mint","Mint"],["warm","Warm peach"]].map(t => `<option value="${t[0]}"${(h.theme||"light") === t[0] ? " selected" : ""}>${t[1]}</option>`).join("")}</select></div>
+        <div><label>Round product stickers (optional, up to 2)</label>
+          <select class="f-st0"><option value="">(none)</option>${productOpts}</select>
+          <select class="f-st1" style="margin-top:6px"><option value="">(none)</option>${productOpts}</select></div>
+      </div>
+      <div class="landing-save-row"><button type="button" class="btn primary f-save">Save hero</button><span class="landing-save-note"></span></div>`;
+    card.querySelector(".f-st0").value = h.stickers[0] || "";
+    card.querySelector(".f-st1").value = h.stickers[1] || "";
+    const note = card.querySelector(".landing-save-note");
+    const preSel = card.querySelector(".f-btnpreset"), urlIn = card.querySelector(".f-btnurl");
+    preSel.onchange = ()=>{ urlIn.style.display = preSel.value ? "none" : ""; if(preSel.value) urlIn.value = preSel.value; };
+    const collect = ()=>{
+      h.active = card.querySelector(".f-active").checked;
+      h.kicker = card.querySelector(".f-kicker").value.trim() || null;
+      h.headline = card.querySelector(".f-headline").value.trim() || null;
+      h.body = card.querySelector(".f-body").value.trim() || null;
+      h.button_label = card.querySelector(".f-btnlabel").value.trim() || null;
+      h.button_url = (preSel.value || urlIn.value.trim()) || null;
+      h.starts_on = card.querySelector(".f-start").value || null;
+      h.ends_on = card.querySelector(".f-end").value || null;
+      h.theme = card.querySelector(".f-theme").value;
+      h.stickers = [card.querySelector(".f-st0").value, card.querySelector(".f-st1").value].filter(Boolean);
+    };
+    card.querySelectorAll("[data-pick]").forEach(btn => btn.onclick = ()=>{
+      collect();
+      openPhotoPicker("heroes", (url)=>{ h.photos[+btn.dataset.pick] = url; h.photos = h.photos.filter(Boolean); saveHero(h, null).then(renderHeroesEditor); });
+    });
+    card.querySelectorAll("[data-clear]").forEach(btn => btn.onclick = ()=>{
+      collect(); h.photos.splice(+btn.dataset.clear, 1); saveHero(h, null).then(renderHeroesEditor);
+    });
+    card.querySelector(".f-save").onclick = ()=>{ collect(); saveHero(h, note).then(ok => ok && renderHeroesEditor()); };
+    card.querySelector(".f-active").onchange = ()=>{ collect(); saveHero(h, note).then(ok => ok && renderHeroesEditor()); };
+    card.querySelector(".f-del").onclick = async ()=>{
+      if(!confirm("Delete this hero? This can't be undone.")) return;
+      const { error } = await supabaseClient.from("catalog_heroes").delete().eq("id", h.id);
+      if(error){ note.textContent = "Delete failed: " + error.message; return; }
+      feHeroes.splice(idx, 1); await saveHeroOrder(); renderHeroesEditor();
+    };
+    const move = async (d)=>{ collect(); feHeroes.splice(idx + d, 0, feHeroes.splice(idx, 1)[0]); await saveHeroOrder(); renderHeroesEditor(); };
+    card.querySelector(".f-up").onclick = ()=> move(-1);
+    card.querySelector(".f-down").onclick = ()=> move(1);
+    wrap.appendChild(card);
+  });
+  if(feHeroes.length < FE_MAX_HEROES){
+    const add = document.createElement("button");
+    add.type = "button"; add.className = "btn primary";
+    add.textContent = feHeroes.length ? "+ Add another hero" : "+ Add a hero";
+    add.onclick = async ()=>{
+      const { data, error } = await supabaseClient.from("catalog_heroes").insert({ position: feHeroes.length, active: false,
+        headline: "New hero", button_label: "Get an instant quote", button_url: FE_BUTTONS[0][1] }).select().single();
+      if(error){ alert("Couldn't add a hero: " + error.message); return; }
+      feHeroes.push({ ...data, photos: [], stickers: [] }); renderHeroesEditor();
+    };
+    wrap.appendChild(add);
+  }
+  if(!feHeroes.some(h => h.active)){
+    const n = document.createElement("div");
+    n.className = "landing-save-note"; n.style.marginTop = "8px";
+    n.textContent = "No hero is on right now, so the page shows its built-in default (three model photos, \"Find your next favorite blank.\").";
+    wrap.appendChild(n);
+  }
+}
+async function saveHero(h, noteEl){
+  if(noteEl) noteEl.textContent = "Saving\u2026";
+  const row = { id: h.id, position: h.position, active: h.active, starts_on: h.starts_on, ends_on: h.ends_on, kicker: h.kicker,
+    headline: h.headline, body: h.body, button_label: h.button_label, button_url: h.button_url, photos: h.photos.slice(0, 3),
+    stickers: h.stickers.slice(0, 2), theme: h.theme || "light", updated_at: new Date().toISOString() };
+  const { error } = await supabaseClient.from("catalog_heroes").upsert(row);
+  if(error){ if(noteEl) noteEl.textContent = "Save failed: " + error.message; else alert("Save failed: " + error.message); return false; }
+  if(noteEl) noteEl.textContent = "Saved \u2014 live on the catalog page.";
+  return true;
+}
+async function saveHeroOrder(){
+  feHeroes.forEach((h, i) => h.position = i);
+  for(const h of feHeroes) await saveHero(h, null);
+}
+
+function renderBandsEditor(){
+  const wrap = document.getElementById("bandsWrap");
+  if(feTablesMissing){ wrap.innerHTML = ""; return; }
+  wrap.innerHTML = "";
+  FE_BANDS.forEach(b => {
+    const cfg = feBands.get(b.id) || { band_id: b.id, photos: [] };
+    feBands.set(b.id, cfg);
+    const card = document.createElement("div");
+    card.className = "hero-ed";
+    card.innerHTML = `<div class="hero-ed-head"><h3>${feEsc(b.label)}</h3><span class="landing-save-note"></span></div>
+      <div class="slots">${Array.from({length: b.slots}, (_, i) => slotHTML(cfg.photos[i], i, b.contain)).join("")}</div>`;
+    const note = card.querySelector(".landing-save-note");
+    const save = async ()=>{
+      note.textContent = "Saving\u2026";
+      const { error } = await supabaseClient.from("catalog_bands").upsert({ band_id: b.id, photos: cfg.photos.filter(Boolean).slice(0, b.slots), updated_at: new Date().toISOString() });
+      note.textContent = error ? "Save failed: " + error.message : "Saved \u2014 live on the catalog page.";
+      if(!error) renderBandsEditor();
+    };
+    card.querySelectorAll("[data-pick]").forEach(btn => btn.onclick = ()=>
+      openPhotoPicker("bands", (url)=>{ cfg.photos[+btn.dataset.pick] = url; cfg.photos = cfg.photos.filter(Boolean); save(); }, b.contain));
+    card.querySelectorAll("[data-clear]").forEach(btn => btn.onclick = ()=>{ cfg.photos.splice(+btn.dataset.clear, 1); save(); });
+    wrap.appendChild(card);
+  });
+}
+
+// ---------- photo picker ----------
+// The library is model_photos.json (built by model_photos.py): S&S's on-model
+// photos and hat/tote side views for products we carry, as links. Picking one
+// downloads it in the browser (S&S's image server allows this) and uploads it
+// to the landing bucket, so the page only ever shows our own copy.
+let pickerDone = null, pickerFolder = "heroes";
+async function openPhotoPicker(folder, done, preferSide){
+  pickerDone = done; pickerFolder = folder;
+  document.getElementById("ppNote").textContent = "";
+  document.getElementById("ppSearch").value = "";
+  openModal("photoPickerOverlay");
+  if(!feLibrary){
+    document.getElementById("ppResults").innerHTML = `<div class="pp-note">Loading the photo library\u2026</div>`;
+    try {
+      const r = await fetch(`${CATALOG_BASE_URL}model_photos.json?t=${Date.now()}`, { cache: "no-store" });
+      feLibrary = r.ok ? await r.json() : {};
+    } catch(e){ feLibrary = {}; }
+  }
+  renderPickerResults("", preferSide);
+  document.getElementById("ppSearch").oninput = (e)=> renderPickerResults(e.target.value, preferSide);
+  document.getElementById("ppSearch").focus();
+}
+function renderPickerResults(q, preferSide){
+  const out = document.getElementById("ppResults");
+  const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const prods = allProducts.filter(p => feLibrary[p.id] && words.every(w => `${currentBrand(p)} ${currentStyle(p)} ${currentName(p)} ${p.kind}`.toLowerCase().includes(w)));
+  if(!Object.keys(feLibrary).length){ out.innerHTML = `<div class="pp-note">The photo library is empty. Run python3 model_photos.py, commit model_photos.json and push it. You can still upload your own photo.</div>`; return; }
+  if(!prods.length){ out.innerHTML = `<div class="pp-note">No products with photos match. Try a brand or "hoodie".</div>`; return; }
+  out.innerHTML = prods.slice(0, 30).map(p => {
+    const lib = feLibrary[p.id];
+    const views = preferSide ? ["side", "model_front", "model_side"] : ["model_front", "model_side", "model_back", "side"];
+    const imgs = [];
+    views.forEach(v => Object.entries(lib[v] || {}).forEach(([color, url]) => imgs.push({ v, color, url })));
+    return `<div class="pp-prod"><h4>${feEsc(currentBrand(p) + " " + currentStyle(p))} <span style="font-weight:500;color:var(--grey)">${feEsc(currentName(p))}</span></h4>
+      <div class="pp-imgs">${imgs.slice(0, 24).map(x => `<button type="button" class="${x.v === "side" ? "side" : ""}" title="${feEsc(x.color + " - " + x.v.replace("_", " "))}"
+        data-url="${feEsc(x.url)}" data-name="${feEsc(p.id + "-" + x.color + "-" + x.v)}" style="background-image:url('${feEsc(x.url.replace(/_fl\.jpg$/, "_fm.jpg"))}')"></button>`).join("")}</div></div>`;
+  }).join("") + (prods.length > 30 ? `<div class="pp-note">${prods.length - 30} more products match; type more to narrow it down.</div>` : "");
+  out.querySelectorAll("[data-url]").forEach(btn => btn.onclick = ()=> copyIntoStorage(btn.dataset.url, btn.dataset.name));
+}
+async function uploadToLanding(blob, name, contentType){
+  const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 80);
+  const ext = contentType === "image/png" ? "png" : contentType === "image/webp" ? "webp" : "jpg";
+  const path = `${pickerFolder}/${slug}-${Date.now().toString(36)}.${ext}`;
+  const { error } = await supabaseClient.storage.from("landing").upload(path, blob, { upsert: false, contentType, cacheControl: "31536000" });
+  if(error) throw error;
+  return supabaseClient.storage.from("landing").getPublicUrl(path).data.publicUrl;
+}
+async function copyIntoStorage(url, name){
+  const note = document.getElementById("ppNote");
+  note.textContent = "Copying the photo into our storage\u2026";
+  try {
+    const r = await fetch(url, { mode: "cors" });
+    if(!r.ok) throw new Error("couldn't download it (" + r.status + ")");
+    const blob = await r.blob();
+    const publicUrl = await uploadToLanding(blob, name, blob.type || "image/jpeg");
+    closeModal("photoPickerOverlay");
+    if(pickerDone) pickerDone(publicUrl);
+  } catch(e){ note.textContent = "That didn't work: " + (e.message || e); }
+}
+document.getElementById("ppFile").onchange = async (e)=>{
+  const file = e.target.files[0]; e.target.value = "";
+  if(!file) return;
+  const note = document.getElementById("ppNote");
+  if(file.size > 8 * 1024 * 1024){ note.textContent = "That file is over 8 MB; please use a smaller one."; return; }
+  note.textContent = "Uploading\u2026";
+  try {
+    const publicUrl = await uploadToLanding(file, "upload-" + file.name.replace(/\.[^.]+$/, ""), file.type || "image/jpeg");
+    closeModal("photoPickerOverlay");
+    if(pickerDone) pickerDone(publicUrl);
+  } catch(err){ note.textContent = "Upload failed: " + (err.message || err); }
+};
+document.getElementById("ppCancel").onclick = ()=> closeModal("photoPickerOverlay");
+document.getElementById("photoPickerOverlay").addEventListener("click", (e)=>{ if(e.target.id === "photoPickerOverlay") closeModal("photoPickerOverlay"); });
 
 // ---------- view toggle ----------
 document.querySelectorAll(".view-toggle-btn").forEach(btn=>{

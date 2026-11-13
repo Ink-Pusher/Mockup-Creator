@@ -790,11 +790,8 @@ def extract_ss_api(brand, style):
     except urllib.error.HTTPError as e:
         raise RuntimeError("S&S doesn't list this style" if e.code == 404 else f"S&S error {e.code}")
     time.sleep(fp.SS_DELAY)
-    b = fp.norm(brand)
     same = [h for h in hits if fp.norm(h.get("styleName")) == fp.norm(style)]
-    st = next((h for h in same if (fp.norm(h.get("brandName"))[:6] and
-               (fp.norm(h.get("brandName")).startswith(b[:6]) or b.startswith(fp.norm(h.get("brandName"))[:6])))), None)
-    st = st or (same[0] if len(same) == 1 else None)
+    st = fp.pick_style(hits, brand, style)   # brand must match: same number is often another brand's product
     if not st:
         raise RuntimeError(f"S&S has no {brand} {style}"
                            + (f" (it has: {', '.join(sorted({h.get('brandName', '') for h in same}))})" if same else ""))

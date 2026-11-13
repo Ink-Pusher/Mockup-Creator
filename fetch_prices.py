@@ -57,6 +57,25 @@ HAND_ENTERED = {"royalapparel"}                 # brands with no price feed (ent
 def norm(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower().replace("+", " ").replace("&", " "))
 
+# S&S sells some brands under another name: Yupoong as Flexfit / YP Classics, LAT as "Live & Tell by LAT",
+# Hanes ComfortWash as "ComfortWash by Hanes".
+BRAND_ALIASES = {"yupoong": ("flexfit", "ypclassics"), "ypclassics": ("yupoong", "flexfit")}
+
+def brand_matches(ours, theirs):
+    """True when S&S's brandName is the same brand as ours. Never guess from the style number alone:
+    the same number is often a different brand's product (Yupoong 6210 cap vs Next Level 6210 tee)."""
+    b, hb = norm(ours), norm(theirs)
+    if not b or not hb:
+        return False
+    if hb.startswith(b[:6]) or b.startswith(hb[:6]) or hb.endswith("by" + b):
+        return True
+    return any(hb.startswith(a) for a in BRAND_ALIASES.get(b, ()))
+
+def pick_style(hits, brand, style):
+    """The S&S style that is this brand's style, or None (never another brand's same-numbered style)."""
+    same = [h for h in hits or [] if norm(h.get("styleName")) == norm(style)]
+    return next((h for h in same if brand_matches(brand, h.get("brandName"))), None)
+
 def blank_cost(vendor_price, kind):
     """Same formula as Product Admin and the price estimator (apparel/pricing.js)."""
     cents = math.ceil(vendor_price * 100 - 1e-6)
@@ -115,10 +134,7 @@ class SS:
         except urllib.error.HTTPError as e:
             if e.code in (401, 403): raise SystemExit("S&S refused the account number / API key. Run: python3 fetch_prices.py setup")
             return None, "not found at S&S" if e.code == 404 else f"S&S error {e.code}"
-        b = norm(p["brand"])
-        same = [h for h in hits if norm(h.get("styleName")) == norm(p["style"])]
-        st = next((h for h in same if norm(h.get("brandName"))[:6] and (norm(h.get("brandName")).startswith(b[:6]) or b.startswith(norm(h.get("brandName"))[:6]))), None)
-        st = st or (same[0] if len(same) == 1 else None)
+        st = pick_style(hits, p["brand"], p["style"])
         if not st: return None, "not found at S&S"
         skus = self.get(f"/products/?styleid={st['styleID']}"); time.sleep(SS_DELAY)
         sized = any((s.get("sizeName") or "").upper() in BASE_SIZES for s in skus)

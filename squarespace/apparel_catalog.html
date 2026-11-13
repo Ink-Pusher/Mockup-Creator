@@ -295,8 +295,10 @@
   .hero-dots{position:absolute;right:18px;bottom:18px;display:flex;gap:7px;z-index:3;}
   .hero-dots button{width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--ink);padding:0;cursor:pointer;}
   .hero-dots button.on{background:var(--ink);}
-  .hero-arrow{position:absolute;top:32%;transform:translateY(-50%);z-index:3;width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:#fff;
-    display:grid;place-items:center;cursor:pointer;box-shadow:2px 2px 0 var(--ink);padding:0;color:var(--ink);}
+  .hero-arrow{position:absolute;top:32%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:#fff;
+    display:grid;place-items:center;cursor:pointer;box-shadow:3px 3px 0 var(--ink);padding:0;color:var(--ink);transition:transform .12s, box-shadow .12s;}
+  .hero-arrow svg{width:22px;height:22px;}
+  .hero-arrow:hover{transform:translate(-1px,calc(-50% - 1px));box-shadow:4px 4px 0 var(--ink);}
   .hero-arrow.prev{left:12px;} .hero-arrow.next{right:12px;}
   @media (max-width:860px){
     .hero{height:auto;}
@@ -331,7 +333,7 @@
   .band{display:grid;grid-template-columns:1.15fr 1fr;margin:46px 0 14px;border:2px solid var(--ink);border-radius:22px;overflow:hidden;min-height:340px;
     box-shadow:4px 4px 0 rgba(0,0,0,.12);}
   .band.flip{grid-template-columns:1fr 1.15fr;} .band.flip .band-pic{order:2;}
-  .band-pic{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:#ecebe8;min-height:340px;}
+  .band-pic{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:#ecebe8;min-height:340px;overflow:hidden;}   /* tilted photos stay inside their panel */
   .band-pic img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;max-height:400px;}
   .band-pic.stage{display:flex;align-items:center;justify-content:center;background:#fff;padding:18px 6px;}
   .band-pic.stage img{object-fit:contain;min-width:0;height:auto;max-height:300px;}
@@ -392,6 +394,32 @@
     .catalog-sidebar:not(.filters-open) #hatFilterSection,
     .catalog-sidebar:not(.filters-open) #brandFilterSection{display:none !important;}
   }
+  /* ---------- "More from Ink Pusher" footer (both views) ---------- */
+  .more-band{margin:56px 0 0;background:var(--ink);color:#fff;border-radius:24px;padding:36px 34px 30px;}
+  .more-band .kicker{color:var(--mint);}
+  .more-band h2{font-size:30px;font-weight:800;margin:6px 0 6px;color:#fff;}
+  .more-band > p{margin:0 0 24px;color:#c9c9c4;font-size:15px;line-height:1.5;max-width:60ch;}
+  .more-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+  .more-tile{display:flex;flex-direction:column;gap:6px;background:#fff;color:var(--ink) !important;border:2px solid #fff;border-radius:16px;padding:18px 18px 16px;
+    text-decoration:none !important;transition:transform .12s, box-shadow .12s;}
+  .more-tile:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--mint);}
+  .more-tile .mi{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:2px solid var(--ink);margin-bottom:4px;}
+  .more-tile .mi svg{width:24px;height:24px;}
+  .more-tile b{font-family:"Poppins",sans-serif;font-size:16px;font-weight:800;}
+  .more-tile span{font-size:13px;color:var(--grey);line-height:1.4;}
+  .more-tile em{font-style:normal;font-family:"Poppins",sans-serif;font-weight:800;font-size:13px;margin-top:auto;padding-top:6px;}
+  .more-guides{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:22px 0 0;font-size:13px;color:#c9c9c4;}
+  .more-guides a{color:#fff !important;font-weight:700;text-decoration:none;border:1.5px solid #555;border-radius:999px;padding:6px 12px;}
+  .more-guides a:hover{border-color:var(--mint);color:var(--mint) !important;}
+  .more-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin-top:26px;padding:20px 22px;
+    background:var(--mint);color:var(--ink);border-radius:16px;}
+  .more-cta h3{font-family:"Poppins",sans-serif;font-size:20px;font-weight:800;margin:0 0 2px;}
+  .more-cta p{margin:0;font-size:14px;}
+  .more-cta .btns{display:flex;flex-wrap:wrap;gap:10px;}
+  .more-cta .fbtn{background:#fff;}
+  .more-cta .fbtn.dark{background:var(--ink);color:#fff !important;box-shadow:3px 3px 0 #fff;}
+  @media (max-width:1000px){ .more-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
+  @media (max-width:640px){ .more-band{padding:26px 18px 20px;border-radius:18px;} .more-band h2{font-size:24px;} .more-grid{grid-template-columns:1fr;} .more-cta .fbtn{flex:1;justify-content:center;} }
 </style>
 </head>
 <body>
@@ -453,6 +481,23 @@
       </div>
     </main>
   </div>
+  <section class="more-band" aria-label="More from Ink Pusher">
+    <span class="kicker">More from Ink Pusher</span>
+    <h2>More than apparel.</h2>
+    <p>Stickers, print, embroidery and screen printing, all under one roof. Mix and match for your next order.</p>
+    <div class="more-grid"><a class="more-tile" href="https://inkpusher.com/stickers"><span class="mi" style="background:#FFD84D"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/></svg></span><b>Stickers</b><span>Custom stickers for brands, bands, events and giveaways.</span><em>Order stickers &rarr;</em></a><a class="more-tile" href="https://inkpusher.com/digitalprinting"><span class="mi" style="background:#DCEBFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="7"/><path d="M6 17H4v-6h16v6h-2"/><rect x="7" y="14" width="10" height="7"/></svg></span><b>Digital Printing</b><span>Business cards, flyers, postcards, signs and banners.</span><em>Explore print &rarr;</em></a><a class="more-tile" href="https://inkpusher.com/embroidery"><span class="mi" style="background:#FFE3D3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L20 4"/><circle cx="17.5" cy="6.5" r="1"/><path d="M8 20c2-4 6-4 8-8"/></svg></span><b>Embroidery</b><span>Your logo stitched on hats, polos and jackets.</span><em>See embroidery &rarr;</em></a><a class="more-tile" href="https://inkpusher.com/screenprinting"><span class="mi" style="background:#E4F7EC"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M7 21h10M9 9h6M9 13h4"/></svg></span><b>Screen Printing</b><span>Bold, durable prints for crews, teams and merch drops.</span><em>See screen printing &rarr;</em></a></div>
+    <div class="more-guides">Not sure where to start? Read our guides:
+      <a href="https://inkpusher.com/t-shirt-resource-guide">T-Shirt Guide</a>
+      <a href="https://inkpusher.com/hat-resource-guide">Hat Guide</a>
+      <a href="https://inkpusher.com/sticker-resource-guide">Sticker Guide</a>
+      <a href="https://inkpusher.com/digital-printing-resource-guide">Digital Printing Guide</a>
+    </div>
+    <div class="more-cta">
+      <div><h3>Have a question or a big order?</h3><p>Talk to a real person. We'll help you pick the right blank and get it printed.</p></div>
+      <div class="btns"><a class="fbtn" href="https://inkpusher.com/contact">Contact us</a>
+        <a class="fbtn dark" href="https://inkpusher.com/price-estimator" target="_blank" rel="noopener">Get an instant quote</a></div>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -1176,7 +1221,7 @@ function heroHTML(heroes){
         ${h.headline ? `<h2>${esc(h.headline)}</h2>` : ""}${h.body ? `<p>${esc(h.body)}</p>` : ""}${btn}</div></div>`;
   }).join("");
   const nav = heroes.length > 1
-    ? `<button type="button" class="hero-arrow prev" aria-label="Previous">&#8249;</button><button type="button" class="hero-arrow next" aria-label="Next">&#8250;</button>
+    ? `<button type="button" class="hero-arrow prev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="hero-arrow next" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
        <div class="hero-dots">${heroes.map((_, i) => `<button type="button" aria-label="Slide ${i+1}" class="${i === 0 ? "on" : ""}" data-i="${i}"></button>`).join("")}</div>` : "";
   return `<div class="hero-wrap"><section class="hero">${slides}${nav}</section></div>`;
 }

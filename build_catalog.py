@@ -1546,6 +1546,17 @@ def main():
     if want_descriptions:
         run_description_scrape(site, source, brand, style, descriptions_csv, want_fetch)
 
+    if kind in ("hat", "cap"):
+        # "Hat details" filter tags (panels, closure, fabric), read off the name + the write-up
+        # saved just above. Same rules as bulk_add.py; never stops the run.
+        try:
+            import hat_tags
+            if hat_tags.tag_hats(catalog_path, only_id=product_id, quiet=True,
+                                 csv_path=descriptions_csv if want_descriptions else None):
+                print("\n  Hat details tags added (Headwear filters on the catalog page).")
+        except ImportError:
+            pass
+
     if want_prices:
         try:
             import fetch_prices

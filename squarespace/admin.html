@@ -2091,9 +2091,12 @@ document.getElementById("csvGithubBtn").onclick = async ()=>{
 // True if this product already has a real write-up saved -- a row with
 // only a logo_url (from the bulk logo tool) doesn't count as "existing
 // content" for this purpose, since that's a different field entirely.
+// "Already written" = has a real description. A product with only feature bullets (what an import
+// leaves when the description lookup came up empty) is NOT protected: the import fills its
+// description in, keeping any saved field the CSV row leaves blank (see csvImportBtn).
 function hasExistingContent(productId){
   const c = contentById.get(productId);
-  return !!(c && (c.description || (c.features && c.features.length) || c.supplier_note));
+  return !!(c && c.description && String(c.description).trim());
 }
 function willActuallyImport(r){
   if(!r.matched) return false;
@@ -2227,17 +2230,21 @@ document.getElementById("csvImportBtn").onclick = async ()=>{
   if(!rows.length) return;
   statusEl.textContent = "Importing\u2026";
   statusEl.className = "modal-status";
-  const payload = rows.map(r=>({
+  const payload = rows.map(r=>{
+    // Filling in a product that has no description yet: never blank out a field it already has.
+    // A ticked "overwrite" replaces everything with the CSV row, as before.
+    const keep = r.overwrite ? {} : (contentById.get(r.matched.id) || {});
+    return {
     product_id: r.matched.id,
-    description: r.description || null,
-    features: r.features.length ? r.features : null,
-    supplier_note: r.supplierNote || null,
+    description: r.description || keep.description || null,
+    features: r.features.length ? r.features : (keep.features && keep.features.length ? keep.features : null),
+    supplier_note: r.supplierNote || keep.supplier_note || null,
     // Deliberately NOT touching logo_url here -- CSV rows don't carry
     // one (see the bulk logo tool instead), and an upsert with this key
     // omitted leaves whatever logo is already saved untouched rather
     // than blanking it out.
     updated_at: new Date().toISOString(),
-  }));
+  };});
   const { error } = await supabaseClient.from("product_content").upsert(payload);
   if(error){
     console.error("[admin] CSV import failed:", error);

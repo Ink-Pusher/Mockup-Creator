@@ -394,32 +394,30 @@
     .catalog-sidebar:not(.filters-open) #hatFilterSection,
     .catalog-sidebar:not(.filters-open) #brandFilterSection{display:none !important;}
   }
-  /* ---------- "More from Ink Pusher" footer (both views) ---------- */
-  .more-band{margin:56px 0 0;background:var(--ink);color:#fff;border-radius:24px;padding:36px 34px 30px;}
-  .more-band .kicker{color:var(--mint);}
-  .more-band h2{font-size:30px;font-weight:800;margin:6px 0 6px;color:#fff;}
-  .more-band > p{margin:0 0 24px;color:#c9c9c4;font-size:15px;line-height:1.5;max-width:60ch;}
-  .more-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
-  .more-tile{display:flex;flex-direction:column;gap:6px;background:#fff;color:var(--ink) !important;border:2px solid #fff;border-radius:16px;padding:18px 18px 16px;
-    text-decoration:none !important;transition:transform .12s, box-shadow .12s;}
-  .more-tile:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--mint);}
-  .more-tile .mi{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;border:2px solid var(--ink);margin-bottom:4px;}
-  .more-tile .mi svg{width:24px;height:24px;}
-  .more-tile b{font-family:"Poppins",sans-serif;font-size:16px;font-weight:800;}
-  .more-tile span{font-size:13px;color:var(--grey);line-height:1.4;}
-  .more-tile em{font-style:normal;font-family:"Poppins",sans-serif;font-weight:800;font-size:13px;margin-top:auto;padding-top:6px;}
-  .more-guides{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:22px 0 0;font-size:13px;color:#c9c9c4;}
-  .more-guides a{color:#fff !important;font-weight:700;text-decoration:none;border:1.5px solid #555;border-radius:999px;padding:6px 12px;}
-  .more-guides a:hover{border-color:var(--mint);color:var(--mint) !important;}
-  .more-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px;margin-top:26px;padding:20px 22px;
-    background:var(--mint);color:var(--ink);border-radius:16px;}
-  .more-cta h3{font-family:"Poppins",sans-serif;font-size:20px;font-weight:800;margin:0 0 2px;}
-  .more-cta p{margin:0;font-size:14px;}
-  .more-cta .btns{display:flex;flex-wrap:wrap;gap:10px;}
-  .more-cta .fbtn{background:#fff;}
-  .more-cta .fbtn.dark{background:var(--ink);color:#fff !important;box-shadow:3px 3px 0 #fff;}
-  @media (max-width:1000px){ .more-grid{grid-template-columns:repeat(2,minmax(0,1fr));} }
-  @media (max-width:640px){ .more-band{padding:26px 18px 20px;border-radius:18px;} .more-band h2{font-size:24px;} .more-grid{grid-template-columns:1fr;} .more-cta .fbtn{flex:1;justify-content:center;} }
+  /* ---------- "Explore more" footer: full-width mint band (both views) ---------- */
+  .explore-band{width:100vw;margin:64px 0 0 calc(50% - 50vw);background:var(--mint);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);}
+  .explore-inner{max-width:1280px;margin:0 auto;padding:44px 20px 48px;display:grid;grid-template-columns:1.4fr 1fr;gap:34px;align-items:center;}
+  .explore-band h2{font-size:34px;font-weight:800;margin:0 0 6px;line-height:1.05;}
+  .explore-band .lead{margin:0 0 20px;font-size:15px;line-height:1.5;max-width:52ch;}
+  .explore-pills{display:flex;flex-wrap:wrap;gap:10px;}
+  .explore-pills .fbtn{background:#fff;}
+  .explore-guides{margin-top:26px;}
+  .explore-guides h3{font-family:"Poppins",sans-serif;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin:0 0 10px;}
+  .explore-guides .row{display:flex;flex-wrap:wrap;gap:8px;}
+  .explore-guides a{font-family:"Poppins",sans-serif;font-weight:700;font-size:13px;color:var(--ink) !important;text-decoration:none;
+    border:2px solid var(--ink);border-radius:999px;padding:7px 14px;background:transparent;transition:background .12s;}
+  .explore-guides a:hover{background:#fff;}
+  .explore-card{background:#fff;border:2px solid var(--ink);border-radius:20px;padding:24px 24px 22px;box-shadow:5px 5px 0 var(--ink);}
+  .explore-card h3{font-family:"Poppins",sans-serif;font-size:22px;font-weight:800;margin:0 0 6px;line-height:1.15;}
+  .explore-card p{margin:0 0 18px;font-size:14px;color:var(--grey);line-height:1.5;}
+  .explore-card .btns{display:flex;flex-wrap:wrap;gap:10px;}
+  .explore-card .fbtn.dark{background:var(--ink);color:#fff !important;box-shadow:3px 3px 0 var(--mint-deep);}
+  @media (max-width:860px){
+    .explore-inner{grid-template-columns:1fr;padding:34px 18px 38px;gap:26px;}
+    .explore-band h2{font-size:28px;}
+    .explore-card .fbtn{flex:1;justify-content:center;}
+  }
+  .wrap:has(.explore-band){padding-bottom:0;}
 </style>
 </head>
 <body>
@@ -481,21 +479,35 @@
       </div>
     </main>
   </div>
-  <section class="more-band" aria-label="More from Ink Pusher">
-    <span class="kicker">More from Ink Pusher</span>
-    <h2>More than apparel.</h2>
-    <p>Stickers, print, embroidery and screen printing, all under one roof. Mix and match for your next order.</p>
-    <div class="more-grid"><a class="more-tile" href="https://inkpusher.com/stickers"><span class="mi" style="background:#FFD84D"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/></svg></span><b>Stickers</b><span>Custom stickers for brands, bands, events and giveaways.</span><em>Order stickers &rarr;</em></a><a class="more-tile" href="https://inkpusher.com/digitalprinting"><span class="mi" style="background:#DCEBFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="7"/><path d="M6 17H4v-6h16v6h-2"/><rect x="7" y="14" width="10" height="7"/></svg></span><b>Digital Printing</b><span>Business cards, flyers, postcards, signs and banners.</span><em>Explore print &rarr;</em></a><a class="more-tile" href="https://inkpusher.com/embroidery"><span class="mi" style="background:#FFE3D3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L20 4"/><circle cx="17.5" cy="6.5" r="1"/><path d="M8 20c2-4 6-4 8-8"/></svg></span><b>Embroidery</b><span>Your logo stitched on hats, polos and jackets.</span><em>See embroidery &rarr;</em></a><a class="more-tile" href="https://inkpusher.com/screenprinting"><span class="mi" style="background:#E4F7EC"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M7 21h10M9 9h6M9 13h4"/></svg></span><b>Screen Printing</b><span>Bold, durable prints for crews, teams and merch drops.</span><em>See screen printing &rarr;</em></a></div>
-    <div class="more-guides">Not sure where to start? Read our guides:
-      <a href="https://inkpusher.com/t-shirt-resource-guide">T-Shirt Guide</a>
-      <a href="https://inkpusher.com/hat-resource-guide">Hat Guide</a>
-      <a href="https://inkpusher.com/sticker-resource-guide">Sticker Guide</a>
-      <a href="https://inkpusher.com/digital-printing-resource-guide">Digital Printing Guide</a>
-    </div>
-    <div class="more-cta">
-      <div><h3>Have a question or a big order?</h3><p>Talk to a real person. We'll help you pick the right blank and get it printed.</p></div>
-      <div class="btns"><a class="fbtn" href="https://inkpusher.com/contact">Contact us</a>
-        <a class="fbtn dark" href="https://inkpusher.com/price-estimator" target="_blank" rel="noopener">Get an instant quote</a></div>
+  <section class="explore-band" aria-label="Explore more from Ink Pusher">
+    <div class="explore-inner">
+      <div>
+        <h2>Explore more</h2>
+        <p class="lead">Stickers, print, embroidery and screen printing, all under one roof. Mix and match for your next order.</p>
+        <div class="explore-pills">
+          <a class="fbtn" href="https://inkpusher.com/screenprinting">Screen Printing</a>
+          <a class="fbtn" href="https://inkpusher.com/embroidery">Embroidery</a>
+          <a class="fbtn" href="https://inkpusher.com/stickers">Stickers</a>
+          <a class="fbtn" href="https://inkpusher.com/digitalprinting">Digital Printing</a>
+        </div>
+        <div class="explore-guides">
+          <h3>Not sure where to start? Read our guides</h3>
+          <div class="row">
+            <a href="https://inkpusher.com/t-shirt-resource-guide">T-Shirt Guide</a>
+            <a href="https://inkpusher.com/hat-resource-guide">Hat Guide</a>
+            <a href="https://inkpusher.com/sticker-resource-guide">Sticker Guide</a>
+            <a href="https://inkpusher.com/digital-printing-resource-guide">Digital Printing Guide</a>
+          </div>
+        </div>
+      </div>
+      <div class="explore-card">
+        <h3>Have a question or a big order?</h3>
+        <p>Talk to a real person. We'll help you pick the right blank and get it printed.</p>
+        <div class="btns">
+          <a class="fbtn dark" href="https://inkpusher.com/contact">Contact us</a>
+          <a class="fbtn" href="https://inkpusher.com/price-estimator" target="_blank" rel="noopener">Get an instant quote</a>
+        </div>
+      </div>
     </div>
   </section>
 </div>

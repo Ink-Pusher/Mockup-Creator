@@ -251,7 +251,7 @@ const CATALOG_BASE_URL = "https://raw.githubusercontent.com/Ink-Pusher/Mockup-Cr
 const CATALOG_PAGE_URL = "/new-apparel-catalog";
 // the price estimator: product pages link to it with ?product=<id>&color=<name> (it only prices these kinds)
 const ESTIMATOR_PAGE_URL = "https://inkpusher.com/price-estimator";
-const ESTIMATOR_KINDS = { tee: "shirt", longsleeve: "shirt", tank: "tank", hoodie: "hoodie", sweatshirt: "sweatshirt", tote: "tote" };
+const ESTIMATOR_KINDS = { tee: "shirt", longsleeve: "shirt", tank: "tank", hoodie: "hoodie", sweatshirt: "sweatshirt", tote: "tote", hat: "hat", cap: "hat", beanie: "beanie" };
 // Same taxonomy as apparel_catalog.html and the Mockup Studio -- keep the three
 // in sync. CATEGORY_DEFS is the coarse grouping used by the listing page's
 // tabs; the tag lists below are what actually drive "You may also like", for
@@ -537,7 +537,7 @@ function renderPage(){
 
         ${ESTIMATOR_KINDS[p.kind] ? `
           <div class="pd-quote">
-            <h3>Price this ${ESTIMATOR_KINDS[p.kind]} with your print</h3>
+            <h3>Price this ${ESTIMATOR_KINDS[p.kind]} with your ${["hat", "cap", "beanie"].includes(p.kind) ? "embroidered logo" : "print"}</h3>
             <p>Upload your artwork, pick where it goes, add your sizes, and see your price per piece right away. No account needed.</p>
             <ol class="pd-quote-steps"><li><b>1</b>Add your art</li><li><b>2</b>Pick placements</li><li><b>3</b>Get your price</li></ol>
             <div class="pd-quote-row">

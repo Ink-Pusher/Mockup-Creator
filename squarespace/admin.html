@@ -439,7 +439,8 @@
      Ink Pusher Digital Print/site/admin-bar.html.
      To add a future admin tool: add one line to ADMIN_PAGES below, then paste the
      updated block into every admin page.
-     Each page says which entry it is with data-current="..." on the script tag.
+     Each page says which entry it is with data-current="..." on the script tag
+     (the master copy says "print"; the print admin page uses "print-admin").
      All admin pages share one sign-in (same Supabase project, same inkpusher.com site). -->
 <div id="ipab" class="ipab"></div>
 <style>
@@ -460,13 +461,17 @@
 <script data-current="apparel">
 (function () {
   // ---- ADMIN_PAGES: one entry per admin tool (key, label, page address on inkpusher.com) ----
+  // The print admin page holds two sections (?section=print / ?section=orders); it says
+  // data-current="print-admin" and the section comes from the address (default: orders).
   var ADMIN_PAGES = [
-    { key: "apparel", label: "Apparel catalog", href: "/product-admin" }, // inkpusher.com/product-admin
-    { key: "print",   label: "Print products",  href: "/print-admin" }    // inkpusher.com/print-admin
+    { key: "apparel", label: "Apparel catalog",    href: "/product-admin" },                // inkpusher.com/product-admin
+    { key: "print",   label: "Digital print",      href: "/print-admin?section=print" },    // products + photos
+    { key: "orders",  label: "Customers & orders", href: "/print-admin?section=orders" }    // requests, customers, proofs, builder
   ];
   // -------------------------------------------------------------------------------------------
   var script = document.currentScript;
   var current = (script && script.getAttribute("data-current")) || "";
+  if (current === "print-admin") current = (/[?&]section=print\b/.test(location.search)) ? "print" : "orders";
   var bar = document.getElementById("ipab");
   if (!bar) return;
   var html = '<p class="ipab-title">Ink Pusher Admin</p><ul class="ipab-links">';

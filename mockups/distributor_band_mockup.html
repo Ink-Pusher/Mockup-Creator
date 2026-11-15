@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distributor Band Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0d0d0d;--grey:#6b6b68;--mint:#8ff0c8;--border-soft:#e6e6e3;}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,sans-serif;padding:30px 16px 60px;}
+.wrap{max-width:1100px;margin:0 auto;}
+.label{font:800 13px Poppins,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:#fff;display:inline-block;padding:5px 12px;border-radius:999px;margin:40px 0 0;}
+.label:first-child{margin-top:0}
+.why{font-size:14px;color:var(--grey);margin:8px 0 0;max-width:80ch;line-height:1.5}
+h2{font-family:Poppins,sans-serif}
+/* the existing brand band (abridged) for context */
+.brands-band{margin:18px 0 0;padding:30px 26px 32px;border:2px solid var(--ink);border-radius:22px;background:#fff;text-align:center;}
+.brands-band h2{font-size:26px;font-weight:800;margin:0 0 6px;}
+.brands-band > p{color:var(--grey);font-size:14px;margin:0 auto 22px;max-width:56ch;line-height:1.5;}
+.brand-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;}
+.brand-pill{background:#fff;border:2px solid var(--border-soft);border-radius:12px;display:flex;align-items:center;justify-content:center;height:84px;font:700 14px Poppins,sans-serif;opacity:.55}
+
+/* distributor wordmarks (stand-ins: the real version uses each distributor's own logo file) */
+.wm{font-family:Poppins,sans-serif;font-weight:800;line-height:1;white-space:nowrap}
+.wm.ss{font-size:26px;letter-spacing:-.02em}.wm.ss b{color:#e2231a}
+.wm.ss small{display:block;font-size:10px;letter-spacing:.32em;font-weight:700;margin-top:4px}
+.wm.sm{font-size:30px;color:#003a70;letter-spacing:-.02em}
+.wm.as{font-size:30px;font-family:Inter,sans-serif;font-weight:700;letter-spacing:-.04em}
+.wm.ra{font-size:26px;font-family:Inter,sans-serif;font-weight:700;letter-spacing:-.05em}
+
+/* OPTION A: same white band, 4 big tiles */
+.dist-band{margin:46px 0 0;padding:30px 26px 28px;border:2px solid var(--ink);border-radius:22px;background:#fff;text-align:center;}
+.dist-band h2{font-size:26px;font-weight:800;margin:0 0 6px;}
+.dist-band > p{color:var(--grey);font-size:14px;margin:0 auto 22px;max-width:62ch;line-height:1.5;}
+.dist-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+.dist-tile{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:132px;border:2px solid var(--border-soft);border-radius:14px;background:#fff;text-decoration:none;color:var(--ink);transition:transform .12s,border-color .12s,box-shadow .12s}
+.dist-tile:hover{transform:translateY(-2px);border-color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.dist-tile .go{font-size:12px;font-weight:700;color:var(--grey)}
+.dist-tile:hover .go{color:var(--ink)}
+.dist-note{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px auto 0;padding:12px 16px;background:#f6f6f4;border-radius:12px;font-size:13px;max-width:760px}
+.dist-note b{font-family:Poppins,sans-serif}
+.btn{display:inline-block;border:2px solid var(--ink);border-radius:999px;padding:7px 14px;font:700 13px Poppins,sans-serif;color:var(--ink);background:var(--mint);text-decoration:none}
+
+/* OPTION B: mint band, tiles with a one-line "known for" */
+.dist-band.b{background:var(--mint);box-shadow:5px 5px 0 var(--ink);text-align:left;display:grid;grid-template-columns:300px 1fr;gap:26px;align-items:center}
+.dist-band.b h2{font-size:28px;line-height:1.1}
+.dist-band.b > div > p{color:var(--ink);font-size:14px;line-height:1.5;margin:0 0 14px}
+.dist-band.b .steps{list-style:none;padding:0;margin:0;font-size:13px;font-weight:700;display:grid;gap:6px}
+.dist-band.b .steps span{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:var(--ink);color:#fff;font-size:11px;margin-right:6px}
+.dist-grid.b{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dist-grid.b .dist-tile{height:auto;padding:20px 16px 16px;border-color:var(--ink);text-align:center}
+.dist-tile .known{font-size:12.5px;color:var(--grey);line-height:1.35;max-width:30ch}
+
+/* dark version of option A */
+.dist-band.dark{background:var(--ink);color:#fff;border-color:var(--ink);}
+.dist-band.dark > p{color:#c9c9c4;}
+.dist-band.dark .dist-tile{border-color:#fff;}
+.dist-band.dark .dist-tile:hover{border-color:var(--mint);box-shadow:4px 4px 0 var(--mint);}
+.dist-band.dark .dist-note{background:#1f1f1d;color:#fff;}
+.explore-stub{margin:46px 0 0;padding:34px 26px;background:var(--mint);border-radius:22px;text-align:center;font:800 26px Poppins,sans-serif}
+.explore-stub small{display:block;font:400 14px Inter,sans-serif;margin-top:6px}
+@media(max-width:860px){.dist-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dist-band.b{grid-template-columns:1fr}.brand-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.dist-grid.b{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+
+<span class="label">For context: existing Shop by brand band (trimmed)</span>
+<section class="brands-band"><h2>Shop by brand</h2><p>Prefer to start from a label you know? Every brand we stock, one tap away.</p>
+  <div class="brand-grid"><div class="brand-pill">Bella+Canvas</div><div class="brand-pill">District</div><div class="brand-pill">AS Colour</div><div class="brand-pill">Richardson</div><div class="brand-pill">Liberty Bags</div><div class="brand-pill">Lane Seven</div></div>
+</section>
+
+<span class="label">Option A, dark</span>
+<p class="why">Same layout as Option A on a black band, between the white Shop by brand band and the mint footer. The tiles stay white so each distributor's real logo (usually made for white backgrounds) reads cleanly. Hover lifts a tile with a mint shadow.</p>
+<section class="dist-band dark">
+  <h2>Browse by distributor</h2>
+  <p>Want to dig deeper? These are the warehouses we order from. Browse their full catalogs, thousands of styles and colors, then send us the style number and we'll price it out.</p>
+  <div class="dist-grid">
+    <a class="dist-tile" href="#"><span class="wm ss">S<b>&amp;</b>S<small>ACTIVEWEAR</small></span><span class="go">Visit site &#8599;</span></a>
+    <a class="dist-tile" href="#"><span class="wm sm">SanMar</span><span class="go">Visit site &#8599;</span></a>
+    <a class="dist-tile" href="#"><span class="wm as">ascolour.</span><span class="go">Visit site &#8599;</span></a>
+    <a class="dist-tile" href="#"><span class="wm ra">Royal Apparel</span><span class="go">Visit site &#8599;</span></a>
+  </div>
+  <div class="dist-note"><span><b>Found something?</b> Copy the brand and style number (like "Bella+Canvas 3001") and send it to us.</span><a class="btn" href="#">Ask for a quote</a></div>
+</section>
+
+<section class="explore-stub">Explore more<small>(the existing mint footer, for context)</small></section>
+</div></body></html>

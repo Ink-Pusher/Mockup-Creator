@@ -44696,6 +44696,52 @@
           "back": "catalog_images/next-level-3710/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-3712",
+      "name": "Youth CVC Princess T-Shirt",
+      "brand": "Next Level",
+      "style": "3712",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bondi Blue",
+          "hex": "#0eacc8",
+          "front": "catalog_images/next-level-3712/bondi-blue_front.jpg",
+          "back": "catalog_images/next-level-3712/bondi-blue_back.jpg"
+        },
+        {
+          "name": "Ice Blue",
+          "hex": "#bfc8c5",
+          "front": "catalog_images/next-level-3712/ice-blue_front.jpg",
+          "back": "catalog_images/next-level-3712/ice-blue_back.jpg"
+        },
+        {
+          "name": "Lilac",
+          "hex": "#e2c4d0",
+          "front": "catalog_images/next-level-3712/lilac_front.jpg",
+          "back": "catalog_images/next-level-3712/lilac_back.jpg"
+        },
+        {
+          "name": "Mint",
+          "hex": "#b7cdbd",
+          "front": "catalog_images/next-level-3712/mint_front.jpg",
+          "back": "catalog_images/next-level-3712/mint_back.jpg"
+        },
+        {
+          "name": "Purple Berry",
+          "hex": "#8e6494",
+          "front": "catalog_images/next-level-3712/purple-berry_front.jpg",
+          "back": "catalog_images/next-level-3712/purple-berry_back.jpg"
+        },
+        {
+          "name": "Raspberry",
+          "hex": "#df5482",
+          "front": "catalog_images/next-level-3712/raspberry_front.jpg",
+          "back": "catalog_images/next-level-3712/raspberry_back.jpg"
+        }
+      ]
     }
   ]
 }

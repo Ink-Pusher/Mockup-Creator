@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a4a4a5"
+            "#a3a3a4"
           ]
         },
         {
@@ -37125,6 +37125,76 @@
           "hex": "#3c4d61",
           "front": "catalog_images/district-dt145/navy-frost_front.jpg",
           "back": "catalog_images/district-dt145/navy-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt185",
+      "name": "Perfect Weight CVC Long Sleeve Tee",
+      "brand": "District",
+      "style": "DT185",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Jet Black Heather",
+          "hex": "#2c3031",
+          "front": "catalog_images/district-dt185/jet-black-heather_front.jpg",
+          "back": "catalog_images/district-dt185/jet-black-heather_back.jpg"
+        },
+        {
+          "name": "Military Green Heather",
+          "hex": "#52553a",
+          "front": "catalog_images/district-dt185/military-green-heather_front.jpg",
+          "back": "catalog_images/district-dt185/military-green-heather_back.jpg"
+        },
+        {
+          "name": "Tundra Blue Heather",
+          "hex": "#739bb5",
+          "front": "catalog_images/district-dt185/tundra-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt185/tundra-blue-heather_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#9ea39d",
+          "front": "catalog_images/district-dt185/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt185/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#27384a",
+          "front": "catalog_images/district-dt185/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt185/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#1c1e1d",
+          "front": "catalog_images/district-dt185/jet-black_front.jpg",
+          "back": "catalog_images/district-dt185/jet-black_back.jpg"
+        },
+        {
+          "name": "Bright White",
+          "hex": "#e9edf0",
+          "front": "catalog_images/district-dt185/bright-white_front.jpg",
+          "back": "catalog_images/district-dt185/bright-white_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#3b3d3c",
+          "front": "catalog_images/district-dt185/charcoal_front.jpg",
+          "back": "catalog_images/district-dt185/charcoal_back.jpg"
+        },
+        {
+          "name": "Graphite Heather",
+          "hex": "#6f7074",
+          "front": "catalog_images/district-dt185/graphite-heather_front.jpg",
+          "back": "catalog_images/district-dt185/graphite-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Deep Royal",
+          "hex": "#294d81",
+          "front": "catalog_images/district-dt185/heathered-deep-royal_front.jpg",
+          "back": "catalog_images/district-dt185/heathered-deep-royal_back.jpg"
         }
       ]
     }

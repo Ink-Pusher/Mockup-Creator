@@ -55636,6 +55636,80 @@
       "hatTags": [
         "unstructured"
       ]
+    },
+    {
+      "id": "richardson-930",
+      "name": "Troutdale Hat",
+      "brand": "Richardson",
+      "style": "930",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Amber Gold/ Navy",
+          "hex": "#b28033",
+          "front": "catalog_images/richardson-930/amber-gold-navy_front.jpg",
+          "back": "catalog_images/richardson-930/amber-gold-navy_back.jpg",
+          "hexes": [
+            "#9c7942",
+            "#283143"
+          ]
+        },
+        {
+          "name": "Black/ Charcoal",
+          "hex": "#181413",
+          "front": "catalog_images/richardson-930/black-charcoal_front.jpg",
+          "back": "catalog_images/richardson-930/black-charcoal_back.jpg",
+          "hexes": [
+            "#232123",
+            "#4c4b4c"
+          ]
+        },
+        {
+          "name": "Brown/ Sand",
+          "hex": "#332519",
+          "front": "catalog_images/richardson-930/brown-sand_front.jpg",
+          "back": "catalog_images/richardson-930/brown-sand_back.jpg",
+          "hexes": [
+            "#4c3831",
+            "#bcb198"
+          ]
+        },
+        {
+          "name": "Light Blue/ Sand",
+          "hex": "#7a9ea3",
+          "front": "catalog_images/richardson-930/light-blue-sand_front.jpg",
+          "back": "catalog_images/richardson-930/light-blue-sand_back.jpg",
+          "hexes": [
+            "#98b9de",
+            "#bcb198"
+          ]
+        },
+        {
+          "name": "Light Grey/ Black",
+          "hex": "#9c9d9f",
+          "front": "catalog_images/richardson-930/light-grey-black_front.jpg",
+          "back": "catalog_images/richardson-930/light-grey-black_back.jpg",
+          "hexes": [
+            "#aca8a6",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Navy",
+          "hex": "#1c1a24",
+          "front": "catalog_images/richardson-930/navy_front.jpg",
+          "back": "catalog_images/richardson-930/navy_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "5-panel",
+        "snapback",
+        "corduroy",
+        "mesh"
+      ]
     }
   ]
 }

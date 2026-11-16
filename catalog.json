@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -37961,7 +37961,7 @@
           "back": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#2e4b7b",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -37971,7 +37971,7 @@
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#abaeab",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -37981,7 +37981,7 @@
           "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#4a4a4b"
+            "#4a494b"
           ]
         }
       ]
@@ -38001,7 +38001,7 @@
           "back": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#2e4b7b",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -38011,7 +38011,7 @@
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#abaeab",
-            "#4a4a4b"
+            "#4a494b"
           ]
         },
         {
@@ -38021,7 +38021,7 @@
           "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#4a4a4b"
+            "#4a494b"
           ]
         }
       ]
@@ -38445,6 +38445,65 @@
           "hex": "#7c7b81",
           "front": "catalog_images/district-dt1100/dark-heather-grey_front.jpg",
           "back": "catalog_images/district-dt1100/dark-heather-grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt1104",
+      "name": "Women's Perfect Weight Fleece Drop Shoulder Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT1104",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#3e403f",
+          "front": "catalog_images/district-dt1104/charcoal_front.jpg",
+          "back": "catalog_images/district-dt1104/charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Loganberry",
+          "hex": "#70324a",
+          "front": "catalog_images/district-dt1104/heathered-loganberry_front.jpg",
+          "back": "catalog_images/district-dt1104/heathered-loganberry_back.jpg"
+        },
+        {
+          "name": "Heathered Poseidon Blue",
+          "hex": "#2a4d5e",
+          "front": "catalog_images/district-dt1104/heathered-poseidon-blue_front.jpg",
+          "back": "catalog_images/district-dt1104/heathered-poseidon-blue_back.jpg",
+          "swatch": "catalog_images/district-dt1104/heathered-poseidon-blue_swatch.jpg"
+        },
+        {
+          "name": "Heathered Steel",
+          "hex": "#858786",
+          "front": "catalog_images/district-dt1104/heathered-steel_front.jpg",
+          "back": "catalog_images/district-dt1104/heathered-steel_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#1d1c1c",
+          "front": "catalog_images/district-dt1104/jet-black_front.jpg",
+          "back": "catalog_images/district-dt1104/jet-black_back.jpg"
+        },
+        {
+          "name": "Orchid Haze",
+          "hex": "#8d6477",
+          "front": "catalog_images/district-dt1104/orchid-haze_front.jpg",
+          "back": "catalog_images/district-dt1104/orchid-haze_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#444949",
+          "front": "catalog_images/district-dt1104/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt1104/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Laurel Green",
+          "hex": "#7b8c7c",
+          "front": "catalog_images/district-dt1104/laurel-green_front.jpg",
+          "back": "catalog_images/district-dt1104/laurel-green_back.jpg"
         }
       ]
     }

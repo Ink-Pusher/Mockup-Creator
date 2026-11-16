@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#424043",
+            "#423e43",
             "#232223"
           ]
         },
@@ -16968,7 +16968,7 @@
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
             "#b5b0b3",
-            "#424043"
+            "#423e43"
           ]
         },
         {
@@ -30253,7 +30253,7 @@
           "hexes": [
             "#565959",
             "#f1f1e9",
-            "#424043"
+            "#423e43"
           ]
         }
       ]
@@ -30346,7 +30346,7 @@
           "front": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#283548",
+            "#263039",
             "#929394",
             "#f1f1e9"
           ]
@@ -36727,6 +36727,106 @@
           "hex": "#e3e3e3",
           "front": "catalog_images/district-dt7501/white_front.jpg",
           "back": "catalog_images/district-dt7501/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt8000",
+      "name": "Re-Tee",
+      "brand": "District",
+      "style": "DT8000",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1f2120",
+          "front": "catalog_images/district-dt8000/black_front.jpg",
+          "back": "catalog_images/district-dt8000/black_back.jpg"
+        },
+        {
+          "name": "Blue Heather",
+          "hex": "#6c9ad5",
+          "front": "catalog_images/district-dt8000/blue-heather_front.jpg",
+          "back": "catalog_images/district-dt8000/blue-heather_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#343635",
+          "front": "catalog_images/district-dt8000/charcoal-heather_front.jpg",
+          "back": "catalog_images/district-dt8000/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Deep Brown Heather",
+          "hex": "#4d494a",
+          "front": "catalog_images/district-dt8000/deep-brown-heather_front.jpg",
+          "back": "catalog_images/district-dt8000/deep-brown-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#3a4656",
+          "front": "catalog_images/district-dt8000/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt8000/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#b9bec1",
+          "front": "catalog_images/district-dt8000/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt8000/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Maize Yellow",
+          "hex": "#e9af31",
+          "front": "catalog_images/district-dt8000/maize-yellow_front.jpg",
+          "back": "catalog_images/district-dt8000/maize-yellow_back.jpg"
+        },
+        {
+          "name": "Ruby Red",
+          "hex": "#a82229",
+          "front": "catalog_images/district-dt8000/ruby-red_front.jpg",
+          "back": "catalog_images/district-dt8000/ruby-red_back.jpg"
+        },
+        {
+          "name": "Maroon Heather",
+          "hex": "#704c58",
+          "front": "catalog_images/district-dt8000/maroon-heather_front.jpg",
+          "back": "catalog_images/district-dt8000/maroon-heather_back.jpg"
+        },
+        {
+          "name": "True Navy",
+          "hex": "#263039",
+          "front": "catalog_images/district-dt8000/true-navy_front.jpg",
+          "back": "catalog_images/district-dt8000/true-navy_back.jpg"
+        },
+        {
+          "name": "Crystal Blue",
+          "hex": "#93bbde",
+          "front": "catalog_images/district-dt8000/crystal-blue_front.jpg",
+          "back": "catalog_images/district-dt8000/crystal-blue_back.jpg"
+        },
+        {
+          "name": "Ash",
+          "hex": "#d7d9d6",
+          "front": "catalog_images/district-dt8000/ash_front.jpg",
+          "back": "catalog_images/district-dt8000/ash_back.jpg"
+        },
+        {
+          "name": "Light Olive Heather",
+          "hex": "#6c664c",
+          "front": "catalog_images/district-dt8000/light-olive-heather_front.jpg",
+          "back": "catalog_images/district-dt8000/light-olive-heather_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eaeef1",
+          "front": "catalog_images/district-dt8000/white_front.jpg",
+          "back": "catalog_images/district-dt8000/white_back.jpg"
+        },
+        {
+          "name": "Deep Grey Heather",
+          "hex": "#5a5e5f",
+          "front": "catalog_images/district-dt8000/deep-grey-heather_front.jpg",
+          "back": "catalog_images/district-dt8000/deep-grey-heather_back.jpg"
         }
       ]
     }

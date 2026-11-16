@@ -30346,7 +30346,7 @@
           "front": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#2e3e4f",
+            "#364455",
             "#929394",
             "#f1f1e9"
           ]
@@ -38730,6 +38730,70 @@
           "hex": "#76757b",
           "front": "catalog_images/district-dt2100/dark-heather-grey_front.jpg",
           "back": "catalog_images/district-dt2100/dark-heather-grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt2200",
+      "name": "Wash Fleece Hoodie",
+      "brand": "District",
+      "style": "DT2200",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Cactus Rose Pink",
+          "hex": "#f6ab99",
+          "front": "catalog_images/district-dt2200/cactus-rose-pink_front.jpg",
+          "back": "catalog_images/district-dt2200/cactus-rose-pink_back.jpg"
+        },
+        {
+          "name": "Dusk Blue",
+          "hex": "#61879a",
+          "front": "catalog_images/district-dt2200/dusk-blue_front.jpg",
+          "back": "catalog_images/district-dt2200/dusk-blue_back.jpg"
+        },
+        {
+          "name": "Garnet",
+          "hex": "#7e3637",
+          "front": "catalog_images/district-dt2200/garnet_front.jpg",
+          "back": "catalog_images/district-dt2200/garnet_back.jpg"
+        },
+        {
+          "name": "Golden Spice",
+          "hex": "#b69768",
+          "front": "catalog_images/district-dt2200/golden-spice_front.jpg",
+          "back": "catalog_images/district-dt2200/golden-spice_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#3d3f3e",
+          "front": "catalog_images/district-dt2200/graphite_front.jpg",
+          "back": "catalog_images/district-dt2200/graphite_back.jpg"
+        },
+        {
+          "name": "Heritage Blue",
+          "hex": "#9ecbea",
+          "front": "catalog_images/district-dt2200/heritage-blue_front.jpg",
+          "back": "catalog_images/district-dt2200/heritage-blue_back.jpg"
+        },
+        {
+          "name": "Olive Drab Green",
+          "hex": "#696e50",
+          "front": "catalog_images/district-dt2200/olive-drab-green_front.jpg",
+          "back": "catalog_images/district-dt2200/olive-drab-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#252523",
+          "front": "catalog_images/district-dt2200/black_front.jpg",
+          "back": "catalog_images/district-dt2200/black_back.jpg"
+        },
+        {
+          "name": "True Navy",
+          "hex": "#374455",
+          "front": "catalog_images/district-dt2200/true-navy_front.jpg",
+          "back": "catalog_images/district-dt2200/true-navy_back.jpg"
         }
       ]
     }

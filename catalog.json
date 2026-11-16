@@ -43580,6 +43580,116 @@
           "back": "catalog_images/next-level-9300/oatmeal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-9301",
+      "name": "Laguna Hoodie",
+      "brand": "Next Level",
+      "style": "9301",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black",
+          "hex": "#2e2a30",
+          "front": "catalog_images/next-level-9301/black-black_front.jpg",
+          "back": "catalog_images/next-level-9301/black-black_back.jpg",
+          "hexes": [
+            "#232223",
+            "#232223"
+          ]
+        },
+        {
+          "name": "Black/ Heather Grey",
+          "hex": "#2b272d",
+          "front": "catalog_images/next-level-9301/black-heather-grey_front.jpg",
+          "back": "catalog_images/next-level-9301/black-heather-grey_back.jpg",
+          "hexes": [
+            "#232223",
+            "#b5b4b5"
+          ]
+        },
+        {
+          "name": "Black/ Red",
+          "hex": "#2e292e",
+          "front": "catalog_images/next-level-9301/black-red_front.jpg",
+          "back": "catalog_images/next-level-9301/black-red_back.jpg",
+          "hexes": [
+            "#232223",
+            "#c2152f"
+          ]
+        },
+        {
+          "name": "Black/ Turquoise",
+          "hex": "#2b2a30",
+          "front": "catalog_images/next-level-9301/black-turquoise_front.jpg",
+          "back": "catalog_images/next-level-9301/black-turquoise_back.jpg",
+          "hexes": [
+            "#232223",
+            "#02a0ce"
+          ]
+        },
+        {
+          "name": "Heavy Metal/ Heavy Metal",
+          "hex": "#56565b",
+          "front": "catalog_images/next-level-9301/heavy-metal-heavy-metal_front.jpg",
+          "back": "catalog_images/next-level-9301/heavy-metal-heavy-metal_back.jpg",
+          "hexes": [
+            "#494949",
+            "#494949"
+          ]
+        },
+        {
+          "name": "Midnight Navy/ Cardinal",
+          "hex": "#1f2740",
+          "front": "catalog_images/next-level-9301/midnight-navy-cardinal_front.jpg",
+          "back": "catalog_images/next-level-9301/midnight-navy-cardinal_back.jpg",
+          "hexes": [
+            "#232c3e",
+            "#871c2c"
+          ]
+        },
+        {
+          "name": "Midnight Navy/ Heather Grey",
+          "hex": "#1e2f43",
+          "front": "catalog_images/next-level-9301/midnight-navy-heather-grey_front.jpg",
+          "back": "catalog_images/next-level-9301/midnight-navy-heather-grey_back.jpg",
+          "hexes": [
+            "#232c3e",
+            "#b5b4b5"
+          ]
+        },
+        {
+          "name": "Military Green/ Black",
+          "hex": "#6f654c",
+          "front": "catalog_images/next-level-9301/military-green-black_front.jpg",
+          "back": "catalog_images/next-level-9301/military-green-black_back.jpg",
+          "hexes": [
+            "#64624a",
+            "#232223"
+          ]
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#ba0126",
+          "front": "catalog_images/next-level-9301/red-black_front.jpg",
+          "back": "catalog_images/next-level-9301/red-black_back.jpg",
+          "hexes": [
+            "#c2152f",
+            "#232223"
+          ]
+        },
+        {
+          "name": "White/ Heather Grey",
+          "hex": "#dee2e5",
+          "front": "catalog_images/next-level-9301/white-heather-grey_front.jpg",
+          "back": "catalog_images/next-level-9301/white-heather-grey_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#b5b4b5"
+          ]
+        }
+      ]
     }
   ]
 }

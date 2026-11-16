@@ -6983,7 +6983,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-lavender_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#c1b4cc"
+            "#c1b4cb"
           ]
         },
         {
@@ -7791,7 +7791,7 @@
           "swatch": "catalog_images/yupoong-6606/multicam-arid-tan_swatch.jpg",
           "hexes": [
             "#ad957f",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -8166,7 +8166,7 @@
           "swatch": "catalog_images/yupoong-6006/multicam-arid-tan_swatch.jpg",
           "hexes": [
             "#ad957f",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -9770,7 +9770,7 @@
           "front": "catalog_images/richardson-256/midnight-navy-white_front.jpg",
           "back": "catalog_images/richardson-256/midnight-navy-white_back.jpg",
           "hexes": [
-            "#252d40",
+            "#242c40",
             "#ededef"
           ]
         },
@@ -17156,7 +17156,7 @@
           "back": "catalog_images/next-level-3604/natural-midnight-navy_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#252d40"
+            "#242c40"
           ]
         },
         {
@@ -28310,7 +28310,7 @@
           "front": "catalog_images/adam-s-ol102/black-tan_front.jpg",
           "hexes": [
             "#232223",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -28319,7 +28319,7 @@
           "front": "catalog_images/adam-s-ol102/charcoal-tan_front.jpg",
           "hexes": [
             "#494849",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -28328,7 +28328,7 @@
           "front": "catalog_images/adam-s-ol102/coral-tan_front.jpg",
           "hexes": [
             "#ef796b",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -28347,7 +28347,7 @@
           "front": "catalog_images/adam-s-ol102/navy-tan_front.jpg",
           "hexes": [
             "#282f3f",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -28356,7 +28356,7 @@
           "front": "catalog_images/adam-s-ol102/royal-tan_front.jpg",
           "hexes": [
             "#214c92",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -28365,7 +28365,7 @@
           "front": "catalog_images/adam-s-ol102/teal-tan_front.jpg",
           "hexes": [
             "#0c99a3",
-            "#bfa890"
+            "#bea78f"
           ]
         }
       ],
@@ -33064,7 +33064,7 @@
           "swatch": "catalog_images/valucap-s102/green-camo-tan_swatch.jpg",
           "hexes": [
             "#3f3b2c",
-            "#bfa890"
+            "#bea78f"
           ]
         },
         {
@@ -43645,7 +43645,7 @@
           "front": "catalog_images/next-level-9301/midnight-navy-cardinal_front.jpg",
           "back": "catalog_images/next-level-9301/midnight-navy-cardinal_back.jpg",
           "hexes": [
-            "#252d40",
+            "#242c40",
             "#831c2c"
           ]
         },
@@ -43655,7 +43655,7 @@
           "front": "catalog_images/next-level-9301/midnight-navy-heather-grey_front.jpg",
           "back": "catalog_images/next-level-9301/midnight-navy-heather-grey_back.jpg",
           "hexes": [
-            "#252d40",
+            "#242c40",
             "#b5b4b5"
           ]
         },
@@ -44178,6 +44178,82 @@
           "hex": "#b8a088",
           "front": "catalog_images/next-level-9007/tan_front.jpg",
           "back": "catalog_images/next-level-9007/tan_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-9087",
+      "name": "Women's Heavyweight Sweatshirt",
+      "brand": "Next Level",
+      "style": "9087",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#232127",
+          "front": "catalog_images/next-level-9087/black_front.jpg",
+          "back": "catalog_images/next-level-9087/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#e1e0dc",
+          "front": "catalog_images/next-level-9087/bone_front.jpg",
+          "back": "catalog_images/next-level-9087/bone_back.jpg"
+        },
+        {
+          "name": "Clay",
+          "hex": "#944a1a",
+          "front": "catalog_images/next-level-9087/clay_front.jpg",
+          "back": "catalog_images/next-level-9087/clay_back.jpg"
+        },
+        {
+          "name": "Desert Pink",
+          "hex": "#ce9991",
+          "front": "catalog_images/next-level-9087/desert-pink_front.jpg",
+          "back": "catalog_images/next-level-9087/desert-pink_back.jpg"
+        },
+        {
+          "name": "Graphite Black",
+          "hex": "#2d2b2e",
+          "front": "catalog_images/next-level-9087/graphite-black_front.jpg",
+          "back": "catalog_images/next-level-9087/graphite-black_back.jpg"
+        },
+        {
+          "name": "Lavender",
+          "hex": "#c1b1cb",
+          "front": "catalog_images/next-level-9087/lavender_front.jpg",
+          "back": "catalog_images/next-level-9087/lavender_back.jpg"
+        },
+        {
+          "name": "Light Olive",
+          "hex": "#7c7f6a",
+          "front": "catalog_images/next-level-9087/light-olive_front.jpg",
+          "back": "catalog_images/next-level-9087/light-olive_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#1b273d",
+          "front": "catalog_images/next-level-9087/midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-9087/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Shiitake",
+          "hex": "#8e7976",
+          "front": "catalog_images/next-level-9087/shiitake_front.jpg",
+          "back": "catalog_images/next-level-9087/shiitake_back.jpg"
+        },
+        {
+          "name": "Stonewash Denim",
+          "hex": "#9bb2c0",
+          "front": "catalog_images/next-level-9087/stonewash-denim_front.jpg",
+          "back": "catalog_images/next-level-9087/stonewash-denim_back.jpg"
+        },
+        {
+          "name": "Tan",
+          "hex": "#b9a188",
+          "front": "catalog_images/next-level-9087/tan_front.jpg",
+          "back": "catalog_images/next-level-9087/tan_back.jpg"
         }
       ]
     }

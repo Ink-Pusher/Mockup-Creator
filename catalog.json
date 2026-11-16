@@ -1313,7 +1313,7 @@
           "front": "catalog_images/richardson-168/royal-black_front.jpg",
           "back": "catalog_images/richardson-168/royal-black_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#232123"
           ]
         }
@@ -1398,7 +1398,7 @@
           "back": "catalog_images/richardson-112/white-royal-cmb_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -1662,7 +1662,7 @@
           "back": "catalog_images/richardson-112/charcoal-royal_back.jpg",
           "hexes": [
             "#4c4a4c",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -1879,7 +1879,7 @@
           "back": "catalog_images/richardson-112/heather-grey-royal_back.jpg",
           "hexes": [
             "#b4b2b3",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -2006,7 +2006,7 @@
           "front": "catalog_images/richardson-112/light-blue-light-grey-cmb_front.jpg",
           "back": "catalog_images/richardson-112/light-blue-light-grey-cmb_back.jpg",
           "hexes": [
-            "#98b9e0",
+            "#98b9de",
             "#aca8a6"
           ]
         },
@@ -2268,7 +2268,7 @@
           "front": "catalog_images/richardson-112/royal-black_front.jpg",
           "back": "catalog_images/richardson-112/royal-black_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#232123"
           ]
         },
@@ -2278,7 +2278,7 @@
           "front": "catalog_images/richardson-112/royal-white_front.jpg",
           "back": "catalog_images/richardson-112/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         },
@@ -2288,7 +2288,7 @@
           "front": "catalog_images/richardson-112/royal-white-heather-grey_front.jpg",
           "back": "catalog_images/richardson-112/royal-white-heather-grey_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef",
             "#b4b2b3"
           ]
@@ -2299,7 +2299,7 @@
           "front": "catalog_images/richardson-112/royal-white-red_front.jpg",
           "back": "catalog_images/richardson-112/royal-white-red_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef",
             "#b71830"
           ]
@@ -7053,7 +7053,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-royal_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -7948,7 +7948,7 @@
           "front": "catalog_images/yupoong-6606/royal-white_front.jpg",
           "back": "catalog_images/yupoong-6606/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         },
@@ -8279,7 +8279,7 @@
           "front": "catalog_images/yupoong-6006/royal-white_front.jpg",
           "back": "catalog_images/yupoong-6006/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         },
@@ -8289,9 +8289,9 @@
           "front": "catalog_images/yupoong-6006/royal-white-royal_front.jpg",
           "back": "catalog_images/yupoong-6006/royal-white-royal_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -17086,7 +17086,7 @@
           "back": "catalog_images/tultex-246/white-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e"
+            "#27579d"
           ]
         }
       ]
@@ -28005,7 +28005,7 @@
           "front": "catalog_images/sportsman-sp60/royal-white-grey_front.jpg",
           "back": "catalog_images/sportsman-sp60/royal-white-grey_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef",
             "#9a9899"
           ]
@@ -28355,7 +28355,7 @@
           "hex": "#43557d",
           "front": "catalog_images/adam-s-ol102/royal-tan_front.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#bfa890"
           ]
         },
@@ -29082,7 +29082,7 @@
           "back": "catalog_images/liberty-bags-7002/white-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e"
+            "#27579d"
           ]
         }
       ]
@@ -29132,7 +29132,7 @@
           "back": "catalog_images/liberty-bags-7006/white-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e"
+            "#27579d"
           ]
         }
       ]
@@ -29765,7 +29765,7 @@
           "front": "catalog_images/oad-oad102/natural-royal_front.jpg",
           "hexes": [
             "#eae3d5",
-            "#28579e"
+            "#27579d"
           ]
         }
       ]
@@ -29804,7 +29804,7 @@
           "front": "catalog_images/oad-oad103/natural-royal_front.jpg",
           "hexes": [
             "#eae3d5",
-            "#28579e"
+            "#27579d"
           ]
         }
       ]
@@ -29834,7 +29834,7 @@
           "back": "catalog_images/oad-oad105/natural-royal_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#28579e"
+            "#27579d"
           ]
         }
       ]
@@ -31064,7 +31064,7 @@
           "front": "catalog_images/richardson-110/royal-white_front.jpg",
           "back": "catalog_images/richardson-110/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         }
@@ -31336,7 +31336,7 @@
           "front": "catalog_images/richardson-172/royal-charcoal-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/royal-charcoal-black-tri_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#4c4a4c",
             "#413f41"
           ]
@@ -31745,7 +31745,7 @@
           "front": "catalog_images/richardson-258/light-blue-white_front.jpg",
           "back": "catalog_images/richardson-258/light-blue-white_back.jpg",
           "hexes": [
-            "#98b9e0",
+            "#98b9de",
             "#ecedef"
           ]
         },
@@ -32288,7 +32288,7 @@
           "hexes": [
             "#b4b2b3",
             "#4c4a4c",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -32380,7 +32380,7 @@
           "front": "catalog_images/sportsman-sp03/royal-navy_front.jpg",
           "back": "catalog_images/sportsman-sp03/royal-navy_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#283143"
           ]
         }
@@ -32614,7 +32614,7 @@
           "front": "catalog_images/sportsman-sp15/royal-light-heather-grey_front.jpg",
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#aeafb3"
           ]
         },
@@ -32624,7 +32624,7 @@
           "front": "catalog_images/sportsman-sp15/royal-red_front.jpg",
           "back": "catalog_images/sportsman-sp15/royal-red_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#b71830"
           ]
         }
@@ -33042,7 +33042,7 @@
           "back": "catalog_images/valucap-s102/charcoal-royal_back.jpg",
           "hexes": [
             "#4c4a4c",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -33145,7 +33145,7 @@
           "front": "catalog_images/valucap-s102/royal-white_front.jpg",
           "back": "catalog_images/valucap-s102/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         },
@@ -33156,7 +33156,7 @@
           "back": "catalog_images/valucap-s102/white-royal-red_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e",
+            "#27579d",
             "#b71830"
           ]
         },
@@ -33545,7 +33545,7 @@
           "front": "catalog_images/valucap-vc400/royal-white_front.jpg",
           "back": "catalog_images/valucap-vc400/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         },
@@ -33555,7 +33555,7 @@
           "front": "catalog_images/valucap-vc400/royal-white-red_front.jpg",
           "back": "catalog_images/valucap-vc400/royal-white-red_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef",
             "#b71830"
           ]
@@ -33626,8 +33626,8 @@
           "front": "catalog_images/valucap-vc700/royal-royal_front.jpg",
           "back": "catalog_images/valucap-vc700/royal-royal_back.jpg",
           "hexes": [
-            "#28579e",
-            "#28579e"
+            "#27579d",
+            "#27579d"
           ]
         },
         {
@@ -33697,7 +33697,7 @@
           "back": "catalog_images/valucap-vc700/white-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e"
+            "#27579d"
           ]
         },
         {
@@ -33707,7 +33707,7 @@
           "back": "catalog_images/valucap-vc700/white-royal-red_back.jpg",
           "hexes": [
             "#ecedef",
-            "#28579e",
+            "#27579d",
             "#b71830"
           ]
         },
@@ -34184,7 +34184,7 @@
           "front": "catalog_images/yupoong-110m/royal-white_front.jpg",
           "back": "catalog_images/yupoong-110m/royal-white_back.jpg",
           "hexes": [
-            "#28579e",
+            "#27579d",
             "#ecedef"
           ]
         },
@@ -55438,6 +55438,105 @@
           "hex": "#19457f",
           "front": "catalog_images/richardson-512/royal_front.jpg",
           "back": "catalog_images/richardson-512/royal_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "snapback"
+      ]
+    },
+    {
+      "id": "richardson-632",
+      "name": "Laser Perf R-Flex Snapback Hat",
+      "brand": "Richardson",
+      "style": "632",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#292929",
+          "front": "catalog_images/richardson-632/black_front.jpg",
+          "back": "catalog_images/richardson-632/black_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#828685",
+          "front": "catalog_images/richardson-632/charcoal_front.jpg",
+          "back": "catalog_images/richardson-632/charcoal_back.jpg"
+        },
+        {
+          "name": "Dark Green",
+          "hex": "#30534d",
+          "front": "catalog_images/richardson-632/dark-green_front.jpg",
+          "back": "catalog_images/richardson-632/dark-green_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#adabac",
+          "front": "catalog_images/richardson-632/grey_front.jpg",
+          "back": "catalog_images/richardson-632/grey_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#384966",
+          "front": "catalog_images/richardson-632/light-blue_front.jpg",
+          "back": "catalog_images/richardson-632/light-blue_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#5a353b",
+          "front": "catalog_images/richardson-632/maroon_front.jpg",
+          "back": "catalog_images/richardson-632/maroon_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#232a3b",
+          "front": "catalog_images/richardson-632/navy_front.jpg",
+          "back": "catalog_images/richardson-632/navy_back.jpg"
+        },
+        {
+          "name": "Oat Milk",
+          "hex": "#d3d2c0",
+          "front": "catalog_images/richardson-632/oat-milk_front.jpg",
+          "back": "catalog_images/richardson-632/oat-milk_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#624185",
+          "front": "catalog_images/richardson-632/purple_front.jpg",
+          "back": "catalog_images/richardson-632/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#b7312e",
+          "front": "catalog_images/richardson-632/red_front.jpg",
+          "back": "catalog_images/richardson-632/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#23548f",
+          "front": "catalog_images/richardson-632/royal_front.jpg",
+          "back": "catalog_images/richardson-632/royal_back.jpg"
+        },
+        {
+          "name": "Smoke Blue",
+          "hex": "#93b1b3",
+          "front": "catalog_images/richardson-632/smoke-blue_front.jpg",
+          "back": "catalog_images/richardson-632/smoke-blue_back.jpg"
+        },
+        {
+          "name": "Soft Blue",
+          "hex": "#cee4e9",
+          "front": "catalog_images/richardson-632/soft-blue_front.jpg",
+          "back": "catalog_images/richardson-632/soft-blue_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f4f4f4",
+          "front": "catalog_images/richardson-632/white_front.jpg",
+          "back": "catalog_images/richardson-632/white_back.jpg"
         }
       ],
       "hatTags": [

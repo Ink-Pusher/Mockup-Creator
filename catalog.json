@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -36972,7 +36972,7 @@
           "front": "catalog_images/district-dm136/grey-frost-white_front.jpg",
           "back": "catalog_images/district-dm136/grey-frost-white_back.jpg",
           "hexes": [
-            "#888685",
+            "#888784",
             "#ecedef"
           ]
         },
@@ -36983,7 +36983,7 @@
           "back": "catalog_images/district-dm136/purple-frost-grey-frost_back.jpg",
           "hexes": [
             "#72639e",
-            "#888685"
+            "#888784"
           ]
         },
         {
@@ -36993,7 +36993,7 @@
           "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
           "hexes": [
             "#383c3d",
-            "#888685"
+            "#888784"
           ]
         },
         {
@@ -37002,8 +37002,8 @@
           "front": "catalog_images/district-dm136/navy-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/navy-frost-grey-frost_back.jpg",
           "hexes": [
-            "#4d5b6e",
-            "#888685"
+            "#4e5d70",
+            "#888784"
           ]
         },
         {
@@ -37013,7 +37013,7 @@
           "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
           "hexes": [
             "#ca4c53",
-            "#888685"
+            "#888784"
           ]
         },
         {
@@ -37022,8 +37022,8 @@
           "front": "catalog_images/district-dm136/royal-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
-            "#5573b6",
-            "#888685"
+            "#5777bb",
+            "#888784"
           ]
         },
         {
@@ -37042,8 +37042,8 @@
           "front": "catalog_images/district-dm136/military-green-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
           "hexes": [
-            "#727151",
-            "#888685"
+            "#737252",
+            "#888784"
           ]
         },
         {
@@ -37083,7 +37083,7 @@
           "back": "catalog_images/district-dm136/maroon-frost-grey-frost_back.jpg",
           "hexes": [
             "#733841",
-            "#888685"
+            "#888784"
           ]
         }
       ]
@@ -37961,7 +37961,7 @@
           "back": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#344c80",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -37971,7 +37971,7 @@
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#afb4ac",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -37981,7 +37981,7 @@
           "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#484849"
+            "#484949"
           ]
         }
       ]
@@ -38001,7 +38001,7 @@
           "back": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#344c80",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -38011,7 +38011,7 @@
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#afb4ac",
-            "#484849"
+            "#484949"
           ]
         },
         {
@@ -38021,7 +38021,7 @@
           "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#484849"
+            "#484949"
           ]
         }
       ]
@@ -40312,6 +40312,52 @@
           "hex": "#1c2931",
           "front": "catalog_images/district-dt1304/new-navy_front.jpg",
           "back": "catalog_images/district-dt1304/new-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt1311",
+      "name": "Women's Perfect Tri Fleece 1/2-Zip Pullover",
+      "brand": "District",
+      "style": "DT1311",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#272624",
+          "front": "catalog_images/district-dt1311/black_front.jpg",
+          "back": "catalog_images/district-dt1311/black_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#888a7e",
+          "front": "catalog_images/district-dt1311/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt1311/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#75766f",
+          "front": "catalog_images/district-dt1311/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt1311/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Military Green Frost",
+          "hex": "#929278",
+          "front": "catalog_images/district-dt1311/military-green-frost_front.jpg",
+          "back": "catalog_images/district-dt1311/military-green-frost_back.jpg"
+        },
+        {
+          "name": "Navy Frost",
+          "hex": "#7e8897",
+          "front": "catalog_images/district-dt1311/navy-frost_front.jpg",
+          "back": "catalog_images/district-dt1311/navy-frost_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#8295ce",
+          "front": "catalog_images/district-dt1311/royal-frost_front.jpg",
+          "back": "catalog_images/district-dt1311/royal-frost_back.jpg"
         }
       ]
     }

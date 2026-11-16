@@ -1728,7 +1728,7 @@
           "hexes": [
             "#d9c9be",
             "#232123",
-            "#65674d"
+            "#696b56"
           ]
         },
         {
@@ -1971,7 +1971,7 @@
           "back": "catalog_images/richardson-112/khaki-loden-green-cmb_back.jpg",
           "hexes": [
             "#b6a586",
-            "#65674d"
+            "#696b56"
           ]
         },
         {
@@ -8419,7 +8419,7 @@
           "front": "catalog_images/richardson-112fp/loden-green-black_front.jpg",
           "back": "catalog_images/richardson-112fp/loden-green-black_back.jpg",
           "hexes": [
-            "#65674d",
+            "#696b56",
             "#232123"
           ]
         },
@@ -9827,7 +9827,7 @@
           "back": "catalog_images/richardson-256/sand-dune-loden-green_back.jpg",
           "hexes": [
             "#e8c4a0",
-            "#65674d"
+            "#696b56"
           ]
         },
         {
@@ -55138,6 +55138,102 @@
         "structured",
         "5-panel",
         "snapback"
+      ]
+    },
+    {
+      "id": "richardson-356",
+      "name": "5 Panel Relaxed Gramps",
+      "brand": "Richardson",
+      "style": "356",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#212121",
+          "front": "catalog_images/richardson-356/black_front.jpg",
+          "back": "catalog_images/richardson-356/black_back.jpg"
+        },
+        {
+          "name": "Cream/ Black",
+          "hex": "#d6cbbd",
+          "front": "catalog_images/richardson-356/cream-black_front.jpg",
+          "back": "catalog_images/richardson-356/cream-black_back.jpg",
+          "hexes": [
+            "#d9c9be",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Cream/ Dark Green",
+          "hex": "#dad1c2",
+          "front": "catalog_images/richardson-356/cream-dark-green_front.jpg",
+          "back": "catalog_images/richardson-356/cream-dark-green_back.jpg",
+          "hexes": [
+            "#d9c9be",
+            "#253f38"
+          ]
+        },
+        {
+          "name": "Cream/ Light Denim",
+          "hex": "#dfd7cc",
+          "front": "catalog_images/richardson-356/cream-light-denim_front.jpg",
+          "back": "catalog_images/richardson-356/cream-light-denim_back.jpg"
+        },
+        {
+          "name": "Cream/ Navy",
+          "hex": "#d6cbbf",
+          "front": "catalog_images/richardson-356/cream-navy_front.jpg",
+          "back": "catalog_images/richardson-356/cream-navy_back.jpg",
+          "hexes": [
+            "#d9c9be",
+            "#293143"
+          ]
+        },
+        {
+          "name": "Cream/ Red",
+          "hex": "#eacabc",
+          "front": "catalog_images/richardson-356/cream-red_front.jpg",
+          "back": "catalog_images/richardson-356/cream-red_back.jpg",
+          "hexes": [
+            "#d9c9be",
+            "#b71830"
+          ]
+        },
+        {
+          "name": "Cream/ Wheat",
+          "hex": "#e7d6c0",
+          "front": "catalog_images/richardson-356/cream-wheat_front.jpg",
+          "back": "catalog_images/richardson-356/cream-wheat_back.jpg",
+          "hexes": [
+            "#d9c9be",
+            "#b17d44"
+          ]
+        },
+        {
+          "name": "Loden Green",
+          "hex": "#6d7060",
+          "front": "catalog_images/richardson-356/loden-green_front.jpg",
+          "back": "catalog_images/richardson-356/loden-green_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1b2235",
+          "front": "catalog_images/richardson-356/navy_front.jpg",
+          "back": "catalog_images/richardson-356/navy_back.jpg"
+        },
+        {
+          "name": "Wheat",
+          "hex": "#b68140",
+          "front": "catalog_images/richardson-356/wheat_front.jpg",
+          "back": "catalog_images/richardson-356/wheat_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "snapback",
+        "cotton-twill"
       ]
     }
   ]

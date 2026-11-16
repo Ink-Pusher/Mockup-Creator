@@ -30217,7 +30217,7 @@
           "front": "catalog_images/port-authority-c979/deep-black-gusty-grey-storm-grey_front.jpg",
           "hexes": [
             "#2e302f",
-            "#929394",
+            "#9a9d9a",
             "#565959"
           ]
         },
@@ -30243,7 +30243,7 @@
           "hexes": [
             "#212d3f",
             "#f1f1e9",
-            "#929394"
+            "#9a9d9a"
           ]
         },
         {
@@ -30313,7 +30313,7 @@
           "back": "catalog_images/port-authority-c991/deep-black-gusty-grey-marshmallow_back.jpg",
           "hexes": [
             "#2e302f",
-            "#929394",
+            "#9a9d9a",
             "#f1f1e9"
           ]
         },
@@ -30331,7 +30331,7 @@
           "hexes": [
             "#f1f1e9",
             "#fa839e",
-            "#929394"
+            "#9a9d9a"
           ]
         },
         {
@@ -30346,8 +30346,8 @@
           "front": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#2f373e",
-            "#929394",
+            "#2f3740",
+            "#9a9d9a",
             "#f1f1e9"
           ]
         },
@@ -30358,7 +30358,7 @@
           "back": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_back.jpg",
           "hexes": [
             "#1951a2",
-            "#929394",
+            "#9a9d9a",
             "#f1f1e9"
           ]
         }
@@ -40358,6 +40358,70 @@
           "hex": "#8295ce",
           "front": "catalog_images/district-dt1311/royal-frost_front.jpg",
           "back": "catalog_images/district-dt1311/royal-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt2204",
+      "name": "Wash Fleece Crew",
+      "brand": "District",
+      "style": "DT2204",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#475a5e",
+          "front": "catalog_images/district-dt2204/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dt2204/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Dusk Blue",
+          "hex": "#608699",
+          "front": "catalog_images/district-dt2204/dusk-blue_front.jpg",
+          "back": "catalog_images/district-dt2204/dusk-blue_back.jpg"
+        },
+        {
+          "name": "Garnet",
+          "hex": "#7f3738",
+          "front": "catalog_images/district-dt2204/garnet_front.jpg",
+          "back": "catalog_images/district-dt2204/garnet_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#404241",
+          "front": "catalog_images/district-dt2204/graphite_front.jpg",
+          "back": "catalog_images/district-dt2204/graphite_back.jpg"
+        },
+        {
+          "name": "Gusty Grey",
+          "hex": "#a2a7a1",
+          "front": "catalog_images/district-dt2204/gusty-grey_front.jpg",
+          "back": "catalog_images/district-dt2204/gusty-grey_back.jpg"
+        },
+        {
+          "name": "Mushroom",
+          "hex": "#897157",
+          "front": "catalog_images/district-dt2204/mushroom_front.jpg",
+          "back": "catalog_images/district-dt2204/mushroom_back.jpg"
+        },
+        {
+          "name": "Olive Drab Green",
+          "hex": "#6b7052",
+          "front": "catalog_images/district-dt2204/olive-drab-green_front.jpg",
+          "back": "catalog_images/district-dt2204/olive-drab-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#262624",
+          "front": "catalog_images/district-dt2204/black_front.jpg",
+          "back": "catalog_images/district-dt2204/black_back.jpg"
+        },
+        {
+          "name": "True Navy",
+          "hex": "#3a4758",
+          "front": "catalog_images/district-dt2204/true-navy_front.jpg",
+          "back": "catalog_images/district-dt2204/true-navy_back.jpg"
         }
       ]
     }

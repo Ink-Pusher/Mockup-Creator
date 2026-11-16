@@ -1776,7 +1776,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#494849",
             "#232223"
           ]
@@ -1787,7 +1787,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#494849",
             "#283040"
           ]
@@ -2187,7 +2187,7 @@
           "front": "catalog_images/richardson-112/purple-white_front.jpg",
           "back": "catalog_images/richardson-112/purple-white_back.jpg",
           "hexes": [
-            "#513b7b",
+            "#513c7e",
             "#ecedef"
           ]
         },
@@ -2491,7 +2491,7 @@
           "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#283040"
           ]
         },
@@ -7033,7 +7033,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-purple_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#513b7b"
+            "#513c7e"
           ]
         },
         {
@@ -7748,7 +7748,7 @@
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
             "#5a202f",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -17886,7 +17886,7 @@
           "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png",
           "hexes": [
             "#ecedef",
-            "#1b4f9f"
+            "#1b50a0"
           ]
         }
       ]
@@ -18043,7 +18043,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#333237"
           ]
         },
@@ -18053,7 +18053,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#5a202f"
           ]
         },
@@ -18063,7 +18063,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#283040"
           ]
         },
@@ -18073,7 +18073,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#bf162f"
           ]
         },
@@ -18083,8 +18083,8 @@
           "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
-            "#8c8a8c",
-            "#1b4f9f"
+            "#8d8c90",
+            "#1b50a0"
           ]
         },
         {
@@ -18184,7 +18184,7 @@
           "back": "catalog_images/bella-canvas-3200/white-true-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#1b4f9f"
+            "#1b50a0"
           ]
         }
       ]
@@ -19874,7 +19874,7 @@
           "back": "catalog_images/bella-canvas-1201/white-true-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#1b4f9f"
+            "#1b50a0"
           ]
         }
       ]
@@ -27775,7 +27775,7 @@
           "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
           "hexes": [
             "#283040",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         }
       ]
@@ -27952,7 +27952,7 @@
           "hexes": [
             "#232223",
             "#ecedef",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27963,7 +27963,7 @@
           "hexes": [
             "#5a202f",
             "#ecedef",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27974,7 +27974,7 @@
           "hexes": [
             "#283040",
             "#ecedef",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27985,7 +27985,7 @@
           "hexes": [
             "#283040",
             "#ecedef",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -27996,7 +27996,7 @@
           "hexes": [
             "#bf162f",
             "#ecedef",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -28007,7 +28007,7 @@
           "hexes": [
             "#235093",
             "#ecedef",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         }
       ]
@@ -28364,7 +28364,7 @@
           "hex": "#548c9b",
           "front": "catalog_images/adam-s-ol102/teal-tan_front.jpg",
           "hexes": [
-            "#08929d",
+            "#0994a0",
             "#bfa890"
           ]
         }
@@ -30237,7 +30237,7 @@
           "front": "catalog_images/port-authority-c979/deep-black-true-royal-storm-grey_front.jpg",
           "hexes": [
             "#2e302f",
-            "#1b4f9f",
+            "#1b50a0",
             "#565959"
           ]
         },
@@ -30367,7 +30367,7 @@
           "front": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#1b4f9f",
+            "#1b50a0",
             "#9a9d9a",
             "#f1f1e9"
           ]
@@ -31297,7 +31297,7 @@
           "front": "catalog_images/richardson-172/grey-white-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/grey-white-black-tri_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#ecedef",
             "#413f41"
           ]
@@ -32344,7 +32344,7 @@
           "front": "catalog_images/sportsman-sp03/grey-charcoal_front.jpg",
           "back": "catalog_images/sportsman-sp03/grey-charcoal_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#494849"
           ]
         },
@@ -32822,7 +32822,7 @@
           "back": "catalog_images/valucap-ah80/navy-grey_back.jpg",
           "hexes": [
             "#283040",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -32942,7 +32942,7 @@
           "back": "catalog_images/valucap-s102/black-grey_back.jpg",
           "hexes": [
             "#232223",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -33084,7 +33084,7 @@
           "back": "catalog_images/valucap-s102/navy-grey_back.jpg",
           "hexes": [
             "#283040",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -33745,7 +33745,7 @@
           "back": "catalog_images/valucap-vc990/black-grey_back.jpg",
           "hexes": [
             "#232223",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -33850,7 +33850,7 @@
           "back": "catalog_images/yupoong-110f/black-grey_back.jpg",
           "hexes": [
             "#232223",
-            "#8c8a8c"
+            "#8d8c90"
           ]
         },
         {
@@ -33860,7 +33860,7 @@
           "back": "catalog_images/yupoong-110f/black-purple_back.jpg",
           "hexes": [
             "#232223",
-            "#513b7b"
+            "#513c7e"
           ]
         },
         {
@@ -33880,7 +33880,7 @@
           "back": "catalog_images/yupoong-110f/black-teal_back.jpg",
           "hexes": [
             "#232223",
-            "#08929d"
+            "#0994a0"
           ]
         },
         {
@@ -34377,7 +34377,7 @@
           "front": "catalog_images/yupoong-5079/grey-white-white_front.jpg",
           "back": "catalog_images/yupoong-5079/grey-white-white_back.jpg",
           "hexes": [
-            "#8c8a8c",
+            "#8d8c90",
             "#ecedef",
             "#ecedef"
           ]
@@ -47448,6 +47448,96 @@
           "hex": "#eef2f5",
           "front": "catalog_images/port-co-pc099p/white_front.jpg",
           "back": "catalog_images/port-co-pc099p/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc145",
+      "name": "Crystal Tie-Dye Tee",
+      "brand": "Port & Co",
+      "style": "PC145",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Teal",
+          "hex": "#74c5c5",
+          "front": "catalog_images/port-co-pc145/teal_front.jpg",
+          "back": "catalog_images/port-co-pc145/teal_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#86b2d4",
+          "front": "catalog_images/port-co-pc145/true-royal_front.jpg",
+          "back": "catalog_images/port-co-pc145/true-royal_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#3a4349",
+          "front": "catalog_images/port-co-pc145/black_front.jpg",
+          "back": "catalog_images/port-co-pc145/black_back.jpg"
+        },
+        {
+          "name": "Black/ Red",
+          "hex": "#772721",
+          "front": "catalog_images/port-co-pc145/black-red_front.jpg",
+          "back": "catalog_images/port-co-pc145/black-red_back.jpg",
+          "hexes": [
+            "#232223",
+            "#bf162f"
+          ]
+        },
+        {
+          "name": "Black/ Teal",
+          "hex": "#14555b",
+          "front": "catalog_images/port-co-pc145/black-teal_front.jpg",
+          "back": "catalog_images/port-co-pc145/black-teal_back.jpg",
+          "hexes": [
+            "#232223",
+            "#0994a0"
+          ]
+        },
+        {
+          "name": "Lemon Lime",
+          "hex": "#d3e487",
+          "front": "catalog_images/port-co-pc145/lemon-lime_front.jpg",
+          "back": "catalog_images/port-co-pc145/lemon-lime_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#9373b4",
+          "front": "catalog_images/port-co-pc145/purple_front.jpg",
+          "back": "catalog_images/port-co-pc145/purple_back.jpg"
+        },
+        {
+          "name": "Sky Blue",
+          "hex": "#8fc9f6",
+          "front": "catalog_images/port-co-pc145/sky-blue_front.jpg",
+          "back": "catalog_images/port-co-pc145/sky-blue_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#c5d0d2",
+          "front": "catalog_images/port-co-pc145/grey_front.jpg",
+          "back": "catalog_images/port-co-pc145/grey_back.jpg"
+        },
+        {
+          "name": "Jeweltone Colorburst",
+          "hex": "#61a7a6",
+          "front": "catalog_images/port-co-pc145/jeweltone-colorburst_front.jpg",
+          "back": "catalog_images/port-co-pc145/jeweltone-colorburst_back.jpg"
+        },
+        {
+          "name": "Planet Earth Colorburst",
+          "hex": "#9dccab",
+          "front": "catalog_images/port-co-pc145/planet-earth-colorburst_front.jpg",
+          "back": "catalog_images/port-co-pc145/planet-earth-colorburst_back.jpg"
+        },
+        {
+          "name": "Bright Pink",
+          "hex": "#f3d0e2",
+          "front": "catalog_images/port-co-pc145/bright-pink_front.jpg",
+          "back": "catalog_images/port-co-pc145/bright-pink_back.jpg"
         }
       ]
     }

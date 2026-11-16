@@ -35275,6 +35275,112 @@
           "back": "catalog_images/independent-trading-co-ind420xd/olive_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dm130dtg",
+      "name": "Perfect Tri DTG Tee",
+      "brand": "District",
+      "style": "DM130DTG",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1a1a18",
+          "front": "catalog_images/district-dm130dtg/black_front.jpg",
+          "back": "catalog_images/district-dm130dtg/black_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#8b8b8b",
+          "front": "catalog_images/district-dm130dtg/grey-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#555152",
+          "front": "catalog_images/district-dm130dtg/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm130dtg/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#2a313a",
+          "front": "catalog_images/district-dm130dtg/new-navy_front.jpg",
+          "back": "catalog_images/district-dm130dtg/new-navy_back.jpg"
+        },
+        {
+          "name": "Navy Frost",
+          "hex": "#515d70",
+          "front": "catalog_images/district-dm130dtg/navy-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/navy-frost_back.jpg"
+        },
+        {
+          "name": "Purple Frost",
+          "hex": "#7768a2",
+          "front": "catalog_images/district-dm130dtg/purple-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/purple-frost_back.jpg"
+        },
+        {
+          "name": "Red Frost",
+          "hex": "#c74c55",
+          "front": "catalog_images/district-dm130dtg/red-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/red-frost_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#587acf",
+          "front": "catalog_images/district-dm130dtg/royal-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/royal-frost_back.jpg"
+        },
+        {
+          "name": "Turquoise Frost",
+          "hex": "#25aae3",
+          "front": "catalog_images/district-dm130dtg/turquoise-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/turquoise-frost_back.jpg"
+        },
+        {
+          "name": "Blush Frost",
+          "hex": "#ba6562",
+          "front": "catalog_images/district-dm130dtg/blush-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/blush-frost_back.jpg"
+        },
+        {
+          "name": "Fuchsia Frost",
+          "hex": "#ea6195",
+          "front": "catalog_images/district-dm130dtg/fuchsia-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/fuchsia-frost_back.jpg"
+        },
+        {
+          "name": "Green Frost",
+          "hex": "#40c77b",
+          "front": "catalog_images/district-dm130dtg/green-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/green-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Teal",
+          "hex": "#076d71",
+          "front": "catalog_images/district-dm130dtg/heathered-teal_front.jpg",
+          "back": "catalog_images/district-dm130dtg/heathered-teal_back.jpg"
+        },
+        {
+          "name": "Maroon Frost",
+          "hex": "#73383e",
+          "front": "catalog_images/district-dm130dtg/maroon-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/maroon-frost_back.jpg"
+        },
+        {
+          "name": "Maritime Frost",
+          "hex": "#7994c9",
+          "front": "catalog_images/district-dm130dtg/maritime-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/maritime-frost_back.jpg"
+        },
+        {
+          "name": "Black Frost",
+          "hex": "#323433",
+          "front": "catalog_images/district-dm130dtg/black-frost_front.jpg",
+          "back": "catalog_images/district-dm130dtg/black-frost_back.jpg"
+        }
+      ]
     }
   ]
 }

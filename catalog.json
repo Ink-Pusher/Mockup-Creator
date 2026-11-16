@@ -36957,6 +36957,136 @@
           "back": "catalog_images/district-dt135/wisteria-heather_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dm136",
+      "name": "Perfect Tri 3/4-Sleeve Raglan",
+      "brand": "District",
+      "style": "DM136",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Grey Frost/ White",
+          "hex": "#f6f6fd",
+          "front": "catalog_images/district-dm136/grey-frost-white_front.jpg",
+          "back": "catalog_images/district-dm136/grey-frost-white_back.jpg",
+          "hexes": [
+            "#8b8b8b",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Purple Frost/ Grey Frost",
+          "hex": "#999999",
+          "front": "catalog_images/district-dm136/purple-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/purple-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#71619f",
+            "#8b8b8b"
+          ]
+        },
+        {
+          "name": "Black Frost/ Grey Frost",
+          "hex": "#999999",
+          "front": "catalog_images/district-dm136/black-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#363939",
+            "#8b8b8b"
+          ]
+        },
+        {
+          "name": "Navy Frost/ Grey Frost",
+          "hex": "#999999",
+          "front": "catalog_images/district-dm136/navy-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/navy-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#4e596c",
+            "#8b8b8b"
+          ]
+        },
+        {
+          "name": "Red Frost/ Grey Frost",
+          "hex": "#8e8e8e",
+          "front": "catalog_images/district-dm136/red-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#c44852",
+            "#8b8b8b"
+          ]
+        },
+        {
+          "name": "Royal Frost/ Grey Frost",
+          "hex": "#999999",
+          "front": "catalog_images/district-dm136/royal-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#5372c0",
+            "#8b8b8b"
+          ]
+        },
+        {
+          "name": "Black/ Black Frost",
+          "hex": "#353334",
+          "front": "catalog_images/district-dm136/black-black-frost_front.jpg",
+          "back": "catalog_images/district-dm136/black-black-frost_back.jpg",
+          "hexes": [
+            "#232223",
+            "#363939"
+          ]
+        },
+        {
+          "name": "Military Green Frost/ Grey Frost",
+          "hex": "#7b706c",
+          "front": "catalog_images/district-dm136/military-green-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#6e6d50",
+            "#8b8b8b"
+          ]
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#f3f3fc",
+          "front": "catalog_images/district-dm136/black-white_front.jpg",
+          "back": "catalog_images/district-dm136/black-white_back.jpg",
+          "hexes": [
+            "#232223",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Deep Royal/ White",
+          "hex": "#f3f3fc",
+          "front": "catalog_images/district-dm136/deep-royal-white_front.jpg",
+          "back": "catalog_images/district-dm136/deep-royal-white_back.jpg",
+          "hexes": [
+            "#214083",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "New Navy/ White",
+          "hex": "#f3f3fc",
+          "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
+          "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
+          "hexes": [
+            "#232e38",
+            "#ededef"
+          ]
+        },
+        {
+          "name": "Maroon Frost/ Grey Frost",
+          "hex": "#8e8e8e",
+          "front": "catalog_images/district-dm136/maroon-frost-grey-frost_front.jpg",
+          "back": "catalog_images/district-dm136/maroon-frost-grey-frost_back.jpg",
+          "hexes": [
+            "#733841",
+            "#8b8b8b"
+          ]
+        }
+      ]
     }
   ]
 }

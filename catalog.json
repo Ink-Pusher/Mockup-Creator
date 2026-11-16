@@ -17983,7 +17983,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2f2e30",
+            "#302e30",
             "#232223"
           ]
         },
@@ -53664,6 +53664,76 @@
           "hex": "#dcdbc1",
           "front": "catalog_images/port-co-pc147y/mint-rainbow_front.jpg",
           "back": "catalog_images/port-co-pc147y/mint-rainbow_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc330y",
+      "name": "Youth Tri-Blend Tee",
+      "brand": "Port & Co",
+      "style": "PC330Y",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#191919",
+          "front": "catalog_images/port-co-pc330y/black_front.jpg",
+          "back": "catalog_images/port-co-pc330y/black_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#393a3c",
+          "front": "catalog_images/port-co-pc330y/black-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330y/black-heather_back.jpg"
+        },
+        {
+          "name": "Bright Red Heather",
+          "hex": "#df4848",
+          "front": "catalog_images/port-co-pc330y/bright-red-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330y/bright-red-heather_back.jpg"
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#1e2130",
+          "front": "catalog_images/port-co-pc330y/deep-navy_front.jpg",
+          "back": "catalog_images/port-co-pc330y/deep-navy_back.jpg"
+        },
+        {
+          "name": "Graphite Heather",
+          "hex": "#68696e",
+          "front": "catalog_images/port-co-pc330y/graphite-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330y/graphite-heather_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#4468be",
+          "front": "catalog_images/port-co-pc330y/heather-royal_front.jpg",
+          "back": "catalog_images/port-co-pc330y/heather-royal_back.jpg"
+        },
+        {
+          "name": "Military Green Heather",
+          "hex": "#57573b",
+          "front": "catalog_images/port-co-pc330y/military-green-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330y/military-green-heather_back.jpg"
+        },
+        {
+          "name": "Team Navy Heather",
+          "hex": "#3d415a",
+          "front": "catalog_images/port-co-pc330y/team-navy-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330y/team-navy-heather_back.jpg"
+        },
+        {
+          "name": "Team Purple Heather",
+          "hex": "#544973",
+          "front": "catalog_images/port-co-pc330y/team-purple-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330y/team-purple-heather_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eeeeee",
+          "front": "catalog_images/port-co-pc330y/white_front.jpg",
+          "back": "catalog_images/port-co-pc330y/white_back.jpg"
         }
       ]
     }

@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#aeafb3"
+            "#adafb3"
           ]
         },
         {
@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#a53846",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -37022,7 +37022,7 @@
           "front": "catalog_images/district-dm136/royal-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
-            "#5571bc",
+            "#5470bb",
             "#898886"
           ]
         },
@@ -37062,7 +37062,7 @@
           "front": "catalog_images/district-dm136/deep-royal-white_front.jpg",
           "back": "catalog_images/district-dm136/deep-royal-white_back.jpg",
           "hexes": [
-            "#21407c",
+            "#213f7b",
             "#ecedef"
           ]
         },
@@ -37072,7 +37072,7 @@
           "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
           "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
           "hexes": [
-            "#222e37",
+            "#212e37",
             "#ecedef"
           ]
         },
@@ -37961,7 +37961,7 @@
           "back": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#344c80",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -37971,7 +37971,7 @@
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#afb4ac",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -37981,7 +37981,7 @@
           "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#a53846",
-            "#484849"
+            "#474848"
           ]
         }
       ]
@@ -38001,7 +38001,7 @@
           "back": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#344c80",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -38011,7 +38011,7 @@
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#afb4ac",
-            "#484849"
+            "#474848"
           ]
         },
         {
@@ -38021,7 +38021,7 @@
           "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#a53846",
-            "#484849"
+            "#474848"
           ]
         }
       ]
@@ -41306,6 +41306,64 @@
           "hex": "#305098",
           "front": "catalog_images/district-dt6102y/royal-frost_front.jpg",
           "back": "catalog_images/district-dt6102y/royal-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6104y",
+      "name": "Youth V.I.T. Fleece Crew",
+      "brand": "District",
+      "style": "DT6104Y",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#171717",
+          "front": "catalog_images/district-dt6104y/black_front.jpg",
+          "back": "catalog_images/district-dt6104y/black_back.jpg"
+        },
+        {
+          "name": "Classic Red",
+          "hex": "#8d151f",
+          "front": "catalog_images/district-dt6104y/classic-red_front.jpg",
+          "back": "catalog_images/district-dt6104y/classic-red_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#10396f",
+          "front": "catalog_images/district-dt6104y/deep-royal_front.jpg",
+          "back": "catalog_images/district-dt6104y/deep-royal_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#21362d",
+          "front": "catalog_images/district-dt6104y/forest-green_front.jpg",
+          "back": "catalog_images/district-dt6104y/forest-green_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#3d4142",
+          "front": "catalog_images/district-dt6104y/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6104y/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#aaadb4",
+          "front": "catalog_images/district-dt6104y/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6104y/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#202e39",
+          "front": "catalog_images/district-dt6104y/new-navy_front.jpg",
+          "back": "catalog_images/district-dt6104y/new-navy_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#36569f",
+          "front": "catalog_images/district-dt6104y/royal-frost_front.jpg",
+          "back": "catalog_images/district-dt6104y/royal-frost_back.jpg"
         }
       ]
     }

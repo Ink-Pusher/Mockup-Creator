@@ -39792,6 +39792,76 @@
           "back": "catalog_images/district-dt6702/winter-blue_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt7800",
+      "name": "Cloud Fleece Hoodie",
+      "brand": "District",
+      "style": "DT7800",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#39484f",
+          "front": "catalog_images/district-dt7800/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dt7800/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Slate Green",
+          "hex": "#8c998f",
+          "front": "catalog_images/district-dt7800/slate-green_front.jpg",
+          "back": "catalog_images/district-dt7800/slate-green_back.jpg"
+        },
+        {
+          "name": "Smoky Amethyst",
+          "hex": "#8c7f88",
+          "front": "catalog_images/district-dt7800/smoky-amethyst_front.jpg",
+          "back": "catalog_images/district-dt7800/smoky-amethyst_back.jpg"
+        },
+        {
+          "name": "Duck Brown",
+          "hex": "#6d4d27",
+          "front": "catalog_images/district-dt7800/duck-brown_front.jpg",
+          "back": "catalog_images/district-dt7800/duck-brown_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#6d7a8b",
+          "front": "catalog_images/district-dt7800/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt7800/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "hex": "#efecdd",
+          "front": "catalog_images/district-dt7800/gardenia_front.jpg",
+          "back": "catalog_images/district-dt7800/gardenia_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#484e4e",
+          "front": "catalog_images/district-dt7800/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt7800/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Steel",
+          "hex": "#a5a7a4",
+          "front": "catalog_images/district-dt7800/heathered-steel_front.jpg",
+          "back": "catalog_images/district-dt7800/heathered-steel_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#171b1a",
+          "front": "catalog_images/district-dt7800/jet-black_front.jpg",
+          "back": "catalog_images/district-dt7800/jet-black_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#202d33",
+          "front": "catalog_images/district-dt7800/new-navy_front.jpg",
+          "back": "catalog_images/district-dt7800/new-navy_back.jpg"
+        }
+      ]
     }
   ]
 }

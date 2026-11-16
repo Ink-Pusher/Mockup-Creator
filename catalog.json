@@ -43690,6 +43690,64 @@
           ]
         }
       ]
+    },
+    {
+      "id": "next-level-9302",
+      "name": "Malibu Hoodie",
+      "brand": "Next Level",
+      "style": "9302",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heather Black",
+          "hex": "#322e34",
+          "front": "catalog_images/next-level-9302/heather-black_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-black_back.jpg"
+        },
+        {
+          "name": "Heather Cardinal",
+          "hex": "#893846",
+          "front": "catalog_images/next-level-9302/heather-cardinal_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-cardinal_back.jpg"
+        },
+        {
+          "name": "Heather Forest Green",
+          "hex": "#344843",
+          "front": "catalog_images/next-level-9302/heather-forest-green_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-forest-green_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#a09fa3",
+          "front": "catalog_images/next-level-9302/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-grey_back.jpg"
+        },
+        {
+          "name": "Heather Midnight Navy",
+          "hex": "#383f4b",
+          "front": "catalog_images/next-level-9302/heather-midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-midnight-navy_back.jpg"
+        },
+        {
+          "name": "Heather Military Green",
+          "hex": "#7e7357",
+          "front": "catalog_images/next-level-9302/heather-military-green_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-military-green_back.jpg"
+        },
+        {
+          "name": "Heather Slate Blue",
+          "hex": "#5e666e",
+          "front": "catalog_images/next-level-9302/heather-slate-blue_front.jpg",
+          "back": "catalog_images/next-level-9302/heather-slate-blue_back.jpg"
+        },
+        {
+          "name": "Oatmeal",
+          "hex": "#d7d5d0",
+          "front": "catalog_images/next-level-9302/oatmeal_front.jpg",
+          "back": "catalog_images/next-level-9302/oatmeal_back.jpg"
+        }
+      ]
     }
   ]
 }

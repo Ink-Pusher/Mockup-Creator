@@ -36992,7 +36992,7 @@
           "front": "catalog_images/district-dm136/black-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
           "hexes": [
-            "#353637",
+            "#353737",
             "#8b8b8b"
           ]
         },
@@ -37002,7 +37002,7 @@
           "front": "catalog_images/district-dm136/navy-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/navy-frost-grey-frost_back.jpg",
           "hexes": [
-            "#4b5669",
+            "#455165",
             "#8b8b8b"
           ]
         },
@@ -37012,7 +37012,7 @@
           "front": "catalog_images/district-dm136/red-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
           "hexes": [
-            "#c44852",
+            "#c74550",
             "#8b8b8b"
           ]
         },
@@ -37033,7 +37033,7 @@
           "back": "catalog_images/district-dm136/black-black-frost_back.jpg",
           "hexes": [
             "#232223",
-            "#353637"
+            "#353737"
           ]
         },
         {
@@ -37042,7 +37042,7 @@
           "front": "catalog_images/district-dm136/military-green-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
           "hexes": [
-            "#727150",
+            "#6e6d50",
             "#8b8b8b"
           ]
         },
@@ -37385,6 +37385,76 @@
           "hex": "#959492",
           "front": "catalog_images/district-dt8003/light-heather-grey_front.jpg",
           "back": "catalog_images/district-dt8003/light-heather-grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt137l",
+      "name": "Women's Perfect Tri Rocker Tank",
+      "brand": "District",
+      "style": "DT137L",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#e6e6e6",
+          "front": "catalog_images/district-dt137l/white_front.jpg",
+          "back": "catalog_images/district-dt137l/white_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#8c8c8c",
+          "front": "catalog_images/district-dt137l/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt137l/grey-frost_back.jpg"
+        },
+        {
+          "name": "Navy Frost",
+          "hex": "#404a5f",
+          "front": "catalog_images/district-dt137l/navy-frost_front.jpg",
+          "back": "catalog_images/district-dt137l/navy-frost_back.jpg"
+        },
+        {
+          "name": "Military Green Frost",
+          "hex": "#636349",
+          "front": "catalog_images/district-dt137l/military-green-frost_front.jpg",
+          "back": "catalog_images/district-dt137l/military-green-frost_back.jpg"
+        },
+        {
+          "name": "Blush Frost",
+          "hex": "#cd807b",
+          "front": "catalog_images/district-dt137l/blush-frost_front.jpg",
+          "back": "catalog_images/district-dt137l/blush-frost_back.jpg"
+        },
+        {
+          "name": "Black Frost",
+          "hex": "#363837",
+          "front": "catalog_images/district-dt137l/black-frost_front.jpg",
+          "back": "catalog_images/district-dt137l/black-frost_back.jpg"
+        },
+        {
+          "name": "Red Frost",
+          "hex": "#e63d4a",
+          "front": "catalog_images/district-dt137l/red-frost_front.jpg",
+          "back": "catalog_images/district-dt137l/red-frost_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#232220",
+          "front": "catalog_images/district-dt137l/black_front.jpg",
+          "back": "catalog_images/district-dt137l/black_back.jpg"
+        },
+        {
+          "name": "Heathered Eucalyptus Blue",
+          "hex": "#7ea6a6",
+          "front": "catalog_images/district-dt137l/heathered-eucalyptus-blue_front.jpg",
+          "back": "catalog_images/district-dt137l/heathered-eucalyptus-blue_back.jpg"
+        },
+        {
+          "name": "Desert Tan Heather",
+          "hex": "#c9ba9b",
+          "front": "catalog_images/district-dt137l/desert-tan-heather_front.jpg",
+          "back": "catalog_images/district-dt137l/desert-tan-heather_back.jpg"
         }
       ]
     }

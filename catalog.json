@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#abaaa8"
+            "#abacaa"
           ]
         },
         {
@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -37072,7 +37072,7 @@
           "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
           "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
           "hexes": [
-            "#212d37",
+            "#212e37",
             "#ededef"
           ]
         },
@@ -37961,7 +37961,7 @@
           "back": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#2e4b7b",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -37971,7 +37971,7 @@
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#abaeab",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -37981,7 +37981,7 @@
           "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#494949"
+            "#484849"
           ]
         }
       ]
@@ -38001,7 +38001,7 @@
           "back": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#2e4b7b",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -38011,7 +38011,7 @@
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#abaeab",
-            "#494949"
+            "#484849"
           ]
         },
         {
@@ -38021,7 +38021,7 @@
           "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#494949"
+            "#484849"
           ]
         }
       ]
@@ -39284,6 +39284,52 @@
           "hex": "#34549c",
           "front": "catalog_images/district-dt6102/royal-frost_front.jpg",
           "back": "catalog_images/district-dt6102/royal-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6103",
+      "name": "Women's V.I.T. Fleece Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT6103",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1c1c1c",
+          "front": "catalog_images/district-dt6103/black_front.jpg",
+          "back": "catalog_images/district-dt6103/black_back.jpg"
+        },
+        {
+          "name": "Desert Rose",
+          "hex": "#986558",
+          "front": "catalog_images/district-dt6103/desert-rose_front.jpg",
+          "back": "catalog_images/district-dt6103/desert-rose_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#677485",
+          "front": "catalog_images/district-dt6103/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt6103/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#414546",
+          "front": "catalog_images/district-dt6103/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6103/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#acafb6",
+          "front": "catalog_images/district-dt6103/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6103/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#25333e",
+          "front": "catalog_images/district-dt6103/new-navy_front.jpg",
+          "back": "catalog_images/district-dt6103/new-navy_back.jpg"
         }
       ]
     }

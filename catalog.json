@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#adafb3"
+            "#aeafb3"
           ]
         },
         {
@@ -41364,6 +41364,46 @@
           "hex": "#36569f",
           "front": "catalog_images/district-dt6104y/royal-frost_front.jpg",
           "back": "catalog_images/district-dt6104y/royal-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt8000y",
+      "name": "Youth Re-Tee",
+      "brand": "District",
+      "style": "DT8000Y",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1b1b1b",
+          "front": "catalog_images/district-dt8000y/black_front.jpg",
+          "back": "catalog_images/district-dt8000y/black_back.jpg"
+        },
+        {
+          "name": "Blue Heather",
+          "hex": "#4277b5",
+          "front": "catalog_images/district-dt8000y/blue-heather_front.jpg",
+          "back": "catalog_images/district-dt8000y/blue-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#454d62",
+          "front": "catalog_images/district-dt8000y/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt8000y/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#b9b8b5",
+          "front": "catalog_images/district-dt8000y/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt8000y/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Ruby Red",
+          "hex": "#c31b23",
+          "front": "catalog_images/district-dt8000y/ruby-red_front.jpg",
+          "back": "catalog_images/district-dt8000y/ruby-red_back.jpg"
         }
       ]
     }

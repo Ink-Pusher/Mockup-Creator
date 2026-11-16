@@ -16987,7 +16987,7 @@
           "front": "catalog_images/tultex-246/heather-royal-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
-            "#456eb2",
+            "#456eb3",
             "#273143"
           ]
         },
@@ -30340,7 +30340,7 @@
           "back": "catalog_images/port-authority-c991/marshmallow-awareness-pink-gusty-grey_back.jpg",
           "hexes": [
             "#f1f1e9",
-            "#da719c",
+            "#d96c99",
             "#9a9d9a"
           ]
         },
@@ -46179,7 +46179,7 @@
           "front": "catalog_images/port-co-pc54r/heather-royal-navy_front.jpg",
           "back": "catalog_images/port-co-pc54r/heather-royal-navy_back.jpg",
           "hexes": [
-            "#456eb2",
+            "#456eb3",
             "#273143"
           ]
         },
@@ -53734,6 +53734,76 @@
           "hex": "#eeeeee",
           "front": "catalog_images/port-co-pc330y/white_front.jpg",
           "back": "catalog_images/port-co-pc330y/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc340y",
+      "name": "Youth CVC Tee",
+      "brand": "Port & Co",
+      "style": "PC340Y",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#191d1c",
+          "front": "catalog_images/port-co-pc340y/black_front.jpg",
+          "back": "catalog_images/port-co-pc340y/black_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#4976b7",
+          "front": "catalog_images/port-co-pc340y/heather-royal_front.jpg",
+          "back": "catalog_images/port-co-pc340y/heather-royal_back.jpg"
+        },
+        {
+          "name": "Team Navy Heather",
+          "hex": "#2d3c51",
+          "front": "catalog_images/port-co-pc340y/team-navy-heather_front.jpg",
+          "back": "catalog_images/port-co-pc340y/team-navy-heather_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eaf2fc",
+          "front": "catalog_images/port-co-pc340y/white_front.jpg",
+          "back": "catalog_images/port-co-pc340y/white_back.jpg"
+        },
+        {
+          "name": "Athletic Kelly Green Heather",
+          "hex": "#3c7957",
+          "front": "catalog_images/port-co-pc340y/athletic-kelly-green-heather_front.jpg",
+          "back": "catalog_images/port-co-pc340y/athletic-kelly-green-heather_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#a21426",
+          "front": "catalog_images/port-co-pc340y/red_front.jpg",
+          "back": "catalog_images/port-co-pc340y/red_back.jpg"
+        },
+        {
+          "name": "Mountain Blue Heather",
+          "hex": "#34687e",
+          "front": "catalog_images/port-co-pc340y/mountain-blue-heather_front.jpg",
+          "back": "catalog_images/port-co-pc340y/mountain-blue-heather_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#a0a7b1",
+          "front": "catalog_images/port-co-pc340y/athletic-heather_front.jpg",
+          "back": "catalog_images/port-co-pc340y/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Awareness Pink",
+          "hex": "#d66593",
+          "front": "catalog_images/port-co-pc340y/awareness-pink_front.jpg",
+          "back": "catalog_images/port-co-pc340y/awareness-pink_back.jpg"
+        },
+        {
+          "name": "Tundra Blue",
+          "hex": "#6e96ba",
+          "front": "catalog_images/port-co-pc340y/tundra-blue_front.jpg",
+          "back": "catalog_images/port-co-pc340y/tundra-blue_back.jpg"
         }
       ]
     }

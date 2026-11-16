@@ -11125,7 +11125,7 @@
           "front": "catalog_images/bella-canvas-3480/athletic-heather-navy_front.jpg",
           "back": "catalog_images/bella-canvas-3480/athletic-heather-navy_back.jpg",
           "hexes": [
-            "#b4b4b4",
+            "#b3b3b4",
             "#283040"
           ]
         },
@@ -17825,7 +17825,7 @@
           "front": "catalog_images/bella-canvas-1200/athleticheather-black_front.png",
           "back": "catalog_images/bella-canvas-1200/athleticheather-black_back.png",
           "hexes": [
-            "#b4b4b4",
+            "#b3b3b4",
             "#232223"
           ]
         },
@@ -17886,7 +17886,7 @@
           "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png",
           "hexes": [
             "#ecedef",
-            "#1b4e9f"
+            "#1b4d9f"
           ]
         }
       ]
@@ -18084,7 +18084,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
             "#8d8c90",
-            "#1b4e9f"
+            "#1b4d9f"
           ]
         },
         {
@@ -18184,7 +18184,7 @@
           "back": "catalog_images/bella-canvas-3200/white-true-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#1b4e9f"
+            "#1b4d9f"
           ]
         }
       ]
@@ -19813,7 +19813,7 @@
           "front": "catalog_images/bella-canvas-1201/athletic-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-1201/athletic-heather-black_back.jpg",
           "hexes": [
-            "#b4b4b4",
+            "#b3b3b4",
             "#232223"
           ]
         },
@@ -19874,7 +19874,7 @@
           "back": "catalog_images/bella-canvas-1201/white-true-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#1b4e9f"
+            "#1b4d9f"
           ]
         }
       ]
@@ -21079,7 +21079,7 @@
           "front": "catalog_images/bella-canvas-8800/athletic-heather-neon-pink_front.jpg",
           "back": "catalog_images/bella-canvas-8800/athletic-heather-neon-pink_back.jpg",
           "hexes": [
-            "#b4b4b4",
+            "#b3b3b4",
             "#fb6392"
           ]
         },
@@ -21089,7 +21089,7 @@
           "front": "catalog_images/bella-canvas-8800/athletic-heather-white_front.jpg",
           "back": "catalog_images/bella-canvas-8800/athletic-heather-white_back.jpg",
           "hexes": [
-            "#b4b4b4",
+            "#b3b3b4",
             "#ecedef"
           ]
         },
@@ -30237,7 +30237,7 @@
           "front": "catalog_images/port-authority-c979/deep-black-true-royal-storm-grey_front.jpg",
           "hexes": [
             "#252525",
-            "#1b4e9f",
+            "#1b4d9f",
             "#565959"
           ]
         },
@@ -30367,7 +30367,7 @@
           "front": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#1b4e9f",
+            "#1b4d9f",
             "#9a9d9a",
             "#f1f1e9"
           ]
@@ -32432,7 +32432,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-black_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-black_back.jpg",
           "hexes": [
-            "#474649",
+            "#47464a",
             "#232223"
           ]
         },
@@ -32442,7 +32442,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-navy_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-navy_back.jpg",
           "hexes": [
-            "#474649",
+            "#47464a",
             "#283040"
           ]
         },
@@ -32452,7 +32452,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-red_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-red_back.jpg",
           "hexes": [
-            "#474649",
+            "#47464a",
             "#bf172f"
           ]
         },
@@ -46139,7 +46139,7 @@
           "front": "catalog_images/port-co-pc54r/athletic-heather-jet-black_front.jpg",
           "back": "catalog_images/port-co-pc54r/athletic-heather-jet-black_back.jpg",
           "hexes": [
-            "#b4b4b4",
+            "#b3b3b4",
             "#1a1c1c"
           ]
         },
@@ -46149,7 +46149,7 @@
           "front": "catalog_images/port-co-pc54r/dark-heather-grey-jet-black_front.jpg",
           "back": "catalog_images/port-co-pc54r/dark-heather-grey-jet-black_back.jpg",
           "hexes": [
-            "#474649",
+            "#47464a",
             "#1a1c1c"
           ]
         },
@@ -49242,6 +49242,118 @@
           "hex": "#1d202f",
           "front": "catalog_images/port-co-pc330ls/deep-navy_front.jpg",
           "back": "catalog_images/port-co-pc330ls/deep-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc450ls",
+      "name": "Long Sleeve Fan Favorite Tee",
+      "brand": "Port & Co",
+      "style": "PC450LS",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#ededed",
+          "front": "catalog_images/port-co-pc450ls/white_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/white_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#999a9e",
+          "front": "catalog_images/port-co-pc450ls/athletic-heather_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Athletic Kelly",
+          "hex": "#21975d",
+          "front": "catalog_images/port-co-pc450ls/athletic-kelly_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/athletic-kelly_back.jpg"
+        },
+        {
+          "name": "Athletic Maroon",
+          "hex": "#51222e",
+          "front": "catalog_images/port-co-pc450ls/athletic-maroon_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/athletic-maroon_back.jpg"
+        },
+        {
+          "name": "Bright Gold",
+          "hex": "#f9b11e",
+          "front": "catalog_images/port-co-pc450ls/bright-gold_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/bright-gold_back.jpg"
+        },
+        {
+          "name": "Bright Red",
+          "hex": "#cf2b36",
+          "front": "catalog_images/port-co-pc450ls/bright-red_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/bright-red_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#4a4849",
+          "front": "catalog_images/port-co-pc450ls/charcoal_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/charcoal_back.jpg"
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#282f3f",
+          "front": "catalog_images/port-co-pc450ls/deep-navy_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/deep-navy_back.jpg"
+        },
+        {
+          "name": "Flash Green",
+          "hex": "#8ef05f",
+          "front": "catalog_images/port-co-pc450ls/flash-green_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/flash-green_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#294435",
+          "front": "catalog_images/port-co-pc450ls/forest-green_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/forest-green_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#262626",
+          "front": "catalog_images/port-co-pc450ls/jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/jet-black_back.jpg"
+        },
+        {
+          "name": "Orange",
+          "hex": "#ea4d2e",
+          "front": "catalog_images/port-co-pc450ls/orange_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/orange_back.jpg"
+        },
+        {
+          "name": "Team Cardinal",
+          "hex": "#a62331",
+          "front": "catalog_images/port-co-pc450ls/team-cardinal_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/team-cardinal_back.jpg"
+        },
+        {
+          "name": "Team Navy",
+          "hex": "#303a5d",
+          "front": "catalog_images/port-co-pc450ls/team-navy_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/team-navy_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#2e489f",
+          "front": "catalog_images/port-co-pc450ls/true-royal_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/true-royal_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#4a4a4a",
+          "front": "catalog_images/port-co-pc450ls/dark-heather-grey_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/dark-heather-grey_back.jpg"
+        },
+        {
+          "name": "Team Purple",
+          "hex": "#4c2c6b",
+          "front": "catalog_images/port-co-pc450ls/team-purple_front.jpg",
+          "back": "catalog_images/port-co-pc450ls/team-purple_back.jpg"
         }
       ]
     }

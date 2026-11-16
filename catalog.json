@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a3a3a4"
+            "#a4a4a5"
           ]
         },
         {
@@ -37195,6 +37195,52 @@
           "hex": "#294d81",
           "front": "catalog_images/district-dt185/heathered-deep-royal_front.jpg",
           "back": "catalog_images/district-dt185/heathered-deep-royal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt572",
+      "name": "Featherweight French Terry Long Sleeve Crewneck",
+      "brand": "District",
+      "style": "DT572",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1a1a1a",
+          "front": "catalog_images/district-dt572/black_front.jpg",
+          "back": "catalog_images/district-dt572/black_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#8794a2",
+          "front": "catalog_images/district-dt572/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt572/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "hex": "#f7ede4",
+          "front": "catalog_images/district-dt572/gardenia_front.jpg",
+          "back": "catalog_images/district-dt572/gardenia_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#c4c3be",
+          "front": "catalog_images/district-dt572/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt572/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Washed Coal",
+          "hex": "#565551",
+          "front": "catalog_images/district-dt572/washed-coal_front.jpg",
+          "back": "catalog_images/district-dt572/washed-coal_back.jpg"
+        },
+        {
+          "name": "Washed Indigo",
+          "hex": "#425768",
+          "front": "catalog_images/district-dt572/washed-indigo_front.jpg",
+          "back": "catalog_images/district-dt572/washed-indigo_back.jpg"
         }
       ]
     }

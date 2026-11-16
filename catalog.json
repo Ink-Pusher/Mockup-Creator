@@ -9770,7 +9770,7 @@
           "front": "catalog_images/richardson-256/midnight-navy-white_front.jpg",
           "back": "catalog_images/richardson-256/midnight-navy-white_back.jpg",
           "hexes": [
-            "#242c40",
+            "#252c40",
             "#ecedef"
           ]
         },
@@ -17156,7 +17156,7 @@
           "back": "catalog_images/next-level-3604/natural-midnight-navy_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#242c40"
+            "#252c40"
           ]
         },
         {
@@ -43655,7 +43655,7 @@
           "front": "catalog_images/next-level-9301/midnight-navy-cardinal_front.jpg",
           "back": "catalog_images/next-level-9301/midnight-navy-cardinal_back.jpg",
           "hexes": [
-            "#242c40",
+            "#252c40",
             "#7e1d31"
           ]
         },
@@ -43665,7 +43665,7 @@
           "front": "catalog_images/next-level-9301/midnight-navy-heather-grey_front.jpg",
           "back": "catalog_images/next-level-9301/midnight-navy-heather-grey_back.jpg",
           "hexes": [
-            "#242c40",
+            "#252c40",
             "#b4b2b3"
           ]
         },
@@ -55786,6 +55786,59 @@
         "6-panel",
         "mesh"
       ]
+    },
+    {
+      "id": "richardson-173",
+      "name": "Hood River Hat",
+      "brand": "Richardson",
+      "style": "173",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#d8d8d8",
+          "front": "catalog_images/richardson-173/black_front.jpg",
+          "back": "catalog_images/richardson-173/black_back.jpg"
+        },
+        {
+          "name": "Cement Grey/ Dark Charcoal",
+          "hex": "#e6e6e6",
+          "front": "catalog_images/richardson-173/cement-grey-dark-charcoal_front.jpg",
+          "back": "catalog_images/richardson-173/cement-grey-dark-charcoal_back.jpg"
+        },
+        {
+          "name": "Cement Grey/ Dark Charcoal/ Pool Blue",
+          "hex": "#d8eaf1",
+          "front": "catalog_images/richardson-173/cement-grey-dark-charcoal-pool-blue_front.jpg",
+          "back": "catalog_images/richardson-173/cement-grey-dark-charcoal-pool-blue_back.jpg"
+        },
+        {
+          "name": "Desert Orange/ Light Khaki/ Insignia Blue",
+          "hex": "#dbdcdf",
+          "front": "catalog_images/richardson-173/desert-orange-light-khaki-insignia-blue_front.jpg",
+          "back": "catalog_images/richardson-173/desert-orange-light-khaki-insignia-blue_back.jpg"
+        },
+        {
+          "name": "Insignia Blue/ China Blue",
+          "hex": "#dbdcdf",
+          "front": "catalog_images/richardson-173/insignia-blue-china-blue_front.jpg",
+          "back": "catalog_images/richardson-173/insignia-blue-china-blue_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#d6d7d9",
+          "front": "catalog_images/richardson-173/midnight-navy_front.jpg",
+          "back": "catalog_images/richardson-173/midnight-navy_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f3f3f3",
+          "front": "catalog_images/richardson-173/white_front.jpg",
+          "back": "catalog_images/richardson-173/white_back.jpg"
+        }
+      ],
+      "hatTags": []
     }
   ]
 }

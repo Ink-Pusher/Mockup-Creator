@@ -55605,6 +55605,37 @@
         "snapback",
         "mesh"
       ]
+    },
+    {
+      "id": "richardson-909",
+      "name": "Mckenzie Hat",
+      "brand": "Richardson",
+      "style": "909",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#696564",
+          "front": "catalog_images/richardson-909/charcoal_front.jpg",
+          "back": "catalog_images/richardson-909/charcoal_back.jpg"
+        },
+        {
+          "name": "Moss Green",
+          "hex": "#777a5a",
+          "front": "catalog_images/richardson-909/moss-green_front.jpg",
+          "back": "catalog_images/richardson-909/moss-green_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f3f3f3",
+          "front": "catalog_images/richardson-909/white_front.jpg",
+          "back": "catalog_images/richardson-909/white_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "unstructured"
+      ]
     }
   ]
 }

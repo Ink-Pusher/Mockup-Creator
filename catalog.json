@@ -30241,7 +30241,7 @@
           "hex": "#8c9095",
           "front": "catalog_images/port-authority-c979/river-blue-navy-marshmallow-gusty-grey_front.jpg",
           "hexes": [
-            "#232c3e",
+            "#212d3f",
             "#f1f1e9",
             "#929394"
           ]
@@ -31149,7 +31149,7 @@
           "front": "catalog_images/richardson-112wh/dark-olive-coffee_front.jpg",
           "back": "catalog_images/richardson-112wh/dark-olive-coffee_back.jpg",
           "hexes": [
-            "#393729",
+            "#373729",
             "#4b3c36"
           ]
         },
@@ -36972,7 +36972,7 @@
           "front": "catalog_images/district-dm136/grey-frost-white_front.jpg",
           "back": "catalog_images/district-dm136/grey-frost-white_back.jpg",
           "hexes": [
-            "#888685",
+            "#858584",
             "#ededef"
           ]
         },
@@ -36983,7 +36983,7 @@
           "back": "catalog_images/district-dm136/purple-frost-grey-frost_back.jpg",
           "hexes": [
             "#72639e",
-            "#888685"
+            "#858584"
           ]
         },
         {
@@ -36993,7 +36993,7 @@
           "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
           "hexes": [
             "#383c3d",
-            "#888685"
+            "#858584"
           ]
         },
         {
@@ -37003,7 +37003,7 @@
           "back": "catalog_images/district-dm136/navy-frost-grey-frost_back.jpg",
           "hexes": [
             "#4d5a6d",
-            "#888685"
+            "#858584"
           ]
         },
         {
@@ -37013,7 +37013,7 @@
           "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
           "hexes": [
             "#c84851",
-            "#888685"
+            "#858584"
           ]
         },
         {
@@ -37023,7 +37023,7 @@
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
             "#5470b1",
-            "#888685"
+            "#858584"
           ]
         },
         {
@@ -37043,7 +37043,7 @@
           "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
           "hexes": [
             "#727150",
-            "#888685"
+            "#858584"
           ]
         },
         {
@@ -37083,7 +37083,7 @@
           "back": "catalog_images/district-dm136/maroon-frost-grey-frost_back.jpg",
           "hexes": [
             "#733841",
-            "#888685"
+            "#858584"
           ]
         }
       ]
@@ -39720,6 +39720,76 @@
           "hex": "#9d9b8e",
           "front": "catalog_images/district-dt6700/fog_front.jpg",
           "back": "catalog_images/district-dt6700/fog_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6702",
+      "name": "MelloFleece Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT6702",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Chai",
+          "hex": "#cdc1ac",
+          "front": "catalog_images/district-dt6702/chai_front.jpg",
+          "back": "catalog_images/district-dt6702/chai_back.jpg"
+        },
+        {
+          "name": "Deep Cyan",
+          "hex": "#2c4850",
+          "front": "catalog_images/district-dt6702/deep-cyan_front.jpg",
+          "back": "catalog_images/district-dt6702/deep-cyan_back.jpg"
+        },
+        {
+          "name": "River Blue Navy",
+          "hex": "#202e40",
+          "front": "catalog_images/district-dt6702/river-blue-navy_front.jpg",
+          "back": "catalog_images/district-dt6702/river-blue-navy_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#232426",
+          "front": "catalog_images/district-dt6702/black_front.jpg",
+          "back": "catalog_images/district-dt6702/black_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#6b6e6d",
+          "front": "catalog_images/district-dt6702/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt6702/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#323635",
+          "front": "catalog_images/district-dt6702/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6702/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Navy Heather",
+          "hex": "#3b4652",
+          "front": "catalog_images/district-dt6702/navy-heather_front.jpg",
+          "back": "catalog_images/district-dt6702/navy-heather_back.jpg"
+        },
+        {
+          "name": "Dark Olive",
+          "hex": "#35372a",
+          "front": "catalog_images/district-dt6702/dark-olive_front.jpg",
+          "back": "catalog_images/district-dt6702/dark-olive_back.jpg"
+        },
+        {
+          "name": "Warm Taupe",
+          "hex": "#817366",
+          "front": "catalog_images/district-dt6702/warm-taupe_front.jpg",
+          "back": "catalog_images/district-dt6702/warm-taupe_back.jpg"
+        },
+        {
+          "name": "Winter Blue",
+          "hex": "#d1ebf3",
+          "front": "catalog_images/district-dt6702/winter-blue_front.jpg",
+          "back": "catalog_images/district-dt6702/winter-blue_back.jpg"
         }
       ]
     }

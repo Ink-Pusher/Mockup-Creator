@@ -40174,6 +40174,64 @@
           "back": "catalog_images/district-dt1105/heathered-charcoal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt1106",
+      "name": "Perfect Weight Fleece Crew",
+      "brand": "District",
+      "style": "DT1106",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#364950",
+          "front": "catalog_images/district-dt1106/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dt1106/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#575a45",
+          "front": "catalog_images/district-dt1106/military-green_front.jpg",
+          "back": "catalog_images/district-dt1106/military-green_back.jpg"
+        },
+        {
+          "name": "White Onyx",
+          "hex": "#e5e6de",
+          "front": "catalog_images/district-dt1106/white-onyx_front.jpg",
+          "back": "catalog_images/district-dt1106/white-onyx_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#222f37",
+          "front": "catalog_images/district-dt1106/new-navy_front.jpg",
+          "back": "catalog_images/district-dt1106/new-navy_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#373d3d",
+          "front": "catalog_images/district-dt1106/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt1106/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Latte",
+          "hex": "#a8a08b",
+          "front": "catalog_images/district-dt1106/heathered-latte_front.jpg",
+          "back": "catalog_images/district-dt1106/heathered-latte_back.jpg"
+        },
+        {
+          "name": "Heathered Steel",
+          "hex": "#8f918e",
+          "front": "catalog_images/district-dt1106/heathered-steel_front.jpg",
+          "back": "catalog_images/district-dt1106/heathered-steel_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#20221f",
+          "front": "catalog_images/district-dt1106/jet-black_front.jpg",
+          "back": "catalog_images/district-dt1106/jet-black_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a3a3a5"
+            "#a3a6a5"
           ]
         },
         {
@@ -35681,6 +35681,88 @@
           "hex": "#3e403f",
           "front": "catalog_images/district-dt184/charcoal_front.jpg",
           "back": "catalog_images/district-dt184/charcoal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt188",
+      "name": "Women's Perfect Weight CVC Tee",
+      "brand": "District",
+      "style": "DT188",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Frosted Mint",
+          "hex": "#aed3c1",
+          "front": "catalog_images/district-dt188/frosted-mint_front.jpg",
+          "back": "catalog_images/district-dt188/frosted-mint_back.jpg"
+        },
+        {
+          "name": "Geranium Heather",
+          "hex": "#c0433f",
+          "front": "catalog_images/district-dt188/geranium-heather_front.jpg",
+          "back": "catalog_images/district-dt188/geranium-heather_back.jpg"
+        },
+        {
+          "name": "Military Green Heather",
+          "hex": "#4e5136",
+          "front": "catalog_images/district-dt188/military-green-heather_front.jpg",
+          "back": "catalog_images/district-dt188/military-green-heather_back.jpg"
+        },
+        {
+          "name": "Orchid Haze Heather",
+          "hex": "#9f6271",
+          "front": "catalog_images/district-dt188/orchid-haze-heather_front.jpg",
+          "back": "catalog_images/district-dt188/orchid-haze-heather_back.jpg"
+        },
+        {
+          "name": "Soft Yellow",
+          "hex": "#faebc2",
+          "front": "catalog_images/district-dt188/soft-yellow_front.jpg",
+          "back": "catalog_images/district-dt188/soft-yellow_back.jpg"
+        },
+        {
+          "name": "Jet Black Heather",
+          "hex": "#2b2f30",
+          "front": "catalog_images/district-dt188/jet-black-heather_front.jpg",
+          "back": "catalog_images/district-dt188/jet-black-heather_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#a4a9a3",
+          "front": "catalog_images/district-dt188/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt188/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Bright White",
+          "hex": "#f0f4f7",
+          "front": "catalog_images/district-dt188/bright-white_front.jpg",
+          "back": "catalog_images/district-dt188/bright-white_back.jpg"
+        },
+        {
+          "name": "Graphite Heather",
+          "hex": "#78797d",
+          "front": "catalog_images/district-dt188/graphite-heather_front.jpg",
+          "back": "catalog_images/district-dt188/graphite-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#293a4c",
+          "front": "catalog_images/district-dt188/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt188/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Heathered Teal",
+          "hex": "#10737a",
+          "front": "catalog_images/district-dt188/heathered-teal_front.jpg",
+          "back": "catalog_images/district-dt188/heathered-teal_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#1c1e1d",
+          "front": "catalog_images/district-dt188/jet-black_front.jpg",
+          "back": "catalog_images/district-dt188/jet-black_back.jpg"
         }
       ]
     }

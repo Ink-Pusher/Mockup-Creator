@@ -1446,7 +1446,7 @@
           "back": "catalog_images/richardson-112/black-light-grey-cmb_back.jpg",
           "hexes": [
             "#232223",
-            "#a6a6a4"
+            "#a6a6a6"
           ]
         },
         {
@@ -1859,7 +1859,7 @@
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
             "#b5b0b3",
-            "#a6a6a4"
+            "#a6a6a6"
           ]
         },
         {
@@ -2007,7 +2007,7 @@
           "back": "catalog_images/richardson-112/light-blue-light-grey-cmb_back.jpg",
           "hexes": [
             "#abb7d5",
-            "#a6a6a4"
+            "#a6a6a6"
           ]
         },
         {
@@ -31745,7 +31745,7 @@
           "front": "catalog_images/richardson-258/light-grey-black_front.jpg",
           "back": "catalog_images/richardson-258/light-grey-black_back.jpg",
           "hexes": [
-            "#a6a6a4",
+            "#a6a6a6",
             "#232223"
           ]
         },
@@ -31755,7 +31755,7 @@
           "front": "catalog_images/richardson-258/light-grey-white_front.jpg",
           "back": "catalog_images/richardson-258/light-grey-white_back.jpg",
           "hexes": [
-            "#a6a6a4",
+            "#a6a6a6",
             "#ecedee"
           ]
         },
@@ -37062,7 +37062,7 @@
           "front": "catalog_images/district-dm136/deep-royal-white_front.jpg",
           "back": "catalog_images/district-dm136/deep-royal-white_back.jpg",
           "hexes": [
-            "#25428b",
+            "#28428b",
             "#ecedee"
           ]
         },
@@ -37072,7 +37072,7 @@
           "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
           "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
           "hexes": [
-            "#252e38",
+            "#252f3a",
             "#ecedee"
           ]
         },
@@ -38205,6 +38205,40 @@
           "hex": "#4c4b47",
           "front": "catalog_images/district-dt573/washed-coal_front.jpg",
           "back": "catalog_images/district-dt573/washed-coal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt665",
+      "name": "Women's Medal Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT665",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#2e2e2e",
+          "front": "catalog_images/district-dt665/black_front.jpg",
+          "back": "catalog_images/district-dt665/black_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#42559f",
+          "front": "catalog_images/district-dt665/deep-royal_front.jpg",
+          "back": "catalog_images/district-dt665/deep-royal_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#babab6",
+          "front": "catalog_images/district-dt665/light-grey_front.jpg",
+          "back": "catalog_images/district-dt665/light-grey_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#424752",
+          "front": "catalog_images/district-dt665/new-navy_front.jpg",
+          "back": "catalog_images/district-dt665/new-navy_back.jpg"
         }
       ]
     }

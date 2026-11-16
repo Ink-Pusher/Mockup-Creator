@@ -9770,7 +9770,7 @@
           "front": "catalog_images/richardson-256/midnight-navy-white_front.jpg",
           "back": "catalog_images/richardson-256/midnight-navy-white_back.jpg",
           "hexes": [
-            "#232c40",
+            "#242c40",
             "#ededef"
           ]
         },
@@ -17156,7 +17156,7 @@
           "back": "catalog_images/next-level-3604/natural-midnight-navy_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#232c40"
+            "#242c40"
           ]
         },
         {
@@ -43635,8 +43635,8 @@
           "front": "catalog_images/next-level-9301/heavy-metal-heavy-metal_front.jpg",
           "back": "catalog_images/next-level-9301/heavy-metal-heavy-metal_back.jpg",
           "hexes": [
-            "#494949",
-            "#494949"
+            "#494948",
+            "#494948"
           ]
         },
         {
@@ -43645,7 +43645,7 @@
           "front": "catalog_images/next-level-9301/midnight-navy-cardinal_front.jpg",
           "back": "catalog_images/next-level-9301/midnight-navy-cardinal_back.jpg",
           "hexes": [
-            "#232c40",
+            "#242c40",
             "#841c2d"
           ]
         },
@@ -43655,7 +43655,7 @@
           "front": "catalog_images/next-level-9301/midnight-navy-heather-grey_front.jpg",
           "back": "catalog_images/next-level-9301/midnight-navy-heather-grey_back.jpg",
           "hexes": [
-            "#232c40",
+            "#242c40",
             "#b5b4b5"
           ]
         },
@@ -43942,6 +43942,64 @@
           "hex": "#263870",
           "front": "catalog_images/next-level-9602/royal_front.jpg",
           "back": "catalog_images/next-level-9602/royal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-9000",
+      "name": "Laguna Raglan Sweatshirt",
+      "brand": "Next Level",
+      "style": "9000",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#202123",
+          "front": "catalog_images/next-level-9000/black_front.jpg",
+          "back": "catalog_images/next-level-9000/black_back.jpg"
+        },
+        {
+          "name": "Cool Blue",
+          "hex": "#2a3a4c",
+          "front": "catalog_images/next-level-9000/cool-blue_front.jpg",
+          "back": "catalog_images/next-level-9000/cool-blue_back.jpg"
+        },
+        {
+          "name": "Graphite Black",
+          "hex": "#242424",
+          "front": "catalog_images/next-level-9000/graphite-black_front.jpg",
+          "back": "catalog_images/next-level-9000/graphite-black_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#b4b5b9",
+          "front": "catalog_images/next-level-9000/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-9000/heather-grey_back.jpg"
+        },
+        {
+          "name": "Heavy Metal",
+          "hex": "#494947",
+          "front": "catalog_images/next-level-9000/heavy-metal_front.jpg",
+          "back": "catalog_images/next-level-9000/heavy-metal_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#2b384d",
+          "front": "catalog_images/next-level-9000/midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-9000/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#878668",
+          "front": "catalog_images/next-level-9000/military-green_front.jpg",
+          "back": "catalog_images/next-level-9000/military-green_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#d1d1d1",
+          "front": "catalog_images/next-level-9000/white_front.jpg",
+          "back": "catalog_images/next-level-9000/white_back.jpg"
         }
       ]
     }

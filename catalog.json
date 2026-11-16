@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#4a4b4b"
+            "#494a4a"
           ]
         },
         {
@@ -35790,8 +35790,8 @@
           "front": "catalog_images/district-dm476/heathered-red-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
-            "#973541",
-            "#4a4b4b"
+            "#993642",
+            "#494a4a"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#4a4b4b"
+            "#494a4a"
           ]
         },
         {
@@ -36617,6 +36617,64 @@
           "hex": "#424647",
           "front": "catalog_images/district-dt7075/heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt7075/heathered-charcoal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt7500",
+      "name": "Flex Tee",
+      "brand": "District",
+      "style": "DT7500",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1d1d1d",
+          "front": "catalog_images/district-dt7500/black_front.jpg",
+          "back": "catalog_images/district-dt7500/black_back.jpg"
+        },
+        {
+          "name": "Heathered Deep Royal",
+          "hex": "#344a77",
+          "front": "catalog_images/district-dt7500/heathered-deep-royal_front.jpg",
+          "back": "catalog_images/district-dt7500/heathered-deep-royal_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#48423f",
+          "front": "catalog_images/district-dt7500/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt7500/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Neptune Blue",
+          "hex": "#2b4251",
+          "front": "catalog_images/district-dt7500/heathered-neptune-blue_front.jpg",
+          "back": "catalog_images/district-dt7500/heathered-neptune-blue_back.jpg"
+        },
+        {
+          "name": "Heathered Red",
+          "hex": "#a73844",
+          "front": "catalog_images/district-dt7500/heathered-red_front.jpg",
+          "back": "catalog_images/district-dt7500/heathered-red_back.jpg"
+        },
+        {
+          "name": "Lilac",
+          "hex": "#f0c9d4",
+          "front": "catalog_images/district-dt7500/lilac_front.jpg",
+          "back": "catalog_images/district-dt7500/lilac_back.jpg"
+        },
+        {
+          "name": "Silver Mist",
+          "hex": "#c1bdbc",
+          "front": "catalog_images/district-dt7500/silver-mist_front.jpg",
+          "back": "catalog_images/district-dt7500/silver-mist_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/district-dt7500/white_front.jpg",
+          "back": "catalog_images/district-dt7500/white_back.jpg"
         }
       ]
     }

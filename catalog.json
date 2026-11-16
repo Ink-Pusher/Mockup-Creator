@@ -40738,6 +40738,52 @@
           "back": "catalog_images/district-dt6704/cherrywood_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt7804",
+      "name": "Cloud Fleece Crew",
+      "brand": "District",
+      "style": "DT7804",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#35444b",
+          "front": "catalog_images/district-dt7804/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dt7804/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Slate Green",
+          "hex": "#8a978d",
+          "front": "catalog_images/district-dt7804/slate-green_front.jpg",
+          "back": "catalog_images/district-dt7804/slate-green_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#3e4444",
+          "front": "catalog_images/district-dt7804/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt7804/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Steel",
+          "hex": "#949693",
+          "front": "catalog_images/district-dt7804/heathered-steel_front.jpg",
+          "back": "catalog_images/district-dt7804/heathered-steel_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#171b1a",
+          "front": "catalog_images/district-dt7804/jet-black_front.jpg",
+          "back": "catalog_images/district-dt7804/jet-black_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#202d33",
+          "front": "catalog_images/district-dt7804/new-navy_front.jpg",
+          "back": "catalog_images/district-dt7804/new-navy_back.jpg"
+        }
+      ]
     }
   ]
 }

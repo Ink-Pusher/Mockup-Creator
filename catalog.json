@@ -55046,6 +55046,99 @@
         "5-panel",
         "snapback"
       ]
+    },
+    {
+      "id": "richardson-355",
+      "name": "Laser Perf Performance Rope Cap",
+      "brand": "Richardson",
+      "style": "355",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black-Grey",
+          "hex": "#1b1b1b",
+          "front": "catalog_images/richardson-355/black-black-grey_front.jpg",
+          "back": "catalog_images/richardson-355/black-black-grey_back.jpg"
+        },
+        {
+          "name": "Clay/ White-Black",
+          "hex": "#b2743c",
+          "front": "catalog_images/richardson-355/clay-white-black_front.jpg",
+          "back": "catalog_images/richardson-355/clay-white-black_back.jpg",
+          "hexes": [
+            "#a95331",
+            "#262626"
+          ]
+        },
+        {
+          "name": "Dark Loden/ Tannin-Grey",
+          "hex": "#6b5a44",
+          "front": "catalog_images/richardson-355/dark-loden-tannin-grey_front.jpg",
+          "back": "catalog_images/richardson-355/dark-loden-tannin-grey_back.jpg"
+        },
+        {
+          "name": "Light Olive/ Olive",
+          "hex": "#999e7f",
+          "front": "catalog_images/richardson-355/light-olive-olive_front.jpg",
+          "back": "catalog_images/richardson-355/light-olive-olive_back.jpg",
+          "hexes": [
+            "#918a6d",
+            "#53583e"
+          ]
+        },
+        {
+          "name": "Lilac/ White-Grey",
+          "hex": "#c6b7c1",
+          "front": "catalog_images/richardson-355/lilac-white-grey_front.jpg",
+          "back": "catalog_images/richardson-355/lilac-white-grey_back.jpg"
+        },
+        {
+          "name": "Navy/ Midnight Navy-Grey Blue",
+          "hex": "#101625",
+          "front": "catalog_images/richardson-355/navy-midnight-navy-grey-blue_front.jpg",
+          "back": "catalog_images/richardson-355/navy-midnight-navy-grey-blue_back.jpg"
+        },
+        {
+          "name": "Oat Milk/ Elmwood-White",
+          "hex": "#c9c7b2",
+          "front": "catalog_images/richardson-355/oat-milk-elmwood-white_front.jpg",
+          "back": "catalog_images/richardson-355/oat-milk-elmwood-white_back.jpg"
+        },
+        {
+          "name": "Silver/ Black-Silver",
+          "hex": "#cdcdcd",
+          "front": "catalog_images/richardson-355/silver-black-silver_front.jpg",
+          "back": "catalog_images/richardson-355/silver-black-silver_back.jpg"
+        },
+        {
+          "name": "Smoke Blue/ Grey-White",
+          "hex": "#8aa7a9",
+          "front": "catalog_images/richardson-355/smoke-blue-grey-white_front.jpg",
+          "back": "catalog_images/richardson-355/smoke-blue-grey-white_back.jpg"
+        },
+        {
+          "name": "Trenchcoat/ Russet-Grey",
+          "hex": "#a4a190",
+          "front": "catalog_images/richardson-355/trenchcoat-russet-grey_front.jpg",
+          "back": "catalog_images/richardson-355/trenchcoat-russet-grey_back.jpg"
+        },
+        {
+          "name": "White/ White-Black",
+          "hex": "#ededed",
+          "front": "catalog_images/richardson-355/white-white-black_front.jpg",
+          "back": "catalog_images/richardson-355/white-white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#262626"
+          ]
+        }
+      ],
+      "hatTags": [
+        "structured",
+        "5-panel",
+        "snapback"
+      ]
     }
   ]
 }

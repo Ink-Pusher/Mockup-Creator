@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a3a3a4"
+            "#a4a4a5"
           ]
         },
         {
@@ -38119,6 +38119,58 @@
           "hex": "#3c424c",
           "front": "catalog_images/district-dt565/new-navy_front.jpg",
           "back": "catalog_images/district-dt565/new-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt571",
+      "name": "Featherweight French Terry Hoodie",
+      "brand": "District",
+      "style": "DT571",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1a1a1a",
+          "front": "catalog_images/district-dt571/black_front.jpg",
+          "back": "catalog_images/district-dt571/black_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#bdbcb9",
+          "front": "catalog_images/district-dt571/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt571/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Washed Coal",
+          "hex": "#565551",
+          "front": "catalog_images/district-dt571/washed-coal_front.jpg",
+          "back": "catalog_images/district-dt571/washed-coal_back.jpg"
+        },
+        {
+          "name": "Washed Indigo",
+          "hex": "#475c6c",
+          "front": "catalog_images/district-dt571/washed-indigo_front.jpg",
+          "back": "catalog_images/district-dt571/washed-indigo_back.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "hex": "#f5ebe1",
+          "front": "catalog_images/district-dt571/gardenia_front.jpg",
+          "back": "catalog_images/district-dt571/gardenia_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#909eab",
+          "front": "catalog_images/district-dt571/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt571/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Nostalgia Rose Heather",
+          "hex": "#e2a497",
+          "front": "catalog_images/district-dt571/nostalgia-rose-heather_front.jpg",
+          "back": "catalog_images/district-dt571/nostalgia-rose-heather_back.jpg"
         }
       ]
     }

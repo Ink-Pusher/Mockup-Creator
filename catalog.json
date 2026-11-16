@@ -32422,7 +32422,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-black_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-black_back.jpg",
           "hexes": [
-            "#49464a",
+            "#4a474b",
             "#232223"
           ]
         },
@@ -32432,7 +32432,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-navy_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-navy_back.jpg",
           "hexes": [
-            "#49464a",
+            "#4a474b",
             "#282f3f"
           ]
         },
@@ -32442,7 +32442,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-red_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-red_back.jpg",
           "hexes": [
-            "#49464a",
+            "#4a474b",
             "#c2162f"
           ]
         },
@@ -38423,6 +38423,28 @@
           "hex": "#49494b",
           "front": "catalog_images/district-dt810/heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt810/heathered-charcoal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt1100",
+      "name": "Jersey Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT1100",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#21201e",
+          "front": "catalog_images/district-dt1100/black_front.jpg",
+          "back": "catalog_images/district-dt1100/black_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#7c7b81",
+          "front": "catalog_images/district-dt1100/dark-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt1100/dark-heather-grey_back.jpg"
         }
       ]
     }

@@ -35765,6 +35765,68 @@
           "back": "catalog_images/district-dt188/jet-black_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dm476",
+      "name": "Women's Game V-Neck Tee",
+      "brand": "District",
+      "style": "DM476",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Heathered Charcoal",
+          "hex": "#232323",
+          "front": "catalog_images/district-dm476/black-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#232223",
+            "#4a4b4b"
+          ]
+        },
+        {
+          "name": "Heathered Red/ Heathered Charcoal",
+          "hex": "#cc4a57",
+          "front": "catalog_images/district-dm476/heathered-red-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#95343e",
+            "#4a4b4b"
+          ]
+        },
+        {
+          "name": "Heathered True Royal/ Heathered Charcoal",
+          "hex": "#445cb4",
+          "front": "catalog_images/district-dm476/heathered-true-royal-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm476/heathered-true-royal-heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Watermelon/ Heathered Charcoal",
+          "hex": "#ef3f6d",
+          "front": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#d33a6b",
+            "#4a4b4b"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#f3f3f3",
+          "front": "catalog_images/district-dm476/white-black_front.jpg",
+          "back": "catalog_images/district-dm476/white-black_back.jpg",
+          "hexes": [
+            "#ededef",
+            "#232223"
+          ]
+        },
+        {
+          "name": "White/ Heathered True Navy",
+          "hex": "#f5f5f5",
+          "front": "catalog_images/district-dm476/white-heathered-true-navy_front.jpg",
+          "back": "catalog_images/district-dm476/white-heathered-true-navy_back.jpg"
+        }
+      ]
     }
   ]
 }

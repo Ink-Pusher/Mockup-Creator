@@ -37012,7 +37012,7 @@
           "front": "catalog_images/district-dm136/red-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
           "hexes": [
-            "#c84852",
+            "#ca4c53",
             "#8c8c8c"
           ]
         },
@@ -37042,7 +37042,7 @@
           "front": "catalog_images/district-dm136/military-green-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
           "hexes": [
-            "#6e6d50",
+            "#727150",
             "#8c8c8c"
           ]
         },
@@ -37072,7 +37072,7 @@
           "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
           "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
           "hexes": [
-            "#222e37",
+            "#232e38",
             "#ededef"
           ]
         },
@@ -37549,6 +37549,76 @@
           "hex": "#c99ca5",
           "front": "catalog_images/district-dm138l/heathered-lavender_front.jpg",
           "back": "catalog_images/district-dm138l/heathered-lavender_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt151",
+      "name": "Women's Perfect Tri Relaxed Tank",
+      "brand": "District",
+      "style": "DT151",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Aqua Heather",
+          "hex": "#5fe8cc",
+          "front": "catalog_images/district-dt151/aqua-heather_front.jpg",
+          "back": "catalog_images/district-dt151/aqua-heather_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#272624",
+          "front": "catalog_images/district-dt151/black_front.jpg",
+          "back": "catalog_images/district-dt151/black_back.jpg"
+        },
+        {
+          "name": "Blush Frost",
+          "hex": "#d0978f",
+          "front": "catalog_images/district-dt151/blush-frost_front.jpg",
+          "back": "catalog_images/district-dt151/blush-frost_back.jpg"
+        },
+        {
+          "name": "Deepest Grey",
+          "hex": "#484d47",
+          "front": "catalog_images/district-dt151/deepest-grey_front.jpg",
+          "back": "catalog_images/district-dt151/deepest-grey_back.jpg"
+        },
+        {
+          "name": "Heathered Grey",
+          "hex": "#b1b4ac",
+          "front": "catalog_images/district-dt151/heathered-grey_front.jpg",
+          "back": "catalog_images/district-dt151/heathered-grey_back.jpg"
+        },
+        {
+          "name": "Maritime Frost",
+          "hex": "#7a96cd",
+          "front": "catalog_images/district-dt151/maritime-frost_front.jpg",
+          "back": "catalog_images/district-dt151/maritime-frost_back.jpg"
+        },
+        {
+          "name": "Military Green Frost",
+          "hex": "#737252",
+          "front": "catalog_images/district-dt151/military-green-frost_front.jpg",
+          "back": "catalog_images/district-dt151/military-green-frost_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#2c333c",
+          "front": "catalog_images/district-dt151/new-navy_front.jpg",
+          "back": "catalog_images/district-dt151/new-navy_back.jpg"
+        },
+        {
+          "name": "Red Frost",
+          "hex": "#e05253",
+          "front": "catalog_images/district-dt151/red-frost_front.jpg",
+          "back": "catalog_images/district-dt151/red-frost_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e4e4e4",
+          "front": "catalog_images/district-dt151/white_front.jpg",
+          "back": "catalog_images/district-dt151/white_back.jpg"
         }
       ]
     }

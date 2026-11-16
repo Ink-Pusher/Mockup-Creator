@@ -55235,6 +55235,141 @@
         "snapback",
         "cotton-twill"
       ]
+    },
+    {
+      "id": "richardson-511",
+      "name": "Acrylic Wool Blend Flatbill Trucker Hat",
+      "brand": "Richardson",
+      "style": "511",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Black",
+          "hex": "#242223",
+          "front": "catalog_images/richardson-511/black-black_front.jpg",
+          "back": "catalog_images/richardson-511/black-black_back.jpg",
+          "hexes": [
+            "#232123",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#211f20",
+          "front": "catalog_images/richardson-511/black-white_front.jpg",
+          "back": "catalog_images/richardson-511/black-white_back.jpg",
+          "hexes": [
+            "#232123",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Charcoal/ White",
+          "hex": "#5a5656",
+          "front": "catalog_images/richardson-511/charcoal-white_front.jpg",
+          "back": "catalog_images/richardson-511/charcoal-white_back.jpg",
+          "hexes": [
+            "#4c4a4b",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Green Camo/ Black",
+          "hex": "#493e2f",
+          "front": "catalog_images/richardson-511/green-camo-black_front.jpg",
+          "back": "catalog_images/richardson-511/green-camo-black_back.jpg",
+          "swatch": "catalog_images/richardson-511/green-camo-black_swatch.jpg",
+          "hexes": [
+            "#3f3b2c",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Heather Charcoal/ White",
+          "hex": "#3b3b3b",
+          "front": "catalog_images/richardson-511/heather-charcoal-white_front.jpg",
+          "back": "catalog_images/richardson-511/heather-charcoal-white_back.jpg",
+          "hexes": [
+            "#3a3d3f",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Birch/ Biscuit",
+          "hex": "#939495",
+          "front": "catalog_images/richardson-511/heather-grey-birch-biscuit_front.jpg",
+          "back": "catalog_images/richardson-511/heather-grey-birch-biscuit_back.jpg"
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#949492",
+          "front": "catalog_images/richardson-511/heather-grey-black_front.jpg",
+          "back": "catalog_images/richardson-511/heather-grey-black_back.jpg",
+          "hexes": [
+            "#b4b2b3",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Khaki/ Black",
+          "hex": "#ad977e",
+          "front": "catalog_images/richardson-511/khaki-black_front.jpg",
+          "back": "catalog_images/richardson-511/khaki-black_back.jpg",
+          "hexes": [
+            "#b6a586",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Loden/ Black",
+          "hex": "#5a5132",
+          "front": "catalog_images/richardson-511/loden-black_front.jpg",
+          "back": "catalog_images/richardson-511/loden-black_back.jpg",
+          "hexes": [
+            "#666555",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Navy/ Navy",
+          "hex": "#363c4b",
+          "front": "catalog_images/richardson-511/navy-navy_front.jpg",
+          "back": "catalog_images/richardson-511/navy-navy_back.jpg",
+          "hexes": [
+            "#293143",
+            "#293143"
+          ]
+        },
+        {
+          "name": "Navy/ White",
+          "hex": "#22293a",
+          "front": "catalog_images/richardson-511/navy-white_front.jpg",
+          "back": "catalog_images/richardson-511/navy-white_back.jpg",
+          "hexes": [
+            "#293143",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#bc0b1f",
+          "front": "catalog_images/richardson-511/red-black_front.jpg",
+          "back": "catalog_images/richardson-511/red-black_back.jpg",
+          "hexes": [
+            "#b71830",
+            "#232123"
+          ]
+        }
+      ],
+      "hatTags": [
+        "trucker",
+        "structured",
+        "6-panel",
+        "snapback",
+        "mesh",
+        "wool"
+      ]
     }
   ]
 }

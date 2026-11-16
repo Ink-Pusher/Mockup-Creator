@@ -30346,7 +30346,7 @@
           "front": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#364455",
+            "#323e4b",
             "#929394",
             "#f1f1e9"
           ]
@@ -38794,6 +38794,46 @@
           "hex": "#374455",
           "front": "catalog_images/district-dt2200/true-navy_front.jpg",
           "back": "catalog_images/district-dt2200/true-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt2200c",
+      "name": "Wash Camo Fleece Hoodie",
+      "brand": "District",
+      "style": "DT2200C",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bordeaux",
+          "hex": "#57282b",
+          "front": "catalog_images/district-dt2200c/bordeaux_front.jpg",
+          "back": "catalog_images/district-dt2200c/bordeaux_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#585e5a",
+          "front": "catalog_images/district-dt2200c/graphite_front.jpg",
+          "back": "catalog_images/district-dt2200c/graphite_back.jpg"
+        },
+        {
+          "name": "Olive Drab Green",
+          "hex": "#40422d",
+          "front": "catalog_images/district-dt2200c/olive-drab-green_front.jpg",
+          "back": "catalog_images/district-dt2200c/olive-drab-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#303435",
+          "front": "catalog_images/district-dt2200c/black_front.jpg",
+          "back": "catalog_images/district-dt2200c/black_back.jpg"
+        },
+        {
+          "name": "True Navy",
+          "hex": "#2f3842",
+          "front": "catalog_images/district-dt2200c/true-navy_front.jpg",
+          "back": "catalog_images/district-dt2200c/true-navy_back.jpg"
         }
       ]
     }

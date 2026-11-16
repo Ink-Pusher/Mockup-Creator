@@ -40516,6 +40516,52 @@
           "back": "catalog_images/district-dt6106/heathered-charcoal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt6111",
+      "name": "Women's V.I.T. Fleece 1/2-Zip",
+      "brand": "District",
+      "style": "DT6111",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#262626",
+          "front": "catalog_images/district-dt6111/black_front.jpg",
+          "back": "catalog_images/district-dt6111/black_back.jpg"
+        },
+        {
+          "name": "Eucalyptus Blue",
+          "hex": "#4b8988",
+          "front": "catalog_images/district-dt6111/eucalyptus-blue_front.jpg",
+          "back": "catalog_images/district-dt6111/eucalyptus-blue_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#85909e",
+          "front": "catalog_images/district-dt6111/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt6111/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "hex": "#f5f2eb",
+          "front": "catalog_images/district-dt6111/gardenia_front.jpg",
+          "back": "catalog_images/district-dt6111/gardenia_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#636667",
+          "front": "catalog_images/district-dt6111/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6111/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#c0c3c9",
+          "front": "catalog_images/district-dt6111/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6111/light-heather-grey_back.jpg"
+        }
+      ]
     }
   ]
 }

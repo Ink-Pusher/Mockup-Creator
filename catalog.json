@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#494a4a"
+            "#4a4a4a"
           ]
         },
         {
@@ -35790,8 +35790,8 @@
           "front": "catalog_images/district-dm476/heathered-red-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
-            "#993642",
-            "#494a4a"
+            "#9c3744",
+            "#4a4a4a"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#494a4a"
+            "#4a4a4a"
           ]
         },
         {
@@ -36675,6 +36675,58 @@
           "hex": "#e3e3e3",
           "front": "catalog_images/district-dt7500/white_front.jpg",
           "back": "catalog_images/district-dt7500/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt7501",
+      "name": "Women's Flex Scoop Neck Tee",
+      "brand": "District",
+      "style": "DT7501",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1a1a1a",
+          "front": "catalog_images/district-dt7501/black_front.jpg",
+          "back": "catalog_images/district-dt7501/black_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#4f4844",
+          "front": "catalog_images/district-dt7501/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt7501/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Deep Royal",
+          "hex": "#344976",
+          "front": "catalog_images/district-dt7501/heathered-deep-royal_front.jpg",
+          "back": "catalog_images/district-dt7501/heathered-deep-royal_back.jpg"
+        },
+        {
+          "name": "Heathered Neptune Blue",
+          "hex": "#304959",
+          "front": "catalog_images/district-dt7501/heathered-neptune-blue_front.jpg",
+          "back": "catalog_images/district-dt7501/heathered-neptune-blue_back.jpg"
+        },
+        {
+          "name": "Heathered Red",
+          "hex": "#ab3946",
+          "front": "catalog_images/district-dt7501/heathered-red_front.jpg",
+          "back": "catalog_images/district-dt7501/heathered-red_back.jpg"
+        },
+        {
+          "name": "Silver Mist",
+          "hex": "#c9c7c5",
+          "front": "catalog_images/district-dt7501/silver-mist_front.jpg",
+          "back": "catalog_images/district-dt7501/silver-mist_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/district-dt7501/white_front.jpg",
+          "back": "catalog_images/district-dt7501/white_back.jpg"
         }
       ]
     }

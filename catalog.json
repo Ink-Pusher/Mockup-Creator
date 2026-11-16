@@ -38710,6 +38710,28 @@
           "back": "catalog_images/district-dt1390l/natural_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt2100",
+      "name": "Women's Fitted Jersey Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT2100",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#211f1e",
+          "front": "catalog_images/district-dt2100/black_front.jpg",
+          "back": "catalog_images/district-dt2100/black_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#76757b",
+          "front": "catalog_images/district-dt2100/dark-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt2100/dark-heather-grey_back.jpg"
+        }
+      ]
     }
   ]
 }

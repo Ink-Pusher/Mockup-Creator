@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a3a3a4"
+            "#a4a4a5"
           ]
         },
         {
@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#4a4a4a"
+            "#4a4a49"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#4a4a4a"
+            "#4a4a49"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#4a4a4a"
+            "#4a4a49"
           ]
         },
         {
@@ -36827,6 +36827,64 @@
           "hex": "#5a5e5f",
           "front": "catalog_images/district-dt8000/deep-grey-heather_front.jpg",
           "back": "catalog_images/district-dt8000/deep-grey-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt110",
+      "name": "Women's Perfect Blend CVC Long Sleeve Tee",
+      "brand": "District",
+      "style": "DT110",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#252422",
+          "front": "catalog_images/district-dt110/black_front.jpg",
+          "back": "catalog_images/district-dt110/black_back.jpg"
+        },
+        {
+          "name": "Blush Frost",
+          "hex": "#d28480",
+          "front": "catalog_images/district-dt110/blush-frost_front.jpg",
+          "back": "catalog_images/district-dt110/blush-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Dusty Sage",
+          "hex": "#a3bbae",
+          "front": "catalog_images/district-dt110/heathered-dusty-sage_front.jpg",
+          "back": "catalog_images/district-dt110/heathered-dusty-sage_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#4d4e48",
+          "front": "catalog_images/district-dt110/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt110/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Royal",
+          "hex": "#7098ef",
+          "front": "catalog_images/district-dt110/heathered-royal_front.jpg",
+          "back": "catalog_images/district-dt110/heathered-royal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#b0b0b0",
+          "front": "catalog_images/district-dt110/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt110/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e3e3e3",
+          "front": "catalog_images/district-dt110/white_front.jpg",
+          "back": "catalog_images/district-dt110/white_back.jpg"
+        },
+        {
+          "name": "Heathered Olive",
+          "hex": "#595e47",
+          "front": "catalog_images/district-dt110/heathered-olive_front.jpg",
+          "back": "catalog_images/district-dt110/heathered-olive_back.jpg"
         }
       ]
     }

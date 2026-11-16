@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#423e43",
+            "#423d43",
             "#232223"
           ]
         },
@@ -16968,7 +16968,7 @@
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
             "#b5b0b3",
-            "#423e43"
+            "#423d43"
           ]
         },
         {
@@ -30253,7 +30253,7 @@
           "hexes": [
             "#565959",
             "#f1f1e9",
-            "#423e43"
+            "#423d43"
           ]
         }
       ]
@@ -37345,6 +37345,46 @@
           "hex": "#525751",
           "front": "catalog_images/district-dt6200/deepest-grey_front.jpg",
           "back": "catalog_images/district-dt6200/deepest-grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt8003",
+      "name": "Re-Tee Long Sleeve",
+      "brand": "District",
+      "style": "DT8003",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#0d0d0d",
+          "front": "catalog_images/district-dt8003/black_front.jpg",
+          "back": "catalog_images/district-dt8003/black_back.jpg"
+        },
+        {
+          "name": "Blue Heather",
+          "hex": "#486da8",
+          "front": "catalog_images/district-dt8003/blue-heather_front.jpg",
+          "back": "catalog_images/district-dt8003/blue-heather_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#373735",
+          "front": "catalog_images/district-dt8003/charcoal-heather_front.jpg",
+          "back": "catalog_images/district-dt8003/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#3c3f49",
+          "front": "catalog_images/district-dt8003/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt8003/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#959492",
+          "front": "catalog_images/district-dt8003/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt8003/light-heather-grey_back.jpg"
         }
       ]
     }

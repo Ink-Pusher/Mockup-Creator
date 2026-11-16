@@ -40562,6 +40562,82 @@
           "back": "catalog_images/district-dt6111/light-heather-grey_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt6154",
+      "name": "V.I.T. Heavyweight Fleece Crew",
+      "brand": "District",
+      "style": "DT6154",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bordeaux",
+          "hex": "#37232e",
+          "front": "catalog_images/district-dt6154/bordeaux_front.jpg",
+          "back": "catalog_images/district-dt6154/bordeaux_back.jpg"
+        },
+        {
+          "name": "Dark Royal",
+          "hex": "#172844",
+          "front": "catalog_images/district-dt6154/dark-royal_front.jpg",
+          "back": "catalog_images/district-dt6154/dark-royal_back.jpg"
+        },
+        {
+          "name": "Deep Cyan",
+          "hex": "#2b4951",
+          "front": "catalog_images/district-dt6154/deep-cyan_front.jpg",
+          "back": "catalog_images/district-dt6154/deep-cyan_back.jpg"
+        },
+        {
+          "name": "Dusty Sage",
+          "hex": "#a0beb4",
+          "front": "catalog_images/district-dt6154/dusty-sage_front.jpg",
+          "back": "catalog_images/district-dt6154/dusty-sage_back.jpg"
+        },
+        {
+          "name": "Griege",
+          "hex": "#ece3d2",
+          "front": "catalog_images/district-dt6154/griege_front.jpg",
+          "back": "catalog_images/district-dt6154/griege_back.jpg"
+        },
+        {
+          "name": "Navy Blue",
+          "hex": "#1c272b",
+          "front": "catalog_images/district-dt6154/navy-blue_front.jpg",
+          "back": "catalog_images/district-dt6154/navy-blue_back.jpg"
+        },
+        {
+          "name": "Smoky Amethyst",
+          "hex": "#877c82",
+          "front": "catalog_images/district-dt6154/smoky-amethyst_front.jpg",
+          "back": "catalog_images/district-dt6154/smoky-amethyst_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#ebecf1",
+          "front": "catalog_images/district-dt6154/white_front.jpg",
+          "back": "catalog_images/district-dt6154/white_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#434748",
+          "front": "catalog_images/district-dt6154/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6154/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#abafae",
+          "front": "catalog_images/district-dt6154/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6154/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#191919",
+          "front": "catalog_images/district-dt6154/black_front.jpg",
+          "back": "catalog_images/district-dt6154/black_back.jpg"
+        }
+      ]
     }
   ]
 }

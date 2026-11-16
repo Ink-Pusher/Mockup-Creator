@@ -7791,7 +7791,7 @@
           "swatch": "catalog_images/yupoong-6606/multicam-arid-tan_swatch.jpg",
           "hexes": [
             "#ad957f",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -8166,7 +8166,7 @@
           "swatch": "catalog_images/yupoong-6006/multicam-arid-tan_swatch.jpg",
           "hexes": [
             "#ad957f",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -28310,7 +28310,7 @@
           "front": "catalog_images/adam-s-ol102/black-tan_front.jpg",
           "hexes": [
             "#232223",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -28319,7 +28319,7 @@
           "front": "catalog_images/adam-s-ol102/charcoal-tan_front.jpg",
           "hexes": [
             "#494849",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -28328,7 +28328,7 @@
           "front": "catalog_images/adam-s-ol102/coral-tan_front.jpg",
           "hexes": [
             "#ef796b",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -28347,7 +28347,7 @@
           "front": "catalog_images/adam-s-ol102/navy-tan_front.jpg",
           "hexes": [
             "#282f3f",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -28356,7 +28356,7 @@
           "front": "catalog_images/adam-s-ol102/royal-tan_front.jpg",
           "hexes": [
             "#214e92",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -28365,7 +28365,7 @@
           "front": "catalog_images/adam-s-ol102/teal-tan_front.jpg",
           "hexes": [
             "#0c99a3",
-            "#bfa891"
+            "#c0a890"
           ]
         }
       ],
@@ -33064,7 +33064,7 @@
           "swatch": "catalog_images/valucap-s102/green-camo-tan_swatch.jpg",
           "hexes": [
             "#3f3b2c",
-            "#bfa891"
+            "#c0a890"
           ]
         },
         {
@@ -43868,6 +43868,40 @@
           "hex": "#e7e7e8",
           "front": "catalog_images/next-level-9303/white_front.jpg",
           "back": "catalog_images/next-level-9303/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-9307",
+      "name": "Heavyweight Pullover Hoodie",
+      "brand": "Next Level",
+      "style": "9307",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bone",
+          "hex": "#dcdbd7",
+          "front": "catalog_images/next-level-9307/bone_front.jpg",
+          "back": "catalog_images/next-level-9307/bone_back.jpg"
+        },
+        {
+          "name": "Graphite Black",
+          "hex": "#2c2c2e",
+          "front": "catalog_images/next-level-9307/graphite-black_front.jpg",
+          "back": "catalog_images/next-level-9307/graphite-black_back.jpg"
+        },
+        {
+          "name": "Shiitake",
+          "hex": "#937e7b",
+          "front": "catalog_images/next-level-9307/shiitake_front.jpg",
+          "back": "catalog_images/next-level-9307/shiitake_back.jpg"
+        },
+        {
+          "name": "Tan",
+          "hex": "#c1a98f",
+          "front": "catalog_images/next-level-9307/tan_front.jpg",
+          "back": "catalog_images/next-level-9307/tan_back.jpg"
         }
       ]
     }

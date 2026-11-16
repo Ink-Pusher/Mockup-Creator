@@ -30356,7 +30356,7 @@
           "front": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#26303e",
+            "#272e3d",
             "#9a9d9a",
             "#f1f1e9"
           ]
@@ -51676,6 +51676,124 @@
           "hex": "#f44a22",
           "front": "catalog_images/port-co-pc90/safety-orange_front.jpg",
           "back": "catalog_images/port-co-pc90/safety-orange_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc098",
+      "name": "Beach Wash Garment-Dyed Crewneck Sweatshirt",
+      "brand": "Port & Co",
+      "style": "PC098",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Amethyst",
+          "hex": "#786cb8",
+          "front": "catalog_images/port-co-pc098/amethyst_front.jpg",
+          "back": "catalog_images/port-co-pc098/amethyst_back.jpg"
+        },
+        {
+          "name": "Blue Moon",
+          "hex": "#5893cd",
+          "front": "catalog_images/port-co-pc098/blue-moon_front.jpg",
+          "back": "catalog_images/port-co-pc098/blue-moon_back.jpg"
+        },
+        {
+          "name": "Coal",
+          "hex": "#444549",
+          "front": "catalog_images/port-co-pc098/coal_front.jpg",
+          "back": "catalog_images/port-co-pc098/coal_back.jpg"
+        },
+        {
+          "name": "Denim Blue",
+          "hex": "#4f6074",
+          "front": "catalog_images/port-co-pc098/denim-blue_front.jpg",
+          "back": "catalog_images/port-co-pc098/denim-blue_back.jpg"
+        },
+        {
+          "name": "Merlot",
+          "hex": "#813043",
+          "front": "catalog_images/port-co-pc098/merlot_front.jpg",
+          "back": "catalog_images/port-co-pc098/merlot_back.jpg"
+        },
+        {
+          "name": "Mist",
+          "hex": "#759bae",
+          "front": "catalog_images/port-co-pc098/mist_front.jpg",
+          "back": "catalog_images/port-co-pc098/mist_back.jpg"
+        },
+        {
+          "name": "Pewter",
+          "hex": "#6e7275",
+          "front": "catalog_images/port-co-pc098/pewter_front.jpg",
+          "back": "catalog_images/port-co-pc098/pewter_back.jpg"
+        },
+        {
+          "name": "Safari",
+          "hex": "#6ea377",
+          "front": "catalog_images/port-co-pc098/safari_front.jpg",
+          "back": "catalog_images/port-co-pc098/safari_back.jpg"
+        },
+        {
+          "name": "Fruit Punch",
+          "hex": "#da6072",
+          "front": "catalog_images/port-co-pc098/fruit-punch_front.jpg",
+          "back": "catalog_images/port-co-pc098/fruit-punch_back.jpg"
+        },
+        {
+          "name": "Tidal Wave",
+          "hex": "#60bad2",
+          "front": "catalog_images/port-co-pc098/tidal-wave_front.jpg",
+          "back": "catalog_images/port-co-pc098/tidal-wave_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eeeeee",
+          "front": "catalog_images/port-co-pc098/white_front.jpg",
+          "back": "catalog_images/port-co-pc098/white_back.jpg"
+        },
+        {
+          "name": "Blue Iris",
+          "hex": "#3f4b95",
+          "front": "catalog_images/port-co-pc098/blue-iris_front.jpg",
+          "back": "catalog_images/port-co-pc098/blue-iris_back.jpg"
+        },
+        {
+          "name": "Dijon",
+          "hex": "#daab3d",
+          "front": "catalog_images/port-co-pc098/dijon_front.jpg",
+          "back": "catalog_images/port-co-pc098/dijon_back.jpg"
+        },
+        {
+          "name": "Peacock",
+          "hex": "#52b4a9",
+          "front": "catalog_images/port-co-pc098/peacock_front.jpg",
+          "back": "catalog_images/port-co-pc098/peacock_back.jpg"
+        },
+        {
+          "name": "Red Rock",
+          "hex": "#9e393d",
+          "front": "catalog_images/port-co-pc098/red-rock_front.jpg",
+          "back": "catalog_images/port-co-pc098/red-rock_back.jpg"
+        },
+        {
+          "name": "True Navy",
+          "hex": "#2c293d",
+          "front": "catalog_images/port-co-pc098/true-navy_front.jpg",
+          "back": "catalog_images/port-co-pc098/true-navy_back.jpg"
+        },
+        {
+          "name": "Cool Mint",
+          "hex": "#83d4be",
+          "front": "catalog_images/port-co-pc098/cool-mint_front.jpg",
+          "back": "catalog_images/port-co-pc098/cool-mint_back.jpg"
+        },
+        {
+          "name": "Nordic Green",
+          "hex": "#40705e",
+          "front": "catalog_images/port-co-pc098/nordic-green_front.jpg",
+          "back": "catalog_images/port-co-pc098/nordic-green_back.jpg"
         }
       ]
     }

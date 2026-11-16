@@ -37945,6 +37945,46 @@
           "back": "catalog_images/district-dm139l/charcoal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt196",
+      "name": "Lightweight Fleece Raglan Hoodie",
+      "brand": "District",
+      "style": "DT196",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heathered Deep Royal/ Heathered Charcoal",
+          "hex": "#4d5790",
+          "front": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#2e4b7b",
+            "#4c4b4b"
+          ]
+        },
+        {
+          "name": "Heathered Grey/ Heathered Charcoal",
+          "hex": "#9d9d9d",
+          "front": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#9ea5a0",
+            "#4c4b4b"
+          ]
+        },
+        {
+          "name": "Heathered Red/ Heathered Charcoal",
+          "hex": "#c55669",
+          "front": "catalog_images/district-dt196/heathered-red-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#9c3744",
+            "#4c4b4b"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -42179,8 +42179,8 @@
           "front": "catalog_images/next-level-6051/heather-white-vintage-black_front.jpg",
           "back": "catalog_images/next-level-6051/heather-white-vintage-black_back.jpg",
           "hexes": [
-            "#dfdee0",
-            "#2d2b30"
+            "#dddcdd",
+            "#2d2b2f"
           ]
         },
         {
@@ -42690,6 +42690,100 @@
           "hex": "#f2eff3",
           "front": "catalog_images/next-level-6610/white_front.jpg",
           "back": "catalog_images/next-level-6610/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-6710",
+      "name": "Women's Tri-Blend T-Shirt",
+      "brand": "Next Level",
+      "style": "6710",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1c1a20",
+          "front": "catalog_images/next-level-6710/black_front.jpg",
+          "back": "catalog_images/next-level-6710/black_back.jpg"
+        },
+        {
+          "name": "Desert Pink",
+          "hex": "#ebc3c3",
+          "front": "catalog_images/next-level-6710/desert-pink_front.jpg",
+          "back": "catalog_images/next-level-6710/desert-pink_back.jpg"
+        },
+        {
+          "name": "Heather White",
+          "hex": "#d9d9d9",
+          "front": "catalog_images/next-level-6710/heather-white_front.jpg",
+          "back": "catalog_images/next-level-6710/heather-white_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#645c49",
+          "front": "catalog_images/next-level-6710/military-green_front.jpg",
+          "back": "catalog_images/next-level-6710/military-green_back.jpg"
+        },
+        {
+          "name": "Premium Heather",
+          "hex": "#858489",
+          "front": "catalog_images/next-level-6710/premium-heather_front.jpg",
+          "back": "catalog_images/next-level-6710/premium-heather_back.jpg"
+        },
+        {
+          "name": "Purple Rush",
+          "hex": "#73568e",
+          "front": "catalog_images/next-level-6710/purple-rush_front.jpg",
+          "back": "catalog_images/next-level-6710/purple-rush_back.jpg"
+        },
+        {
+          "name": "Vintage Black",
+          "hex": "#292826",
+          "front": "catalog_images/next-level-6710/vintage-black_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-black_back.jpg"
+        },
+        {
+          "name": "Vintage Light Orange",
+          "hex": "#f8ac91",
+          "front": "catalog_images/next-level-6710/vintage-light-orange_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-light-orange_back.jpg"
+        },
+        {
+          "name": "Vintage Lilac",
+          "hex": "#e1b1d0",
+          "front": "catalog_images/next-level-6710/vintage-lilac_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-lilac_back.jpg"
+        },
+        {
+          "name": "Vintage Navy",
+          "hex": "#3d414a",
+          "front": "catalog_images/next-level-6710/vintage-navy_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-navy_back.jpg"
+        },
+        {
+          "name": "Vintage Purple",
+          "hex": "#674e61",
+          "front": "catalog_images/next-level-6710/vintage-purple_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-purple_back.jpg"
+        },
+        {
+          "name": "Vintage Red",
+          "hex": "#df4755",
+          "front": "catalog_images/next-level-6710/vintage-red_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-red_back.jpg"
+        },
+        {
+          "name": "Vintage Royal",
+          "hex": "#4a6aa0",
+          "front": "catalog_images/next-level-6710/vintage-royal_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-royal_back.jpg"
+        },
+        {
+          "name": "Vintage Shocking Pink",
+          "hex": "#c53957",
+          "front": "catalog_images/next-level-6710/vintage-shocking-pink_front.jpg",
+          "back": "catalog_images/next-level-6710/vintage-shocking-pink_back.jpg"
         }
       ]
     }

@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a4a4a5"
+            "#a3a3a4"
           ]
         },
         {
@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#4b4b4a"
+            "#4a4b4b"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#4b4b4a"
+            "#4a4b4b"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#4b4b4a"
+            "#4a4b4b"
           ]
         },
         {
@@ -37062,7 +37062,7 @@
           "front": "catalog_images/district-dm136/deep-royal-white_front.jpg",
           "back": "catalog_images/district-dm136/deep-royal-white_back.jpg",
           "hexes": [
-            "#214083",
+            "#214184",
             "#ededef"
           ]
         },
@@ -37072,7 +37072,7 @@
           "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
           "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
           "hexes": [
-            "#232e38",
+            "#222e37",
             "#ededef"
           ]
         },
@@ -37281,6 +37281,70 @@
           "hex": "#384d66",
           "front": "catalog_images/district-dt2103/true-navy_front.jpg",
           "back": "catalog_images/district-dt2103/true-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6200",
+      "name": "Very Important Tee Long Sleeve",
+      "brand": "District",
+      "style": "DT6200",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Light Heather Grey",
+          "hex": "#a2a2a2",
+          "front": "catalog_images/district-dt6200/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6200/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1e1e1e",
+          "front": "catalog_images/district-dt6200/black_front.jpg",
+          "back": "catalog_images/district-dt6200/black_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#49484d",
+          "front": "catalog_images/district-dt6200/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6200/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#3e4858",
+          "front": "catalog_images/district-dt6200/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt6200/heathered-navy_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eaeaea",
+          "front": "catalog_images/district-dt6200/white_front.jpg",
+          "back": "catalog_images/district-dt6200/white_back.jpg"
+        },
+        {
+          "name": "Classic Red",
+          "hex": "#9d242b",
+          "front": "catalog_images/district-dt6200/classic-red_front.jpg",
+          "back": "catalog_images/district-dt6200/classic-red_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#2b4fa7",
+          "front": "catalog_images/district-dt6200/deep-royal_front.jpg",
+          "back": "catalog_images/district-dt6200/deep-royal_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#212832",
+          "front": "catalog_images/district-dt6200/new-navy_front.jpg",
+          "back": "catalog_images/district-dt6200/new-navy_back.jpg"
+        },
+        {
+          "name": "Deepest Grey",
+          "hex": "#525751",
+          "front": "catalog_images/district-dt6200/deepest-grey_front.jpg",
+          "back": "catalog_images/district-dt6200/deepest-grey_back.jpg"
         }
       ]
     }

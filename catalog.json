@@ -31149,7 +31149,7 @@
           "front": "catalog_images/richardson-112wh/dark-olive-coffee_front.jpg",
           "back": "catalog_images/richardson-112wh/dark-olive-coffee_back.jpg",
           "hexes": [
-            "#393729",
+            "#414131",
             "#4b3c36"
           ]
         },
@@ -36541,6 +36541,82 @@
           "hex": "#44453f",
           "front": "catalog_images/district-dt6500/deepest-grey_front.jpg",
           "back": "catalog_images/district-dt6500/deepest-grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt7075",
+      "name": "7-Oz. Gritty Tee",
+      "brand": "District",
+      "style": "DT7075",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Chai",
+          "hex": "#d9cab7",
+          "front": "catalog_images/district-dt7075/chai_front.jpg",
+          "back": "catalog_images/district-dt7075/chai_back.jpg"
+        },
+        {
+          "name": "Cherrywood",
+          "hex": "#8c2631",
+          "front": "catalog_images/district-dt7075/cherrywood_front.jpg",
+          "back": "catalog_images/district-dt7075/cherrywood_back.jpg"
+        },
+        {
+          "name": "Dark Olive",
+          "hex": "#4a4b3a",
+          "front": "catalog_images/district-dt7075/dark-olive_front.jpg",
+          "back": "catalog_images/district-dt7075/dark-olive_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#40484b",
+          "front": "catalog_images/district-dt7075/graphite_front.jpg",
+          "back": "catalog_images/district-dt7075/graphite_back.jpg"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#f7f1e6",
+          "front": "catalog_images/district-dt7075/ivory_front.jpg",
+          "back": "catalog_images/district-dt7075/ivory_back.jpg"
+        },
+        {
+          "name": "Navy Blue",
+          "hex": "#212c32",
+          "front": "catalog_images/district-dt7075/navy-blue_front.jpg",
+          "back": "catalog_images/district-dt7075/navy-blue_back.jpg"
+        },
+        {
+          "name": "Warm Taupe",
+          "hex": "#7e7064",
+          "front": "catalog_images/district-dt7075/warm-taupe_front.jpg",
+          "back": "catalog_images/district-dt7075/warm-taupe_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f0f4f7",
+          "front": "catalog_images/district-dt7075/white_front.jpg",
+          "back": "catalog_images/district-dt7075/white_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#232323",
+          "front": "catalog_images/district-dt7075/black_front.jpg",
+          "back": "catalog_images/district-dt7075/black_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#929697",
+          "front": "catalog_images/district-dt7075/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt7075/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#424647",
+          "front": "catalog_images/district-dt7075/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt7075/heathered-charcoal_back.jpg"
         }
       ]
     }

@@ -30241,7 +30241,7 @@
           "hex": "#8c9095",
           "front": "catalog_images/port-authority-c979/river-blue-navy-marshmallow-gusty-grey_front.jpg",
           "hexes": [
-            "#212d3f",
+            "#202c3e",
             "#f1f1e9",
             "#9a9d9a"
           ]
@@ -31149,7 +31149,7 @@
           "front": "catalog_images/richardson-112wh/dark-olive-coffee_front.jpg",
           "back": "catalog_images/richardson-112wh/dark-olive-coffee_back.jpg",
           "hexes": [
-            "#373729",
+            "#353729",
             "#4b3c36"
           ]
         },
@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#aeafb3"
+            "#adafb2"
           ]
         },
         {
@@ -40636,6 +40636,106 @@
           "hex": "#191919",
           "front": "catalog_images/district-dt6154/black_front.jpg",
           "back": "catalog_images/district-dt6154/black_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6704",
+      "name": "MelloFleece Crew",
+      "brand": "District",
+      "style": "DT6704",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Chai",
+          "hex": "#cbbfa9",
+          "front": "catalog_images/district-dt6704/chai_front.jpg",
+          "back": "catalog_images/district-dt6704/chai_back.jpg"
+        },
+        {
+          "name": "Cornflower Blue",
+          "hex": "#4e6fa5",
+          "front": "catalog_images/district-dt6704/cornflower-blue_front.jpg",
+          "back": "catalog_images/district-dt6704/cornflower-blue_back.jpg"
+        },
+        {
+          "name": "Carnation Pink",
+          "hex": "#f1ccd3",
+          "front": "catalog_images/district-dt6704/carnation-pink_front.jpg",
+          "back": "catalog_images/district-dt6704/carnation-pink_back.jpg"
+        },
+        {
+          "name": "Deep Cyan",
+          "hex": "#27444c",
+          "front": "catalog_images/district-dt6704/deep-cyan_front.jpg",
+          "back": "catalog_images/district-dt6704/deep-cyan_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#373b3e",
+          "front": "catalog_images/district-dt6704/graphite_front.jpg",
+          "back": "catalog_images/district-dt6704/graphite_back.jpg"
+        },
+        {
+          "name": "Icelandic Purple",
+          "hex": "#a1a7bd",
+          "front": "catalog_images/district-dt6704/icelandic-purple_front.jpg",
+          "back": "catalog_images/district-dt6704/icelandic-purple_back.jpg"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#eee8da",
+          "front": "catalog_images/district-dt6704/ivory_front.jpg",
+          "back": "catalog_images/district-dt6704/ivory_back.jpg"
+        },
+        {
+          "name": "River Blue Navy",
+          "hex": "#1a293c",
+          "front": "catalog_images/district-dt6704/river-blue-navy_front.jpg",
+          "back": "catalog_images/district-dt6704/river-blue-navy_back.jpg"
+        },
+        {
+          "name": "Warm Taupe",
+          "hex": "#7d6f62",
+          "front": "catalog_images/district-dt6704/warm-taupe_front.jpg",
+          "back": "catalog_images/district-dt6704/warm-taupe_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#abacb0",
+          "front": "catalog_images/district-dt6704/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6704/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Navy Heather",
+          "hex": "#36424e",
+          "front": "catalog_images/district-dt6704/navy-heather_front.jpg",
+          "back": "catalog_images/district-dt6704/navy-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#2d3130",
+          "front": "catalog_images/district-dt6704/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6704/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#1f2022",
+          "front": "catalog_images/district-dt6704/black_front.jpg",
+          "back": "catalog_images/district-dt6704/black_back.jpg"
+        },
+        {
+          "name": "Dark Olive",
+          "hex": "#313326",
+          "front": "catalog_images/district-dt6704/dark-olive_front.jpg",
+          "back": "catalog_images/district-dt6704/dark-olive_back.jpg"
+        },
+        {
+          "name": "Cherrywood",
+          "hex": "#832728",
+          "front": "catalog_images/district-dt6704/cherrywood_front.jpg",
+          "back": "catalog_images/district-dt6704/cherrywood_back.jpg"
         }
       ]
     }

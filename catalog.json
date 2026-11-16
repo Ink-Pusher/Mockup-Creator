@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#242223",
-            "#4a4b4b"
+            "#4b4b4b"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#973541",
-            "#4a4b4b"
+            "#4b4b4b"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#4a4b4b"
+            "#4b4b4b"
           ]
         },
         {
@@ -36133,6 +36133,154 @@
           "hex": "#3e7a58",
           "front": "catalog_images/district-dm1190l/heathered-kelly-green_front.jpg",
           "back": "catalog_images/district-dm1190l/heathered-kelly-green_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dm1350l",
+      "name": "Women's Perfect Tri V-Neck Tee",
+      "brand": "District",
+      "style": "DM1350L",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f1f1f1",
+          "front": "catalog_images/district-dm1350l/white_front.jpg",
+          "back": "catalog_images/district-dm1350l/white_back.jpg"
+        },
+        {
+          "name": "Black Frost",
+          "hex": "#3a3e3f",
+          "front": "catalog_images/district-dm1350l/black-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/black-frost_back.jpg"
+        },
+        {
+          "name": "Fuchsia Frost",
+          "hex": "#f1679b",
+          "front": "catalog_images/district-dm1350l/fuchsia-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/fuchsia-frost_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#949494",
+          "front": "catalog_images/district-dm1350l/grey-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/grey-frost_back.jpg"
+        },
+        {
+          "name": "Green Frost",
+          "hex": "#4fd68a",
+          "front": "catalog_images/district-dm1350l/green-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/green-frost_back.jpg"
+        },
+        {
+          "name": "Maritime Frost",
+          "hex": "#7f9acf",
+          "front": "catalog_images/district-dm1350l/maritime-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/maritime-frost_back.jpg"
+        },
+        {
+          "name": "Navy Frost",
+          "hex": "#596579",
+          "front": "catalog_images/district-dm1350l/navy-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/navy-frost_back.jpg"
+        },
+        {
+          "name": "Purple Frost",
+          "hex": "#7363a1",
+          "front": "catalog_images/district-dm1350l/purple-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/purple-frost_back.jpg"
+        },
+        {
+          "name": "Red Frost",
+          "hex": "#cf515c",
+          "front": "catalog_images/district-dm1350l/red-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/red-frost_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#5d7ac8",
+          "front": "catalog_images/district-dm1350l/royal-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/royal-frost_back.jpg"
+        },
+        {
+          "name": "Turquoise Frost",
+          "hex": "#50c0f0",
+          "front": "catalog_images/district-dm1350l/turquoise-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/turquoise-frost_back.jpg"
+        },
+        {
+          "name": "Blush Frost",
+          "hex": "#bb6663",
+          "front": "catalog_images/district-dm1350l/blush-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/blush-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#545051",
+          "front": "catalog_images/district-dm1350l/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dm1350l/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Teal",
+          "hex": "#026c70",
+          "front": "catalog_images/district-dm1350l/heathered-teal_front.jpg",
+          "back": "catalog_images/district-dm1350l/heathered-teal_back.jpg"
+        },
+        {
+          "name": "Maroon Frost",
+          "hex": "#763941",
+          "front": "catalog_images/district-dm1350l/maroon-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/maroon-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Dusty Peach",
+          "hex": "#fcae9a",
+          "front": "catalog_images/district-dm1350l/heathered-dusty-peach_front.jpg",
+          "back": "catalog_images/district-dm1350l/heathered-dusty-peach_back.jpg"
+        },
+        {
+          "name": "Heathered Dusty Sage",
+          "hex": "#a0c0b5",
+          "front": "catalog_images/district-dm1350l/heathered-dusty-sage_front.jpg",
+          "back": "catalog_images/district-dm1350l/heathered-dusty-sage_back.jpg"
+        },
+        {
+          "name": "Heathered Lavender",
+          "hex": "#cd9fa7",
+          "front": "catalog_images/district-dm1350l/heathered-lavender_front.jpg",
+          "back": "catalog_images/district-dm1350l/heathered-lavender_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#262523",
+          "front": "catalog_images/district-dm1350l/black_front.jpg",
+          "back": "catalog_images/district-dm1350l/black_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#2c333c",
+          "front": "catalog_images/district-dm1350l/new-navy_front.jpg",
+          "back": "catalog_images/district-dm1350l/new-navy_back.jpg"
+        },
+        {
+          "name": "Military Green Frost",
+          "hex": "#6a6a50",
+          "front": "catalog_images/district-dm1350l/military-green-frost_front.jpg",
+          "back": "catalog_images/district-dm1350l/military-green-frost_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#838d97",
+          "front": "catalog_images/district-dm1350l/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dm1350l/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Wisteria Heather",
+          "hex": "#edb1b6",
+          "front": "catalog_images/district-dm1350l/wisteria-heather_front.jpg",
+          "back": "catalog_images/district-dm1350l/wisteria-heather_back.jpg"
         }
       ]
     }

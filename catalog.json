@@ -47374,6 +47374,82 @@
           "back": "catalog_images/port-co-lpc099v/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "port-co-pc099p",
+      "name": "Beach Wash Garment-Dyed Pocket Tee",
+      "brand": "Port & Co",
+      "style": "PC099P",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Amethyst",
+          "hex": "#a59dce",
+          "front": "catalog_images/port-co-pc099p/amethyst_front.jpg",
+          "back": "catalog_images/port-co-pc099p/amethyst_back.jpg"
+        },
+        {
+          "name": "Blue Moon",
+          "hex": "#2d6d9b",
+          "front": "catalog_images/port-co-pc099p/blue-moon_front.jpg",
+          "back": "catalog_images/port-co-pc099p/blue-moon_back.jpg"
+        },
+        {
+          "name": "Coal",
+          "hex": "#383c3b",
+          "front": "catalog_images/port-co-pc099p/coal_front.jpg",
+          "back": "catalog_images/port-co-pc099p/coal_back.jpg"
+        },
+        {
+          "name": "Denim Blue",
+          "hex": "#384b5c",
+          "front": "catalog_images/port-co-pc099p/denim-blue_front.jpg",
+          "back": "catalog_images/port-co-pc099p/denim-blue_back.jpg"
+        },
+        {
+          "name": "Merlot",
+          "hex": "#883f46",
+          "front": "catalog_images/port-co-pc099p/merlot_front.jpg",
+          "back": "catalog_images/port-co-pc099p/merlot_back.jpg"
+        },
+        {
+          "name": "Mist",
+          "hex": "#688893",
+          "front": "catalog_images/port-co-pc099p/mist_front.jpg",
+          "back": "catalog_images/port-co-pc099p/mist_back.jpg"
+        },
+        {
+          "name": "Neon Coral",
+          "hex": "#fc6d5c",
+          "front": "catalog_images/port-co-pc099p/neon-coral_front.jpg",
+          "back": "catalog_images/port-co-pc099p/neon-coral_back.jpg"
+        },
+        {
+          "name": "Pewter",
+          "hex": "#6b6d68",
+          "front": "catalog_images/port-co-pc099p/pewter_front.jpg",
+          "back": "catalog_images/port-co-pc099p/pewter_back.jpg"
+        },
+        {
+          "name": "Tidal Wave",
+          "hex": "#58c5dc",
+          "front": "catalog_images/port-co-pc099p/tidal-wave_front.jpg",
+          "back": "catalog_images/port-co-pc099p/tidal-wave_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#968f75",
+          "front": "catalog_images/port-co-pc099p/walnut_front.jpg",
+          "back": "catalog_images/port-co-pc099p/walnut_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eef2f5",
+          "front": "catalog_images/port-co-pc099p/white_front.jpg",
+          "back": "catalog_images/port-co-pc099p/white_back.jpg"
+        }
+      ]
     }
   ]
 }

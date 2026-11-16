@@ -1519,7 +1519,7 @@
           "front": "catalog_images/richardson-112/cardinal-black_front.jpg",
           "back": "catalog_images/richardson-112/cardinal-black_back.jpg",
           "hexes": [
-            "#821c2c",
+            "#831b2b",
             "#232223"
           ]
         },
@@ -1529,7 +1529,7 @@
           "front": "catalog_images/richardson-112/cardinal-white_front.jpg",
           "back": "catalog_images/richardson-112/cardinal-white_back.jpg",
           "hexes": [
-            "#821c2c",
+            "#831b2b",
             "#ecedef"
           ]
         },
@@ -9708,7 +9708,7 @@
           "front": "catalog_images/richardson-256/cardinal-white_front.jpg",
           "back": "catalog_images/richardson-256/cardinal-white_back.jpg",
           "hexes": [
-            "#821c2c",
+            "#831b2b",
             "#ecedef"
           ]
         },
@@ -31850,7 +31850,7 @@
           "front": "catalog_images/richardson-134/cardinal-black-white_front.jpg",
           "back": "catalog_images/richardson-134/cardinal-black-white_back.jpg",
           "hexes": [
-            "#821c2c",
+            "#831b2b",
             "#232223",
             "#ecedef"
           ]
@@ -42100,6 +42100,34 @@
           "hex": "#555358",
           "front": "catalog_images/next-level-3940/heavy-metal_front.jpg",
           "back": "catalog_images/next-level-3940/heavy-metal_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-4210",
+      "name": "Eco Performance T-Shirt",
+      "brand": "Next Level",
+      "style": "4210",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Cardinal",
+          "hex": "#8f0121",
+          "front": "catalog_images/next-level-4210/cardinal_front.jpg",
+          "back": "catalog_images/next-level-4210/cardinal_back.jpg"
+        },
+        {
+          "name": "Heather Sapphire",
+          "hex": "#5d50a2",
+          "front": "catalog_images/next-level-4210/heather-sapphire_front.jpg",
+          "back": "catalog_images/next-level-4210/heather-sapphire_back.jpg"
+        },
+        {
+          "name": "Heavy Metal",
+          "hex": "#4d4c4a",
+          "front": "catalog_images/next-level-4210/heavy-metal_front.jpg",
+          "back": "catalog_images/next-level-4210/heavy-metal_back.jpg"
         }
       ]
     }

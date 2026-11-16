@@ -42179,8 +42179,8 @@
           "front": "catalog_images/next-level-6051/heather-white-vintage-black_front.jpg",
           "back": "catalog_images/next-level-6051/heather-white-vintage-black_back.jpg",
           "hexes": [
-            "#dfdee0",
-            "#2d2b30"
+            "#dddcdd",
+            "#2d2c2f"
           ]
         },
         {
@@ -44740,6 +44740,70 @@
           "hex": "#df5482",
           "front": "catalog_images/next-level-3712/raspberry_front.jpg",
           "back": "catalog_images/next-level-3712/raspberry_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-6310",
+      "name": "Youth Tri-Blend T-Shirt",
+      "brand": "Next Level",
+      "style": "6310",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1f1c23",
+          "front": "catalog_images/next-level-6310/black_front.jpg",
+          "back": "catalog_images/next-level-6310/black_back.jpg"
+        },
+        {
+          "name": "Heather White",
+          "hex": "#ced2d4",
+          "front": "catalog_images/next-level-6310/heather-white_front.jpg",
+          "back": "catalog_images/next-level-6310/heather-white_back.jpg"
+        },
+        {
+          "name": "Premium Heather",
+          "hex": "#808181",
+          "front": "catalog_images/next-level-6310/premium-heather_front.jpg",
+          "back": "catalog_images/next-level-6310/premium-heather_back.jpg"
+        },
+        {
+          "name": "Tahiti Blue",
+          "hex": "#9ce4e6",
+          "front": "catalog_images/next-level-6310/tahiti-blue_front.jpg",
+          "back": "catalog_images/next-level-6310/tahiti-blue_back.jpg"
+        },
+        {
+          "name": "Vintage Black",
+          "hex": "#322f2e",
+          "front": "catalog_images/next-level-6310/vintage-black_front.jpg",
+          "back": "catalog_images/next-level-6310/vintage-black_back.jpg"
+        },
+        {
+          "name": "Vintage Navy",
+          "hex": "#32373d",
+          "front": "catalog_images/next-level-6310/vintage-navy_front.jpg",
+          "back": "catalog_images/next-level-6310/vintage-navy_back.jpg"
+        },
+        {
+          "name": "Vintage Red",
+          "hex": "#d54958",
+          "front": "catalog_images/next-level-6310/vintage-red_front.jpg",
+          "back": "catalog_images/next-level-6310/vintage-red_back.jpg"
+        },
+        {
+          "name": "Vintage Royal",
+          "hex": "#446499",
+          "front": "catalog_images/next-level-6310/vintage-royal_front.jpg",
+          "back": "catalog_images/next-level-6310/vintage-royal_back.jpg"
+        },
+        {
+          "name": "Vintage Turquoise",
+          "hex": "#05a4cc",
+          "front": "catalog_images/next-level-6310/vintage-turquoise_front.jpg",
+          "back": "catalog_images/next-level-6310/vintage-turquoise_back.jpg"
         }
       ]
     }

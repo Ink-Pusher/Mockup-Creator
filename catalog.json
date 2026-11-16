@@ -1839,7 +1839,7 @@
           "hexes": [
             "#b5b0b3",
             "#4d4949",
-            "#5a2230"
+            "#5a222f"
           ]
         },
         {
@@ -2050,7 +2050,7 @@
           "front": "catalog_images/richardson-112/maroon-white_front.jpg",
           "back": "catalog_images/richardson-112/maroon-white_back.jpg",
           "hexes": [
-            "#5a2230",
+            "#5a222f",
             "#ededef"
           ]
         },
@@ -7003,7 +7003,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-maroon_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#5a2230"
+            "#5a222f"
           ]
         },
         {
@@ -7747,7 +7747,7 @@
           "front": "catalog_images/yupoong-6606/maroon-grey_front.jpg",
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
-            "#5a2230",
+            "#5a222f",
             "#8c8a8c"
           ]
         },
@@ -17146,7 +17146,7 @@
           "back": "catalog_images/next-level-3604/natural-maroon_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#5a2230"
+            "#5a222f"
           ]
         },
         {
@@ -18054,7 +18054,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
             "#8c8a8c",
-            "#5a2230"
+            "#5a222f"
           ]
         },
         {
@@ -18144,7 +18144,7 @@
           "back": "catalog_images/bella-canvas-3200/white-maroon_back.jpg",
           "hexes": [
             "#ededef",
-            "#5a2230"
+            "#5a222f"
           ]
         },
         {
@@ -27961,7 +27961,7 @@
           "front": "catalog_images/sportsman-sp60/maroon-white-grey_front.jpg",
           "back": "catalog_images/sportsman-sp60/maroon-white-grey_back.jpg",
           "hexes": [
-            "#5a2230",
+            "#5a222f",
             "#ededef",
             "#8c8a8c"
           ]
@@ -30241,7 +30241,7 @@
           "hex": "#8c9095",
           "front": "catalog_images/port-authority-c979/river-blue-navy-marshmallow-gusty-grey_front.jpg",
           "hexes": [
-            "#373f4c",
+            "#232c3e",
             "#f1f1e9",
             "#929394"
           ]
@@ -31149,7 +31149,7 @@
           "front": "catalog_images/richardson-112wh/dark-olive-coffee_front.jpg",
           "back": "catalog_images/richardson-112wh/dark-olive-coffee_back.jpg",
           "hexes": [
-            "#414131",
+            "#393729",
             "#4b3c36"
           ]
         },
@@ -31861,7 +31861,7 @@
           "front": "catalog_images/richardson-134/maroon-black-white_front.jpg",
           "back": "catalog_images/richardson-134/maroon-black-white_back.jpg",
           "hexes": [
-            "#5a2230",
+            "#5a222f",
             "#232223",
             "#ededef"
           ]
@@ -32361,7 +32361,7 @@
           "back": "catalog_images/sportsman-sp03/red-maroon_back.jpg",
           "hexes": [
             "#c2162f",
-            "#5a2230"
+            "#5a222f"
           ]
         },
         {
@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#acaeae"
+            "#acafb0"
           ]
         },
         {
@@ -36972,7 +36972,7 @@
           "front": "catalog_images/district-dm136/grey-frost-white_front.jpg",
           "back": "catalog_images/district-dm136/grey-frost-white_back.jpg",
           "hexes": [
-            "#8b8786",
+            "#888685",
             "#ededef"
           ]
         },
@@ -36983,7 +36983,7 @@
           "back": "catalog_images/district-dm136/purple-frost-grey-frost_back.jpg",
           "hexes": [
             "#72639e",
-            "#8b8786"
+            "#888685"
           ]
         },
         {
@@ -36993,7 +36993,7 @@
           "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
           "hexes": [
             "#383c3d",
-            "#8b8786"
+            "#888685"
           ]
         },
         {
@@ -37003,7 +37003,7 @@
           "back": "catalog_images/district-dm136/navy-frost-grey-frost_back.jpg",
           "hexes": [
             "#4d5a6d",
-            "#8b8786"
+            "#888685"
           ]
         },
         {
@@ -37013,7 +37013,7 @@
           "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
           "hexes": [
             "#c84851",
-            "#8b8786"
+            "#888685"
           ]
         },
         {
@@ -37023,7 +37023,7 @@
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
             "#5470b1",
-            "#8b8786"
+            "#888685"
           ]
         },
         {
@@ -37043,7 +37043,7 @@
           "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
           "hexes": [
             "#727150",
-            "#8b8786"
+            "#888685"
           ]
         },
         {
@@ -37062,7 +37062,7 @@
           "front": "catalog_images/district-dm136/deep-royal-white_front.jpg",
           "back": "catalog_images/district-dm136/deep-royal-white_back.jpg",
           "hexes": [
-            "#21407c",
+            "#213f7b",
             "#ededef"
           ]
         },
@@ -37083,7 +37083,7 @@
           "back": "catalog_images/district-dm136/maroon-frost-grey-frost_back.jpg",
           "hexes": [
             "#733841",
-            "#8b8786"
+            "#888685"
           ]
         }
       ]
@@ -39572,6 +39572,154 @@
           "hex": "#717574",
           "front": "catalog_images/district-dt6600/grey-frost_front.jpg",
           "back": "catalog_images/district-dt6600/grey-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6700",
+      "name": "MelloFleece Hoodie",
+      "brand": "District",
+      "style": "DT6700",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Cornflower Blue",
+          "hex": "#5071a7",
+          "front": "catalog_images/district-dt6700/cornflower-blue_front.jpg",
+          "back": "catalog_images/district-dt6700/cornflower-blue_back.jpg"
+        },
+        {
+          "name": "Carnation Pink",
+          "hex": "#f2cdd4",
+          "front": "catalog_images/district-dt6700/carnation-pink_front.jpg",
+          "back": "catalog_images/district-dt6700/carnation-pink_back.jpg"
+        },
+        {
+          "name": "Deep Cyan",
+          "hex": "#29464e",
+          "front": "catalog_images/district-dt6700/deep-cyan_front.jpg",
+          "back": "catalog_images/district-dt6700/deep-cyan_back.jpg"
+        },
+        {
+          "name": "Glacier Green",
+          "hex": "#67999a",
+          "front": "catalog_images/district-dt6700/glacier-green_front.jpg",
+          "back": "catalog_images/district-dt6700/glacier-green_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#393d40",
+          "front": "catalog_images/district-dt6700/graphite_front.jpg",
+          "back": "catalog_images/district-dt6700/graphite_back.jpg"
+        },
+        {
+          "name": "Icelandic Purple",
+          "hex": "#a4aac0",
+          "front": "catalog_images/district-dt6700/icelandic-purple_front.jpg",
+          "back": "catalog_images/district-dt6700/icelandic-purple_back.jpg"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#efe9db",
+          "front": "catalog_images/district-dt6700/ivory_front.jpg",
+          "back": "catalog_images/district-dt6700/ivory_back.jpg"
+        },
+        {
+          "name": "River Blue Navy",
+          "hex": "#1c2b3e",
+          "front": "catalog_images/district-dt6700/river-blue-navy_front.jpg",
+          "back": "catalog_images/district-dt6700/river-blue-navy_back.jpg"
+        },
+        {
+          "name": "Smoky Beige",
+          "hex": "#c2bcb0",
+          "front": "catalog_images/district-dt6700/smoky-beige_front.jpg",
+          "back": "catalog_images/district-dt6700/smoky-beige_back.jpg"
+        },
+        {
+          "name": "Warm Taupe",
+          "hex": "#7e7063",
+          "front": "catalog_images/district-dt6700/warm-taupe_front.jpg",
+          "back": "catalog_images/district-dt6700/warm-taupe_back.jpg"
+        },
+        {
+          "name": "Chai",
+          "hex": "#cec2ac",
+          "front": "catalog_images/district-dt6700/chai_front.jpg",
+          "back": "catalog_images/district-dt6700/chai_back.jpg"
+        },
+        {
+          "name": "Winter Blue",
+          "hex": "#d4eff8",
+          "front": "catalog_images/district-dt6700/winter-blue_front.jpg",
+          "back": "catalog_images/district-dt6700/winter-blue_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#202123",
+          "front": "catalog_images/district-dt6700/black_front.jpg",
+          "back": "catalog_images/district-dt6700/black_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#ebeef3",
+          "front": "catalog_images/district-dt6700/white_front.jpg",
+          "back": "catalog_images/district-dt6700/white_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#aeafb3",
+          "front": "catalog_images/district-dt6700/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6700/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#50272f",
+          "front": "catalog_images/district-dt6700/maroon_front.jpg",
+          "back": "catalog_images/district-dt6700/maroon_back.jpg"
+        },
+        {
+          "name": "Navy Heather",
+          "hex": "#3a4652",
+          "front": "catalog_images/district-dt6700/navy-heather_front.jpg",
+          "back": "catalog_images/district-dt6700/navy-heather_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#6a6e6d",
+          "front": "catalog_images/district-dt6700/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt6700/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#313534",
+          "front": "catalog_images/district-dt6700/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6700/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#17386e",
+          "front": "catalog_images/district-dt6700/deep-royal_front.jpg",
+          "back": "catalog_images/district-dt6700/deep-royal_back.jpg"
+        },
+        {
+          "name": "Dark Olive",
+          "hex": "#323427",
+          "front": "catalog_images/district-dt6700/dark-olive_front.jpg",
+          "back": "catalog_images/district-dt6700/dark-olive_back.jpg"
+        },
+        {
+          "name": "Cherrywood",
+          "hex": "#872b2c",
+          "front": "catalog_images/district-dt6700/cherrywood_front.jpg",
+          "back": "catalog_images/district-dt6700/cherrywood_back.jpg"
+        },
+        {
+          "name": "Fog",
+          "hex": "#9d9b8e",
+          "front": "catalog_images/district-dt6700/fog_front.jpg",
+          "back": "catalog_images/district-dt6700/fog_back.jpg"
         }
       ]
     }

@@ -41688,6 +41688,88 @@
           "back": "catalog_images/next-level-3200/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-3600sw",
+      "name": "Soft Washed Cotton T-Shirt",
+      "brand": "Next Level",
+      "style": "3600SW",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Washed Banana Cream",
+          "hex": "#f1d68e",
+          "front": "catalog_images/next-level-3600sw/washed-banana-cream_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-banana-cream_back.jpg"
+        },
+        {
+          "name": "Washed Black",
+          "hex": "#1e1e1e",
+          "front": "catalog_images/next-level-3600sw/washed-black_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-black_back.jpg"
+        },
+        {
+          "name": "Washed Cardinal",
+          "hex": "#771b32",
+          "front": "catalog_images/next-level-3600sw/washed-cardinal_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-cardinal_back.jpg"
+        },
+        {
+          "name": "Washed Graphite Black",
+          "hex": "#363231",
+          "front": "catalog_images/next-level-3600sw/washed-graphite-black_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-graphite-black_back.jpg"
+        },
+        {
+          "name": "Washed Mauve",
+          "hex": "#c17178",
+          "front": "catalog_images/next-level-3600sw/washed-mauve_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-mauve_back.jpg"
+        },
+        {
+          "name": "Washed Military Green",
+          "hex": "#574e3e",
+          "front": "catalog_images/next-level-3600sw/washed-military-green_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-military-green_back.jpg"
+        },
+        {
+          "name": "Washed Natural",
+          "hex": "#ede9dc",
+          "front": "catalog_images/next-level-3600sw/washed-natural_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-natural_back.jpg"
+        },
+        {
+          "name": "Washed Purple Rush",
+          "hex": "#54367c",
+          "front": "catalog_images/next-level-3600sw/washed-purple-rush_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-purple-rush_back.jpg"
+        },
+        {
+          "name": "Washed Royal",
+          "hex": "#00448b",
+          "front": "catalog_images/next-level-3600sw/washed-royal_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-royal_back.jpg"
+        },
+        {
+          "name": "Washed Royal Pine",
+          "hex": "#53625a",
+          "front": "catalog_images/next-level-3600sw/washed-royal-pine_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-royal-pine_back.jpg"
+        },
+        {
+          "name": "Washed Stonewash Denim",
+          "hex": "#b5c6d3",
+          "front": "catalog_images/next-level-3600sw/washed-stonewash-denim_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-stonewash-denim_back.jpg"
+        },
+        {
+          "name": "Washed White",
+          "hex": "#f1f0f5",
+          "front": "catalog_images/next-level-3600sw/washed-white_front.jpg",
+          "back": "catalog_images/next-level-3600sw/washed-white_back.jpg"
+        }
+      ]
     }
   ]
 }

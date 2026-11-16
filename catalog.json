@@ -36283,6 +36283,46 @@
           "back": "catalog_images/district-dm1350l/wisteria-heather_back.jpg"
         }
       ]
+    },
+    {
+      "id": "district-dt1350",
+      "name": "Perfect Tri V-Neck Tee",
+      "brand": "District",
+      "style": "DT1350",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#f4f4f4",
+          "front": "catalog_images/district-dt1350/white_front.jpg",
+          "back": "catalog_images/district-dt1350/white_back.jpg"
+        },
+        {
+          "name": "Black Frost",
+          "hex": "#424443",
+          "front": "catalog_images/district-dt1350/black-frost_front.jpg",
+          "back": "catalog_images/district-dt1350/black-frost_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#848484",
+          "front": "catalog_images/district-dt1350/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt1350/grey-frost_back.jpg"
+        },
+        {
+          "name": "Red Frost",
+          "hex": "#c24550",
+          "front": "catalog_images/district-dt1350/red-frost_front.jpg",
+          "back": "catalog_images/district-dt1350/red-frost_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#506dbb",
+          "front": "catalog_images/district-dt1350/royal-frost_front.jpg",
+          "back": "catalog_images/district-dt1350/royal-frost_back.jpg"
+        }
+      ]
     }
   ]
 }

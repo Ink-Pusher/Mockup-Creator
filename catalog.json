@@ -37985,6 +37985,46 @@
           ]
         }
       ]
+    },
+    {
+      "id": "district-dt296",
+      "name": "Women's Lightweight Fleece Raglan Hoodie",
+      "brand": "District",
+      "style": "DT296",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heathered Deep Royal/ Heathered Charcoal",
+          "hex": "#465189",
+          "front": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#2e4b7b",
+            "#4c4b4b"
+          ]
+        },
+        {
+          "name": "Heathered Grey/ Heathered Charcoal",
+          "hex": "#989898",
+          "front": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#9ea5a0",
+            "#4c4b4b"
+          ]
+        },
+        {
+          "name": "Heathered Red/ Heathered Charcoal",
+          "hex": "#bf5063",
+          "front": "catalog_images/district-dt296/heathered-red-heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
+          "hexes": [
+            "#9c3744",
+            "#4c4b4b"
+          ]
+        }
+      ]
     }
   ]
 }

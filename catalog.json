@@ -30346,7 +30346,7 @@
           "front": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-navy-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#263039",
+            "#2e3e4f",
             "#929394",
             "#f1f1e9"
           ]
@@ -37241,6 +37241,46 @@
           "hex": "#425768",
           "front": "catalog_images/district-dt572/washed-indigo_front.jpg",
           "back": "catalog_images/district-dt572/washed-indigo_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt2103",
+      "name": "Wash Long Sleeve Tee",
+      "brand": "District",
+      "style": "DT2103",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Deep Steel Blue",
+          "hex": "#647678",
+          "front": "catalog_images/district-dt2103/deep-steel-blue_front.jpg",
+          "back": "catalog_images/district-dt2103/deep-steel-blue_back.jpg"
+        },
+        {
+          "name": "Graphite",
+          "hex": "#535756",
+          "front": "catalog_images/district-dt2103/graphite_front.jpg",
+          "back": "catalog_images/district-dt2103/graphite_back.jpg"
+        },
+        {
+          "name": "Olive Drab Green",
+          "hex": "#8d8659",
+          "front": "catalog_images/district-dt2103/olive-drab-green_front.jpg",
+          "back": "catalog_images/district-dt2103/olive-drab-green_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#3d3d3b",
+          "front": "catalog_images/district-dt2103/black_front.jpg",
+          "back": "catalog_images/district-dt2103/black_back.jpg"
+        },
+        {
+          "name": "True Navy",
+          "hex": "#384d66",
+          "front": "catalog_images/district-dt2103/true-navy_front.jpg",
+          "back": "catalog_images/district-dt2103/true-navy_back.jpg"
         }
       ]
     }

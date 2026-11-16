@@ -7851,7 +7851,7 @@
           "back": "catalog_images/yupoong-6606/navy-silver_back.jpg",
           "hexes": [
             "#283041",
-            "#c7c2c3"
+            "#c8c3c3"
           ]
         },
         {
@@ -7971,7 +7971,7 @@
           "back": "catalog_images/yupoong-6606/steel-blue-silver_back.jpg",
           "hexes": [
             "#4a5d6c",
-            "#c7c2c3"
+            "#c8c3c3"
           ]
         },
         {
@@ -8300,7 +8300,7 @@
           "front": "catalog_images/yupoong-6006/silver-black_front.jpg",
           "back": "catalog_images/yupoong-6006/silver-black_back.jpg",
           "hexes": [
-            "#c7c2c3",
+            "#c8c3c3",
             "#232223"
           ]
         }
@@ -51888,6 +51888,52 @@
           "hex": "#46232a",
           "front": "catalog_images/port-co-pc107/athletic-maroon_front.jpg",
           "back": "catalog_images/port-co-pc107/athletic-maroon_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc590",
+      "name": "Performance Fleece Crewneck Sweatshirt",
+      "brand": "Port & Co",
+      "style": "PC590",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#5d5c5a",
+          "front": "catalog_images/port-co-pc590/charcoal_front.jpg",
+          "back": "catalog_images/port-co-pc590/charcoal_back.jpg"
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#37475c",
+          "front": "catalog_images/port-co-pc590/deep-navy_front.jpg",
+          "back": "catalog_images/port-co-pc590/deep-navy_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#222222",
+          "front": "catalog_images/port-co-pc590/jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc590/jet-black_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#e32939",
+          "front": "catalog_images/port-co-pc590/red_front.jpg",
+          "back": "catalog_images/port-co-pc590/red_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#3083d7",
+          "front": "catalog_images/port-co-pc590/royal_front.jpg",
+          "back": "catalog_images/port-co-pc590/royal_back.jpg"
+        },
+        {
+          "name": "Silver",
+          "hex": "#ccccca",
+          "front": "catalog_images/port-co-pc590/silver_front.jpg",
+          "back": "catalog_images/port-co-pc590/silver_back.jpg"
         }
       ]
     }

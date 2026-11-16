@@ -17983,7 +17983,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2d292e",
+            "#2e2a2f",
             "#232223"
           ]
         },
@@ -44052,6 +44052,58 @@
           "hex": "#80010d",
           "front": "catalog_images/next-level-9001/red_front.jpg",
           "back": "catalog_images/next-level-9001/red_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-9002",
+      "name": "Malibu Sweatshirt",
+      "brand": "Next Level",
+      "style": "9002",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heather Bay Blue",
+          "hex": "#66799a",
+          "front": "catalog_images/next-level-9002/heather-bay-blue_front.jpg",
+          "back": "catalog_images/next-level-9002/heather-bay-blue_back.jpg"
+        },
+        {
+          "name": "Heather Black",
+          "hex": "#383433",
+          "front": "catalog_images/next-level-9002/heather-black_front.jpg",
+          "back": "catalog_images/next-level-9002/heather-black_back.jpg"
+        },
+        {
+          "name": "Heather Cardinal",
+          "hex": "#8c3948",
+          "front": "catalog_images/next-level-9002/heather-cardinal_front.jpg",
+          "back": "catalog_images/next-level-9002/heather-cardinal_back.jpg"
+        },
+        {
+          "name": "Heather Grey",
+          "hex": "#a4a4a5",
+          "front": "catalog_images/next-level-9002/heather-grey_front.jpg",
+          "back": "catalog_images/next-level-9002/heather-grey_back.jpg"
+        },
+        {
+          "name": "Heather Midnight Navy",
+          "hex": "#3e4452",
+          "front": "catalog_images/next-level-9002/heather-midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-9002/heather-midnight-navy_back.jpg"
+        },
+        {
+          "name": "Heather Military Green",
+          "hex": "#7b7055",
+          "front": "catalog_images/next-level-9002/heather-military-green_front.jpg",
+          "back": "catalog_images/next-level-9002/heather-military-green_back.jpg"
+        },
+        {
+          "name": "Oatmeal",
+          "hex": "#dad9d5",
+          "front": "catalog_images/next-level-9002/oatmeal_front.jpg",
+          "back": "catalog_images/next-level-9002/oatmeal_back.jpg"
         }
       ]
     }

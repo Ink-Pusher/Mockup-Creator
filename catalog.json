@@ -796,7 +796,7 @@
           "front": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_front.jpg",
           "back": "catalog_images/independent-trading-co-ind4000/charcoal-heather-black_back.jpg",
           "hexes": [
-            "#3e3d42",
+            "#423e43",
             "#232223"
           ]
         },
@@ -16968,7 +16968,7 @@
           "back": "catalog_images/tultex-246/heather-grey-heather-charcoal_back.jpg",
           "hexes": [
             "#b5b0b3",
-            "#3e3d42"
+            "#423e43"
           ]
         },
         {
@@ -30253,7 +30253,7 @@
           "hexes": [
             "#565959",
             "#f1f1e9",
-            "#3e3d42"
+            "#423e43"
           ]
         }
       ]
@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#acafb1"
+            "#acafb0"
           ]
         },
         {
@@ -39930,6 +39930,46 @@
           "hex": "#6b6e6c",
           "front": "catalog_images/district-dt8100/deep-grey-heather_front.jpg",
           "back": "catalog_images/district-dt8100/deep-grey-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt8101",
+      "name": "Women's Re-Fleece Hoodie",
+      "brand": "District",
+      "style": "DT8101",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#262525",
+          "front": "catalog_images/district-dt8101/black_front.jpg",
+          "back": "catalog_images/district-dt8101/black_back.jpg"
+        },
+        {
+          "name": "Charcoal Heather",
+          "hex": "#474544",
+          "front": "catalog_images/district-dt8101/charcoal-heather_front.jpg",
+          "back": "catalog_images/district-dt8101/charcoal-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#3d3f50",
+          "front": "catalog_images/district-dt8101/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt8101/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#a6a2a2",
+          "front": "catalog_images/district-dt8101/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt8101/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Maroon Heather",
+          "hex": "#68343d",
+          "front": "catalog_images/district-dt8101/maroon-heather_front.jpg",
+          "back": "catalog_images/district-dt8101/maroon-heather_back.jpg"
         }
       ]
     }

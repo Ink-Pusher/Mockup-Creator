@@ -37970,7 +37970,7 @@
           "front": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
-            "#afb4ab",
+            "#abaeab",
             "#4c4b4b"
           ]
         },
@@ -38010,7 +38010,7 @@
           "front": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
-            "#afb4ab",
+            "#abaeab",
             "#4c4b4b"
           ]
         },
@@ -38051,6 +38051,40 @@
           "hex": "#424951",
           "front": "catalog_images/district-dm391/heathered-navy_front.jpg",
           "back": "catalog_images/district-dm391/heathered-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dm493",
+      "name": "Women's Lightweight Fleece Hoodie",
+      "brand": "District",
+      "style": "DM493",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heathered Black",
+          "hex": "#2a2e2d",
+          "front": "catalog_images/district-dm493/heathered-black_front.jpg",
+          "back": "catalog_images/district-dm493/heathered-black_back.jpg"
+        },
+        {
+          "name": "Heathered Grey",
+          "hex": "#a7a8ac",
+          "front": "catalog_images/district-dm493/heathered-grey_front.jpg",
+          "back": "catalog_images/district-dm493/heathered-grey_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#303d45",
+          "front": "catalog_images/district-dm493/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dm493/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Heathered Pink Azalea",
+          "hex": "#8f3358",
+          "front": "catalog_images/district-dm493/heathered-pink-azalea_front.jpg",
+          "back": "catalog_images/district-dm493/heathered-pink-azalea_back.jpg"
         }
       ]
     }

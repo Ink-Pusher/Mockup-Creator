@@ -1839,7 +1839,7 @@
           "hexes": [
             "#b4b2b3",
             "#4b494a",
-            "#581f2f"
+            "#58202f"
           ]
         },
         {
@@ -2050,7 +2050,7 @@
           "front": "catalog_images/richardson-112/maroon-white_front.jpg",
           "back": "catalog_images/richardson-112/maroon-white_back.jpg",
           "hexes": [
-            "#581f2f",
+            "#58202f",
             "#ecedef"
           ]
         },
@@ -7003,7 +7003,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-maroon_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#581f2f"
+            "#58202f"
           ]
         },
         {
@@ -7747,7 +7747,7 @@
           "front": "catalog_images/yupoong-6606/maroon-grey_front.jpg",
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
-            "#581f2f",
+            "#58202f",
             "#928c91"
           ]
         },
@@ -16987,7 +16987,7 @@
           "front": "catalog_images/tultex-246/heather-royal-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
-            "#456eb0",
+            "#456eb1",
             "#283041"
           ]
         },
@@ -17146,7 +17146,7 @@
           "back": "catalog_images/next-level-3604/natural-maroon_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#581f2f"
+            "#58202f"
           ]
         },
         {
@@ -18054,7 +18054,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
             "#928c91",
-            "#581f2f"
+            "#58202f"
           ]
         },
         {
@@ -18144,7 +18144,7 @@
           "back": "catalog_images/bella-canvas-3200/white-maroon_back.jpg",
           "hexes": [
             "#ecedef",
-            "#581f2f"
+            "#58202f"
           ]
         },
         {
@@ -27961,7 +27961,7 @@
           "front": "catalog_images/sportsman-sp60/maroon-white-grey_front.jpg",
           "back": "catalog_images/sportsman-sp60/maroon-white-grey_back.jpg",
           "hexes": [
-            "#581f2f",
+            "#58202f",
             "#ecedef",
             "#928c91"
           ]
@@ -31871,7 +31871,7 @@
           "front": "catalog_images/richardson-134/maroon-black-white_front.jpg",
           "back": "catalog_images/richardson-134/maroon-black-white_back.jpg",
           "hexes": [
-            "#581f2f",
+            "#58202f",
             "#232223",
             "#ecedef"
           ]
@@ -32371,7 +32371,7 @@
           "back": "catalog_images/sportsman-sp03/red-maroon_back.jpg",
           "hexes": [
             "#be172f",
-            "#581f2f"
+            "#58202f"
           ]
         },
         {
@@ -32432,7 +32432,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-black_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-black_back.jpg",
           "hexes": [
-            "#464547",
+            "#464546",
             "#232223"
           ]
         },
@@ -32442,7 +32442,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-navy_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-navy_back.jpg",
           "hexes": [
-            "#464547",
+            "#464546",
             "#283041"
           ]
         },
@@ -32452,7 +32452,7 @@
           "front": "catalog_images/sportsman-sp15/dark-heather-grey-red_front.jpg",
           "back": "catalog_images/sportsman-sp15/dark-heather-grey-red_back.jpg",
           "hexes": [
-            "#464547",
+            "#464546",
             "#be172f"
           ]
         },
@@ -46149,7 +46149,7 @@
           "front": "catalog_images/port-co-pc54r/dark-heather-grey-jet-black_front.jpg",
           "back": "catalog_images/port-co-pc54r/dark-heather-grey-jet-black_back.jpg",
           "hexes": [
-            "#464547",
+            "#464546",
             "#1b1c1c"
           ]
         },
@@ -46159,7 +46159,7 @@
           "front": "catalog_images/port-co-pc54r/heather-navy-navy_front.jpg",
           "back": "catalog_images/port-co-pc54r/heather-navy-navy_back.jpg",
           "hexes": [
-            "#424b5b",
+            "#434c59",
             "#283041"
           ]
         },
@@ -46179,7 +46179,7 @@
           "front": "catalog_images/port-co-pc54r/heather-royal-navy_front.jpg",
           "back": "catalog_images/port-co-pc54r/heather-royal-navy_back.jpg",
           "hexes": [
-            "#456eb0",
+            "#456eb1",
             "#283041"
           ]
         },
@@ -51494,6 +51494,76 @@
           "hex": "#7f7460",
           "front": "catalog_images/port-co-pc78/coyote-brown_front.jpg",
           "back": "catalog_images/port-co-pc78/coyote-brown_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc78q",
+      "name": "Core Fleece 1/4-Zip Pullover Sweatshirt",
+      "brand": "Port & Co",
+      "style": "PC78Q",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Athletic Heather",
+          "hex": "#9d9c9c",
+          "front": "catalog_images/port-co-pc78q/athletic-heather_front.jpg",
+          "back": "catalog_images/port-co-pc78q/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#56514e",
+          "front": "catalog_images/port-co-pc78q/charcoal_front.jpg",
+          "back": "catalog_images/port-co-pc78q/charcoal_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#3d3d3d",
+          "front": "catalog_images/port-co-pc78q/dark-heather-grey_front.jpg",
+          "back": "catalog_images/port-co-pc78q/dark-heather-grey_back.jpg"
+        },
+        {
+          "name": "Graphite Heather",
+          "hex": "#777371",
+          "front": "catalog_images/port-co-pc78q/graphite-heather_front.jpg",
+          "back": "catalog_images/port-co-pc78q/graphite-heather_back.jpg"
+        },
+        {
+          "name": "Heather Navy",
+          "hex": "#4d4e58",
+          "front": "catalog_images/port-co-pc78q/heather-navy_front.jpg",
+          "back": "catalog_images/port-co-pc78q/heather-navy_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#5479b6",
+          "front": "catalog_images/port-co-pc78q/heather-royal_front.jpg",
+          "back": "catalog_images/port-co-pc78q/heather-royal_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#1e1e1e",
+          "front": "catalog_images/port-co-pc78q/jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc78q/jet-black_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#683535",
+          "front": "catalog_images/port-co-pc78q/maroon_front.jpg",
+          "back": "catalog_images/port-co-pc78q/maroon_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#343b4b",
+          "front": "catalog_images/port-co-pc78q/navy_front.jpg",
+          "back": "catalog_images/port-co-pc78q/navy_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#c32434",
+          "front": "catalog_images/port-co-pc78q/red_front.jpg",
+          "back": "catalog_images/port-co-pc78q/red_back.jpg"
         }
       ]
     }

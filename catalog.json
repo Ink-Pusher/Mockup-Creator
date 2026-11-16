@@ -37022,7 +37022,7 @@
           "front": "catalog_images/district-dm136/royal-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
-            "#5673bd",
+            "#5571bc",
             "#898886"
           ]
         },
@@ -37062,7 +37062,7 @@
           "front": "catalog_images/district-dm136/deep-royal-white_front.jpg",
           "back": "catalog_images/district-dm136/deep-royal-white_back.jpg",
           "hexes": [
-            "#21407e",
+            "#21407c",
             "#ecedef"
           ]
         },
@@ -37072,7 +37072,7 @@
           "front": "catalog_images/district-dm136/new-navy-white_front.jpg",
           "back": "catalog_images/district-dm136/new-navy-white_back.jpg",
           "hexes": [
-            "#212e37",
+            "#222e37",
             "#ecedef"
           ]
         },
@@ -41248,6 +41248,64 @@
           "hex": "#34549d",
           "front": "catalog_images/district-dt6100y/royal-frost_front.jpg",
           "back": "catalog_images/district-dt6100y/royal-frost_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6102y",
+      "name": "Youth V.I.T. Fleece Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT6102Y",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#191919",
+          "front": "catalog_images/district-dt6102y/black_front.jpg",
+          "back": "catalog_images/district-dt6102y/black_back.jpg"
+        },
+        {
+          "name": "Classic Red",
+          "hex": "#8f1a23",
+          "front": "catalog_images/district-dt6102y/classic-red_front.jpg",
+          "back": "catalog_images/district-dt6102y/classic-red_back.jpg"
+        },
+        {
+          "name": "Deep Royal",
+          "hex": "#143c71",
+          "front": "catalog_images/district-dt6102y/deep-royal_front.jpg",
+          "back": "catalog_images/district-dt6102y/deep-royal_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#253931",
+          "front": "catalog_images/district-dt6102y/forest-green_front.jpg",
+          "back": "catalog_images/district-dt6102y/forest-green_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#3c4041",
+          "front": "catalog_images/district-dt6102y/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6102y/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#a8abb2",
+          "front": "catalog_images/district-dt6102y/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6102y/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#24313c",
+          "front": "catalog_images/district-dt6102y/new-navy_front.jpg",
+          "back": "catalog_images/district-dt6102y/new-navy_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#305098",
+          "front": "catalog_images/district-dt6102y/royal-frost_front.jpg",
+          "back": "catalog_images/district-dt6102y/royal-frost_back.jpg"
         }
       ]
     }

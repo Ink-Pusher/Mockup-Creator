@@ -37970,7 +37970,7 @@
           "front": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
-            "#9ea5a0",
+            "#afb4ab",
             "#4c4b4b"
           ]
         },
@@ -38010,7 +38010,7 @@
           "front": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
-            "#9ea5a0",
+            "#afb4ab",
             "#4c4b4b"
           ]
         },
@@ -38023,6 +38023,34 @@
             "#9c3744",
             "#4c4b4b"
           ]
+        }
+      ]
+    },
+    {
+      "id": "district-dm391",
+      "name": "Lightweight Fleece Hoodie",
+      "brand": "District",
+      "style": "DM391",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heathered Black",
+          "hex": "#3d3c3d",
+          "front": "catalog_images/district-dm391/heathered-black_front.jpg",
+          "back": "catalog_images/district-dm391/heathered-black_back.jpg"
+        },
+        {
+          "name": "Heathered Grey",
+          "hex": "#c5c3c4",
+          "front": "catalog_images/district-dm391/heathered-grey_front.jpg",
+          "back": "catalog_images/district-dm391/heathered-grey_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#424951",
+          "front": "catalog_images/district-dm391/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dm391/heathered-navy_back.jpg"
         }
       ]
     }

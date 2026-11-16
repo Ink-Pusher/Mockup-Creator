@@ -42130,6 +42130,28 @@
           "back": "catalog_images/next-level-4210/heavy-metal_back.jpg"
         }
       ]
+    },
+    {
+      "id": "next-level-4600",
+      "name": "Eco Heavyweight T-Shirt",
+      "brand": "Next Level",
+      "style": "4600",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Heather Pacific",
+          "hex": "#87a5ab",
+          "front": "catalog_images/next-level-4600/heather-pacific_front.jpg",
+          "back": "catalog_images/next-level-4600/heather-pacific_back.jpg"
+        },
+        {
+          "name": "Royal Pine",
+          "hex": "#4d665d",
+          "front": "catalog_images/next-level-4600/royal-pine_front.jpg",
+          "back": "catalog_images/next-level-4600/royal-pine_back.jpg"
+        }
+      ]
     }
   ]
 }

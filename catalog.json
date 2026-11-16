@@ -2350,7 +2350,7 @@
           "hexes": [
             "#ecedef",
             "#6b8db6",
-            "#f5db6f"
+            "#f5db70"
           ]
         },
         {
@@ -7083,7 +7083,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-yellow_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#f5db6f"
+            "#f5db70"
           ]
         }
       ]
@@ -34137,7 +34137,7 @@
           "front": "catalog_images/yupoong-110m/olive-khaki_front.jpg",
           "back": "catalog_images/yupoong-110m/olive-khaki_back.jpg",
           "hexes": [
-            "#59593e",
+            "#53583e",
             "#b6a586"
           ]
         },
@@ -54356,6 +54356,106 @@
           "hex": "#ed99bd",
           "front": "catalog_images/port-co-car78tzh/candy-pink_front.jpg",
           "back": "catalog_images/port-co-car78tzh/candy-pink_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc450td",
+      "name": "Toddler Fan Favorite Tee",
+      "brand": "Port & Co",
+      "style": "PC450TD",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#eeeeee",
+          "front": "catalog_images/port-co-pc450td/white_front.jpg",
+          "back": "catalog_images/port-co-pc450td/white_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#b4b4b4",
+          "front": "catalog_images/port-co-pc450td/athletic-heather_front.jpg",
+          "back": "catalog_images/port-co-pc450td/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Candy Pink",
+          "hex": "#e4a7c8",
+          "front": "catalog_images/port-co-pc450td/candy-pink_front.jpg",
+          "back": "catalog_images/port-co-pc450td/candy-pink_back.jpg"
+        },
+        {
+          "name": "Light Blue",
+          "hex": "#92b4d9",
+          "front": "catalog_images/port-co-pc450td/light-blue_front.jpg",
+          "back": "catalog_images/port-co-pc450td/light-blue_back.jpg"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#e9db79",
+          "front": "catalog_images/port-co-pc450td/yellow_front.jpg",
+          "back": "catalog_images/port-co-pc450td/yellow_back.jpg"
+        },
+        {
+          "name": "Athletic Kelly",
+          "hex": "#326848",
+          "front": "catalog_images/port-co-pc450td/athletic-kelly_front.jpg",
+          "back": "catalog_images/port-co-pc450td/athletic-kelly_back.jpg"
+        },
+        {
+          "name": "Bright Red",
+          "hex": "#be2b35",
+          "front": "catalog_images/port-co-pc450td/bright-red_front.jpg",
+          "back": "catalog_images/port-co-pc450td/bright-red_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#656663",
+          "front": "catalog_images/port-co-pc450td/charcoal_front.jpg",
+          "back": "catalog_images/port-co-pc450td/charcoal_back.jpg"
+        },
+        {
+          "name": "Dark Chocolate Brown",
+          "hex": "#382a27",
+          "front": "catalog_images/port-co-pc450td/dark-chocolate-brown_front.jpg",
+          "back": "catalog_images/port-co-pc450td/dark-chocolate-brown_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#2d3333",
+          "front": "catalog_images/port-co-pc450td/jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc450td/jet-black_back.jpg"
+        },
+        {
+          "name": "Medium Grey",
+          "hex": "#919191",
+          "front": "catalog_images/port-co-pc450td/medium-grey_front.jpg",
+          "back": "catalog_images/port-co-pc450td/medium-grey_back.jpg"
+        },
+        {
+          "name": "Olive",
+          "hex": "#43573f",
+          "front": "catalog_images/port-co-pc450td/olive_front.jpg",
+          "back": "catalog_images/port-co-pc450td/olive_back.jpg"
+        },
+        {
+          "name": "Team Navy",
+          "hex": "#2c3448",
+          "front": "catalog_images/port-co-pc450td/team-navy_front.jpg",
+          "back": "catalog_images/port-co-pc450td/team-navy_back.jpg"
+        },
+        {
+          "name": "Team Purple",
+          "hex": "#3a295c",
+          "front": "catalog_images/port-co-pc450td/team-purple_front.jpg",
+          "back": "catalog_images/port-co-pc450td/team-purple_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#404040",
+          "front": "catalog_images/port-co-pc450td/dark-heather-grey_front.jpg",
+          "back": "catalog_images/port-co-pc450td/dark-heather-grey_back.jpg"
         }
       ]
     }

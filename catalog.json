@@ -35790,7 +35790,7 @@
           "front": "catalog_images/district-dm476/heathered-red-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
-            "#9c3744",
+            "#a03745",
             "#484849"
           ]
         },
@@ -36972,7 +36972,7 @@
           "front": "catalog_images/district-dm136/grey-frost-white_front.jpg",
           "back": "catalog_images/district-dm136/grey-frost-white_back.jpg",
           "hexes": [
-            "#888784",
+            "#898885",
             "#ecedef"
           ]
         },
@@ -36983,7 +36983,7 @@
           "back": "catalog_images/district-dm136/purple-frost-grey-frost_back.jpg",
           "hexes": [
             "#72639e",
-            "#888784"
+            "#898885"
           ]
         },
         {
@@ -36993,7 +36993,7 @@
           "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
           "hexes": [
             "#383c3d",
-            "#888784"
+            "#898885"
           ]
         },
         {
@@ -37003,7 +37003,7 @@
           "back": "catalog_images/district-dm136/navy-frost-grey-frost_back.jpg",
           "hexes": [
             "#4e5d70",
-            "#888784"
+            "#898885"
           ]
         },
         {
@@ -37013,7 +37013,7 @@
           "back": "catalog_images/district-dm136/red-frost-grey-frost_back.jpg",
           "hexes": [
             "#ca4c53",
-            "#888784"
+            "#898885"
           ]
         },
         {
@@ -37023,7 +37023,7 @@
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
             "#5777bb",
-            "#888784"
+            "#898885"
           ]
         },
         {
@@ -37043,7 +37043,7 @@
           "back": "catalog_images/district-dm136/military-green-frost-grey-frost_back.jpg",
           "hexes": [
             "#737252",
-            "#888784"
+            "#898885"
           ]
         },
         {
@@ -37083,7 +37083,7 @@
           "back": "catalog_images/district-dm136/maroon-frost-grey-frost_back.jpg",
           "hexes": [
             "#733841",
-            "#888784"
+            "#898885"
           ]
         }
       ]
@@ -37980,7 +37980,7 @@
           "front": "catalog_images/district-dt196/heathered-red-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
-            "#9c3744",
+            "#a03745",
             "#484849"
           ]
         }
@@ -38020,7 +38020,7 @@
           "front": "catalog_images/district-dt296/heathered-red-heathered-charcoal_front.jpg",
           "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
-            "#9c3744",
+            "#a03745",
             "#484849"
           ]
         }
@@ -40834,6 +40834,70 @@
           "hex": "#6e7271",
           "front": "catalog_images/district-dt8104/deep-grey-heather_front.jpg",
           "back": "catalog_images/district-dt8104/deep-grey-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt108y",
+      "name": "Youth Perfect Blend CVC Tee",
+      "brand": "District",
+      "style": "DT108Y",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#151515",
+          "front": "catalog_images/district-dt108y/black_front.jpg",
+          "back": "catalog_images/district-dt108y/black_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#8b8b8b",
+          "front": "catalog_images/district-dt108y/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt108y/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#5e5d62",
+          "front": "catalog_images/district-dt108y/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt108y/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Heathered Kelly Green",
+          "hex": "#4e966b",
+          "front": "catalog_images/district-dt108y/heathered-kelly-green_front.jpg",
+          "back": "catalog_images/district-dt108y/heathered-kelly-green_back.jpg"
+        },
+        {
+          "name": "Heathered Navy",
+          "hex": "#435061",
+          "front": "catalog_images/district-dt108y/heathered-navy_front.jpg",
+          "back": "catalog_images/district-dt108y/heathered-navy_back.jpg"
+        },
+        {
+          "name": "Heathered Red",
+          "hex": "#a53948",
+          "front": "catalog_images/district-dt108y/heathered-red_front.jpg",
+          "back": "catalog_images/district-dt108y/heathered-red_back.jpg"
+        },
+        {
+          "name": "Heathered Teal",
+          "hex": "#1c6e71",
+          "front": "catalog_images/district-dt108y/heathered-teal_front.jpg",
+          "back": "catalog_images/district-dt108y/heathered-teal_back.jpg"
+        },
+        {
+          "name": "Heathered Royal",
+          "hex": "#6890e5",
+          "front": "catalog_images/district-dt108y/heathered-royal_front.jpg",
+          "back": "catalog_images/district-dt108y/heathered-royal_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e5e5e5",
+          "front": "catalog_images/district-dt108y/white_front.jpg",
+          "back": "catalog_images/district-dt108y/white_back.jpg"
         }
       ]
     }

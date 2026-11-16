@@ -1253,7 +1253,7 @@
           "front": "catalog_images/richardson-168/dark-green-black_front.jpg",
           "back": "catalog_images/richardson-168/dark-green-black_back.jpg",
           "hexes": [
-            "#243f38",
+            "#243e38",
             "#232223"
           ]
         },
@@ -1766,7 +1766,7 @@
           "front": "catalog_images/richardson-112/dark-green-white_front.jpg",
           "back": "catalog_images/richardson-112/dark-green-white_back.jpg",
           "hexes": [
-            "#243f38",
+            "#243e38",
             "#ecedef"
           ]
         },
@@ -1849,7 +1849,7 @@
           "back": "catalog_images/richardson-112/heather-grey-dark-green_back.jpg",
           "hexes": [
             "#b4b2b3",
-            "#243f38"
+            "#243e38"
           ]
         },
         {
@@ -17886,7 +17886,7 @@
           "back": "catalog_images/bella-canvas-1200/white-trueroyal_back.png",
           "hexes": [
             "#ecedef",
-            "#194b9b"
+            "#184a9b"
           ]
         }
       ]
@@ -18084,7 +18084,7 @@
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
             "#928c91",
-            "#194b9b"
+            "#184a9b"
           ]
         },
         {
@@ -18184,7 +18184,7 @@
           "back": "catalog_images/bella-canvas-3200/white-true-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#194b9b"
+            "#184a9b"
           ]
         }
       ]
@@ -19874,7 +19874,7 @@
           "back": "catalog_images/bella-canvas-1201/white-true-royal_back.jpg",
           "hexes": [
             "#ecedef",
-            "#194b9b"
+            "#184a9b"
           ]
         }
       ]
@@ -30227,7 +30227,7 @@
           "front": "catalog_images/port-authority-c979/deep-black-rich-red-charcoal-heather_front.jpg",
           "hexes": [
             "#252525",
-            "#93282f",
+            "#91242b",
             "#3a3d3f"
           ]
         },
@@ -30237,7 +30237,7 @@
           "front": "catalog_images/port-authority-c979/deep-black-true-royal-storm-grey_front.jpg",
           "hexes": [
             "#252525",
-            "#194b9b",
+            "#184a9b",
             "#565959"
           ]
         },
@@ -30329,7 +30329,7 @@
           "back": "catalog_images/port-authority-c991/deep-black-rich-red-marshmallow_back.jpg",
           "hexes": [
             "#252525",
-            "#93282f",
+            "#91242b",
             "#f1f1e9"
           ]
         },
@@ -30367,7 +30367,7 @@
           "front": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_front.jpg",
           "back": "catalog_images/port-authority-c991/true-royal-gusty-grey-marshmallow_back.jpg",
           "hexes": [
-            "#194b9b",
+            "#184a9b",
             "#9a9d9a",
             "#f1f1e9"
           ]
@@ -32811,7 +32811,7 @@
           "front": "catalog_images/valucap-ah80/dark-green-gold_front.jpg",
           "back": "catalog_images/valucap-ah80/dark-green-gold_back.jpg",
           "hexes": [
-            "#243f38",
+            "#243e38",
             "#faa51d"
           ]
         },
@@ -51794,6 +51794,100 @@
           "hex": "#40705e",
           "front": "catalog_images/port-co-pc098/nordic-green_front.jpg",
           "back": "catalog_images/port-co-pc098/nordic-green_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc107",
+      "name": "Foundation Fleece Pullover Crewneck Sweatshirt",
+      "brand": "Port & Co",
+      "style": "PC107",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Duck Brown",
+          "hex": "#75522a",
+          "front": "catalog_images/port-co-pc107/duck-brown_front.jpg",
+          "back": "catalog_images/port-co-pc107/duck-brown_back.jpg"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#f6f0e2",
+          "front": "catalog_images/port-co-pc107/ivory_front.jpg",
+          "back": "catalog_images/port-co-pc107/ivory_back.jpg"
+        },
+        {
+          "name": "S. Green",
+          "hex": "#cdf658",
+          "front": "catalog_images/port-co-pc107/s-green_front.jpg",
+          "back": "catalog_images/port-co-pc107/s-green_back.jpg"
+        },
+        {
+          "name": "Olive Drab Green",
+          "hex": "#5f634a",
+          "front": "catalog_images/port-co-pc107/olive-drab-green_front.jpg",
+          "back": "catalog_images/port-co-pc107/olive-drab-green_back.jpg"
+        },
+        {
+          "name": "Rich Red",
+          "hex": "#902128",
+          "front": "catalog_images/port-co-pc107/rich-red_front.jpg",
+          "back": "catalog_images/port-co-pc107/rich-red_back.jpg"
+        },
+        {
+          "name": "True Royal",
+          "hex": "#103772",
+          "front": "catalog_images/port-co-pc107/true-royal_front.jpg",
+          "back": "catalog_images/port-co-pc107/true-royal_back.jpg"
+        },
+        {
+          "name": "Jet Black",
+          "hex": "#242426",
+          "front": "catalog_images/port-co-pc107/jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc107/jet-black_back.jpg"
+        },
+        {
+          "name": "Light Sand",
+          "hex": "#c6b9a8",
+          "front": "catalog_images/port-co-pc107/light-sand_front.jpg",
+          "back": "catalog_images/port-co-pc107/light-sand_back.jpg"
+        },
+        {
+          "name": "Athletic Heather",
+          "hex": "#9e9fa3",
+          "front": "catalog_images/port-co-pc107/athletic-heather_front.jpg",
+          "back": "catalog_images/port-co-pc107/athletic-heather_back.jpg"
+        },
+        {
+          "name": "Coal Grey",
+          "hex": "#323637",
+          "front": "catalog_images/port-co-pc107/coal-grey_front.jpg",
+          "back": "catalog_images/port-co-pc107/coal-grey_back.jpg"
+        },
+        {
+          "name": "Dark Green",
+          "hex": "#223c33",
+          "front": "catalog_images/port-co-pc107/dark-green_front.jpg",
+          "back": "catalog_images/port-co-pc107/dark-green_back.jpg"
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#202d3d",
+          "front": "catalog_images/port-co-pc107/deep-navy_front.jpg",
+          "back": "catalog_images/port-co-pc107/deep-navy_back.jpg"
+        },
+        {
+          "name": "Dark Heather Grey",
+          "hex": "#3d4045",
+          "front": "catalog_images/port-co-pc107/dark-heather-grey_front.jpg",
+          "back": "catalog_images/port-co-pc107/dark-heather-grey_back.jpg"
+        },
+        {
+          "name": "Athletic Maroon",
+          "hex": "#46232a",
+          "front": "catalog_images/port-co-pc107/athletic-maroon_front.jpg",
+          "back": "catalog_images/port-co-pc107/athletic-maroon_back.jpg"
         }
       ]
     }

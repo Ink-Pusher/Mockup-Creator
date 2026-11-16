@@ -46114,6 +46114,106 @@
           "back": "catalog_images/port-co-pc54p/yellow_back.jpg"
         }
       ]
+    },
+    {
+      "id": "port-co-pc54r",
+      "name": "Core Cotton Ringer Tee",
+      "brand": "Port & Co",
+      "style": "PC54R",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Athletic Heather/ Jet Black",
+          "hex": "#97989c",
+          "front": "catalog_images/port-co-pc54r/athletic-heather-jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc54r/athletic-heather-jet-black_back.jpg",
+          "hexes": [
+            "#b5b6b9",
+            "#1a1c1b"
+          ]
+        },
+        {
+          "name": "Dark Heather Grey/ Jet Black",
+          "hex": "#474747",
+          "front": "catalog_images/port-co-pc54r/dark-heather-grey-jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc54r/dark-heather-grey-jet-black_back.jpg",
+          "hexes": [
+            "#4a484b",
+            "#1a1c1b"
+          ]
+        },
+        {
+          "name": "Heather Navy/ Navy",
+          "hex": "#434657",
+          "front": "catalog_images/port-co-pc54r/heather-navy-navy_front.jpg",
+          "back": "catalog_images/port-co-pc54r/heather-navy-navy_back.jpg",
+          "hexes": [
+            "#444c5d",
+            "#282f3f"
+          ]
+        },
+        {
+          "name": "Red/ Jet Black",
+          "hex": "#a3213a",
+          "front": "catalog_images/port-co-pc54r/red-jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc54r/red-jet-black_back.jpg",
+          "hexes": [
+            "#c0152f",
+            "#1a1c1b"
+          ]
+        },
+        {
+          "name": "Heather Royal/ Navy",
+          "hex": "#4159a3",
+          "front": "catalog_images/port-co-pc54r/heather-royal-navy_front.jpg",
+          "back": "catalog_images/port-co-pc54r/heather-royal-navy_back.jpg",
+          "hexes": [
+            "#436caf",
+            "#282f3f"
+          ]
+        },
+        {
+          "name": "Navy/ Gold",
+          "hex": "#2e364c",
+          "front": "catalog_images/port-co-pc54r/navy-gold_front.jpg",
+          "back": "catalog_images/port-co-pc54r/navy-gold_back.jpg",
+          "hexes": [
+            "#282f3f",
+            "#fba81d"
+          ]
+        },
+        {
+          "name": "White/ Jet Black",
+          "hex": "#f1f1f1",
+          "front": "catalog_images/port-co-pc54r/white-jet-black_front.jpg",
+          "back": "catalog_images/port-co-pc54r/white-jet-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#1a1c1b"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#f1f1f1",
+          "front": "catalog_images/port-co-pc54r/white-navy_front.jpg",
+          "back": "catalog_images/port-co-pc54r/white-navy_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#282f3f"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#f1f1f1",
+          "front": "catalog_images/port-co-pc54r/white-red_front.jpg",
+          "back": "catalog_images/port-co-pc54r/white-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#c0152f"
+          ]
+        }
+      ]
     }
   ]
 }

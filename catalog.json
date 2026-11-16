@@ -16987,7 +16987,7 @@
           "front": "catalog_images/tultex-246/heather-royal-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
-            "#426aaf",
+            "#406aad",
             "#283040"
           ]
         },
@@ -17983,7 +17983,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2f2a2f",
+            "#2e2a2f",
             "#232223"
           ]
         },
@@ -46179,7 +46179,7 @@
           "front": "catalog_images/port-co-pc54r/heather-royal-navy_front.jpg",
           "back": "catalog_images/port-co-pc54r/heather-royal-navy_back.jpg",
           "hexes": [
-            "#426aaf",
+            "#406aad",
             "#283040"
           ]
         },
@@ -47750,6 +47750,142 @@
           "hex": "#ebebeb",
           "front": "catalog_images/port-co-lpc330v/white_front.jpg",
           "back": "catalog_images/port-co-lpc330v/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc330",
+      "name": "Tri-Blend Tee",
+      "brand": "Port & Co",
+      "style": "PC330",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#181a19",
+          "front": "catalog_images/port-co-pc330/black_front.jpg",
+          "back": "catalog_images/port-co-pc330/black_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#282a27",
+          "front": "catalog_images/port-co-pc330/black-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/black-heather_back.jpg"
+        },
+        {
+          "name": "Bright Red Heather",
+          "hex": "#ac3940",
+          "front": "catalog_images/port-co-pc330/bright-red-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/bright-red-heather_back.jpg"
+        },
+        {
+          "name": "Coyote Brown Heather",
+          "hex": "#7b7158",
+          "front": "catalog_images/port-co-pc330/coyote-brown-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/coyote-brown-heather_back.jpg"
+        },
+        {
+          "name": "Carolina Blue Heather",
+          "hex": "#6f99cb",
+          "front": "catalog_images/port-co-pc330/carolina-blue-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/carolina-blue-heather_back.jpg"
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#1d2733",
+          "front": "catalog_images/port-co-pc330/deep-navy_front.jpg",
+          "back": "catalog_images/port-co-pc330/deep-navy_back.jpg"
+        },
+        {
+          "name": "Deep Orange Heather",
+          "hex": "#e45b31",
+          "front": "catalog_images/port-co-pc330/deep-orange-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/deep-orange-heather_back.jpg"
+        },
+        {
+          "name": "Forest Green Heather",
+          "hex": "#3c5748",
+          "front": "catalog_images/port-co-pc330/forest-green-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/forest-green-heather_back.jpg"
+        },
+        {
+          "name": "Graphite Heather",
+          "hex": "#656c74",
+          "front": "catalog_images/port-co-pc330/graphite-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/graphite-heather_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#3e6bac",
+          "front": "catalog_images/port-co-pc330/heather-royal_front.jpg",
+          "back": "catalog_images/port-co-pc330/heather-royal_back.jpg"
+        },
+        {
+          "name": "Military Green Heather",
+          "hex": "#555644",
+          "front": "catalog_images/port-co-pc330/military-green-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/military-green-heather_back.jpg"
+        },
+        {
+          "name": "Ochre Yellow Heather",
+          "hex": "#ce9e4c",
+          "front": "catalog_images/port-co-pc330/ochre-yellow-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/ochre-yellow-heather_back.jpg"
+        },
+        {
+          "name": "Team Navy Heather",
+          "hex": "#253449",
+          "front": "catalog_images/port-co-pc330/team-navy-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/team-navy-heather_back.jpg"
+        },
+        {
+          "name": "Team Purple Heather",
+          "hex": "#514670",
+          "front": "catalog_images/port-co-pc330/team-purple-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/team-purple-heather_back.jpg"
+        },
+        {
+          "name": "Vivid Teal Heather",
+          "hex": "#43818e",
+          "front": "catalog_images/port-co-pc330/vivid-teal-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/vivid-teal-heather_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e9edf0",
+          "front": "catalog_images/port-co-pc330/white_front.jpg",
+          "back": "catalog_images/port-co-pc330/white_back.jpg"
+        },
+        {
+          "name": "Raspberry Heather",
+          "hex": "#7e4572",
+          "front": "catalog_images/port-co-pc330/raspberry-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/raspberry-heather_back.jpg"
+        },
+        {
+          "name": "Coal Grey",
+          "hex": "#383c3b",
+          "front": "catalog_images/port-co-pc330/coal-grey_front.jpg",
+          "back": "catalog_images/port-co-pc330/coal-grey_back.jpg"
+        },
+        {
+          "name": "Steel Blue Heather",
+          "hex": "#435665",
+          "front": "catalog_images/port-co-pc330/steel-blue-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330/steel-blue-heather_back.jpg"
+        },
+        {
+          "name": "Heathered Dusty Peach",
+          "hex": "#d5ab9b",
+          "front": "catalog_images/port-co-pc330/heathered-dusty-peach_front.jpg",
+          "back": "catalog_images/port-co-pc330/heathered-dusty-peach_back.jpg"
+        },
+        {
+          "name": "Heather Jadeite",
+          "hex": "#9ddec6",
+          "front": "catalog_images/port-co-pc330/heather-jadeite_front.jpg",
+          "back": "catalog_images/port-co-pc330/heather-jadeite_back.jpg"
         }
       ]
     }

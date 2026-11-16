@@ -32605,7 +32605,7 @@
           "back": "catalog_images/sportsman-sp15/royal-light-heather-grey_back.jpg",
           "hexes": [
             "#225092",
-            "#a4a9a5"
+            "#a7a9a5"
           ]
         },
         {
@@ -38285,6 +38285,40 @@
           "hex": "#d89a8d",
           "front": "catalog_images/district-dt671/nostalgia-rose-heather_front.jpg",
           "back": "catalog_images/district-dt671/nostalgia-rose-heather_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt673",
+      "name": "Women's Featherweight French Terry Full-Zip Hoodie",
+      "brand": "District",
+      "style": "DT673",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#212121",
+          "front": "catalog_images/district-dt673/black_front.jpg",
+          "back": "catalog_images/district-dt673/black_back.jpg"
+        },
+        {
+          "name": "Flint Blue Heather",
+          "hex": "#91a0a1",
+          "front": "catalog_images/district-dt673/flint-blue-heather_front.jpg",
+          "back": "catalog_images/district-dt673/flint-blue-heather_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#c9c7c3",
+          "front": "catalog_images/district-dt673/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt673/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Washed Coal",
+          "hex": "#5f5e5a",
+          "front": "catalog_images/district-dt673/washed-coal_front.jpg",
+          "back": "catalog_images/district-dt673/washed-coal_back.jpg"
         }
       ]
     }

@@ -35781,7 +35781,7 @@
           "back": "catalog_images/district-dm476/black-heathered-charcoal_back.jpg",
           "hexes": [
             "#232223",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -35791,7 +35791,7 @@
           "back": "catalog_images/district-dm476/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -35807,7 +35807,7 @@
           "back": "catalog_images/district-dm476/heathered-watermelon-heathered-charcoal_back.jpg",
           "hexes": [
             "#d33a6b",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -37961,7 +37961,7 @@
           "back": "catalog_images/district-dt196/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#344c80",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -37971,7 +37971,7 @@
           "back": "catalog_images/district-dt196/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#afb4ac",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -37981,7 +37981,7 @@
           "back": "catalog_images/district-dt196/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#484949"
+            "#484849"
           ]
         }
       ]
@@ -38001,7 +38001,7 @@
           "back": "catalog_images/district-dt296/heathered-deep-royal-heathered-charcoal_back.jpg",
           "hexes": [
             "#344c80",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -38011,7 +38011,7 @@
           "back": "catalog_images/district-dt296/heathered-grey-heathered-charcoal_back.jpg",
           "hexes": [
             "#afb4ac",
-            "#484949"
+            "#484849"
           ]
         },
         {
@@ -38021,7 +38021,7 @@
           "back": "catalog_images/district-dt296/heathered-red-heathered-charcoal_back.jpg",
           "hexes": [
             "#9c3744",
-            "#484949"
+            "#484849"
           ]
         }
       ]
@@ -40422,6 +40422,52 @@
           "hex": "#3a4758",
           "front": "catalog_images/district-dt2204/true-navy_front.jpg",
           "back": "catalog_images/district-dt2204/true-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6105",
+      "name": "Women's V.I.T. Fleece Crew",
+      "brand": "District",
+      "style": "DT6105",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Icelandic Purple",
+          "hex": "#b2b8c6",
+          "front": "catalog_images/district-dt6105/icelandic-purple_front.jpg",
+          "back": "catalog_images/district-dt6105/icelandic-purple_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#b4b7be",
+          "front": "catalog_images/district-dt6105/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6105/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Black",
+          "hex": "#171717",
+          "front": "catalog_images/district-dt6105/black_front.jpg",
+          "back": "catalog_images/district-dt6105/black_back.jpg"
+        },
+        {
+          "name": "Gardenia",
+          "hex": "#f7f4ed",
+          "front": "catalog_images/district-dt6105/gardenia_front.jpg",
+          "back": "catalog_images/district-dt6105/gardenia_back.jpg"
+        },
+        {
+          "name": "Heathered Dusty Sage",
+          "hex": "#8daba3",
+          "front": "catalog_images/district-dt6105/heathered-dusty-sage_front.jpg",
+          "back": "catalog_images/district-dt6105/heathered-dusty-sage_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#434748",
+          "front": "catalog_images/district-dt6105/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6105/heathered-charcoal_back.jpg"
         }
       ]
     }

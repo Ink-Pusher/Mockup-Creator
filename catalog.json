@@ -36992,7 +36992,7 @@
           "front": "catalog_images/district-dm136/black-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/black-frost-grey-frost_back.jpg",
           "hexes": [
-            "#3a3e3f",
+            "#383c3d",
             "#8b8b8b"
           ]
         },
@@ -37033,7 +37033,7 @@
           "back": "catalog_images/district-dm136/black-black-frost_back.jpg",
           "hexes": [
             "#232223",
-            "#3a3e3f"
+            "#383c3d"
           ]
         },
         {
@@ -38662,6 +38662,52 @@
           "hex": "#212d35",
           "front": "catalog_images/district-dt1302/new-navy_front.jpg",
           "back": "catalog_images/district-dt1302/new-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt1390l",
+      "name": "Women's Perfect Tri Midi Long Sleeve Hoodie",
+      "brand": "District",
+      "style": "DT1390L",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#252525",
+          "front": "catalog_images/district-dt1390l/black_front.jpg",
+          "back": "catalog_images/district-dt1390l/black_back.jpg"
+        },
+        {
+          "name": "Black Frost",
+          "hex": "#373b3c",
+          "front": "catalog_images/district-dt1390l/black-frost_front.jpg",
+          "back": "catalog_images/district-dt1390l/black-frost_back.jpg"
+        },
+        {
+          "name": "Desert Rose Heather",
+          "hex": "#ba7361",
+          "front": "catalog_images/district-dt1390l/desert-rose-heather_front.jpg",
+          "back": "catalog_images/district-dt1390l/desert-rose-heather_back.jpg"
+        },
+        {
+          "name": "Grey Frost",
+          "hex": "#a1a7a7",
+          "front": "catalog_images/district-dt1390l/grey-frost_front.jpg",
+          "back": "catalog_images/district-dt1390l/grey-frost_back.jpg"
+        },
+        {
+          "name": "Heathered Eucalyptus Blue",
+          "hex": "#6b9393",
+          "front": "catalog_images/district-dt1390l/heathered-eucalyptus-blue_front.jpg",
+          "back": "catalog_images/district-dt1390l/heathered-eucalyptus-blue_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#e4e4db",
+          "front": "catalog_images/district-dt1390l/natural_front.jpg",
+          "back": "catalog_images/district-dt1390l/natural_back.jpg"
         }
       ]
     }

@@ -37022,7 +37022,7 @@
           "front": "catalog_images/district-dm136/royal-frost-grey-frost_front.jpg",
           "back": "catalog_images/district-dm136/royal-frost-grey-frost_back.jpg",
           "hexes": [
-            "#5675bf",
+            "#5673bd",
             "#898886"
           ]
         },
@@ -41190,6 +41190,64 @@
           "hex": "#494a44",
           "front": "catalog_images/district-dt6000y/deepest-grey_front.jpg",
           "back": "catalog_images/district-dt6000y/deepest-grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "district-dt6100y",
+      "name": "Youth V.I.T. Fleece Hoodie",
+      "brand": "District",
+      "style": "DT6100Y",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1a1a1a",
+          "front": "catalog_images/district-dt6100y/black_front.jpg",
+          "back": "catalog_images/district-dt6100y/black_back.jpg"
+        },
+        {
+          "name": "Classic Red",
+          "hex": "#921a24",
+          "front": "catalog_images/district-dt6100y/classic-red_front.jpg",
+          "back": "catalog_images/district-dt6100y/classic-red_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#273c33",
+          "front": "catalog_images/district-dt6100y/forest-green_front.jpg",
+          "back": "catalog_images/district-dt6100y/forest-green_back.jpg"
+        },
+        {
+          "name": "New Navy",
+          "hex": "#24323d",
+          "front": "catalog_images/district-dt6100y/new-navy_front.jpg",
+          "back": "catalog_images/district-dt6100y/new-navy_back.jpg"
+        },
+        {
+          "name": "Rosewater Pink",
+          "hex": "#f0d5cc",
+          "front": "catalog_images/district-dt6100y/rosewater-pink_front.jpg",
+          "back": "catalog_images/district-dt6100y/rosewater-pink_back.jpg"
+        },
+        {
+          "name": "Light Heather Grey",
+          "hex": "#c0c0be",
+          "front": "catalog_images/district-dt6100y/light-heather-grey_front.jpg",
+          "back": "catalog_images/district-dt6100y/light-heather-grey_back.jpg"
+        },
+        {
+          "name": "Heathered Charcoal",
+          "hex": "#414546",
+          "front": "catalog_images/district-dt6100y/heathered-charcoal_front.jpg",
+          "back": "catalog_images/district-dt6100y/heathered-charcoal_back.jpg"
+        },
+        {
+          "name": "Royal Frost",
+          "hex": "#34549d",
+          "front": "catalog_images/district-dt6100y/royal-frost_front.jpg",
+          "back": "catalog_images/district-dt6100y/royal-frost_back.jpg"
         }
       ]
     }

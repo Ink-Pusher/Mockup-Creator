@@ -1446,7 +1446,7 @@
           "back": "catalog_images/richardson-112/black-light-grey-cmb_back.jpg",
           "hexes": [
             "#232223",
-            "#a6a6a6"
+            "#a9a7a6"
           ]
         },
         {
@@ -1859,7 +1859,7 @@
           "back": "catalog_images/richardson-112/heather-grey-light-grey_back.jpg",
           "hexes": [
             "#b5b4b7",
-            "#a6a6a6"
+            "#a9a7a6"
           ]
         },
         {
@@ -2007,7 +2007,7 @@
           "back": "catalog_images/richardson-112/light-blue-light-grey-cmb_back.jpg",
           "hexes": [
             "#adbeda",
-            "#a6a6a6"
+            "#a9a7a6"
           ]
         },
         {
@@ -7073,7 +7073,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-turquoise_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#0299c9"
+            "#029ccb"
           ]
         },
         {
@@ -7980,7 +7980,7 @@
           "front": "catalog_images/yupoong-6606/turquoise-white_front.jpg",
           "back": "catalog_images/yupoong-6606/turquoise-white_back.jpg",
           "hexes": [
-            "#0299c9",
+            "#029ccb",
             "#ecedef"
           ]
         },
@@ -9770,7 +9770,7 @@
           "front": "catalog_images/richardson-256/midnight-navy-white_front.jpg",
           "back": "catalog_images/richardson-256/midnight-navy-white_back.jpg",
           "hexes": [
-            "#272d44",
+            "#262d44",
             "#ecedef"
           ]
         },
@@ -17156,7 +17156,7 @@
           "back": "catalog_images/next-level-3604/natural-midnight-navy_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#272d44"
+            "#262d44"
           ]
         },
         {
@@ -31745,7 +31745,7 @@
           "front": "catalog_images/richardson-258/light-grey-black_front.jpg",
           "back": "catalog_images/richardson-258/light-grey-black_back.jpg",
           "hexes": [
-            "#a6a6a6",
+            "#a9a7a6",
             "#232223"
           ]
         },
@@ -31755,7 +31755,7 @@
           "front": "catalog_images/richardson-258/light-grey-white_front.jpg",
           "back": "catalog_images/richardson-258/light-grey-white_back.jpg",
           "hexes": [
-            "#a6a6a6",
+            "#a9a7a6",
             "#ecedef"
           ]
         },
@@ -42478,6 +42478,82 @@
           "hex": "#f5f3f8",
           "front": "catalog_images/next-level-6240/white_front.jpg",
           "back": "catalog_images/next-level-6240/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "next-level-6440",
+      "name": "Sueded V-Neck T-Shirt",
+      "brand": "Next Level",
+      "style": "6440",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#2a292e",
+          "front": "catalog_images/next-level-6440/black_front.jpg",
+          "back": "catalog_images/next-level-6440/black_back.jpg"
+        },
+        {
+          "name": "Cool Blue",
+          "hex": "#074885",
+          "front": "catalog_images/next-level-6440/cool-blue_front.jpg",
+          "back": "catalog_images/next-level-6440/cool-blue_back.jpg"
+        },
+        {
+          "name": "Envy",
+          "hex": "#00af71",
+          "front": "catalog_images/next-level-6440/envy_front.jpg",
+          "back": "catalog_images/next-level-6440/envy_back.jpg"
+        },
+        {
+          "name": "Light Grey",
+          "hex": "#bbb3b0",
+          "front": "catalog_images/next-level-6440/light-grey_front.jpg",
+          "back": "catalog_images/next-level-6440/light-grey_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#212c40",
+          "front": "catalog_images/next-level-6440/midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-6440/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Military Green",
+          "hex": "#6d6452",
+          "front": "catalog_images/next-level-6440/military-green_front.jpg",
+          "back": "catalog_images/next-level-6440/military-green_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#d9d3c6",
+          "front": "catalog_images/next-level-6440/natural_front.jpg",
+          "back": "catalog_images/next-level-6440/natural_back.jpg"
+        },
+        {
+          "name": "Sand",
+          "hex": "#bcb2a7",
+          "front": "catalog_images/next-level-6440/sand_front.jpg",
+          "back": "catalog_images/next-level-6440/sand_back.jpg"
+        },
+        {
+          "name": "Tahiti Blue",
+          "hex": "#3abbc2",
+          "front": "catalog_images/next-level-6440/tahiti-blue_front.jpg",
+          "back": "catalog_images/next-level-6440/tahiti-blue_back.jpg"
+        },
+        {
+          "name": "Turquoise",
+          "hex": "#5fa9e5",
+          "front": "catalog_images/next-level-6440/turquoise_front.jpg",
+          "back": "catalog_images/next-level-6440/turquoise_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#d6d2d1",
+          "front": "catalog_images/next-level-6440/white_front.jpg",
+          "back": "catalog_images/next-level-6440/white_back.jpg"
         }
       ]
     }

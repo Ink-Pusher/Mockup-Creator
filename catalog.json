@@ -16987,7 +16987,7 @@
           "front": "catalog_images/tultex-246/heather-royal-navy_front.jpg",
           "back": "catalog_images/tultex-246/heather-royal-navy_back.jpg",
           "hexes": [
-            "#426bac",
+            "#436bad",
             "#283040"
           ]
         },
@@ -17983,7 +17983,7 @@
           "front": "catalog_images/bella-canvas-3200/black-heather-black_front.jpg",
           "back": "catalog_images/bella-canvas-3200/black-heather-black_back.jpg",
           "hexes": [
-            "#2e2a2f",
+            "#2f2a2f",
             "#232223"
           ]
         },
@@ -46179,7 +46179,7 @@
           "front": "catalog_images/port-co-pc54r/heather-royal-navy_front.jpg",
           "back": "catalog_images/port-co-pc54r/heather-royal-navy_back.jpg",
           "hexes": [
-            "#426bac",
+            "#436bad",
             "#283040"
           ]
         },
@@ -49172,6 +49172,76 @@
           "hex": "#252839",
           "front": "catalog_images/port-co-pc61ls/deep-navy_front.jpg",
           "back": "catalog_images/port-co-pc61ls/deep-navy_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc330ls",
+      "name": "Tri-Blend Long Sleeve Tee",
+      "brand": "Port & Co",
+      "style": "PC330LS",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1c1c1c",
+          "front": "catalog_images/port-co-pc330ls/black_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/black_back.jpg"
+        },
+        {
+          "name": "Black Heather",
+          "hex": "#383838",
+          "front": "catalog_images/port-co-pc330ls/black-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/black-heather_back.jpg"
+        },
+        {
+          "name": "Bright Red Heather",
+          "hex": "#dd4a4a",
+          "front": "catalog_images/port-co-pc330ls/bright-red-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/bright-red-heather_back.jpg"
+        },
+        {
+          "name": "Graphite Heather",
+          "hex": "#686868",
+          "front": "catalog_images/port-co-pc330ls/graphite-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/graphite-heather_back.jpg"
+        },
+        {
+          "name": "Heather Royal",
+          "hex": "#5176cd",
+          "front": "catalog_images/port-co-pc330ls/heather-royal_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/heather-royal_back.jpg"
+        },
+        {
+          "name": "Team Navy Heather",
+          "hex": "#2a2d40",
+          "front": "catalog_images/port-co-pc330ls/team-navy-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/team-navy-heather_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#eaeaea",
+          "front": "catalog_images/port-co-pc330ls/white_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/white_back.jpg"
+        },
+        {
+          "name": "Military Green Heather",
+          "hex": "#525236",
+          "front": "catalog_images/port-co-pc330ls/military-green-heather_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/military-green-heather_back.jpg"
+        },
+        {
+          "name": "Coal Grey",
+          "hex": "#3f3f3d",
+          "front": "catalog_images/port-co-pc330ls/coal-grey_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/coal-grey_back.jpg"
+        },
+        {
+          "name": "Deep Navy",
+          "hex": "#1d202f",
+          "front": "catalog_images/port-co-pc330ls/deep-navy_front.jpg",
+          "back": "catalog_images/port-co-pc330ls/deep-navy_back.jpg"
         }
       ]
     }

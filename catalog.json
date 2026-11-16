@@ -11151,7 +11151,7 @@
           "front": "catalog_images/bella-canvas-3480/dark-grey-black_front.jpg",
           "back": "catalog_images/bella-canvas-3480/dark-grey-black_back.jpg",
           "hexes": [
-            "#3a383d",
+            "#3b393e",
             "#232223"
           ]
         },
@@ -31729,7 +31729,7 @@
           "front": "catalog_images/richardson-258/dark-grey-white_front.jpg",
           "back": "catalog_images/richardson-258/dark-grey-white_back.jpg",
           "hexes": [
-            "#3a383d",
+            "#3b393e",
             "#ecedef"
           ]
         },
@@ -32335,7 +32335,7 @@
           "back": "catalog_images/sportsman-sp03/black-dark-grey_back.jpg",
           "hexes": [
             "#232223",
-            "#3a383d"
+            "#3b393e"
           ]
         },
         {
@@ -32355,7 +32355,7 @@
           "back": "catalog_images/sportsman-sp03/navy-dark-grey_back.jpg",
           "hexes": [
             "#293143",
-            "#3a383d"
+            "#3b393e"
           ]
         },
         {
@@ -33770,7 +33770,7 @@
           "front": "catalog_images/valucap-vc990/olive-green-navy_front.jpg",
           "back": "catalog_images/valucap-vc990/olive-green-navy_back.jpg",
           "hexes": [
-            "#5a5448",
+            "#706e60",
             "#293143"
           ]
         }
@@ -54873,6 +54873,51 @@
           "front": "catalog_images/port-co-kp1500/white_front.jpg",
           "back": "catalog_images/port-co-kp1500/white_back.jpg"
         }
+      ]
+    },
+    {
+      "id": "richardson-324re",
+      "name": "Odell Hat",
+      "brand": "Richardson",
+      "style": "324RE",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#202020",
+          "front": "catalog_images/richardson-324re/black_front.jpg",
+          "back": "catalog_images/richardson-324re/black_back.jpg"
+        },
+        {
+          "name": "Dark Grey",
+          "hex": "#726c6c",
+          "front": "catalog_images/richardson-324re/dark-grey_front.jpg",
+          "back": "catalog_images/richardson-324re/dark-grey_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#3e454c",
+          "front": "catalog_images/richardson-324re/navy_front.jpg",
+          "back": "catalog_images/richardson-324re/navy_back.jpg"
+        },
+        {
+          "name": "Olive Green",
+          "hex": "#868978",
+          "front": "catalog_images/richardson-324re/olive-green_front.jpg",
+          "back": "catalog_images/richardson-324re/olive-green_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#e7e6e2",
+          "front": "catalog_images/richardson-324re/white_front.jpg",
+          "back": "catalog_images/richardson-324re/white_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "unstructured",
+        "6-panel",
+        "buckle"
       ]
     }
   ]

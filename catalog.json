@@ -7073,7 +7073,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-turquoise_back.jpg",
           "hexes": [
             "#e9e2d5",
-            "#029ecd"
+            "#029fcd"
           ]
         },
         {
@@ -7980,7 +7980,7 @@
           "front": "catalog_images/yupoong-6606/turquoise-white_front.jpg",
           "back": "catalog_images/yupoong-6606/turquoise-white_back.jpg",
           "hexes": [
-            "#029ecd",
+            "#029fcd",
             "#ecedef"
           ]
         },
@@ -8241,9 +8241,9 @@
           "front": "catalog_images/yupoong-6006/pink-white-pink_front.jpg",
           "back": "catalog_images/yupoong-6006/pink-white-pink_back.jpg",
           "hexes": [
-            "#f2c4ca",
+            "#f2c4c9",
             "#ecedef",
-            "#f2c4ca"
+            "#f2c4c9"
           ]
         },
         {
@@ -19854,7 +19854,7 @@
           "back": "catalog_images/bella-canvas-1201/white-pink_back.jpg",
           "hexes": [
             "#ecedef",
-            "#f2c4ca"
+            "#f2c4c9"
           ]
         },
         {
@@ -33113,7 +33113,7 @@
           "front": "catalog_images/valucap-s102/pink-white_front.jpg",
           "back": "catalog_images/valucap-s102/pink-white_back.jpg",
           "hexes": [
-            "#f2c4ca",
+            "#f2c4c9",
             "#ecedef"
           ]
         },
@@ -33677,7 +33677,7 @@
           "back": "catalog_images/valucap-vc700/white-pink_back.jpg",
           "hexes": [
             "#ecedef",
-            "#f2c4ca"
+            "#f2c4c9"
           ]
         },
         {
@@ -43636,7 +43636,7 @@
           "back": "catalog_images/next-level-9301/black-turquoise_back.jpg",
           "hexes": [
             "#232223",
-            "#029ecd"
+            "#029fcd"
           ]
         },
         {
@@ -50940,6 +50940,82 @@
           "hex": "#b5c0c3",
           "front": "catalog_images/port-co-pc144/grey_front.jpg",
           "back": "catalog_images/port-co-pc144/grey_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "port-co-pc146",
+      "name": "Tie-Dye Pullover Hooded Sweatshirt",
+      "brand": "Port & Co",
+      "style": "PC146",
+      "kind": "hoodie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#3b444c",
+          "front": "catalog_images/port-co-pc146/black_front.jpg",
+          "back": "catalog_images/port-co-pc146/black_back.jpg"
+        },
+        {
+          "name": "Kelly",
+          "hex": "#5ec177",
+          "front": "catalog_images/port-co-pc146/kelly_front.jpg",
+          "back": "catalog_images/port-co-pc146/kelly_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#405c85",
+          "front": "catalog_images/port-co-pc146/navy_front.jpg",
+          "back": "catalog_images/port-co-pc146/navy_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#7d50a5",
+          "front": "catalog_images/port-co-pc146/purple_front.jpg",
+          "back": "catalog_images/port-co-pc146/purple_back.jpg"
+        },
+        {
+          "name": "Rainbow",
+          "hex": "#a49051",
+          "front": "catalog_images/port-co-pc146/rainbow_front.jpg",
+          "back": "catalog_images/port-co-pc146/rainbow_back.jpg"
+        },
+        {
+          "name": "Royal",
+          "hex": "#4980c8",
+          "front": "catalog_images/port-co-pc146/royal_front.jpg",
+          "back": "catalog_images/port-co-pc146/royal_back.jpg"
+        },
+        {
+          "name": "Turquoise",
+          "hex": "#52aedc",
+          "front": "catalog_images/port-co-pc146/turquoise_front.jpg",
+          "back": "catalog_images/port-co-pc146/turquoise_back.jpg"
+        },
+        {
+          "name": "Pink",
+          "hex": "#e688b9",
+          "front": "catalog_images/port-co-pc146/pink_front.jpg",
+          "back": "catalog_images/port-co-pc146/pink_back.jpg"
+        },
+        {
+          "name": "Neon Rainbow",
+          "hex": "#e6bb98",
+          "front": "catalog_images/port-co-pc146/neon-rainbow_front.jpg",
+          "back": "catalog_images/port-co-pc146/neon-rainbow_back.jpg"
+        },
+        {
+          "name": "Island Spiral",
+          "hex": "#575639",
+          "front": "catalog_images/port-co-pc146/island-spiral_front.jpg",
+          "back": "catalog_images/port-co-pc146/island-spiral_back.jpg"
+        },
+        {
+          "name": "Mint Rainbow",
+          "hex": "#dbd3c5",
+          "front": "catalog_images/port-co-pc146/mint-rainbow_front.jpg",
+          "back": "catalog_images/port-co-pc146/mint-rainbow_back.jpg"
         }
       ]
     }

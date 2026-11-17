@@ -99,7 +99,7 @@ def load_catalog():
 
 
 # ------------------------------------------------------------------ featured photos
-FAMILIES = ("red", "orange", "gold", "green", "teal", "blue", "navy", "purple", "pink",
+FAMILIES = ("red", "orange", "yellow", "tan", "green", "teal", "blue", "navy", "purple", "pink",
             "brown", "grey", "black", "white")
 BLAND = {"white", "black", "grey"}   # fine sometimes, but not the first choice
 
@@ -118,7 +118,7 @@ def family(hex_color):
     if 200 <= hue < 260 and light < 0.3: return "navy"
     if hue < 12 or hue >= 345: return "red" if light < 0.7 else "pink"
     if hue < 38: return "orange"
-    if hue < 65: return "gold"
+    if hue < 70: return "yellow" if sat > 0.45 and light > 0.4 else "tan"
     if hue < 160: return "green"
     if hue < 200: return "teal"
     if hue < 260: return "blue"
@@ -162,11 +162,12 @@ def appeal(hex_color, name=""):
         return -2
     r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
     _, light, sat = colorsys.rgb_to_hls(r, g, b)
-    score = 1 - abs(sat - 0.3) - 0.8 * abs(light - 0.5)
-    if sat > 0.5 and light > 0.45:          # neon-bright: safety yellow, lime, hot pink, bright orange
+    # soft to fairly rich colors all score well; only very saturated or very dark/pale ones lose points
+    score = 1 - 0.8 * max(0, sat - 0.55) - 0.8 * max(0, abs(light - 0.52) - 0.12)
+    if sat > 0.8 and 0.45 < light < 0.72:   # true fluorescent: safety yellow, neon green/pink/orange
         score -= 1
-    elif sat > 0.65:                        # loud even when darker: bright royal, electric purple
-        score -= 0.5
+    elif sat > 0.75 and light <= 0.45:      # loud dark brights: electric royal, bright purple
+        score -= 0.3
     if any(w in f" {(name or '').lower()} " for w in NEON_WORDS):
         score -= 2
     return score
@@ -192,7 +193,7 @@ def family_counts(products, skip_id=None):
             continue
         c = featured_color(p)
         if c:
-            n[family(c.get("hex"))] += 1
+            n[family(photo_hex(c))] += 1
     return n
 
 
@@ -231,9 +232,9 @@ def pick_featured(product_id, products=None, quiet=False):
         hx = photo_hex(c)
         f = family(hx)
         return (3 * near[f]                                   # don't repeat the cards next to it
-                + 4 * used[f] / total                         # keep the whole catalog varied
+                + 8 * used[f] / total                         # keep the whole catalog varied (every family shows up)
                 + (0.4 if f == "white" else 0)                # white: fine, not first choice
-                - 2 * (0.62 if f in ("black", "grey") else appeal(hx, c.get("name"))))   # greys/blacks count as nice neutrals
+                - 2 * (0.85 if f in ("black", "grey") else appeal(hx, c.get("name"))))   # greys/blacks count as nice neutrals
     best = min(usable, key=cost)
     src, dst = HERE / best["front"], HERE / "catalog_images" / product_id / "featured_front.jpg"
     if src.suffix.lower() == ".jpg":

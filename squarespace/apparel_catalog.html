@@ -792,7 +792,7 @@ document.getElementById("sortSeg").addEventListener("click", (e)=>{
 })();
 // ?brand= can't be validated until the catalog loads (the brand list
 // comes from the products themselves), so it's resolved in loadCatalog.
-const pendingBrandParam = new URLSearchParams(location.search).get("brand");
+const pendingBrandParam = new URLSearchParams(location.search).get("brand");   // one brand, or several comma-separated
 // ?q= prefills the search box and opens its results -- lets other pages
 // (the product detail page's search bar) hand off a query mid-typing.
 const pendingSearchParam = new URLSearchParams(location.search).get("q");
@@ -866,8 +866,10 @@ async function loadCatalog(){
       });
     if(pendingSearchParam && searchInputEl){
       searchInputEl.value = pendingSearchParam;
-      renderSearchResults();
-      searchInputEl.focus();
+      if(!savedScrollEntry()){   // coming Back to a remembered spot: don't reopen the list (focus would scroll)
+        renderSearchResults();
+        searchInputEl.focus();
+      }
     }
     if(pendingBrandParam){
       // Brand spellings drift in catalog.json ("AS Colour"/"As Colour",
@@ -876,12 +878,15 @@ async function loadCatalog(){
       // all of that brand's products regardless of which spelling each
       // entry happens to carry.
       const norm = (b)=> String(b||"").toLowerCase().replace(/[^a-z0-9]/g, "");
-      const want = norm(pendingBrandParam), wantLabel = norm(brandLabel(pendingBrandParam));
-      CATALOG.products.forEach(p => {
-        if(p.brand && (norm(p.brand) === want || norm(brandLabel(p.brand)) === wantLabel)) state.activeBrands.add(p.brand);
+      pendingBrandParam.split(",").map(b => b.trim()).filter(Boolean).forEach(one => {
+        const want = norm(one), wantLabel = norm(brandLabel(one));
+        CATALOG.products.forEach(p => {
+          if(p.brand && (norm(p.brand) === want || norm(brandLabel(p.brand)) === wantLabel)) state.activeBrands.add(p.brand);
+        });
       });
     }
     render();
+    maybeRestoreScroll();
   } catch (err) {
     console.error("[apparel-catalog] failed to load catalog:", err);
     grid.innerHTML = `<div class="product-grid-error">Couldn't load the catalog right now. Please refresh, or check back shortly.</div>`;
@@ -1095,6 +1100,107 @@ function render(){
   if(featured) renderFeatured();
   document.getElementById("clearAllSection").style.display =
     (state.activeCategory !== "all" || state.activeTags.size || state.activeBrands.size) ? "block" : "none";
+  syncUrl();
+}
+
+// ---------- Keep the view in the address bar ----------
+// Category, filters, brands and sort are written back into the URL (replaceState, so no extra
+// history entries). Browser Back from a product, a shared link, or a refresh then lands on the
+// same slice of the catalog -- before this only the sort was kept and Back reset everything.
+function syncUrl(){
+  try {
+    const u = new URL(location.href);
+    ["view", "cat", "tags", "brand", "sort", "q"].forEach(k => u.searchParams.delete(k));
+    if(state.view === "grid"){
+      if(state.activeCategory !== "all") u.searchParams.set("cat", state.activeCategory);
+      if(state.activeTags.size) u.searchParams.set("tags", [...state.activeTags].join(","));
+      if(state.activeBrands.size) u.searchParams.set("brand", [...new Set([...state.activeBrands].map(brandLabel))].join(","));
+      if(state.activeCategory === "all" && !state.activeTags.size && !state.activeBrands.size) u.searchParams.set("view", "all");
+    }
+    if(state.sort !== "recommended") u.searchParams.set("sort", state.sort);
+    if(u.href !== location.href) history.replaceState(history.state, "", u);
+  } catch(e) {}
+}
+
+// ---------- Come back to the same spot ----------
+// The grid draws only after catalog.json loads, so the browser's own scroll restore fires on an
+// empty page and lands at the top. Instead, clicking a product remembers (per catalog URL, in this
+// tab only) the scroll position and which card was clicked; coming back -- browser Back, or the
+// product page's "Back to catalog" button -- puts that card back where it was once the page has
+// drawn. Re-applied a few times while photos load, and never after the visitor scrolls themself.
+const SCROLL_KEY = "ip_catalog_scroll";      // { "<path?query>": {y, t, cont, href, off, left} }
+const RETURN_KEY = "ip_catalog_return";      // read by product_detail.html's Back to catalog button
+try { if("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch(e) {}
+function scrollKey(){ return location.pathname + location.search; }
+function cardContainers(){
+  // the product grid, or the Featured view's rows. "Recently viewed" is left out of the numbering:
+  // it gains the product just viewed, so counting it would shift every row after it.
+  return [...document.querySelectorAll("#productGrid, #featuredView .scroller, #featuredView .row4")]
+    .filter(el => el.offsetParent && !el.classList.contains("recent"));
+}
+function saveScroll(card){
+  try {
+    const all = JSON.parse(sessionStorage.getItem(SCROLL_KEY) || "{}");
+    const prev = all[scrollKey()];
+    if(!card && prev && prev.href && Date.now() - prev.t < 3000) return;   // pagehide right after a card click: keep the click's
+    const entry = { y: Math.round(window.scrollY), t: Date.now() };
+    if(card){
+      const cont = card.closest("#productGrid, #featuredView .scroller, #featuredView .row4");
+      entry.href = card.getAttribute("href");
+      if(cont && cont.classList.contains("recent")){
+        entry.cont = "recent";
+        entry.off = Math.round(cont.getBoundingClientRect().top);
+      } else {
+        entry.cont = cardContainers().indexOf(cont);
+        entry.off = Math.round(card.getBoundingClientRect().top);
+      }
+      if(cont && cont.scrollLeft) entry.left = Math.round(cont.scrollLeft);
+    }
+    all[scrollKey()] = entry;
+    const keys = Object.keys(all).sort((a, b) => all[b].t - all[a].t);
+    keys.slice(20).forEach(k => delete all[k]);
+    sessionStorage.setItem(SCROLL_KEY, JSON.stringify(all));
+    sessionStorage.setItem(RETURN_KEY, JSON.stringify({ url: location.href, t: Date.now() }));
+  } catch(e) {}
+}
+function savedScrollEntry(){
+  try {
+    const e = JSON.parse(sessionStorage.getItem(SCROLL_KEY) || "{}")[location.pathname + location.search];
+    return e && Date.now() - e.t < 6 * 3600 * 1000 ? e : null;
+  } catch(err) { return null; }
+}
+document.addEventListener("click", (e)=>{
+  const a = e.target.closest && e.target.closest("a.product-card");
+  if(a && !e.defaultPrevented) saveScroll(a);
+}, true);
+window.addEventListener("pagehide", ()=> saveScroll(null));
+let restorePending = true;
+function maybeRestoreScroll(){
+  if(!restorePending) return;
+  if(state.view === "featured" && !featuredData) return;   // the Featured view draws again once its data is in
+  restorePending = false;
+  const entry = savedScrollEntry();
+  if(!entry) return;
+  let userMoved = false;
+  const stop = ()=>{ userMoved = true; };
+  ["wheel", "touchstart", "keydown", "mousedown"].forEach(ev => window.addEventListener(ev, stop, { once: true, passive: true }));
+  const apply = ()=>{
+    if(userMoved) return;
+    let y = entry.y;
+    let cont = null;
+    if(entry.cont === "recent") cont = document.querySelector("#featuredView .scroller.recent");
+    else if(typeof entry.cont === "number") cont = cardContainers()[entry.cont];
+    if(cont){
+      const card = entry.cont === "recent" ? null : [...cont.querySelectorAll("a.product-card")].find(a => a.getAttribute("href") === entry.href);
+      const el = card || cont;
+      if(entry.cont === "recent" || card) y = el.getBoundingClientRect().top + window.scrollY - entry.off;
+      if(entry.left && entry.cont !== "recent") cont.scrollLeft = entry.left;
+    }
+    window.scrollTo({ top: Math.max(0, Math.round(y)), behavior: "instant" });
+  };
+  apply();
+  requestAnimationFrame(apply);
+  [250, 700, 1500, 2500].forEach(ms => setTimeout(apply, ms));
 }
 document.getElementById("clearAllFiltersBtn").onclick = ()=>{
   state.activeCategory = "all";
@@ -1104,6 +1210,7 @@ document.getElementById("clearAllFiltersBtn").onclick = ()=>{
 };
 
 function goToProduct(id){
+  saveScroll(null);
   window.location.href = `${PRODUCT_DETAIL_PAGE_URL}?id=${encodeURIComponent(id)}`;
 }
 
@@ -1325,6 +1432,7 @@ function productCardHTML(p){
 }
 
 function showGrid(cat, tags){
+  restorePending = false;   // the visitor picked a view: no late jump to an old spot
   state.view = "grid";
   state.activeCategory = cat || "all";
   state.activeTags = new Set(tags || []);
@@ -1333,6 +1441,7 @@ function showGrid(cat, tags){
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 function showFeatured(){
+  restorePending = false;   // the visitor picked a view: no late jump to an old spot
   state.view = "featured";
   state.activeCategory = "all";
   state.activeTags = new Set();
@@ -1487,6 +1596,7 @@ function renderFeatured(){
   });
   const clr = document.getElementById("recentClear");
   if(clr) clr.onclick = ()=>{ try { localStorage.removeItem(RECENT_KEY); } catch(e) {} renderFeatured(); };
+  maybeRestoreScroll();
 }
 
 loadCatalog();

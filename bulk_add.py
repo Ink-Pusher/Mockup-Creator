@@ -19,6 +19,9 @@ USAGE:
     python3 bulk_add.py feature <product-id> [...]              # (re)pick featured photos
     python3 bulk_add.py feature --report                        # how many featured photos per color family
     python3 bulk_add.py tag-hats                                # (re)tag every hat: panels, closure, fabric ...
+    python3 bulk_add.py models --dry-run                        # which products have on-model photos at the vendor
+    python3 bulk_add.py models [<product-id> ...] [--force]     # save them (fit_photos.py); --force re-picks,
+                                                                #   --refresh asks the vendors again
 
   Options: --priority   only rows marked priority
            --brand X    only rows for one brand (repeatable)
@@ -275,6 +278,66 @@ def cmd_tag_hats(args):
     print(f"{n} hat(s) changed. Commit catalog.json and push to update the site.")
 
 
+# ------------------------------------------------------------------ on-model photos
+def cmd_models(args):
+    """Backfill on-model ("fit") photos (fit_photos.py) for every product that has none yet.
+    New products get them automatically from build_catalog.py. No commit: one commit for the lot."""
+    import fit_photos
+    dry, force = "--dry-run" in args, "--force" in args
+    ids = [a for a in args if not a.startswith("--")]
+    products = load_catalog()
+    todo = [p for p in products if (not ids or p["id"] in ids) and (force or not fit_photos.has_models(p))]
+    print(f"{len(todo)} product(s) to {'check' if dry else 'fill in'} ({len(products) - len(todo)} already have photos"
+          f" or weren't asked for)")
+    # vendor lookups are slow (S&S: ~2 s a product), so a dry run's answers are reused by the real run
+    cache_path = HERE / "downloaded_images" / "fit_lookup.json"
+    try:
+        cache = json.loads(cache_path.read_text()) if "--refresh" not in args else {}
+    except Exception:
+        cache = {}
+    got, none, total, by_src = 0, [], 0, Counter()
+    for i, p in enumerate(todo, 1):
+        try:
+            if p["id"] not in cache:
+                cache[p["id"]] = list(fit_photos.find_models(p))
+                if i % 10 == 0:
+                    cache_path.parent.mkdir(exist_ok=True)
+                    cache_path.write_text(json.dumps(cache))
+            models, src = cache[p["id"]]
+            picks = fit_photos.choose(models, p)
+        except Exception as e:
+            picks, src = [], f"error: {e}"
+        if not picks:
+            none.append(p["id"])
+            print(f"  [{i}/{len(todo)}] {p['id']}: none" + (f" ({src})" if src and src.startswith("error") else ""))
+            continue
+        names = ", ".join(n or "model" for n, _ in picks)
+        if dry:
+            got += 1; by_src[src] += 1
+            n_img = sum(2 if v.get("back") or v.get("side") else 1 for _, v in picks)
+            total += n_img * 70_000   # measured: about 70 KB per 800px model photo
+            print(f"  [{i}/{len(todo)}] {p['id']}: {names} ({src})")
+            continue
+        n, size = fit_photos.add_models(CATALOG, p["id"], force=force, quiet=True, found=(models, src))
+        if n:
+            got += 1; total += size; by_src[src] += 1
+            print(f"  [{i}/{len(todo)}] {p['id']}: {names} ({src}, {size / 1e3:.0f} KB)")
+        else:
+            none.append(p["id"])
+            print(f"  [{i}/{len(todo)}] {p['id']}: download failed")
+    cache_path.parent.mkdir(exist_ok=True)
+    cache_path.write_text(json.dumps(cache))
+    print(f"\n{got} product(s) {'would get' if dry else 'got'} on-model photos "
+          f"({', '.join(f'{k} {v}' for k, v in by_src.items())}); {len(none)} have none at the vendor.")
+    print(f"{'About ' if dry else ''}{total / 1e6:.0f} MB {'would be ' if dry else ''}added.")
+    if none:
+        LOGS.mkdir(exist_ok=True)
+        (LOGS / "models_none.txt").write_text("\n".join(none) + "\n")
+        print(f"Products without: {(LOGS / 'models_none.txt').relative_to(HERE)}")
+    if not dry and got:
+        print("Commit catalog.json + catalog_images in one commit and push to update the site.")
+
+
 # ------------------------------------------------------------------ the list
 def read_list(path):
     with open(path, newline="", encoding="utf-8-sig") as f:
@@ -330,6 +393,8 @@ def main():
         return cmd_feature(argv[1:])
     if argv[:1] == ["tag-hats"]:
         return cmd_tag_hats(argv[1:])
+    if argv[:1] == ["models"]:
+        return cmd_models(argv[1:])
     if not argv or argv[0].startswith("-"):
         sys.exit(__doc__)
     path, opts = argv[0], argv[1:]

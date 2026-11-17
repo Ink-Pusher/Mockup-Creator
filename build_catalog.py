@@ -1273,6 +1273,8 @@ def main():
     # --front-only: allow colors with a front photo and no back for ANY kind (hats, caps and beanies
     # always allow it). For a style whose vendor shot only the front of most colors, e.g. ITC PRM180LST.
     force_front_only = False
+    # --no-models: skip the on-model ("fit") photos for the product page (fit_photos.py).
+    no_models = False
 
     cleaned = []
     i = 0
@@ -1288,6 +1290,10 @@ def main():
             continue
         if arg == "--no-prices":
             want_prices = False
+            i += 1
+            continue
+        if arg == "--no-models":
+            no_models = True
             i += 1
             continue
         if arg == "--front-only":
@@ -1324,7 +1330,7 @@ def main():
     cropping = any(v > 0 for v in crop.values())
 
     if len(rest) < 5:
-        print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions] [--no-fetch]")
+        print(f"Usage: python3 {sys.argv[0]} --site <site> <html_file> <brand> <style> <product_name> <kind> [catalog.json] [--crop-top F] [--crop-bottom F] [--crop-left F] [--crop-right F] [--descriptions [file.csv] | --no-descriptions] [--no-fetch] [--no-models]")
         sys.exit(1)
 
     source, brand, style, product_name, kind = rest[:5]
@@ -1493,6 +1499,9 @@ def main():
         "popular": popular_value,
         "colors": final_colors,
     })
+    if existing and existing.get("models"):
+        # on-model photos (fit_photos.py) aren't re-downloaded on a re-run: keep them
+        catalog["products"][-1]["models"] = existing["models"]
     # Do this before saving, and over the WHOLE catalog rather than just this
     # product -- the colour a new two-tone name needs may live on a product
     # added months ago, and vice versa.
@@ -1554,6 +1563,15 @@ def main():
             if hat_tags.tag_hats(catalog_path, only_id=product_id, quiet=True,
                                  csv_path=descriptions_csv if want_descriptions else None):
                 print("\n  Hat details tags added (Headwear filters on the catalog page).")
+        except ImportError:
+            pass
+
+    # On-model ("fit") photos for the product page: up to two colors, front + back, saved small.
+    # Only fills in a product that has none yet; never stops the run.
+    if not no_models:
+        try:
+            import fit_photos
+            fit_photos.add_models(catalog_path, product_id, html=html if site == "ascolour" else None)
         except ImportError:
             pass
 

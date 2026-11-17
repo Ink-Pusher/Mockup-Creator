@@ -65,3 +65,18 @@ Photos are chosen from `model_photos.json`, a list of S&S's on-model and side-vi
 we carry. Refresh it after adding products: `python3 model_photos.py` (about 10 minutes), then commit
 and push `model_photos.json`. A picked photo is copied into our own Supabase storage. The built-in
 fallback photos live in `featured_defaults/`.
+
+## On-model ("fit") photos on the product page
+
+Product pages show an **On a model** row under the front/back photos: up to two colors' worth of
+on-model shots (front + back, or a side shot when there's no back), tap to enlarge, the selected
+color's shots first when it has any. They're listed under `models` in `catalog.json` and saved small
+(800px wide) as `catalog_images/<id>/model_<color>_<view>.jpg`. `fit_photos.py` finds and saves them.
+
+- New products get them automatically (`build_catalog.py`, so `bulk_add.py` too); `--no-models` skips it.
+- Backfill or redo: `python3 bulk_add.py models --dry-run`, then `python3 bulk_add.py models`
+  (just some: add product ids; `--force` re-picks, `--refresh` asks the vendors again). No commit is
+  made: commit `catalog.json` + `catalog_images` once and push.
+- Sources: SanMar's SDL file, the S&S API, and AS Colour's saved page (its generic model shots).
+  Hats, beanies and totes almost never have model shots, and Royal Apparel's photos are already on a
+  model, so those products simply show no row.

@@ -57594,6 +57594,116 @@
           "back": "catalog_images/lat-6918/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "augusta-sportswear-711",
+      "name": "Youth Ringer T-Shirt",
+      "brand": "Augusta Sportswear",
+      "style": "711",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Athletic Heather/ Navy",
+          "hex": "#9fa2a7",
+          "front": "catalog_images/augusta-sportswear-711/athletic-heather-navy_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/athletic-heather-navy_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#273041"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Royal",
+          "hex": "#9fa2a7",
+          "front": "catalog_images/augusta-sportswear-711/athletic-heather-royal_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/athletic-heather-royal_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#27569b"
+          ]
+        },
+        {
+          "name": "Dark Green/ Gold",
+          "hex": "#05402a",
+          "front": "catalog_images/augusta-sportswear-711/dark-green-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/dark-green-gold_back.jpg",
+          "hexes": [
+            "#253f38",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "Navy/ Gold",
+          "hex": "#0a1e37",
+          "front": "catalog_images/augusta-sportswear-711/navy-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/navy-gold_back.jpg",
+          "hexes": [
+            "#273041",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-711/white-black_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#232123"
+          ]
+        },
+        {
+          "name": "White/ Dark Green",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-711/white-dark-green_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/white-dark-green_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#253f38"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-711/white-kelly_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/white-kelly_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#028a62"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#dedede",
+          "front": "catalog_images/augusta-sportswear-711/white-navy_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/white-navy_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#273041"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-711/white-red_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/white-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#b7182f"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-711/white-royal_front.jpg",
+          "back": "catalog_images/augusta-sportswear-711/white-royal_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#27569b"
+          ]
+        }
+      ]
     }
   ]
 }

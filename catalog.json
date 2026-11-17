@@ -57171,6 +57171,244 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tultex-245",
+      "name": "Raglan Tee",
+      "brand": "Tultex",
+      "style": "245",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Heather Charcoal",
+          "hex": "#232122",
+          "front": "catalog_images/tultex-245/black-heather-charcoal_front.jpg",
+          "back": "catalog_images/tultex-245/black-heather-charcoal_back.jpg",
+          "hexes": [
+            "#232123",
+            "#3a3d3f"
+          ]
+        },
+        {
+          "name": "Black/ Red",
+          "hex": "#262425",
+          "front": "catalog_images/tultex-245/black-red_front.jpg",
+          "back": "catalog_images/tultex-245/black-red_back.jpg",
+          "hexes": [
+            "#232123",
+            "#b7182f"
+          ]
+        },
+        {
+          "name": "Black/ White",
+          "hex": "#322e2f",
+          "front": "catalog_images/tultex-245/black-white_front.jpg",
+          "back": "catalog_images/tultex-245/black-white_back.jpg",
+          "hexes": [
+            "#232123",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Heather Black/ Black",
+          "hex": "#292a2c",
+          "front": "catalog_images/tultex-245/heather-black-black_front.jpg",
+          "back": "catalog_images/tultex-245/heather-black-black_back.jpg",
+          "hexes": [
+            "#302e30",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Heather Denim/ Navy",
+          "hex": "#4e5464",
+          "front": "catalog_images/tultex-245/heather-denim-navy_front.jpg",
+          "back": "catalog_images/tultex-245/heather-denim-navy_back.jpg",
+          "hexes": [
+            "#49566e",
+            "#273042"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Black",
+          "hex": "#b6b5b9",
+          "front": "catalog_images/tultex-245/heather-grey-black_front.jpg",
+          "back": "catalog_images/tultex-245/heather-grey-black_back.jpg",
+          "hexes": [
+            "#b4b2b3",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Heather Charcoal",
+          "hex": "#b9babc",
+          "front": "catalog_images/tultex-245/heather-grey-heather-charcoal_front.jpg",
+          "back": "catalog_images/tultex-245/heather-grey-heather-charcoal_back.jpg",
+          "hexes": [
+            "#b4b2b3",
+            "#3a3d3f"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Heather Maroon",
+          "hex": "#b8b9bc",
+          "front": "catalog_images/tultex-245/heather-grey-heather-maroon_front.jpg",
+          "back": "catalog_images/tultex-245/heather-grey-heather-maroon_back.jpg",
+          "hexes": [
+            "#b4b2b3",
+            "#6a424f"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Heather Red",
+          "hex": "#b8b7bd",
+          "front": "catalog_images/tultex-245/heather-grey-heather-red_front.jpg",
+          "back": "catalog_images/tultex-245/heather-grey-heather-red_back.jpg",
+          "hexes": [
+            "#b4b2b3",
+            "#d2424d"
+          ]
+        },
+        {
+          "name": "Heather Grey/ Navy",
+          "hex": "#c4c3c6",
+          "front": "catalog_images/tultex-245/heather-grey-navy_front.jpg",
+          "back": "catalog_images/tultex-245/heather-grey-navy_back.jpg",
+          "hexes": [
+            "#b4b2b3",
+            "#273042"
+          ]
+        },
+        {
+          "name": "Vintage White/ Black",
+          "hex": "#efece1",
+          "front": "catalog_images/tultex-245/vintage-white-black_front.jpg",
+          "back": "catalog_images/tultex-245/vintage-white-black_back.jpg",
+          "hexes": [
+            "#e8e5e0",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Vintage White/ Inked India",
+          "hex": "#efede1",
+          "front": "catalog_images/tultex-245/vintage-white-inked-india_front.jpg",
+          "back": "catalog_images/tultex-245/vintage-white-inked-india_back.jpg"
+        },
+        {
+          "name": "Vintage White/ Mellow Yellow",
+          "hex": "#efece0",
+          "front": "catalog_images/tultex-245/vintage-white-mellow-yellow_front.jpg",
+          "back": "catalog_images/tultex-245/vintage-white-mellow-yellow_back.jpg"
+        },
+        {
+          "name": "Vintage White/ Navy",
+          "hex": "#efece1",
+          "front": "catalog_images/tultex-245/vintage-white-navy_front.jpg",
+          "back": "catalog_images/tultex-245/vintage-white-navy_back.jpg",
+          "hexes": [
+            "#e8e5e0",
+            "#273042"
+          ]
+        },
+        {
+          "name": "Vintage White/ Rio Red",
+          "hex": "#f0ede2",
+          "front": "catalog_images/tultex-245/vintage-white-rio-red_front.jpg",
+          "back": "catalog_images/tultex-245/vintage-white-rio-red_back.jpg"
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#f0eff4",
+          "front": "catalog_images/tultex-245/white-black_front.jpg",
+          "back": "catalog_images/tultex-245/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#232123"
+          ]
+        },
+        {
+          "name": "White/ Heather Charcoal",
+          "hex": "#efeef3",
+          "front": "catalog_images/tultex-245/white-heather-charcoal_front.jpg",
+          "back": "catalog_images/tultex-245/white-heather-charcoal_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#3a3d3f"
+          ]
+        },
+        {
+          "name": "White/ Heather Denim",
+          "hex": "#efeef3",
+          "front": "catalog_images/tultex-245/white-heather-denim_front.jpg",
+          "back": "catalog_images/tultex-245/white-heather-denim_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#49566e"
+          ]
+        },
+        {
+          "name": "White/ Heather Seafoam",
+          "hex": "#eae9ef",
+          "front": "catalog_images/tultex-245/white-heather-seafoam_front.jpg",
+          "back": "catalog_images/tultex-245/white-heather-seafoam_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#9bb1a5"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#eff0f4",
+          "front": "catalog_images/tultex-245/white-kelly_front.jpg",
+          "back": "catalog_images/tultex-245/white-kelly_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#028a62"
+          ]
+        },
+        {
+          "name": "White/ Maroon",
+          "hex": "#efeef3",
+          "front": "catalog_images/tultex-245/white-maroon_front.jpg",
+          "back": "catalog_images/tultex-245/white-maroon_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#58202f"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#efeef3",
+          "front": "catalog_images/tultex-245/white-navy_front.jpg",
+          "back": "catalog_images/tultex-245/white-navy_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#273042"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#f6f6f6",
+          "front": "catalog_images/tultex-245/white-red_front.jpg",
+          "back": "catalog_images/tultex-245/white-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#b7182f"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#f5f4f8",
+          "front": "catalog_images/tultex-245/white-royal_front.jpg",
+          "back": "catalog_images/tultex-245/white-royal_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#27569b"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -56433,6 +56433,52 @@
           "back": "catalog_images/lat-3592/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lat-6906",
+      "name": "Unisex Luxury Heavy T-Shirt",
+      "brand": "LAT",
+      "style": "6906",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1d1c1c",
+          "front": "catalog_images/lat-6906/black_front.jpg",
+          "back": "catalog_images/lat-6906/black_back.jpg"
+        },
+        {
+          "name": "Coyote Brown",
+          "hex": "#9c7b59",
+          "front": "catalog_images/lat-6906/coyote-brown_front.jpg",
+          "back": "catalog_images/lat-6906/coyote-brown_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1f2438",
+          "front": "catalog_images/lat-6906/navy_front.jpg",
+          "back": "catalog_images/lat-6906/navy_back.jpg"
+        },
+        {
+          "name": "Porcelain",
+          "hex": "#e4e0dd",
+          "front": "catalog_images/lat-6906/porcelain_front.jpg",
+          "back": "catalog_images/lat-6906/porcelain_back.jpg"
+        },
+        {
+          "name": "Slate",
+          "hex": "#4f4d52",
+          "front": "catalog_images/lat-6906/slate_front.jpg",
+          "back": "catalog_images/lat-6906/slate_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#efeff1",
+          "front": "catalog_images/lat-6906/white_front.jpg",
+          "back": "catalog_images/lat-6906/white_back.jpg"
+        }
+      ]
     }
   ]
 }

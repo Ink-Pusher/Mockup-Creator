@@ -57151,6 +57151,26 @@
           ]
         }
       ]
+    },
+    {
+      "id": "next-level-3904",
+      "name": "Women's Ringer Tee",
+      "brand": "Next Level",
+      "style": "3904",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Natural/ Midnight Navy",
+          "hex": "#e9e4d7",
+          "front": "catalog_images/next-level-3904/natural-midnight-navy_front.jpg",
+          "back": "catalog_images/next-level-3904/natural-midnight-navy_back.jpg",
+          "hexes": [
+            "#eae3d5",
+            "#252c40"
+          ]
+        }
+      ]
     }
   ]
 }

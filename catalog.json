@@ -56891,6 +56891,266 @@
         "hook-loop",
         "cotton-twill"
       ]
+    },
+    {
+      "id": "augusta-sportswear-710",
+      "name": "Unisex 50/50 Ringer T-Shirt",
+      "brand": "Augusta Sportswear",
+      "style": "710",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Athletic Heather/ Black",
+          "hex": "#afabb1",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-black_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-black_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#232123"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Dark Green",
+          "hex": "#9fa2a7",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-dark-green_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-dark-green_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#253f38"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Maroon",
+          "hex": "#9fa2a7",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-maroon_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-maroon_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#58202f"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Navy",
+          "hex": "#afabb1",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-navy_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-navy_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#273042"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Orange",
+          "hex": "#9fa2a7",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-orange_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-orange_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#ed532b"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Red",
+          "hex": "#bcb8b9",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-red_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-red_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#b7182f"
+          ]
+        },
+        {
+          "name": "Athletic Heather/ Royal",
+          "hex": "#afabb1",
+          "front": "catalog_images/augusta-sportswear-710/athletic-heather-royal_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/athletic-heather-royal_back.jpg",
+          "hexes": [
+            "#a5a7ac",
+            "#27569b"
+          ]
+        },
+        {
+          "name": "Black/ Gold",
+          "hex": "#29242a",
+          "front": "catalog_images/augusta-sportswear-710/black-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/black-gold_back.jpg",
+          "hexes": [
+            "#232123",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "Dark Green/ Gold",
+          "hex": "#05402a",
+          "front": "catalog_images/augusta-sportswear-710/dark-green-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/dark-green-gold_back.jpg",
+          "hexes": [
+            "#253f38",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "Gold/ Navy",
+          "hex": "#fbb23a",
+          "front": "catalog_images/augusta-sportswear-710/gold-navy_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/gold-navy_back.jpg",
+          "hexes": [
+            "#f9a31c",
+            "#273042"
+          ]
+        },
+        {
+          "name": "Light Blue/ Navy",
+          "hex": "#7ea3be",
+          "front": "catalog_images/augusta-sportswear-710/light-blue-navy_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/light-blue-navy_back.jpg",
+          "hexes": [
+            "#98b9de",
+            "#273042"
+          ]
+        },
+        {
+          "name": "Maroon/ Gold",
+          "hex": "#54172a",
+          "front": "catalog_images/augusta-sportswear-710/maroon-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/maroon-gold_back.jpg",
+          "hexes": [
+            "#58202f",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "Navy/ Gold",
+          "hex": "#0a1e37",
+          "front": "catalog_images/augusta-sportswear-710/navy-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/navy-gold_back.jpg",
+          "hexes": [
+            "#273042",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "Navy/ Red",
+          "hex": "#0a1e37",
+          "front": "catalog_images/augusta-sportswear-710/navy-red_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/navy-red_back.jpg",
+          "hexes": [
+            "#273042",
+            "#b7182f"
+          ]
+        },
+        {
+          "name": "Purple/ Gold",
+          "hex": "#473a83",
+          "front": "catalog_images/augusta-sportswear-710/purple-gold_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/purple-gold_back.jpg",
+          "hexes": [
+            "#513f81",
+            "#f9a31c"
+          ]
+        },
+        {
+          "name": "Red/ Black",
+          "hex": "#be1333",
+          "front": "catalog_images/augusta-sportswear-710/red-black_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/red-black_back.jpg",
+          "hexes": [
+            "#b7182f",
+            "#232123"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#ddd8dc",
+          "front": "catalog_images/augusta-sportswear-710/white-black_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#232123"
+          ]
+        },
+        {
+          "name": "White/ Dark Green",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-710/white-dark-green_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-dark-green_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#253f38"
+          ]
+        },
+        {
+          "name": "White/ Kelly",
+          "hex": "#f5f5f5",
+          "front": "catalog_images/augusta-sportswear-710/white-kelly_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-kelly_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#028a62"
+          ]
+        },
+        {
+          "name": "White/ Maroon",
+          "hex": "#e7e7e7",
+          "front": "catalog_images/augusta-sportswear-710/white-maroon_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-maroon_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#58202f"
+          ]
+        },
+        {
+          "name": "White/ Navy",
+          "hex": "#f2f1f6",
+          "front": "catalog_images/augusta-sportswear-710/white-navy_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-navy_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#273042"
+          ]
+        },
+        {
+          "name": "White/ Orange",
+          "hex": "#eceaef",
+          "front": "catalog_images/augusta-sportswear-710/white-orange_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-orange_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#ed532b"
+          ]
+        },
+        {
+          "name": "White/ Purple",
+          "hex": "#e9e7ec",
+          "front": "catalog_images/augusta-sportswear-710/white-purple_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-purple_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#513f81"
+          ]
+        },
+        {
+          "name": "White/ Red",
+          "hex": "#ddd8dc",
+          "front": "catalog_images/augusta-sportswear-710/white-red_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#b7182f"
+          ]
+        },
+        {
+          "name": "White/ Royal",
+          "hex": "#f5f5f5",
+          "front": "catalog_images/augusta-sportswear-710/white-royal_front.jpg",
+          "back": "catalog_images/augusta-sportswear-710/white-royal_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#27569b"
+          ]
+        }
+      ]
     }
   ]
 }

@@ -7757,7 +7757,7 @@
           "front": "catalog_images/yupoong-6606/moss-khaki_front.jpg",
           "back": "catalog_images/yupoong-6606/moss-khaki_back.jpg",
           "hexes": [
-            "#677036",
+            "#5f6c37",
             "#b5a585"
           ]
         },
@@ -57407,6 +57407,83 @@
             "#ecedef",
             "#27569b"
           ]
+        }
+      ]
+    },
+    {
+      "id": "independent-trading-co-prm30sbc",
+      "name": "Unisex Special Blend Raglan Crew",
+      "brand": "Independent Trading Co",
+      "style": "PRM30SBC",
+      "kind": "sweatshirt",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#30292c",
+          "front": "catalog_images/independent-trading-co-prm30sbc/black_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/black_back.jpg"
+        },
+        {
+          "name": "Carbon",
+          "hex": "#3a3636",
+          "front": "catalog_images/independent-trading-co-prm30sbc/carbon_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/carbon_back.jpg"
+        },
+        {
+          "name": "Classic Navy",
+          "hex": "#2a2a39",
+          "front": "catalog_images/independent-trading-co-prm30sbc/classic-navy_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/classic-navy_back.jpg"
+        },
+        {
+          "name": "Crimson",
+          "hex": "#a54652",
+          "front": "catalog_images/independent-trading-co-prm30sbc/crimson_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/crimson_back.jpg"
+        },
+        {
+          "name": "Maroon",
+          "hex": "#701d3d",
+          "front": "catalog_images/independent-trading-co-prm30sbc/maroon_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/maroon_back.jpg"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#575763",
+          "front": "catalog_images/independent-trading-co-prm30sbc/midnight-navy_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/midnight-navy_back.jpg"
+        },
+        {
+          "name": "Moss",
+          "hex": "#476350",
+          "front": "catalog_images/independent-trading-co-prm30sbc/moss_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/moss_back.jpg"
+        },
+        {
+          "name": "Nickel",
+          "hex": "#79726c",
+          "front": "catalog_images/independent-trading-co-prm30sbc/nickel_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/nickel_back.jpg"
+        },
+        {
+          "name": "Nickel Heather/ Black",
+          "hex": "#8f8b8a",
+          "front": "catalog_images/independent-trading-co-prm30sbc/nickel-heather-black_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/nickel-heather-black_back.jpg"
+        },
+        {
+          "name": "Nickel Heather/ Forest Camo",
+          "hex": "#938f8b",
+          "front": "catalog_images/independent-trading-co-prm30sbc/nickel-heather-forest-camo_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/nickel-heather-forest-camo_back.jpg",
+          "swatch": "catalog_images/independent-trading-co-prm30sbc/nickel-heather-forest-camo_swatch.jpg"
+        },
+        {
+          "name": "Stone Heather",
+          "hex": "#e0d8d1",
+          "front": "catalog_images/independent-trading-co-prm30sbc/stone-heather_front.jpg",
+          "back": "catalog_images/independent-trading-co-prm30sbc/stone-heather_back.jpg"
         }
       ]
     }

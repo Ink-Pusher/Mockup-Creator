@@ -56630,6 +56630,121 @@
           "back": "catalog_images/lat-6926/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "lat-6930",
+      "name": "Baseball Fine Jersey Shirt",
+      "brand": "LAT",
+      "style": "6930",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ Storm Camo",
+          "hex": "#151215",
+          "front": "catalog_images/lat-6930/black-storm-camo_front.jpg",
+          "back": "catalog_images/lat-6930/black-storm-camo_back.jpg",
+          "swatch": "catalog_images/lat-6930/black-storm-camo_swatch.jpg",
+          "hexes": [
+            "#232123",
+            "#2b2c2e"
+          ]
+        },
+        {
+          "name": "Natural Heather/ Granite Heather",
+          "hex": "#efe9e3",
+          "front": "catalog_images/lat-6930/natural-heather-granite-heather_front.jpg",
+          "back": "catalog_images/lat-6930/natural-heather-granite-heather_back.jpg",
+          "hexes": [
+            "#e5e0da",
+            "#88878f"
+          ]
+        },
+        {
+          "name": "Vintage Heather/ Vintage Burgundy",
+          "hex": "#b5b4b9",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-burgundy_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-burgundy_back.jpg"
+        },
+        {
+          "name": "Vintage Heather/ Vintage Hot Pink",
+          "hex": "#b6b6b8",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-hot-pink_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-hot-pink_back.jpg"
+        },
+        {
+          "name": "Vintage Heather/ Vintage Navy",
+          "hex": "#adacb1",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-navy_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-navy_back.jpg"
+        },
+        {
+          "name": "Vintage Heather/ Vintage Orange",
+          "hex": "#b6b6b8",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-orange_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-orange_back.jpg"
+        },
+        {
+          "name": "Vintage Heather/ Vintage Red",
+          "hex": "#acabb0",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-red_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-red_back.jpg"
+        },
+        {
+          "name": "Vintage Heather/ Vintage Royal",
+          "hex": "#b1b2b6",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-royal_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-royal_back.jpg"
+        },
+        {
+          "name": "Vintage Heather/ Vintage Smoke",
+          "hex": "#adacb1",
+          "front": "catalog_images/lat-6930/vintage-heather-vintage-smoke_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-heather-vintage-smoke_back.jpg"
+        },
+        {
+          "name": "Vintage Smoke/ Granite Heather",
+          "hex": "#363437",
+          "front": "catalog_images/lat-6930/vintage-smoke-granite-heather_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-smoke-granite-heather_back.jpg",
+          "hexes": [
+            "#303030",
+            "#88878f"
+          ]
+        },
+        {
+          "name": "Vintage Smoke/ Vintage Camo",
+          "hex": "#3a373b",
+          "front": "catalog_images/lat-6930/vintage-smoke-vintage-camo_front.jpg",
+          "back": "catalog_images/lat-6930/vintage-smoke-vintage-camo_back.jpg",
+          "swatch": "catalog_images/lat-6930/vintage-smoke-vintage-camo_swatch.jpg",
+          "hexes": [
+            "#303030",
+            "#72757a"
+          ]
+        },
+        {
+          "name": "White Solid/ Black",
+          "hex": "#e2e2e2",
+          "front": "catalog_images/lat-6930/white-solid-black_front.jpg",
+          "back": "catalog_images/lat-6930/white-solid-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#232123"
+          ]
+        },
+        {
+          "name": "White/ Navy/ Red",
+          "hex": "#f1f0f5",
+          "front": "catalog_images/lat-6930/white-navy-red_front.jpg",
+          "back": "catalog_images/lat-6930/white-navy-red_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#273042",
+            "#b7182f"
+          ]
+        }
+      ]
     }
   ]
 }

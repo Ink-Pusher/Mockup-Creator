@@ -5715,6 +5715,15 @@ async function addJpegComment(blob, text){
     return blob;
   }
 }
+// popularity for the apparel catalog's Recommended / Most popular sort (table catalog_events)
+function logMockupExport(){
+  try {
+    if(!SUPABASE_URL || !SUPABASE_ANON_KEY || !state.productId) return;
+    fetch(`${SUPABASE_URL}/rest/v1/catalog_events`, { method: "POST",
+      headers: { apikey: SUPABASE_ANON_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+      body: JSON.stringify({ product_id: state.productId, kind: "mockup" }) }).catch(() => {});
+  } catch(e) {}
+}
 async function saveExportCanvas(canvas, filename, fileHandle){
   // JPEG at 0.92, revisiting an earlier PNG-only decision. PNG was chosen
   // for perfectly crisp line art, but real exports were averaging ~2MB,
@@ -5753,6 +5762,7 @@ async function saveExportCanvas(canvas, filename, fileHandle){
       link.click();
       setTimeout(()=>URL.revokeObjectURL(link.href), 1000);
     }
+    logMockupExport();
   } catch (err) {
     console.error("[mockup] failed to save the exported file:", err);
     alert("Export failed while saving the file. Check the browser console for details.");
@@ -5886,7 +5896,7 @@ initTheme();
    of guessable -- Squarespace caches Code Blocks and browsers cache
    pages, and a stale paste is indistinguishable from a real bug without
    this. */
-const STUDIO_BUILD = "2026-11-11.1";
+const STUDIO_BUILD = "2026-11-17.1";
 document.getElementById("studioBuild").textContent = "Studio build " + STUDIO_BUILD;
 
 /* ---------- init ---------- */

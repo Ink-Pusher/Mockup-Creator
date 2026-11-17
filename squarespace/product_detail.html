@@ -471,6 +471,14 @@ async function loadAndRender(){
       const prev = JSON.parse(localStorage.getItem(KEY) || "[]");
       localStorage.setItem(KEY, JSON.stringify([id].concat((Array.isArray(prev) ? prev : []).filter(x => x !== id)).slice(0, 12)));
     } catch(e) {}
+    // popularity for the catalog's Recommended / Most popular sort: one view per product per visit
+    try {
+      const VK = "ip_viewed_" + id;
+      if(supabaseClient && !sessionStorage.getItem(VK)){
+        sessionStorage.setItem(VK, "1");
+        supabaseClient.from("catalog_events").insert({ product_id: id, kind: "view" }).then(() => {}, () => {});
+      }
+    } catch(e) {}
     const origBrand = currentProduct.brand, origStyle = currentProduct.style;
     if(override.name_override) currentProduct.name = override.name_override;
     if(override.brand_override) currentProduct.brand = override.brand_override;

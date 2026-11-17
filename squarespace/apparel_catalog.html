@@ -268,6 +268,15 @@
   .view-seg button{font-family:"Poppins",sans-serif;font-weight:800;font-size:13px;padding:8px 16px;border:none;background:none;color:var(--ink);cursor:pointer;}
   .view-seg button.on{background:var(--ink);color:#fff;}
   .viewbar .hint{font-size:12px;color:var(--grey);}
+  .sortbar{display:flex;align-items:center;gap:10px;margin:0 0 16px;}
+  .sortbar .sort-label{font-family:"Poppins",sans-serif;font-weight:800;font-size:13px;color:var(--ink);}
+  .sortbar .view-seg{flex-wrap:nowrap;}
+  .sortbar .view-seg button{white-space:nowrap;}
+  @media (max-width:860px){
+    .sortbar{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;margin-bottom:12px;}
+    .sortbar .view-seg{flex:0 0 auto;}
+    .sortbar .view-seg button{font-size:12px;padding:7px 12px;}
+  }
   .kicker{font-family:"Poppins",sans-serif;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;}
   .fbtn{display:inline-flex;align-items:center;gap:8px;font-family:"Poppins",sans-serif;font-weight:800;font-size:14px;color:var(--ink) !important;
     background:var(--mint);border:2px solid var(--ink);border-radius:999px;padding:11px 20px;text-decoration:none;box-shadow:3px 3px 0 var(--ink);
@@ -491,6 +500,10 @@
         <span class="hint" id="viewHint">Switch to see every product in one list</span>
       </div>
       <div id="featuredView"></div>
+      <div class="sortbar" id="sortBar" style="display:none">
+        <span class="sort-label">Sort</span>
+        <div class="view-seg" role="group" aria-label="Sort products" id="sortSeg"></div>
+      </div>
       <div class="product-grid" id="productGrid" style="display:none">
         <div class="product-grid-loading">Loading catalog&#x2026;</div>
       </div>
@@ -575,7 +588,7 @@ async function loadOverrides(){
   }
 }
 
-const MAX_GRID_CARDS = 500; // defensive ceiling only, not a real-world limit
+const MAX_GRID_CARDS = 3000; // defensive ceiling only, not a real-world limit
 
 // ---------- Category/filter taxonomy ----------
 // Identical to the Mockup Studio's -- same categories, same auto-derived
@@ -661,7 +674,104 @@ const state = {
   activeCategory: "all",
   activeTags: new Set(),
   activeBrands: new Set(),
+  sort: "recommended",
 };
+// ---------- Sorting ----------
+// Neither S&S nor SanMar publish sales rank, so "popular" is our own data: Product Admin's Popular
+// toggle and manual order, plus catalog_popularity() (product page views, Mockup Studio exports,
+// proof sheets). Price = the public garment price (apparel_public_prices(), never vendor cost).
+const SORTS = [
+  { id:"recommended", label:"Recommended" },
+  { id:"popular",     label:"Most popular" },
+  { id:"price",       label:"Price: low to high" },
+  { id:"newest",      label:"Newest" },
+];
+(function(){
+  const q = new URLSearchParams(location.search).get("sort");
+  if(q && SORTS.some(x => x.id === q)) state.sort = q;
+})();
+let POPULARITY = new Map(), PRICES = new Map();
+async function loadSortData(){
+  if(!supabaseClient) return;
+  try {
+    const [pop, pr] = await Promise.all([
+      supabaseClient.rpc("catalog_popularity"),
+      supabaseClient.rpc("apparel_public_prices"),
+    ]);
+    POPULARITY = new Map(((pop && pop.data) || []).map(r => [r.product_id, Number(r.score) || 0]));
+    PRICES = new Map(((pr && pr.data) || []).map(r => [r.product_id, Number(r.garment_price)]));
+  } catch(err) { console.warn("[apparel-catalog] sort data unavailable:", err); }
+}
+// how strongly to lift a product toward the top: manual order > Popular toggle > real interest
+function interestScore(p){
+  let s = Math.log1p(POPULARITY.get(p.id) || 0) * 40;
+  if(p.popular) s += 300;
+  if(p.sortOrder != null) s += 600 - Math.min(p.sortOrder, 300);
+  return s;
+}
+// best first, but no brand twice in a row (or within 2 cards) when a nearly-as-good pick from
+// another brand is close by -- so scrolling shows a mix instead of long runs of one brand
+function mixBrands(list){
+  const left = list.slice(), out = [];
+  const WINDOW = 30;
+  while(left.length){
+    const recent = out.slice(-2).map(p => brandLabel(p.brand));
+    let k = left.slice(0, WINDOW).findIndex(p => !recent.includes(brandLabel(p.brand)));
+    if(k < 0) k = 0;
+    out.push(left.splice(k, 1)[0]);
+  }
+  return out;
+}
+// spread every brand evenly over the whole list (each brand's products keep their own order), then
+// swap away any two neighbors that still share a brand -- big brands no longer bunch up at the end
+function spreadBrands(list){
+  const groups = new Map();
+  list.forEach(p => { const b = brandLabel(p.brand); if(!groups.has(b)) groups.set(b, []); groups.get(b).push(p); });
+  const keyed = [];
+  groups.forEach(g => g.forEach((p, i) => keyed.push({ p, k: (i + 0.5) / g.length, n: g.length })));
+  keyed.sort((a,b)=> a.k - b.k || b.n - a.n);
+  return keyed.map(x => x.p);
+}
+function breakRuns(list){
+  const out = list.slice(), br = (p)=> p ? brandLabel(p.brand) : null;
+  for(let i = 1; i < out.length; i++){
+    if(br(out[i]) !== br(out[i-1])) continue;
+    for(let j = i + 1; j < Math.min(out.length, i + 40); j++){
+      if(br(out[j]) !== br(out[i-1]) && br(out[j]) !== br(out[i+1] === out[j] ? null : out[i+1])){ const t = out[i]; out[i] = out[j]; out[j] = t; break; }
+    }
+  }
+  return out;
+}
+function recommendedOrder(byInterest){
+  const boosted = byInterest.filter(p => interestScore(p) > 0), rest = byInterest.filter(p => interestScore(p) <= 0);
+  return breakRuns(mixBrands(boosted).concat(spreadBrands(rest)));
+}
+function sortProducts(list){
+  const order = new Map(CATALOG.products.map(p => [p.id, p.seq]));   // catalog.json order: newest last
+  const byInterest = list.slice().sort((a,b)=> interestScore(b) - interestScore(a) || order.get(a.id) - order.get(b.id));
+  if(state.sort === "popular") return byInterest;
+  if(state.sort === "price"){
+    const price = (p)=> PRICES.has(p.id) && PRICES.get(p.id) > 0 ? PRICES.get(p.id) : Infinity;
+    return list.slice().sort((a,b)=> price(a) - price(b) || interestScore(b) - interestScore(a));
+  }
+  if(state.sort === "newest") return list.slice().sort((a,b)=> order.get(b.id) - order.get(a.id));
+  return recommendedOrder(byInterest);
+}
+function renderSortBar(){
+  const seg = document.getElementById("sortSeg");
+  seg.innerHTML = SORTS.map(x => `<button type="button" data-sort="${x.id}" class="${x.id === state.sort ? "on" : ""}" aria-pressed="${x.id === state.sort}">${x.label}</button>`).join("");
+}
+document.getElementById("sortSeg").addEventListener("click", (e)=>{
+  const b = e.target.closest("[data-sort]");
+  if(!b || b.dataset.sort === state.sort) return;
+  state.sort = b.dataset.sort;
+  try {
+    const u = new URL(location.href);
+    if(state.sort === "recommended") u.searchParams.delete("sort"); else u.searchParams.set("sort", state.sort);
+    history.replaceState(null, "", u);
+  } catch(err) {}
+  render();
+});
 // Deep links from the category landing page (and anywhere else):
 //   /new-apparel-catalog?cat=hoodie&tags=crewneck
 // land here with that category tab active and those filters applied, so a
@@ -698,6 +808,7 @@ async function loadCatalog(){
     const [res, overridesById] = await Promise.all([
       fetch(`${CATALOG_URL}?t=${Date.now()}`, { cache: "no-store" }),
       loadOverrides(),
+      loadSortData(),
     ]);
     featuredDataPromise = loadFeaturedData();
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -714,10 +825,11 @@ async function loadCatalog(){
         const o = overridesById.get(p.id);
         return !o || o.visible !== false;
       })
-      .map(p => {
+      .map((p, idx) => {
         const o = overridesById.get(p.id) || {};
         return {
           id: p.id,
+          seq: idx,          // position in catalog.json: products are appended, so higher = newer
           // Falls back to catalog.json's value whenever an override is
           // blank/not set -- these exist purely for typo fixes/renames
           // from admin.html, not a second source of truth.
@@ -970,8 +1082,10 @@ function render(){
       })
     : inCategory;
 
-  renderProductGrid(filtered);
+  renderProductGrid(sortProducts(filtered));
+  renderSortBar();
   const featured = state.view === "featured";
+  document.getElementById("sortBar").style.display = featured ? "none" : "";
   document.getElementById("productGrid").style.display = featured ? "none" : "";
   document.getElementById("featuredView").style.display = featured ? "" : "none";
   document.querySelector(".catalog-header").style.display = featured ? "none" : "";

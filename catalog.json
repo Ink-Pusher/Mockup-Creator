@@ -56745,6 +56745,76 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lat-3832",
+      "name": "Women's Curvy Retro Ringer V-Neck Tee",
+      "brand": "LAT",
+      "style": "3832",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black/ White",
+          "hex": "#1a191b",
+          "front": "catalog_images/lat-3832/black-white_front.jpg",
+          "back": "catalog_images/lat-3832/black-white_back.jpg",
+          "hexes": [
+            "#232123",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Granite Heather/ Vintage Smoke",
+          "hex": "#8c8a8b",
+          "front": "catalog_images/lat-3832/granite-heather-vintage-smoke_front.jpg",
+          "back": "catalog_images/lat-3832/granite-heather-vintage-smoke_back.jpg",
+          "hexes": [
+            "#88878f",
+            "#303030"
+          ]
+        },
+        {
+          "name": "Heather/ White",
+          "hex": "#c8c5c6",
+          "front": "catalog_images/lat-3832/heather-white_front.jpg",
+          "back": "catalog_images/lat-3832/heather-white_back.jpg",
+          "hexes": [
+            "#aeadb1",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Red/ White",
+          "hex": "#e42c40",
+          "front": "catalog_images/lat-3832/red-white_front.jpg",
+          "back": "catalog_images/lat-3832/red-white_back.jpg",
+          "hexes": [
+            "#b7182f",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "Vintage Green/ White",
+          "hex": "#099e57",
+          "front": "catalog_images/lat-3832/vintage-green-white_front.jpg",
+          "back": "catalog_images/lat-3832/vintage-green-white_back.jpg",
+          "hexes": [
+            "#038e45",
+            "#ecedef"
+          ]
+        },
+        {
+          "name": "White/ Black",
+          "hex": "#f5f3f4",
+          "front": "catalog_images/lat-3832/white-black_front.jpg",
+          "back": "catalog_images/lat-3832/white-black_back.jpg",
+          "hexes": [
+            "#ecedef",
+            "#232123"
+          ]
+        }
+      ]
     }
   ]
 }

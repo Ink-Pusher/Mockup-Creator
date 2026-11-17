@@ -1194,7 +1194,7 @@
           "back": "catalog_images/richardson-168/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -1500,7 +1500,7 @@
           "back": "catalog_images/richardson-112/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -1510,7 +1510,7 @@
           "back": "catalog_images/richardson-112/brown-khaki-cmb_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -1776,7 +1776,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-black_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-black_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#4c4b4c",
             "#232123"
           ]
@@ -1787,7 +1787,7 @@
           "front": "catalog_images/richardson-112/grey-charcoal-navy_front.jpg",
           "back": "catalog_images/richardson-112/grey-charcoal-navy_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#4c4b4c",
             "#273042"
           ]
@@ -1934,7 +1934,7 @@
           "front": "catalog_images/richardson-112/khaki-black-cmb_front.jpg",
           "back": "catalog_images/richardson-112/khaki-black-cmb_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#232123"
           ]
         },
@@ -1950,7 +1950,7 @@
           "front": "catalog_images/richardson-112/khaki-coffee_front.jpg",
           "back": "catalog_images/richardson-112/khaki-coffee_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#4b3c36"
           ]
         },
@@ -1960,7 +1960,7 @@
           "front": "catalog_images/richardson-112/khaki-legion-blue-cmb_front.jpg",
           "back": "catalog_images/richardson-112/khaki-legion-blue-cmb_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#3a4756"
           ]
         },
@@ -1970,7 +1970,7 @@
           "front": "catalog_images/richardson-112/khaki-loden-green-cmb_front.jpg",
           "back": "catalog_images/richardson-112/khaki-loden-green-cmb_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#696b56"
           ]
         },
@@ -1980,7 +1980,7 @@
           "front": "catalog_images/richardson-112/khaki-navy-cmb_front.jpg",
           "back": "catalog_images/richardson-112/khaki-navy-cmb_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#273042"
           ]
         },
@@ -1990,7 +1990,7 @@
           "front": "catalog_images/richardson-112/khaki-white_front.jpg",
           "back": "catalog_images/richardson-112/khaki-white_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#ecedef"
           ]
         },
@@ -2089,7 +2089,7 @@
           "back": "catalog_images/richardson-112/navy-khaki_back.jpg",
           "hexes": [
             "#273042",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -2099,7 +2099,7 @@
           "back": "catalog_images/richardson-112/navy-khaki-cmb_back.jpg",
           "hexes": [
             "#273042",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -2491,7 +2491,7 @@
           "front": "catalog_images/valucap-vc300a/grey-navy_front.jpg",
           "back": "catalog_images/valucap-vc300a/grey-navy_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#273042"
           ]
         },
@@ -2967,8 +2967,8 @@
           "front": "catalog_images/adam-s-lp101/khaki-forest_front.jpg",
           "back": "catalog_images/adam-s-lp101/khaki-forest_back.jpg",
           "hexes": [
-            "#b6a584",
-            "#243c34"
+            "#b5a585",
+            "#233c32"
           ]
         },
         {
@@ -2977,7 +2977,7 @@
           "front": "catalog_images/adam-s-lp101/khaki-navy_front.jpg",
           "back": "catalog_images/adam-s-lp101/khaki-navy_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#273042"
           ]
         },
@@ -2987,7 +2987,7 @@
           "front": "catalog_images/adam-s-lp101/khaki-spruce-green_front.jpg",
           "back": "catalog_images/adam-s-lp101/khaki-spruce-green_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#6d6f63"
           ]
         },
@@ -3098,7 +3098,7 @@
           "back": "catalog_images/adam-s-lp101/stone-forest_back.jpg",
           "hexes": [
             "#cbc3b5",
-            "#243c34"
+            "#233c32"
           ]
         },
         {
@@ -3722,7 +3722,7 @@
           "back": "catalog_images/richardson-112re/loden-khaki_back.jpg",
           "hexes": [
             "#666555",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -6943,7 +6943,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-forest_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#243c34"
+            "#233c32"
           ]
         },
         {
@@ -7556,7 +7556,7 @@
           "back": "catalog_images/yupoong-6606/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -7748,7 +7748,7 @@
           "back": "catalog_images/yupoong-6606/maroon-grey_back.jpg",
           "hexes": [
             "#58202f",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -7758,7 +7758,7 @@
           "back": "catalog_images/yupoong-6606/moss-khaki_back.jpg",
           "hexes": [
             "#677036",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -7824,7 +7824,7 @@
           "swatch": "catalog_images/yupoong-6606/multicam-green-khaki_swatch.jpg",
           "hexes": [
             "#84795d",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -8409,7 +8409,7 @@
           "front": "catalog_images/richardson-112fp/khaki-coffee_front.jpg",
           "back": "catalog_images/richardson-112fp/khaki-coffee_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#4b3c36"
           ]
         },
@@ -9729,7 +9729,7 @@
           "back": "catalog_images/richardson-256/dark-mocha-khaki_back.jpg",
           "hexes": [
             "#534739",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -18043,7 +18043,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-charcoal-black-triblend_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#333237"
           ]
         },
@@ -18053,7 +18053,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-maroon-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-maroon-triblend_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#58202f"
           ]
         },
@@ -18063,7 +18063,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-navy-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-navy-triblend_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#273042"
           ]
         },
@@ -18073,7 +18073,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-red-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-red-triblend_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#b7182f"
           ]
         },
@@ -18083,7 +18083,7 @@
           "front": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_front.jpg",
           "back": "catalog_images/bella-canvas-3200/grey-true-royal-triblend_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#1a4999"
           ]
         },
@@ -27775,7 +27775,7 @@
           "back": "catalog_images/sportsman-sp09/navy-grey_back.jpg",
           "hexes": [
             "#273042",
-            "#9a9899"
+            "#9b9899"
           ]
         }
       ]
@@ -27952,7 +27952,7 @@
           "hexes": [
             "#232123",
             "#ecedef",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -27963,7 +27963,7 @@
           "hexes": [
             "#58202f",
             "#ecedef",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -27974,7 +27974,7 @@
           "hexes": [
             "#273042",
             "#ecedef",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -27985,7 +27985,7 @@
           "hexes": [
             "#273042",
             "#ecedef",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -27996,7 +27996,7 @@
           "hexes": [
             "#b7182f",
             "#ecedef",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -28007,7 +28007,7 @@
           "hexes": [
             "#27569b",
             "#ecedef",
-            "#9a9899"
+            "#9b9899"
           ]
         }
       ]
@@ -29052,7 +29052,7 @@
           "back": "catalog_images/liberty-bags-7002/white-forest_back.jpg",
           "hexes": [
             "#ecedef",
-            "#243c34"
+            "#233c32"
           ]
         },
         {
@@ -31028,7 +31028,7 @@
           "front": "catalog_images/richardson-110/khaki-coffee_front.jpg",
           "back": "catalog_images/richardson-110/khaki-coffee_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#4b3c36"
           ]
         },
@@ -31107,7 +31107,7 @@
           "front": "catalog_images/richardson-112wf/khaki-loden_front.jpg",
           "back": "catalog_images/richardson-112wf/khaki-loden_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#666555"
           ]
         },
@@ -31297,7 +31297,7 @@
           "front": "catalog_images/richardson-172/grey-white-black-tri_front.jpg",
           "back": "catalog_images/richardson-172/grey-white-black-tri_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#ecedef",
             "#3d393a"
           ]
@@ -32344,7 +32344,7 @@
           "front": "catalog_images/sportsman-sp03/grey-charcoal_front.jpg",
           "back": "catalog_images/sportsman-sp03/grey-charcoal_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#4c4b4c"
           ]
         },
@@ -32468,7 +32468,7 @@
           "front": "catalog_images/sportsman-sp15/forest-gold_front.jpg",
           "back": "catalog_images/sportsman-sp15/forest-gold_back.jpg",
           "hexes": [
-            "#243c34",
+            "#233c32",
             "#f9a31c"
           ]
         },
@@ -32802,7 +32802,7 @@
           "back": "catalog_images/valucap-ah80/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -32822,7 +32822,7 @@
           "back": "catalog_images/valucap-ah80/navy-grey_back.jpg",
           "hexes": [
             "#273042",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -32942,7 +32942,7 @@
           "back": "catalog_images/valucap-s102/black-grey_back.jpg",
           "hexes": [
             "#232123",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -32972,7 +32972,7 @@
           "back": "catalog_images/valucap-s102/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -33084,7 +33084,7 @@
           "back": "catalog_images/valucap-s102/navy-grey_back.jpg",
           "hexes": [
             "#273042",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -33745,7 +33745,7 @@
           "back": "catalog_images/valucap-vc990/black-grey_back.jpg",
           "hexes": [
             "#232123",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -33755,7 +33755,7 @@
           "back": "catalog_images/valucap-vc990/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -33850,7 +33850,7 @@
           "back": "catalog_images/yupoong-110f/black-grey_back.jpg",
           "hexes": [
             "#232123",
-            "#9a9899"
+            "#9b9899"
           ]
         },
         {
@@ -33985,7 +33985,7 @@
           "back": "catalog_images/yupoong-110m/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -34001,7 +34001,7 @@
           "back": "catalog_images/yupoong-110m/caramel-khaki_back.jpg",
           "hexes": [
             "#935e31",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -34047,7 +34047,7 @@
           "back": "catalog_images/yupoong-110m/coyote-brown-khaki_back.jpg",
           "hexes": [
             "#807356",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -34138,7 +34138,7 @@
           "back": "catalog_images/yupoong-110m/olive-khaki_back.jpg",
           "hexes": [
             "#59593e",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -34377,7 +34377,7 @@
           "front": "catalog_images/yupoong-5079/grey-white-white_front.jpg",
           "back": "catalog_images/yupoong-5079/grey-white-white_back.jpg",
           "hexes": [
-            "#9a9899",
+            "#9b9899",
             "#ecedef",
             "#ecedef"
           ]
@@ -55301,7 +55301,7 @@
           "front": "catalog_images/richardson-511/khaki-black_front.jpg",
           "back": "catalog_images/richardson-511/khaki-black_back.jpg",
           "hexes": [
-            "#b6a584",
+            "#b5a585",
             "#232123"
           ]
         },
@@ -55550,7 +55550,7 @@
           "back": "catalog_images/richardson-835/brown-khaki_back.jpg",
           "hexes": [
             "#4c3831",
-            "#b6a584"
+            "#b5a585"
           ]
         },
         {
@@ -55760,7 +55760,7 @@
           "back": "catalog_images/richardson-935/texas-orange-khaki_back.jpg",
           "hexes": [
             "#b96034",
-            "#b6a584"
+            "#b5a585"
           ]
         }
       ],
@@ -56814,6 +56814,82 @@
             "#232123"
           ]
         }
+      ]
+    },
+    {
+      "id": "valucap-vc600",
+      "name": "Chino Cap",
+      "brand": "Valucap",
+      "style": "VC600",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1f1d1e",
+          "front": "catalog_images/valucap-vc600/black_front.jpg",
+          "back": "catalog_images/valucap-vc600/black_back.jpg"
+        },
+        {
+          "name": "Charcoal",
+          "hex": "#615c5c",
+          "front": "catalog_images/valucap-vc600/charcoal_front.jpg",
+          "back": "catalog_images/valucap-vc600/charcoal_back.jpg"
+        },
+        {
+          "name": "Forest",
+          "hex": "#15261f",
+          "front": "catalog_images/valucap-vc600/forest_front.jpg",
+          "back": "catalog_images/valucap-vc600/forest_back.jpg"
+        },
+        {
+          "name": "Grey",
+          "hex": "#a19694",
+          "front": "catalog_images/valucap-vc600/grey_front.jpg",
+          "back": "catalog_images/valucap-vc600/grey_back.jpg"
+        },
+        {
+          "name": "Khaki",
+          "hex": "#ab9785",
+          "front": "catalog_images/valucap-vc600/khaki_front.jpg",
+          "back": "catalog_images/valucap-vc600/khaki_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1b1f2b",
+          "front": "catalog_images/valucap-vc600/navy_front.jpg",
+          "back": "catalog_images/valucap-vc600/navy_back.jpg"
+        },
+        {
+          "name": "Purple",
+          "hex": "#3c2a64",
+          "front": "catalog_images/valucap-vc600/purple_front.jpg",
+          "back": "catalog_images/valucap-vc600/purple_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#a2072c",
+          "front": "catalog_images/valucap-vc600/red_front.jpg",
+          "back": "catalog_images/valucap-vc600/red_back.jpg"
+        },
+        {
+          "name": "Royal Blue",
+          "hex": "#03508e",
+          "front": "catalog_images/valucap-vc600/royal-blue_front.jpg",
+          "back": "catalog_images/valucap-vc600/royal-blue_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#d0d3dc",
+          "front": "catalog_images/valucap-vc600/white_front.jpg",
+          "back": "catalog_images/valucap-vc600/white_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "structured",
+        "6-panel",
+        "hook-loop",
+        "cotton-twill"
       ]
     }
   ]

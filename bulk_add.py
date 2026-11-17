@@ -232,8 +232,8 @@ def pick_featured(product_id, products=None, quiet=False):
         f = family(hx)
         return (3 * near[f]                                   # don't repeat the cards next to it
                 + 4 * used[f] / total                         # keep the whole catalog varied
-                + (0.6 if f in BLAND else 0)                  # white/black/grey: fine, not first choice
-                - 2 * appeal(hx, c.get("name")))              # softer mid-tones over neons
+                + (0.4 if f == "white" else 0)                # white: fine, not first choice
+                - 2 * (0.62 if f in ("black", "grey") else appeal(hx, c.get("name"))))   # greys/blacks count as nice neutrals
     best = min(usable, key=cost)
     src, dst = HERE / best["front"], HERE / "catalog_images" / product_id / "featured_front.jpg"
     if src.suffix.lower() == ".jpg":

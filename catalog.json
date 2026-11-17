@@ -55052,7 +55052,7 @@
           "back": "catalog_images/richardson-355/clay-white-black_back.jpg",
           "hexes": [
             "#a95331",
-            "#262626"
+            "#8c8c8d"
           ]
         },
         {
@@ -55114,7 +55114,7 @@
           "back": "catalog_images/richardson-355/white-white-black_back.jpg",
           "hexes": [
             "#ecedef",
-            "#262626"
+            "#8c8c8d"
           ]
         }
       ],
@@ -55918,6 +55918,29 @@
           "hex": "#f2f2f4",
           "front": "catalog_images/as-colour-4080/white_front.jpg",
           "back": "catalog_images/as-colour-4080/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "as-colour-5012",
+      "name": "Raglan Tee",
+      "brand": "AS Colour",
+      "style": "5012",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Grey Marle Asphalt Marle",
+          "hex": "#b2b2b5",
+          "front": "catalog_images/as-colour-5012/grey-marle-asphalt-marle_front.jpg",
+          "back": "catalog_images/as-colour-5012/grey-marle-asphalt-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-5012/grey-marle-asphalt-marle_swatch.jpg"
+        },
+        {
+          "name": "White Black",
+          "hex": "#f2f2f4",
+          "front": "catalog_images/as-colour-5012/white-black_front.jpg",
+          "back": "catalog_images/as-colour-5012/white-black_back.jpg"
         }
       ]
     }

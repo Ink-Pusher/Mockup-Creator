@@ -42,8 +42,9 @@ THE LIST (CSV, one product per row):
 
 FEATURED PHOTOS: each new product gets a featured photo (the card picture,
 featured_front.jpg) picked automatically so the library stays varied: the
-color family least used by the catalog's featured photos so far wins, preferring
-rich mid-tone colors over white, black and very pale ones. Change any pick in
+color avoids the color families of the 3 cards on each side of it (catalog order),
+leans toward families the catalog has few of, and prefers softer, muted mid-tones
+over neon/safety colors and over white, black and very pale ones. Change any pick in
 Product Admin as before; the next pick just counts it.
 
 Photos still live in this repo (GitHub), about 5 MB per product. Add in batches
@@ -125,14 +126,50 @@ def family(hex_color):
     return "pink"
 
 
-def appeal(hex_color):
-    """Higher = nicer as a card picture: saturated, mid-light."""
+NEON_WORDS = ("neon", "safety", "fluor", "hi-vis", "hivis", "electric", "flo ", "lime", "rainbow", "tie-dye", "tie dye", "tye")
+
+
+_PHOTO_HEX = {}
+
+
+def photo_hex(c):
+    """The garment's real color, read from the middle of its front photo (catalog hex values are
+    vendor swatches and can be far off: Port & Co 'Lime' swatches muted, photographs neon)."""
+    path = HERE / c.get("front", "")
+    if path in _PHOTO_HEX:
+        return _PHOTO_HEX[path]
+    out = c.get("hex")
+    try:
+        from PIL import Image
+        im = Image.open(path).convert("RGB")
+        im.thumbnail((120, 120))
+        w, h = im.size
+        px = [im.getpixel((x, y)) for x in range(w * 3 // 10, w * 7 // 10) for y in range(h * 3 // 10, h * 7 // 10)]
+        px = [q for q in px if sum(q) < 735] or px                  # skip white background
+        mid = sorted(px, key=sum)[len(px) // 2]
+        out = "#%02x%02x%02x" % mid
+    except Exception:
+        pass
+    _PHOTO_HEX[path] = out
+    return out
+
+
+def appeal(hex_color, name=""):
+    """Higher = nicer as a card picture. Timm prefers softer, muted mid-tones to bright neons
+    (2026-11-17): best around 30% saturation and mid lightness; neon/safety colors sink."""
     h = (hex_color or "").lstrip("#")
     if len(h) != 6:
-        return 0
+        return -2
     r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
     _, light, sat = colorsys.rgb_to_hls(r, g, b)
-    return sat - abs(light - 0.5)
+    score = 1 - abs(sat - 0.3) - 0.8 * abs(light - 0.5)
+    if sat > 0.5 and light > 0.45:          # neon-bright: safety yellow, lime, hot pink, bright orange
+        score -= 1
+    elif sat > 0.65:                        # loud even when darker: bright royal, electric purple
+        score -= 0.5
+    if any(w in f" {(name or '').lower()} " for w in NEON_WORDS):
+        score -= 2
+    return score
 
 
 def featured_color(p):
@@ -159,18 +196,45 @@ def family_counts(products, skip_id=None):
     return n
 
 
+NEAR = 3   # cards on each side (in catalog order) that shouldn't share a color family
+
+
+def neighbor_families(product_id, products):
+    """Color families of the featured photos within NEAR cards of this one, in catalog order:
+    the catalog grid shows products in this order, so these sit next to it on the page."""
+    ids = [x["id"] for x in products]
+    if product_id not in ids:
+        return Counter()
+    i, near = ids.index(product_id), Counter()
+    for j in range(max(0, i - NEAR), min(len(products), i + NEAR + 1)):
+        if j == i:
+            continue
+        c = featured_color(products[j])
+        if c:
+            near[family(photo_hex(c))] += 1
+    return near
+
+
 def pick_featured(product_id, products=None, quiet=False):
     products = products or load_catalog()
     p = next((x for x in products if x["id"] == product_id), None)
     if not p or not p["colors"]:
         return None
     used = family_counts(products, skip_id=product_id)
+    near = neighbor_families(product_id, products)
     usable = [c for c in p["colors"] if (HERE / c["front"]).is_file()]
     if not usable:
         return None
-    # fewest featured photos in that family first; bland families count double; then the nicest color
-    best = min(usable, key=lambda c: ((used[family(c.get("hex"))] + 1) * (2 if family(c.get("hex")) in BLAND else 1),
-                                      -appeal(c.get("hex"))))
+    total = max(1, sum(used.values()))
+
+    def cost(c):
+        hx = photo_hex(c)
+        f = family(hx)
+        return (3 * near[f]                                   # don't repeat the cards next to it
+                + 4 * used[f] / total                         # keep the whole catalog varied
+                + (0.6 if f in BLAND else 0)                  # white/black/grey: fine, not first choice
+                - 2 * appeal(hx, c.get("name")))              # softer mid-tones over neons
+    best = min(usable, key=cost)
     src, dst = HERE / best["front"], HERE / "catalog_images" / product_id / "featured_front.jpg"
     if src.suffix.lower() == ".jpg":
         shutil.copyfile(src, dst)
@@ -181,7 +245,7 @@ def pick_featured(product_id, products=None, quiet=False):
         bg.paste(im, mask=im.split()[3])
         bg.save(dst, quality=90)
     if not quiet:
-        print(f"  featured: {best['name']} ({family(best.get('hex'))})")
+        print(f"  featured: {best['name']} ({family(photo_hex(best))})")
     return best
 
 

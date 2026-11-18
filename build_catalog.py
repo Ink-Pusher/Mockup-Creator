@@ -582,10 +582,13 @@ def extract_ascolour(html: str, style=None):
     entries = []  # (rest_clean, is_back) per genuine color photo
     for url in images:
         fname = url.rsplit("/", 1)[-1]
-        m2 = re.match(r'(\d+)_(.+?)__\d+.*\.jpg', fname, re.I)
+        # Style codes can carry a letter suffix (5001G = organic Staple
+        # Tee), so the leading code is digits plus optional letters.
+        m2 = re.match(r'(\d+[A-Za-z]*)_(.+?)__\d+.*\.jpg', fname, re.I)
         if not m2:
             continue
-        if style is not None and m2.group(1) != str(style).strip():
+        if (style is not None
+                and m2.group(1).upper() != str(style).strip().upper()):
             continue
         rest = m2.group(2)
         if rest.upper().endswith("_THUMB"):

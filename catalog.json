@@ -61887,6 +61887,52 @@
           ]
         }
       ]
+    },
+    {
+      "id": "as-colour-5001g",
+      "name": "Staple Organic Tee",
+      "brand": "AS Colour",
+      "style": "5001G",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1c1c1e",
+          "front": "catalog_images/as-colour-5001g/black_front.jpg",
+          "back": "catalog_images/as-colour-5001g/black_back.jpg"
+        },
+        {
+          "name": "Eucalyptus",
+          "hex": "#928d74",
+          "front": "catalog_images/as-colour-5001g/eucalyptus_front.jpg",
+          "back": "catalog_images/as-colour-5001g/eucalyptus_back.jpg"
+        },
+        {
+          "name": "Granite",
+          "hex": "#958f8a",
+          "front": "catalog_images/as-colour-5001g/granite_front.jpg",
+          "back": "catalog_images/as-colour-5001g/granite_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#f2efe9",
+          "front": "catalog_images/as-colour-5001g/natural_front.jpg",
+          "back": "catalog_images/as-colour-5001g/natural_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#685848",
+          "front": "catalog_images/as-colour-5001g/walnut_front.jpg",
+          "back": "catalog_images/as-colour-5001g/walnut_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f2f1f4",
+          "front": "catalog_images/as-colour-5001g/white_front.jpg",
+          "back": "catalog_images/as-colour-5001g/white_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -461,17 +461,18 @@
 <script data-current="apparel">
 (function () {
   // ---- ADMIN_PAGES: one entry per admin tool (key, label, page address on inkpusher.com) ----
-  // The print admin page holds two sections (?section=print / ?section=orders); it says
+  // The print admin page holds three sections (?section=print / orders / website); it says
   // data-current="print-admin" and the section comes from the address (default: orders).
   var ADMIN_PAGES = [
     { key: "apparel", label: "Apparel catalog",    href: "/product-admin" },                // inkpusher.com/product-admin
     { key: "print",   label: "Digital print",      href: "/print-admin?section=print" },    // products + photos
-    { key: "orders",  label: "Customers & orders", href: "/print-admin?section=orders" }    // requests, customers, proofs, builder
+    { key: "orders",  label: "Customers & orders", href: "/print-admin?section=orders" },   // requests, customers, proofs, builder, designers
+    { key: "website", label: "Website",            href: "/print-admin?section=website" }   // header, homepage hero, bands
   ];
   // -------------------------------------------------------------------------------------------
   var script = document.currentScript;
   var current = (script && script.getAttribute("data-current")) || "";
-  if (current === "print-admin") current = (/[?&]section=print\b/.test(location.search)) ? "print" : "orders";
+  if (current === "print-admin") { var sm = /[?&]section=(print|website)\b/.exec(location.search); current = sm ? sm[1] : "orders"; }
   var bar = document.getElementById("ipab");
   if (!bar) return;
   var html = '<p class="ipab-title">Ink Pusher Admin</p><ul class="ipab-links">';

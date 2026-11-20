@@ -59725,7 +59725,7 @@
           "back": "catalog_images/richardson-930/brown-sand_back.jpg",
           "hexes": [
             "#4c3831",
-            "#bcb198"
+            "#bcb196"
           ]
         },
         {
@@ -59735,7 +59735,7 @@
           "back": "catalog_images/richardson-930/light-blue-sand_back.jpg",
           "hexes": [
             "#98b9de",
-            "#bcb198"
+            "#bcb196"
           ]
         },
         {
@@ -61931,6 +61931,34 @@
           "hex": "#f2f1f4",
           "front": "catalog_images/as-colour-5001g/white_front.jpg",
           "back": "catalog_images/as-colour-5001g/white_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "as-colour-5020",
+      "name": "Staple Long Sleeve Tee",
+      "brand": "AS Colour",
+      "style": "5020",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Pine Green",
+          "hex": "#192c28",
+          "front": "catalog_images/as-colour-5020/pine-green_front.jpg",
+          "back": "catalog_images/as-colour-5020/pine-green_back.jpg"
+        },
+        {
+          "name": "Sand",
+          "hex": "#a18b68",
+          "front": "catalog_images/as-colour-5020/sand_front.jpg",
+          "back": "catalog_images/as-colour-5020/sand_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-5020/model_front.jpg",
+          "back": "catalog_images/as-colour-5020/model_back.jpg"
         }
       ]
     }

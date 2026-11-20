@@ -61961,6 +61961,34 @@
           "back": "catalog_images/as-colour-5020/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5020g",
+      "name": "Staple Organic Long Sleeve Tee",
+      "brand": "AS Colour",
+      "style": "5020G",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#151515",
+          "front": "catalog_images/as-colour-5020g/black_front.jpg",
+          "back": "catalog_images/as-colour-5020g/black_back.jpg"
+        },
+        {
+          "name": "Natural",
+          "hex": "#f3f0ea",
+          "front": "catalog_images/as-colour-5020g/natural_front.jpg",
+          "back": "catalog_images/as-colour-5020g/natural_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f2f2f4",
+          "front": "catalog_images/as-colour-5020g/white_front.jpg",
+          "back": "catalog_images/as-colour-5020g/white_back.jpg"
+        }
+      ]
     }
   ]
 }

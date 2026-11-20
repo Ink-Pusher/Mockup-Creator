@@ -61989,6 +61989,58 @@
           "back": "catalog_images/as-colour-5020g/white_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5054",
+      "name": "Block Long Sleeve Tee",
+      "brand": "AS Colour",
+      "style": "5054",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#232323",
+          "front": "catalog_images/as-colour-5054/black_front.jpg",
+          "back": "catalog_images/as-colour-5054/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#e3d6cd",
+          "front": "catalog_images/as-colour-5054/bone_front.jpg",
+          "back": "catalog_images/as-colour-5054/bone_back.jpg"
+        },
+        {
+          "name": "Coal",
+          "hex": "#353633",
+          "front": "catalog_images/as-colour-5054/coal_front.jpg",
+          "back": "catalog_images/as-colour-5054/coal_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#f4f1e7",
+          "front": "catalog_images/as-colour-5054/ecru_front.jpg",
+          "back": "catalog_images/as-colour-5054/ecru_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1b1f29",
+          "front": "catalog_images/as-colour-5054/navy_front.jpg",
+          "back": "catalog_images/as-colour-5054/navy_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f6f5f8",
+          "front": "catalog_images/as-colour-5054/white_front.jpg",
+          "back": "catalog_images/as-colour-5054/white_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-5054/model_front.jpg",
+          "back": "catalog_images/as-colour-5054/model_back.jpg"
+        }
+      ]
     }
   ]
 }

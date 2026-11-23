@@ -62297,6 +62297,58 @@
           "back": "catalog_images/as-colour-4068/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5073",
+      "name": "Classic Tank",
+      "brand": "AS Colour",
+      "style": "5073",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#181a1c",
+          "front": "catalog_images/as-colour-5073/black_front.jpg",
+          "back": "catalog_images/as-colour-5073/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#dfd5cc",
+          "front": "catalog_images/as-colour-5073/bone_front.jpg",
+          "back": "catalog_images/as-colour-5073/bone_back.jpg"
+        },
+        {
+          "name": "Cypress",
+          "hex": "#525748",
+          "front": "catalog_images/as-colour-5073/cypress_front.jpg",
+          "back": "catalog_images/as-colour-5073/cypress_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#edeae0",
+          "front": "catalog_images/as-colour-5073/ecru_front.jpg",
+          "back": "catalog_images/as-colour-5073/ecru_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1f252e",
+          "front": "catalog_images/as-colour-5073/navy_front.jpg",
+          "back": "catalog_images/as-colour-5073/navy_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f2f1f4",
+          "front": "catalog_images/as-colour-5073/white_front.jpg",
+          "back": "catalog_images/as-colour-5073/white_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-5073/model_front.jpg",
+          "back": "catalog_images/as-colour-5073/model_back.jpg"
+        }
+      ]
     }
   ]
 }

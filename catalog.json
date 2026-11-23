@@ -62149,6 +62149,34 @@
           "back": "catalog_images/as-colour-5071/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-5072",
+      "name": "Classic Pocket Long Sleeve Tee",
+      "brand": "AS Colour",
+      "style": "5072",
+      "kind": "longsleeve",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#282828",
+          "front": "catalog_images/as-colour-5072/black_front.jpg",
+          "back": "catalog_images/as-colour-5072/black_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f3f3f5",
+          "front": "catalog_images/as-colour-5072/white_front.jpg",
+          "back": "catalog_images/as-colour-5072/white_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-5072/model_front.jpg",
+          "back": "catalog_images/as-colour-5072/model_back.jpg"
+        }
+      ]
     }
   ]
 }

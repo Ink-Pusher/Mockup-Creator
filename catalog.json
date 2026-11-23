@@ -62452,6 +62452,107 @@
           "back": "catalog_images/as-colour-3006/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-3061",
+      "name": "Youth Classic Tee",
+      "brand": "AS Colour",
+      "style": "3061",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#212021",
+          "front": "catalog_images/as-colour-3061/black_front.jpg",
+          "back": "catalog_images/as-colour-3061/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#d8d0c8",
+          "front": "catalog_images/as-colour-3061/bone_front.jpg",
+          "back": "catalog_images/as-colour-3061/bone_back.jpg"
+        },
+        {
+          "name": "Bright Royal",
+          "hex": "#073f80",
+          "front": "catalog_images/as-colour-3061/bright-royal_front.jpg",
+          "back": "catalog_images/as-colour-3061/bright-royal_back.jpg"
+        },
+        {
+          "name": "Coal",
+          "hex": "#333331",
+          "front": "catalog_images/as-colour-3061/coal_front.jpg",
+          "back": "catalog_images/as-colour-3061/coal_back.jpg"
+        },
+        {
+          "name": "Cypress",
+          "hex": "#54594c",
+          "front": "catalog_images/as-colour-3061/cypress_front.jpg",
+          "back": "catalog_images/as-colour-3061/cypress_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#ebe8dd",
+          "front": "catalog_images/as-colour-3061/ecru_front.jpg",
+          "back": "catalog_images/as-colour-3061/ecru_back.jpg"
+        },
+        {
+          "name": "Grey Marle",
+          "hex": "#969699",
+          "front": "catalog_images/as-colour-3061/grey-marle_front.jpg",
+          "back": "catalog_images/as-colour-3061/grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-3061/grey-marle_swatch.jpg"
+        },
+        {
+          "name": "Ink Blue",
+          "hex": "#1b2128",
+          "front": "catalog_images/as-colour-3061/ink-blue_front.jpg",
+          "back": "catalog_images/as-colour-3061/ink-blue_back.jpg"
+        },
+        {
+          "name": "Navy",
+          "hex": "#1a1e27",
+          "front": "catalog_images/as-colour-3061/navy_front.jpg",
+          "back": "catalog_images/as-colour-3061/navy_back.jpg"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#162925",
+          "front": "catalog_images/as-colour-3061/pine-green_front.jpg",
+          "back": "catalog_images/as-colour-3061/pine-green_back.jpg"
+        },
+        {
+          "name": "Red",
+          "hex": "#b60c23",
+          "front": "catalog_images/as-colour-3061/red_front.jpg",
+          "back": "catalog_images/as-colour-3061/red_back.jpg"
+        },
+        {
+          "name": "Shadow",
+          "hex": "#818581",
+          "front": "catalog_images/as-colour-3061/shadow_front.jpg",
+          "back": "catalog_images/as-colour-3061/shadow_back.jpg"
+        },
+        {
+          "name": "Storm",
+          "hex": "#9c9c97",
+          "front": "catalog_images/as-colour-3061/storm_front.jpg",
+          "back": "catalog_images/as-colour-3061/storm_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f1f1f3",
+          "front": "catalog_images/as-colour-3061/white_front.jpg",
+          "back": "catalog_images/as-colour-3061/white_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-3061/model_front.jpg",
+          "back": "catalog_images/as-colour-3061/model_back.jpg"
+        }
+      ]
     }
   ]
 }

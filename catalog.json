@@ -62553,6 +62553,32 @@
           "back": "catalog_images/as-colour-3061/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1100",
+      "name": "Stock Cap",
+      "brand": "AS Colour",
+      "style": "1100",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Forest Green Thumb B",
+          "hex": "#88988f",
+          "front": "catalog_images/as-colour-1100/forest-green-thumb-b_front.jpg",
+          "back": "catalog_images/as-colour-1100/forest-green-thumb-b_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "snapback",
+        "wool"
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-1100/model_front.jpg",
+          "back": "catalog_images/as-colour-1100/model_back.jpg"
+        }
+      ]
     }
   ]
 }

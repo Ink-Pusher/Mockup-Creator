@@ -17881,7 +17881,7 @@
           "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#274335"
+            "#264334"
           ]
         },
         {
@@ -33953,7 +33953,7 @@
           "hexes": [
             "#b4b2b3",
             "#4c4b4c",
-            "#274335"
+            "#264334"
           ]
         },
         {
@@ -62347,6 +62347,46 @@
         {
           "front": "catalog_images/as-colour-5073/model_front.jpg",
           "back": "catalog_images/as-colour-5073/model_back.jpg"
+        }
+      ]
+    },
+    {
+      "id": "as-colour-3005",
+      "name": "Kids Staple Tee",
+      "brand": "AS Colour",
+      "style": "3005",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bone",
+          "hex": "#e0d6cd",
+          "front": "catalog_images/as-colour-3005/bone_front.jpg",
+          "back": "catalog_images/as-colour-3005/bone_back.jpg"
+        },
+        {
+          "name": "Charity Pink",
+          "hex": "#fe6b9f",
+          "front": "catalog_images/as-colour-3005/charity-pink_front.jpg",
+          "back": "catalog_images/as-colour-3005/charity-pink_back.jpg"
+        },
+        {
+          "name": "Cobalt",
+          "hex": "#1e294a",
+          "front": "catalog_images/as-colour-3005/cobalt_front.jpg",
+          "back": "catalog_images/as-colour-3005/cobalt_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#1c3e2b",
+          "front": "catalog_images/as-colour-3005/forest-green_front.jpg",
+          "back": "catalog_images/as-colour-3005/forest-green_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-3005/model_front.jpg",
+          "back": "catalog_images/as-colour-3005/model_back.jpg"
         }
       ]
     }

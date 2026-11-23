@@ -62756,6 +62756,40 @@
           "front": "catalog_images/as-colour-1120/model_front.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1124",
+      "name": "Pom Pom Beanie",
+      "brand": "AS Colour",
+      "style": "1124",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#131515",
+          "front": "catalog_images/as-colour-1124/black_front.jpg",
+          "back": "catalog_images/as-colour-1124/black_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#e4decf",
+          "front": "catalog_images/as-colour-1124/ecru_front.jpg",
+          "back": "catalog_images/as-colour-1124/ecru_back.jpg"
+        },
+        {
+          "name": "Grey Marle",
+          "hex": "#919392",
+          "front": "catalog_images/as-colour-1124/grey-marle_front.jpg",
+          "back": "catalog_images/as-colour-1124/grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-1124/grey-marle_swatch.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-1124/model_front.jpg"
+        }
+      ]
     }
   ]
 }

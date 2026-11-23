@@ -7137,7 +7137,7 @@
           "back": "catalog_images/q-tees-qtb6000/natural-carolina-blue_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#7ca1d0"
+            "#7da2cf"
           ]
         },
         {
@@ -17881,7 +17881,7 @@
           "back": "catalog_images/next-level-3604/natural-forest-green_back.jpg",
           "hexes": [
             "#eae3d5",
-            "#264334"
+            "#254334"
           ]
         },
         {
@@ -33953,7 +33953,7 @@
           "hexes": [
             "#b4b2b3",
             "#4c4b4c",
-            "#264334"
+            "#254334"
           ]
         },
         {
@@ -62410,6 +62410,46 @@
           "front": "catalog_images/as-colour-3035/grey-marle_front.jpg",
           "back": "catalog_images/as-colour-3035/grey-marle_back.jpg",
           "swatch": "catalog_images/as-colour-3035/grey-marle_swatch.jpg"
+        }
+      ]
+    },
+    {
+      "id": "as-colour-3006",
+      "name": "Youth Staple Tee",
+      "brand": "AS Colour",
+      "style": "3006",
+      "kind": "tee",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Bone",
+          "hex": "#dfd6cd",
+          "front": "catalog_images/as-colour-3006/bone_front.jpg",
+          "back": "catalog_images/as-colour-3006/bone_back.jpg"
+        },
+        {
+          "name": "Carolina Blue",
+          "hex": "#86acc8",
+          "front": "catalog_images/as-colour-3006/carolina-blue_front.jpg",
+          "back": "catalog_images/as-colour-3006/carolina-blue_back.jpg"
+        },
+        {
+          "name": "Charity Pink",
+          "hex": "#fe6b9f",
+          "front": "catalog_images/as-colour-3006/charity-pink_front.jpg",
+          "back": "catalog_images/as-colour-3006/charity-pink_back.jpg"
+        },
+        {
+          "name": "Forest Green",
+          "hex": "#1c3e2b",
+          "front": "catalog_images/as-colour-3006/forest-green_front.jpg",
+          "back": "catalog_images/as-colour-3006/forest-green_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-3006/model_front.jpg",
+          "back": "catalog_images/as-colour-3006/model_back.jpg"
         }
       ]
     }

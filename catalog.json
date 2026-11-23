@@ -62579,6 +62579,35 @@
           "back": "catalog_images/as-colour-1100/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1115",
+      "name": "Knit Beanie",
+      "brand": "AS Colour",
+      "style": "1115",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Asphalt Marle",
+          "hex": "#26262a",
+          "front": "catalog_images/as-colour-1115/asphalt-marle_front.jpg",
+          "back": "catalog_images/as-colour-1115/asphalt-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-1115/asphalt-marle_swatch.jpg"
+        },
+        {
+          "name": "Grey Marle",
+          "hex": "#9c9b9b",
+          "front": "catalog_images/as-colour-1115/grey-marle_front.jpg",
+          "back": "catalog_images/as-colour-1115/grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-1115/grey-marle_swatch.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-1115/model_front.jpg"
+        }
+      ]
     }
   ]
 }

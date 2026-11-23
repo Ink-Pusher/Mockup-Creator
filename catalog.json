@@ -62205,6 +62205,34 @@
           "back": "catalog_images/as-colour-4013/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-4017",
+      "name": "Women's Maple Tank",
+      "brand": "AS Colour",
+      "style": "4017",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#1c1c1e",
+          "front": "catalog_images/as-colour-4017/black_front.jpg",
+          "back": "catalog_images/as-colour-4017/black_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f1f2f6",
+          "front": "catalog_images/as-colour-4017/white_front.jpg",
+          "back": "catalog_images/as-colour-4017/white_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-4017/model_front.jpg",
+          "back": "catalog_images/as-colour-4017/model_back.jpg"
+        }
+      ]
     }
   ]
 }

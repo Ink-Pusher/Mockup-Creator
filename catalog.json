@@ -62177,6 +62177,34 @@
           "back": "catalog_images/as-colour-5072/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-4013",
+      "name": "Women's Mali Racerback",
+      "brand": "AS Colour",
+      "style": "4013",
+      "kind": "tank",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#19191b",
+          "front": "catalog_images/as-colour-4013/black_front.jpg",
+          "back": "catalog_images/as-colour-4013/black_back.jpg"
+        },
+        {
+          "name": "White",
+          "hex": "#f1f1f3",
+          "front": "catalog_images/as-colour-4013/white_front.jpg",
+          "back": "catalog_images/as-colour-4013/white_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-4013/model_front.jpg",
+          "back": "catalog_images/as-colour-4013/model_back.jpg"
+        }
+      ]
     }
   ]
 }

@@ -62886,6 +62886,46 @@
           "back": "catalog_images/as-colour-1135/model_back.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1157",
+      "name": "Class Cord Trucker Cap",
+      "brand": "AS Colour",
+      "style": "1157",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#171718",
+          "front": "catalog_images/as-colour-1157/black_front.jpg",
+          "back": "catalog_images/as-colour-1157/black_back.jpg"
+        },
+        {
+          "name": "Bone",
+          "hex": "#d9d1cb",
+          "front": "catalog_images/as-colour-1157/bone_front.jpg",
+          "back": "catalog_images/as-colour-1157/bone_back.jpg"
+        },
+        {
+          "name": "Midnight Blue",
+          "hex": "#171722",
+          "front": "catalog_images/as-colour-1157/midnight-blue_front.jpg",
+          "back": "catalog_images/as-colour-1157/midnight-blue_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "trucker",
+        "5-panel",
+        "snapback",
+        "mesh"
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-1157/model_front.jpg",
+          "back": "catalog_images/as-colour-1157/model_back.jpg"
+        }
+      ]
     }
   ]
 }

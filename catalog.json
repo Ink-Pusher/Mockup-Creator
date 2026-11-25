@@ -63013,6 +63013,64 @@
         "snapback",
         "mesh"
       ]
+    },
+    {
+      "id": "as-colour-1125",
+      "name": "Gauge Beanie",
+      "brand": "AS Colour",
+      "style": "1125",
+      "kind": "beanie",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Black",
+          "hex": "#171717",
+          "front": "catalog_images/as-colour-1125/black_front.jpg",
+          "back": "catalog_images/as-colour-1125/black_back.jpg"
+        },
+        {
+          "name": "Ecru",
+          "hex": "#e9e1d3",
+          "front": "catalog_images/as-colour-1125/ecru_front.jpg",
+          "back": "catalog_images/as-colour-1125/ecru_back.jpg"
+        },
+        {
+          "name": "Grey Marle",
+          "hex": "#a1a0a0",
+          "front": "catalog_images/as-colour-1125/grey-marle_front.jpg",
+          "back": "catalog_images/as-colour-1125/grey-marle_back.jpg",
+          "swatch": "catalog_images/as-colour-1125/grey-marle_swatch.jpg"
+        },
+        {
+          "name": "Ink Blue",
+          "hex": "#2b2b32",
+          "front": "catalog_images/as-colour-1125/ink-blue_front.jpg",
+          "back": "catalog_images/as-colour-1125/ink-blue_back.jpg"
+        },
+        {
+          "name": "Pigeon Blue",
+          "hex": "#667c85",
+          "front": "catalog_images/as-colour-1125/pigeon-blue_front.jpg",
+          "back": "catalog_images/as-colour-1125/pigeon-blue_back.jpg"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#19302a",
+          "front": "catalog_images/as-colour-1125/pine-green_front.jpg",
+          "back": "catalog_images/as-colour-1125/pine-green_back.jpg"
+        },
+        {
+          "name": "Walnut",
+          "hex": "#73614d",
+          "front": "catalog_images/as-colour-1125/walnut_front.jpg",
+          "back": "catalog_images/as-colour-1125/walnut_back.jpg"
+        }
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-1125/model_front.jpg"
+        }
+      ]
     }
   ]
 }

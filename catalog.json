@@ -62790,6 +62790,57 @@
           "front": "catalog_images/as-colour-1124/model_front.jpg"
         }
       ]
+    },
+    {
+      "id": "as-colour-1102",
+      "name": "Stock Faded Trucker",
+      "brand": "AS Colour",
+      "style": "1102",
+      "kind": "hat",
+      "popular": false,
+      "colors": [
+        {
+          "name": "Faded Black",
+          "hex": "#393939",
+          "front": "catalog_images/as-colour-1102/faded-black_front.jpg",
+          "back": "catalog_images/as-colour-1102/faded-black_back.jpg"
+        },
+        {
+          "name": "Faded Black Inside",
+          "hex": "#494a4b",
+          "front": "catalog_images/as-colour-1102/faded-black-inside_front.jpg",
+          "back": "catalog_images/as-colour-1102/faded-black-inside_back.jpg"
+        },
+        {
+          "name": "Faded Bone",
+          "hex": "#ccc5bd",
+          "front": "catalog_images/as-colour-1102/faded-bone_front.jpg",
+          "back": "catalog_images/as-colour-1102/faded-bone_back.jpg"
+        },
+        {
+          "name": "Faded Grey",
+          "hex": "#87827a",
+          "front": "catalog_images/as-colour-1102/faded-grey_front.jpg",
+          "back": "catalog_images/as-colour-1102/faded-grey_back.jpg"
+        },
+        {
+          "name": "Faded Midnight",
+          "hex": "#3f4b5d",
+          "front": "catalog_images/as-colour-1102/faded-midnight_front.jpg",
+          "back": "catalog_images/as-colour-1102/faded-midnight_back.jpg"
+        }
+      ],
+      "hatTags": [
+        "trucker",
+        "snapback",
+        "mesh"
+      ],
+      "models": [
+        {
+          "front": "catalog_images/as-colour-1102/model_front.jpg",
+          "back": "catalog_images/as-colour-1102/model_back.jpg"
+        }
+      ]
     }
   ]
 }
